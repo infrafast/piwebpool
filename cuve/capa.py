@@ -71,8 +71,8 @@ volume = vol / 1000
 print  "%.0f" % distance+" "+"%.0f" % volume
 
 #Transfert dans la base rrdtool
-database_file = "/home/super/programmes/profondeur/capa_cuve.rrd"
-rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
+#database_file = "/home/super/programmes/profondeur/capa_cuve.rrd"
+#rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
 
 # Reset GPIO settings
 GPIO.cleanup()
