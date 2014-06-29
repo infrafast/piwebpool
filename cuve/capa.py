@@ -14,7 +14,7 @@
 # Import required Python libraries
 import time
 import RPi.GPIO as GPIO
-#import rrdtool
+import rrdtool
 import datetime
 
 # Use BCM GPIO references
