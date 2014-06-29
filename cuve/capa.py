@@ -56,6 +56,7 @@ distance = elapsed * 34300
 # That was the distance there and back so halve the value
 distance = distance / 2
 
+# Mesure de la hauteur d'eau en faisant la différence entre la hauteur cuve pleine et le capteur 18 cm
 fond=131.5
 distance = fond - distance
 
