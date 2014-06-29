@@ -56,21 +56,21 @@ distance = elapsed * 34300
 # That was the distance there and back so halve the value
 distance = distance / 2
 
-# Mesure de la hauteur d'eau en faisant la différence entre la hauteur cuve pleine et le capteur 18 cm
+# Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
 fond=131.5
 distance = fond - distance
 
-# Fonction de calcul du volume th�orique de la cuve
+# Calcul volume
 largeur=100
 longueur=210
 
 vol = largeur * longueur * distance
 volume = vol / 1000
 
-# D�coche les commentaires pour consulter les logs
+#logfile
 print  "%.0f" % distance+" "+"%.0f" % volume
 
-#Transfert dans la base rrdtool
+#base RDTOOL
 #database_file = "/home/super/programmes/profondeur/capa_cuve.rrd"
 #rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
 
