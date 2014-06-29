@@ -75,4 +75,5 @@ print  "%.0f" % distance+" "+"%.0f" % volume
 #rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
 
 # Reset GPIO settings
-GPIO.cleanup()
+#GPIO.cleanup()
+
