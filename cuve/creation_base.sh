@@ -1,5 +1,5 @@
 #! /bin/bash
-rrdtool create capa_cuve.rrd --start N --step 300 \
+rrdtool create capa_cuve.rrd --start N --step 5 \
 DS:haut:GAUGE:600:1:130 \
 DS:capa:GAUGE:600:0:2600 \
 RRA:LAST:0.5:1:12 \
