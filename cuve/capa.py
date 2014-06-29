@@ -44,7 +44,7 @@ while GPIO.input(GPIO_ECHO)==0:
     start = time.time()
 
 while GPIO.input(GPIO_ECHO)==1:
-stop = time.time()
+    stop = time.time()
 
 # Calculate pulse length
 elapsed = stop-start
