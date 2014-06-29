@@ -7,7 +7,7 @@ import sys
 
 user = '19107501'
 texte = 'texte_du_sms'
-pas = '1NXCXBzJGbNsdb'
+pas = 'oGVsksAr0geO6j'
 url = 'https://smsapi.free-mobile.fr/sendmsg?&user='+user+'&pass='+pas+'&msg='+texte
 
 req = urllib2.Request(url)
