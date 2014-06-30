@@ -1,5 +1,5 @@
 #!/bin/bash
-while true ; 
+while true; 
 	do 
 		sudo /usr/share/adafruit/webide/repositories/my-pi-projects/cuve/capa.py & ; 
         sleep 1; 
