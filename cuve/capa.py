@@ -68,7 +68,7 @@ vol = largeur * longueur * distance
 volume = vol / 1000
 
 #logfile
-print  "%.0f" % distance+" "+"%.0f" % volume
+#print  "%.0f" % distance+" "+"%.0f" % volume
 
 #base RDTOOL
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
