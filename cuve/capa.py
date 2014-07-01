@@ -27,7 +27,7 @@ LOG_FILENAME = "/tmp/myservice.log"
 LOG_LEVEL = logging.INFO
  
 # Define and parse command line arguments
-parser = argparse.ArgumentParser(description="My simple Python service")
+parser = argparse.ArgumentParser(description="capa service")
 parser.add_argument("-l", "--log", help="file to write log to (default '" + LOG_FILENAME + "')")
  
 args = parser.parse_args()
