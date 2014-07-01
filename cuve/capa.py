@@ -54,6 +54,8 @@ GPIO_ECHO = 23
 GPIO.setup(GPIO_TRIGGER,GPIO.OUT)  # Trigger
 GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
 
+logger.info("CAPA Daemon started")
+
 while True:
 
     # Set trigger to False (Low)
@@ -97,7 +99,7 @@ while True:
 
     #logfile
     #print  "%.0f" % distance+" "+"%.0f" % volume
-    logger.info("distance " + str(distance))
+    #logger.info("distance " + str(distance))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
