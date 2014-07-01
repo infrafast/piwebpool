@@ -1,7 +1,0 @@
-#!/bin/bash
-#this script goes to /usr/sbin
-(while true; 
-	do 
-		/usr/share/adafruit/webide/repositories/my-pi-projects/cuve/capa.py
-        sleep 2; 
-	done)&
