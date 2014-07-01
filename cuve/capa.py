@@ -23,7 +23,7 @@ import argparse
 import time  # this is only being used as part of the example
  
 # Deafults
-LOG_FILENAME = "/tmp/myservice.log"
+LOG_FILENAME = "/tmp/capa.log"
 LOG_LEVEL = logging.INFO
  
 # Define and parse command line arguments
@@ -41,9 +41,6 @@ handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight
 formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-
-
-
 
 # Use BCM GPIO references
 # instead of physical pin numbers
