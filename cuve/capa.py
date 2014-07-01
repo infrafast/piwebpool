@@ -54,52 +54,55 @@ GPIO_ECHO = 23
 GPIO.setup(GPIO_TRIGGER,GPIO.OUT)  # Trigger
 GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
 
-# Set trigger to False (Low)
-GPIO.output(GPIO_TRIGGER, False)
+while True:
 
-# Allow module to settle
-time.sleep(0.5)
+    # Set trigger to False (Low)
+    GPIO.output(GPIO_TRIGGER, False)
 
-# Send 10us pulse to trigger
-GPIO.output(GPIO_TRIGGER, True)
-time.sleep(0.00001)
-GPIO.output(GPIO_TRIGGER, False)
-start = time.time()
-while GPIO.input(GPIO_ECHO)==0:
+    # Allow module to settle
+    #time.sleep(0.5)
+    time.sleep(2)
+
+    # Send 10us pulse to trigger
+    GPIO.output(GPIO_TRIGGER, True)
+    time.sleep(0.00001)
+    GPIO.output(GPIO_TRIGGER, False)
     start = time.time()
+    while GPIO.input(GPIO_ECHO)==0:
+        start = time.time()
 
-while GPIO.input(GPIO_ECHO)==1:
-    stop = time.time()
+    while GPIO.input(GPIO_ECHO)==1:
+        stop = time.time()
 
-# Calculate pulse length
-elapsed = stop-start
+    # Calculate pulse length
+    elapsed = stop-start
 
-# Distance pulse travelled in that time is time
-# multiplied by the speed of sound (cm/s)
-distance = elapsed * 34300
+    # Distance pulse travelled in that time is time
+    # multiplied by the speed of sound (cm/s)
+    distance = elapsed * 34300
 
-# That was the distance there and back so halve the value
-distance = distance / 2
+    # That was the distance there and back so halve the value
+    distance = distance / 2
 
-# Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
-fond=131.5
-distance = fond - distance
+    # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
+    fond=131.5
+    distance = fond - distance
 
-# Calcul volume
-largeur=100
-longueur=210
+    # Calcul volume
+    largeur=100
+    longueur=210
 
-vol = largeur * longueur * distance
-volume = vol / 1000
+    vol = largeur * longueur * distance
+    volume = vol / 1000
 
-#logfile
-#print  "%.0f" % distance+" "+"%.0f" % volume
-logger.info("distance " + str(distance))
+    #logfile
+    #print  "%.0f" % distance+" "+"%.0f" % volume
+    logger.info("distance " + str(distance))
 
-#base RDTOOL
-database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
-rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
+    #base RDTOOL
+    database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
+    rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
 
-# Reset GPIO settings
-#GPIO.cleanup()
+    # Reset GPIO settings
+    #GPIO.cleanup()
 
