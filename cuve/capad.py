@@ -20,7 +20,7 @@ import RPi.GPIO as GPIO
 import rrdtool
 import datetime
 
-import logging
+import logging.sudo 
 import logging.handlers
 import argparse
 import time  # this is only being used as part of the example
@@ -53,6 +53,7 @@ class App():
         logger = logging.getLogger(__name__)
         logger.setLevel(LOG_LEVEL)
         handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", backupCount=3)
+        filehandler = logging.FileHandler("/var/log/testdaemon/testdaemon.log")
         formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
         handler.setFormatter(formatter)
         logger.addHandler(handler)
@@ -125,7 +126,7 @@ class App():
 
 app = App()
 daemon_runner = runner.DaemonRunner(app)
-daemon_runner.daemon_context.files_preserve=[handler.stream]
+daemon_runner.daemon_context.files_preserve=[filehandler.stream]
 daemon_runner.do_action()
 
 
