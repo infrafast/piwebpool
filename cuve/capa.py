@@ -61,8 +61,6 @@ logger.info("CAPA Daemon started")
 
 while True:
 
-    try:
-
         # Set trigger to False (Low)
         GPIO.output(GPIO_TRIGGER, False)
     
@@ -112,6 +110,4 @@ while True:
     
         # Reset GPIO settings
         #GPIO.cleanup()
-    except  Exception, e:
-        logger.error('Unexpected error: %s', sys.exc_info()[0])
     
