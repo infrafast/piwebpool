@@ -22,9 +22,7 @@ import logging.handlers
 import argparse
 import time  # this is only being used as part of the example
  
-import os               # Miscellaneous OS interfaces.
-import sys              # System-specific parameters and functions. 
- 
+
 # Deafults
 LOG_FILENAME = "/tmp/capa.log"
 LOG_LEVEL = logging.INFO
