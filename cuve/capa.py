@@ -113,4 +113,4 @@ while True:
         # Reset GPIO settings
         #GPIO.cleanup()
     except  Exception, e:
-        print "Unexpected error:", sys.exc_info()[0]
+        logger.info("Unexpected error:", sys.exc_info()[0])
