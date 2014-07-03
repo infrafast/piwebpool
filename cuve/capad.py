@@ -122,6 +122,7 @@ class App():
 
 app = App()
 daemon_runner = runner.DaemonRunner(app)
+daemon_runner.daemon_context.files_preserve=[handler.stream]
 daemon_runner.do_action()
 
 
