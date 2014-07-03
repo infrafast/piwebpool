@@ -113,7 +113,7 @@ class App():
             volume = vol / 1000
         
             #logfile
-            #print  "%.0f" % distance+" "+"%.0f" % volume
+            print  "%.0f" % distance+" "+"%.0f" % volume
             #logger.info("distance " + str(distance))
         
             #base RDTOOL
