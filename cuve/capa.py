@@ -114,5 +114,3 @@ while True:
         #GPIO.cleanup()
     except  Exception, e:
         print "Unexpected error:", sys.exc_info()[0]
-    raise Exception, "%s [%d]" % (e.strerror, e.errno)
-
