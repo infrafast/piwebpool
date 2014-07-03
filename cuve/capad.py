@@ -20,7 +20,7 @@ import RPi.GPIO as GPIO
 import rrdtool
 import datetime
 
-import logging.sudo 
+import logging 
 import logging.handlers
 import argparse
 import time  # this is only being used as part of the example
