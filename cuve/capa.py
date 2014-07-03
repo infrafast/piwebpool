@@ -58,53 +58,58 @@ logger.info("CAPA Daemon started")
 
 while True:
 
-    # Set trigger to False (Low)
-    GPIO.output(GPIO_TRIGGER, False)
+    try:
 
-    # Allow module to settle
-    #time.sleep(0.5)
-    time.sleep(0.5)
-
-    # Send 10us pulse to trigger
-    GPIO.output(GPIO_TRIGGER, True)
-    time.sleep(0.00001)
-    GPIO.output(GPIO_TRIGGER, False)
-    start = time.time()
-    while GPIO.input(GPIO_ECHO)==0:
+        # Set trigger to False (Low)
+        GPIO.output(GPIO_TRIGGER, False)
+    
+        # Allow module to settle
+        #time.sleep(0.5)
+        time.sleep(0.5)
+    
+        # Send 10us pulse to trigger
+        GPIO.output(GPIO_TRIGGER, True)
+        time.sleep(0.00001)
+        GPIO.output(GPIO_TRIGGER, False)
         start = time.time()
-
-    while GPIO.input(GPIO_ECHO)==1:
-        stop = time.time()
-
-    # Calculate pulse length
-    elapsed = stop-start
-
-    # Distance pulse travelled in that time is time
-    # multiplied by the speed of sound (cm/s)
-    distance = elapsed * 34300
-
-    # That was the distance there and back so halve the value
-    distance = distance / 2
-
-    # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
-    fond=131.5
-    distance = fond - distance
-
-    # Calcul volume
-    largeur=100
-    longueur=210
-
-    vol = largeur * longueur * distance
-    volume = vol / 1000
-
-    #logfile
-    #print  "%.0f" % distance+" "+"%.0f" % volume
-    #logger.info("distance " + str(distance))
-
-    #base RDTOOL
-    database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
-    rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
-
-    # Reset GPIO settings
-    #GPIO.cleanup()
+        while GPIO.input(GPIO_ECHO)==0:
+            start = time.time()
+    
+        while GPIO.input(GPIO_ECHO)==1:
+            stop = time.time()
+    
+        # Calculate pulse length
+        elapsed = stop-start
+    
+        # Distance pulse travelled in that time is time
+        # multiplied by the speed of sound (cm/s)
+        distance = elapsed * 34300
+    
+        # That was the distance there and back so halve the value
+        distance = distance / 2
+    
+        # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
+        fond=131.5
+        distance = fond - distance
+    
+        # Calcul volume
+        largeur=100
+        longueur=210
+    
+        vol = largeur * longueur * distance
+        volume = vol / 1000
+    
+        #logfile
+        #print  "%.0f" % distance+" "+"%.0f" % volume
+        #logger.info("distance " + str(distance))
+    
+        #base RDTOOL
+        database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
+        rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
+    
+        # Reset GPIO settings
+        #GPIO.cleanup()
+    except:
+        print "Unexpected error:", sys.exc_info()[0]
+    raise
 
