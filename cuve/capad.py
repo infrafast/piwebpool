@@ -5,6 +5,9 @@
 #
 # ultrasonic_1.py
 # Measure distance using an ultrasonic module
+
+# http://www.gavinj.net/2012/06/building-python-daemon-process.html
+
 #
 # Author 1ere partie: Matt Hawkins
 # Date   : 09/01/2013
