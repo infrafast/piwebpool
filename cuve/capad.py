@@ -30,42 +30,42 @@ class App():
         self.pidfile_path =  '/tmp/foo.pid'
         self.pidfile_timeout = 5
     def run(self):
-    # Deafults
-    LOG_FILENAME = "/tmp/capa.log"
-    LOG_LEVEL = logging.INFO
-     
-    # Define and parse command line arguments
-    parser = argparse.ArgumentParser(description="capa service")
-    parser.add_argument("-l", "--log", help="file to write log to (default '" + LOG_FILENAME + "')")
-     
-    args = parser.parse_args()
-    if args.log:
-        LOG_FILENAME = args.log
-     
-    # Configure logging to log to a file, making a new file at midnight and keeping the last 3 day's data
-    logger = logging.getLogger(__name__)
-    logger.setLevel(LOG_LEVEL)
-    handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", backupCount=3)
-    formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    
-    # Use BCM GPIO references
-    # instead of physical pin numbers
-    GPIO.setmode(GPIO.BCM)
-    
-    # Define GPIO to use on Pi
-    GPIO_TRIGGER = 17
-    GPIO_ECHO = 23
-    
-    # Set pins as output and input
-    GPIO.setup(GPIO_TRIGGER,GPIO.OUT)  # Trigger
-    GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
-    
-    logger.info("CAPA Daemon started")
-    
-    while True:
-    
+        # Deafults
+        LOG_FILENAME = "/tmp/capa.log"
+        LOG_LEVEL = logging.INFO
+         
+        # Define and parse command line arguments
+        parser = argparse.ArgumentParser(description="capa service")
+        parser.add_argument("-l", "--log", help="file to write log to (default '" + LOG_FILENAME + "')")
+         
+        args = parser.parse_args()
+        if args.log:
+            LOG_FILENAME = args.log
+         
+        # Configure logging to log to a file, making a new file at midnight and keeping the last 3 day's data
+        logger = logging.getLogger(__name__)
+        logger.setLevel(LOG_LEVEL)
+        handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", backupCount=3)
+        formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        
+        # Use BCM GPIO references
+        # instead of physical pin numbers
+        GPIO.setmode(GPIO.BCM)
+        
+        # Define GPIO to use on Pi
+        GPIO_TRIGGER = 17
+        GPIO_ECHO = 23
+        
+        # Set pins as output and input
+        GPIO.setup(GPIO_TRIGGER,GPIO.OUT)  # Trigger
+        GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
+        
+        logger.info("CAPA Daemon started")
+        
+        while True:
+        
             # Set trigger to False (Low)
             GPIO.output(GPIO_TRIGGER, False)
         
