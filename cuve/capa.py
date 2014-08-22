@@ -1,4 +1,4 @@
-#!/usr/bin/python
+./#!/usr/bin/python
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #|R|a|s|p|b|e|r|r|y|P|i|-|S|p|y|.|c|o|.|u|k|
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -99,7 +99,7 @@ while True:
         volume = vol / 1000
     
         #logfile
-        #print  "%.0f" % distance+" "+"%.0f" % volume
+        print  "%.0f" % distance+" "+"%.0f" % volume
         #logger.info("distance " + str(distance))
     
         #base RDTOOL
