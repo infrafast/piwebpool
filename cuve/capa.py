@@ -99,7 +99,8 @@ while True:
         volume = vol / 1000
     
         #logfile
-        print  "%.0f" % distance+" "+"%.0f" % volume
+        #print  "%.0f" % distance+" "+"%.0f" % volume
+        print  "%.0f" % distance
         #logger.info("distance " + str(distance))
     
         #base RDTOOL
