@@ -82,8 +82,8 @@ while True:
     
         # Distance pulse travelled in that time is time
         # multiplied by the speed of sound (cm/s)
-        #distance = elapsed * 34300
-        distance = elapsed * 30500
+        distance = elapsed * 34300
+        
     
         # That was the distance there and back so halve the value
         distance = distance / 2
