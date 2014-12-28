@@ -94,8 +94,8 @@ while True:
         distance = fond - distance
     
         # Calcul volume
-        largeur=500
-        longueur=500
+        largeur=50
+        longueur=50
     
         vol = largeur * longueur * distance
         volume = vol / 1000
