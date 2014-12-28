@@ -90,7 +90,7 @@ while True:
     
         # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
         #fond=131.5
-        fond = 99
+        fond = 0
         distance = fond - distance
     
         # Calcul volume
