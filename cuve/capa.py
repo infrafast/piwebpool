@@ -100,7 +100,7 @@ while True:
     
         #logfile
         #print  "%.0f" % distance+" "+"%.0f" % volume
-        print  "distance: %.0f" % distance
+        print  "distance: %.0f, volume:%.0f" % distance %volume
         #logger.info("distance " + str(distance))
     
         #base RDTOOL
