@@ -117,7 +117,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     #    continue
     #stop = time.time()
 
-	while (GPIO.input(GPIO_ECHO)==0 and time.time()-start<0.01):
+ while (GPIO.input(GPIO_ECHO)==0 and time.time()-start<0.01):
         # Facultatif 0.00005 seconde correspond à une distance de 0.85 cm donc négligable
         # mais permet ainsi au CPU d'etre un peu libéré. Un peu seulement...
         time.sleep(0.00005) 
@@ -127,7 +127,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     while (GPIO.input(GPIO_ECHO)==1 and time.time()-start<0.01):
         time.sleep(0.00005)
         continue
-    stop = time.time()	
+    stop = time.time()
 
     # Calculate pulse length
     elapsed = stop-start
