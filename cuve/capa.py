@@ -35,10 +35,10 @@ args = parser.parse_args()
 if args.log:
     LOG_FILENAME = args.log
  
-# Configure logging to log to a file, making a new file at midnight and keeping the last 3 day's data
+# Configure logging to log to a file, making a new file at midnight and keeping the last 1 day's data
 logger = logging.getLogger(__name__)
 logger.setLevel(LOG_LEVEL)
-handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", backupCount=3)
+handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", backupCount=1)
 formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
