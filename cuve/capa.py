@@ -143,5 +143,6 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     return distance
     
 while True:
+    time.sleep(1)
     LectureDistance(GPIO_TRIGGER,GPIO_ECHO)
     
