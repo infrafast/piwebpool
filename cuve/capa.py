@@ -160,7 +160,7 @@ while True:
 
     #logfile
     #print  "%.0f" % distance+" "+"%.0f" % volume
-    logger.info("distance " + str(distance))
+    logger.info(":" + str(distance))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
