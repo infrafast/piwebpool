@@ -57,36 +57,6 @@ GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
 
 logger.info("CAPA Daemon started")
 
-def median(mylist):
-#---------------------------------------------------------------------------------------------
-# calcule la médiane d'une liste
-#---------------------------------------------------------------------------------------------           
-    sorts = sorted(mylist)
-    length = len(sorts)
-    if not length % 2:
-        return (sorts[length / 2] + sorts[length / 2 - 1]) / 2.0
-    return sorts[length / 2]
-
-
-def LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,nbMesures):
-#---------------------------------------------------------------------------------------------
-# Mesure de distance à partir du capteur HC-sr04
-# nbMesure : un nb entier qui correspond au nb de mesure à faire pour déterminer une seul valeure
-# plus ce nb est élevé, plus la précision augmente mais plus le temps de mesure est long.
-# principe : on fait nbMesure. On met chaque résultat dans une liste.
-# on retire la valeur la plus petite (j'ai constaté que de temps à autre, on a une valeur nettement trop faible
-# puis, on prend la valeur la plus petite. L'idée étant que lorsque la CPU travaille trop,
-# on sort un peu tard de la boucle while 
-#------------------------------------------------------------------------------------------------ 
-    liste=[]
-    # je fais autant de mesures que demandée et je les place dans liste
-    for i in range(nbMesures):
-        liste.append(LectureDistance(GPIO_TRIGGER,GPIO_ECHO))
-
-    distance =median(liste)
-    return distance
-
-
 while True:
 
         # Set trigger to False (Low)
