@@ -36,7 +36,6 @@ rrdtool graph $DIR/h_cuve_24h.png --start -1d --title="Hauteur d'eau sur 24 heur
 #Graphs par semaine
 rrdtool graph $DIR/h_cuve_1w.png --start -1w --title="Hauteur d'eau sur 1 semaine" --vertical-label="cm" DEF:haut=$DIR/capa_cuve.rrd:haut:AVERAGE LINE1:haut$COUL_ECHELLE:"Hauteur d'eau en $ECHELLE\n" GPRINT:haut:AVERAGE:"Moy\: %.0lf" GPRINT:haut:MIN:"Mini\: %.0lf" GPRINT:haut:MAX:"Maxi\: %.0lf" 
 #rrdtool graph $DIR/v_cuve_1w.png --start -1w --title="Volume sur 1 semaine" --vertical-label="Litres" DEF:capa=$DIR/capa_cuve.rrd:capa:AVERAGE LINE1:capa$COUL_VOLUME:"Volume de la cuve en $VOLUME\n" GPRINT:capa:AVERAGE:"Moy\: %.0lf" GPRINT:capa:MIN:"Mini\: %.0lf" GPRINT:capa:MAX:"Maxi\: %.0lf"
-
 #Graphs par mois
 rrdtool graph $DIR/h_cuve_1m.png --start -1m  --title="Hauteur d'eau sur 1 mois" --vertical-label="cm" DEF:haut=$DIR/capa_cuve.rrd:haut:AVERAGE LINE1:haut$COUL_ECHELLE:"Hauteur d'eau en $ECHELLE\n" GPRINT:haut:AVERAGE:"Moy\: %.0lf" GPRINT:haut:MIN:"Mini\: %.0lf" GPRINT:haut:MAX:"Maxi\: %.0lf"
 #rrdtool graph $DIR/v_cuve_1m.png --start -1m  --title="Volume sur 1 mois" --vertical-label="Litres" DEF:capa=$DIR/capa_cuve.rrd:capa:AVERAGE LINE1:capa$COUL_VOLUME:"Volume de la cuve en $VOLUME\n" GPRINT:capa:AVERAGE:"Moy\: %.0lf" GPRINT:capa:MIN:"Mini\: %.0lf" GPRINT:capa:MAX:"Maxi\: %.0lf" 
