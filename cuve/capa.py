@@ -142,4 +142,6 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     GPIO.cleanup()
     return distance
     
-LectureDistance(
+while True:
+    LectureDistance(GPIO_TRIGGER,GPIO_ECHO)
+    
