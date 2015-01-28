@@ -23,7 +23,6 @@ import argparse
 import time  # this is only being used as part of the example
  
 
-# Deafults
 LOG_FILENAME = "/tmp/capa.log"
 LOG_LEVEL = logging.INFO
  
