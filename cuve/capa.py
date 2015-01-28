@@ -144,13 +144,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     
 while True:
     time.sleep(1)
-    LectureDistance(GPIO_TRIGGER,GPIO_ECHO)
-    # Distance pulse travelled in that time is time
-    # multiplied by the speed of sound (cm/s)
-    distance = elapsed * 34300
-    
-    # That was the distance there and back so halve the value
-    distance = distance / 2
+    distance=LectureDistance(GPIO_TRIGGER,GPIO_ECHO)
     
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
     #fond=131.5
