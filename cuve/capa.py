@@ -143,7 +143,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     return distance
     
 while True:
-    time.sleep(1)
+    time.sleep(2)
     distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,4)
     
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
