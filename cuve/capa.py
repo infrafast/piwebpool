@@ -165,13 +165,13 @@ while True:
 
 
     liste_acquisition.append(distance)
-    derivees = [(liste_acquisition[i+1] - liste_acquisition[i])/dx for i in range(len(liste_acquisition)-1)]    
+    derivee = (liste_acquisition[i+1] - liste_acquisition[i])/dx for i in range(len(liste_acquisition)-1)
     index = index +1
     if index == 5:
         del liste_acquisition[0]
     
     #logfile
-    print  "%.0f" % distance+" "+"%.0f" % derivees[1]
+    print  "%.0f" % distance+" "+"%.0f" % derivee
     #logger.info("distance:" + str(distance))
     logger.info(str(distance))
 
