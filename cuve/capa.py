@@ -55,15 +55,15 @@ GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
 
 logger.info("CAPA Daemon started")
 
-def median(mylist):
+#def median(mylist):
 #---------------------------------------------------------------------------------------------
 # calcule la médiane d'une liste
 #--------------------------------------------------------------------------------------------- 
-    sorts = sorted(mylist)
-    length = len(sorts)
-    if not length % 2:
-        return (sorts[length / 2] + sorts[length / 2 - 1]) / 2.0
-    return sorts[length / 2]
+#    sorts = sorted(mylist)
+#    length = len(sorts)
+#    if not length % 2:
+#        return (sorts[length / 2] + sorts[length / 2 - 1]) / 2.0
+#    return sorts[length / 2]
 
 
 def LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,nbMesures):
