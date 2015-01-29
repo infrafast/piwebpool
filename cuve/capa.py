@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding: utf8
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-#|R|a|s|p|b|e|r|r|y|P|i|-|S|p|y|.|c|o|.|u|k|
+# thomas
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
 # ultrasonic_1.py
@@ -11,7 +11,6 @@
 # Date   : 09/01/2013
 # Author 2eme partie: Jose
 # Date   : 10/05/2013
-
 # Import required Python libraries
 import time
 import RPi.GPIO as GPIO
@@ -24,7 +23,7 @@ import argparse
 import time  # this is only being used as part of the example
 import scipy as sp
 import scipy.fftpack as fft
- 
+
 
 LOG_FILENAME = "/tmp/capa.log"
 LOG_LEVEL = logging.INFO
@@ -62,7 +61,7 @@ logger.info("CAPA Daemon started")
 def median(mylist):
 #---------------------------------------------------------------------------------------------
 # calcule la médiane d'une liste
-#---------------------------------------------------------------------------------------------           
+#--------------------------------------------------------------------------------------------- 
     sorts = sorted(mylist)
     length = len(sorts)
     if not length % 2:
@@ -74,11 +73,11 @@ def LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,nbMesures):
 #---------------------------------------------------------------------------------------------
 # Mesure de distance à partir du capteur HC-sr04
 # nbMesure : un nb entier qui correspond au nb de mesure à faire pour déterminer une seul valeure
-# plus ce nb est élevé, plus la précision augmente mais plus le temps de mesure est long.
-# principe : on fait nbMesure. On met chaque résultat dans une liste.
-# on retire la valeur la plus petite (j'ai constaté que de temps à autre, on a une valeur nettement trop faible
-# puis, on prend la valeur la plus petite. L'idée étant que lorsque la CPU travaille trop,
-# on sort un peu tard de la boucle while 
+# plus ce nb est élevé, plus la précision augmente mais plus le temps de mesure est lon
+# principe : on fait nbMesure. On met chaque résultat dans une liste
+# on retire la valeur la plus petite (j'ai constaté que de temps à autre, on a une valeur nettement trop faibl
+# puis, on prend la valeur la plus petite. L'idée étant que lorsque la CPU travaille trop
+# on sort un peu tard de la boucle while
 #------------------------------------------------------------------------------------------------ 
     liste=[]
     # je fais autant de mesures que demandée et je les place dans liste
@@ -105,7 +104,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     # La doc indique de mettre au moins 60ms entre deux "pulse to triger"
     time.sleep(0.06)
 
-    # Send 10us pulse to trigger. cela déclenche une demande de mesure.
+    # Send 10us pulse to trigger. cela déclenche une demande de mesure
     GPIO.output(GPIO_TRIGGER, True)
     time.sleep(0.00001)
     GPIO.output(GPIO_TRIGGER, False)
@@ -120,12 +119,12 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     #stop = time.time()
 
     while (GPIO.input(GPIO_ECHO)==0 and time.time()-start<0.01):
-        # Facultatif 0.00005 seconde correspond à une distance de 0.85 cm donc négligable
-        # mais permet ainsi au CPU d'etre un peu libéré. Un peu seulement...
-        time.sleep(0.00005) 
+        # Facultatif 0.00005 seconde correspond à une distance de 0.85 cm donc négligabl
+        # mais permet ainsi au CPU d'etre un peu libéré. Un peu seulement.
+        time.sleep(0.00005)
         continue
     start = time.time()
-    #on récupère ainsi l'heure d'envoie du signal par le capteur
+    #on récupère ainsi l'heure d'envoie du signal par le capte
     while (GPIO.input(GPIO_ECHO)==1 and time.time()-start<0.01):
         time.sleep(0.00005)
         continue
@@ -156,21 +155,18 @@ while True:
     # Calcul volume
     largeur=50
     longueur=50
-    
+
     vol = largeur * longueur * distance
     volume = vol / 1000
 
 	#filtrage avec fft
-
 	cutoff = .4
-	 
 	TF_y = fft.fft(distance)
 	freqs = fft.fftfreq(len(distance))
 	for i, f in enumerate(freqs):
 		if abs(f) > cutoff:
 			TF_y[i] = 0. + 0.j
 	smoothed = sp.ifft(TF_y)	
-	
 	
     #logfile
     print  "%.0f" % distance+" "+"%.0f" % smoothed
