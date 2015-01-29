@@ -141,7 +141,9 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     return distance
     
 index = 0
-derivees=[]
+liste_acquisition=[]
+dx = 0.01
+
 while True:
     
     distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,3)
@@ -162,13 +164,10 @@ while True:
     volume = vol / 1000
 
 
-    # je fais autant de mesures que demandée et je les place dans liste
-    for i in range(nbMesures):
-        liste.append(LectureDistance(GPIO_TRIGGER,GPIO_ECHO))
+    liste_acquisition.append(distance)
+    derivees = [(liste_acquisition[i+1] - liste_acquisition[i])/dx for i in range(len(liste_acquisition)-1)]    
+    index = index +1
     
-dx = 0.01
-derivees = [(values[i+1] - values[i])/dx for i in range(len(values)-1)]    
-
 
     #logfile
     #print  "%.0f" % distance+" "+"%.0f" % smoothed
