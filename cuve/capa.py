@@ -146,7 +146,7 @@ LARGEUR=50
 LONGUEUR=50
 FOND = 50
 
-DX = 0.9
+DX = 0.95
 FREQ = 1
 SAMPLES = 3
 NDERIVE = 1/FREQ*SAMPLES + SAMPLES
@@ -164,11 +164,6 @@ while True:
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
     distance = math.floor(FOND - distance)
     
-    
-    
-    
-
-
     vol = LARGEUR * LONGUEUR * distance
     volume = vol / 1000
 
@@ -178,6 +173,7 @@ while True:
     index = index +1
     if index == NDERIVE:
         index = 0
+    distance =median(liste)        
         
     
     #logfile
