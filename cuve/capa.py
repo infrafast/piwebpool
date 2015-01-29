@@ -147,8 +147,8 @@ LONGUEUR=50
 FOND = 50
 
 DX = 0.9
-NDERIVE = 2*math.floor(1/FREQ*SAMPLES)
 FREQ = 1
+NDERIVE = 2*math.floor(1/FREQ*SAMPLES)
 SAMPLES = 3
 
 index = 0
