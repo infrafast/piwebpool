@@ -141,7 +141,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     return distance
     
 index = 0
-liste_acquisition=[]
+liste_acquisition=[0,0,0,0,0]
 dx = 0.01
 
 while True:
@@ -164,11 +164,10 @@ while True:
     volume = vol / 1000
 
 
-    liste_acquisition.append(distance)
+    liste_acquisition[index]=distance
     derivee = [(liste_acquisition[i+1] - liste_acquisition[i])/dx for i in range(len(liste_acquisition)-1)]
     index = index +1
     if index == 5:
-        del liste_acquisition[0]
         index = 0
         
     
