@@ -21,9 +21,6 @@ import logging
 import logging.handlers
 import argparse
 import time  # this is only being used as part of the example
-import scipy as sp
-import scipy.fftpack as fft
-
 
 LOG_FILENAME = "/tmp/capa.log"
 LOG_LEVEL = logging.INFO
@@ -143,14 +140,18 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     #GPIO.cleanup()
     return distance
     
+index = 0
+derivees=[]
 while True:
-    time.sleep(2)
+    
     distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,3)
     
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
     #fond=131.5
     fond = 50
     distance = math.floor(fond - distance)
+    
+    
     
     
     # Calcul volume
@@ -160,21 +161,14 @@ while True:
     vol = largeur * longueur * distance
     volume = vol / 1000
 
-    #filtrage avec fft
-    cutoff = .4
-    TF_y = fft.fft(distance)
-    freqs = fft.fftfreq(len(distance))
-    for i, f in enumerate(freqs):
-        if abs(f) > cutoff:
-            TF_y[i] = 0. + 0.j
-    smoothed = sp.ifft(TF_y)
+
+    # je fais autant de mesures que demandée et je les place dans liste
+    for i in range(nbMesures):
+        liste.append(LectureDistance(GPIO_TRIGGER,GPIO_ECHO))
     
-#TF_y = fft.fft(distance)
-#freqs = fft.fftfreq(len(distance))
-#for i, f in enumerate(freqs):
-#if abs(f) > cutoff:
-#TF_y[i] = 0. + 0.j
-#smoothed = sp.ifft(TF_y)	
+dx = 0.01
+derivees = [(values[i+1] - values[i])/dx for i in range(len(values)-1)]    
+
 
     #logfile
     #print  "%.0f" % distance+" "+"%.0f" % smoothed
@@ -184,3 +178,4 @@ while True:
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
     rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
+    time.sleep(2)
