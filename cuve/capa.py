@@ -180,7 +180,7 @@ while True:
     #logfile
     #print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
-    logger.info(math.floor(str(distance)))
+    logger.info(str(distance))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
