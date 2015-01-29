@@ -161,7 +161,7 @@ while True:
 
     #filtrage avec fft
     cutoff = .4
-    TF_y = fft.fft(distance)
+    TF_y = fft.fft(abs(distance))
     freqs = fft.fftfreq(len(distance))
     for i, f in enumerate(freqs):
         if abs(f) > cutoff:
