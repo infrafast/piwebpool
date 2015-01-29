@@ -139,31 +139,36 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
 
     #GPIO.cleanup()
     return distance
-    
-index = 0
-liste_acquisition=[0,0,0,0,0]
+
+
+# Calcul volume
+LARGEUR=50
+LONGEUR=50
+FOND = 50
+
 DX = 0.9
 NDERIVE = 10
 FREQ = 2
 SAMPLES = 3
+
+index = 0
+liste_acquisition=[FOND]*NDERIVE
+
+
 
 while True:
     
     distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,SAMPLES)
     
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
-    #fond=131.5
-    fond = 50
-    distance = math.floor(fond - distance)
+    distance = math.floor(FOND - distance)
     
     
     
     
-    # Calcul volume
-    largeur=50
-    longueur=50
 
-    vol = largeur * longueur * distance
+
+    vol = LARGEUR * LONGUEUR * distance
     volume = vol / 1000
 
 
