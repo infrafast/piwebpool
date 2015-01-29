@@ -150,7 +150,8 @@ while True:
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
     #fond=131.5
     fond = 50
-    distance = fond - distance
+    distance = math.floor(fond - distance)
+    
     
     # Calcul volume
     largeur=50
@@ -161,7 +162,7 @@ while True:
 
     #filtrage avec fft
     cutoff = .4
-    TF_y = fft.fft(abs(distance))
+    TF_y = fft.fft(distance)
     freqs = fft.fftfreq(len(distance))
     for i, f in enumerate(freqs):
         if abs(f) > cutoff:
