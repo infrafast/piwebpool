@@ -168,21 +168,21 @@ while True:
     volume = vol / 1000
 
 
-    liste_acquisition[index]=distance
-    derivee = [(liste_acquisition[i+1] - liste_acquisition[i])/DX for i in range(len(liste_acquisition)-1)]
-    index = index +1
-    if index == NDERIVE:
-        index = 0
-    #lissage = distance + sum(derivee)/len(derivee)*1.0
-    lissage = distance + median(derivee)
+#    liste_acquisition[index]=distance
+#    derivee = [(liste_acquisition[i+1] - liste_acquisition[i])/DX for i in range(len(liste_acquisition)-1)]
+#    index = index +1
+#    if index == NDERIVE:
+#        index = 0
+#    #lissage = distance + sum(derivee)/len(derivee)*1.0
+#    lissage = distance + median(derivee)
         
     
     #logfile
-    print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
+    #print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
-    logger.info(str(lissage))
+    logger.info(str(distance))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
-    rrdtool.update(database_file, "N:%.2f" % lissage+":%.2f" % distance)
+    rrdtool.update(database_file, "N:%.2f" % distance+":%.2f" % volume)
     time.sleep(FREQ)
