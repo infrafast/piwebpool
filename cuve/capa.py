@@ -165,7 +165,7 @@ while True:
 
 
     liste_acquisition[index]=distance
-    derivee = [(liste_acquisition[i+1] - liste_acquisition[i])/dx for i in range(len(liste_acquisition)-1)]
+    derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i]))/dx for i in range(len(liste_acquisition)-1)]
     index = index +1
     if index == 5:
         index = 0
