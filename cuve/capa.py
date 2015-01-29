@@ -153,7 +153,7 @@ NDERIVE = 1/FREQ*SAMPLES
 
 
 index = 0
-liste_acquisition=[FOND]*math.floor(NDERIVE)
+liste_acquisition=[FOND]*int(NDERIVE)
 
 
 
