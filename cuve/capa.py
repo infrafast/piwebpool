@@ -16,7 +16,7 @@ import time
 import RPi.GPIO as GPIO
 import rrdtool
 import datetime
-
+import math
 import logging
 import logging.handlers
 import argparse
