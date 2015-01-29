@@ -142,11 +142,14 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     
 index = 0
 liste_acquisition=[0,0,0,0,0]
-dx = 0.9
+DX = 0.9
+NDERIVE = 10
+FREQ = 2
+SAMPLES = 3
 
 while True:
     
-    distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,3)
+    distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,SAMPLES)
     
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
     #fond=131.5
@@ -167,7 +170,7 @@ while True:
     liste_acquisition[index]=distance
     derivee = [(liste_acquisition[i+1] - liste_acquisition[i])/dx for i in range(len(liste_acquisition)-1)]
     index = index +1
-    if index == 5:
+    if index == SAMPLES:
         index = 0
         
     
@@ -179,4 +182,4 @@ while True:
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
     rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
-    time.sleep(1)
+    time.sleep(FREQ)
