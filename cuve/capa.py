@@ -22,6 +22,8 @@ import logging
 import logging.handlers
 import argparse
 import time  # this is only being used as part of the example
+import scipy as sp
+import scipy.fftpack as fft
  
 
 LOG_FILENAME = "/tmp/capa.log"
