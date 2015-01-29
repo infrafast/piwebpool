@@ -179,9 +179,9 @@ while True:
     #logfile
     print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
-    logger.info(str(distance))
+    logger.info(str(lissage))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
-    rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
+    rrdtool.update(database_file, "N:%.2f" % lissage+":%.0f" % volume)
     time.sleep(FREQ)
