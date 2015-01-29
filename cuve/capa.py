@@ -180,4 +180,4 @@ while True:
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
     rrdtool.update(database_file, "N:%.2f" % distance+":%.0f" % volume)
-    time.sleep(2)
+    time.sleep(1)
