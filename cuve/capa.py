@@ -171,7 +171,7 @@ while True:
         del liste_acquisition[0]
     
     #logfile
-    print  "%.0f" % distance+" "+"%.0f" % derivee
+    print  "%.0f" % distance+" "+"%s" % derivee
     #logger.info("distance:" + str(distance))
     logger.info(str(distance))
 
