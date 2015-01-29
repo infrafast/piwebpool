@@ -159,11 +159,15 @@ while True:
     vol = largeur * longueur * distance
     volume = vol / 1000
 
-#filtrage avec fft
-#cutoff = .4
-
+    #filtrage avec fft
+    cutoff = .4
     TF_y = fft.fft(distance)
-
+    freqs = fft.fftfreq(len(distance))
+    for i, f in enumerate(freqs):
+        if abs(f) > cutoff:
+            TF_y[i] = 0. + 0.j
+    smoothed = sp.ifft(TF_y)
+    
 #TF_y = fft.fft(distance)
 #freqs = fft.fftfreq(len(distance))
 #for i, f in enumerate(freqs):
