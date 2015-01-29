@@ -149,11 +149,11 @@ FOND = 50
 DX = 0.9
 FREQ = 1
 SAMPLES = 3
-NDERIVE = 2*math.floor(1/FREQ*SAMPLES)
+NDERIVE = 1/FREQ*SAMPLES
 
 
 index = 0
-liste_acquisition=[FOND]*NDERIVE
+liste_acquisition=[FOND]*math.floor(NDERIVE)
 
 
 
