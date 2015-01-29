@@ -142,7 +142,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     
 index = 0
 liste_acquisition=[0,0,0,0,0]
-dx = 0.01
+dx = 0.9
 
 while True:
     
