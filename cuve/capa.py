@@ -173,7 +173,7 @@ while True:
     index = index +1
     if index == NDERIVE:
         index = 0
-    lissage = distance + mean_sum(derivee)        
+    lissage = distance + average(derivee)        
         
     
     #logfile
