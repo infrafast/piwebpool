@@ -169,6 +169,8 @@ while True:
     index = index +1
     if index == 5:
         liste_acquisition.pop[0]
+        index = 0
+        
     
     #logfile
     print  "%.0f" % distance+" "+"%s" % derivee
