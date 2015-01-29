@@ -177,7 +177,7 @@ while True:
         
     
     #logfile
-    print  "%.0f" % distance+" "+"%s" % derivee
+    print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
     logger.info(str(distance))
 
