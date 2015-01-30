@@ -144,7 +144,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
 # Calcul volume
 LARGEUR=50
 LONGUEUR=50
-FOND = 10
+FOND = 150
 
 DX = 0.5
 FREQ = 1
