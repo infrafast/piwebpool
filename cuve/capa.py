@@ -149,7 +149,8 @@ LONGUEUR=50
 FOND = 150
 
 DX = 0.5
-FREQ = 0.5
+#nombre d'echantillon par seconde
+FREQ = 2          
 SAMPLES = 3
 NDERIVE = (FREQ*SAMPLES*2)
 
@@ -187,4 +188,4 @@ while True:
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
     rrdtool.update(database_file, "N:%.0f" % distance+":%.2f" % volume)
-    time.sleep(FREQ)
+    time.sleep(1/FREQ)
