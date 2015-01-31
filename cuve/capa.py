@@ -137,8 +137,6 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     # That was the distance there and back so halve the value
     distance = distance / 2
 
-    distance = 1/distance*100000
-
     #logger.info(str(distance)+" "+str(elapsed))
 
     #GPIO.cleanup()
@@ -155,7 +153,7 @@ FREQ = 120
 #nombre d'acquisition pourfaire la moyenne
 SAMPLES = 3
 NDERIVE = 10
-PEAK = 500
+PEAK = 5
 
 index = 0
 liste_acquisition=[0]*NDERIVE
