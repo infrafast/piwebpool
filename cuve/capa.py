@@ -107,14 +107,6 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     GPIO.output(GPIO_TRIGGER, False)
     start = time.time()
 
-    #while GPIO.input(GPIO_ECHO)==0:
-    #    continue
-    #start = time.time()
-
-    #while GPIO.input(GPIO_ECHO)==1:
-    #    continue
-    #stop = time.time()
-
     while (GPIO.input(GPIO_ECHO)==0 and time.time()-start<0.01):
         # Facultatif 0.00005 seconde correspond à une distance de 0.85 cm donc négligabl
         # mais permet ainsi au CPU d'etre un peu libéré. Un peu seulement.
