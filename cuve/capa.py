@@ -171,7 +171,7 @@ while True:
         index = 0
 
 
-    delay = math.floor(FREQ/2 + median(derivee)*0.2*FREQ)
+    delay = math.floor(FREQ/2 + median(derivee)*0.3*FREQ)
 
     lissage = median(liste_acquisition)
     logger.info(str(distance)+" "+str(lissage)+" "+str(delay))
