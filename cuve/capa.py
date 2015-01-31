@@ -135,7 +135,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     distance = elapsed * 34000
 
     # That was the distance there and back so halve the value
-    distance = math.floor(distance / 2)
+    distance = distance / 2
 
     #logger.info(str(distance)+" "+str(elapsed))
 
