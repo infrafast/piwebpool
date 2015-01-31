@@ -176,7 +176,7 @@ while True:
     if derivee[index]>PEAK:
             derivee[index]=median(derivee)
     index = index +1
-    if index == NDERIVE-1:
+    if index == NDERIVE:
         index = 0
 
     lissage = median(liste_acquisition)
