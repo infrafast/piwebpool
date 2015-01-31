@@ -156,7 +156,7 @@ NDERIVE = 10
 PEAK = 5
 
 index = 0
-liste_acquisition=[NDERIVE)
+liste_acquisition=[NDERIVE]
 
 
 
