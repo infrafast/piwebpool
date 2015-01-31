@@ -178,9 +178,7 @@ while True:
         index = 0
     lissage = distance + sum(derivee)/len(derivee)*1.0
         
-    print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
-    #logger.info("distance:" + str(distance))
-    logger.info(str(distance))
+    logger.info(str(distance)+" "+str(derivee))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
