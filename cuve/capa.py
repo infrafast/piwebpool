@@ -174,7 +174,7 @@ while True:
     liste_acquisition[index]=distance
     diff=abs(liste_acquisition[index]-median(liste_acquisition))
     if diff > PEAK:
-        diff = median(derivee)
+        diff = PEAK
     
     derivee[index]=diff
 #    derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i])) for i in range(len(liste_acquisition)-1)]
