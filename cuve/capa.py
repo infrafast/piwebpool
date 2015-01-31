@@ -153,7 +153,7 @@ FREQ = 60
 #nombre d'acquisition pourfaire la moyenne
 SAMPLES = 3
 NDERIVE = 10
-
+PEAK = 5
 
 index = 0
 liste_acquisition=[FOND]*int(NDERIVE)
@@ -171,17 +171,16 @@ while True:
     volume = vol / 1000
 
 
-#    liste_acquisition[index]=distance
-#    derivee = [(liste_acquisition[i+1] - liste_acquisition[i])/DX for i in range(len(liste_acquisition)-1)]
-#    index = index +1
-#    if index == NDERIVE:
-#        index = 0
-#    #lissage = distance + sum(derivee)/len(derivee)*1.0
-#    lissage = distance + median(derivee)
+    liste_acquisition[index]=distance
+    derivee = [(liste_acquisition[i+1] - liste_acquisition[i]) for i in range(len(liste_acquisition)-1)]
+    index = index +1
+    if index == NDERIVE:
+        index = 0
+    #lissage = distance + sum(derivee)/len(derivee)*1.0
         
     
     #logfile
-    #print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
+    print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
     logger.info(str(distance))
 
