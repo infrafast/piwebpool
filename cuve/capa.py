@@ -137,7 +137,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     # That was the distance there and back so halve the value
     distance = math.floor(distance / 2)
 
-    logger.info(str(distance)+" "+str(elapsed))
+    #logger.info(str(distance)+" "+str(elapsed))
 
     #GPIO.cleanup()
     return distance
@@ -182,7 +182,7 @@ while True:
     #logfile
     #print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
-    #logger.info(str(distance))
+    logger.info(str(distance))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
