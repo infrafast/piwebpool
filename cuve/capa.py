@@ -153,9 +153,8 @@ delay = FREQ
 while True:
     
     distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,SAMPLES)
-    distance = FOND-distance
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
-    #distance = FOND - distance
+    distance = FOND - distance
     
     vol = LARGEUR * LONGUEUR * distance
     volume = vol / 1000
