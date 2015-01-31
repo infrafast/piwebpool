@@ -173,6 +173,8 @@ while True:
 
     liste_acquisition[index]=distance
     derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i])) for i in range(len(liste_acquisition)-1)]
+    if derivee[index]>PEAK:
+            derivee[index]=median(derivee)
     index = index +1
     if index == NDERIVE:
         index = 0
