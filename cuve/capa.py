@@ -132,7 +132,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
 
     #logger.info(str(distance)+" "+str(elapsed))
 
-    #GPIO.cleanup()
+    GPIO.cleanup()
     return math.floor(distance)
 
 
