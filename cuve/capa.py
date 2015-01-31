@@ -178,7 +178,7 @@ while True:
     index = index +1
     if index == NDERIVE:
         index = 0
-    lissage = mediane(liste_acquisition)
+    lissage = median(liste_acquisition)
         
     logger.info(str(distance)+" "+str(derivee+" "+str(lissage)))
 
