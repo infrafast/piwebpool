@@ -182,10 +182,13 @@ while True:
     if index == NDERIVE:
         index = 0
 
+
+    delay = FREQ/2 + median(derivee)*0.1*FREQ
+
     lissage = median(liste_acquisition)
     logger.info(str(distance)+" "+str(derivee)+" "+str(lissage))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
     rrdtool.update(database_file, "N:%.0f" % distance+":%.2f" % volume)
-    time.sleep(60/FREQ)
+    time.sleep(60/delay)
