@@ -180,7 +180,7 @@ while True:
         index = 0
     lissage = median(liste_acquisition)
         
-    logger.info(str(distance)+" "+str(derivee)+" "+str(lissage)))
+    logger.info(str(distance)+" "+str(derivee)+" "+str(lissage))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
