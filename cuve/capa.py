@@ -172,7 +172,7 @@ while True:
 
 
     liste_acquisition[index]=distance
-    diff=abs(liste_acquisition[index+1] - liste_acquisition[index])
+    diff=abs(liste_acquisition[index]-median(liste_acquisition))
     if diff > PEAK:
         diff = median(derivee)
     
