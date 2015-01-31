@@ -182,7 +182,7 @@ while True:
 #            derivee[index]=median(derivee)
 #    index = index +1
  
- if index == NDERIVE:
+     if index == NDERIVE:
         index = 0
 
     lissage = median(liste_acquisition)
