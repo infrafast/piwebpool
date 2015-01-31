@@ -135,7 +135,9 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     distance = elapsed * 34000
 
     # That was the distance there and back so halve the value
-    distance = distance / 2
+    distance = math.floor(distance / 2)
+
+    logger.info(str(distance)+" "+str(elapsed))
 
     #GPIO.cleanup()
     return distance
@@ -162,7 +164,7 @@ while True:
     distance=LectureDistanceMoyenne(GPIO_TRIGGER,GPIO_ECHO,SAMPLES)
     
     # Mesure hauteur d'eau = difference entre cuve pleine et capteur 18cm
-    distance = math.floor(FOND - distance)
+    distance = FOND - distance
     
     vol = LARGEUR * LONGUEUR * distance
     volume = vol / 1000
@@ -180,7 +182,7 @@ while True:
     #logfile
     #print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
-    logger.info(str(distance))
+    #logger.info(str(distance))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
