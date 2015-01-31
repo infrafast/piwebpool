@@ -150,7 +150,7 @@ LONGUEUR=50
 FOND = 100
 
 #nombre d'echantillon par minute
-FREQ = 120          
+FREQ = 60          
 #nombre d'acquisition pourfaire la moyenne
 SAMPLES = 3
 NDERIVE = 10
