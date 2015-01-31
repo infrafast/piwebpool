@@ -156,7 +156,7 @@ NDERIVE = 10
 PEAK = 5
 
 index = 0
-liste_acquisition=[FOND]*int(NDERIVE)
+liste_acquisition=[NDERIVE)
 
 
 
