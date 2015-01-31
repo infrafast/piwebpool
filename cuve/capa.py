@@ -176,7 +176,7 @@ while True:
     index = index +1
     if index == NDERIVE:
         index = 0
-    #lissage = distance + sum(derivee)/len(derivee)*1.0
+    lissage = distance + sum(derivee)/len(derivee)*1.0
         
     print  "%.0f" % distance+" "+"%s" % derivee + "     lissage:%.0f" % lissage
     #logger.info("distance:" + str(distance))
