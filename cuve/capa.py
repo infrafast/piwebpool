@@ -148,11 +148,11 @@ LARGEUR=50
 LONGUEUR=50
 FOND = 150
 
-DX = 0.5
 #nombre d'echantillon par minute
 FREQ = 60          
+#nombre d'acquisition pourfaire la moyenne
 SAMPLES = 3
-NDERIVE = (FREQ*SAMPLES*2)
+NDERIVE = 10
 
 
 index = 0
