@@ -141,7 +141,7 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     #logger.info(str(distance)+" "+str(elapsed))
 
     #GPIO.cleanup()
-    return math.florr(distance)
+    return math.floor(distance)
 
 
 # Calcul volume
