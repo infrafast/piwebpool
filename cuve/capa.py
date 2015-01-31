@@ -129,11 +129,8 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     # That was the distance there and back so halve the value
     distance = distance / 2
 
-
-    #logger.info(str(distance)+" "+str(elapsed))
-
-    GPIO.cleanup()
-    return math.floor(distance)
+    #GPIO.cleanup()
+    return distance
 
 
 # Calcul volume
@@ -170,7 +167,6 @@ while True:
         diff = PEAK
     
     derivee[index]=diff
-#    derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i])) for i in range(len(liste_acquisition)-1)]
     index = index +1
     if index == NDERIVE:
         index = 0
@@ -179,7 +175,7 @@ while True:
     delay = FREQ/2 + median(derivee)*0.1*FREQ
 
     lissage = median(liste_acquisition)
-    logger.info(str(distance)+" "+str(lissage)+" "+str(delay))
+    logger.info(str(liste_acquisition)+" "+str(derivee)+" "+str(lissage)+" "+str(delay))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
