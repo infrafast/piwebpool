@@ -156,8 +156,8 @@ NDERIVE = 10
 PEAK = 5
 
 index = 0
-liste_acquisition=[NDERIVE]
-
+liste_acquisition=[0]*NDERIVE
+derivee=[0]*NDERIVE
 
 
 while True:
@@ -172,11 +172,17 @@ while True:
 
 
     liste_acquisition[index]=distance
-    derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i])) for i in range(len(liste_acquisition)-1)]
-    if derivee[index]>PEAK:
-            derivee[index]=median(derivee)
-    index = index +1
-    if index == NDERIVE:
+    diff=abs(liste_acquisition[index+1] - liste_acquisition[index])
+    if diff > PEAK:
+            diff = median(derivee)
+    derivee[index]=diff
+
+#    derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i])) for i in range(len(liste_acquisition)-1)]
+#    if derivee[index]>PEAK:
+#            derivee[index]=median(derivee)
+#    index = index +1
+ 
+ if index == NDERIVE:
         index = 0
 
     lissage = median(liste_acquisition)
