@@ -21,4 +21,4 @@ rrdtool graph $DIR/h_cuve_6m.png --start -25w  --title="Hauteur d'eau sur 6 mois
 
 #Graphs par an
 #Graphs pour 6 mois
-rrdtool graph $DIR/h_cuve_1y.png --start -25w  --title="Hauteur d'eau sur 6 mois" --vertical-label="cm" DEF:haut=$DIR/capa_cuve.rrd:haut:AVERAGE LINE1:haut$COUL_ECHELLE:"Hauteur d'eau en $ECHELLE\n" GPRINT:haut:AVERAGE:"Moy\: %.0lf" GPRINT:haut:MIN:"Mini\: %.0lf" GPRINT:haut:MAX:"Maxi\: %.0lf" 
+rrdtool graph $DIR/h_cuve_1y.png --start -1y  --title="Hauteur d'eau sur 1 an" --vertical-label="cm" DEF:haut=$DIR/capa_cuve.rrd:haut:AVERAGE LINE1:haut$COUL_ECHELLE:"Hauteur d'eau en $ECHELLE\n" GPRINT:haut:AVERAGE:"Moy\: %.0lf" GPRINT:haut:MIN:"Mini\: %.0lf" GPRINT:haut:MAX:"Maxi\: %.0lf" 
