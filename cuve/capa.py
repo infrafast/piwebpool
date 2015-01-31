@@ -158,7 +158,7 @@ PEAK = 5
 index = 0
 liste_acquisition=[0]*NDERIVE
 derivee=[0]*NDERIVE
-
+delay = FREQ
 
 while True:
     
