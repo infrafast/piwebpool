@@ -155,7 +155,7 @@ FREQ = 120
 #nombre d'acquisition pourfaire la moyenne
 SAMPLES = 3
 NDERIVE = 10
-PEAK = 5
+PEAK = 500
 
 index = 0
 liste_acquisition=[0]*NDERIVE
