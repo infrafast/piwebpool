@@ -137,6 +137,8 @@ def LectureDistance(GPIO_TRIGGER,GPIO_ECHO):
     # That was the distance there and back so halve the value
     distance = distance / 2
 
+    distance = 1/distance*1000
+
     #logger.info(str(distance)+" "+str(elapsed))
 
     #GPIO.cleanup()
