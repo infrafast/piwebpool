@@ -174,7 +174,8 @@ while True:
     liste_acquisition[index]=distance
     diff=abs(liste_acquisition[index+1] - liste_acquisition[index])
     if diff > PEAK:
-            diff = median(derivee)
+        diff = median(derivee)
+    
     derivee[index]=diff
 
 #    derivee = [abs((liste_acquisition[i+1] - liste_acquisition[i])) for i in range(len(liste_acquisition)-1)]
@@ -182,11 +183,10 @@ while True:
 #            derivee[index]=median(derivee)
 #    index = index +1
  
-     if index == NDERIVE:
+    if index == NDERIVE:
         index = 0
 
     lissage = median(liste_acquisition)
-        
     logger.info(str(distance)+" "+str(derivee)+" "+str(lissage))
 
     #base RDTOOL
