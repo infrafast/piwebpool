@@ -174,7 +174,7 @@ while True:
     delay = FREQ/2 + median(derivee)*0.1*FREQ
 
     lissage = median(liste_acquisition)
-    logger.info(str(liste_acquisition)+" "+str(derivee)+" "+str(lissage)+" "+str(delay))
+    logger.info(str(distanxe)+" "+str(lissage)+" "+str(delay))
 
     #base RDTOOL
     database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
