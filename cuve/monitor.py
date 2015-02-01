@@ -40,3 +40,5 @@ database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #endTime = str(now)
 average_value = rrdtool.fetch(database_file, 'MAX')
 niveau_maxi = (max(average_value[2])[0])
+
+dropsms(niveau_maxi)
