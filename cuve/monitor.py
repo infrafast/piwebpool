@@ -40,6 +40,6 @@ database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #endTime = str(now)
 average_value = rrdtool.fetch(database_file, 'MAX')
 niveau_maxi = (max(average_value[2])[0])
-niveau_mini = (min(average_value[2])[0])
+niveau_mini = (min(average_value[2]))
 
 print("max:"+str(niveau_maxi)+" min:"+str(niveau_mini))
