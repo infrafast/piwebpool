@@ -150,8 +150,6 @@ liste_acquisition=[0]*NDERIVE
 derivee=[0]*NDERIVE
 delay = FREQ
 
-niveau_mini = 56
-niveau_maxi = 64
 
 while True:
     
