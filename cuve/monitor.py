@@ -37,4 +37,4 @@ database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #startTime = str(now - retention)
 #endTime = str(now)
 average_value = rrdtool.fetch(database_file, 'MAX')
-print (average_value)
+print (max(average_value))
