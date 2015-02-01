@@ -31,10 +31,12 @@ def dropsms(texte):
 
     return
 
+niveau_mini = 56
+niveau_maxi = 64
 
 #base RDTOOL
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #startTime = str(now - retention)
 #endTime = str(now)
 average_value = rrdtool.fetch(database_file, 'MAX')
-print (max(average_value[2])[0])
+niveau_maxi = (max(average_value[2])[0])
