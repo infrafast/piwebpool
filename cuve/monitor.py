@@ -4,6 +4,7 @@
 
 import urllib2
 import sys
+import rrdtool
 
 user = '19107501'
 texte = 'hello world'
