@@ -27,3 +27,7 @@ except IOError, e:
         print 'Erreur côté serveur. Veuillez réessayez ultérieurement.'
 
 print 'Le SMS a été envoyé sur votre mobile.'
+
+    #base RDTOOL
+    database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
+    rrdtool.update(database_file, "N:%.2f" % lissage+":%.2f" % volume)
