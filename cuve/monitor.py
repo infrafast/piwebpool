@@ -58,4 +58,4 @@ ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
 
 
 
-print("Taux occupation: actuel="+str(ratio30s)+"% dernier jour="+str(ratio8h)+"% dernieres 24h="+str(ratio24h)+"%")
+print("Variation volume: actuel="+str(ratio30s)+"% dernier jour="+str(ratio8h)+"% dernieres 24h="+str(ratio24h)+"%")
