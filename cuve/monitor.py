@@ -29,7 +29,7 @@ def dropsms(texte):
     
     print 'Le SMS a été envoyé sur votre mobile.'
 
-
+    return
 
 
 #base RDTOOL
