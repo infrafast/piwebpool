@@ -36,4 +36,5 @@ def dropsms(texte):
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #startTime = str(now - retention)
 #endTime = str(now)
-(timeInfo,columns,rows) = rrdtool.fetch(database_file, 'AVERAGE', '-r', str(secondsPerPoint))
+average_value = rrdtool.fetch(database_file, 'AVERAGE')
+print (average_value)
