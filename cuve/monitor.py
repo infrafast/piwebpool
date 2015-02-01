@@ -38,9 +38,9 @@ niveau_maxi = 64
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #startTime = str(now - retention)
 #endTime = str(now)
-MAX_value = rrdtool.fetch(database_file, 'MAX')
-niveau_maxi = (max(MAX_value[2])[0])
-MIN_value = rrdtool.fetch(database_file, 'MIN')
-niveau_mini = (min(average_value))
+MAX_values = rrdtool.fetch(database_file, 'MAX')
+niveau_maxi = (max(MAX_values[2])[0])
+MIN_values = rrdtool.fetch(database_file, 'MIN')
+niveau_mini = (min(MIN_values))
 
 print("max:"+str(niveau_maxi)+" min:"+str(niveau_mini))
