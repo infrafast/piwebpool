@@ -58,4 +58,4 @@ ratio1w = (round(niveau_maxi / niveau_mini,2)-1)*100
 
 
 
-print("max:"+str(niveau_maxi)+" min:"+str(niveau_mini)+" ratio30s:"+str(ratio30s))
+print("Taux occupation: actuel="+str(ratio30s)+"% dernier jour="+str(ratio8h)+"% cette semaine="+str(ratio1w)+"%")
