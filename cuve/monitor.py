@@ -43,6 +43,6 @@ niveau_maxi = (max(MAX_values[2])[0])
 MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-10s', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
 
-ratio30s = round(niveau_maxi / niveau_mini,2)
+ratio30s = round(niveau_maxi / niveau_mini,4)
 
 print("max:"+str(niveau_maxi)+" min:"+str(niveau_mini)+" ratio30s:"+str(ratio30s))
