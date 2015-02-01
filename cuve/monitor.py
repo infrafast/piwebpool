@@ -60,5 +60,5 @@ ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
 message="Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8h)+"% sur 24h="+str(ratio24h)+"%"
 print (message)
 if ratio30s > 10:
-    dropsms(
+    dropsms(message)
 
