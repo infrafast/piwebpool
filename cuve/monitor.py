@@ -41,6 +41,6 @@ database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 MAX_values = rrdtool.fetch(database_file, 'MAX')
 niveau_maxi = (max(MAX_values[2])[0])
 MIN_values = rrdtool.fetch(database_file, 'MIN')
-niveau_mini = (min(MIN_values))
+niveau_mini = (min(MIN_values)[0])
 
 print("max:"+str(niveau_maxi)+" min:"+str(niveau_mini))
