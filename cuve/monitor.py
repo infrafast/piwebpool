@@ -6,7 +6,7 @@ import urllib2
 import sys
 
 user = '19107501'
-texte = 'helo world'
+texte = 'hello world'
 pas = 'oGVsksAr0geO6j'
 url = 'https://smsapi.free-mobile.fr/sendmsg?&user='+user+'&pass='+pas+'&msg='+texte
 
