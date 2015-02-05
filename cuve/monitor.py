@@ -24,13 +24,13 @@ def dropsms(texte):
     except IOError, e:
       if hasattr(e,'code'):
         if e.code == 400:
-            sms_feedback = 'missing parameter.'
+            sms_feedback = 'SMS missing parameter.'
         if e.code == 402:
-            print 'too many request in short time.'
+            print 'too many SMS request in short time.'
         if e.code == 403:
-            print 'service not activated or incorrect credentials.'
+            print 'SMS service not activated or incorrect credentials.'
         if e.code == 500:
-            print 'Erreur côté serveur. Veuillez réessayez ultérieurement.'
+            print 'SMS server unavailable'
     
     return
 
