@@ -82,12 +82,13 @@ MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-24h', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
 ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
 
-
-message="Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8h)+"% sur 24h="+str(ratio24h)+"%"+" alert:"+str(AUTO)+" auto: "+str(AUTO)
-print (message)
 if ratio30s > 10:
     ALERT = 1
+    message = "ALERT "
     
-    
+logger.info(str(distance)+" "+str(lissage)+" "+str(delay))
+message=message+"Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8h)+"% sur 24h="+str(ratio24h)+"%"+"
+print (message)
+
     dropsms(message)
 
