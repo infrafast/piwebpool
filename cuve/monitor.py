@@ -53,7 +53,7 @@ parser.add_argument("-s", "--sms", help="monitor tank volume variation to (defau
  
 args = parser.parse_args()
 if args.sms:
-    SMS = sms.auto
+    SMS = args.sms
 
 logger = logging.getLogger(__name__)
 logger.setLevel(LOG_LEVEL)
