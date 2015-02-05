@@ -90,6 +90,6 @@ message=message+"Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8
 print (message)
 logger.info(message)
 
-if ALERT or AUTO
+if ALERT or AUTO:
     dropsms(message)
 
