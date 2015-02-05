@@ -15,6 +15,7 @@ def dropsms(texte):
     user = '19107501'
     pas = 'oGVsksAr0geO6j'
     url = 'https://smsapi.free-mobile.fr/sendmsg?&user='+user+'&pass='+pas+'&msg='+texte
+    sms_feedback = 'SMS sent'
     
     req = urllib2.Request(url)
     try:
@@ -23,16 +24,14 @@ def dropsms(texte):
     except IOError, e:
       if hasattr(e,'code'):
         if e.code == 400:
-            print 'Un des paramètres obligatoires est manquant.'
+            sms_feedback = 'missing parameter.'
         if e.code == 402:
-            print 'Trop de SMS ont été envoyés en trop peu de temps.'
+            print 'too many request in short time.'
         if e.code == 403:
-            print 'Le service n’est pas activé sur l’espace abonné, ou login / clé incorrect.'
+            print 'service not activated or incorrect credentials.'
         if e.code == 500:
             print 'Erreur côté serveur. Veuillez réessayez ultérieurement.'
     
-    print 'Le SMS a été envoyé sur votre mobile.'
-
     return
 
 niveau_mini = 56
