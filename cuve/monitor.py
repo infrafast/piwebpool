@@ -34,6 +34,18 @@ def dropsms(texte):
 niveau_mini = 56
 niveau_maxi = 64
 
+LOG_FILENAME = "/tmp/capa.log"
+LOG_LEVEL = logging.INFO
+ 
+# Define and parse command line arguments
+parser = argparse.ArgumentParser(description="capa service")
+parser.add_argument("-l", "--log", help="file to write log to (default '" + LOG_FILENAME + "')")
+ 
+args = parser.parse_args()
+if args.log:
+    LOG_FILENAME = args.log
+
+
 #base RDTOOL
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #startTime = str(now - retention)
