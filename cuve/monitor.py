@@ -19,7 +19,7 @@ def dropsms(texte):
     
     req = urllib2.Request(url)
     try:
-      reponse = urllib2.urlopen(req)
+      #reponse = urllib2.urlopen(req)
     
     except IOError, e:
       if hasattr(e,'code'):
