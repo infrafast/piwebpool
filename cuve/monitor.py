@@ -26,11 +26,11 @@ def dropsms(texte):
         if e.code == 400:
             sms_feedback = 'SMS missing parameter.'
         if e.code == 402:
-            sms_feedback =  'too many SMS request in short time.'
+            sms_feedback = 'too many SMS request in short time.'
         if e.code == 403:
-            sms_feedback =  'SMS service not activated or incorrect credentials.'
+            sms_feedback = 'SMS service not activated or incorrect credentials.'
         if e.code == 500:
-            sms_feedback =  'SMS server unavailable'
+            sms_feedback = 'SMS server unavailable.'
 
     logger.info(sms_feedback)
 
