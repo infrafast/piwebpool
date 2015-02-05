@@ -39,7 +39,8 @@ niveau_mini = 56
 niveau_maxi = 64
 
 LOG_FILENAME = "/tmp/monitor.log"
-ALERT = 
+ALERT = 0
+LOG_LEVEL = logging.INFO
 
 # Define and parse command line arguments
 parser = argparse.ArgumentParser(description="tank monitoring and alert")
