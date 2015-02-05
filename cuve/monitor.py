@@ -31,7 +31,9 @@ def dropsms(texte):
             print 'SMS service not activated or incorrect credentials.'
         if e.code == 500:
             print 'SMS server unavailable'
-    
+
+
+
     return
 
 niveau_mini = 56
