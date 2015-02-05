@@ -42,7 +42,7 @@ niveau_maxi = 64
 
 LOG_FILENAME = "/tmp/monitor.log"
 ALERT = 0
-AUTO = 0
+SMS = 0
 LOG_LEVEL = logging.INFO
 
 message = "Variation volume:"
