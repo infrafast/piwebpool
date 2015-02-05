@@ -33,7 +33,7 @@ def dropsms(texte):
             sms_feedback = 'SMS server unavailable.'
 
     logger.info(sms_feedback)
-    print (sms_feedback)
+    #print (sms_feedback)
 
     return
 
@@ -91,7 +91,7 @@ if ratio30s > 10:
     message = message + " !WARNING!"
     
 message=message+" current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+" alert:"+str(ALERT)+" auto: "+str(SMS)
-print (message)
+#print (message)
 logger.info(message)
 
 if ALERT or SMS:
