@@ -39,8 +39,8 @@ niveau_mini = 56
 niveau_maxi = 64
 
 LOG_FILENAME = "/tmp/monitor.log"
-LOG_LEVEL = logging.INFO
- 
+ALERT = 
+
 # Define and parse command line arguments
 parser = argparse.ArgumentParser(description="tank monitoring and alert")
 parser.add_argument("-a", "--auto", help="monitor tank volume variation to (default '" + LOG_FILENAME + "')")
