@@ -86,9 +86,9 @@ if ratio30s > 10:
     ALERT = 1
     message = "ALERT "
     
-logger.info(str(distance)+" "+str(lissage)+" "+str(delay))
-message=message+"Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8h)+"% sur 24h="+str(ratio24h)+"%"+"
+message=message+"Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8h)+"% sur 24h="+str(ratio24h)+"%"+" alert:"+str(AUTO)+" auto: "+str(AUTO)
 print (message)
+logger.info(message)
 
     dropsms(message)
 
