@@ -86,7 +86,7 @@ MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-24h', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
 ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
 
-if ratio30s > 10 and ratio8h > 3:
+if ratio30s > 10 and ratio8h > 5:
     ALERT = 1
     message = message + " !WARNING!"
     
