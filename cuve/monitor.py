@@ -43,7 +43,7 @@ ALERT = 0
 AUTO = 0
 LOG_LEVEL = logging.INFO
 
-message = 
+message = "Variation volume"
 
 # Define and parse command line arguments
 parser = argparse.ArgumentParser(description="tank monitoring and alert")
