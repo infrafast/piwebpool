@@ -94,7 +94,7 @@ message=message+" current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h=
 print (message)
 logger.info(message)
 
-if ALERT or AUTO:
+if ALERT or SMS:
     dropsms(message)    
     
 
