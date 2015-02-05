@@ -48,7 +48,15 @@ parser.add_argument("-a", "--auto", help="monitor tank volume variation to (defa
 args = parser.parse_args()
 if args.auto:
     ALERT = args.auto
-    
+
+logger = logging.getLogger(__name__)
+logger.setLevel(LOG_LEVEL)
+handler = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", backupCount=1)
+formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+
+
 
 #base RDTOOL
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
