@@ -12,7 +12,7 @@ import argparse
 
 def dropsms(texte):
 
-    user = '19107501 X'
+    user = '19107501'
     pas = 'oGVsksAr0geO6j'
     url = 'https://smsapi.free-mobile.fr/sendmsg?&user='+user+'&pass='+pas+'&msg='+texte
     sms_feedback = 'SMS sent'
