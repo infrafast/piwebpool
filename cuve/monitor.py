@@ -33,7 +33,7 @@ def dropsms(texte):
             sms_feedback = 'SMS server unavailable.'
 
     logger.info(sms_feedback)
-    print (message)
+    print (sms_feedback)
 
     return
 
