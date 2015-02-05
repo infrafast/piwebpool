@@ -86,7 +86,7 @@ ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
 
 if ratio30s > 10:
     ALERT = 1
-    message = "ALERT "
+    message = " !ALERT! "
     
 message=message+"current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+" alert:"+str(AUTO)+" auto: "+str(AUTO)
 print (message)
