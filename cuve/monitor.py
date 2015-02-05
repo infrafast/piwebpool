@@ -32,7 +32,7 @@ def dropsms(texte):
         if e.code == 500:
             sms_feedback =  'SMS server unavailable'
 
-    
+    logger.info(sms_feedback)
 
     return
 
