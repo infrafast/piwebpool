@@ -43,7 +43,7 @@ LOG_LEVEL = logging.INFO
  
 # Define and parse command line arguments
 parser = argparse.ArgumentParser(description="tank monitoring and alert")
-parser.add_argument("-a", "--auto", help="file to write log to (default '" + LOG_FILENAME + "')")
+parser.add_argument("-a", "--auto", help="monitor tank volume variation to (default '" + LOG_FILENAME + "')")
  
 args = parser.parse_args()
 if args.log:
