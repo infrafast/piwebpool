@@ -93,5 +93,6 @@ print (message)
 logger.info(message)
 
 if ALERT or AUTO:
-    dropsms(message)
+    dropsms(message)    
+    
 
