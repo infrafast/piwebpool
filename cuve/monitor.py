@@ -90,7 +90,7 @@ ratio30s = 11
 
 if ratio30s > 10:
     ALERT = 1
-    message = " !WARNING!"
+    message = message + " !WARNING!"
     
 message=message+" current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+" alert:"+str(ALERT)+" auto: "+str(SMS)
 print (message)
