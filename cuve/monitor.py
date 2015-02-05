@@ -47,7 +47,7 @@ parser.add_argument("-a", "--auto", help="monitor tank volume variation to (defa
  
 args = parser.parse_args()
 if args.log:
-    ALERT = args.auto
+    ALERT = args.log
     
 
 #base RDTOOL
