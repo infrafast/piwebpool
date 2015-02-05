@@ -46,7 +46,7 @@ parser = argparse.ArgumentParser(description="tank monitoring and alert")
 parser.add_argument("-a", "--auto", help="monitor tank volume variation to (default '" + LOG_FILENAME + "')")
  
 args = parser.parse_args()
-if args.log:
+if args.auto:
     ALERT = args.log
     
 
