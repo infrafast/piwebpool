@@ -43,6 +43,8 @@ ALERT = 0
 AUTO = 0
 LOG_LEVEL = logging.INFO
 
+message = 
+
 # Define and parse command line arguments
 parser = argparse.ArgumentParser(description="tank monitoring and alert")
 parser.add_argument("-a", "--auto", help="monitor tank volume variation to (default '" + LOG_FILENAME + "')")
@@ -86,7 +88,7 @@ if ratio30s > 10:
     ALERT = 1
     message = "ALERT "
     
-message=message+"Variation volume: actuel="+str(ratio30s)+"% sur 8h="+str(ratio8h)+"% sur 24h="+str(ratio24h)+"%"+" alert:"+str(AUTO)+" auto: "+str(AUTO)
+message=message+"current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+" alert:"+str(AUTO)+" auto: "+str(AUTO)
 print (message)
 logger.info(message)
 
