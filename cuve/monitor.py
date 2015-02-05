@@ -38,12 +38,12 @@ def dropsms(texte):
 niveau_mini = 56
 niveau_maxi = 64
 
-LOG_FILENAME = "/tmp/capa.log"
+LOG_FILENAME = "/tmp/monitor.log"
 LOG_LEVEL = logging.INFO
  
 # Define and parse command line arguments
 parser = argparse.ArgumentParser(description="tank monitoring and alert")
-parser.add_argument("-l", "--log", help="file to write log to (default '" + LOG_FILENAME + "')")
+parser.add_argument("-a", "--auto", help="file to write log to (default '" + LOG_FILENAME + "')")
  
 args = parser.parse_args()
 if args.log:
