@@ -49,7 +49,7 @@ parser.add_argument("-a", "--auto", help="monitor tank volume variation to (defa
  
 args = parser.parse_args()
 if args.auto:
-    ALERT = args.auto
+    AUTO = args.auto
 
 logger = logging.getLogger(__name__)
 logger.setLevel(LOG_LEVEL)
