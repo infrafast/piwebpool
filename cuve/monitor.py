@@ -42,7 +42,7 @@ LOG_FILENAME = "/tmp/capa.log"
 LOG_LEVEL = logging.INFO
  
 # Define and parse command line arguments
-parser = argparse.ArgumentParser(description="capa service")
+parser = argparse.ArgumentParser(description="tank monitoring and alert")
 parser.add_argument("-l", "--log", help="file to write log to (default '" + LOG_FILENAME + "')")
  
 args = parser.parse_args()
