@@ -49,8 +49,6 @@ args = parser.parse_args()
 if args.log:
     ALERT = args.auto
     
-alert = 0
-
 
 #base RDTOOL
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
