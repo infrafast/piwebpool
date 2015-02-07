@@ -92,7 +92,7 @@ if ratio30s > 10 :
     
 message=message+" current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"
 #print (message)
-logger.info(message)
+logger.info(ratio30s+" "+ratio8h+" "+ratio24h)
 
 if ALERT or SMS:
     dropsms(message)    
