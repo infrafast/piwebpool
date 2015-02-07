@@ -90,9 +90,9 @@ if ratio30s > 10 :
     ALERT = 1
     message = message + " !WARNING!"
     
-message=message+" current="+str(ratio30s)+"% last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"
+message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"
 #print (message)
-logger.info(ratio30s+" "+ratio8h+" "+ratio24h)
+logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h))
 
 if ALERT or SMS:
     dropsms(message)    
