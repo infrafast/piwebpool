@@ -49,6 +49,9 @@ def dropsms(texte):
 niveau_mini = 45.0
 niveau_maxi = 65.0
 
+LIMITE_HAUTE = niveau_maxi
+LIMITE_BASSE = niveau_mini
+
 LOG_FILENAME = "/tmp/monitor.log"
 ALERT = 0
 SMS = 0
