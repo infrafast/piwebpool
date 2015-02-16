@@ -105,6 +105,6 @@ print (message)
 logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h))
 
 if ALERT or SMS:
-    dropsms(message)    
+    #dropsms(message)    
     
 
