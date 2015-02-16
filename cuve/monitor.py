@@ -117,7 +117,7 @@ if ratio8h > 7 and ratio8h < 9 :
 
 
 message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+" AVG: "+str(AVERAGE_value)
-print (message)
+#print (message)
 logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h)+" "+str(AVERAGE_value))
 
 if ALERT or SMS:
