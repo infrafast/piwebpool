@@ -95,7 +95,7 @@ if ratio8h > 7 and ratio8h < 9 :
     ALERT = 1
     message = message + " [MOTION]"
 # le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
-if AVG_value > niveau_maxi*1.05 :
+if AVERAGE_values > niveau_maxi*1.05 :
     ALERT = 1
     message = message + " [PUMP BLOCKED]"
 
