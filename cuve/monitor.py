@@ -100,7 +100,7 @@ if AVERAGE_values > niveau_maxi*1.04 :
     message = message + " [PUMP BLOCKED]"
 
 
-message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"
+message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+str(AVERAGE_tuples)
 print (message)
 logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h))
 
