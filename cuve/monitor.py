@@ -37,7 +37,7 @@ def dropsms(texte):
 
     return
 
-niveau_mini = 56
+niveau_mini = 55
 niveau_maxi = 65
 
 LOG_FILENAME = "/tmp/monitor.log"
