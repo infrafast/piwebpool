@@ -68,11 +68,13 @@ logger.addHandler(handler)
 database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
 #startTime = str(now - retention)
 #endTime = str(now)
-MAX_values = rrdtool.fetch(database_file, 'MAX','-s', 'end-60s', '-e', 'now')
+
+MAX_values = rrdtool.fetch(database_file, 'MAX','-s', 'end-24h', '-e', 'now')
 niveau_maxi = (max(MAX_values[2])[0])
-MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-60s', '-e', 'now')
+MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-24h', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
-ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
+ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
+
 
 MAX_values = rrdtool.fetch(database_file, 'MAX','-s', 'end-8h', '-e', 'now')
 niveau_maxi = (max(MAX_values[2])[0])
@@ -80,16 +82,20 @@ MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-8h', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
 ratio8h = (round(niveau_maxi / niveau_mini,2)-1)*100
 
-MAX_values = rrdtool.fetch(database_file, 'MAX','-s', 'end-24h', '-e', 'now')
+MAX_values = rrdtool.fetch(database_file, 'MAX','-s', 'end-60s', '-e', 'now')
 niveau_maxi = (max(MAX_values[2])[0])
-MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-24h', '-e', 'now')
+MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-60s', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
-ratio24h = (round(niveau_maxi / niveau_mini,2)-1)*100
+ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
+
+
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
 if ratio8h > 7 and ratio8h < 9 :
     ALERT = 1
     message = message + " !WARNING!"
-    
+if 
+
+
 message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"
 #print (message)
 logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h))
