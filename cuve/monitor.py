@@ -97,7 +97,7 @@ if ratio8h > 7 and ratio8h < 9 :
 # le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
 if AVERAGE_values > niveau_maxi*1.05 :
     ALERT = 1
-    message = message + " [PUMP BLOCKED] avg"+str(AVERAGE_values)
+    message = message + " [PUMP BLOCKED] avg:"+str(AVERAGE_values)
 
 
 message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"
