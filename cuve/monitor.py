@@ -92,7 +92,7 @@ ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
 if ratio8h > 7 and ratio8h < 9 :
     ALERT = 1
-    message = message + " !WARNING!"
+    message = message + " MOTION"
 # le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
 if MAX_values > 66 :
     ALERT = 1
