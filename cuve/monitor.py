@@ -12,7 +12,7 @@ import argparse
 
 def dropsms(texte):
 
-    user = '19107501'
+    user = '19107501*'
     pas = 'oGVsksAr0geO6j'
     url = 'https://smsapi.free-mobile.fr/sendmsg?&user='+user+'&pass='+pas+'&msg='+texte
     sms_feedback = 'SMS sent'
@@ -105,6 +105,6 @@ print (message)
 logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h))
 
 if ALERT or SMS:
-    #dropsms(message)    
+    dropsms(message)    
     
 
