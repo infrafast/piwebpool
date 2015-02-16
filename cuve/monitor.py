@@ -98,7 +98,7 @@ niveau_mini = (min(MIN_values)[0])[0]
 ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
 
 AVERAGE_tuples = rrdtool.fetch(database_file, 'AVERAGE','-s', 'end-60s', '-e', 'now')[2]
-AVERAGE_value = median(AVERAGE_tuples)[0]
+AVERAGE_value = round(median(AVERAGE_tuples)[0])
 
 
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
