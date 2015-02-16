@@ -97,7 +97,7 @@ MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-60s', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
 ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
 
-AVERAGE_tuples = rrdtool.fetch(database_file, 'AVERAGE','-s', 'end-60s', '-e', 'now')[2][0]
+AVERAGE_tuples = rrdtool.fetch(database_file, 'AVERAGE','-s', 'end-60s', '-e', 'now')[2]
 AVERAGE_value = median(AVERAGE_tuples)
 
 
