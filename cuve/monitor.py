@@ -100,15 +100,17 @@ ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
 AVERAGE_tuples = rrdtool.fetch(database_file, 'AVERAGE','-s', 'end-60s', '-e', 'now')[2]
 AVERAGE_value = round(median(AVERAGE_tuples)[0])
 
+# le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
+if AVERAGE_value > niveau_maxi*1.03 :
+    ALERT = 1
+    message = message + " [PUMP BLOCKED]"
+
 
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
 if ratio8h > 7 and ratio8h < 9 :
     ALERT = 1
     message = message + " [MOTION]"
-# le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
-if AVERAGE_value > niveau_maxi*1.03 :
-    ALERT = 1
-    message = message + " [PUMP BLOCKED]"
+
 
 
 message=message+" current="+str(ratio30s)+"% ./last 8h="+str(ratio8h)+"% last 24h="+str(ratio24h)+"%"+" AVG: "+str(AVERAGE_value)
