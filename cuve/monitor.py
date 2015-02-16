@@ -88,6 +88,7 @@ MIN_values = rrdtool.fetch(database_file, 'MIN','-s', 'end-60s', '-e', 'now')
 niveau_mini = (min(MIN_values)[0])[0]
 ratio30s = (round(niveau_maxi / niveau_mini,2)-1)*100
 
+AVERAGE_values = rrdtool.fetch(database_file, 'MAX','-s', 'end-60s', '-e', 'now')
 
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
 if ratio8h > 7 and ratio8h < 9 :
