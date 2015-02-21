@@ -110,7 +110,7 @@ if AVERAGE_value > LIMITE_HAUTE*1.03 :
 
 
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
-if ratio8h > 7 and ratio8h < 9 :
+if ratio8h > 7 and ratio8h < 9 and ratio30s > 2 :
     ALERT = 1
     message = message + " [MOTION]"
 
