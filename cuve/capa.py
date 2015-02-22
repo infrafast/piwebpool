@@ -175,8 +175,10 @@ while True:
     delay = math.floor(FREQ/2 + median(derivee)*0.3*FREQ)
 
     lissage = median(liste_acquisition)
-    logger.info(str(distance)+" "+str(lissage)+" "+str(delay))
-
+    dataOut = str(distance)+" "+str(lissage)+" "+str(delay)
+    logger.info(dataOut)
+    print(dataOut)
+    
     #base RDTOOL
     #database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
     #rrdtool.update(database_file, "N:%.2f" % lissage+":%.2f" % volume)
