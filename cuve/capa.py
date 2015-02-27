@@ -177,9 +177,9 @@ while True:
     lissage = median(liste_acquisition)
     dataOut = str(distance)+" "+str(lissage)+" "+str(delay)
     logger.info(dataOut)
-    print(dataOut)
+    #print(dataOut)
     
     #base RDTOOL
-    #database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
-    #rrdtool.update(database_file, "N:%.2f" % lissage+":%.2f" % volume)
+    database_file = "/home/webide/repositories/my-pi-projects/cuve/capa_cuve.rrd"
+    rrdtool.update(database_file, "N:%.2f" % lissage+":%.2f" % volume)
     time.sleep(60/delay)
