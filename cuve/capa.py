@@ -140,7 +140,7 @@ FOND = 100
 
 #nombre d'echantillon par minute
 FREQ = 60          
-#nombre d'acquisition pourfaire la moyenne
+#nombre d'acquisition pour faire la moyenne
 SAMPLES = 3
 NDERIVE = 10
 PEAK = 5
