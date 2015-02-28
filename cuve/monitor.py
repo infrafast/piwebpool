@@ -46,8 +46,8 @@ def dropsms(texte):
 
     return
 
-niveau_mini = 45.0
-niveau_maxi = 67.0
+niveau_mini = 48.0
+niveau_maxi = 71.0
 
 LIMITE_HAUTE = niveau_maxi
 LIMITE_BASSE = niveau_mini
