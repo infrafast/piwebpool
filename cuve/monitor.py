@@ -142,5 +142,3 @@ logger.info(str(ratio30s)+" "+str(ratio8h)+" "+str(ratio24h)+" "+str(AVERAGE_val
 if ALERT or SMS:
     dropsms(message)
     dropmail(message)
-    
-dropmail(message)
