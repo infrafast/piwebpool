@@ -143,4 +143,3 @@ if ALERT or SMS:
     dropsms(message)
     dropmail(message)
     
-dropmail(message)
