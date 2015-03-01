@@ -47,7 +47,7 @@ def dropsms(texte):
     #print (sms_feedback)
     return
 
-def dropmail(texte)
+def dropmail(texte):
     to = 'szemrot@hotmail.com'
     gmail_user = 'tszemro@tqm-insight.com'
     gmail_pwd = 'Quintal74601'
