@@ -48,7 +48,7 @@ def dropsms(texte):
     return
 
 def dropmail(texte):
-    to = 'szemrot@hotmail.com'
+    to = 'szemrot@hotmail.com, tszemro@tqm-insight.com'
     gmail_user = 'tszemro@tqm-insight.com'
     gmail_pwd = 'Quintal74601'
     smtpserver = smtplib.SMTP("smtp.gmail.com",587)
