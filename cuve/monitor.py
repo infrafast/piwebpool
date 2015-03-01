@@ -57,7 +57,7 @@ def dropmail(texte):
     smtpserver.ehlo
     smtpserver.login(gmail_user, gmail_pwd)
     header = 'To:' + to + '\n' + 'From: ' + gmail_user + '\n' + 'Subject:Pump monitoring message \n'
-    print header
+    #print header
     msg = header + texte
     smtpserver.sendmail(gmail_user, to, msg)
     logger.info("email sent")
