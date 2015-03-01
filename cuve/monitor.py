@@ -8,6 +8,8 @@ import rrdtool
 import logging
 import logging.handlers
 import argparse
+import smtplib
+
 
 def median(mylist):
 #---------------------------------------------------------------------------------------------
@@ -43,8 +45,25 @@ def dropsms(texte):
 
     logger.info(sms_feedback)
     #print (sms_feedback)
-
     return
+
+def dropmail(texte)
+    to = 'szemrot@hotmail.com'
+    gmail_user = 'tszemro@tqm-insight.com'
+    gmail_pwd = 'Quintal74601'
+    smtpserver = smtplib.SMTP("smtp.gmail.com",587)
+    smtpserver.ehlo()
+    smtpserver.starttls()
+    smtpserver.ehlo
+    smtpserver.login(gmail_user, gmail_pwd)
+    header = 'To:' + to + '\n' + 'From: ' + gmail_user + '\n' + 'Subject:Pump monitoring message \n'
+    print header
+    msg = header + texte
+    smtpserver.sendmail(gmail_user, to, msg)
+    logger.info("email sent")
+    smtpserver.close()
+    return
+
 
 niveau_mini = 48.0
 niveau_maxi = 71.0
