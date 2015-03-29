@@ -128,7 +128,7 @@ if AVERAGE_value > LIMITE_HAUTE*1.03 :
     message = message + " [PUMP BLOCKED]"
 
 #niveau bas: risque de desarmorce de la pompe
-if AVERAGE_value < LIMITE_BASSE*0.98 :
+if AVERAGE_value < LIMITE_BASSE*0.97 :
     ALERT = 1
     message = message + " [PUMP BLOCKED]"
 
