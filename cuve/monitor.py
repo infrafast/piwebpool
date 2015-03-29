@@ -125,7 +125,7 @@ AVERAGE_value = round(median(AVERAGE_tuples)[0])
 # le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
 if AVERAGE_value > LIMITE_HAUTE*1.03 :
     ALERT = 1
-    message = message + " [PUMP BLOCKED]"
+    message = message + " [HIGH LEVEL]"
 
 #niveau bas: risque de desarmorce de la pompe
 if AVERAGE_value < LIMITE_BASSE*0.97 :
