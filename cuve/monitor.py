@@ -127,6 +127,11 @@ if AVERAGE_value > LIMITE_HAUTE*1.03 :
     ALERT = 1
     message = message + " [PUMP BLOCKED]"
 
+#niveau bas: risque de desarmorce de la pompe
+if AVERAGE_value < LIMITE_BASSE*0.98 :
+    ALERT = 1
+    message = message + " [PUMP BLOCKED]"
+
 
 #rajouter une autre condition qui permet de capturer le moment pour eviter de recevoir des sms sans arret -
 if ratio8h > 7 and ratio8h < 9 and ratio30s > 3 :
