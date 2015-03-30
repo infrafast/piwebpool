@@ -123,7 +123,7 @@ AVERAGE_tuples = rrdtool.fetch(database_file, 'AVERAGE','-s', 'end-60s', '-e', '
 AVERAGE_value = round(median(AVERAGE_tuples)[0])
 
 # le niveau reste haut pendant plus de une minute; la pompe ne s'est pas mise en route...
-if AVERAGE_value > LIMITE_HAUTE*1.03 :
+if AVERAGE_value > LIMITE_HAUTE+2 :
     ALERT = 1
     message = message + " [HIGH LEVEL]"
 
