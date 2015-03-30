@@ -128,7 +128,7 @@ if AVERAGE_value > LIMITE_HAUTE*1.03 :
     message = message + " [HIGH LEVEL]"
 
 #niveau bas: risque de desarmorce de la pompe
-if AVERAGE_value < LIMITE_BASSE*0.97 :
+if AVERAGE_value < LIMITE_BASSE*0.97 and  AVERAGE_value > LIMITE_BASSE*0.95:
     ALERT = 1
     message = message + " [LOW LEVEL]"
 
