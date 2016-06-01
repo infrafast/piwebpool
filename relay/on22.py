@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 # appends to PYTHONPATH the location of the example codes
-sys.path.append(r'quick2wire-python-api/src/')
+sys.path.append(r'/home/webide/repositories/my-pi-projects/relay/quick2wire-python-api/quick2wire/')
 from time import sleep
 from quick2wire.gpio import Pin, exported
 with exported(Pin(15, Pin.Out)) as LED :
