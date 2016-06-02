@@ -24,8 +24,4 @@ $materials = array(
 			"Filtration"=>11,
 			"Prise libre"=>12,
 		    );
-
-
-
-
 ?>
