@@ -19,11 +19,10 @@ require_once('functions.php');
 <body>
 
 <table class="materialTab">
-<tr><th>Objet</th><th>PIN</th><th>Etat</th></tr>
+<tr><th>Commande</th><th>Etat</th></tr>
 <?php foreach($materials as $material=>$pin){ ?>
 <tr>
 	<td><?php echo $material; ?></td>
-	<td><?php echo $pin.' ('.$pins[$pin] .')'; $pinState = getPinState($pin,$pins); ?></td>
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="pinState <?php echo $pinState; ?>"></div></td></tr>
 <?php } ?>
 <tr>
