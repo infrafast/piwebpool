@@ -401,5 +401,7 @@ $table = new TableGear($options);
 <td colspan="3"><div onclick="demo();">Actions</div></td>
 </tr>
 </table>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
