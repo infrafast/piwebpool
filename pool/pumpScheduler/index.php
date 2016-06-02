@@ -1,6 +1,6 @@
-<?php
+<?
 
-include("include/TableGear1.6.php");
+include("include/TableGear1.6.1.php");
 
 //
 // TableGear Usage:
@@ -17,7 +17,7 @@ include("include/TableGear1.6.php");
 $options = array();
 $options["database"] = array();
 $options["pagination"] = array();
-$options["addNewRows"] = false;
+
 
 // Database host: if omitted defaults to localhost.
 // $options["database"]["host"]        = "<DATABASE_HOST>",
@@ -25,10 +25,10 @@ $options["addNewRows"] = false;
 
 // Basic database information. These are required.
 
-$options["database"]["name"]        = "pool";
-$options["database"]["username"]    = "root";
-$options["database"]["password"]    = "Quintal74605";
-$options["database"]["table"]       = "pumpSchedule";
+$options["database"]["name"]        = "<DATABASE_NAME>";
+$options["database"]["username"]    = "<DATABASE_USERNAME>";
+$options["database"]["password"]    = "<DATABASE_PASSWORD>";
+$options["database"]["table"]       = "<DATABASE_TABLE>";
 
 
 
@@ -38,7 +38,7 @@ $options["database"]["table"]       = "pumpSchedule";
 // deleteRowLabel  = Text or an element that is used for the delete label.
 //                   This accepts a string or an HTML object (more info above).
 //
-$options["allowDelete"] = false;
+// $options["allowDelete"] = false;
 //
 // $options["deleteRowLabel"] = "×";  // A simple character.
 // $options["deleteRowLabel"] = array("tag" => "img", "attrib" => array("src" => "images/delete.gif")); // Default delete image.
@@ -85,7 +85,7 @@ $options["allowDelete"] = false;
 // One example of this is a CURRENT_TIMESTAMP default for a date field.
 // Note that this option cannot be used when you are using a custom query with fetchData
 
-//$options["database"]["fetchEmptyRow"] = true;
+// $options["database"]["fetchEmptyRow"] = true;
 
 
 
@@ -140,25 +140,6 @@ $options["allowDelete"] = false;
 // $options["selects"] = array("<FIELD>" => "increment[range=10]");          // If the current value is 18, will output <option> tags with values from 13 - 23.
 // $options["selects"] = array("<FIELD>" => "increment[range=5,step=5]");    // If the current value is 18, will output <option> tags with values 8,13,18,23,28.
 
-//$options["selects"] = array("below0" => array("on" => 1, "off" => 0)); 
-$options["selects"] = array(
-	"below0" => array("on" => 1, "off" => 0),
-	"0to2" => array("on" => 1, "off" => 0),
-	"2to4" => array("on" => 1, "off" => 0),
-	"4to6" => array("on" => 1, "off" => 0),
-	"6to8" => array("on" => 1, "off" => 0),
-	"8to10" => array("on" => 1, "off" => 0),
-	"10to12" => array("on" => 1, "off" => 0),
-	"12to14" => array("on" => 1, "off" => 0),
-	"14to16" => array("on" => 1, "off" => 0),
-	"16to18" => array("on" => 1, "off" => 0),
-	"18to20" => array("on" => 1, "off" => 0),
-	"20to22" => array("on" => 1, "off" => 0),
-	"22to24" => array("on" => 1, "off" => 0),
-	"24to26" => array("on" => 1, "off" => 0),
-	"26to28" => array("on" => 1, "off" => 0),
-	"above28" => array("on" => 1, "off" => 0)
-); 
 
 // Advanced usage of "selects" allows for some pretty cool features, like date formatting.
 // The example below would output 11 <option> elements that increment in steps of 86400, or 1 day in seconds.
@@ -306,22 +287,7 @@ $options["selects"] = array(
 //                using "associate" (see below).
 
 
-$options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["4to6"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["6to8"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["8to10"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["10to12"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["12to14"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["14to16"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["16to18"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["18to20"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["20to22"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
+// $options["transform"]["<FIELD1>"] = "The data: {DATA} occurred in field {FIELD} (or column {COLUMN}) in row {KEY}.";  // Illustrating how to use a transform.
 //
 // $options["transform"]["<FIELD1>"] = array("tag" => "img",
 //                                           "attrib" => array("src" => "/path/to/thumbnails/{DATA}")); // A simple url to image transform.
@@ -377,15 +343,15 @@ $table = new TableGear($options);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Pump scheduler</title>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
-  <script type="text/javascript" src="javascripts/TableGear1.6.1-MooTools.js"></script>
+  <title>TableGear for jQuery</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/TableGear1.6-jQuery.js"></script>
   <link type="text/css" rel="stylesheet" href="stylesheets/tablegear.css" />
 </head>
 <body>
   <div>
     <?= $table->getTable() ?>
   </div>
-<?= $table->getJavascript('mootools') ?>
+<?= $table->getJavascript("jquery") ?>
 </body>
 </html>
