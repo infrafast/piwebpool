@@ -27,7 +27,7 @@ require_once('functions.php');
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="pinState <?php echo $pinState; ?>"></div></td></tr>
 <?php } ?>
 <tr>
-<td colspan="3"><div onclick="demo();">Joyeux noël !!</div></td>
+<td colspan="3"><div onclick="demo();">Action</div></td>
 </tr>
 </table>
 
