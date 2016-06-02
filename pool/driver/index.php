@@ -383,6 +383,7 @@ $table = new TableGear($options);
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/TableGear1.6.1-jQuery.js"></script>
   <link type="text/css" rel="stylesheet" href="stylesheets/tablegear.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div>
