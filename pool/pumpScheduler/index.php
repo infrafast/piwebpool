@@ -25,7 +25,7 @@ $options["addNewRows"] = false;
 
 // Basic database information. These are required.
 
-$options["database"]["name"]        = "tableGear";
+$options["database"]["name"]        = "pool";
 $options["database"]["username"]    = "root";
 $options["database"]["password"]    = "Quintal74605";
 $options["database"]["table"]       = "pumpSchedule";
