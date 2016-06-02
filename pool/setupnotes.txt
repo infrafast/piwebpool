@@ -4,6 +4,8 @@ change virtual host eniac from 80 to 8080 (/etc/apache2/site-enable/eniac or via
 install piwire lib
 create symlink /var/www/html/ ->io and ->pumpScheduler
 install adafruit webide
-install mysql
+install mysql-server --fix-missing
+install phpmyadmin
+   add "Include /etc/phpmyadmin/apache.conf" into /etc/apache2/apache2.conf and restart apache2 /etc/init.d/apache2 restart
 
 
