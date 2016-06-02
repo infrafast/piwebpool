@@ -6,6 +6,6 @@ create symlink /var/www/html/ ->io and ->pumpScheduler
 install adafruit webide
 install mysql-server --fix-missing
 install phpmyadmin
-   add "Include /etc/phpmyadmin/apache.conf" into /etc/apache2/apache2.conf and restart apache2 /etc/init.d/apache2 restart
+create database pool
 inject sql code into table via phpmyadmin
 
