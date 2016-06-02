@@ -1,4 +1,4 @@
-<?
+<?php
 
 include("include/TableGear1.6.php");
 
