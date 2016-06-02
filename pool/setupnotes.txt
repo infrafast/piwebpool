@@ -1,0 +1,9 @@
+install php5
+install php5-mysql
+change virtual host eniac from 80 to 8080 (/etc/apache2/site-enable/eniac or via webmin)
+install piwire lib
+create symlink /var/www/html/ ->io and ->pumpScheduler
+install adafruit webide
+install mysql
+
+
