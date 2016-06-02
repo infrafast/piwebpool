@@ -8,4 +8,4 @@ install mysql-server --fix-missing
 install phpmyadmin
 create database pool
 inject sql code into table via phpmyadmin
-
+chmod 0775 stylesheet and javascripts to enable dynamc display
