@@ -28,7 +28,7 @@ echo "\n".$tw."\n";
 
 
 
-$sql    = 'SELECT 0to2 FROM pumpSchedule';
+$sql    = "SELECT 0to2 FROM ".$options["database"]["name"];
 $result = mysql_query($sql, $link);
 
 if (!$result) {
