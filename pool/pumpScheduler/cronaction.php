@@ -22,8 +22,8 @@ $tw=getCurrentTimeWindow();
 echo "\nTime=".$tw;
 
 // what is the temperature
-$temp=getPoolTemperature();
-echo "\nTemp=".$temp;
+$t=getPoolTemperature();
+echo "\nTemp=".$t;
 
 $sql    = "SELECT 0to2 FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
