@@ -31,7 +31,7 @@ $options["database"] = array();
 
 
 // Database host: if omitted defaults to localhost.
-// $options["database"]["host"]        = "<DATABASE_HOST>",
+$options["database"]["host"]        = "localhost",
 
 
 // Basic database information. These are required.
