@@ -1,5 +1,7 @@
 <?php
 
+include ('Netatmo-API-PHP/src/Netatmo/autoload.php');
+
 function getPinState($pin,$pins){
 	$commands = array();
 	exec("gpio read ".$pins[$pin],$commands,$return);
