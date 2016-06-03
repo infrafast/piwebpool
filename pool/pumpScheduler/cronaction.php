@@ -19,11 +19,11 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 // what time is it now?
 $tw=getCurrentTimeWindow();
-echo "\nTime=".$tw."\n";
+echo "\nTime=".$tw;
 
 // what is the temperature
 $temp=getPoolTemperature();
-echo "\nTemp=".$temp."\n";
+echo "\nTemp=".$temp;
 
 $sql    = "SELECT 0to2 FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
