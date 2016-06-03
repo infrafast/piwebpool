@@ -2,12 +2,12 @@
 
 include ('Netatmo-API-PHP/src/Netatmo/autoload.php');
 
-$config = array();
+/*$config = array();
 $config['client_id'] = "57518a8c69f740a68d8b46bc";
 $config['client_secret'] = "7DI1oZzr2FKhuT5gpRndxIU1hyWs3awTd3ltSsmmSd";
 $config['scope'] = 'read_station read_thermostat write_thermostat';
 $client = new Netatmo\Clients\NAApiClient($config);
-
+*/
 
 function getPinState($pin,$pins){
 	$commands = array();
