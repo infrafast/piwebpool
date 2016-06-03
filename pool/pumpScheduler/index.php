@@ -310,8 +310,7 @@ $options["selects"] = array(
 //                using "associate" (see below).
 
 
-$bbb = "below0";
-$options["transform"][$bbb] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["4to6"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
