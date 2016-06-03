@@ -22,10 +22,10 @@ $tw=getCurrentTimeWindow();
 echo "\nTime=".$tw;
 
 // what is the temperature
-$t=getPoolTemperature();
-echo "\nTemp=".$t;
+$temp=getPoolTemperature();
+echo "\nTemp=".$temp;
 
-$sql    = "SELECT ".$t." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
+$sql    = "SELECT ".$temp." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
 
 if (!$result) {
@@ -37,7 +37,7 @@ if (!$result) {
 
 
 while ($row = mysql_fetch_assoc($result)) {
-    echo "\nPump=".$row['0to2'];
+    echo "\nPump=".$row[];
     }
 
 mysql_free_result($result);
