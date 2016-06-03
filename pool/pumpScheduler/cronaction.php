@@ -40,7 +40,7 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-changeState($material["Filtration"]=>$pin,$pumpConsign);
+changeState($material["Filtration"],$pumpConsign);
 
 
 ?>
