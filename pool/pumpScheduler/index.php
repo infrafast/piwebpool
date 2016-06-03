@@ -1,10 +1,12 @@
 <?php
 
-include("include/TableGear1.6.1.php");
-
 // required for IO command
 require_once('configuration.php');
 require_once('functions.php');
+
+
+include("include/TableGear1.6.1.php");
+
 
 //
 // TableGear Usage:
