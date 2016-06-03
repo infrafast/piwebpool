@@ -15,7 +15,7 @@ function getOutsideTemperature(){
 
 function getPoolTemperature(){
     // should curl to Eniac
-    return 0;
+    return 12.5;
 }
 
 function secure($string){
