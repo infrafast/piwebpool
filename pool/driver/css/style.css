@@ -115,11 +115,11 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 
 .on{
-	background-image:url('../image/1.png');
+	background-image:url('../images/1.png');
 }
 
 .off{
-	background-image:url('../image/0.png');
+	background-image:url('../images/0.png');
 }
 
 /* ===============
