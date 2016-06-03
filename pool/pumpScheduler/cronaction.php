@@ -37,7 +37,7 @@ if (!$result) {
 
 
 while ($row = mysql_fetch_assoc($result)) {
-    echo "\nPump=".$row[];
+    echo "\nPump=".$row[$temp];
     }
 
 mysql_free_result($result);
