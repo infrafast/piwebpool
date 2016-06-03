@@ -8,7 +8,7 @@ function getPinState($pin,$pins){
 
 }
 
-function getOutsideTemperature()
+function getOutsideTemperature(){
     // should curl to Eniac
     return 0;
 }
