@@ -312,7 +312,7 @@ $options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" =
 $options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 
-$options["transform"][getPoolTemperature()] = array("tag" => "img","attrib" => array("src" => "images/{DATA}B.png"));
+//$options["transform"][getPoolTemperature()] = array("tag" => "img","attrib" => array("src" => "images/{DATA}B.png"));
 
 //
 // $options["transform"]["<FIELD1>"] = array("tag" => "img",
