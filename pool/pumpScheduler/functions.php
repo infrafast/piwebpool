@@ -1,6 +1,6 @@
 <?php
 
-//include ('Netatmo-API-PHP/src/Netatmo/autoload.php');
+include ('Netatmo-API-PHP/src/Netatmo/autoload.php');
 
 /*$config = array();
 $config['client_id'] = "57518a8c69f740a68d8b46bc";
