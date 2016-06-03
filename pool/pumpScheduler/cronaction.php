@@ -35,7 +35,7 @@ if (!$result) {
 }
 
 while ($row = mysql_fetch_assoc($result)) {
-    $pumpConsign= "\nPump=".$row[$temp];
+    $pumpConsign=$row[$temp];
 }
 
 mysql_free_result($result);
