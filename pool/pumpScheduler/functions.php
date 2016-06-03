@@ -1,5 +1,18 @@
 <?php
 
+function connectDB(){
+    if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
+        echo 'Could not connect to mysql';
+        return false;
+    }
+
+    if (!mysql_select_db($options["database"]["name"], $link)) {
+        echo 'Could not select database';
+        return false;
+    }    
+    return true;
+}
+
 function getPinState($pin,$pins){
 	$commands = array();
 	exec("gpio read ".$pins[$pin],$commands,$return);
