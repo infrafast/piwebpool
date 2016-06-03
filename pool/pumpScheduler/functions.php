@@ -10,7 +10,7 @@ function getPinState($pin,$pins){
 
 function getOutsideTemperature(){
     // provider: netatmo
-    return rand(0,28);
+    return rand(-4,28);
 }
 
 function getPoolTemperature(){
