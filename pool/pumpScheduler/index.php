@@ -18,22 +18,7 @@ require_once('functions.php');
 // http://andrewplummer.com/code/tablegear/
 //
 
-$options = array();
-$options["database"] = array();
 $options["pagination"] = array();
-
-
-// Database host: if omitted defaults to localhost.
-// $options["database"]["host"]        = "<DATABASE_HOST>",
-
-
-// Basic database information. These are required.
-
-$options["database"]["name"]        = "pool";
-$options["database"]["username"]    = "root";
-$options["database"]["password"]    = "Quintal74605";
-$options["database"]["table"]       = "pumpSchedule";
-
 
 
 // -- Row Deletion
