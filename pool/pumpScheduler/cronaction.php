@@ -16,7 +16,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 }
 
-
+// what time is it now?
 echo "\n".getCurrentTimeWindow()."\n";
 
 
