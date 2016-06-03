@@ -42,8 +42,6 @@ system("gpio mode ".$pins[$materials["Filtration"]]." out");
 $cmd="gpio write ".$pins[$materials["Filtration"]]." ".$pumpConsign;
 system ($cmd);
 
-echo "\nTime=".$tw;
-echo "\nTemp=".$temp;
-echo "\ncmd=".$cmd
+echo "[".date()."][tw:".$tw."][temp:".$temp."][cmd:".$cmd."]";
 
 ?>
