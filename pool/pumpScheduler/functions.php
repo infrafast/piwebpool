@@ -1,8 +1,5 @@
 <?php
 
-include ('Netatmo-API-PHP/src/Netatmo/autoload.php');
-
-
 function getPinState($pin,$pins){
 	$commands = array();
 	exec("gpio read ".$pins[$pin],$commands,$return);
@@ -12,43 +9,6 @@ function getPinState($pin,$pins){
 }
 
 function getOutsideTemperature(){
-// provider: netatmo
-    
-    $config = array();
-    $config['client_id'] = "57518a8c69f740a68d8b46bc";
-    $config['client_secret'] = "7DI1oZzr2FKhuT5gpRndxIU1hyWs3awTd3ltSsmmSd";
-    $config['scope'] = 'read_station read_thermostat write_thermostat';
-    $client = new Netatmo\Clients\NAApiClient($config);
-    
-    
-    //test if "code" is provided in get parameters (which would mean that user has already accepted the app and has been redirected here)
-    if(isset($_GET['code']))
-    {
-        try
-        {
-           $tokens = $client->getAccessToken();
-           $refresh_token = $tokens['refresh_token'];
-           $access_token = $tokens['access_token'];
-        }
-        catch(Netatmo\Exceptions\NAClientException $ex)
-        {
-           echo " An error occured while trying to retrieve your tokens \n";
-        }
-    }
-    else if(isset($_GET['error']))
-    {
-        if($_GET['error'] === 'access_denied')
-            echo "You refused that this application access your Netatmo Data";
-        else echo "An error occured \n";
-    }
-    else
-    {
-        //redirect to Netatmo Authorize URL
-        $redirect_url = $client->getAuthorizeUrl();
-        header("HTTP/1.1 ". OAUTH2_HTTP_FOUND);
-        header("Location: ". $redirect_url);
-        die();
-    }
     return rand(-4,28);
 }
 
