@@ -21,6 +21,8 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 $tw=getCurrentTimeWindow();
 echo "\n".$tw."\n";
 
+// what is the outsideTemperature
+
 $sql    = "SELECT 0to2 FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
 
