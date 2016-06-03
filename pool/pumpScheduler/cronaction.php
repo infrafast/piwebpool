@@ -25,7 +25,7 @@ if (!$result) {
     exit;
 }
 
-echo tw;
+echo $tw;
 
 while ($row = mysql_fetch_assoc($result)) {
     echo $row['0to2'];
