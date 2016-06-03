@@ -40,8 +40,8 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-system("gpio mode ".$material["Filtration"]." out");
-system("gpio write ".$material["Filtration"]." ".$pumpConsign);
+system("gpio mode ".$materials["Filtration"]." out");
+system("gpio write ".$materials["Filtration"]." ".$pumpConsign);
 
 
 ?>
