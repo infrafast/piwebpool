@@ -19,11 +19,9 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 // what time is it now?
 $tw=getCurrentTimeWindow();
-echo "\nTime=".$tw;
 
 // what is the temperature
 $temp=getPoolTemperature();
-echo "\nTemp=".$temp;
 
 $sql    = "SELECT ".$temp." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
@@ -44,5 +42,8 @@ system("gpio mode ".$materials["Filtration"]." out");
 $cmd="gpio write ".$materials["Filtration"]." ".$pumpConsign;
 system ($cmd);
 
+echo "\nTime=".$tw;
+echo "\nTemp=".$temp;
+echo "\ncmd=".$cmd
 
 ?>
