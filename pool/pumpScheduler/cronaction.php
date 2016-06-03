@@ -5,16 +5,12 @@ require_once('configuration.php');
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
-$options["database"]["username"]    = "root";
-$options["database"]["password"]    = "Quintal74605";
-$options["database"]["table"]       = "pumpSchedule";
-
-if (!$link = mysql_connect($options["database"]["name"], 'root', 'Quintal74605')) {
+if (!$link = mysql_connect($options["database"]["name"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
     exit;
 }
 
-if (!mysql_select_db('pool', $link)) {
+if (!mysql_select_db($options["database"]["table"], $link)) {
     echo 'Could not select database';
     exit;
 }
