@@ -10,12 +10,12 @@ function getPinState($pin,$pins){
 
 function getOutsideTemperature(){
     // provider: netatmo
-    return 0;
+    return rand(10,30);
 }
 
 function getPoolTemperature(){
     // should curl to Eniac
-    $temp=rand(10,30);
+    $temp=getOutsideTemperature();
     $temp=intval($temp);
     if ($temp/2 <> intval($temp/2)) $temp-=1;
 }
