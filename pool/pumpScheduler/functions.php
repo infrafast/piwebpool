@@ -18,7 +18,7 @@ function getPoolTemperature(){
     $temp=getOutsideTemperature();
     $temp=intval($temp);
     if ($temp/2 <> intval($temp/2)) $temp-=1;
-    $tempRange=$temp."to".$temp;
+    $tempRange=$temp."to".($temp+2);
     if ($temp>=28) $tempRange="above28";
     if ($temp<0) $tempRange="below0";
     return $tempRange;
