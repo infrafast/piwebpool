@@ -309,22 +309,22 @@ $options["selects"] = array(
 //                using "associate" (see below).
 
 
-$options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["4to6"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["6to8"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["8to10"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["10to12"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["12to14"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["14to16"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["16to18"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["18to20"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["20to22"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
+$options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["4to6"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["6to8"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["8to10"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["10to12"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["12to14"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["14to16"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["16to18"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["18to20"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["20to22"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 //
 // $options["transform"]["<FIELD1>"] = array("tag" => "img",
 //                                           "attrib" => array("src" => "/path/to/thumbnails/{DATA}")); // A simple url to image transform.
