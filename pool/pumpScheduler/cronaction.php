@@ -34,11 +34,9 @@ if (!$result) {
     exit;
 }
 
-
-
 while ($row = mysql_fetch_assoc($result)) {
     echo "\nPump=".$row[$temp];
-    }
+}
 
 mysql_free_result($result);
 
