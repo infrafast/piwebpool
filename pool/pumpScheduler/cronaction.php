@@ -19,7 +19,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 // what time is it now?
 $tw=getCurrentTimeWindow();
-echo "\n".$tw."\n";
+echo "\nTime=".$tw."\n";
 
 // what is the temperature
 $temp=getPoolTemperature();
