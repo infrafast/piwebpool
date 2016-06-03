@@ -3,6 +3,11 @@
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
+$options["database"]["name"]        = "pool";
+$options["database"]["username"]    = "root";
+$options["database"]["password"]    = "Quintal74605";
+$options["database"]["table"]       = "pumpSchedule";
+
 if (!$link = mysql_connect('localhost', 'root', 'Quintal74605')) {
     echo 'Could not connect to mysql';
     exit;
