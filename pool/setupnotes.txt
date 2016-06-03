@@ -10,3 +10,4 @@ create database pool
 inject sql code into table via phpmyadmin
 chmod 0775 stylesheet and javascripts to enable dynamc display
 symlink ln -s /var/www/html/pumpScheduler/hourlycrontab.sh /etc/cron.hourly/pumpScheduler
+sudo apt-get install php5-curl // used by netatmo
