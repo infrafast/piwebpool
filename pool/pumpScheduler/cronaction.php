@@ -13,7 +13,7 @@ if (!mysql_select_db('pool', $link)) {
     exit;
 }
 
-tw=Date("H")
+tw=Date("H");
 
 
 $sql    = 'SELECT 0to2 FROM pumpSchedule';
