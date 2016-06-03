@@ -21,6 +21,7 @@ function getPoolTemperature(){
     $tempRange=$temp."to".$temp+2;
     if ($temp>=28) $tempRange="above28";
     if ($temp<0) $tempRange="below0";
+    return $tempRange;
 }
 
 function secure($string){
