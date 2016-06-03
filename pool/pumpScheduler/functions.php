@@ -1,4 +1,6 @@
 <?php
+require_once('configuration.php');
+
 
 function connectDB(){
     if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
