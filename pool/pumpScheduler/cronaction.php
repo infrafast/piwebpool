@@ -11,7 +11,7 @@ if (!mysql_select_db('pool', $link)) {
     exit;
 }
 
-$sql    = 'SELECT foo FROM pumpSchedule';
+$sql    = 'SELECT * FROM pumpSchedule';
 $result = mysql_query($sql, $link);
 
 if (!$result) {
