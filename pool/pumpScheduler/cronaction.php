@@ -28,7 +28,7 @@ echo "\n".$tw."\n";
 
 
 
-$sql    = "SELECT 0to2 FROM ".$options["database"]["name"];
+$sql    = "SELECT 0to2 FROM ".$options["database"]["table"];
 $result = mysql_query($sql, $link);
 
 if (!$result) {
