@@ -37,7 +37,7 @@ if (!$result) {
 
 
 while ($row = mysql_fetch_assoc($result)) {
-    echo $row['0to2'];
+    echo "Pump=".$row['0to2'];
     }
 
 mysql_free_result($result);
