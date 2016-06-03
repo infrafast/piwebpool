@@ -38,8 +38,8 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-system("gpio mode ".$materials["Filtration"]." out");
-$cmd="gpio write ".$materials["Filtration"]." ".$pumpConsign;
+system("gpio mode ".$pins[$materials["Filtration"]]." out");
+$cmd="gpio write ".$pins[$materials["Filtration"]]." ".$pumpConsign;
 system ($cmd);
 
 echo "\nTime=".$tw;
