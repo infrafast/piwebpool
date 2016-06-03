@@ -6,15 +6,7 @@ require_once('functions.php');
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
-if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
-    echo 'Could not connect to mysql';
-    exit;
-}
-
-if (!mysql_select_db($options["database"]["name"], $link)) {
-    echo 'Could not select database';
-    exit;
-}
+connectDB();
 
 // what time is it now?
 $tw=getCurrentTimeWindow();
