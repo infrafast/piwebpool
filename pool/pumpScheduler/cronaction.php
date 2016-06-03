@@ -41,7 +41,7 @@ while ($row = mysql_fetch_assoc($result)) {
 mysql_free_result($result);
 
 system("gpio mode ".$materials["Filtration"]." out");
-system("gpio write ".$materials["Filtration"]." ".$pumpConsign);
+echo ("gpio write ".$materials["Filtration"]." ".$pumpConsign);
 
 
 ?>
