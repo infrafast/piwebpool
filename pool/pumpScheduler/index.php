@@ -105,7 +105,7 @@ $options["allowDelete"] = false;
 //
 // Defaults to all.
 
-// $options["sortable"]  = array("<FIELD1>", "<FIELD2", "ETC...");
+$options["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
 
 
 
