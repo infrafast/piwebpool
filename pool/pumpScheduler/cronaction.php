@@ -17,10 +17,11 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 }
 
 // what time is it now?
-echo "\n".getCurrentTimeWindow()."\n";
+$tw=getCurrentTimeWindow();
+echo "\n".$tw."\n";
 
 
-$sql    = "SELECT 0to2 FROM ".$options["database"]["table"];
+$sql    = "SELECT 0to2 FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
 
 if (!$result) {
