@@ -25,7 +25,7 @@ echo "\nTime=".$tw;
 $t=getPoolTemperature();
 echo "\nTemp=".$t;
 
-$sql    = "SELECT ". $t ." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
+$sql    = "SELECT ".$t." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
 
 if (!$result) {
