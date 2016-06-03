@@ -18,6 +18,7 @@ function getPoolTemperature(){
     $temp=getOutsideTemperature();
     $temp=intval($temp);
     if ($temp/2 <> intval($temp/2)) $temp-=1;
+    
 }
 
 function secure($string){
