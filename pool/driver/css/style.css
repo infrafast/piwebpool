@@ -106,8 +106,8 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .pinState{
-	height:35px;
-	width:65px;
+	height:30px;
+	width:55px;
 	cursor: pointer;
 	margin:4px auto 0px auto;
 	background-repeat:no-repeat	;
@@ -115,11 +115,11 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 
 .on{
-	background-image:url('../img/valider.png');
+	background-image:url('../img/1.png');
 }
 
 .off{
-	background-image:url('../img/annuler.png');
+	background-image:url('../img/0.png');
 }
 
 /* ===============
