@@ -33,9 +33,7 @@ $options["database"] = array();
 // Database host: if omitted defaults to localhost.
 $options["database"]["host"]        = "localhost";
 
-
 // Basic database information. These are required.
-
 $options["database"]["name"]        = "pool";
 $options["database"]["username"]    = "root";
 $options["database"]["password"]    = "Quintal74605";
