@@ -15,16 +15,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 }
 
-// get the current hours and force multiple to 2
-$tw=date("H");
-$tw=9;
-if ($tw/2 <> intval($tw/2)) $tw-=1;
-// format to 2 digit (prefix 0) 
-$prefixDigit="";
-if ($tw<10) $prefixDigit="0";
-// convert to text with hour so it match the row name in table
-$tw=$prefixDigit.$tw."h";
-echo "\n".$tw."\n";
+
 
 
 
