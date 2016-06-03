@@ -1,6 +1,7 @@
 <?php
 
 require_once('configuration.php');
+require_once('functions.php');
 
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
