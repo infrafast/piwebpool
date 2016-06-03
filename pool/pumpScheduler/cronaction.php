@@ -19,7 +19,6 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 // what time is it now?
 $tw=getCurrentTimeWindow();
-
 // what is the temperature
 $temp=getPoolTemperature();
 
@@ -42,6 +41,6 @@ system("gpio mode ".$pins[$materials["Filtration"]]." out");
 $cmd="gpio write ".$pins[$materials["Filtration"]]." ".$pumpConsign;
 system ($cmd);
 
-echo "[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][cmd:".$cmd."]";
+echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][cmd:".$cmd."]";
 
 ?>
