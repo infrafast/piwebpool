@@ -2,6 +2,10 @@
 
 include("include/TableGear1.6.1.php");
 
+// required for IO command
+require_once('configuration.php');
+require_once('functions.php');
+
 //
 // TableGear Usage:
 //
@@ -306,22 +310,22 @@ $options["selects"] = array(
 //                using "associate" (see below).
 
 
-$options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["4to6"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["6to8"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["8to10"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["10to12"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["12to14"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["14to16"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["16to18"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["18to20"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["20to22"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
-$options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "{DATA}.png"));
+$options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["4to6"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["6to8"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["8to10"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["10to12"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["12to14"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["14to16"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["16to18"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["18to20"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["20to22"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 //
 // $options["transform"]["<FIELD1>"] = array("tag" => "img",
 //                                           "attrib" => array("src" => "/path/to/thumbnails/{DATA}")); // A simple url to image transform.
@@ -369,22 +373,36 @@ $table = new TableGear($options);
 // you MUST include "SQL_CALC_FOUND_ROWS" after the SELECT clause and not have any LIMIT or ORDER BY clauses!
 //
 // $table->fetchData("SELECT SQL_CALC_FOUND_ROWS <FIELD1>,<FIELD2> FROM <DATABASE_TABLE> WHERE <etc..>");
-
-
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Pool scheduler</title>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/TableGear1.6.1-jQuery.js"></script>
-  <link type="text/css" rel="stylesheet" href="stylesheets/tablegear.css" />
+  <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div>
     <?= $table->getTable() ?>
   </div>
 <?= $table->getJavascript("jquery") ?>
+<table class="materialTab">
+<tr>
+<td colspan="3"><div onclick="demo();">Actions</div></td>
+</tr>
+<tr><th>Commande</th><th>PIN</th><th>Etat</th></tr>
+<?php foreach($materials as $material=>$pin){ ?>
+<tr>
+	<td><?php echo $material; ?></td>
+	<td><?php echo $pin.' ('.$pins[$pin] .')'; $pinState = getPinState($pin,$pins); ?></td>
+	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="pinState <?php echo $pinState; ?>"></div></td></tr>
+<?php } ?>
+</table>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
