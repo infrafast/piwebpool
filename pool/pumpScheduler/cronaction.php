@@ -10,7 +10,7 @@ if (!$link = mysql_connect($options["database"]["host"], $options["database"]["u
     exit;
 }
 
-if (!mysql_select_db($options["database"]["table"], $link)) {
+if (!mysql_select_db($options["database"]["name"], $link)) {
     echo 'Could not select database';
     exit;
 }
