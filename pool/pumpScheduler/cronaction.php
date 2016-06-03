@@ -5,7 +5,7 @@ require_once('configuration.php');
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
-if (!$link = mysql_connect($options["database"]["name"], $options["database"]["username"], $options["database"]["password"])) {
+if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
     exit;
 }
