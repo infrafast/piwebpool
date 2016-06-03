@@ -21,7 +21,7 @@ $prefixDigit="";
 if ($tw<10) $prefixDigit="0";
 // convert to text with hour so it match the row name in table
 $tw=$prefixDigit.$tw."h";
-//echo "\n".$tw."\n";
+echo "\n".$tw."\n";
 
 
 
