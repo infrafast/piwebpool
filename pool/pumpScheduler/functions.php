@@ -8,6 +8,10 @@ function getPinState($pin,$pins){
 
 }
 
+function getTemperature()
+    
+}
+
 function secure($string){
 	return htmlentities(stripslashes($string),NULL,'UTF-8');
 }
@@ -24,6 +28,8 @@ function getCurrentTimeWindow(){
     $tw=$prefixDigit.$tw."h";
     return $tw;
 }
+
+
 
 /*
 wiringPi
