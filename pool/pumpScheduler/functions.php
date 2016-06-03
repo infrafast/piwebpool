@@ -15,7 +15,9 @@ function getOutsideTemperature(){
 
 function getPoolTemperature(){
     // should curl to Eniac
-    return rand(10,30);
+    $temp=rand(10,30);
+    $temp=intval($temp);
+    if ($temp/2 <> intval($temp/2)) $temp-=1;
 }
 
 function secure($string){
