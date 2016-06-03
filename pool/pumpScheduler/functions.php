@@ -1,5 +1,5 @@
 <?php
-require_once('configuration.php');
+include('configuration.php');
 
 
 function connectDB(){
