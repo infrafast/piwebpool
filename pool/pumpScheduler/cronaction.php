@@ -16,7 +16,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 }
 
 
-
+echo "\n".getCurrentTimeWindow()."\n";
 
 
 $sql    = "SELECT 0to2 FROM ".$options["database"]["table"];
