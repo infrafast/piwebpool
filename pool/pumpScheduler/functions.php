@@ -9,7 +9,8 @@ function getPinState($pin,$pins){
 }
 
 function getTemperature()
-    
+    // should curl to Eniac
+    return 
 }
 
 function secure($string){
