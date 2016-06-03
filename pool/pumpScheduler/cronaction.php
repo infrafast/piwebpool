@@ -13,6 +13,9 @@ if (!mysql_select_db('pool', $link)) {
     exit;
 }
 
+tw=Date("H")
+
+
 $sql    = 'SELECT 0to2 FROM pumpSchedule';
 $result = mysql_query($sql, $link);
 
@@ -22,9 +25,11 @@ if (!$result) {
     exit;
 }
 
+echo tw;
+
 while ($row = mysql_fetch_assoc($result)) {
     echo $row['0to2'];
-}
+    }
 
 mysql_free_result($result);
 
