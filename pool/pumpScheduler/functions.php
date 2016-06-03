@@ -9,6 +9,11 @@ function getPinState($pin,$pins){
 }
 
 function getOutsideTemperature(){
+    // provider: netatmo
+    return 0;
+}
+
+function getPoolTemperature(){
     // should curl to Eniac
     return 0;
 }
