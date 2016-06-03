@@ -14,7 +14,7 @@ if (!mysql_select_db('pool', $link)) {
 }
 
 $tw=date("H");
-if ($tw/2 == intval($tw/2)) $tw-=1;
+if ($tw/2 <> intval($tw/2)) $tw-=1;
 echo "\n".$tw."\n";
 
 $sql    = 'SELECT 0to2 FROM pumpSchedule';
