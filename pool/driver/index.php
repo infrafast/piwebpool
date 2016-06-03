@@ -2,6 +2,7 @@
 
 include("include/TableGear1.6.1.php");
 
+// required for IO command
 require_once('configuration.php');
 require_once('functions.php');
 
@@ -381,8 +382,8 @@ $table = new TableGear($options);
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Pool scheduler</title>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/TableGear1.6.1-jQuery.js"></script>
-  <link type="text/css" rel="stylesheet" href="stylesheets/tablegear.css" />
+  <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
