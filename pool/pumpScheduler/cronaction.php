@@ -23,7 +23,6 @@ echo "\n".$tw."\n";
 
 // what is the temperature
 $temp=getPoolTemperature();
-$temp=intval($temp);
 
 
 $sql    = "SELECT 0to2 FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
