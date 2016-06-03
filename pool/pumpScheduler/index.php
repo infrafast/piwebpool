@@ -4,9 +4,7 @@
 require_once('configuration.php');
 require_once('functions.php');
 
-
 include("include/TableGear1.6.1.php");
-
 
 //
 // TableGear Usage:
@@ -313,6 +311,9 @@ $options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" =
 $options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+
+$options["transform"][getPoolTemperature()] = array("tag" => "img","attrib" => array("src" => "images/{DATA}B.png"));
+
 //
 // $options["transform"]["<FIELD1>"] = array("tag" => "img",
 //                                           "attrib" => array("src" => "/path/to/thumbnails/{DATA}")); // A simple url to image transform.
