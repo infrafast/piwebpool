@@ -11,7 +11,7 @@ if (!mysql_select_db('pool', $link)) {
     exit;
 }
 
-$sql    = 'SELECT * FROM pumpSchedule';
+$sql    = 'SELECT 0h FROM pumpSchedule';
 $result = mysql_query($sql, $link);
 
 if (!$result) {
@@ -21,7 +21,7 @@ if (!$result) {
 }
 
 while ($row = mysql_fetch_assoc($result)) {
-    echo $row; //[''];
+    echo $row['0h'];
 }
 
 mysql_free_result($result);
