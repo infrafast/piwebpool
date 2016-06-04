@@ -8,7 +8,7 @@ include("include/TableGear1.6.1.php");
 
  // OPEN CONNECTION...
 $path = $_SERVER['DOCUMENT_ROOT'];
-$sql_filename = 'test.sql';
+$sql_filename = 'pumpSchedule.sql';
 $sql_contents = file_get_contents($path.$sql_filename);
 $sql_contents = explode(";", $sql_contents);
       
