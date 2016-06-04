@@ -11,7 +11,7 @@ switch($_['action']){
 	break;
 
 	case 'demo':
-		system("gpio write ".$pins['11']." 1");
+		system("gpio write ".$pins[$materials["Filtration"]]." 1");
 		sleep(1);
 		system("gpio write ".$pins['11']." 0");
 		system("gpio write ".$pins['12']." 1");
