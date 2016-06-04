@@ -9,6 +9,7 @@ function getPinState($pin,$pins){
 }
 
 function setPinState($pin,$state){
+    //Definis le PIN en tant que sortie
 	system("gpio mode ".$pin." out");
 	//Active/désactive le pin
 	system("gpio write ".$pin." ".$state);
