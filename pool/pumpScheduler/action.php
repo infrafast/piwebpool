@@ -43,8 +43,8 @@ switch($_['action']){
         $sql_contents = explode(";", $sql_contents);
          
         foreach($sql_contents as $query){
-            $result = mysql_query($query);
-            if (!$result) echo "Error on import of ".$query;
+            $outcome = mysql_query($query);
+            if (!$outcome) $result['answer']="Error on import of ".$query;
         }        
     break;
 
