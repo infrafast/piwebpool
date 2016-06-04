@@ -44,7 +44,7 @@ switch($_['action']){
          
         foreach($sql_contents as $query){
             $outcome = mysql_query($query);
-            if (!$outcome) $result['answer']="Error on import of ".$query;
+            if (!$outcome) $result['answer']=$query. "failed";
         }        
     break;
 
