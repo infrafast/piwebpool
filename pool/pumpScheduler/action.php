@@ -13,10 +13,10 @@ switch($_['action']){
 	case 'demo':
 		system("gpio write ".$pins[$materials["Filtration"]]." 1");
 		sleep(1);
-		system("gpio write ".$pins['11']." 0");
-		system("gpio write ".$pins['12']." 1");
+		system("gpio write ".$pins[$materials["Filtration"]]." 0");
+		system("gpio write ".$pins[$materials["Prise libre"]]." 1");
 		sleep(1);
-		system("gpio write ".$pins['12']." 0");
+		system("gpio write ".$pins[$materials["Prise libre"]]." 0");
 		$result['state'] = 1;
 	break;
 
