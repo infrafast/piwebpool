@@ -50,7 +50,10 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-setPinState($pins[$materials["Filtration"]],$pumpConsign);
+if (!setPinState($pins[$materials["Filtration"]],$pumpConsign)){
+    echo 'error setPinState'.$pins[$materials["Filtration"]]." ".$pumpConsign;
+    exit;   
+}
 
 
 echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["Filtration"]]." ".$pumpConsign."]";
