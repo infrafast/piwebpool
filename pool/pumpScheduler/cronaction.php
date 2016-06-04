@@ -52,9 +52,6 @@ mysql_free_result($result);
 
 setPinState($pins[$materials["Filtration"]],$pumpConsign);
 
-//system("gpio mode ".$pins[$materials["Filtration"]]." out");
-//$cmd="gpio write ".$pins[$materials["Filtration"]]." ".$pumpConsign;
-//system ($cmd);
 
 echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["Filtration"]]." ".$pumpConsign."]";
 
