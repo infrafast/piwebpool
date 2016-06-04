@@ -378,6 +378,11 @@ $table = new TableGear($options);
     <?= $table->getTable() ?>
   </div>
 <?= $table->getJavascript("jquery") ?>
+<table>
+<tr>
+<td colspan="3"><div onclick="resetSchedule();">Reset schedule to default values</div></td>
+</tr>
+</table>
 <table class="materialTab">
 <tr>
 <td colspan="3"><div onclick="demo();">Actions</div></td>
