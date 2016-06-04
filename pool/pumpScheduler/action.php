@@ -14,6 +14,7 @@ switch($_['action']){
 		system("gpio write ".$pins[$materials["Filtration"]]." 1");
 		sleep(1);
 		system("gpio write ".$pins[$materials["Filtration"]]." 0");
+		sleep(1);
 		system("gpio write ".$pins[$materials["Prise libre"]]." 1");
 		sleep(1);
 		system("gpio write ".$pins[$materials["Prise libre"]]." 0");
