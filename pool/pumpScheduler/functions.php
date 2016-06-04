@@ -8,6 +8,12 @@ function getPinState($pin,$pins){
 
 }
 
+function setPinState($pin,$state){
+	system("gpio mode ".$pin." out");
+	//Active/désactive le pin
+	system("gpio write ".$pin." ".$state);
+}
+
 function getOutsideTemperature(){
     return rand(-4,32);
 }
