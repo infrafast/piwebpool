@@ -1,5 +1,5 @@
 function changeState(pin,elem){
-	var newState = ($(elem).hasClass('on')?1:0);
+	var newState = ($(elem).hasClass('on')?0:1);
 	$.ajax({
 			type: "POST",
 			 url: "./action.php?action=changeState",
