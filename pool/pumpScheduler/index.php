@@ -17,8 +17,7 @@ mysql_select_db($options["database"]["name"], $connection) or die(mysql_error())
  
 foreach($sql_contents as $query){
     $result = mysql_query($query);
-    if (!$result)
-    echo "Error on import of ".$query;
+    if (!$result) echo "Error on import of ".$query;
 }
 
 
