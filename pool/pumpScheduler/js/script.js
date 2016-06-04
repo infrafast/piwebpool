@@ -27,7 +27,7 @@ function demo(){
 function resetSchedule(){
 	$.ajax({
 			type: "POST",
-			 url: "./action.php?action=demo",
+			 url: "./action.php?action=resetSchedule",
 			success: function(r){
 		 }});
 }
