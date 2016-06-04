@@ -13,6 +13,8 @@ function setPinState($pin,$state){
 	system("gpio mode ".$pin." out");
 	//Active/désactive le pin
 	system("gpio write ".$pin." ".$state);
+	// here we should capture with the feedbqck pin and set return accordingly to manage the state"unknown"
+	return true;
 }
 
 function getOutsideTemperature(){
