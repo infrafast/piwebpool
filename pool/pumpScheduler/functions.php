@@ -3,9 +3,8 @@
 function getPinState($pin,$pins){
 	$commands = array();
 	exec("gpio read ".$pins[$pin],$commands,$return);
-	return (trim($commands[0])=="1"?'on':'off');
-
-
+	//return (trim($commands[0])=="1"?'on':'off');
+	return (trim($commands[0])=="0"?'on':'off');
 }
 
 function setPinState($pin,$state){
