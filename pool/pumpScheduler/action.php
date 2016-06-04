@@ -6,8 +6,9 @@ $result['error']  = '';
 
 switch($_['action']){
 	case 'changeState':
-		system("gpio mode ".$pins[$_['pin']]." out");
-		system("gpio write ".$pins[$_['pin']]." ".$_['state']);
+		//system("gpio mode ".$pins[$_['pin']]." out");
+		//system("gpio write ".$pins[$_['pin']]." ".$_['state']);
+		setPinState($pins[$_['pin']],$_['state']);
 		$result['state'] = 1;
 	break;
 
