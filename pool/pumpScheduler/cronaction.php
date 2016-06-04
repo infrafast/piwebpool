@@ -1,5 +1,4 @@
 <?php
-
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
@@ -22,6 +21,17 @@ $tw=getCurrentTimeWindow();
 // what is the temperature
 $temp=getPoolTemperature();
 
+
+//treat the case when the tw and temp are forced by user thru the GUI
+//in that case override the value here by these value
+//ensure the out of range is captured on client side
+
+//then treat the case where tw and temperature are out of range
+//e.g.: either get defaut values or raise email error notification
+//this would then capture the out of range above
+
+
+
 $sql    = "SELECT ".$temp." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
 
@@ -31,16 +41,21 @@ if (!$result) {
     exit;
 }
 
+$pumpConsign="";
 while ($row = mysql_fetch_assoc($result)) {
     $pumpConsign=$row[$temp];
 }
+// treat error case of unfound timewindow in the table
+//if ($pumpConsign="")
 
 mysql_free_result($result);
 
-system("gpio mode ".$pins[$materials["Filtration"]]." out");
-$cmd="gpio write ".$pins[$materials["Filtration"]]." ".$pumpConsign;
-system ($cmd);
+setPinState($pins[$materials["Filtration"]],$pumpConsign);
 
-echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][cmd:".$cmd."]";
+//system("gpio mode ".$pins[$materials["Filtration"]]." out");
+//$cmd="gpio write ".$pins[$materials["Filtration"]]." ".$pumpConsign;
+//system ($cmd);
+
+echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["Filtration"]]." ".$pumpConsign."]";
 
 ?>
