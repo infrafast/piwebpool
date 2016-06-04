@@ -6,6 +6,24 @@ require_once('functions.php');
 
 include("include/TableGear1.6.1.php");
 
+ // OPEN CONNECTION...
+$path = $_SERVER['DOCUMENT_ROOT'];
+$sql_filename = 'test.sql';
+$sql_contents = file_get_contents($path.$sql_filename);
+$sql_contents = explode(";", $sql_contents);
+      
+$connection = mysql_connect($server, $username, $password) or die(mysql_error());
+mysql_select_db($name, $connection) or die(mysql_error());
+ 
+foreach($sql_contents as $query){
+    $result = mysql_query($query);
+    if (!$result)
+    echo "Error on import of ".$query;
+}
+
+
+
+
 //
 // TableGear Usage:
 //
@@ -386,7 +404,7 @@ $table = new TableGear($options);
 <?php foreach($materials as $material=>$pin){ ?>
 <tr>
 	<td><?php echo $material; ?></td>
-	<td><?php echo $pin.' ('.$pins[$pin] .')'; $pinState = getPinState($pin,$pins); ?></td>
+	<td><?php echo $pin.' ('.$pins[$pin] .')'; $pinState = (getPinState($pin,$pins)=='on'?'off':'on'); ?></td>
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="pinState <?php echo $pinState; ?>"></div></td></tr>
 <?php } ?>
 </table>
