@@ -6,9 +6,7 @@ $result['error']  = '';
 
 switch($_['action']){
 	case 'changeState':
-		//Definis le PIN en tant que sortie
 		system("gpio mode ".$pins[$_['pin']]." out");
-		//Active/désactive le pin
 		system("gpio write ".$pins[$_['pin']]." ".$_['state']);
 		$result['state'] = 1;
 	break;
