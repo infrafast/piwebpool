@@ -23,6 +23,7 @@ switch($_['action']){
 		system("gpio write ".$pins['7']." 1");
 		sleep(1);
 		system("gpio write ".$pins['7']." 0");
+		$result['state'] = 1;
 	break;
 
 	default:
