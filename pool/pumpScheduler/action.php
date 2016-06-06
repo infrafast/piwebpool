@@ -45,7 +45,7 @@ switch($_['action']){
         }        */
         
         
-        $dbms_schema = 'yourfile.sql';
+        $dbms_schema = 'pumpSchedule.sql';
         
         $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
         $sql_query = remove_remarks($sql_query);
