@@ -5,6 +5,8 @@
 require_once('configuration.php');
 require_once('functions.php');
 
+$options["database"]["table"]  = "pumpSchedule";
+
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
@@ -41,16 +43,16 @@ if (!$result) {
     exit;
 }
 
-$pumpConsign="";
+$pumpConsign=0;
 while ($row = mysql_fetch_assoc($result)) {
-    $pumpConsign=$row[$temp];
+    $pumpConsign=($row[$temp]);
 }
 // treat error case of unfound timewindow in the table
 //if ($pumpConsign="")
 
 mysql_free_result($result);
 
-if (!setPinState($pins[$materials["Filtration"]],$pumpConsign)){
+if (!setPinState($pins[$materials["Filtration"]],$pumpConsign==0?1:0)){
     echo 'error setPinState'.$pins[$materials["Filtration"]]." ".$pumpConsign;
     exit;   
 }
