@@ -38,8 +38,7 @@ switch($_['action']){
         mysql_select_db($options["database"]["name"], $connection) or die(mysql_error());
         
         $sql_contents = file_get_contents('pumpSchedule.sql');
-        $sql_contents = explode(";", $sql_contents);
-         
+        $sql_contents = explode(";\n
         foreach($sql_contents as $query){
             $outcome = mysql_query($query);
             if (!$outcome) $result['answer']=$query."failed "." filename:".$sql_filename." query:".$query;
