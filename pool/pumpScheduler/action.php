@@ -38,7 +38,7 @@ switch($_['action']){
         mysql_select_db($options["database"]["name"], $connection) or die(mysql_error());
         
         //$path = $_SERVER['DOCUMENT_ROOT'];
-        $sql_filename = 'pumpSchedule.sql';
+        $sql_filename = '/var/www/html/pumpScheduler/pumpSchedule.sql';
         $sql_contents = file_get_contents($sql_filename);
         $sql_contents = explode(";", $sql_contents);
          
