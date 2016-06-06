@@ -6,6 +6,8 @@ require_once('functions.php');
 
 include("include/TableGear1.6.1.php");
 
+$options["database"]["table"]  = "pumpSchedule";
+
 //
 // TableGear Usage:
 //
