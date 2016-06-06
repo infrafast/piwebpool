@@ -30,7 +30,7 @@ function resetSchedule(){
     	$.ajax({
     			type: "POST",
     			url: "./action.php?action=resetSchedule",
-    			async: false,
+    			async:false,
     			success: function(r){
     		 }});
         location.reload(true);
