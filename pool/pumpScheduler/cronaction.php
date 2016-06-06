@@ -5,6 +5,7 @@
 require_once('configuration.php');
 require_once('functions.php');
 
+
 $options["database"]["table"]  = "pumpSchedule";
 
 // connect to the database
