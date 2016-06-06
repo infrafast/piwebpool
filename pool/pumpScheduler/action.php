@@ -37,7 +37,7 @@ switch($_['action']){
         mysql_select_db($options["database"]["name"], $connection) or die(mysql_error());
         
         $sql_contents = file_get_contents('pumpSchedule.sql');
-        $sql_contents = explode(";\n\r",$sql_contents);
+        $sql_contents = explode(";\n",$sql_contents);
         
         foreach($sql_contents as $query){
             $outcome = mysql_query($query);
