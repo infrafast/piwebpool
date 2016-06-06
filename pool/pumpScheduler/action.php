@@ -44,7 +44,7 @@ switch($_['action']){
          
         foreach($sql_contents as $query){
             $outcome = mysql_query($query);
-            if (!$outcome) $result['answer']=$query."failed";
+            if (!$outcome) $result['answer']=$query."failed ".$sql_contents;
         }        
     break;
 
