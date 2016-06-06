@@ -6,8 +6,6 @@ require_once('configuration.php');
 require_once('functions.php');
 
 
-$options["database"]["table"]  = "pumpSchedule";
-
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
@@ -35,7 +33,7 @@ $temp=getPoolTemperature();
 
 
 
-$sql    = "SELECT ".$temp." FROM ".$options["database"]["table"]." where timeWindow='".$tw."'";
+$sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
 
 if (!$result) {
