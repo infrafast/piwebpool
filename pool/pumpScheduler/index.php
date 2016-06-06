@@ -36,8 +36,6 @@ $options["allowDelete"] = false;
 
 
 
-
-
 // -- Default Sort
 //
 // Specify a default sort for the table. For descending order just put DESC after
