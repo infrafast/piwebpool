@@ -32,6 +32,6 @@ function resetSchedule(){
     			url: "./action.php?action=resetSchedule",
     			success: function(r){
         }});
-    
+    location.reload(true):
     }
 }
