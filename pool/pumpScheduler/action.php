@@ -39,7 +39,7 @@ switch($_['action']){
         
         //$path = $_SERVER['DOCUMENT_ROOT'];
         $sql_filename = 'pumpSchedule.sql';
-        $sql_contents = file_get_contents($sql_filename);
+        $sql_contents = file_get_contents($sql_filename, FILE_USE_INCLUDE_PATH);
         $sql_contents = explode(";", $sql_contents);
          
         foreach($sql_contents as $query){
