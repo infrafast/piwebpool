@@ -38,7 +38,7 @@ switch($_['action']){
         
         $sql_contents = file_get_contents('pumpSchedule.sql');
         $result['answer'].=" contents:".$sql_contents;
-        $sql_contents = explode(";\n");
+        $sql_contents = explode(";");
         foreach($sql_contents as $query){
             $outcome = mysql_query($query);
             if (!$outcome) $result['answer']=$query."failed ";
