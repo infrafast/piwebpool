@@ -37,6 +37,5 @@ $options["database"]["host"]        = "localhost";
 $options["database"]["name"]        = "pool";
 $options["database"]["username"]    = "root";
 $options["database"]["password"]    = "Quintal74605";
-$options["database"]["table"]       = "pumpSchedule";
-		    
+
 ?>
