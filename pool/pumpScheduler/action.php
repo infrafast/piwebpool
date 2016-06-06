@@ -37,9 +37,9 @@ switch($_['action']){
         $connection = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"]) or die(mysql_error());
         mysql_select_db($options["database"]["name"], $connection) or die(mysql_error());
         
-        $path = $_SERVER['DOCUMENT_ROOT'];
+        //$path = $_SERVER['DOCUMENT_ROOT'];
         $sql_filename = 'pumpSchedule.sql';
-        $sql_contents = file_get_contents($path.$sql_filename);
+        $sql_contents = file_get_contents($sql_filename);
         $sql_contents = explode(";", $sql_contents);
          
         foreach($sql_contents as $query){
