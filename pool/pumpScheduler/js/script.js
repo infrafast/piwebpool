@@ -31,6 +31,7 @@ function resetSchedule(){
     			type: "POST",
     			url: "./action.php?action=resetSchedule",
     			success: function(r){
-    		 }});
+        }});
+    
     }
 }
