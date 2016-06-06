@@ -16,7 +16,7 @@ switch($_['action']){
 	    }else  $result['state'] = setPinState($pins[$pinParam],$stateParam);
 	break;
 
-	case 'demo':
+	case 'scenario':
 	    $result['state'] = (setPinState($pins[$materials["Filtration"]],0));
 	    sleep(1);
         $result['state'] = (setPinState($pins[$materials["Filtration"]],1));
