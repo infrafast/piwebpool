@@ -40,7 +40,7 @@ switch($_['action']){
         $sql_contents = explode(";\n");
         foreach($sql_contents as $query){
             $outcome = mysql_query($query);
-            if (!$outcome) $result['answer']=$query."failed "." filename:".$sql_filename." query:".$query;
+            if (!$outcome) $result['answer']=$query."failed ";
         }        
     break;
 
