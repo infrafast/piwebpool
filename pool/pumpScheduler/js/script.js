@@ -6,7 +6,7 @@ function changeState(pin,elem){
 			 data:{pin:pin,state:newState},
 			success: function(r){
 				var result = eval(r);
-				if(result.state == true){
+				if(result.state == true){           // was == 1 make sure this works
 					$(elem).removeClass('on');
 					$(elem).removeClass('off');
 					$(elem).addClass((newState==1?'off':'on')); 
