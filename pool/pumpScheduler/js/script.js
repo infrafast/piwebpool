@@ -25,9 +25,12 @@ function scenario(){
 }
 
 function resetSchedule(){
-	$.ajax({
-			type: "POST",
-			 url: "./action.php?action=resetSchedule",
-			success: function(r){
-		 }});
+    var r = confirm("Are you sure to reset your schedule with defaut value?");
+    if (r == true) {
+    	$.ajax({
+    			type: "POST",
+    			 url: "./action.php?action=resetSchedule",
+    			success: function(r){
+    		 }});
+    }
 }
