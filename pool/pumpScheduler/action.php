@@ -42,6 +42,7 @@ switch($_['action']){
             $outcome = mysql_query($query);
             if (!$outcome) $result['answer']=$query."failed ";
         }        
+        $result['answer'].=" filename:".$sql_filename." query:".$query;
     break;
 
 	default:
