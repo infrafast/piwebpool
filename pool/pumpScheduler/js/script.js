@@ -2,8 +2,8 @@ function changeState(pin,elem){
 	var newState = ($(elem).hasClass('on')?1:0); 
 	$.ajax({
 			type: "POST",
-			 url: "./action.php?action=changeState",
-			 data:{pin:pin,state:newState},
+			url: "./action.php?action=changeState",
+			data:{pin:pin,state:newState},
 			success: function(r){
 				var result = eval(r);
 				if(result.state == true){           // was == 1 make sure this works
@@ -13,15 +13,15 @@ function changeState(pin,elem){
 				}else{
 					alert('Erreur : '+result.error);
 				}
-		 }});
+	}});
 }
 
 function scenario(){
 	$.ajax({
-			type: "POST",
-			 url: "./action.php?action=scenario",
-			success: function(r){
-		 }});
+		    type: "POST",
+			url: "./action.php?action=scenario",
+		    success: function(r){
+	}});
 }
 
 function resetSchedule(){
