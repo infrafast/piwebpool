@@ -58,7 +58,7 @@ switch($_['action']){
         foreach($sql_query as $sql){
             echo $i++;
             echo "";
-            mysql_query($sql) or die('error in query');        
+            mysql_query($sql) or die('error in query '.$sql);        
         }
         
     break;
