@@ -16,7 +16,7 @@ function changeState(pin,elem){
 		 }});
 }
 
-function demo(){
+function scenario(){
 	$.ajax({
 			type: "POST",
 			 url: "./action.php?action=demo",
