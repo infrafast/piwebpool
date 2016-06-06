@@ -43,10 +43,10 @@ switch($_['action']){
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
         
-        $i=1;
+//        $i=1;
         foreach($sql_query as $sql){
-            echo $i++;
-            echo "";
+//            echo $i++;
+            //echo "";
             mysql_query($sql) or die('error in query '.$sql);        
         }
         
