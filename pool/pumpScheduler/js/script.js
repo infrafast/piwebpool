@@ -25,7 +25,7 @@ function scenario(){
 }
 
 function resetSchedule(){
-    var r = confirm("Are you sure to reset your schedule with defaut value?");
+    var r = confirm("This will reset your schedule with defaut value");
     if (true == r) {
     	$.ajax({
     			type: "POST",
