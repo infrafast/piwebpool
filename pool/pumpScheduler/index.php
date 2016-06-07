@@ -380,7 +380,7 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 <table class="materialTab">
 <tr>
-<td colspan="3"><div onclick="resetSchedule();">Click here to reset schedule to default values or create schedule<img src='images/enCours.png'></img></div></td>
+<td colspan="3"><div onclick="resetSchedule();">Click here to reset schedule to default values or to create schedule<img src='images/enCours.png'></img></div></td>
 </tr>
 </table>
 <table class="materialTab">
