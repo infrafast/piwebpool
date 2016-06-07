@@ -3,6 +3,7 @@ install php5-mysql
 change (/etc/apache2/site-enable/eniac or via webmin)
     from WSGIScriptAlias / /var/www/eniac/eniac/wsgi.py^
     to WSGIScriptAlias /eniac /var/www/eniac/eniac/wsgi.py^
+    change port virtual host to 8080 for eniac
 install piwire lib
 create symlink /var/www/html/  ->pumpScheduler folder
 install adafruit webide
