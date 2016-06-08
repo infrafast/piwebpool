@@ -377,11 +377,10 @@ $table = new TableGear($options);
 <table class="materialTab">
 <tr class="header">
     <td><span>-</span> Schedule</td>
-    <td>
+    <tr>
     <div><?= $table->getTable() ?></div>
     <?= $table->getJavascript("jquery") ?>
-    </td>
-</tr>
+    </tr>
 </table>
 <table class="materialTab">
 <tr>
