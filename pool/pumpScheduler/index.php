@@ -375,10 +375,11 @@ $table = new TableGear($options);
 </head>
 <body>
 <table class="materialTab">
-  <div>
-    <?= $table->getTable() ?>
-  </div>
-<?= $table->getJavascript("jquery") ?>
+<tr class="header">
+    <td colspan="2"><span>-</span> Actions</td>
+    <div><?= $table->getTable() ?></div>
+    <?= $table->getJavascript("jquery") ?>
+</tr>
 </table>
 <table class="materialTab">
 <tr>
