@@ -393,7 +393,6 @@ $table = new TableGear($options);
 <?php foreach($materials as $material=>$pin){ ?>
 <tr>
 	<td><?php echo $material; ?></td>
-	<td><?php echo $pin.' ('.$pins[$pin] .')'; $pinState = (getPinState($pin,$pins)=='on'?'off':'on'); ?></td>
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="pinState <?php echo $pinState; ?>"></div></td></tr>
 <?php } ?>
 </table>
