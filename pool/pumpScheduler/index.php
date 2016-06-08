@@ -389,7 +389,7 @@ $table = new TableGear($options);
 <tr>
 <td colspan="2"><div onclick="scenario();">Actions</div></td>
 </tr>
-<tr class="header"><th>Commande</th><th>PIN</th><th>Etat</th></tr>
+<tr class="header"><th>Commande</th><th>Etat</th></tr>
 <?php foreach($materials as $material=>$pin){ ?>
 <tr>
 	<td><?php echo $material; ?></td>
