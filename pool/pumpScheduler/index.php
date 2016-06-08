@@ -374,14 +374,8 @@ $table = new TableGear($options);
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<table class="materialTab">
-<tr class="header">
-    <td><span>-</span> Schedule</td>
-    <tr>
-    <div><?= $table->getTable() ?></div>
-    <?= $table->getJavascript("jquery") ?>
-    </tr>
-</table>
+<div><?= $table->getTable() ?></div>
+<?= $table->getJavascript("jquery") ?>
 <table class="materialTab">
 <tr>
 <td colspan="3"><div onclick="resetSchedule();">Click here to reset schedule to default values or to create initial schedule<img src='images/enCours.png'></img></div></td>
