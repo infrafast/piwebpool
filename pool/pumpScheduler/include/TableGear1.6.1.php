@@ -757,7 +757,7 @@ class TableGear
       $this->_outputHTML(" ".$this->title);
       $this->_closeTag("b");
       $this->_closeTag("td");
-
+      $this->_closeTag("tr");
     }
     if($headers){
         
@@ -769,7 +769,6 @@ class TableGear
       }
       $this->_closeTag("tr");
     }
-      $this->_closeTag("tr");
     $this->_closeTag("thead");
   }
 
