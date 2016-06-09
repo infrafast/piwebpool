@@ -77,10 +77,12 @@ switch($_['action']){
              $result['answer']  = "ERROR";
              $result['state'] =  mysql_error();
         }else{
-            $row = mysql_fetch_assoc($outcome);
-            $result['state'] = $row;
-            mysql_free_result($result);
-        }
+            while ($row = mysql_fetch_assoc($result)) {
+                $result['state']=($row[$temp]);
+            }
+        mysql_free_result($result);
+    }
+    
     break;        
 
 	default:
