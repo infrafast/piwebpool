@@ -60,8 +60,16 @@ switch($_['action']){
         if (!$result) {
              $result['answer']  = 'failed '.mysql_error();
         }else{
-            
-            
+
+            while ($row = mysql_fetch_assoc($result)) {
+                echo $row['firstname'];
+                echo $row['lastname'];
+                echo $row['address'];
+                echo $row['age'];
+            }
+            // Free the resources associated with the result set
+            // This is done automatically at the end of the script
+            mysql_free_result($result);
         }
     break;        
 
