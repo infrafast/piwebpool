@@ -407,7 +407,9 @@ $table = new TableGear($options);
 </script>
 
 <script>
+    document.getElementById('actionTable').addClass("loading");
     getSetting("actionTableCollapse", document.getElementById('actionTable'));
+    document.getElementById('scheduleTable').addClass("loading");
     getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
 </script>
 
