@@ -379,7 +379,7 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 
 <script>
-    $('actionTable').click();
+    $('#actionTable').click();
 </script>
 
 <table class="materialTab">
