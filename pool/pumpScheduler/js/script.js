@@ -19,10 +19,7 @@ function getSetting(id,elem){
         url: urlCall,
         success: function(r){
             var result = eval(r);
-            if (result.state == "1"){
-                $(elem).addClass("loading");
-                $(elem).click();
-            } 
+            if (result.state == "1") $(elem).click();
             if (result.state == "undef") alert('Setting undefined : '+id);
     }});   
 }
