@@ -66,7 +66,7 @@ switch($_['action']){
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = mysql_error();
-             $result['state'] = $sql;
+             $result['state'] = $query;
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
                 $result['state'] = $row['value'];
