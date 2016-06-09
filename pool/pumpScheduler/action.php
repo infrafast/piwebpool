@@ -60,7 +60,7 @@ switch($_['action']){
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
         
-        $outcome = mysql_query("SELECT 'value' FROM `setting` WHERE id='".$_['id']."'") or die('error in query '.$sql);
+        $outcome = mysql_query("SELECT 'value' FROM `setting` WHERE id='".$_['id']."'");
         if (!$outcome) {
              $result['answer']  = 'failed '.mysql_error();
         }else{
