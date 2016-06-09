@@ -390,11 +390,11 @@ $table = new TableGear($options);
 <?php } ?>
 <tr>
     <td>Execution sequence</td>
-    <td><div onclick="scenario();" class="buttonState play"></td>
+    <td><div onclick="scenario();" class="buttonState play"></div></td>
 </tr>
 <tr>
     <td>RAZ horodateur filtration</td>
-    <td><div onclick="resetSchedule();" class="buttonState warning"></td>
+    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
 </tr>
 </table>
 <script src="js/jquery.min.js"></script>
