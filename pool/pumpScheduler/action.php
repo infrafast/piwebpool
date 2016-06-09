@@ -47,7 +47,7 @@ switch($_['action']){
 
     case 'resetSchedule':
 
-        executeSqlScript() ;
+        executeSqlScript('pumpSchedule.sql') ;
 
     break;
 
