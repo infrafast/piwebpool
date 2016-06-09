@@ -56,11 +56,10 @@ switch($_['action']){
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
         
-        $result = mysql_query("SELECT 'value' FROM `tableCollapseSetting` WHERE id='".$_['id']."'") or die('error in query '.$sql);
-        if (!$result) {
+        $outcome = mysql_query("SELECT 'value' FROM `tableCollapseSetting` WHERE id='".$_['id']."'") or die('error in query '.$sql);
+        if (!$outcome) {
              $result['answer']  = 'failed '.mysql_error();
         }else{
-
             while ($row = mysql_fetch_assoc($result)) {
                 $result['state'] = $row['value'];
             }
