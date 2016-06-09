@@ -45,7 +45,6 @@ switch($_['action']){
         $sql_query = split_sql_file($sql_query, ';');
         
         foreach($sql_query as $sql) mysql_query($sql) or die('error in query '.$sql);  
-
     break;
 
     case 'updateCollapseTableSetting':
