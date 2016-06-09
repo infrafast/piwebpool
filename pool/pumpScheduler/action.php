@@ -59,7 +59,6 @@ switch($_['action']){
         mysql_select_db($options["database"]["name"]) or die('error database selection');
         
         mysql_query("SELECT 'value' FROM `tableCollapseSetting` WHERE id='".$_['id']."'") or die('error in query '.$sql);
-        
     break;        
 
 
