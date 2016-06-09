@@ -18,7 +18,6 @@ function getSetting(id){
      $.ajax({
         type: "POST",
     	url: "./action.php?action=getSetting&id=actionTableCollapse",
-    	async:false,
         success: function(r){
     }});   
 }
