@@ -3,7 +3,7 @@ $('.header').click(function(){
     $(this).nextUntil('tr.header').slideToggle(); // or just use "toggle()"
     	$.ajax({
 		    type: "POST",
-			url: "./action.php?action=toto",
+			url: "./action.php?action=updateSetting&id=actionTableCollapse&value=0",
 		    success: function(r){
 	}});
 });
