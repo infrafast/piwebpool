@@ -1,5 +1,6 @@
 $('.header').click(function(){
-   $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
+   var val = function(_, value){return value=='-'?'+':'-'};
+   $(this).find('span').text(val);
     $(this).nextUntil('tr.header').slideToggle(); 
     var urlCall="./action.php?action=updateSetting&id=actionTableCollapse&value="+1;
     $.ajax({
