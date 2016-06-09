@@ -1,6 +1,7 @@
 $('.header').click(function(){
     $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
+    $(this).addClass("loading");
     var urlCall="./action.php?action=updateSetting&id="+$(this).attr('id')+"Collapse"+"&value="+($(this).find('span').text()=='-'?'0':'1');
     //alert('urlCall : '+urlCall);
     $.ajax({
