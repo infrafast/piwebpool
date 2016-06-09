@@ -23,6 +23,7 @@ function getSetting(id){
         success: function(r){
             var result = eval(r);
             alert(result.state);
+            return result.state;
     }});   
 }
 
