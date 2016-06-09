@@ -22,7 +22,7 @@ $pins[26] = 11;
 
 $materials = array(
 			"Filtration"=>11,
-			"Prise libre"=>12,
+			"Traitement"=>12,
 		    );
 		    
 		    
