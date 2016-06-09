@@ -1,8 +1,8 @@
 $('.header').click(function(){
-   var val = function(_, value){return value=='1'?'0':'1'};
+   var val = function(_, value){return value=="1"?"0":"1"};
    $(this).find('span').text(val);
     $(this).nextUntil('tr.header').slideToggle(); 
-    var urlCall="./action.php?action=updateSetting&id=actionTableCollapse&value="+0;
+    var urlCall="./action.php?action=updateSetting&id=actionTableCollapse&value="+val;
     $.ajax({
 	    type: "POST",
 		url: urlCall,
