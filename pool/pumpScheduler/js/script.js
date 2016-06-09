@@ -13,17 +13,13 @@ $('.header').click(function(){
 
 function getSetting(id,elem){
     var urlCall="./action.php?action=getSetting&id="+id;
-    alert('ajaxCall : '+urlCall);
+    //alert('ajaxCall : '+urlCall);
     $.ajax({
         type: "POST",
         url: urlCall,
         success: function(r){
             var result = eval(r);
-            
             if (result.state == "1") $(elem).click();
-            
-            //alert(result.state+" elem: "+$(elem));
-            
     }});   
 }
 
