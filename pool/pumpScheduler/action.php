@@ -12,7 +12,7 @@ $settingParam=$_['id'];
 
 
 function executeSQLScript($dbms_schema){
-        require_once('common.php');
+
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
   
