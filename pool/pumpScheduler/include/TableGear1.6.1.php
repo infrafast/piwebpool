@@ -763,9 +763,9 @@ class TableGear
         
       $this->_openTag("tr");
       foreach($headers as $header){
-        $this->_openTag("th", $header["attrib"]);
+        $this->_openTag("tD", $header["attrib"]);
         $this->_outputHTML($header["html"]);
-        $this->_closeTag("th");
+        $this->_closeTag("tD");
       }
       $this->_closeTag("tr");
     }
