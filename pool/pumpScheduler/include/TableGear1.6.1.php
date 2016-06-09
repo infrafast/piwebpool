@@ -519,7 +519,7 @@ class TableGear
       }
       $this->_closeTag("tfoot");
     }
-    $this->_openTag("tbody");
+    $this->_openTag("tbody class='header' id='scheduleTable'");
     if(!$this->data){
       $this->_openTag("tr", array("class" => "noDataRow odd"));
       $this->_openTag("td", array("colspan" => count($headers)));
