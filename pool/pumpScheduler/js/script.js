@@ -1,9 +1,10 @@
 $('.header').click(function(){
    $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
+    var url="./action.php?action=updateSetting&id=actionTableCollapse&value=1";
     $.ajax({
 	    type: "POST",
-		url: "./action.php?action=updateSetting&id=actionTableCollapse&value"+1,
+		url: "./action.php?action=updateSetting&id=actionTableCollapse&value=1",
 	    success: function(r){
     }});
 });
