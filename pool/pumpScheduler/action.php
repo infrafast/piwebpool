@@ -78,7 +78,8 @@ switch($_['action']){
 
 
 	default:
-		$result['answer']  = 'Undefined action '.$_['action'];
+		$result['answer']  = "ERROR";
+		$result['state'] = 'Undefined action '.$_['action'];
 	break;
 }
 
