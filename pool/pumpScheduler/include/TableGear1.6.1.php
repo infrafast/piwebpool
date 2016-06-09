@@ -755,7 +755,7 @@ class TableGear
       $this->_closeTag("tr");
     }
     if($headers){
-      $this->_openTag("tr");
+      $this->_openTag("tr class='header'");
       foreach($headers as $header){
         $this->_openTag("th", $header["attrib"]);
         $this->_outputHTML($header["html"]);
