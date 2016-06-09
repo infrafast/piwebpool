@@ -379,7 +379,7 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 
 <table class="materialTab">
-<tr class="header" id="actionsTable">
+<tr class="header" id="actionTable">
 <td colspan="2"><b><span>-</span> Actions</b></td>
 </tr>
 <tr><th>Commande</th><th>Etat</th></tr>
