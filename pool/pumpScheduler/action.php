@@ -44,7 +44,11 @@ switch($_['action']){
         $sql_query = remove_remarks($sql_query);
         $sql_query = split_sql_file($sql_query, ';');
         
-        foreach($sql_query as $sql) mysql_query($sql) or die('error in query '.$sql);  
+        foreach($sql_query as $sql){ 
+            outcome$=mysql_query($sql)
+            if (!outcome) $result['answer'] = 'Error executing query'.$sql   
+        }
+        
     break;
 
     case 'updateCollapseTableSetting':
