@@ -16,12 +16,12 @@ $('.header').click(function(){
 
 function getSetting(id){
     var urlCall="./action.php?action=getSetting&id="+id;
+    alert('ajaxCall : '+urlCall);
     $.ajax({
         type: "POST",
         url: urlCall,
         success: function(r){
     }});   
-    alert('ajaxCall : '+urlCall+" result: "+result.state);
 }
 
 function changeState(pin,elem){
