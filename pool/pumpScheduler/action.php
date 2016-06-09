@@ -62,10 +62,7 @@ switch($_['action']){
         }else{
 
             while ($row = mysql_fetch_assoc($result)) {
-                echo $row['firstname'];
-                echo $row['lastname'];
-                echo $row['address'];
-                echo $row['age'];
+                $result['state'] = $row['value'];
             }
             // Free the resources associated with the result set
             // This is done automatically at the end of the script
