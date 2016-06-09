@@ -8,7 +8,6 @@ $('.header').click(function(){
     	url: urlCall,
     	async:false,
         success: function(r){
-                $(this).addClass("loading");
     }});
 });
 
