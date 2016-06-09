@@ -1,6 +1,8 @@
 <?php
-// invoke with action.php?action=changeState&pin=11&state=1
-
+// invoke with
+// action.php?action=changeState&pin=11&state=1
+// action.php?action=updateSetting&id=actionTableCollapse&value=1
+// action.php?action=resetSchedule
 require_once('common.php');
 
 $result['state']  = "undef";
