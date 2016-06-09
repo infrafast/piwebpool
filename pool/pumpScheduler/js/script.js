@@ -23,9 +23,9 @@ function getSetting(id,elem){
         success: function(r){
             var result = eval(r);
             
-             $(elem).click();
-             
-            alert(result.state+" elem: "+$(elem));
+            if (result.state == "1") $(elem).click();
+            
+            //alert(result.state+" elem: "+$(elem));
             
     }});   
 }
