@@ -16,9 +16,9 @@ $('.header').click(function(){
 
 function getSetting(id){
     var urlCall="./action.php?action=getSetting&id="+id;
-     $.ajax({
+    $.ajax({
         type: "POST",
-    	url: urlCall,
+        url: urlCall,
         success: function(r){
             alert('ajaxCall : '+urlCall+" result: "+result.state);
 /*    		if(result.state == 1){          
@@ -29,6 +29,7 @@ function getSetting(id){
     			alert('Erreur : '+result.error);
     		}*/
     }});   
+    alert('ajaxCall : '+urlCall+" result: "+result.state);
 }
 
 function changeState(pin,elem){
