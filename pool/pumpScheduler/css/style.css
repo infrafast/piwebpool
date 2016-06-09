@@ -127,6 +127,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background-image:url('../images/play.png');
 }
 
+.warning{
+	background-image:url('../images/warning.png');
+}
+
 /* ===============
     ALL: IE Fixes
    =============== */
