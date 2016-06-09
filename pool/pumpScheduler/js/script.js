@@ -14,7 +14,7 @@ $('.header').click(function(){
     }});
 });
 
-function getSetting(id){
+function getSetting(id,elem){
     var urlCall="./action.php?action=getSetting&id="+id;
     alert('ajaxCall : '+urlCall);
     $.ajax({
@@ -23,7 +23,7 @@ function getSetting(id){
         success: function(r){
             var result = eval(r);
             alert(result.state);
-            return result.state;
+            $(elem).
     }});   
 }
 
