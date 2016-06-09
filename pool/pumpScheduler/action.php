@@ -56,7 +56,7 @@ switch($_['action']){
         mysql_select_db($options["database"]["name"]) or die('error database selection');
     break;
     
-    case 'getCollapseTableSetting':
+    case 'getSetting':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
         
