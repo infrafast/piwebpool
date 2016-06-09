@@ -407,7 +407,7 @@ $table = new TableGear($options);
 </script>
 
 <script>
-    
+    getSetting("actionTable");
     document.getElementById('actionTable').click();
 </script>
 
