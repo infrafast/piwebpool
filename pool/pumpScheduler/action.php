@@ -46,7 +46,7 @@ switch($_['action']){
 	break;
 
     case 'resetSchedule':
-        executeSqlScript('pumpSchedule.sql') ;
+        executeSQLScript('pumpSchedule.sql') ;
     break;
 
     case 'updateCollapseTableSetting':
