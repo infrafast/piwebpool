@@ -1,7 +1,9 @@
 $('.header').click(function(){
     $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
-    var urlCall="./action.php?action=updateSetting&id="+$(this).attr('id')+"Collapse"+"&value="+($(this).find('span').text()=='-'?'0':'1');
+    var id=$(this).attr('id');
+    //document.getElementById('actionTable'));
+    var urlCall="./action.php?action=updateSetting&id="+id+"Collapse"+"&value="+($(this).find('span').text()=='-'?'0':'1');
     //alert('urlCall : '+urlCall);
     $.ajax({
         type: "POST",
