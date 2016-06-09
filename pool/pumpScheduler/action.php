@@ -34,6 +34,8 @@ switch($_['action']){
 	break;
 
     case 'resetSchedule':
+        $result['state'] = "reset done";
+
         $dbms_schema='pumpSchedule.sql';
 
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
