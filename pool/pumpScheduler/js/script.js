@@ -22,8 +22,11 @@ function getSetting(id,elem){
         url: urlCall,
         success: function(r){
             var result = eval(r);
-            elem=result.state;
+            
+             $(elem).click();
+             
             alert(result.state+" elem: "+$(elem));
+            
     }});   
 }
 
