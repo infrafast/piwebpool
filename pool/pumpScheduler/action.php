@@ -61,8 +61,7 @@ switch($_['action']){
              $result['answer']  = "ERROR";
              $result['state'] =  mysql_error();
         }else{
-            $row = mysql_fetch_assoc($outcome);
-            $result['state'] = $row;
+            $result['state'] = $outcome;
             mysql_free_result($result);
         }       
         
