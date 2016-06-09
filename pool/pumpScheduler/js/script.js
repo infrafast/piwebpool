@@ -3,7 +3,7 @@ $('.header').click(function(){
     $(this).nextUntil('tr.header').slideToggle(); 
     $.ajax({
 	    type: "POST",
-		url: "./action.php?action=updateSetting&id=actionTableCollapse&value=1",
+		url: "./action.php?action=updateSetting&id=actionTableCollapse&value=0",
 	    success: function(r){
     }});
 });
