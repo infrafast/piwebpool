@@ -3,7 +3,7 @@ $('.header').click(function(){
     $(this).nextUntil('tr.header').slideToggle(); // or just use "toggle()"
     	$.ajax({
 		    type: "POST",
-			url: "./action.php?action=scenario",
+			url: "./action.php?action=toto",
 		    success: function(r){
 	}});
 });
