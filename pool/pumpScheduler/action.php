@@ -8,7 +8,7 @@ $result['answer']  = 'OK';
 
 $pinParam=$_['pin'];
 $stateParam=$_['state'];
-
+$settingParam=$_['id'];
 
 switch($_['action']){
 	case 'changeState':
