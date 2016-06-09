@@ -105,7 +105,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	border-color:#3d3d3d;
 }
 
-.pinState{
+.buttonState{
 	height:30px;
 	width:55px;
 	cursor: pointer;
@@ -121,6 +121,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 .off{
 	background-image:url('../images/0_border.png');
 }
+
 
 /* ===============
     ALL: IE Fixes
