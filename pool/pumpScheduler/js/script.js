@@ -9,6 +9,7 @@ $('.header').click(function(){
     $.ajax({
         type: "POST",
     	url: urlCall,
+    	async:false,
         success: function(r){
     }});
 });
