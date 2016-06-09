@@ -1,6 +1,7 @@
 $('.header').click(function(){
    var val = function(_, value){return value=="-"?"+":"-"};
    $(this).find('span').text(val);
+   alert('val : '+val);
     $(this).nextUntil('tr.header').slideToggle(); 
     var urlCall="./action.php?action=updateSetting&id=actionTableCollapse&value=".concat(val);
     $.ajax({
