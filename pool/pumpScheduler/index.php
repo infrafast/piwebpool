@@ -379,7 +379,9 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 
 <script>
-    $('#actionTable').click();
+    $( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
 </script>
 
 <table class="materialTab">
