@@ -395,7 +395,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
-    <td>Execution sequence</td>
+    <td>PH</td>
     <td><div onclick="scenario();" class="buttonState play"></div></td>
 </tr>
 <tr>
