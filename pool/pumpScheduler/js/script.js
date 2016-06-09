@@ -16,18 +16,18 @@ $('.header').click(function(){
 
 function getSetting(id){
     var urlCall="./action.php?action=getSetting&id="+id;
-    alert('ajaxCall : '+urlCall);
      $.ajax({
         type: "POST",
     	url: urlCall,
         success: function(r){
-    		if(result.state == 1){          
+            alert('ajaxCall : '+urlCall+" result: "+result.state);
+/*    		if(result.state == 1){          
     			$(elem).removeClass('on');
     			$(elem).removeClass('off');
     			$(elem).addClass((newState==1?'off':'on')); 
     		}else{
     			alert('Erreur : '+result.error);
-    		}
+    		}*/
     }});   
 }
 
