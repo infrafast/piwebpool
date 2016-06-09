@@ -378,6 +378,10 @@ $table = new TableGear($options);
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
+<script>
+    $('actionTable').click();
+</script>
+
 <table class="materialTab">
 <tr class="header" id="actionTable">
 <td colspan="2"><b><span>-</span> Action</b></td>
