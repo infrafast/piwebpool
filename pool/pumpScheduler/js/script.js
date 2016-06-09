@@ -1,6 +1,6 @@
 $('.header').click(function(){
    $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
-    $(this).nextUntil('tr.header').slideToggle(100); // or just use "toggle()"
+    $(this).nextUntil('tr.header').slideToggle(); // or just use "toggle()"
 });
 
 
