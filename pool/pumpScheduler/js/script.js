@@ -15,7 +15,7 @@ $('.header').click(function(){
 });
 
 function getSetting(id){
-    var urlCall="./action.php?action=getSetting&id="+id,
+    var urlCall="./action.php?action=getSetting&id="+id;
     alert('ajaxCall : '+urlCall);
      $.ajax({
         type: "POST",
