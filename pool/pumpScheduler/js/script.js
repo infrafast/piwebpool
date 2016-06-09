@@ -2,7 +2,7 @@ $('.header').click(function(){
     $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
     var id=$(this).attr('id');
-    document.getElementById(id).addClass("loading");
+    document.getElementById(id+"loadingBar").addClass("loading");
     var urlCall="./action.php?action=updateSetting&id="+id+"Collapse"+"&value="+($(this).find('span').text()=='-'?'0':'1');
     //alert('urlCall : '+urlCall);
     $.ajax({
@@ -11,7 +11,7 @@ $('.header').click(function(){
     	async:false,
         success: function(r){
     }});
-    document.getElementById(id).removeClass("loading");
+    document.getElementById(id+"loadingBar").removeClass("loading");
 });
 
 function getSetting(id,elem){
