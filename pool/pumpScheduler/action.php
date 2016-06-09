@@ -80,6 +80,7 @@ switch($_['action']){
             while ($row = mysql_fetch_assoc($outcome)) {
                 $result['state']=($row['value']); 
             }
+            $result['state']=$query;
             // result return "undef" in state in case no data match
             mysql_free_result($outcome);
         }
