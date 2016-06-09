@@ -49,6 +49,8 @@ switch($_['action']){
 
     break;
 
+    case 'updateCollapseTableSetting'
+
 	default:
 		$result['answer']  = 'Undefined action '.$_['action'];
 	break;
