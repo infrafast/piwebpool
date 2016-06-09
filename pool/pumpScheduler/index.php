@@ -345,17 +345,8 @@ $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" 
 // $options["pagination"]["prev"] = "prev"; // "prev" link will be shown.
 // $options["pagination"]["next"] = "next"; // "next" link will be shown.
 // $options["pagination"]["linkCount"] = 2; //  2 links on each side of the current page.
-
-
-
-
-
 // Instanciates the table. This must be included here!
-
 $table = new TableGear($options);
-
-
-
 // If you need to use a custom query instead of the default (fetching everything), you can specify it here.
 // You can use any syntax in the query you want, however you MUST include the primary key field in the SELECT
 // clause, otherwise none of the editing functionality will work! Also, if you need pagination on the table
@@ -363,7 +354,6 @@ $table = new TableGear($options);
 //
 // $table->fetchData("SELECT SQL_CALC_FOUND_ROWS <FIELD1>,<FIELD2> FROM <DATABASE_TABLE> WHERE <etc..>");
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -377,6 +367,7 @@ $table = new TableGear($options);
 <body>
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
+
 
 <table class="materialTab">
 <tr class="header" id="actionTable">
@@ -399,6 +390,8 @@ $table = new TableGear($options);
 </table>
 
 
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script>
@@ -408,9 +401,6 @@ $table = new TableGear($options);
     getSetting("actionTableCollapse", document.getElementById('actionTable'));
     getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
 
-</script>
-
-<script>
 </script>
 
 
