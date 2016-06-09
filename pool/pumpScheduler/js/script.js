@@ -49,7 +49,7 @@ function scenario(){
 			url: "./action.php?action=scenario",
 		    success: function(r){
 	}});
-	alert('Sequence executée');
+	alert('Sequence demarée');
 }
 
 function resetSchedule(){
