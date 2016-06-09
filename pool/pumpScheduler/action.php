@@ -78,7 +78,7 @@ switch($_['action']){
              $result['state'] =  mysql_error();
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
-                $result['state']="tutu"; 
+                $result['state']=($row['value']); 
             }
             mysql_free_result($result);
         }
