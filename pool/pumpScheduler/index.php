@@ -378,7 +378,7 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 <table class="materialTab">
 <tr>
-<td colspan="3"><div onclick="resetSchedule();">Click here to reset schedule to default values or to create initial schedule<img src='images/enCours.png'></img></div></td>
+<td colspan="3"><div onclick=";">Click here to reset schedule to default values or to create initial schedule<img src='images/enCours.png'></img></div></td>
 </tr>
 </table>
 
@@ -395,6 +395,10 @@ $table = new TableGear($options);
 <tr>
     <td>Execution sequence</td>
     <td><div onclick="scenario();" class="buttonState play"></td>
+</tr>
+<tr>
+    <td>Execution sequence</td>
+    <td><div onclick="resetSchedule();" class="buttonState warning"></td>
 </tr>
 </table>
 <script src="js/jquery.min.js"></script>
