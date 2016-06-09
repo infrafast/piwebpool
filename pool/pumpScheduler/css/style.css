@@ -107,7 +107,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 .pinState{
 	height:30px;
-	width:30px;
+	width:55px;
 	cursor: pointer;
 	margin:4px auto 0px auto;
 	background-repeat:no-repeat	;
