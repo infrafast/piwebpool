@@ -45,8 +45,8 @@ switch($_['action']){
         $sql_query = split_sql_file($sql_query, ';');
         
         foreach($sql_query as $sql){ 
-            outcome$=mysql_query($sql)
-            if (!outcome) $result['answer'] = 'Error executing query'.$sql   
+            outcome$=mysql_query($sql);
+            if (!outcome) $result['answer'] = 'Error executing query'.$sql;
         }
         
     break;
