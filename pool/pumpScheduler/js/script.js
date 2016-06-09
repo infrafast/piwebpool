@@ -22,7 +22,7 @@ function getSetting(id){
         url: urlCall,
         success: function(r){
             var result = eval(r);
-            alert(result);
+            alert(result.state);
     }});   
 }
 
