@@ -46,7 +46,10 @@ switch($_['action']){
         
         foreach($sql_query as $sql){ 
             $outcome=mysql_query($sql);
-            if (!$outcome) $result['answer'] = 'Error executing query'.$sql;
+            if (!$outcome){
+                $result['answer'] = 'Error executing query'.$sql;
+                   
+            }
         }
         
     break;
