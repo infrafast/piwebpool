@@ -418,7 +418,7 @@ $table = new TableGear($options);
     });*/
     getSetting("actionTableCollapse", document.getElementById('actionTable'));
     getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
-    getSetting("sensorTableCollapse", document.getElementById('scheduleTable'));
+    getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
 
 </script>
 
