@@ -746,7 +746,7 @@ class TableGear
 
   function _outputHeaders($headers, $showTitle = false)
   {
-    $this->_openTag("thead");
+    //$this->_openTag("thead");
     if($this->title && $showTitle){
       $this->_openTag("tr class='header' id='scheduleTable'");
       $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
@@ -766,7 +766,7 @@ class TableGear
       }
       $this->_closeTag("tr");
     }
-    $this->_closeTag("thead");
+    //$this->_closeTag("thead");
   }
 
   function _setOptions($options)
