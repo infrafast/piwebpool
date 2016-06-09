@@ -371,7 +371,7 @@ $table = new TableGear($options);
 
 <table class="materialTab">
 <tr class="header" id="actionTable">
-<td colspan="2"><b><span>-</span> Commande</b></td>
+<td colspan="2"><b><span>-</span> Commandes</b></td>
 </tr>
 <tr><th>Action</th><th>Etat</th></tr>
 <?php foreach($materials as $material=>$pin){ ?>
@@ -391,7 +391,7 @@ $table = new TableGear($options);
 
 <table class="materialTab">
 <tr class="header" id="sensorTable">
-<td colspan="2"><b><span>-</span> Action</b></td>
+<td colspan="2"><b><span>-</span> Mesures</b></td>
 </tr>
 <tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
