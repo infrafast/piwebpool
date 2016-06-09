@@ -396,11 +396,11 @@ $table = new TableGear($options);
 <tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
     <td>PH</td>
-    <td><div onclick="scenario();" class="buttonState play"></div></td>
+    <td><div onclick="" class="buttonState play"></div></td>
 </tr>
 <tr>
     <td>Redox</td>
-    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
+    <td><div onclick="" class="buttonState warning"></div></td>
 </tr>
 </table>
 
