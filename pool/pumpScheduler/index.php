@@ -393,7 +393,7 @@ $table = new TableGear($options);
 <tr class="header" id="sensorTable">
 <td colspan="2"><b><span>-</span> Action</b></td>
 </tr>
-<tr><th>Sonde</th><th>Etat</th></tr>
+<tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
     <td>Execution sequence</td>
     <td><div onclick="scenario();" class="buttonState play"></div></td>
