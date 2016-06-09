@@ -30,7 +30,8 @@ switch($_['action']){
 
 	case 'getState':
 	    if (intval($pinParam)<1 or intval($pinParam)>26){
-	        $result['answer']  = 'Bad parameter';     
+	        $result['answer']  = "ERROR";
+	        $result['state'] = 'Bad parameter';
 	    }else  $result['state'] = (getPinState($pinParam,$pins)=='off'?true:false);
 	break;
 
