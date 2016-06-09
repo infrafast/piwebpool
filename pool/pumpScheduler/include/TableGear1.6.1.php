@@ -753,7 +753,9 @@ class TableGear
       $this->_openTag("span");
       $this->_outputHTML("-");
       $this->_closeTag("span");
+      $this->_openTag("b");
       $this->_outputHTML(" ".$this->title);
+      $this->_closeTag("b");
       $this->_closeTag("td");
       $this->_closeTag("tr");
     }
