@@ -4,7 +4,7 @@ $('.header').click(function(){
     //var val = (function(_, value){return value=='-'?'+':'-'})();
     //$(this).find('span').text(val);
     $(this).nextUntil('tr.header').slideToggle(); 
-    var urlCall="./action.php?action=updateSetting&id="+$(this).attr('id')+"Collapse"+"&value="+val;
+    var urlCall="./action.php?action=updateSetting&id="+$(this).attr('id')+"Collapse"+"&value=";
     alert('urlCall : '+urlCall);
     $.ajax({
         type: "POST",
