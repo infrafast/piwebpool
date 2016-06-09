@@ -748,7 +748,7 @@ class TableGear
   {
     $this->_openTag("thead");
     if($this->title && $showTitle){
-      $this->_openTag("tr");
+      $this->_openTag("tr class='header' id='scheduleTable'");
       $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
       $this->_openTag("span");
       $this->_outputHTML("-");
