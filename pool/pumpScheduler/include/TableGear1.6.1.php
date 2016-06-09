@@ -746,7 +746,7 @@ class TableGear
 
   function _outputHeaders($headers, $showTitle = false)
   {
-    $this->_openTag("thead class='header' id='scheduleTable'");
+    $this->_openTag("thead");
     if($this->title && $showTitle){
       $this->_openTag("tr");
       $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
