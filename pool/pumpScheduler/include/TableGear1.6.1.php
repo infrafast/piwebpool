@@ -485,7 +485,7 @@ class TableGear
       $this->_openTag("fieldset");
     }
     $this->_outputHTML($this->custom["TABLE_TOP"]);
-    $this->_openTag("table", array("id" => $this->table["id"], "class" => $this->table["class"]));
+    $this->_openTag("table class='materialTab', array("id" => $this->table["id"], "class" => $this->table["class"]));
     $headers = $this->_fetchHeaders();
     if($headers || $this->title){
       $this->_outputHeaders($headers, true);
