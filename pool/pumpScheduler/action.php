@@ -11,7 +11,7 @@ $stateParam=$_['state'];
 $settingParam=$_['id'];
 
 
-function executeSQLScript($dbms_schema)
+function executeSQLScript($dbms_schema){
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
   
@@ -46,9 +46,7 @@ switch($_['action']){
 	break;
 
     case 'resetSchedule':
-
         executeSqlScript('pumpSchedule.sql') ;
-
     break;
 
     case 'updateCollapseTableSetting':
