@@ -62,7 +62,7 @@ switch($_['action']){
     case 'getSetting':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
-        $query="SELECT 'value' FROM `setting` WHERE id='".$_['id']."'";
+        $query="SELECT 'value' FROM `settings` WHERE id='".$_['id']."'";
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = mysql_error();
