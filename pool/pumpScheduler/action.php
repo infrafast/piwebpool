@@ -60,7 +60,7 @@ switch($_['action']){
         if (!$outcome) {
              $result['answer']  = 'failed '.mysql_error();
         }else{
-            while ($row = mysql_fetch_assoc($result)) {
+            while ($row = mysql_fetch_assoc($outcome)) {
                 $result['state'] = $row['value'];
             }
             // Free the resources associated with the result set
