@@ -760,13 +760,19 @@ class TableGear
       $this->_closeTag("tr");
     }
     if($headers){
+        
+      foreach($headers as $headers => $row){
+        $this->_constructDataRow($row, $headers);
+      }
+/*
+        
       $this->_openTag("tr");
       foreach($headers as $header){
         $this->_openTag("th", $header["attrib"]);
         $this->_outputHTML($header["html"]);
         $this->_closeTag("th");
       }
-      $this->_closeTag("tr");
+      $this->_closeTag("tr");*/
     }
     $this->_closeTag("thead");
   }
