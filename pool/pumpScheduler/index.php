@@ -406,6 +406,10 @@ $table = new TableGear($options);
 });
 </script>
 
+<script>
+    document.getElementById('actionTable').click();
+</script>
+
 
 </body>
 </html>
