@@ -407,7 +407,7 @@ $table = new TableGear($options);
 </script>
 
 <script>
-    if (getSetting("actionTable")=="undef"){
+    if (getSetting("actionTableCollapse")=="undef"){
         alert("undefined actionTable setting");
     }
     document.getElementById('actionTable').click();
