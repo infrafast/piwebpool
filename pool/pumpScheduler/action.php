@@ -69,7 +69,7 @@ switch($_['action']){
              $result['state'] = $query;
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
-                $result['state']=($row[$temp]);
+                $result['state']=($row["value"]);
             }
             mysql_free_result($result);
         }
