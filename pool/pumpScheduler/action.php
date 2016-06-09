@@ -47,8 +47,8 @@ switch($_['action']){
         foreach($sql_query as $sql){ 
             $outcome=mysql_query($sql);
             if (!$outcome){
-                $result['answer'] = mysql_error();
-                $result['state'] = $sql;
+                $result['answer'] = "ERROR";
+                $result['state'] = mysql_error();
             }
         }
         
