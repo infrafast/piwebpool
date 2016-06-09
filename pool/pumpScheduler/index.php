@@ -21,7 +21,7 @@ $options["database"]["table"]  = "pumpSchedule";
 //
 
 $options["pagination"] = array();
-$options["title"] = "Pump schedule";
+$options["title"] = "Planificateur filtration";
 
 
 // -- Row Deletion
