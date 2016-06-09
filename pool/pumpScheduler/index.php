@@ -397,18 +397,20 @@ $table = new TableGear($options);
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
 </tr>
 </table>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
-
 <script>
-/*    $( "#actionTable" ).click(function() {
-  alert( "Handler for .click() called." );
-});*/
+/*  $( "#actionTable" ).click(function() {
+          alert( "Handler for .click() called." );
+    });*/
+    getSetting("actionTableCollapse", document.getElementById('actionTable'));
+    getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
+
 </script>
 
 <script>
-    getSetting("actionTableCollapse", document.getElementById('actionTable'));
-    getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
 </script>
 
 
