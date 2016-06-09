@@ -69,10 +69,8 @@ switch($_['action']){
              $result['state'] = $query;
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
-                $result['state'] = $row['value'];
+                $result['state']=($row[$temp]);
             }
-            // Free the resources associated with the result set
-            // This is done automatically at the end of the script
             mysql_free_result($result);
         }
     break;        
