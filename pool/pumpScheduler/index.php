@@ -407,9 +407,7 @@ $table = new TableGear($options);
 </script>
 
 <script>
-    var result="string ";
-    getSetting("actionTableCollapse", result);
-    alert("result: " + result);
+    getSetting("actionTableCollapse", document.getElementById('actionTable'));
     document.getElementById('actionTable').click();
 </script>
 
