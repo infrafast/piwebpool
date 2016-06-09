@@ -749,13 +749,13 @@ class TableGear
     $this->_openTag("thead");
     if($this->title && $showTitle){
       $this->_openTag("tr");
-      $this->_openTag("th class='header'", array("colspan" => count($headers), "class" => "title"));
+      $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
       $this->_outputHTML($this->title);
       $this->_closeTag("th");
       $this->_closeTag("tr");
     }
     if($headers){
-      $this->_openTag("tr");
+      $this->_openTag("tr class='header'");
       foreach($headers as $header){
         $this->_openTag("th", $header["attrib"]);
         $this->_outputHTML($header["html"]);
