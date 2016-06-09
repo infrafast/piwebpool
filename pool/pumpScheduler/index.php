@@ -401,9 +401,9 @@ $table = new TableGear($options);
 <script src="js/script.js"></script>
 
 <script>
-    $( "#actionTable" ).click(function() {
+/*    $( "#actionTable" ).click(function() {
   alert( "Handler for .click() called." );
-});
+});*/
 </script>
 
 <script>
