@@ -58,7 +58,7 @@ switch($_['action']){
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
         
-        
+        mysql_query("SELECT 'value' FROM `tableCollapseSetting` WHERE id='actionTable'") or die('error in query '.$sql);
         
     break;        
 
