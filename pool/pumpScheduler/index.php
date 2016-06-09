@@ -407,7 +407,7 @@ $table = new TableGear($options);
 </script>
 
 <script>
-    alert('retour : '+getSetting("actionTable"));
+    getSetting("actionTable");
     document.getElementById('actionTable').click();
 </script>
 
