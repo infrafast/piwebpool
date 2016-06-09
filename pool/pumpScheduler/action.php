@@ -9,8 +9,6 @@ $result['answer']  = 'OK';
 $pinParam=$_['pin'];
 $stateParam=$_['state'];
 
-
-
 switch($_['action']){
 	case 'changeState':
 	    if (intval($stateParam)<0 or intval(stateParam)>1 or intval($pinParam)<1 or intval($pinParam)>26){
@@ -75,7 +73,6 @@ switch($_['action']){
             mysql_free_result($result);
         }
     break;        
-
 
 	default:
 		$result['answer']  = "ERROR";
