@@ -751,7 +751,7 @@ class TableGear
       $this->_openTag("tr");
       $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
       $this->_outputHTML($this->title);
-      $this->_closeTag("th");
+      $this->_closeTag("th <span>-</span>");
       $this->_closeTag("tr");
     }
     if($headers){
