@@ -10,6 +10,18 @@ $pinParam=$_['pin'];
 $stateParam=$_['state'];
 $settingParam=$_['id'];
 
+
+function executeSQLScript($dbms_schema)
+        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+        mysql_select_db($options["database"]["name"]) or die('error database selection');
+  
+        $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
+        $sql_query = remove_remarks($sql_query);
+        $sql_query = split_sql_file($sql_query, ';');
+        
+        foreach($sql_query as $sql) mysql_query($sql) or die('error in query '.$sql);       
+}
+
 switch($_['action']){
 	case 'changeState':
 	    if (intval($stateParam)<0 or intval(stateParam)>1 or intval($pinParam)<1 or intval($pinParam)>26){
@@ -35,17 +47,7 @@ switch($_['action']){
 
     case 'resetSchedule':
 
-        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-        mysql_select_db($options["database"]["name"]) or die('error database selection');
-       
-
-        $dbms_schema = 'pumpSchedule.sql';
-        
-        $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
-        $sql_query = remove_remarks($sql_query);
-        $sql_query = split_sql_file($sql_query, ';');
-        
-        foreach($sql_query as $sql) mysql_query($sql) or die('error in query '.$sql);        
+        executeSqlScript() ;
 
     break;
 
