@@ -380,7 +380,7 @@ $table = new TableGear($options);
 
 <table class="materialTab">
 <tr class="header">
-<td colspan="2"><span>-</span> <b>Actions</b></td>
+<td colspan="2"><b><span>-</span> Actions</b></td>
 </tr>
 <tr><th>Commande</th><th>Etat</th></tr>
 <?php foreach($materials as $material=>$pin){ ?>
