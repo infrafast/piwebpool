@@ -393,12 +393,7 @@ $table = new TableGear($options);
 <tr class="header" id="sensorTable">
 <td colspan="2"><b><span>-</span> Action</b></td>
 </tr>
-<tr><th>Commande</th><th>Etat</th></tr>
-<?php foreach($materials as $material=>$pin){ ?>
-<tr>
-	<td><?php echo $material; ?></td>
-	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
-<?php } ?>
+<tr><th>Sonde</th><th>Etat</th></tr>
 <tr>
     <td>Execution sequence</td>
     <td><div onclick="scenario();" class="buttonState play"></div></td>
