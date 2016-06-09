@@ -21,6 +21,7 @@ function getSetting(id){
         type: "POST",
         url: urlCall,
         success: function(r){
+            var result = eval(r);
     }});   
 }
 
