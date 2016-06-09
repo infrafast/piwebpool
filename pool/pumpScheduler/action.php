@@ -9,6 +9,12 @@ $result['answer']  = 'OK';
 $pinParam=$_['pin'];
 $stateParam=$_['state'];
 
+
+function connectDB(){
+        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+        mysql_select_db($options["database"]["name"]) or die('error database selection');
+}
+
 switch($_['action']){
 	case 'changeState':
 	    if (intval($stateParam)<0 or intval(stateParam)>1 or intval($pinParam)<1 or intval($pinParam)>26){
