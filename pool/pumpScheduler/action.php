@@ -80,10 +80,9 @@ switch($_['action']){
             while ($row = mysql_fetch_assoc($result)) {
                 $result['state']=($row[$temp]);
             }
-        mysql_free_result($result);
-    }
-    
-    break;        
+            mysql_free_result($result);
+        }
+        break;        
 
 	default:
 		$result['answer']  = "ERROR";
