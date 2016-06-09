@@ -746,9 +746,9 @@ class TableGear
 
   function _outputHeaders($headers, $showTitle = false)
   {
-    $this->_openTag("thead class='header' id='scheduleTable'");
+    $this->_openTag("thead");
     if($this->title && $showTitle){
-      $this->_openTag("tr");
+      $this->_openTag("tr class='header' id='scheduleTable'");
       $this->_openTag("td", array("colspan" => count($headers), "class" => "title"));
       $this->_openTag("span");
       $this->_outputHTML("-");
@@ -757,7 +757,7 @@ class TableGear
       $this->_outputHTML(" ".$this->title);
       $this->_closeTag("b");
       $this->_closeTag("td");
-      $this->_closeTag("tr");
+
     }
     if($headers){
         
@@ -769,6 +769,7 @@ class TableGear
       }
       $this->_closeTag("tr");
     }
+      $this->_closeTag("tr");
     $this->_closeTag("thead");
   }
 
