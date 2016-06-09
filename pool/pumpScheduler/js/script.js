@@ -1,6 +1,11 @@
 $('.header').click(function(){
    $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); // or just use "toggle()"
+    	$.ajax({
+		    type: "POST",
+			url: "./action.php?action=scenario",
+		    success: function(r){
+	}});
 });
 
 
