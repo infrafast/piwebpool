@@ -106,6 +106,9 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .buttonState{
+	height:30px;
+	width:55px;
+	width:30px;
 	cursor: pointer;
 	margin:4px auto 0px auto;
 	background-repeat:no-repeat	;
