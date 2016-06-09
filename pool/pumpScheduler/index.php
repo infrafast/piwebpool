@@ -394,7 +394,7 @@ $table = new TableGear($options);
 <?php } ?>
 <tr>
     <td>Run scenario</td>
-    <td><div onclick="scenario();"></img></td>
+    <td><div onclick="scenario();" class="buttonState.play"></td>
 </table>
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
