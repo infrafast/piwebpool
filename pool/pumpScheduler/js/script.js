@@ -11,6 +11,7 @@ $('.header').click(function(){
     	async:false,
         success: function(r){
     }});
+    document.getElementById(id).removeClass("loading");
 });
 
 function getSetting(id,elem){
