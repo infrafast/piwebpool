@@ -65,8 +65,8 @@ switch($_['action']){
         $query="SELECT 'value' FROM `settings` WHERE id='".$_['id']."'";
         $outcome = mysql_query($query);
         if (!$outcome) {
-             $result['answer']  = mysql_error();
-             $result['state'] = $query;
+             $result['answer']  = "ERROR"
+             $result['state'] =  mysql_error();
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
                 $result['state']=($row["value"]);
