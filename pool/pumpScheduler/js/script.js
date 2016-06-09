@@ -21,6 +21,13 @@ function getSetting(id){
         type: "POST",
     	url: urlCall,
         success: function(r){
+    		if(result.state == 1){          
+    			$(elem).removeClass('on');
+    			$(elem).removeClass('off');
+    			$(elem).addClass((newState==1?'off':'on')); 
+    		}else{
+    			alert('Erreur : '+result.error);
+    		}
     }});   
 }
 
