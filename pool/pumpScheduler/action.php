@@ -10,17 +10,6 @@ $pinParam=$_['pin'];
 $stateParam=$_['state'];
 
 
-function executeSQLScript($dbms_schema){
-
-        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-        mysql_select_db($options["database"]["name"]) or die('error database selection');
-  
-        $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
-        $sql_query = remove_remarks($sql_query);
-        $sql_query = split_sql_file($sql_query, ';');
-        
-        foreach($sql_query as $sql) mysql_query($sql) or die('error in query '.$sql);       
-}
 
 switch($_['action']){
 	case 'changeState':
@@ -46,7 +35,17 @@ switch($_['action']){
 	break;
 
     case 'resetSchedule':
-        executeSQLScript('pumpSchedule.sql') ;
+        $dbms_schema='pumpSchedule.sql';
+
+        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+        mysql_select_db($options["database"]["name"]) or die('error database selection');
+  
+        $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
+        $sql_query = remove_remarks($sql_query);
+        $sql_query = split_sql_file($sql_query, ';');
+        
+        foreach($sql_query as $sql) mysql_query($sql) or die('error in query '.$sql);  
+
     break;
 
     case 'updateCollapseTableSetting':
