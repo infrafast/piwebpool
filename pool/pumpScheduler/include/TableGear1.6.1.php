@@ -746,7 +746,7 @@ class TableGear
 
   function _outputHeaders($headers, $showTitle = false)
   {
-    $this->_openTag("thead");
+    $this->_openTag("thead class='header'");
     if($this->title && $showTitle){
       $this->_openTag("tr");
       $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
@@ -755,7 +755,7 @@ class TableGear
       $this->_closeTag("tr");
     }
     if($headers){
-      $this->_openTag("tr class='header'");
+      $this->_openTag("tr");
       foreach($headers as $header){
         $this->_openTag("th", $header["attrib"]);
         $this->_outputHTML($header["html"]);
