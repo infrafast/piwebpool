@@ -376,11 +376,6 @@ $table = new TableGear($options);
 <body>
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
-<table class="materialTab">
-<tr>
-<td colspan="3"><div onclick=";">Click here to  or to create initial schedule<img src='images/enCours.png'></img></div></td>
-</tr>
-</table>
 
 <table class="materialTab">
 <tr class="header">
