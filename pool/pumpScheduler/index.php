@@ -393,7 +393,7 @@ $table = new TableGear($options);
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
 <?php } ?>
 <tr>
-    <td>Run scenario</td>
+    <td>Execution sequence</td>
     <td><div onclick="scenario();" class="buttonState play"></td>
 </table>
 <script src="js/jquery.min.js"></script>
