@@ -56,7 +56,7 @@ switch($_['action']){
     case 'updateSetting':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
-        $query="UPDATE `settings` SET `value` = '".$_['value']."' WHERE `settings`='".$_['id']."'";
+        $query="UPDATE `settings` SET `value` = '".$_['value']."' WHERE `id`='".$_['id']."'";
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = "ERROR";
