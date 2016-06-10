@@ -358,7 +358,7 @@ $table = new TableGear($options);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Pump scheduler</title>
+  <title>Gestion piscine</title>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
   <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
@@ -400,6 +400,10 @@ $table = new TableGear($options);
 <tr>
     <td>Redox</td>
     <td><div onclick="" class=""></div>0mv</td>
+</tr>
+<tr>
+    <td>Temperature</td>
+    <td><div onclick="" class=""></div>25°C</td>
 </tr>
 </table>
 
