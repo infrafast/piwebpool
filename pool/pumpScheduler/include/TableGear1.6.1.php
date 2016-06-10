@@ -519,7 +519,7 @@ class TableGear
       }
       $this->_closeTag("tfoot");
     }
-    $this->_openTag("tbody");
+    //$this->_openTag("tbody");
     if(!$this->data){
       $this->_openTag("tr", array("class" => "noDataRow odd"));
       $this->_openTag("td", array("colspan" => count($headers)));
@@ -750,10 +750,10 @@ class TableGear
     if($this->title && $showTitle){
       $this->_openTag("tr");
       $this->_openTag("td", array("colspan" => count($headers), "class" => "title"));
+      $this->_openTag("b");
       $this->_openTag("span");
       $this->_outputHTML("-");
       $this->_closeTag("span");
-      $this->_openTag("b");
       $this->_outputHTML(" ".$this->title);
       $this->_closeTag("b");
       $this->_closeTag("td");
