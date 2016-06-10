@@ -20,6 +20,18 @@ Now execute the following command (1.1.0 is the version at the time of writing t
 sudo pecl install lua-1.1.0
 Add extension=lua.so to php.ini file (could be /etc/php5/(cli/apache)/php.ini)
 
+
+<?php
+$lua = new Lua();
+$lua->assign("php_var", array(1=>1, 2, 3)); //lua table index begin with 1
+$lua->eval(<<<CODE
+    print(php_var);
+CODE
+);
+?>
+
+
+
 change (/etc/apache2/site-enable/eniac or via webmin)
     from WSGIScriptAlias / /var/www/eniac/eniac/wsgi.py^
     to WSGIScriptAlias /eniac /var/www/eniac/eniac/wsgi.py^
