@@ -368,6 +368,7 @@ $table = new TableGear($options);
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
+<div>
 <table class="materialTab">
 <tr class="header" id="actionTable">
 <td colspan="2"><b><span>-</span> Commandes</b></td>
@@ -387,6 +388,7 @@ $table = new TableGear($options);
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
 </tr>
 </table>
+</div>
 
 <table class="materialTab">
 <tr class="header" id="sensorTable">
