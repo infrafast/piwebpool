@@ -1,5 +1,25 @@
     install php5
 install php5-mysql
+
+install LUA
+Packages to install (sudo apt-get install):
+Install php5
+Install php-pear
+Install php5-dev
+Install lua*.*
+Install liblua*.*
+Create soft link of /usr/include/lua TO /usr/include/lua*.*:
+sudo ln -s /usr/include/lua*.*/ /usr/include/lua
+
+Find liblua*.*.so and liblua*.*.a files in /usr/lib.
+If they don't exist, they could be in /usr/lib/x86_64-linux-gnu or /usr/lib/i386-linux-gnu depending on OS.
+Copy them from that directory into /usr/lib as liblua.so and liblua.a (WITHOUT VERSION NUMBER).
+Example:
+sudo cp /usr/lib/x86_64-linux-gnu/liblua5.2.a /usr/lib/liblua.a
+Now execute the following command (1.1.0 is the version at the time of writing this):
+sudo pecl install lua-1.1.0
+Add extension=lua.so to php.ini file (could be /etc/php5/(cli/apache)/php.ini)
+
 change (/etc/apache2/site-enable/eniac or via webmin)
     from WSGIScriptAlias / /var/www/eniac/eniac/wsgi.py^
     to WSGIScriptAlias /eniac /var/www/eniac/eniac/wsgi.py^
