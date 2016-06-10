@@ -6,7 +6,7 @@ Packages to install (sudo apt-get install):
 Install php5
 Install php-pear
 Install php5-dev
-Install lua*.*
+Install lua*.*   <----
 Install liblua*.*
 Create soft link of /usr/include/lua TO /usr/include/lua*.*:
 sudo ln -s /usr/include/lua*.*/ /usr/include/lua
