@@ -759,6 +759,7 @@ class TableGear
       $this->_closeTag("td");
       $this->_closeTag("tr");
     }
+    $this->_openTag("tbody");
     if($headers){
         
       $this->_openTag("tr");
