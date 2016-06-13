@@ -93,7 +93,6 @@ switch($_['action']){
         $lua = new Lua("luascripts/".$_['file']);
         break;
 
-
 	default:
 		$result['answer']  = "ERROR";
 		$result['state'] = 'Undefined action '.$_['action'];
