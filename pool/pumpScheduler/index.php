@@ -407,6 +407,17 @@ $table = new TableGear($options);
 </tr>
 </table>
 
+<table class="materialTab">
+<tr class="header" id="sensorTable">
+<td colspan="1"><b><span>-</span> Programmation</b></td>
+</tr>
+<tr><th>Sonde</th></th></tr>
+<tr>
+    <td>PH</td>
+</tr>
+</table>
+
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
