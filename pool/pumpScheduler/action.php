@@ -90,7 +90,8 @@ switch($_['action']){
         break;        
 
     case 'lua':
-        $lua = new Lua("luascripts/".$_['file']);
+        $lua = getLua("luascripts"..$_['file'],$materials);
+        $lua->run();
         break;
 
 	default:
