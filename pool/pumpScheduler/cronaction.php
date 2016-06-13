@@ -56,7 +56,8 @@ if (!setPinState($pins[$materials["Filtration"]],$pumpConsign==0?1:0)){
     exit;   
 }
 
-$lua = getLua("luascripts/test.lua");
+$lua = new LuaPool("luascripts/test.lua");
+$lua->run();
 
 echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["Filtration"]]." ".$pumpConsign."]";
 
