@@ -2,6 +2,17 @@
 // this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
+
+// since this script can be called from CLI (thru crontab) check if the module exension Lua is loaded or force the load
+if (!extension_loaded('lua')) {
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+        dl('php_sqlite.dll');
+    } else {
+        dl('sqlite.so');
+    }
+}
+
+
 require_once('configuration.php');
 require_once('functions.php');
 require_once('luaContext.php');
