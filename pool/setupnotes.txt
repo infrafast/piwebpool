@@ -22,7 +22,7 @@ FOR ME:
     apt-get install liblua5.1-dev
     sudo ln -s /usr/include/lua5.1/* /usr/include/
     sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.a /usr/lib/liblua.a
-    sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/
+    sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
 
 
 Now execute the following command (1.1.0 is the version at the time of writing this):
