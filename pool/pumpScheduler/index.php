@@ -418,14 +418,15 @@ $table = new TableGear($options);
 <tr><th>Blockly</th></th></tr>
 <tr>
     <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div>Aide en ligne de blockly</td>
-    <xml id="toolbox" style="display: none">
-      <block type="controls_if"></block>
-      <block type="controls_repeat_ext"></block>
-      <block type="logic_compare"></block>
-      <block type="math_number"></block>
-      <block type="math_arithmetic"></block>
-      <block type="text"></block>
-    </xml>    
+<xml id="toolbox" style="display: none">
+  <category name="Logic" colour="210">...</category>
+  <category name="Loops" colour="120">...</category>
+  <category name="Math" colour="230">...</category>
+  <category name="Colour" colour="20">...</category>
+  <category name="Variables" colour="330" custom="VARIABLE"></category>
+  <category name="Functions" colour="290" custom="PROCEDURE"></category>
+</xml>
+   
 </tr>
 </table>
 
