@@ -411,7 +411,7 @@ $table = new TableGear($options);
 <tr class="header" id="sensorTable">
 <td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
-<tr><th>Sonde</th></th></tr>
+<tr><th>Blockly</th></th></tr>
 <tr>
     <td>PH</td>
 </tr>
