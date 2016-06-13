@@ -447,6 +447,14 @@ $table = new TableGear($options);
               scaleSpeed: 1.2},
          trashcan: true          
       });
+      
+    function myUpdateFunction(event) {
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      document.getElementById('textarea').value = code;
+    }
+    workspace.addChangeListener(myUpdateFunction);
+  
+      
 </script>
 
 <script src="js/jquery.min.js"></script>
