@@ -33,7 +33,10 @@ switch($_['action']){
 	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
 	        $result['answer']  = "ERROR";
 	        $result['state'] = 'Bad parameter';
-	    }else  $result['state'] = (getPinState($_['pin'],$pins)=='off'?true:false);
+	    }else{
+	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?true:false);
+	        echo "getPinState(".$_['pin']".",".$pins.")";
+	    }
 	break;
 
     case 'resetSchedule':
