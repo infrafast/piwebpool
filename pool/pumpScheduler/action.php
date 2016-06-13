@@ -91,10 +91,10 @@ switch($_['action']){
 
     case 'luaTest':
         $lua = new Lua();
-        $lua->eval("<<<CODE
+        $lua->eval(<<<CODE
             print(2);
         CODE
-        ");
+        );
         break;
 
 
