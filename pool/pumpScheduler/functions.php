@@ -8,7 +8,7 @@ function getPinState($pin,$pins){
 function getPin($pin){
     exec("gpio read ".$pin,$commands,$return);
     echo "exec gpio read ".$pin;
-    return (trim($commands[0])=="1"?'on':'off');
+    return (trim($commands[0])=="1"?0:1);
 }
 
 function setPinState($pin,$state){
