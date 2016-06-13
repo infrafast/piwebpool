@@ -431,7 +431,11 @@ $table = new TableGear($options);
     </xml>    
 </tr>
 <tr>
-    <td></td>
+    <td>
+    <textarea rows="4" cols="50">
+        lua script
+    </textarea>     
+    </td>
 </tr>
 </table>
 
