@@ -411,9 +411,9 @@ $table = new TableGear($options);
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script>
-/*  $( "#actionTable" ).click(function() {
+  $( "#actionTable" ).click(function() {
           alert( "Handler for .click() called." );
-    });*/
+    });
     getSetting("actionTableCollapse", document.getElementById('actionTable'));
     getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
     getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
