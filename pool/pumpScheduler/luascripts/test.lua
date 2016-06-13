@@ -1,5 +1,5 @@
 function run()
     print(filtration);
-    set(0,1);
+    set(11,1);
     return;
 end
