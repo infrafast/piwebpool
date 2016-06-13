@@ -93,7 +93,7 @@ switch($_['action']){
         $lua = new Lua("luascripts/".$_['file']);
         if (!$lua){
             $result['answer']  = "ERROR";
-            $result['state'] =  mysql_error();            
+            //$result['state'] =  ;            
         }
         break;
 
