@@ -90,7 +90,7 @@ switch($_['action']){
         break;        
 
     case 'luaTest':
-        $lua = new Lua("test.lua");
+        $lua = new Lua("luascripts/test.lua");
         break;
 
 
