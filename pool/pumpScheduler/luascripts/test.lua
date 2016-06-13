@@ -1,1 +1,4 @@
-print(filtration);
+function run()
+    print(filtration);
+    return;
+end
