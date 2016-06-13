@@ -35,7 +35,6 @@ switch($_['action']){
 	        $result['state'] = 'Bad parameter';
 	    }else{
 	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?true:false);
-	        echo "getPinState(".$_['pin'].",".$pins.")";
 	    }
 	break;
 
