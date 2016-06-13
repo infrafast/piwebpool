@@ -2,7 +2,7 @@
 /*
 LUA CONTEXT*/
 require_once ("functions.php");
-include ("configuration.php");
+require_once ("configuration.php");
 
 function getLua($file){
     $script=$file;
