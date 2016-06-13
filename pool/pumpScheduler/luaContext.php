@@ -2,30 +2,23 @@
 /*
 LUA CONTEXT*/
 require_once ("functions.php");
-include("configuration.php");
+require_once ("configuration.php");
 
-// base class with member properties and methods
-class LuaPool {
+function getLua($file){
+    $script=$file;
+    $lua=new Lua($file);
+    $lua->assign("filtration", $materials["Filtration"]); /** assign a PHP var to Lua named from */        
+}
 
-    static $lua;
-    var $script;
+function get() 
+{
+   return $this->$lua;
+}
 
-    function LuaPool($file){
-        $script=$file;
-        $lua=new Lua($file);
-        $lua->assign("filtration", $materials["Filtration"]); /** assign a PHP var to Lua named from */        
-    }
+function run() 
+{
+   return $lua->run();      
+}
 
-   function get() 
-   {
-       return $this->$lua;
-   }
-
-   function run() 
-   {
-       return $lua->run();      
-   }
-
-} // end of class Vegetable
 
 ?>
