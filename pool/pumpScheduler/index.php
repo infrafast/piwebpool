@@ -430,6 +430,9 @@ $table = new TableGear($options);
       <block type="text"></block>
     </xml>    
 </tr>
+<tr>
+    <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div>Aide en ligne de blockly</td>
+</tr>
 </table>
 
 <div><?= $table->getTable() ?></div>
