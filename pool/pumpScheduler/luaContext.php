@@ -9,6 +9,7 @@ function getLua($file,$materials,$pins){
     $script=$file;
     $lua=new Lua($file);
     
+    // record
     // since the setPinState function gets the logical pin number, we have to get it from the table
     foreach($materials as $material=>$pin){
         $lua->assign($material, $pins[$pin]);    
