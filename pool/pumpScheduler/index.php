@@ -417,9 +417,9 @@ $table = new TableGear($options);
 <tr class="header" id="blocklyTable">
 <td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
-<tr><th><div id="blocklyDiv" style="position: absolute"></div></th></th></tr>
+<tr><th>Blockly</th></th></tr>
 <tr>
-    <td>Aide en ligne de blockly</td>
+    <td><div id="blocklyDiv" style="position: absolute"></div>Aide en ligne de blockly</td>
     <xml id="toolbox" style="display: none">
       <block type="controls_if"></block>
       <block type="controls_repeat_ext"></block>
