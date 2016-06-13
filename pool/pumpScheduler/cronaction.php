@@ -4,7 +4,7 @@
 
 require_once('configuration.php');
 require_once('functions.php');
-
+require_once('luaContext.php');
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
