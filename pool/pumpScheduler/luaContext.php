@@ -4,9 +4,6 @@ LUA CONTEXT*/
 require_once ("functions.php");
 require_once ("configuration.php");
 
-
-
-
 // base class with member properties and methods
 class LuaPool {
 
@@ -14,13 +11,13 @@ class LuaPool {
     var $script;
 
     function LuaPool($file){
-        this->$script=$file;
+        $script=$file;
         $lua=new Lua($file);
     }
 
    function get() 
    {
-       return $this->$lua
+       return $this->$lua;
    }
 
    function run() 
