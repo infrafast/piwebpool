@@ -29,7 +29,16 @@ Now execute the following command (1.1.0 is the version at the time of writing t
 sudo pecl install lua-1.1.0 ----> use the same
 Add extension=lua.so to php.ini file (could be /etc/php5/(cli/apache)/php.ini)
 
-    sudo pecl install lua-1.1.0
+//    sudo pecl install lua-1.1.0
+wget https://pecl.php.net/get/lua-1.0.0.tgz
+tar zxvf https://pecl.php.net/get/lua-1.0.0.tgz
+cd lua-1.0.0
+phpize
+./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
+sudo make
+sudo make install
+
+
 
 <?php
 $lua = new Lua();
