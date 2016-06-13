@@ -361,6 +361,25 @@ $table = new TableGear($options);
   <title>Gestion piscine</title>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
+  
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+ /* $( "#actionTable" ).click(function() {
+          alert( "Handler for .click() called." );
+    });*/
+    getSetting("actionTableCollapse", document.getElementById('actionTable'));
+    getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
+    getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
+    getSetting("blocklyTableCollapse", document.getElementById('blocklyTable'));
+</script>
+
+<script src="blockly/blockly_compressed.js"></script>
+<script src="blockly/blocks_compressed.js"></script>
+<script src="blockly/msg/js/en.js"></script>  
+  
+  
+  
   <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -419,21 +438,7 @@ $table = new TableGear($options);
 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
-<script>
- /* $( "#actionTable" ).click(function() {
-          alert( "Handler for .click() called." );
-    });*/
-    getSetting("actionTableCollapse", document.getElementById('actionTable'));
-    getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
-    getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
-    getSetting("blocklyTableCollapse", document.getElementById('blocklyTable'));
-</script>
 
-<script src="blockly/blockly_compressed.js"></script>
-<script src="blockly/blocks_compressed.js"></script>
-<script src="blockly/msg/js/en.js"></script>
 
 </body>
 </html>
