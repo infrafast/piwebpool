@@ -11,8 +11,8 @@ function getPin($pin){
     // contrary to the sub-function which is called from php
     exec("gpio read ".$pin,$commands,$return);
     echo "exec gpio read ".$pin;
-    // invert if problem
-    return (trim($commands[0])=="1"?0:1);
+    // invert if problem : was ?0:1
+    return (trim($commands[0])=="1"?1:0);
 }
 
 function setPinState($pin,$state){
