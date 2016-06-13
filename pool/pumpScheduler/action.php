@@ -11,7 +11,7 @@ $result['answer']  = 'OK';
 
 switch($_['action']){
 	case 'changeState':
-	    if (intval($_['state'])<0 or intval($_['state'])>1 or ($_['pin']!="Filtration" and $_['pin']!="Traitement")){
+	    if (intval($_['state'])<0 or intval($_['state'])>1 or intval($_['pin'])<1 or intval($_['pin'])>26){
 	        $result['answer']  = 'Bad parameter';     
 	    }else  $result['state'] = setPinState($pins[$materials[$_['pin']]],$_['state']);
 	break;
@@ -65,8 +65,9 @@ switch($_['action']){
              $result['state'] =  $query; /* mysql_error();*/
         }else{
             $result['state'] = $outcome;
+            mysql_free_result($outcome);
         }       
-        mysql_free_result($outcome);        
+        
     break;
     
     case 'getSetting':
