@@ -432,7 +432,11 @@ $table = new TableGear($options);
 </tr>
 </table>
 
-
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',
+        {media: '../../media/',
+         toolbox: document.getElementById('toolbox')});
+  </script>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
