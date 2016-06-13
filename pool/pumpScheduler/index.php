@@ -430,8 +430,8 @@ $table = new TableGear($options);
     getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
 </script>
 
-<script src="blockly_compressed.js"></script>
-<script src="blocks_compressed.js"></script>
+<script src="blockly/blockly_compressed.js"></script>
+<script src="blockly/blocks_compressed.js"></script>
 
 
 </body>
