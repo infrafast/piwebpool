@@ -19,7 +19,7 @@ class LuaPool {
 
    function run() 
    {
-       return $this->edible;
+       return $lua->run();      
    }
 
 } // end of class Vegetable
@@ -35,9 +35,5 @@ function getLua($script)
     return $lua;
 }
 
-function runLua()
-    $func = $lua->run();
-    return $func;
-}
 
 ?>
