@@ -62,7 +62,7 @@ CODE
 );
 ?>
 
-
+the application uses blockly from google scripts
 
 change (/etc/apache2/site-enable/eniac or via webmin)
     from WSGIScriptAlias / /var/www/eniac/eniac/wsgi.py^
