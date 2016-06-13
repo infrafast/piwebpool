@@ -432,7 +432,7 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>
-    <textarea rows="4" cols="50">
+    <textarea rows="4" cols="50" id="scriptarea">
         lua script
     </textarea>     
     </td>
@@ -457,7 +457,7 @@ $table = new TableGear($options);
       
     function myUpdateFunction(event) {
       var code = Blockly.JavaScript.workspaceToCode(workspace);
-      document.getElementById('textarea').value = code;
+      document.getElementById('scriptarea').value = code;
     }
     workspace.addChangeListener(myUpdateFunction);
   
