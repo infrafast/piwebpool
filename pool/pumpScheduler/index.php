@@ -431,7 +431,7 @@ $table = new TableGear($options);
     </xml>    
 </tr>
 <tr>
-    <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div>Aide en ligne de blockly</td>
+    <td></td>
 </tr>
 </table>
 
