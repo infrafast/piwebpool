@@ -9,6 +9,7 @@ function getLua($file,$materials,$pins){
     $script=$file;
     $lua=new Lua($file);
     foreach ($materials as $material){
+        echo "material: ".$material;
         $lua->assign("filtration", $pins[$materials["Filtration"]]);    
     }
     
