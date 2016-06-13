@@ -38,7 +38,8 @@ phpize
 sudo make
 sudo make install
 
-
+vi /etc/php5/apache2/php.ini
+fin "Dynamic Extensions" and add extension=lua.so
 
 <?php
 $lua = new Lua();
