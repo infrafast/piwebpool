@@ -364,7 +364,6 @@ $table = new TableGear($options);
   
 <script src="blockly/blockly_compressed.js"></script>
 <script src="lua_compressed.js"></script>
-
 <script src="blockly/blocks_compressed.js"></script>
 
 <script src="blockly/msg/js/en.js"></script>
@@ -460,7 +459,6 @@ $table = new TableGear($options);
       document.getElementById('scriptarea').value = code;
     }
     workspace.addChangeListener(myUpdateFunction);
-  
       
 </script>
 
