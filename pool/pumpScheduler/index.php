@@ -455,7 +455,7 @@ $table = new TableGear($options);
       });
       
     function myUpdateFunction(event) {
-      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      var code = Blockly.Lua.workspaceToCode(workspace);
       document.getElementById('scriptarea').value = code;
     }
     workspace.addChangeListener(myUpdateFunction);
