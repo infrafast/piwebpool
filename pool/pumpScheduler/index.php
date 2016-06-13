@@ -371,8 +371,6 @@ $table = new TableGear($options);
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div><?= $table->getTable() ?></div>
-<?= $table->getJavascript("jquery") ?>
 
 <table class="materialTab">
 <tr class="header" id="actionTable">
@@ -430,6 +428,9 @@ $table = new TableGear($options);
     </xml>    
 </tr>
 </table>
+
+<div><?= $table->getTable() ?></div>
+<?= $table->getJavascript("jquery") ?>
 
 <script>
   var blocklyArea = document.getElementById('blocklyArea');
