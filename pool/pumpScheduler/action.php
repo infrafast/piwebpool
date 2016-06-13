@@ -15,7 +15,7 @@ switch($_['action']){
 	        $result['answer']  = 'Bad parameter';     
 	    }else{
 	        $result['state'] = setPinState($pins[$_['pin']],$_['state']);
-	        echo "setPinState(".$pins[$_['pin']].",".$_['state']".)";
+	        echo "setPinState(".$pins[$_['pin']].",".$_['state'].")";
 	    }
 	break;
 
