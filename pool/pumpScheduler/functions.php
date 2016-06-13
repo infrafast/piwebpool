@@ -6,6 +6,9 @@ function getPinState($pin,$pins){
 }
 
 function getPin($pin){
+    // this function is to abstract one parameter when called from lua
+    // it return 0 or 1 to beconsistent with set and to ease the testing 
+    // contrary to the sub-function which is called from php
     exec("gpio read ".$pin,$commands,$return);
     echo "exec gpio read ".$pin;
     return (trim($commands[0])=="1"?0:1);
