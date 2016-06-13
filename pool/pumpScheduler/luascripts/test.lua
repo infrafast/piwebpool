@@ -1,5 +1,5 @@
 function run()
-    value=1;
+    value=0;
     print("\n{FROM LUA");
     print ("setFiltration=" .. value);
     set(filtration,value);
