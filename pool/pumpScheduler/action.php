@@ -65,7 +65,7 @@ switch($_['action']){
              $result['state'] =  $query; /* mysql_error();*/
         }else{
             $result['state'] = $outcome;
-            mysql_free_result($result);
+            mysql_free_result($outcome);
         }       
         
     break;
