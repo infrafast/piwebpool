@@ -8,12 +8,12 @@ function getLua($file,$materials,$pins){
     // add error caught
     $script=$file;
     $lua=new Lua($file);
-    foreach ($materials as $material){
-        echo "material: ".$material;
+    
+    for ($i = 0; $i < count($materials); ++$i) {
+        echo "material: ".$material[$i];
         $lua->assign("filtration", $pins[$materials["Filtration"]]);    
+        print $array[$i];
     }
-    
-    
     
     $lua->registerCallback("set", 'setPinState');
     return $lua;
