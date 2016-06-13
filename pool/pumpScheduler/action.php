@@ -11,7 +11,7 @@ $result['answer']  = 'OK';
 
 switch($_['action']){
 	case 'changeState':
-	    if (intval($_['state'])<0 or intval($_['state'])>1 or $_['pin']!="Filtration" or $_['pin']!="Traitement"){
+	    if (intval($_['state'])<0 or intval($_['state'])>1 or ($_['pin']!="Filtration" and $_['pin']!="Traitement")){
 	        $result['answer']  = 'Bad parameter';     
 	    }else  $result['state'] = setPinState($pins[$materials[$_['pin']]],$_['state']);
 	break;
