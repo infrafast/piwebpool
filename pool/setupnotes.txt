@@ -39,7 +39,8 @@ sudo make
 sudo make install
 
 vi /etc/php5/apache2/php.ini
-fin "Dynamic Extensions" and add extension=lua.so
+find "Dynamic Extensions" and add extension=lua.so
+/etc/init.d/apache2 restart
 
 <?php
 $lua = new Lua();
