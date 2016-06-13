@@ -89,6 +89,16 @@ switch($_['action']){
         }
         break;        
 
+    case 'luaTest':
+        $lua = new Lua();
+        $lua->assign("php_var", array(1=>1, 2, 3)); //lua table index begin with 1
+        $lua->eval(<<<CODE print(php_var);
+        CODE
+        );
+        
+        break;
+
+
 	default:
 		$result['answer']  = "ERROR";
 		$result['state'] = 'Undefined action '.$_['action'];
