@@ -4,7 +4,7 @@
 // action.php?action=updateSetting&id=actionTableCollapse&value=1
 // action.php?action=resetSchedule
 require_once('common.php');
-require_once('luaContext.php')
+require_once('luaContext.php');
 
 $result['state']  = "undef";
 $result['answer']  = 'OK';
