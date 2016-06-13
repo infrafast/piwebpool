@@ -27,6 +27,7 @@ function getSetting(id,elem){
 
 function changeState(pin,elem){
 	var newState = ($(elem).hasClass('on')?1:0); 
+	alert('changeState : pin'+pin+" value"+newState);
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=changeState",
