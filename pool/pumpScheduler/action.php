@@ -11,9 +11,9 @@ $result['answer']  = 'OK';
 
 switch($_['action']){
 	case 'changeState':
-	    /*if (intval($_['state'])<0 or intval($_['state'])>1 or intval($_['pin'])<1 or intval($_['pin'])>26){
+	    if (intval($_['state'])<0 or intval($_['state'])>1 or intval($_['pin'])<1 or intval($_['pin'])>26){
 	        $result['answer']  = 'Bad parameter';     
-	    }else*/  $result['state'] = setPinState($_['pin'],$_['state']);
+	    }else  $result['state'] = setPinState($pins[$_['pin']],$_['state']);
 	break;
 
 	case 'scenario':
