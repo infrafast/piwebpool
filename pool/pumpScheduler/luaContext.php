@@ -7,7 +7,7 @@ require_once ("configuration.php");
 // base class with member properties and methods
 class LuaPool {
 
-    var $lua;
+    static $lua;
     var $script;
 
     function LuaPool($file){
