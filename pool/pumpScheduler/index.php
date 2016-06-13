@@ -419,7 +419,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Blockly</th></th></tr>
 <tr>
-    <td><div id="blocklyDiv" style="height: 480px; width: 600px;"></div>Aide en ligne</td>
+    <td><div id="blocklyDiv" style="position: absolute"></div>Aide en ligne</td>
     <xml id="toolbox" style="display: none">
       <block type="controls_if"></block>
       <block type="controls_repeat_ext"></block>
@@ -433,9 +433,28 @@ $table = new TableGear($options);
 </table>
 
 <script>
-var workspace = Blockly.inject('blocklyDiv',
-    {media: '../../media/',
-     toolbox: document.getElementById('toolbox')});
+  var blocklyArea = document.getElementById('blocklyArea');
+  var blocklyDiv = document.getElementById('blocklyDiv');
+  var workspace = Blockly.inject(blocklyDiv,
+      {toolbox: document.getElementById('toolbox')});
+  var onresize = function(e) {
+    // Compute the absolute coordinates and dimensions of blocklyArea.
+    var element = blocklyArea;
+    var x = 0;
+    var y = 0;
+    do {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    } while (element);
+    // Position blocklyDiv over blocklyArea.
+    blocklyDiv.style.left = x + 'px';
+    blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
 </script>
 
 <script src="js/jquery.min.js"></script>
