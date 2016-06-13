@@ -427,6 +427,7 @@ $table = new TableGear($options);
       <block type="math_number"></block>
       <block type="math_arithmetic"></block>
       <block type="text"></block>
+      <block type="variables"></block>
     </xml>    
 </tr>
 </table>
