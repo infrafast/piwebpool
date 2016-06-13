@@ -28,11 +28,6 @@ FOR ME:
 Now execute the following command (1.1.0 is the version at the time of writing this):
 sudo pecl install lua-1.1.0 ----> use the same
 Add extension=lua.so to php.ini file (could be /etc/php5/(cli/apache)/php.ini)
-modify php ini to allow dynamic module extension load!
-
-enable_dl = On 
-safe_mode = off
-
 
 
 //    sudo pecl install lua-1.1.0
