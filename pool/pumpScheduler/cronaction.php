@@ -51,8 +51,8 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-if (!setPinState($pins[$materials["Filtration"]],$pumpConsign==0?1:0)){
-    echo 'error setPinState'.$pins[$materials["Filtration"]]." ".$pumpConsign;
+if (!setPinState($pins[$materials["filtration"]],$pumpConsign==0?1:0)){
+    echo 'error setPinState'.$pins[$materials["filtration"]]." ".$pumpConsign;
     exit;   
 }
 
