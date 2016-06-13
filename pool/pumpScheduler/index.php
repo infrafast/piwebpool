@@ -413,7 +413,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Blockly</th></th></tr>
 <tr>
-    <td>This is where blockly goes</td>
+    <td><div id="blocklyDiv" style="height: 480px; width: 600px;"></div>This is where blockly goes</td>
 </tr>
 </table>
 
