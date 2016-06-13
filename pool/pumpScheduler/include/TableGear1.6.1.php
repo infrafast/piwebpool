@@ -610,14 +610,14 @@ class TableGear
     if($this->pagination) $options["paginated"] = true;
     $options = $this->_jsonEncode($options);
     $this->_openTag("script", array("type" => "text/javascript"));
-    //echo "\n";
+    echo "\n";
     if($library == "mootools"){
       echo "new TableGear('$id', $options);";
     }
     if($library == "jquery"){
       echo "$('#$id').tableGear($options);";
     }
-    //echo "\n";
+    echo "\n";
     $this->_closeTag("script");
   }
 
