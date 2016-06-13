@@ -2,7 +2,7 @@
 /*
 LUA CONTEXT*/
 require_once ("functions.php");
-require_once ("configuration.php");
+include("configuration.php");
 
 // base class with member properties and methods
 class LuaPool {
