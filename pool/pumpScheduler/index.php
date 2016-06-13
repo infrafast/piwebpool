@@ -430,11 +430,7 @@ $table = new TableGear($options);
     </xml>    
 </tr>
 <tr>
-    <td>
-    <textarea rows="5" cols="80" id="scriptarea">
-        lua script
-    </textarea>     
-    </td>
+    <td><textarea rows="5" cols="80" id="scriptarea"></textarea></td>
 </tr>
 </table>
 
