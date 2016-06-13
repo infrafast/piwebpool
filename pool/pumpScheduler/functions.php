@@ -7,7 +7,7 @@ function getPinState($pin,$pins){
 	return (trim($commands[0])=="1"?'on':'off');
 }
 
-
+function getPin
 
 function setPinState($pin,$state){
     //Definis le PIN en tant que sortie
