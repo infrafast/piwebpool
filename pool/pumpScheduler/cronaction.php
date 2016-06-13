@@ -4,9 +4,11 @@
 
 
 // since this script can be called from CLI (thru crontab) check if the module exension Lua is loaded or force the load
-if (!extension_loaded('lua')) {
-    dl('lua.so');
-}
+//if (!extension_loaded('lua')) {
+//    dl('lua.so');
+//}
+// otherwise run this script from cli as:
+//php -dextension=lua.so cronaction.php
 
 
 require_once('configuration.php');
