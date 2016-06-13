@@ -9,14 +9,11 @@ require_once('luaContext.php');
 $result['state']  = "undef";
 $result['answer']  = 'OK';
 
-$pinParam=$_['pin'];
-$stateParam=$_['state'];
-
 switch($_['action']){
 	case 'changeState':
-	    if (intval($stateParam)<0 or intval(stateParam)>1 or intval($pinParam)<1 or intval($pinParam)>26){
+	    if (intval($_['state'])<0 or intval($_['state'])>1 or intval($_['pin'])<1 or intval($_['pin'])>26){
 	        $result['answer']  = 'Bad parameter';     
-	    }else  $result['state'] = setPinState($pins[$pinParam],$stateParam);
+	    }else  $result['state'] = setPinState($pins[$_['pin']],$_['state']);
 	break;
 
 	case 'scenario':
@@ -30,10 +27,10 @@ switch($_['action']){
 	break;
 
 	case 'getState':
-	    if (intval($pinParam)<1 or intval($pinParam)>26){
+	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
 	        $result['answer']  = "ERROR";
 	        $result['state'] = 'Bad parameter';
-	    }else  $result['state'] = (getPinState($pinParam,$pins)=='off'?true:false);
+	    }else  $result['state'] = (getPinState($_['pin'],$pins)=='off'?true:false);
 	break;
 
     case 'resetSchedule':
