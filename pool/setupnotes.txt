@@ -1,3 +1,11 @@
+ATTENTION:
+    - verifier que la commande depuis l'ecran principal commande bien les relais 0 / 1
+    - il semblerais que tout soit ok (si c'est bien le cas), sauf pour l'appel direct de action.php?action=changeState ou il  y a une inversion
+    
+
+
+
+
 install php5
 install php5-mysql
 
