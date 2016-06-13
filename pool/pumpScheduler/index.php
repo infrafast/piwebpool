@@ -413,7 +413,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Blockly</th></th></tr>
 <tr>
-    <td>PH</td>
+    <td>This is where blockly goes</td>
 </tr>
 </table>
 
