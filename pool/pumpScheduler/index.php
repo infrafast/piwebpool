@@ -371,6 +371,8 @@ $table = new TableGear($options);
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div><?= $table->getTable() ?></div>
+<?= $table->getJavascript("jquery") ?>
 
 <table class="materialTab">
 <tr class="header" id="actionTable">
@@ -417,7 +419,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Blockly</th></th></tr>
 <tr>
-    <td><div id="blocklyDiv" ></div>Aide en ligne de blockly</td>
+    <td><div id="blocklyDiv" style="height: 480px; width: 600px;"></div>Aide en ligne de blockly</td>
     <xml id="toolbox" style="display: none">
       <block type="controls_if"></block>
       <block type="controls_repeat_ext"></block>
@@ -428,9 +430,6 @@ $table = new TableGear($options);
     </xml>    
 </tr>
 </table>
-
-<div><?= $table->getTable() ?></div>
-<?= $table->getJavascript("jquery") ?>
 
 <script>
   var blocklyArea = document.getElementById('blocklyArea');
