@@ -10,7 +10,7 @@ function getPin($pin){
     // it return 0 or 1 to beconsistent with set and to ease the testing 
     // contrary to the sub-function which is called from php
     exec("gpio read ".$pin,$commands,$return);
-    echo "exec gpio read ".$pin;
+    //echo "exec gpio read ".$pin;
     // invert if problem : was ?0:1
     return (trim($commands[0])=="1"?1:0);
 }
