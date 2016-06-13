@@ -13,6 +13,7 @@ class LuaPool {
     function LuaPool($file){
         $script=$file;
         $lua=new Lua($file);
+        $lua->assign("filtration", $materials["Filtration"]); /** assign a PHP var to Lua named from */        
     }
 
    function get() 
@@ -26,17 +27,5 @@ class LuaPool {
    }
 
 } // end of class Vegetable
-
-
-
-
-
-
-function getLua($script)
-    static $lua=new Lua($script);
-    $lua->assign("filtration", $materials["Filtration"]); /** assign a PHP var to Lua named from */
-    return $lua;
-}
-
 
 ?>
