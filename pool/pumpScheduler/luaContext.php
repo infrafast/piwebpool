@@ -8,7 +8,12 @@ function getLua($file,$materials,$pins){
     // add error caught
     $script=$file;
     $lua=new Lua($file);
-    $lua->assign("filtration", $pins[$materials["Filtration"]]); /** assign a PHP var to Lua named from */        
+    foreach ($materials as $material){
+        $lua->assign("filtration", $pins[$materials["Filtration"]]);    
+    }
+    
+    
+    
     $lua->registerCallback("set", 'setPinState');
     return $lua;
 }
