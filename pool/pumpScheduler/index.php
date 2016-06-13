@@ -368,6 +368,13 @@ $table = new TableGear($options);
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
+
+<script src="blockly_compressed.js"></script>
+<script src="blocks_compressed.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+
 <table class="materialTab">
 <tr class="header" id="actionTable">
 <td colspan="2"><b><span>-</span> Commandes</b></td>
@@ -417,10 +424,6 @@ $table = new TableGear($options);
 </tr>
 </table>
 
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
 <script>
  /* $( "#actionTable" ).click(function() {
           alert( "Handler for .click() called." );
