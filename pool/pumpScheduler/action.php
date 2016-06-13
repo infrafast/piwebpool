@@ -33,6 +33,7 @@ switch($_['action']){
 	        $result['answer']  = "ERROR";
 	        $result['state'] = 'Bad parameter';
 	    }else{
+	        // inverted logic : relais normally open
 	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?true:false);
 	    }
 	break;
