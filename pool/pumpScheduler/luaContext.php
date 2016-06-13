@@ -17,7 +17,7 @@ function getLua($file,$materials,$pins){
     }
     
     $lua->registerCallback("set", 'setPinState');
-    $lua->registerCallback("get", 'getPinState');
+    $lua->registerCallback("get", 'getPin');
     return $lua;
 }
 
