@@ -457,6 +457,7 @@ $table = new TableGear($options);
     function myUpdateFunction(event) {
       var code = Blockly.Lua.workspaceToCode(workspace);
       document.getElementById('scriptarea').value = code;
+      alert( "event called called." );
     }
     workspace.addChangeListener(myUpdateFunction);
       
