@@ -408,7 +408,7 @@ $table = new TableGear($options);
 </table>
 
 <table class="materialTab">
-<tr class="header" id="sensorTable">
+<tr class="header" id="blocklyTable">
 <td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
 <tr><th>Blockly</th></th></tr>
