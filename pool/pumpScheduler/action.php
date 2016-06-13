@@ -91,10 +91,6 @@ switch($_['action']){
 
     case 'lua':
         $lua = new Lua("luascripts/".$_['file']);
-        if (!$lua){
-            $result['answer']  = "ERROR";
-            //$result['state'] =  ;            
-        }
         break;
 
 
