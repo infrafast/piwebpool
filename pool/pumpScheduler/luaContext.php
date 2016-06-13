@@ -11,7 +11,8 @@ function getLua($script)
 }
 
 function runLua()
-
+    $func = $lua->run();
+    return $func;
 }
 
 ?>
