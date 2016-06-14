@@ -431,7 +431,8 @@ $table = new TableGear($options);
         <block type="logic_negate"></block>
         <block type="logic_boolean"></block>
        
-
+        <block type="variables_get">
+        </block>
        
         <block type="controls_repeat_ext">
         <value name="TIMES">
