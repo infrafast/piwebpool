@@ -11,14 +11,16 @@ function getPin($pin){
     // contrary to the sub-function which is called from php
     exec("gpio read ".$pin,$commands,$return);
     //echo "exec gpio read ".$pin;
-    // invert if problem : was ?0:1
-    return (trim($commands[0])=="1"?1:0);
+    // relay : normally close
+    return (trim($commands[0])=="1"?0:1);
 }
 
 function setPinState($pin,$state){
     //Definis le PIN en tant que sortie
 	system("gpio mode ".$pin." out");
 	//Active/désactive le pin
+	$state=($state==0?1:0);
+	
 	system("gpio write ".$pin." ".$state);
 	//echo "{gpio write ".$pin." ".$state."}";
 	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
@@ -28,6 +30,8 @@ function setPinState($pin,$state){
 function getOutsideTemperature(){
     return rand(-4,32);
 }
+
+
 
 function getPoolTemperature(){
     // should curl to Eniac
