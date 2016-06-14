@@ -504,7 +504,7 @@ $table = new TableGear($options);
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(120);
+        this.setColour(20);
         this.setTooltip('');
         this.setHelpUrl('http://www.example.com/');
       }
@@ -523,7 +523,7 @@ $table = new TableGear($options);
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
         this.setOutput(true, "Boolean");
-        this.setColour(120);
+        this.setColour(20);
         this.setHelpUrl('http://www.example.com/');
       }
     };
