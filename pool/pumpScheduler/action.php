@@ -19,7 +19,7 @@ switch($_['action']){
 	    $temp = getTemperature();
 	    break;
 
-	case 'getTemperature':
+	case 'getPh':
 	    $temp = getTemperature();
 	    break;
 	
