@@ -431,10 +431,11 @@ $table = new TableGear($options);
         <block type="logic_boolean"></block>
        
         <block type="sensors"></block>
+        <block type="variables_set"><field name="VAR">variable</field></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
        
-       <block type="variables_set"><field name="VAR">variable</field></block>
+       
        
         <block type="controls_repeat_ext">
         <value name="TIMES">
