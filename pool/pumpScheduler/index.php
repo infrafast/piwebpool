@@ -433,6 +433,8 @@ $table = new TableGear($options);
         <block type="sensors"></block>
         <block type="functions"></block>
        
+       <block type="variables_set"></block>
+       
         <block type="controls_repeat_ext">
         <value name="TIMES">
           <block type="math_number">
