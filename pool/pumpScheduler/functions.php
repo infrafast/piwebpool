@@ -17,7 +17,7 @@ function sms($number,$message,&$feedback){
     try {
         // envoi d'un message
         $sms->send($message);
-        $feedback = "sent"
+        $feedback = "sent";
         return true;
     } catch (Exception $e) {
         $feedback = $e->getCode()." ".$e->getMessage();
