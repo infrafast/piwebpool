@@ -32,6 +32,14 @@ function getOutsideTemperature(){
 }
 
 
+function getPh(){
+    return intval(rand(-4,32));
+}
+
+
+function getORP(){
+    return intval(rand(-4,32));
+}
 
 function getPoolTemperature(){
     // should curl to Eniac
