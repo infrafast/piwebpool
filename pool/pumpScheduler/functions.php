@@ -33,7 +33,7 @@ function getTemperature(){
 
 
 function getPh(){
-    return float(rand(6,8));
+    return rand(6,8);
 }
 
 function getORP(){
