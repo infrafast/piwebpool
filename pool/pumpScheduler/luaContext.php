@@ -5,6 +5,7 @@ require_once ("functions.php");
 require_once ("configuration.php");
 
 function goLua($file,$materials,$pins){
+    // local copy the variable names
     $luaVariables = $materials;
     // add error caught
     $script=$file;
