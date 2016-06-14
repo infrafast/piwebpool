@@ -17,10 +17,10 @@ function sms($number,$message){
     try {
         // envoi d'un message
         $sms->send($message);
+        return true;
     } catch (Exception $e) {
-        // le monde n'est pas parfait, il y aura
-        // peut-être des erreurs.
         echo "Erreur sur envoi de SMS: (".$e->getCode().") ".$e->getMessage();
+        return false;
     }    
 }
 
