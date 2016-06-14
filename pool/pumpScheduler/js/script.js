@@ -91,11 +91,3 @@ function refreshPh(elem){
 				}
 	}});
 }
-
-function refreshTemp(elem){
-    alert("refresh Temp");
-}
-
-function refreshORP(elem){
-    alert("refresh ORP");
-}
