@@ -5,14 +5,18 @@ require_once ("functions.php");
 require_once ("configuration.php");
 
 function goLua($file,$materials,$pins){
-    // local copy the variable names
-    $luaVariables = $materials;
+
     // add error caught
+    //} catch (LuaException $e) {
+    //     echo $e->getMessage();
+    //}
+
+    
+    
     $script=$file;
     $lua=new Lua($file);
     
     
-    // option 1
     // record names of the command as variable and manipulate them directly phyisically in lua using set and get functions
     // since the setPinState function gets the logical pin number, we have to get it from the table
     // option 2 : PREFERRED
