@@ -7,12 +7,14 @@ function run()
     if (filter == 0) then
         set(filtration,1);
     else
-        set(filtration,0)
+        set(filtration,0);
     end
 
-    set(filtration,value);
-    set(traitement,1);
-
+    if (traite == 0) then
+        set(traitement,1);
+    else
+        set(traitement,0);
+    end
 
     print ("END LUA}\n");
 
