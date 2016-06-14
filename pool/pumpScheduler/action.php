@@ -17,7 +17,7 @@ switch($_['action']){
             $SMSuser = "19107501";
             $SMSkey = "1NXCXBzJGbNsdb";
             
-            if (!sms($_['number'],$_['message'],$result['state'])){
+            if (!sms( $SMSuser, $SMSkey, $_['number'],$_['message'],$result['state'])){
                 $result['answer']="ERROR";
             }
         break;
