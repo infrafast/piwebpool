@@ -497,7 +497,7 @@ Blockly.Lua['sensors'] = function(block) {
 Blockly.Blocks['functions'] = {
   init: function() {
     this.appendValueInput("NAME")
-        .setCheck(["0", "1"])
+        .setCheck("Boolean")
         .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
