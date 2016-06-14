@@ -518,7 +518,7 @@ $table = new TableGear($options);
       return code;
     };
 
-    Blockly.Blocks['getfunctions'] = {
+    Blockly.Blocks['getcommand'] = {
       init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
