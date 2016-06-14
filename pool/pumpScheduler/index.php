@@ -528,7 +528,7 @@ $table = new TableGear($options);
       }
     };
     
-    Blockly.Lua['getfunctions'] = function(block) {
+    Blockly.Lua['setcommand'] = function(block) {
       var dropdown_command = block.getFieldValue('command');
       // TODO: Assemble Lua into code variable.
       var code = 'get('+dropdown_command+')';
