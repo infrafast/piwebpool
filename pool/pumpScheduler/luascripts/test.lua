@@ -1,7 +1,7 @@
 function run()
     print("\n{FROM LUA");
 
-    filter=get(filtration);
+    filter=getZ(filtration);
     traite=get(traitement);
 
     if (filter == 0) then
