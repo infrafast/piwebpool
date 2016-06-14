@@ -409,11 +409,11 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>Redox</td>
-    <td><div onclick="" class=""></div><?php echo getORP(); ?>mv</td>
+    <td><div onclick="refreshORP()" class=""></div><?php echo getORP(); ?>mv</td>
 </tr>
 <tr>
     <td>Temperature</td>
-    <td><div onclick="" class=""></div><?php echo getTemperature(); ?>°C</td>
+    <td><div onclick="refreshTemp()" class=""></div><?php echo getTemperature(); ?>°C</td>
 </tr>
 </table>
 
