@@ -76,6 +76,7 @@ function resetSchedule(){
 }
     
 function refreshPh(elem){
+    $(elem).update("New text");
     alert("refresh Ph");
 }
 
