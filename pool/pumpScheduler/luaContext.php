@@ -24,13 +24,14 @@ function goLua($file,$materials,$pins){
         $lua->assign($material,$luaVariables[$pin]);      // option 2
         //echo "{material: ".$material." pin:".$pins[$pin]."}";
     }
-    $lua->assign("TOTO","PHP");
+    $lua->assign($toto,"PHP");
     //$lua->registerCallback("set", 'setPinState'); // option 1
     //$lua->registerCallback("get", 'getPin'); // option 1
     
 
     // execute the script
     $lua->run();
+    echo "TOTO=".$toto;
     // option 2 
     // get back the variable modified by script to update command
     foreach ($luaVariables as $luaVariable=>$value){
