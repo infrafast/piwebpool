@@ -16,7 +16,7 @@ switch($_['action']){
             if (!sms($number,$message)){
                 $result['answer']="ERROR";
                 $result['state']="SMS";
-            } 
+            } else $result['state']="Message sent";
         break;
     
 
