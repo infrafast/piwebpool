@@ -511,7 +511,7 @@ Blockly.Lua['functions'] = function(block) {
   var dropdown_command = block.getFieldValue('command');
   var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
   // TODO: Assemble Lua into code variable.
-  var code = 'set('+value_name+')';
+  var code = 'set('+value_name+',)';
   return code;
 };
 
