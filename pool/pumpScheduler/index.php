@@ -494,6 +494,27 @@ Blockly.Lua['sensors'] = function(block) {
   return [code, Blockly.Lua.ORDER_NONE];
 };
 
+Blockly.Blocks['functions'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(["0", "1"])
+        .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(120);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+Blockly.Lua['functions'] = function(block) {
+  var dropdown_command = block.getFieldValue('command');
+  var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+  // TODO: Assemble Lua into code variable.
+  var code = '...\n';
+  return code;
+};
+
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
