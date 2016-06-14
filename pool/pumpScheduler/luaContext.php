@@ -5,6 +5,7 @@ require_once ("functions.php");
 require_once ("configuration.php");
 
 function goLua($file,$materials,$pins,&$status){
+    $ret = true;
     try{
         $lua=new Lua($file);
         
@@ -22,7 +23,7 @@ function goLua($file,$materials,$pins,&$status){
         // execute the script
         $lua->run();
     } catch (LuaException $e) {
-         echo $e->getMessage();
+         $status= $e->getMessage();
     }
     return $lua;
 }
