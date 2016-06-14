@@ -98,7 +98,7 @@ switch($_['action']){
         break;
 
     case 'lua':
-       if (!goLua("luascriptss/".$_['file'],$materials,$pins,$result['state'])) $result['answer']  = "ERROR";
+       if (!goLua("luascripts/".$_['file'],$materials,$pins,$result['state'])) $result['answer']  = "ERROR";
         break;
 
 	default:
