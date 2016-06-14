@@ -16,11 +16,11 @@ switch($_['action']){
 	    break;
 	    
 	case 'getORP':
-	    $temp = getTemperature();
+	    $orp = getORP();
 	    break;
 
 	case 'getPh':
-	    $temp = getTemperature();
+	    $ph = getPh();
 	    break;
 	
 	
