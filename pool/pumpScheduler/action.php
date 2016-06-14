@@ -23,8 +23,6 @@ switch($_['action']){
 	    $ph = getPh();
 	    break;
 	
-	
-	
 	case 'changeState':
 	    if (intval($_['state'])<0 or intval($_['state'])>1 or intval($_['pin'])<1 or intval($_['pin'])>26){
 	        $result['answer']  = 'ERROR';     
