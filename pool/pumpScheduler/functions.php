@@ -33,12 +33,11 @@ function getOutsideTemperature(){
 
 
 function getPh(){
-    return intval(rand(6,8));
+    return rand(6,8);
 }
 
-
 function getORP(){
-    return intval(rand(-4,32));
+    return intval(rand(300,900));
 }
 
 function getPoolTemperature(){
@@ -118,7 +117,7 @@ function remove_remarks($sql)
    $linecount = count($lines);
    $output = "";
 
-   for ($i = 0; $i < $linecount; $i++)
+   for ($i = 0; $i < $linecount; $i$i++)
    {
       if (($i != ($linecount - 1)) || (strlen($lines[$i]) > 0))
       {
@@ -166,7 +165,7 @@ function split_sql_file($sql, $delimiter)
          $total_quotes = preg_match_all("/'/", $tokens[$i], $matches);
          // Counts single quotes that are preceded by an odd number of backslashes,
          // which means they're escaped quotes.
-         $escaped_quotes = preg_match_all("/(?<!\\\\)(\\\\\\\\)*\\\\'/", $tokens[$i], $matches);
+       $escaped_quotes = preg_match_all("/(?<!\\\\)(\\\\\\\\)*\\\\'/", $tokens[$i], $matches);
 
          $unescaped_quotes = $total_quotes - $escaped_quotes;
 
@@ -256,3 +255,4 @@ Pin
 
 
 ?>
+
