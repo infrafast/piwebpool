@@ -21,7 +21,7 @@ function sms($number,$message,&$feedback){
         return true;
     } catch (Exception $e) {
         $feedback = $e->getCode()." ".$e->getMessage();
-        echo "Erreur sur envoi de SMS: ".$feedback;
+        //echo "Erreur sur envoi de SMS: ".$feedback;
         return false;
     }    
 }
