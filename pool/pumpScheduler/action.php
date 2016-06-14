@@ -1,25 +1,3 @@
-
- 
-$sms = new SMS\FreeMobile();
- 
-/**
- * configure l'ID utilisateur et la clé disponible dans
- * le compte Free Mobile après avoir activé l'option.
- */
-$sms->setKey("La clé générée")
-    ->setUser("votre id Free Mobile");
- 
-try {
-    // envoi d'un message
-    $sms->send("Hello World !");
-} catch (Exception $e) {
-    // le monde n'est pas parfait, il y aura
-    // peut-être des erreurs.
-    echo "Erreur sur envoi de SMS: (".$e->getCode().") ".$e->getMessage();
-}
-
-
-
 <?php
 // invoke with
 // action.php?action=changeState&pin=11&state=1
