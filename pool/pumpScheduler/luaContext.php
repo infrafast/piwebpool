@@ -6,6 +6,7 @@ require_once ("configuration.php");
 
 function goLua($file,$materials,$pins,&$status){
     $ret = true;
+    $status = 
     try{
         $lua=new Lua($file);
         
