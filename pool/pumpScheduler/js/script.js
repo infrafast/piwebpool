@@ -78,9 +78,10 @@ function resetSchedule(){
 }
     
 function refresh(elem,action){
+	var urlCall = "./action.php?action=get"+action;
 	$.ajax({
 			type: "POST",
-			url: "./action.php?action=get"+action,
+			url: urlCall,
 			success: function(r){
 				var result = eval(r);
 				if(result.answer == "OK"){          
