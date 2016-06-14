@@ -27,11 +27,10 @@ function goLua($file,$materials,$pins){
 
     // execute the script
     $lua->run();
-    
     // option 2 
     // get back the variable modified by script to update command
     foreach($materials as $material=>$pin){
-        $lua->assign($material, getPin($pins[$pin]));      // option 2
+        setPin($pins[$pin]));      // option 2
     }
     
     
