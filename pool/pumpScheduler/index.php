@@ -405,15 +405,15 @@ $table = new TableGear($options);
 <tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
     <td>PH</td>
-    <td><div onclick="refreshPh(this);" class="buttonState off"><?php echo getPh(); ?></div></td>
+    <td><div onclick="refresh(this,"Ph");" class="buttonState off"><?php echo getPh(); ?></div></td>
 </tr>
 <tr>
     <td>Redox (mV)</td>
-    <td><div onclick="refreshORP(this);" class="buttonState off"><?php echo getORP(); ?></div></td>
+    <td><div onclick="refreshORP(this,"ORP");" class="buttonState off"><?php echo getORP(); ?></div></td>
 </tr>
 <tr>
     <td>Temperature (°C)</td>
-    <td><div onclick="refreshTemp(this);" class="buttonState off"><?php echo getTemperature(); ?></div></td>
+    <td><div onclick="refreshTemp(this,"Temp");" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 </table>
 
