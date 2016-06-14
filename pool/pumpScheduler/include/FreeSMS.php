@@ -1,7 +1,5 @@
 <?php
  
-namespace SMS;
- 
 class FreeMobile
 {
     protected $_url = "https://smsapi.free-mobile.fr/sendmsg";
