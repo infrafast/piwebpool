@@ -77,10 +77,10 @@ function resetSchedule(){
     }
 }
     
-function refreshPh(elem){
+function refreshPh(elem,action){
 	$.ajax({
 			type: "POST",
-			url: "./action.php?action=getPh",
+			url: "./action.php?action=get"+action,
 			success: function(r){
 				var result = eval(r);
 				if(result.answer == "OK"){          
