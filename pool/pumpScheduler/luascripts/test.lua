@@ -13,6 +13,7 @@ function run()
     elseif filtration == 1 then
             filtration = 0
     end
+    toto="LUA";
     print ("END LUA}\n");
 
     return;
