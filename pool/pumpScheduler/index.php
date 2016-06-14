@@ -475,15 +475,16 @@ $table = new TableGear($options);
 
 <script>
 
-    Blockly.Blocks['sensors'] = {
-      init: function() {
-        this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["temperature", "TEMP"], ["ph", "PH"], ["orp", "ORP"]]), "select");
-        this.setInputsInline(false);
-        this.setOutput(true, null);
-        this.setColour(330);
-      }
-    };
+Blockly.Blocks['sensors'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["temperature", "TEMP"], ["ph", "PH"], ["orp", "ORP"]]), "select");
+    this.setOutput(true, null);
+    this.setColour(330);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
