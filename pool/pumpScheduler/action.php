@@ -12,15 +12,15 @@ $result['answer']  = 'OK';
 switch($_['action']){
 
 	case 'getTemperature':
-	    $temp = getTemperature();
+	    $result['state'] = getTemperature();
 	    break;
 	    
 	case 'getORP':
-	    $orp = getORP();
+	    $result['state'] = getORP();
 	    break;
 
 	case 'getPh':
-	    $ph = getPh();
+	    $result['state'] = getPh();
 	    break;
 	
 	case 'changeState':
