@@ -17,7 +17,8 @@ function goLua($file,$materials,$pins){
     // register variable and manipulate them logically in lua, then resync physically here
 
     foreach($materials as $material=>$pin){
-        $lua->assign($material, $pins[$pin]);     // option 1;
+        //$lua->assign($material, $pins[$pin]);     // option 1;
+        $lua->assign($material, $pins[$pin]);     
         //echo "{material: ".$material." pin:".$pins[$pin]."}";
     }
     $lua->registerCallback("set", 'setPinState');
