@@ -497,7 +497,7 @@ Blockly.Lua['sensors'] = function(block) {
   return [code, Blockly.Lua.ORDER_NONE];
 };
 
-Blockly.Blocks['functions'] = {
+Blockly.Blocks['setfunctions'] = {
   init: function() {
     this.appendValueInput("NAME")
         .setCheck("Boolean")
