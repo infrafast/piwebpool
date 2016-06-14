@@ -26,7 +26,7 @@ function goLua($file,$materials,$pins,&$feedback){
         $feedback= $lua->run();
     } catch (LuaException $e) {
          $feedback= $e->getMessage();
-         $ret = false;
+         return false;
     }
     return true;
 }
