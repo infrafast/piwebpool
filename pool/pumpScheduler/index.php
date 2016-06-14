@@ -478,46 +478,64 @@ $table = new TableGear($options);
 
 <script>
 
-Blockly.Blocks['sensors'] = {
+    Blockly.Blocks['sensors'] = {
+      init: function() {
+        this.appendDummyInput()
+            .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"]]), "select");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
+      }
+    };
+    
+    Blockly.Lua['sensors'] = function(block) {
+      var dropdown_select = block.getFieldValue('select');
+      // TODO: Assemble Lua into code variable.
+      var code = dropdown_select;
+      // TODO: Change ORDER_NONE to the correct strength.
+      return [code, Blockly.Lua.ORDER_NONE];
+    };
+    
+    Blockly.Blocks['setfunctions'] = {
+      init: function() {
+        this.appendValueInput("NAME")
+            .setCheck("Boolean")
+            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(120);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
+      }
+    };
+    
+    Blockly.Lua['functions'] = function(block) {
+      var dropdown_command = block.getFieldValue('command');
+      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+      // TODO: Assemble Lua into code variable.
+      var code = 'set('+dropdown_command+','+value_name+')';
+      return code;
+    };
+
+Blockly.Blocks['getfunctions'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"]]), "select");
-    this.setOutput(true, null);
-    this.setColour(330);
-    this.setTooltip('');
-    this.setHelpUrl('http://www.example.com/');
-  }
-};
-
-Blockly.Lua['sensors'] = function(block) {
-  var dropdown_select = block.getFieldValue('select');
-  // TODO: Assemble Lua into code variable.
-  var code = dropdown_select;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.Lua.ORDER_NONE];
-};
-
-Blockly.Blocks['setfunctions'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck("Boolean")
         .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setOutput(true, "Boolean");
     this.setColour(120);
     this.setTooltip('');
     this.setHelpUrl('http://www.example.com/');
   }
 };
 
-Blockly.Lua['functions'] = function(block) {
+Blockly.Lua['getfunctions'] = function(block) {
   var dropdown_command = block.getFieldValue('command');
-  var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
   // TODO: Assemble Lua into code variable.
-  var code = 'set('+dropdown_command+','+value_name+')';
-  return code;
+  var code = 'get('+dropdown_command+')';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Lua.ORDER_NONE];
 };
-
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
