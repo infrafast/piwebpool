@@ -24,6 +24,7 @@ function goLua($file,$materials,$pins){
         $lua->assign($material,$luaVariables[$pin]);      // option 2
         //echo "{material: ".$material." pin:".$pins[$pin]."}";
     }
+    $lua->assign("TOTO","PHP");
     //$lua->registerCallback("set", 'setPinState'); // option 1
     //$lua->registerCallback("get", 'getPin'); // option 1
     
