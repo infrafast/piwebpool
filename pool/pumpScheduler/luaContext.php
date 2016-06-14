@@ -31,7 +31,7 @@ function goLua($file,$materials,$pins){
 
     // execute the script
     $lua->run();
-    echo "TOTO=".$toto;
+    echo "TOTO AFTER LUA=".$toto;
     // option 2 
     // get back the variable modified by script to update command
     foreach ($luaVariables as $luaVariable=>$value){
