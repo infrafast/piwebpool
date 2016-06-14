@@ -1,5 +1,5 @@
 function run()
-    filter=getZ(filtration);
+    filter=get(filtration);
     traite=get(traitement);
 
     if (filter == 0) then
