@@ -77,7 +77,7 @@ function resetSchedule(){
     }
 }
     
-function refreshPh(elem,action){
+function refresh(elem,action){
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=get"+action,
