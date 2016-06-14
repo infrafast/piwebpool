@@ -424,14 +424,31 @@ $table = new TableGear($options);
 <tr><th>Blockly</th></tr>
 <tr>
     <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div></td>
-    <xml id="toolbox" style="display: none">
+<xml id="toolbox" style="display: none">
+  <category name="Core">
+    <category name="Control">
       <block type="controls_if"></block>
-      <block type="controls_repeat_ext"></block>
+      <block type="controls_whileUntil"></block>
+    </category>
+    <category name="Logic">
       <block type="logic_compare"></block>
-      <block type="math_number"></block>
-      <block type="math_arithmetic"></block>
-      <block type="text"></block>
-    </xml>    
+      <block type="logic_operation"></block>
+      <block type="logic_boolean"></block>
+    </category>
+  </category>
+  <category name="Custom">
+    <block type="start"></block>
+    <category name="Move">
+      <block type="move_forward"></block>
+      <block type="move_backward"></block>
+    </category>
+    <category name="Turn">
+      <block type="turn_left"></block>
+      <block type="turn_right"></block>
+    </category>
+  </category>
+</xml>
+    
 </tr>
 <tr>
     <td><textarea rows="5" cols="80" id="scriptarea"></textarea></td>
