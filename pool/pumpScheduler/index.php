@@ -389,8 +389,12 @@ $table = new TableGear($options);
     <td><div onclick="scenario();" class="buttonState play"></div></td>
 </tr>
 <tr>
-    <td>RAZ horodateur filtration</td>
+    <td>RAZ Planificateur filtration</td>
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
+</tr>
+<tr>
+    <td>Force refresh</td>
+    <td><div onclick="forceCron();" class="buttonState play"></div></td>
 </tr>
 </table>
 
