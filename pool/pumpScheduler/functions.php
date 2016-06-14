@@ -33,7 +33,7 @@ function getTemperature(){
 
 
 function getPh(){
-    return (6 + (8 - 6) * (mt_rand() / mt_getrandmax()));
+    return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //rand(6,8);
 }
 
