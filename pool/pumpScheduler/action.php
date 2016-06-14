@@ -13,6 +13,12 @@ $result['state']  = "undef";
 $result['answer']  = 'OK';
 
 switch($_['action']){
+    
+    case 'sms':
+
+        break;
+    
+    
 
 	case 'getTemperature':
 	    $result['state'] = getTemperature();
