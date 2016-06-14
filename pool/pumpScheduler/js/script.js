@@ -26,7 +26,7 @@ function getSetting(id,elem){
 }
 
 function changeState(pin,elem){
-	var newState = ($(elem).hasClass('on')?1:0); 
+	var newState = ($(elem).hasClass('on')?0:1); 
 	//alert('changeState : pin'+pin+" value"+newState);
 	$.ajax({
 			type: "POST",
@@ -37,7 +37,7 @@ function changeState(pin,elem){
 				if(result.state == 1){          
 					$(elem).removeClass('on');
 					$(elem).removeClass('off');
-					$(elem).addClass((newState==1?'off':'on')); 
+					$(elem).addClass((newState==1?'on':'off')); 
 				}else{
 					alert('Erreur : '+result.error);
 				}
@@ -53,6 +53,15 @@ function scenario(){
 	alert('Sequence demarée');
 }
 
+function forceCron(){
+	$.ajax({
+		    type: "POST",
+			url: "./action.php?action=forceCron",
+		    success: function(r){
+	}});
+	alert('refresh done');
+}
+
 function resetSchedule(){
     var r = confirm("This will reset your schedule with defaut value");
     if (true == r) {
@@ -64,4 +73,21 @@ function resetSchedule(){
     		 }});
         location.reload(true);
     }
+    
+function refreshPh(elem){
+    alert("refresh Ph");
+}
+
+function refreshPh(elem){
+    alert("refresh Ph");
+}
+
+function refreshPh(elem){
+    alert("refresh Ph");
+}
+
+
+
+}    
+    
 }
