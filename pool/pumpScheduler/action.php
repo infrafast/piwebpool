@@ -18,6 +18,16 @@ switch($_['action']){
 	        $result['state'] = setPinState($pins[$_['pin']],$_['state']);
 	    }
 	break;
+	
+	case 'getState':
+	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
+	        $result['answer']  = "ERROR";
+	        $result['state'] = 'Bad parameter';
+	    }else{
+	        // inverted logic : relais normally open  invert
+	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
+	    }
+	break;
 
 	case 'scenario':
 	    $result['state'] = (setPinState($pins[$materials["Filtration"]],0));
@@ -27,16 +37,6 @@ switch($_['action']){
         $result['state'] = (setPinState($pins[$materials["Prise libre"]],0));
 	    sleep(1);
         $result['state'] = (setPinState($pins[$materials["Prise libre"]],1));
-	break;
-
-	case 'getState':
-	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
-	        $result['answer']  = "ERROR";
-	        $result['state'] = 'Bad parameter';
-	    }else{
-	        // inverted logic : relais normally open  invert
-	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
-	    }
 	break;
 
     case 'resetSchedule':
