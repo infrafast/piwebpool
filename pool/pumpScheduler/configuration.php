@@ -1,7 +1,7 @@
 <?php
 
 $SMSuser = "19107501";
-$SMSkey = "oGVsksAr0geO6j";
+$SMSkey = "1NXCXBzJGbNsdb";
 
 
 //Tableau de correspondant PIN physiques/PIN Logiques (de la librairie wiringPI)
