@@ -9,17 +9,22 @@ function goLua($file,$materials,$pins){
     $script=$file;
     $lua=new Lua($file);
     
+    
+    // option 1
     // record names of the command as variable
     // since the setPinState function gets the logical pin number, we have to get it from the table
     foreach($materials as $material=>$pin){
         $lua->assign($material, $pins[$pin]);    
         //echo "{material: ".$material." pin:".$pins[$pin]."}";
     }
-    
     $lua->registerCallback("set", 'setPinState');
     $lua->registerCallback("get", 'getPin');
     
+    // execute the script
     $lua->run();
+    
+    // option 2 
+    // get back the variable modified by script to update command
     
     return $lua;
 }
