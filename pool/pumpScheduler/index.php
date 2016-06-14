@@ -490,18 +490,6 @@ $table = new TableGear($options);
     
     workspace.addChangeListener(myUpdateFunction);
 
-Blockly.Blocks['pool_var'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["temperature", "TEMP"], ["ph", "PH"], ["orp", "ORP"]]), "sensors");
-    this.setInputsInline(false);
-    this.setOutput(true, null);
-    this.setColour(330);
-    this.setTooltip('');
-    this.setHelpUrl('http://www.example.com/');
-  }
-};
-
 
     function myUpdateFunction(event) {
       var code = Blockly.Lua.workspaceToCode(workspace);
