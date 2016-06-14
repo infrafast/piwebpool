@@ -1,4 +1,9 @@
+
 <?php
+
+// inclure ici le fichier de la classe
+require "include/FreeSMS.php";
+
 
 function sms($number,$message){
      $sms = new SMS\FreeMobile();
