@@ -5,6 +5,7 @@ function run()
     --set(filtration,value);
     -- set(traitement,1);
     -- filtre = get(filtration);
+    print ("toto=" .. toto);
     print ("filtration=" .. filtration);
     print ("traitement=" .. traitement);
     if filtration == 0 then
