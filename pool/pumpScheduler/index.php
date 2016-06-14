@@ -405,11 +405,11 @@ $table = new TableGear($options);
 <tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
     <td>PH</td>
-    <td><div onclick="" class=""></div><?php echo getTemperature(); ?></td>
+    <td><div onclick="" class=""></div><?php echo getTemperature(); ?>°C</td>
 </tr>
 <tr>
     <td>Redox</td>
-    <td><div onclick="" class=""></div>0mv</td>
+    <td><div onclick="" class=""></div><?php echo getTemperature(); ?>mv</td>
 </tr>
 <tr>
     <td>Temperature</td>
