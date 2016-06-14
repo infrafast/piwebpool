@@ -1,6 +1,4 @@
 function run()
-    print("\n{FROM LUA");
-
     filter=getZ(filtration);
     traite=get(traitement);
 
@@ -15,8 +13,5 @@ function run()
     else
         set(traitement,0);
     end
-
-    print ("END LUA}\n");
-
     return "OK LUA";
 end
