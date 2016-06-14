@@ -4,7 +4,7 @@
 // inclure ici le fichier de la classe
 require "include/FreeSMS.php";
 
-function sms($number,$message){
+function sms($number,$message,&$feedback){
      $sms = new FreeMobile();
      
     /**
