@@ -16,8 +16,8 @@ function goLua($file,$materials,$pins,&$feedback){
             //echo "{material: ".$material." pin:".$pins[$pin]."}";
         }
         $lua->assign("temperature",getTemperature());
-        $lua->assign("ph",getph());
-        $lua->assign("orp",);
+        $lua->assign("ph",getPh());
+        $lua->assign("orp",getORP);
         
 
         $lua->registerCallback("set", 'setPinState'); 
