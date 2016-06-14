@@ -13,7 +13,10 @@ $result['answer']  = 'OK';
 switch($_['action']){
     
     case 'sms':
-
+            if (!sms($number,$message)){
+                $result['answer']="ERROR";
+                $result['state']="SMS";
+            } 
         break;
     
     
