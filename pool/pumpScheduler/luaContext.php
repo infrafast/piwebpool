@@ -12,11 +12,17 @@ function goLua($file,$materials,$pins,&$feedback){
     
         foreach($materials as $material=>$pin){
             $luaVariables[$pin]=getPin($pins[$pin]);
-            $lua->assign($material, $pins[$pin]);     // option 1;
+            $lua->assign($material, $pins[$pin]);     
             //echo "{material: ".$material." pin:".$pins[$pin]."}";
         }
-        $lua->registerCallback("set", 'setPinState'); // option 1
-        $lua->registerCallback("get", 'getPin'); // option 1
+        $lua->assign("temperature",);
+        $lua->assign("ph",);
+        $lua->assign("orp",);
+        
+
+        $lua->registerCallback("set", 'setPinState'); 
+        $lua->registerCallback("get", 'getPin'); 
+
 
         // execute the script
         $feedback= $lua->run();
