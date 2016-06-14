@@ -87,7 +87,5 @@ function refreshORP(elem){
 }
 
 
-
-}    
     
 }
