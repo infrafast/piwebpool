@@ -86,7 +86,7 @@ function refreshValue(elem,action){
 				var result = eval(r);
 				if(result.answer == "OK"){          
 				    $(elem).text(result.state);
-                    //alert("refresh Ph");
+                    alert("refresh "+urlCall);
 				}else{
 					alert('Erreur : '+result.answer);
 				}
