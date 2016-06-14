@@ -32,7 +32,7 @@ function goLua($file,$materials,$pins){
     // option 2 
     // get back the variable modified by script to update command
     foreach($materials as $material=>$pin){
-        setPinState($pins[$pin],$luaVariables[$pin]);      // option 2
+        //setPinState($pins[$pin],$luaVariables[$pin]);      // option 2
     }
     
     
