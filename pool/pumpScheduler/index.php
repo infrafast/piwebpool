@@ -394,7 +394,7 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>Force refresh</td>
-    <td><div onclick="forceCron();" class="buttonState play"></div></td>
+    <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
 </tr>
 </table>
 
