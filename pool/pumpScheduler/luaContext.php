@@ -17,11 +17,7 @@ function goLua($file,$materials,$pins,&$feedback){
         }
         $lua->registerCallback("set", 'setPinState'); // option 1
         $lua->registerCallback("get", 'getPin'); // option 1
-    } catch (LuaException $e) {
-         $feedback= $e->getMessage();
-         return false;
-    }
-    try{
+
         // execute the script
         $feedback= $lua->run();
     } catch (LuaException $e) {
