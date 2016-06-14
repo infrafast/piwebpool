@@ -413,7 +413,7 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>Temperature (°C)</td>
-    <td><div onclick="refreshValue(this,"Temp");" class="buttonState off"><?php echo getTemperature(); ?></div></td>
+    <td><div onclick="refreshValue(this,"Temperature");" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 </table>
 
