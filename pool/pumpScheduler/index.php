@@ -408,12 +408,12 @@ $table = new TableGear($options);
     <td><div onclick="refreshPh(this)" class=""><?php echo getPh(); ?></div></td>
 </tr>
 <tr>
-    <td>Redox</td>
-    <td><div onclick="refreshORP(this)" class=""><?php echo getORP(); ?></div>mv</td>
+    <td>Redox (mV)</td>
+    <td><div onclick="refreshORP(this)" class=""><?php echo getORP(); ?></div></td>
 </tr>
 <tr>
-    <td>Temperature</td>
-    <td><div onclick="refreshTemp(this)" class=""><?php echo getTemperature(); ?></div>°C</td>
+    <td>Temperature (°C)</td>
+    <td><div onclick="refreshTemp(this)" class=""><?php echo getTemperature(); ?></div></td>
 </tr>
 </table>
 
