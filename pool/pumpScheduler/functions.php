@@ -43,7 +43,7 @@ function getORP(){
 
 function getPoolTemperature(){
     // should curl to Eniac
-    $temp=getOutsideTemperature();
+    $temp=getTemperature();
     $temp=intval($temp);
     if ($temp/2 <> intval($temp/2)) $temp-=1;
     $tempRange=$temp."to".($temp+2);
