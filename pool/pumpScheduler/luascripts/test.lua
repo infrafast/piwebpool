@@ -18,5 +18,5 @@ function run()
 
     print ("END LUA}\n");
 
-    return;
+    return "OK LUA";
 end
