@@ -33,8 +33,8 @@ switch($_['action']){
 	        $result['answer']  = "ERROR";
 	        $result['state'] = 'Bad parameter';
 	    }else{
-	        // inverted logic : relais normally open
-	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?true:false);
+	        // inverted logic : relais normally open  invert
+	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
 	    }
 	break;
 
@@ -90,10 +90,14 @@ switch($_['action']){
             mysql_free_result($outcome);
         }
         break;        
+        
+    case 'forceCron':
+        //$result['state'] = shell_exec('./hourlycrontab.sh');
+        // not a good solution as it will be executed by apache with no write access to the logs
+        break;
 
     case 'lua':
-        $lua = getLua("luascripts/".$_['file'],$materials,$pins);
-        $lua->run();
+        $lua = goLua("luascripts/".$_['file'],$materials,$pins);
         break;
 
 	default:
