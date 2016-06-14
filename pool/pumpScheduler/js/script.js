@@ -73,6 +73,7 @@ function resetSchedule(){
     		 }});
         location.reload(true);
     }
+}
     
 function refreshPh(elem){
     alert("refresh Ph");
@@ -84,8 +85,4 @@ function refreshTemp(elem){
 
 function refreshORP(elem){
     alert("refresh ORP");
-}
-
-
-    
 }
