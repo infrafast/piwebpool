@@ -19,10 +19,8 @@ function goLua($file,$materials,$pins,&$feedback){
         $lua->assign("ph",getPh());
         $lua->assign("orp",getORP);
         
-
         $lua->registerCallback("set", 'setPinState'); 
         $lua->registerCallback("get", 'getPin'); 
-
 
         // execute the script
         $feedback= $lua->run();
