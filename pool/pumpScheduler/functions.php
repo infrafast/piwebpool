@@ -11,8 +11,8 @@ function sms($number,$message){
      * configure l'ID utilisateur et la clé disponible dans
      * le compte Free Mobile après avoir activé l'option.
      */
-    $sms->setKey("La clé générée")
-        ->setUser("votre id Free Mobile");
+    $sms->setKey($SMSkey)
+        ->setUser($SMSuser);
      
     try {
         // envoi d'un message
