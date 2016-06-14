@@ -3,7 +3,7 @@ function run()
     print("\n{FROM LUA");
     --print ("setFiltration=" .. value);
     --set(filtration,value);
-    set(traitement,1);
+    -- set(traitement,1);
     -- filtre = get(filtration);
     print ("filtration=" .. filtration);
     print ("traitement=" .. traitement);
