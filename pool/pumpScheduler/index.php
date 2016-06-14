@@ -405,7 +405,7 @@ $table = new TableGear($options);
 <tr><th>Sonde</th><th>Valeur</th></tr>
 <tr>
     <td>PH</td>
-    <td><div onclick="refresh(this,"Ph");" class="buttonState off"><?php echo getPh(); ?></div></td>
+    <td><div onclick="refreshValue(this,"Ph");" class="buttonState off"><?php echo getPh(); ?></div></td>
 </tr>
 <tr>
     <td>Redox (mV)</td>
