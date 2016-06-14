@@ -131,6 +131,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background-image:url('../images/warning.png');
 }
 
+.refresh{
+	background-image:url('../images/refresh.png');
+}
+
 /* ===============
     ALL: IE Fixes
    =============== */
