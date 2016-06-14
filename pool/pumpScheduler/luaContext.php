@@ -18,7 +18,7 @@ function goLua($file,$materials,$pins){
 
     foreach($materials as $material=>$pin){
         //$lua->assign($material, $pins[$pin]);     // option 1;
-        $lua->assign($material, getPin($pins[$pin]));     
+        $lua->assign($material, getPin($pins[$pin]));      // option 2
         //echo "{material: ".$material." pin:".$pins[$pin]."}";
     }
     $lua->registerCallback("set", 'setPinState');
