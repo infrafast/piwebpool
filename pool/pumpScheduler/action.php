@@ -10,10 +10,18 @@ $result['state']  = "undef";
 $result['answer']  = 'OK';
 
 switch($_['action']){
+
 	case 'getTemperature':
-	    temp = getTemperature();
+	    $temp = getTemperature();
 	    break;
 	    
+	case 'getORP':
+	    $temp = getTemperature();
+	    break;
+
+	case 'getTemperature':
+	    $temp = getTemperature();
+	    break;
 	
 	
 	
