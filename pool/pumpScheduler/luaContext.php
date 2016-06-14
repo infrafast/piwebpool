@@ -19,6 +19,7 @@ function goLua($file,$materials,$pins,&$feedback){
         $lua->registerCallback("get", 'getPin'); // option 1
 
         // execute the script
+        $feedback = "Runtime error";
         $feedback= $lua->run();
     } catch (LuaException $e) {
          $feedback= $e->getMessage();
