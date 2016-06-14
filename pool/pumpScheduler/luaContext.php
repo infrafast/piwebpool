@@ -5,7 +5,7 @@ require_once ("functions.php");
 require_once ("configuration.php");
 
 function goLua($file,$materials,$pins){
-    var $luaVariables = $materials;
+    $luaVariables = $materials;
     // add error caught
     $script=$file;
     $lua=new Lua($file);
