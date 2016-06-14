@@ -367,7 +367,7 @@ $table = new TableGear($options);
 <script src="blockly/blocks_compressed.js"></script>
 
 <script src="blockly/msg/js/en.js"></script>
-
+<script src="js/predefinedVars.js"></script>
   
   <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
   <link rel="stylesheet" href="css/style.css">
@@ -426,12 +426,14 @@ $table = new TableGear($options);
     <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
         <block type="controls_if"></block>
-
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
         <block type="logic_negate"></block>
         <block type="logic_boolean"></block>
-        <block type="logic_null"></block>
+       
+        <block type="variables_get">
+        <field name="VAR"><?php echo 'traitement'; ?></field>
+        </block>
        
         <block type="controls_repeat_ext">
         <value name="TIMES">
@@ -487,8 +489,12 @@ $table = new TableGear($options);
          trashcan: true          
       });
     
+    
     workspace.addChangeListener(myUpdateFunction);
-      
+    
+    Blockly.Variables.addPredefinedVar( "variableName" );
+
+
     function myUpdateFunction(event) {
       var code = Blockly.Lua.workspaceToCode(workspace);
       document.getElementById('scriptarea').value = code;
