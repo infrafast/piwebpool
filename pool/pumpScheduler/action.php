@@ -5,8 +5,6 @@
 // action.php?action=resetSchedule
 require_once('common.php');
 require_once('luaContext.php');
-// inclure ici le fichier de la classe
-require "include/FreeSMS.php";
 
 
 $result['state']  = "undef";
