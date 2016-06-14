@@ -32,7 +32,7 @@ function goLua($file,$materials,$pins){
     $lua->run();
     // option 2 
     // get back the variable modified by script to update command
-    foreach ($luaVariables as $luaVariable){
+    foreach ($luaVariables as $luaVariable=>$value){
         echo "{FROM PHP ".$luaVariable."=".$luaVariables[$luaVariable]." pin:".$pins[$materials[$luaVariable]]."}";
         //setPinState($pins[$pin],$value);      
     }
