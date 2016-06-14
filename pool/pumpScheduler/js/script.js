@@ -76,8 +76,8 @@ function resetSchedule(){
 }
     
 function refreshPh(elem){
-    //$(elem).innerHTML="New text";
-    $(elem).text(getPh());
+
+    $(elem).text("toto");
     alert("refresh Ph");
 }
 
