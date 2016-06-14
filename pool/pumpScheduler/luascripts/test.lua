@@ -11,7 +11,7 @@ function run()
     end
 
     if (traite == 0) then
-        set(traitement,1);
+        setW(traitement,1);
     else
         set(traitement,0);
     end
