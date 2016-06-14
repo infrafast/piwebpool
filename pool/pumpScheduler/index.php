@@ -497,7 +497,7 @@ $table = new TableGear($options);
       return [code, Blockly.Lua.ORDER_NONE];
     };
     
-    Blockly.Blocks['setfunctions'] = {
+    Blockly.Blocks['setcommand'] = {
       init: function() {
         this.appendValueInput("NAME")
             .setCheck("Boolean")
@@ -510,7 +510,7 @@ $table = new TableGear($options);
       }
     };
     
-    Blockly.Lua['setfunctions'] = function(block) {
+    Blockly.Lua['setcommand'] = function(block) {
       var dropdown_command = block.getFieldValue('command');
       var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
       // TODO: Assemble Lua into code variable.
@@ -528,7 +528,7 @@ $table = new TableGear($options);
       }
     };
     
-    Blockly.Lua['setcommand'] = function(block) {
+    Blockly.Lua['getcommand'] = function(block) {
       var dropdown_command = block.getFieldValue('command');
       // TODO: Assemble Lua into code variable.
       var code = 'get('+dropdown_command+')';
