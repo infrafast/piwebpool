@@ -36,11 +36,11 @@ class FreeMobile
         curl_exec($this->_curl);
         if (200 != $code = curl_getinfo($this->_curl, CURLINFO_HTTP_CODE)) {
             switch ($code) {
-                case 400: $message = "Un des paramètres obligatoires est manquant."; break;
-                case 402: $message = "Trop de SMS ont été envoyés en trop peu de temps."; break;
-                case 403: $message = "Vous n'avez pas activé la notification SMS dans votre espace abonné Free Mobile ou votre identifiant/clé est incorrect."; break;
-                case 500: $message = "erreur sur serveur Free Mobile."; break;
-                default: $message = "erreur inconnue.";
+                case 400: $message = "missing parameter"; break;
+                case 402: $message = "SMS flood"; break;
+                case 403: $message = "service not activated or wrong crendetials"; break;
+                case 500: $message = "server side issue"; break;
+                default: $message = "undefined";
             }
             throw new \Exception($message, $code);
         }
