@@ -475,10 +475,10 @@ $table = new TableGear($options);
 
 <script>
 
-Blockly.Blocks['pool_var'] = {
+Blockly.Blocks['sensors'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["temperature", "TEMP"], ["ph", "PH"], ["orp", "ORP"]]), "sensors");
+        .appendField(new Blockly.FieldDropdown([["temperature", "TEMP"], ["ph", "PH"], ["orp", "ORP"]]), "select");
     this.setInputsInline(false);
     this.setOutput(true, null);
     this.setColour(330);
