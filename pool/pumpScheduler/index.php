@@ -489,7 +489,7 @@ Blockly.Blocks['sensors'] = {
 Blockly.Lua['sensors'] = function(block) {
   var dropdown_select = block.getFieldValue('select');
   // TODO: Assemble Lua into code variable.
-  var code = '...';
+  var code = dropdown_select;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Lua.ORDER_NONE];
 };
