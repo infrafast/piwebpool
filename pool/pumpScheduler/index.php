@@ -482,8 +482,6 @@ $table = new TableGear($options);
         this.setInputsInline(false);
         this.setOutput(true, null);
         this.setColour(330);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
       }
     };
 
