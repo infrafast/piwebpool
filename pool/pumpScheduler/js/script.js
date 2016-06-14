@@ -85,7 +85,7 @@ function refreshPh(elem){
 				    $(elem).text(result.state);
                     alert("refresh Ph");
 				}else{
-					alert('Erreur : '+result.error);
+					alert('Erreur : '+result.answer);
 				}
 	}});
 }
