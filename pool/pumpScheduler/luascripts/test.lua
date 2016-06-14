@@ -13,7 +13,7 @@ function run()
     if (traite == 0) then
         set(traitement,1);
     else
-        set(traitementA,0);
+        set(traitement,0);
     end
 
     print ("END LUA}\n");
