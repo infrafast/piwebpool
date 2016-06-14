@@ -430,7 +430,7 @@ $table = new TableGear($options);
         <block type="logic_negate"></block>
         <block type="logic_boolean"></block>
        
-        <block type="pool_var"><field name="NUM">1</field>
+        <block type="pool_var">
         </block>
        
         <block type="controls_repeat_ext">
