@@ -31,9 +31,7 @@ function goLua($file,$materials,$pins){
     // option 2 
     // get back the variable modified by script to update command
     foreach($materials as $material=>$pin){
-        //$lua->assign($material, $pins[$pin]);     // option 1;
         $lua->assign($material, getPin($pins[$pin]));      // option 2
-        //echo "{material: ".$material." pin:".$pins[$pin]."}";
     }
     
     
