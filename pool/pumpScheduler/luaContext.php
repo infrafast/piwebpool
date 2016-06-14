@@ -4,7 +4,7 @@ LUA CONTEXT*/
 require_once ("functions.php");
 require_once ("configuration.php");
 
-function goLua($file,$materials,$pins){
+function goLua($file,$materials,$pins,&$status){
     try{
         $lua=new Lua($file);
         
