@@ -81,7 +81,7 @@ function refreshPh(elem){
 			url: "./action.php?action=getPh",
 			success: function(r){
 				var result = eval(r);
-				if(result.state == 1){          
+				if(result.answer == "OK"){          
 				    $(elem).text(result.state);
                     alert("refresh Ph");
 				}else{
