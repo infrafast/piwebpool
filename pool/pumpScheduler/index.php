@@ -431,8 +431,8 @@ $table = new TableGear($options);
         <block type="logic_boolean"></block>
        
         <block type="sensors"></block>
-        <block type="setfunction"></block>
-        <block type="getunction"></block>
+        <block type="setcommand"></block>
+        <block type="getcommand"></block>
        
        <block type="variables_set"><field name="VAR">variable</field></block>
        
