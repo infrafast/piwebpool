@@ -97,7 +97,7 @@ switch($_['action']){
         break;
 
     case 'lua':
-        $lua = goLua("luascripts/".$_['file'],$materials,$pins);
+        $lua = goLua("luascripts/".$_['file'],$materials,$pins,$result['answer']);
         break;
 
 	default:
