@@ -7,7 +7,12 @@ function run()
     -- filtre = get(filtration);
     print ("filtration=" .. filtration);
     print ("traitement=" .. traitement);
+    if filtration == 0 then
+            filtration = 1
+    elseif filtration == 1 then
+            filtration = 0
+    end
     print ("END LUA}\n");
-    
+
     return;
 end
