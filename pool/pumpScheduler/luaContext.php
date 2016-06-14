@@ -11,7 +11,7 @@ function goLua($file,$materials,$pins){
     
     
     // option 1
-    // record names of the command as variable
+    // record names of the command as variable and manipulate using set and get functions
     // since the setPinState function gets the logical pin number, we have to get it from the table
     foreach($materials as $material=>$pin){
         $lua->assign($material, $pins[$pin]);    
