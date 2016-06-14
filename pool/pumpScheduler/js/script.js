@@ -79,21 +79,18 @@ function refreshPh(elem){
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=getPh",
-			data:{pin:pin,state:newState},
 			success: function(r){
 				var result = eval(r);
 				if(result.state == 1){          
-					$(elem).removeClass('on');
-					$(elem).removeClass('off');
-					$(elem).addClass((newState==1?'on':'off')); 
+				    $(elem).text(result.state);
+                    alert("refresh Ph");
 				}else{
 					alert('Erreur : '+result.error);
 				}
 	}});
 
 
-    $(elem).text("toto");
-    alert("refresh Ph");
+
 }
 
 function refreshTemp(elem){
