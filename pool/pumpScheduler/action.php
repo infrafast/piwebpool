@@ -19,7 +19,6 @@ switch($_['action']){
             } 
         break;
     
-    
 
 	case 'getTemperature':
 	    $result['state'] = getTemperature();
