@@ -426,12 +426,6 @@ $table = new TableGear($options);
     <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
         <block type="controls_if"></block>
-        <block type="controls_if">
-          <mutation else="1"></mutation>
-        </block>
-        <block type="controls_if">
-          <mutation elseif="1" else="1"></mutation>
-        </block>
 
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
