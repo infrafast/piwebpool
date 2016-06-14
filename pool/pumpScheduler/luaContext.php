@@ -11,7 +11,6 @@ function goLua($file,$materials,$pins){
     //     echo $e->getMessage();
     //}
 
-        $script=$file;
     $lua=new Lua($file);
     
     // record names of the command as variable and manipulate them directly phyisically in lua using set and get functions
