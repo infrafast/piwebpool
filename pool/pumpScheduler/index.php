@@ -398,7 +398,24 @@ $table = new TableGear($options);
 </tr>
 </table>
 
-
+<table class="materialTab">
+<tr class="header" id="sensorTable">
+<td colspan="2"><b><span>-</span> Mesures</b></td>
+</tr>
+<tr><th>Sonde</th><th>Valeur</th></tr>
+<tr>
+    <td>PH</td>
+    <td><div onclick="refreshPh(this);" class=""><?php echo getPh(); ?></div></td>
+</tr>
+<tr>
+    <td>Redox (mV)</td>
+    <td><div onclick="refreshORP(this);" class=""><?php echo getORP(); ?></div></td>
+</tr>
+<tr>
+    <td>Temperature (°C)</td>
+    <td><div onclick="refreshTemp(this);" class=""><?php echo getTemperature(); ?></div></td>
+</tr>
+</table>
 
 <table class="materialTab">
 <tr class="header" id="blocklyTable">
