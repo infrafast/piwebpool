@@ -20,7 +20,7 @@ function goLua($file,$materials,$pins,&$feedback){
             $lua->assign($material, $pins[$pin]);     // option 1;
             //echo "{material: ".$material." pin:".$pins[$pin]."}";
         }
-        $lua->registerCallback("set", 'setPinStateX'); // option 1
+        $lua->registerCallback("set", 'setPinState'); // option 1
         $lua->registerCallback("get", 'getPin'); // option 1
     } catch (LuaException $e) {
          $feedback= $e->getMessage();
