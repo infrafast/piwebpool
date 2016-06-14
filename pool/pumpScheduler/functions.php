@@ -5,7 +5,7 @@
 require "include/FreeSMS.php";
 
 function sms($number,$message){
-     $sms = new SMS\FreeMobile();
+     $sms = new FreeMobile();
      
     /**
      * configure l'ID utilisateur et la clé disponible dans
