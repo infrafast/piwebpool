@@ -33,7 +33,7 @@ function getOutsideTemperature(){
 
 
 function getPh(){
-    return intval(rand(-4,32));
+    return intval(rand(6,8));
 }
 
 
