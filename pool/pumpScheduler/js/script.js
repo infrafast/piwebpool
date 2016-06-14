@@ -83,7 +83,7 @@ function refreshPh(elem){
 				var result = eval(r);
 				if(result.answer == "OK"){          
 				    $(elem).text(result.state);
-                    alert("refresh Ph");
+                    //alert("refresh Ph");
 				}else{
 					alert('Erreur : '+result.answer);
 				}
