@@ -36,6 +36,10 @@ diel.hendrik@gmail.com (Hendrik Diel)
   var old = Blockly.Variables.allVariables;
   Blockly.Variables.allVariables = function(root) {
     var vars = old.call(this, root);
-    return Blockly.Variables.predefinedVars.concat(vars);
+    Blockly.Variables.predefinedVars.forEach(function(x){
+      if(vars.indexOf(x) < 0)
+      vars.push(x);
+    });
+    return vars;
   };
 })();
