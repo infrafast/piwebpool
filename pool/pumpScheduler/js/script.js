@@ -88,9 +88,6 @@ function refreshPh(elem){
 					alert('Erreur : '+result.error);
 				}
 	}});
-
-
-
 }
 
 function refreshTemp(elem){
