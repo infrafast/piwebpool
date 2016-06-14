@@ -25,7 +25,7 @@ function goLua($file,$materials,$pins,&$status){
     } catch (LuaException $e) {
          $status= $e->getMessage();
     }
-    return $lua;
+    return $ret;
 }
 
 
