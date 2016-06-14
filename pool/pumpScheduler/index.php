@@ -490,7 +490,7 @@ $table = new TableGear($options);
     
     workspace.addChangeListener(myUpdateFunction);
     
-    Blockly.Variables.addPredefinedVar(code);
+    Blockly.Variables.addPredefinedVar('code'hello'');
 
 
     function myUpdateFunction(event) {
