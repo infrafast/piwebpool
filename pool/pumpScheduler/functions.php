@@ -27,7 +27,7 @@ function setPinState($pin,$state){
 	return true;
 }
 
-function getOutsideTemperature(){
+function getTemperature(){
     return rand(-4,32);
 }
 
