@@ -13,7 +13,7 @@ function goLua($file,$materials,$pins){
     // option 1
     // record names of the command as variable and manipulate them directly phyisically in lua using set and get functions
     // since the setPinState function gets the logical pin number, we have to get it from the table
-    // option 2
+    // option 2 : PREFERRED
     // register variable and manipulate them logically in lua, then resync physically here
 
     foreach($materials as $material=>$pin){
