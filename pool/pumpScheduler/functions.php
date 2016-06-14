@@ -16,7 +16,7 @@ function sms($number,$message){
      
     try {
         // envoi d'un message
-        $sms->send("Hello World !");
+        $sms->send($message);
     } catch (Exception $e) {
         // le monde n'est pas parfait, il y aura
         // peut-être des erreurs.
