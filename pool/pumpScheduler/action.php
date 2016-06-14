@@ -15,9 +15,8 @@ switch($_['action']){
     case 'sms':
             if (!sms($number,$message,$result['state'])){
                 $result['answer']="ERROR";
-            } else $result['state']="Message sent";
+            }
         break;
-    
 
 	case 'getTemperature':
 	    $result['state'] = getTemperature();
