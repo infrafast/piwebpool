@@ -432,6 +432,7 @@ $table = new TableGear($options);
        
         <block type="sensors"></block>
         <block type="setfunction"></block>
+        <block type="getunction"></block>
        
        <block type="variables_set"><field name="VAR">variable</field></block>
        
