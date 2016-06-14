@@ -1,5 +1,5 @@
 <?php
-// this script is to be executed periodically thru crontab (or other means) at least every 2hours in order to query the
+// this script is to be executed periodically thru anacron by putting it to the hourly folder (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
 
@@ -60,13 +60,12 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-if (!setPinState($pins[$materials["filtration"]],$pumpConsign==0?1:0)){
+if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){
     echo 'error setPinState'.$pins[$materials["filtration"]]." ".$pumpConsign;
     exit;   
 }
 
-$lua = getLua("luascripts/test.lua",$materials,$pins);
-$lua->run();
+$lua = goLua("luascripts/test.lua",$materials,$pins);
 
 echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."]";
 
