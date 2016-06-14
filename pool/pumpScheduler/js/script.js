@@ -79,7 +79,7 @@ function refreshPh(elem){
 }
 
 function refreshTemp(elem){
-    alert("refresh Ph");
+    alert("refresh Temp");
 }
 
 function refreshORP(elem){
