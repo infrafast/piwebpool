@@ -9,7 +9,8 @@ function sendsms($message){
     
 }
 function sendemail($message){
-    
+    // send email
+    mail("szemrot@hotmail.com","My subject",wordwrap($message,70));
 }
 
 function appendlog($message){
