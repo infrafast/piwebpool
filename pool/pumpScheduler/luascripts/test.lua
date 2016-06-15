@@ -1,3 +1,4 @@
 function run()
-return email('hello world from lua');
+    retour='OK';
+    retour = retour .. email('hello world from lua');
 end
