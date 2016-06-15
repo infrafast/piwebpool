@@ -11,7 +11,7 @@ function sendsms($message){
 function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
-    return mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
+    return true; //mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
 }
 
 function appendlog($message){
