@@ -531,6 +531,27 @@ $table = new TableGear($options);
       return [code, Blockly.Lua.ORDER_NONE];
     };
 
+    Blockly.Blocks['message'] = {
+      init: function() {
+        this.appendValueInput("NAME")
+            .setCheck("String")
+            .appendField("notifier")
+            .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(65);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
+      }
+    };
+
+    Blockly.Lua['message'] = function(block) {
+      var dropdown_command = block.getFieldValue('command');
+      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+      // TODO: Assemble Lua into code variable.
+      var code = dropdown_command+'('+value_name+');\n';
+      return code;
+    };
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
