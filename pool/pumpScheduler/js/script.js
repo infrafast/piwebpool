@@ -53,11 +53,7 @@ function updateScript(xml,lua){
 			data:{id:main,xml:xml,lua:lua},
 			success: function(r){
 				var result = eval(r);
-				if(result.state == 1){          
-					$(elem).removeClass('on');
-					$(elem).removeClass('off');
-					$(elem).addClass((newState==1?'on':'off')); 
-				}else{
+				if(result.answer != "OK"){          
 					alert('Erreur : '+result.error);
 				}
 	}});
