@@ -510,20 +510,8 @@ $table = new TableGear($options);
       // TODO: Change ORDER_NONE to the correct strength.
       return [code, Blockly.Lua.ORDER_NONE];
     };
-
-  var workspace = Blockly.inject('blocklyDiv',
-      {toolbox: document.getElementById('toolbox'),
-        zoom:
-             {controls: true,
-              wheel: true,
-              startScale: 1.0,
-              maxScale: 3,
-              minScale: 0.3,
-              scaleSpeed: 1.2},
-         trashcan: true          
-      });
     
-    Blockly.Blocks['write_log'] = {
+        Blockly.Blocks['write_log'] = {
   init: function() {
     this.appendValueInput("NAME")
         .setCheck("String")
@@ -541,6 +529,20 @@ Blockly.JavaScript['write_log'] = function(block) {
   return code;
 };
     
+
+  var workspace = Blockly.inject('blocklyDiv',
+      {toolbox: document.getElementById('toolbox'),
+        zoom:
+             {controls: true,
+              wheel: true,
+              startScale: 1.0,
+              maxScale: 3,
+              minScale: 0.3,
+              scaleSpeed: 1.2},
+         trashcan: true          
+      });
+    
+
     
     workspace.addChangeListener(myUpdateFunction);
 
