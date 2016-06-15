@@ -47,7 +47,7 @@ function changeState(pin,elem){
 }
 
 function updateScript(xml,lua){
-	//alert(xml+" "+lua);
+	alert(xml+" "+lua);
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=updateScript",
