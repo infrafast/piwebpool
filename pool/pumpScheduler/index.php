@@ -397,7 +397,7 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>Planificateur</td>
-    <td><div onclick="updateScript('myxmlCode','myluaCode')" class="buttonState on"></div></td>
+    <td><div onclick="updateScript('fromPHPXML','fromPHPLua')" class="buttonState on"></div></td>
 </tr>
 </table>
 
