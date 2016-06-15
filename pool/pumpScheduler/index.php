@@ -430,6 +430,7 @@ $table = new TableGear($options);
         <block type="logic_negate"></block>
         <block type="logic_boolean"></block>
         <block type="text"></block>
+        <block type="write_log"></block>
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">variable</field></block>
         <block type="math_number"></block>
@@ -521,6 +522,18 @@ $table = new TableGear($options);
               scaleSpeed: 1.2},
          trashcan: true          
       });
+    
+    Blockly.Blocks['write_log'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck("String")
+        .appendField("Write to log");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
     
     
     workspace.addChangeListener(myUpdateFunction);
