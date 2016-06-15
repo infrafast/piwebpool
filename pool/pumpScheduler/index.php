@@ -511,8 +511,18 @@ $table = new TableGear($options);
       return [code, Blockly.Lua.ORDER_NONE];
     };
     
-
+    Blockly.Blocks['write_log'] = {
+        init: function() {
+            this.appendValueInput("NAME")
+            .setCheck("String")
+            .appendField("Log");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(330);
+        }
+    };
     
+
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
