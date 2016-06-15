@@ -1,4 +1,4 @@
 function run()
-log((temperature));
+email((temperature));
 return "OK LUA";
 end
