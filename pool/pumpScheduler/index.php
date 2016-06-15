@@ -537,8 +537,6 @@ $table = new TableGear($options);
             .appendField(new Blockly.FieldDropdown([["marche", "0"], ["arret", "1"], ["option", "OPTIONNAME"]]), "NAME");
         this.setOutput(true, "Number");
         this.setColour(330);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
       }
     };
 
