@@ -480,7 +480,7 @@ $table = new TableGear($options);
       init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"]]), "select");
-        this.setOutput(true, "Number");
+        this.setOutput(true, "Boolean");
         this.setColour(330);
       }
     };
