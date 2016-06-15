@@ -7,8 +7,9 @@ require "include/FreeSMS.php";
 function sendsms($message){
     $SMSuser = "19107501";
     $SMSkey = "oGVsksAr0geO6j";
+    $feedback="void";            
             
-    if (!sms( $SMSuser, $SMSkey, $message)){
+    if (!sms( $SMSuser, $SMSkey, $message,$feedback )){
         return false;
     }
     return true;
