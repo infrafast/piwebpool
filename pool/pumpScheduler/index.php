@@ -531,14 +531,6 @@ $table = new TableGear($options);
     };    
 
 
-    Blockly.Lua['on_off'] = function(block) {
-      var dropdown_name = block.getFieldValue('NAME');
-      // TODO: Assemble Lua into code variable.
-      var code = '...';
-      // TODO: Change ORDER_NONE to the correct strength.
-      return [code, Blockly.Lua.ORDER_NONE];
-    };
-
     Blockly.Blocks['on_off'] = {
       init: function() {
         this.appendDummyInput()
@@ -550,6 +542,13 @@ $table = new TableGear($options);
       }
     };
 
+    Blockly.Lua['on_off'] = function(block) {
+      var dropdown_name = block.getFieldValue('NAME');
+      // TODO: Assemble Lua into code variable.
+      var code = '...';
+      // TODO: Change ORDER_NONE to the correct strength.
+      return [code, Blockly.Lua.ORDER_NONE];
+    };
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
