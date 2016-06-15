@@ -46,6 +46,27 @@ function changeState(pin,elem){
 	}});
 }
 
+function updateScript(xml,lua){
+	var newState = ($(elem).hasClass('on')?0:1); 
+	//alert('changeState : pin'+pin+" value"+newState);
+	$.ajax({
+			type: "POST",
+			url: "./action.php?action=changeState",
+			data:{pin:pin,state:newState},
+			success: function(r){
+				var result = eval(r);
+				if(result.state == 1){          
+					$(elem).removeClass('on');
+					$(elem).removeClass('off');
+					$(elem).addClass((newState==1?'on':'off')); 
+				}else{
+					alert('Erreur : '+result.error);
+				}
+	}});
+}
+
+
+
 function scenario(){
 	$.ajax({
 		    type: "POST",
