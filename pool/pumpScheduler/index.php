@@ -536,7 +536,7 @@ $table = new TableGear($options);
     Blockly.Blocks['message'] = {
       init: function() {
         this.appendValueInput("NAME")
-            .setCheck("null")
+            .setCheck(["String", "Number"])
             .appendField("notifier")
             .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command");
         this.setPreviousStatement(true, null);
