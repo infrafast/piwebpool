@@ -552,6 +552,7 @@ $table = new TableGear($options);
       return code;
     };
 
+
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
         zoom:
