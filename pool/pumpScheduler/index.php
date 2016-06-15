@@ -530,8 +530,6 @@ $table = new TableGear($options);
         .appendField("Write to log");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('');
-    this.setHelpUrl('http://www.example.com/');
   }
 };
     
