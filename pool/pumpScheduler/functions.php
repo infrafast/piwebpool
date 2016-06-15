@@ -4,6 +4,12 @@
 // inclure ici le fichier de la classe
 require "include/FreeSMS.php";
 
+function sendsms($message){
+    //sms (...9)
+    
+}
+
+
 function sms($SMSkey, $SMSuser, $number,$message,&$feedback){
      $sms = new FreeMobile();
     $sms->setKey($SMSkey)
