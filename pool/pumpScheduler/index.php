@@ -535,7 +535,7 @@ $table = new TableGear($options);
     Blockly.Blocks['write_log'] = {
         init: function() {
             this.appendValueInput("NAME")
-            .setCheck(null);
+            .setCheck("String")
             .appendField("Log");
             this.setPreviousStatement(true, null);
             this.setNextStatement(true, null);
