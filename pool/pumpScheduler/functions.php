@@ -8,7 +8,14 @@ function sendsms($message){
     //sms (...9)
     
 }
+function sendemail($message){
+    
+}
 
+function appendlog($message){
+    
+    
+}
 
 function sms($SMSkey, $SMSuser, $number,$message,&$feedback){
      $sms = new FreeMobile();
