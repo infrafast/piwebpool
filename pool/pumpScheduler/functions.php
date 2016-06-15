@@ -5,9 +5,13 @@
 require "include/FreeSMS.php";
 
 function sendsms($message){
-    //sms (...9)
+    $SMSuser = "19107501";
+    $SMSkey = "oGVsksAr0geO6j";
+            
+    if (!sms( $SMSuser, $SMSkey, $message)){
+        return false;
+    }
     return true;
-    
 }
 function sendemail($message){
     // send email
@@ -24,7 +28,7 @@ function appendlog($source,$answer,$status){
     return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".$status."]\n" , FILE_APPEND | LOCK_EX);
 }
 
-function sms($SMSkey, $SMSuser, $number,$message,&$feedback){
+function sms($SMSkey, $SMSuser,$message,&$feedback){
      $sms = new FreeMobile();
     $sms->setKey($SMSkey)
         ->setUser($SMSuser);
