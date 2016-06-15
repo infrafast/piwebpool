@@ -397,7 +397,7 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>Planificateur</td>
-    <td><div onclick="alert('fromPHPXML'+'fromPHPLua');"></div></td>
+    <td><div onclick=""></div></td>
 </tr>
 </table>
 
