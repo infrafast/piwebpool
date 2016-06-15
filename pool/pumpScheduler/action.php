@@ -13,11 +13,7 @@ $result['answer']  = 'OK';
 switch($_['action']){
     
     case 'sms':
-            // SMS user, key and number should comes from the database settings table
-            $SMSuser = "19107501";
-            $SMSkey = "oGVsksAr0geO6j";
-            
-            if (!sms( $SMSuser, $SMSkey, $_['number'],$_['message'],$result['state'])){
+            if (!sms($_['message'])){
                 $result['answer']="ERROR";
             }
         break;
