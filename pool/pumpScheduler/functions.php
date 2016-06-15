@@ -18,6 +18,7 @@ function sendemail($message){
 
 function appendlog($message){
     
+    return true;
     
 }
 
