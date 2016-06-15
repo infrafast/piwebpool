@@ -25,7 +25,7 @@ function appendlualog($message){
 }
 
 function appendlog($source,$answer,$status){
-    return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".$status."]\n" , FILE_APPEND | LOCK_EX);
+    return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".debug_backtrace()[1]['function'].' ' .$answer."][".$status."]\n" , FILE_APPEND | LOCK_EX);
 }
 
 function sms($SMSkey, $SMSuser,$message,&$feedback){
