@@ -498,6 +498,7 @@ $table = new TableGear($options);
       init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
+            this.setColour(20);
         this.setOutput(true, "Boolean");
       }
     };
