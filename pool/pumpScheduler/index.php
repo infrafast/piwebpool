@@ -483,11 +483,11 @@ $table = new TableGear($options);
     };
 
     Blockly.Lua['on_off'] = function(block) {
-      var dropdown_name = block.getFieldValue('OPTION');
+      var dropdown_name = block.getFieldValue('NAME');
       //var dropdown_command = block.getFieldValue('command');
       //var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);      
       // TODO: Assemble Lua into code variable.
-      var code = '0';
+      var code = block.getFieldValue('OPTION');
       // TODO: Change ORDER_NONE to the correct strength.
       return [code, Blockly.Lua.ORDER_NONE];
     };
