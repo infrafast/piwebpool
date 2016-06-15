@@ -1,6 +1,6 @@
 function run()
     retour='OK';
-    if not email('hello world from lua') then 
+    if email('hello world from lua')<>true then 
         retour='EMAIL ERROR';
     end
 end
