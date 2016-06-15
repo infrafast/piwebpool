@@ -17,9 +17,7 @@ function sendemail($message){
 }
 
 function appendlualog($message){
-        
-    return true;
-    
+    return appendlog("LUA","",$message);
 }
 
 function appendlog($source,$answer,$status){
