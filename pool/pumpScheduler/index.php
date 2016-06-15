@@ -430,6 +430,7 @@ $table = new TableGear($options);
         <block type="text"></block>
         <block type="on_off"></block>
         <block type="write_log"></block>
+        <block type="message"></block>
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">variable</field></block>
         <block type="math_number"></block>
