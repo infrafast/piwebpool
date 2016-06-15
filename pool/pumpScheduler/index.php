@@ -530,24 +530,6 @@ $table = new TableGear($options);
       return code;
     };    
 
-
-    Blockly.Blocks['on_off'] = {
-      init: function() {
-        this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["marche", "0"], ["arret", "1"], ["option", "OPTIONNAME"]]), "NAME");
-        this.setOutput(true, "Number");
-        this.setColour(330);
-      }
-    };
-
-    Blockly.Lua['on_off'] = function(block) {
-      var dropdown_name = block.getFieldValue('NAME');
-      // TODO: Assemble Lua into code variable.
-      var code = '...';
-      // TODO: Change ORDER_NONE to the correct strength.
-      return [code, Blockly.Lua.ORDER_NONE];
-    };
-
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
         zoom:
