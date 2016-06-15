@@ -557,7 +557,8 @@ $table = new TableGear($options);
       document.getElementById('scriptarea').value = code;
       
       var xml = Blockly.Xml.workspaceToDom(workspace);
-      alert(xml);
+var xml_text = Blockly.Xml.domToText(xml);
+      alert(xml_text);
     }
     
       
