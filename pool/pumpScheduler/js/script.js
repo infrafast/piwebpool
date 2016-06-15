@@ -47,12 +47,10 @@ function changeState(pin,elem){
 }
 
 function updateScript(xml,lua){
-	var newState = ($(elem).hasClass('on')?0:1); 
-	//alert('changeState : pin'+pin+" value"+newState);
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=changeState",
-			data:{pin:pin,state:newState},
+			data:{id:main,xml:xml,lua:lua},
 			success: function(r){
 				var result = eval(r);
 				if(result.state == 1){          
