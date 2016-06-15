@@ -66,6 +66,6 @@ if (!setPinState($pins[$materials["filtration"]],$pumpConsign)) $answer="ERROR";
 $lua = goLua("luascripts/test.lua",$materials,$pins,$luaFeedback);
 
 $state = "[tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."][Lua:".$luaFeedback."]";
-appendlog("CRONACTION",$answer,$status);
+appendlog("CRONACTION",$answer,$state);
 
 ?>
