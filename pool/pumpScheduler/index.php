@@ -521,7 +521,13 @@ $table = new TableGear($options);
             this.setColour(330);
         }
     };
-    
+
+    Blockly.Lua['write_log'] = function(block) {
+      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+      // TODO: Assemble Lua into code variable.
+      var code = '...\n';
+      return code;
+    };    
 
 
   var workspace = Blockly.inject('blocklyDiv',
