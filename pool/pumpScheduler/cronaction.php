@@ -65,6 +65,8 @@ $answer="OK";
 if (!setPinState($pins[$materials["filtration"]],$pumpConsign)) $answer="ERROR";
 $lua = goLua("luascripts/test.lua",$materials,$pins,$luaFeedback);
 
-$state = "[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."][Lua:".$luaFeedback."]";
+$state = "[tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."][Lua:".$luaFeedback."]";
+
+
 
 ?>
