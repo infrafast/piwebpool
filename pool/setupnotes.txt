@@ -65,7 +65,7 @@ CODE
 usod apt-get install sendmail
 configure php mail send
 vi /etc/php5/apache2/php.ini
-sendmail_path 	"/usr/sbin/sendmail -t -i"
+sendmail_path 	/usr/sbin/sendmail -t -i
 
 
 
