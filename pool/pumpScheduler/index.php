@@ -569,7 +569,7 @@ $table = new TableGear($options);
     Blockly.Lua['write_log'] = function(block) {
       var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
       // TODO: Assemble Lua into code variable.
-      var code = value_name+';\n';
+      var code = "log("+value_name+');\n';
       return code;
     };    
 
