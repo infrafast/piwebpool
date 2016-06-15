@@ -14,6 +14,8 @@ function goLua($file,$materials,$pins,&$feedback){
             $luaVariables[$pin]=getPin($pins[$pin]);
             $lua->assign($material, $pins[$pin]);     
             //echo "{material: ".$material." pin:".$pins[$pin]."}";
+            
+            // generate XML for blockly toolbox variable
         }
         $lua->assign("temperature",getTemperature());
         $lua->assign("ph",getPh());
@@ -21,6 +23,9 @@ function goLua($file,$materials,$pins,&$feedback){
         
         $lua->registerCallback("set", 'setPinState'); 
         $lua->registerCallback("get", 'getPin'); 
+        $lua->registerCallback("log", 'log');
+
+        // generate XML for blockly toolbox functions
 
         // execute the script
         $feedback= $lua->run();
