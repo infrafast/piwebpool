@@ -434,6 +434,7 @@ $table = new TableGear($options);
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">variable</field></block>
         <block type="variables_get"><field name="VAR">variable</field></block>
+        <block type="on_off"></block>
         <block type="math_number"></block>
         <block type="math_arithmetic"></block>
         <block type="setcommand"></block>
@@ -509,6 +510,27 @@ $table = new TableGear($options);
       // TODO: Change ORDER_NONE to the correct strength.
       return [code, Blockly.Lua.ORDER_NONE];
     };
+
+    Blockly.Blocks['on_off'] = {
+      init: function() {
+        this.appendDummyInput()
+            .appendField(new Blockly.FieldDropdown([["marche", "1"], ["arret", "0"]]), "command");
+        this.setOutput(true, "Number");
+        this.setColour(20);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
+      }
+    };
+
+
+    Blockly.Lua['on_off'] = function(block) {
+      var dropdown_command = block.getFieldValue('command');
+      // TODO: Assemble Lua into code variable.
+      var code = dropdown_command;
+      // TODO: Change ORDER_NONE to the correct strength.
+      return [code, Blockly.Lua.ORDER_NONE];
+    };
+
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
