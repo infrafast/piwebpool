@@ -392,8 +392,12 @@ $table = new TableGear($options);
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
 </tr>
 <tr>
-    <td>Force refresh</td>
+    <td>Forcer rafraichissement</td>
     <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
+</tr>
+<tr>
+    <td>Planificateur</td>
+    <td><div onclick="forceCron();" class="buttonState on"></div></td>
 </tr>
 </table>
 
