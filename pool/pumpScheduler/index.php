@@ -482,8 +482,6 @@ $table = new TableGear($options);
             .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"]]), "select");
         this.setOutput(true, "Number");
         this.setColour(330);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
       }
     };
     
