@@ -397,7 +397,7 @@ $table = new TableGear($options);
 </tr>
 <tr>
     <td>Planificateur</td>
-    <td><div onclick="getSetting('scheduler', document.getElementById('actionTable'));" class="buttonState on"></div></td>
+    <td><div onclick="getSetting('scheduler', null);" class="buttonState on"></div></td>
 </tr>
 </table>
 
