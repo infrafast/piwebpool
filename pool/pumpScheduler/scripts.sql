@@ -8,3 +8,5 @@ CREATE TABLE IF NOT EXISTS `scripts` (
 
 ALTER TABLE `scripts`
  ADD PRIMARY KEY (`id`);
+ 
+ INSERT INTO `pool`.`scripts` (`id`, `xml`, `lua`) VALUES ('main', 'xmlcode', 'luacode');
