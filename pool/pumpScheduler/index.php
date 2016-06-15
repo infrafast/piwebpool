@@ -499,15 +499,13 @@ $table = new TableGear($options);
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
         this.setOutput(true, "Boolean");
-        this.setColour(20);
-        this.setHelpUrl('http://www.example.com/');
       }
     };
     
     Blockly.Lua['getcommand'] = function(block) {
       var dropdown_command = block.getFieldValue('command');
       // TODO: Assemble Lua into code variable.
-      var code = 'get('+dropdown_command+')';
+      var code = 'get('+dropdown_command+');\n';
       // TODO: Change ORDER_NONE to the correct strength.
       return [code, Blockly.Lua.ORDER_NONE];
     };
