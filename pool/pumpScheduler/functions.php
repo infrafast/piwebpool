@@ -17,12 +17,14 @@ function sendemail($message){
 }
 
 function appendlualog($message){
-    
+        
     return true;
     
 }
 
-
+function appendlog($source,$answer,$status){
+    
+}
 
 function sms($SMSkey, $SMSuser, $number,$message,&$feedback){
      $sms = new FreeMobile();
