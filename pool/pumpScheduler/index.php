@@ -456,7 +456,7 @@ $table = new TableGear($options);
       init: function() {
         this.appendValueInput("NAME")
             .setCheck(null)
-            .appendField("envoyer")
+            .appendField("message")
             .appendField(new Blockly.FieldDropdown([["SMS", "sms"], ["email", "email"]]), "NAME")
             .appendField("message");
         this.setPreviousStatement(true, null);
