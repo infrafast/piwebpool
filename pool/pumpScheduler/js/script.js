@@ -55,7 +55,7 @@ function updateScript(xml,lua){
 			success: function(r){
 				var result = eval(r);
 				if(result.answer != "OK"){          
-					alert('Erreur : '+result.error);
+					alert('Erreur : '+result.state);
 				}
 	}});
 }
