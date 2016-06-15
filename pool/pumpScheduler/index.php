@@ -476,7 +476,7 @@ $table = new TableGear($options);
     Blockly.Blocks['on_off'] = {
       init: function() {
         this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["marche", "0"], ["arret", "1"]]), "NAME");
+            .appendField(new Blockly.FieldDropdown([["marche", "1"], ["arret", "0"]]), "NAME");
         this.setOutput(true, "Number");
         this.setColour(330);
       }
