@@ -451,6 +451,29 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 
 <script>
+    Blockly.Blocks['message'] = {
+      init: function() {
+        this.appendValueInput("NAME")
+            .setCheck(null)
+            .appendField("envoyer")
+            .appendField(new Blockly.FieldDropdown([["SMS", "sms"], ["email", "email"]]), "NAME")
+            .appendField("message");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
+      }
+    };
+
+    Blockly.Lua['message'] = function(block) {
+      var dropdown_name = block.getFieldValue('NAME');
+      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+      // TODO: Assemble Lua into code variable.
+      var code = dropdown_name+'.'+value_name+''\n';
+     
+      return code;
+    };
 
     Blockly.Blocks['sensors'] = {
       init: function() {
