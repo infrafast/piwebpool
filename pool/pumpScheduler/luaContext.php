@@ -23,7 +23,7 @@ function goLua($file,$materials,$pins,&$feedback){
         
         $lua->registerCallback("set", 'setPinState'); 
         $lua->registerCallback("get", 'getPin'); 
-        $lua->registerCallback("log", 'appendlog');
+        $lua->registerCallback("log", 'appendlualog');
         $lua->registerCallback("sms", 'sendsms');
         $lua->registerCallback("email", 'sendemail');
 
