@@ -561,7 +561,7 @@ $table = new TableGear($options);
       document.getElementById('scriptarea').value = code;
       
       var xml = Blockly.Xml.workspaceToDom(workspace);
-      
+      <?php echo "bla" ?>
     }
     
       
