@@ -1,5 +1,5 @@
 function run()
-    retour="OK";
+    retour="";
     if not email('hello world from lua') then 
         retour="email fail"; 
     end
