@@ -527,7 +527,7 @@ $table = new TableGear($options);
   init: function() {
     this.appendValueInput("NAME")
         .setCheck("String")
-        .appendField("Write to log");
+        .appendField("Enregistrer");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(330);
