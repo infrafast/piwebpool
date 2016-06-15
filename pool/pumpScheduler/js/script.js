@@ -49,7 +49,7 @@ function changeState(pin,elem){
 function updateScript(xml,lua){
 	$.ajax({
 			type: "POST",
-			url: "./action.php?action=changeState",
+			url: "./action.php?action=updateScript",
 			data:{id:main,xml:xml,lua:lua},
 			success: function(r){
 				var result = eval(r);
