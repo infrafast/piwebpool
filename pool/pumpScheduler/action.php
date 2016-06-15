@@ -80,6 +80,20 @@ switch($_['action']){
         
     break;
 
+    case 'updateScript':
+        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+        mysql_select_db($options["database"]["name"]) or die('error database selection');
+        $query="UPDATE `pool`.`scripts` SET `value` = '".$_['value']."' WHERE `id`='".$_['id']."'";
+        $outcome = mysql_query($query);
+        if (!$outcome) {
+             $result['answer']  = "ERROR";
+             $result['state'] =  $query; /* mysql_error();*/
+        }else{
+            $result['state'] = $outcome;
+        }       
+        mysql_free_result($outcome);
+    break;        
+
     case 'updateSetting':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
