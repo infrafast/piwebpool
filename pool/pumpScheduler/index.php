@@ -429,7 +429,6 @@ $table = new TableGear($options);
         <block type="logic_operation"></block>
         <block type="text"></block>
         <block type="on_off"></block>
-        <block type="write_log"></block>
         <block type="message"></block>
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">variable</field></block>
@@ -458,7 +457,7 @@ $table = new TableGear($options);
         this.appendValueInput("NAME")
             .setCheck(null)
             .appendField("notifier")
-            .appendField(new Blockly.FieldDropdown([["SMS", "sms"], ["email", "email"]]), "NAME")
+            .appendField(new Blockly.FieldDropdown([["SMS", "sms"], ["email", "email"], ["log", "log"]]), "NAME")
             .appendField("message");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -555,23 +554,6 @@ $table = new TableGear($options);
       return [code, Blockly.Lua.ORDER_NONE];
     };
     
-    Blockly.Blocks['write_log'] = {
-        init: function() {
-            this.appendValueInput("NAME")
-            .setCheck(null)
-            .appendField("Log");
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(330);
-        }
-    };
-
-    Blockly.Lua['write_log'] = function(block) {
-      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
-      // TODO: Assemble Lua into code variable.
-      var code = "log("+value_name+');\n';
-      return code;
-    };    
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
