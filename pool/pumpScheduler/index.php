@@ -438,7 +438,6 @@ $table = new TableGear($options);
         <block type="message"></block>
         <block type="text"></block>
         <block type="math_number"></block>
-        <block type="math_arithmetic"></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
        
