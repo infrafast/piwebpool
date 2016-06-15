@@ -530,6 +530,18 @@ $table = new TableGear($options);
     };    
 
 
+    Blockly.Blocks['on_off'] = {
+      init: function() {
+        this.appendDummyInput()
+            .appendField(new Blockly.FieldDropdown([["on", "0"], ["off", "1"], ["option", "OPTIONNAME"]]), "NAME");
+        this.setOutput(true, "Number");
+        this.setColour(330);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
+      }
+    };
+
+
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
         zoom:
