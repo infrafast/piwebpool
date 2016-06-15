@@ -437,7 +437,7 @@ $table = new TableGear($options);
         <block type="setcommand"></block>
         <block type="getcommand"></block>
        
-       <block type="date"></block>
+       <block type="time"></block>
        
         <block type="controls_repeat_ext">
         <value name="TIMES">
