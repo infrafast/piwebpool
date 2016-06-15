@@ -436,39 +436,12 @@ $table = new TableGear($options);
        
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">variable</field></block>
+        <block type="variables_get"><field name="VAR">variable</field></block>
         <block type="math_number"></block>
         <block type="math_arithmetic"></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
        
-       <block type="time"></block>
-       
-        <block type="controls_repeat_ext">
-        <value name="TIMES">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-      </block>
-      <block type="controls_whileUntil"></block>
-      <block type="controls_for">
-        <field name="VAR">i</field>
-        <value name="FROM">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="TO">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <value name="BY">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-      </block>
 
     </xml>  
 </tr>
