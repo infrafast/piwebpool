@@ -1,4 +1,4 @@
 function run()
-sms((temperaturWe));
+sms((temperature));
 return "OK LUA";
 end
