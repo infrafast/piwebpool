@@ -60,11 +60,9 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){
-    
-    exit;   
-}
+$message="OK";
 
+if (!setPinState($pins[$materials["filtration"]],$pumpConsign)) $message="ERROR";
 //$lua = goLua("luascripts/test.lua",$materials,$pins,$luaFeedback);
 
 echo "\n[".date("Y-m-d H:i:s")."][tw:".$tw."][temp:".$temp."][setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."][Lua:".$luaFeedback."]";
