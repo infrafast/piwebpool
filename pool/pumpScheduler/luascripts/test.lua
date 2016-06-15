@@ -1,5 +1,4 @@
 function run()
-sms((temperature));
-toto(tutu);
+sms((temperaturWe));
 return "OK LUA";
 end
