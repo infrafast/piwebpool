@@ -366,7 +366,7 @@ $table = new TableGear($options);
 <script src="blockly/lua_compressed.js"></script>
 <script src="blockly/blocks_compressed.js"></script>
 
-<script src="blockly/msg/js/fr.js"></script>
+<script src="blockly/msg/js/en.js"></script>
   
   <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
   <link rel="stylesheet" href="css/style.css">
@@ -427,19 +427,44 @@ $table = new TableGear($options);
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
-        <block type="text"></block>
-        <block type="on_off"></block>
-        <block type="message"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+       
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">variable</field></block>
-        <block type="variables_get"><field name="VAR">variable</field></block>
         <block type="math_number"></block>
         <block type="math_arithmetic"></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
        
+       <block type="date"></block>
        
-      
+        <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_whileUntil"></block>
+      <block type="controls_for">
+        <field name="VAR">i</field>
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
 
     </xml>  
 </tr>
@@ -452,36 +477,15 @@ $table = new TableGear($options);
 <?= $table->getJavascript("jquery") ?>
 
 <script>
-    Blockly.Blocks['message'] = {
-      init: function() {
-        this.appendValueInput("NAME")
-            .setCheck(null)
-            .appendField("notifier")
-            .appendField(new Blockly.FieldDropdown([["SMS", "sms"], ["email", "email"], ["log", "log"]]), "NAME")
-            .appendField("message");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(330);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
-      }
-    };
-
-    Blockly.Lua['message'] = function(block) {
-      var dropdown_name = block.getFieldValue('NAME');
-      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
-      // TODO: Assemble Lua into code variable.
-      var code = dropdown_name+'('+value_name+');\n';
-     
-      return code;
-    };
 
     Blockly.Blocks['sensors'] = {
       init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"]]), "select");
-        this.setOutput(true,null);
+        this.setOutput(true, null);
         this.setColour(330);
+        this.setTooltip('');
+        this.setHelpUrl('http://www.example.com/');
       }
     };
     
@@ -493,30 +497,10 @@ $table = new TableGear($options);
       return [code, Blockly.Lua.ORDER_NONE];
     };
     
-    Blockly.Blocks['on_off'] = {
-      init: function() {
-        this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["marche", "1"], ["arret", "0"]]), "NAME");
-        this.setOutput(true, "Number");
-        this.setColour(330);
-      }
-    };
-
-    Blockly.Lua['on_off'] = function(block) {
-      var dropdown_name = block.getFieldValue('NAME');
-      //var dropdown_command = block.getFieldValue('command');
-      //var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);      
-      // TODO: Assemble Lua into code variable.
-      var code = dropdown_name;
-      // TODO: Change ORDER_NONE to the correct strength.
-      return [code, Blockly.Lua.ORDER_NONE];
-    };
-    
-    
     Blockly.Blocks['setcommand'] = {
       init: function() {
         this.appendValueInput("NAME")
-            .setCheck("Number")
+            .setCheck("Boolean")
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -547,11 +531,10 @@ $table = new TableGear($options);
     Blockly.Lua['getcommand'] = function(block) {
       var dropdown_command = block.getFieldValue('command');
       // TODO: Assemble Lua into code variable.
-      var code = 'get('+dropdown_command+');\n';
+      var code = 'get('+dropdown_command+')';
       // TODO: Change ORDER_NONE to the correct strength.
       return [code, Blockly.Lua.ORDER_NONE];
     };
-    
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
@@ -565,7 +548,6 @@ $table = new TableGear($options);
          trashcan: true          
       });
     
-
     
     workspace.addChangeListener(myUpdateFunction);
 
