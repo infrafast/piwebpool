@@ -560,7 +560,7 @@ $table = new TableGear($options);
       var code = Blockly.Lua.workspaceToCode(workspace);
       document.getElementById('scriptarea').value = code;
       var xml = Blockly.Xml.workspaceToDom(workspace);
-      alert('fromPHPXML'+'fromPHPLua');
+      updateScript('fromPHPXML','fromPHPLua');
     }
     
       
