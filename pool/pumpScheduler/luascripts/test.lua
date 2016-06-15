@@ -1,5 +1,4 @@
 function run()
-    retour="";
 
 filter = get(filtration);
 
@@ -14,5 +13,5 @@ if (temperature) < 4 then
 end
 
 
-    return retour;
+    return "ok";
 end
