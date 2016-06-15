@@ -6,6 +6,7 @@ require "include/FreeSMS.php";
 
 function sendsms($message){
     //sms (...9)
+    return true;
     
 }
 function sendemail($message){
