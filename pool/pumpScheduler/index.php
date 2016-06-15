@@ -559,7 +559,6 @@ $table = new TableGear($options);
     function myUpdateFunction(event) {
       var code = Blockly.Lua.workspaceToCode(workspace);
       document.getElementById('scriptarea').value = code;
-      
       var xml = Blockly.Xml.workspaceToDom(workspace);
     }
     
