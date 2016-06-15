@@ -9,7 +9,7 @@ function sendsms($message){
     $SMSkey = "oGVsksAr0geO6j";
     $feedback="void";            
     if (!sms( $SMSuser, $SMSkey, $message,$feedback )){
-        return true;
+        return false;
     }
     return true;
 }
