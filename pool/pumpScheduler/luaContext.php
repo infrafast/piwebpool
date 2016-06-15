@@ -24,6 +24,7 @@ function goLua($file,$materials,$pins,&$feedback){
         $lua->registerCallback("set", 'setPinState'); 
         $lua->registerCallback("get", 'getPin'); 
         $lua->registerCallback("log", 'log');
+        $lua->registerCallback("sms", 'getPin');
 
         // generate XML for blockly toolbox functions
 
