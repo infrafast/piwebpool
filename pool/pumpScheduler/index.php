@@ -552,6 +552,15 @@ $table = new TableGear($options);
       return code;
     };
 
+Blockly.Lua['variables_set'] = function(block) {
+  // Variable setter.
+  var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
+      Blockly.Lua.ORDER_NONE) || '0';
+  var varName = Blockly.Lua.variableDB_.getName(
+      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  return varName + ' = ' + argument0 + ';\n';
+};
+
 
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
