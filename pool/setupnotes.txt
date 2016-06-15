@@ -62,6 +62,13 @@ CODE
 );
 ?>
 
+usod apt-get install sendmail
+configure php mail send
+vi /etc/php5/apache2/php.ini
+
+
+
+
 the application uses blockly from google scripts
 
 change (/etc/apache2/site-enable/eniac or via webmin)
