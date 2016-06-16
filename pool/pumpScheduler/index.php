@@ -458,7 +458,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Valeur</th></tr>
 <tr>
-    <textarea rows="14" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey width: 100%; height: 150px;"></textarea></div>    
+    <textarea rows="14" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey width: 100%; height: 150px;">LOG GOES HERE</textarea></div>    
 </tr>
 </table>
 
