@@ -95,7 +95,7 @@ function getLog(){
 	});   
 
 	alert('calledGetLog');
-	return "OUTPUT OF GETLOG";
+	return result.state;
 }
 
 function scenario(){
