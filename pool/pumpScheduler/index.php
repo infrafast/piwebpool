@@ -441,10 +441,8 @@ $table = new TableGear($options);
         <block type="math_number"></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
-    </xml>  
-</tr>
-<tr>
-    <td><textarea rows="5" cols="80" id="scriptarea"></textarea></td>
+    </xml>
+     <td><textarea rows="5" cols="80" id="scriptarea"></textarea></div></td>
 </tr>
 </table>
 
