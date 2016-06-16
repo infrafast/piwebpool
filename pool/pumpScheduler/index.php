@@ -444,7 +444,7 @@ $table = new TableGear($options);
     </xml>
      <td>Script
         <select>
-            <option value="volvo">Volvo</option>
+            <option value="main">main</option>
             <option value="saab">Saab</option>
         </select><br>
         <textarea rows="8" cols="35" id="scriptarea"></textarea></div>
