@@ -71,6 +71,7 @@ function getXMLScript(){
 					alert('Erreur : '+result.state);
 				}
 	}});
+	alert('return : '+result.state);
 	return result.state;
 }
 
