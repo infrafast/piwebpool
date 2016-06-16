@@ -48,6 +48,16 @@ switch($_['action']){
 	    }
 	break;
 
+	case 'getLog':
+	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
+	        $result['answer']  = "ERROR";
+	        $result['state'] = 'Bad parameter';
+	    }else{
+	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
+	    }
+	break;
+
+
 	case 'scenario':
 	    $result['state'] = (setPinState($pins[$materials["Filtration"]],0));
 	    sleep(1);
