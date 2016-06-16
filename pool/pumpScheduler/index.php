@@ -457,7 +457,7 @@ $table = new TableGear($options);
 <td colspan="1"><b><span>-</span> Log</b></td>
 </tr>
 <tr><th>Valeur</th></tr>
-<tr><td width="100%"><textarea id="logFile" readonly style="color: grey; background-color: lightgrey width: 100%; height: 150px;"></textarea></td></tr>
+<tr><td width="100%"><div contenteditable id="logFile"></div></td></tr>
 </table>
 
 
