@@ -62,7 +62,7 @@ function updateScript(xml,lua){
 
 
 function getScript(){
-	alert("xml+" "+lua"getscript);
+	alert("getscript");
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=getScript&id=main",
