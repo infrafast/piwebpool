@@ -70,10 +70,9 @@ function getXMLScript(){
 				var result = eval(r);
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
-				}else alert('OK : '+result.state);
+				}else return result.state;
 	}});
 }
-
 
 
 function scenario(){
