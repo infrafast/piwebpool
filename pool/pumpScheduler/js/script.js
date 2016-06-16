@@ -70,7 +70,7 @@ function getXMLScript(){
 			result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
-			}else return true;
+			}else return false;
 	    }
 	});    
 	//return true;
