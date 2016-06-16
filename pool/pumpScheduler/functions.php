@@ -29,14 +29,16 @@ function appendlog($source,$answer,$status){
 }
 
 function getlog($source,$answer,$status){
+    $log="";
     $handle = popen("tail -f logfile.txt 2>&1", 'r');
     while(!feof($handle)) {
         $buffer = fgets($handle);
-        echo "$buffer<br/>\n";
+        $log.=$buffer."\n";
         ob_flush();
         flush();
     }
     pclose($handle);
+    return $log;
 }
 
 
