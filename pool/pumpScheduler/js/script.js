@@ -86,8 +86,6 @@ function getLog(){
 	$.ajax({
 		type: "POST",
 		url: "./action.php?action=getLog",
-		data:{code:code},
-		async:false,
 		success: function(r){
 			result = eval(r);
 			if(result.answer != "OK"){          
