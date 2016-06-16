@@ -580,8 +580,8 @@ $table = new TableGear($options);
     
     xml_text = getXMLScript();
     alert("received: "+xml_text);
-   // var xml = Blockly.Xml.textToDom(xml_text);
-    //Blockly.Xml.domToWorkspace(xml, workspace);
+    var xml = Blockly.Xml.textToDom(xml_text);
+    Blockly.Xml.domToWorkspace(xml, workspace);
 
     // callback function to update code and save in database related xml and lua when the workspace is modified
     workspace.addChangeListener(myUpdateFunction);
