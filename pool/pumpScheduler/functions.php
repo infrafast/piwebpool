@@ -28,7 +28,7 @@ function appendlog($source,$answer,$status){
     return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".$status."]\n" , FILE_APPEND | LOCK_EX);
 }
 
-function getlog(){
+function getLog(){
     $log="";
     $handle = popen("tail -f logfile.txt 2>&1", 'r');
     while(!feof($handle)) {
