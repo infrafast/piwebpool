@@ -107,7 +107,10 @@ switch($_['action']){
              $result['answer']  = "ERROR";
              $result['state'] =  mysql_error(); /* mysql_error();*/
         }else{
-            $result['state'] = $outcome;
+            while ($row = mysql_fetch_assoc($outcome)) {
+                $result['state']=($row['value']); 
+            }
+            // result return "undef" in state in case no data match
         }       
         mysql_free_result($outcome);
     break;        
