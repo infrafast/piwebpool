@@ -29,7 +29,7 @@ function appendlog($source,$answer,$status){
 }
 
 function getLog(){
-    $data = '';
+    $data = 'could not open logfile';
     $filename="logfile.txt";
     $fp = fopen($filename, "r");
     $block = 4096;
