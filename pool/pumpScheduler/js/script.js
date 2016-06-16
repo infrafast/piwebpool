@@ -75,7 +75,6 @@ function getXMLScript(){
 			}
 	    }
 	});    
-//	alert(result.state);
 	return result.state;
 }
 
