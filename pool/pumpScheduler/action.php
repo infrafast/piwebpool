@@ -159,6 +159,6 @@ switch($_['action']){
 	break;
 }
 
-echo '('.($result.state).')';
+echo '('.($result['state']).')';
 
 ?>
