@@ -49,12 +49,7 @@ switch($_['action']){
 	break;
 
 	case 'getLog':
-	    //if (false){
-	    //    $result['answer']  = "ERROR";
-	    //    $result['state'] = 'Bad parameter';
-	    //}else{
-	        $result['state'] = "logcontent";
-	    //}
+        $result['state'] = getlog();;
 	break;
 
 
