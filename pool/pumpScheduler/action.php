@@ -105,7 +105,7 @@ switch($_['action']){
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = "ERROR";
-             $result['state'] =  $query; /* mysql_error();*/
+             $result['state'] =  mysql_error(); /* mysql_error();*/
         }else{
             $result['state'] = $outcome;
         }       
@@ -120,7 +120,7 @@ switch($_['action']){
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = "ERROR";
-             $result['state'] =  $query; /* mysql_error();*/
+             $result['state'] = mysql_error(); /* mysql_error();*/
         }else{
             $result['state'] = $outcome;
         }       
