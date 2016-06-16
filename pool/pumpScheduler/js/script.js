@@ -66,7 +66,6 @@ function getScript(){
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=getScript&id=main",
-			data:{id:'main',xml:xml,lua:lua},
 			success: function(r){
 				var result = eval(r);
 				if(result.answer != "OK"){          
