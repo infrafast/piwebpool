@@ -2,13 +2,6 @@
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
 
-
-label { padding: 0; marign: 0; display: block; }
-textarea { width: 100%; border: 1px solid #333; padding: 4px; }
-.the–fix { padding–right: 10px; }
-
-
-
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
