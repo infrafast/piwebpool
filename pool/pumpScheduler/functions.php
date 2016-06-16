@@ -29,15 +29,7 @@ function appendlog($source,$answer,$status){
 }
 
 function getLog(){
-    $log="";
-    $handle = popen("tail -f ./logfile.txt 2>&1", 'r');
-    while(!feof($handle)) {
-        $buffer = fgets($handle);
-        $log.=$buffer."\n";
-        ob_flush();
-        flush();
-    }
-    pclose($handle);
+    $log="log content";
     return $log;
 }
 
