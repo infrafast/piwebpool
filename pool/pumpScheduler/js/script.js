@@ -70,7 +70,8 @@ function getXMLScript(){
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
 			}
-	}});
+	    }
+	});
 	alert('return : '+result.state);
 	return result.state;
 }
@@ -80,8 +81,8 @@ function scenario(){
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?action=scenario",
-		    success: function(r){
-	}});
+		    success: function(r){}
+	});
 	alert('Sequence demarée');
 }
 
