@@ -73,7 +73,7 @@ function getXMLScript(){
 			}
 	    }
 	});    
-	return flase;
+	return false;
 }
 
 
