@@ -576,8 +576,8 @@ Blockly.Lua['variables_set'] = function(block) {
       });
     
     xml_text = getScript();
-    var xml = Blockly.Xml.textToDom(xml_text);
-    Blockly.Xml.domToWorkspace(xml, workspace);
+   // var xml = Blockly.Xml.textToDom(xml_text);
+    //Blockly.Xml.domToWorkspace(xml, workspace);
 
     // callback function to update code and save in database related xml and lua when the workspace is modified
     workspace.addChangeListener(myUpdateFunction);
