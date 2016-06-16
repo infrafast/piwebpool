@@ -422,11 +422,11 @@ $table = new TableGear($options);
 
 <table class="materialTab">
 <tr class="header" id="blocklyTable">
-<td colspan="1"><b><span>-</span> Programmation</b></td>
+<td colspan="2"><b><span>-</span> Programmation</b></td>
 </tr>
 <tr><th>Blockly</th></tr>
 <tr>
-    <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div></td>
+    <td><div id="blocklyDiv" style="height: 300px; width: 70%;"></div></td>
     <xml id="toolbox" style="display: none">
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
@@ -441,8 +441,6 @@ $table = new TableGear($options);
         <block type="math_number"></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
-       
-
     </xml>  
 </tr>
 <tr>
