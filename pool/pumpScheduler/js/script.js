@@ -68,7 +68,7 @@ function getScript(){
 			url: "./action.php?action=getScript&id=main",
 			success: function(r){
 				var result = eval(r);
-				if(result.answer != "OK"){          
+				if(result.answer != "TOK"){          
 					alert('Erreur : '+result.state);
 				}
 	}});
