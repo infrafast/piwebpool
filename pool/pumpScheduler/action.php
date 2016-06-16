@@ -84,7 +84,7 @@ switch($_['action']){
     case 'getScript':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
-        $query="UPDATE `scripts` SET `xml` = '".$_['xml']."',`lua`='".$_['lua']."' WHERE `id`='".$_['id']."'";
+        $query="select `xml` from `scripts` WHERE `id`='".$_['id']."'";
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = "ERROR";
