@@ -61,6 +61,21 @@ function updateScript(xml,lua){
 }
 
 
+function getScript(){
+	//alert(xml+" "+lua);
+	$.ajax({
+			type: "POST",
+			url: "./action.php?action=updateScript",
+			data:{id:'main',xml:xml,lua:lua},
+			success: function(r){
+				var result = eval(r);
+				if(result.answer != "OK"){          
+					alert('Erreur : '+result.state);
+				}
+	}});
+}
+
+
 
 function scenario(){
 	$.ajax({
