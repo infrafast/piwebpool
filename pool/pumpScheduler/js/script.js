@@ -62,18 +62,18 @@ function updateScript(xml,lua){
 
 
 function getXMLScript(){
-    var result;
+    var xml_text;
 	$.ajax({
 		type: "POST",
 		url: "./action.php?action=getScript&id=main",
 		success: function(r){
-			result = eval(r);
+			var result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
 			}
 	    }
 	});    
-	var xml_text = result.state;
+	var  = result.state;
 	return "sdkajaskjdsadj";
 }
 
