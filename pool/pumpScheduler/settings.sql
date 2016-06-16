@@ -5,9 +5,10 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `settings` (`id`, `value`) VALUES
+('scheduler', 1),
+('logTableCollapse', 1),
 ('actionTableCollapse', 1),
 ('blocklyTableCollapse', 0),
-('scheduler', 1),
 ('scheduleTableCollapse', 1),
 ('sensorTableCollapse', 1);
 
