@@ -73,6 +73,7 @@ function getXMLScript(){
 			}
 	    }
 	});    
+	var xml_text = result.state;
 	return "sdkajaskjdsadj";
 }
 
