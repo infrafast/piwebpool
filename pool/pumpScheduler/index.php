@@ -575,7 +575,7 @@ Blockly.Lua['variables_set'] = function(block) {
          trashcan: true          
       });
     
-    //var xml_text = getScript();
+    var xml_text = getXMLScript();
    // var xml = Blockly.Xml.textToDom(xml_text);
     //Blockly.Xml.domToWorkspace(xml, workspace);
 
