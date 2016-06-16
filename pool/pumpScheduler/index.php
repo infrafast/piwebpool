@@ -578,8 +578,8 @@ $table = new TableGear($options);
          trashcan: true          
       });
     
-    var xml_text = getXMLScript();
-    alert(xml_text);
+    //var xml_text = getXMLScript();
+    alert("getXMLScript");
    // var xml = Blockly.Xml.textToDom(xml_text);
     //Blockly.Xml.domToWorkspace(xml, workspace);
 
