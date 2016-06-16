@@ -62,8 +62,8 @@ function updateScript(xml,lua){
 
 
 function getXMLScript(){
-	alert("getscript");
-/*	$.ajax({
+	//alert("getscript");
+	$.ajax({
 			type: "POST",
 			url: "./action.php?action=getScript&id=main",
 			success: function(r){
@@ -71,7 +71,7 @@ function getXMLScript(){
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
 				}else return result.state;
-	}});*/
+	}});
 }
 
 
