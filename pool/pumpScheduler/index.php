@@ -578,6 +578,7 @@ $table = new TableGear($options);
          trashcan: true          
       });
     
+    //fecth the xml code from database
     xml_text = getXMLScript("xml");
     alert("received: "+xml_text);
     var xml = Blockly.Xml.textToDom(xml_text);
