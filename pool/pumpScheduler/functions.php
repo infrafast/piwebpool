@@ -28,6 +28,18 @@ function appendlog($source,$answer,$status){
     return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".$status."]\n" , FILE_APPEND | LOCK_EX);
 }
 
+function getlog($source,$answer,$status){
+    $handle = popen("tail -f /etc/httpd/logs/access.log 2>&1", 'r');
+while(!feof($handle)) {
+    $buffer = fgets($handle);
+    echo "$buffer<br/>\n";
+    ob_flush();
+    flush();
+}
+pclose($handle);
+}
+
+
 function sms($SMSkey, $SMSuser,$message,&$feedback){
      $sms = new FreeMobile();
     $sms->setKey($SMSkey)
