@@ -70,7 +70,7 @@ function getXMLScript(){
 			var result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
-			}
+			}else xml_text = result.state;
 	    }
 	});    
 	return "sdkajaskjdsadj";
