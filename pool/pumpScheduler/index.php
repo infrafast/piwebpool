@@ -458,12 +458,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Valeur</th></tr>
 <tr>
-
- <label class="the-fix">
-  A good–looking textarea with a 100% width
-  <textarea></textarea>
- </label>
-
+    <textarea rows="14" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey "></textarea></div>    
 </tr>
 </table>
 
