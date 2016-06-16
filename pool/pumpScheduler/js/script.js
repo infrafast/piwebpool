@@ -63,8 +63,8 @@ function updateScript(xml,lua){
 
 function getXMLScript(){
 
-	alert('return : '+result.state);
-	return result.state;
+	alert('return');
+//	return result.state;
 }
 
 
