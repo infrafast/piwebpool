@@ -93,8 +93,7 @@ function getLog(){
 			}
 	    }
 	});   
-
-	alert('calledGetLog');
+	//alert('calledGetLog');
 	return result.state;
 }
 
