@@ -41,7 +41,7 @@ function changeState(pin,elem){
 					$(elem).removeClass('off');
 					$(elem).addClass((newState==1?'on':'off')); 
 				}else{
-					alert('Erreur : '+result.error);
+					alert('Erreur : '+result.answer);
 				}
 	}});
 }
