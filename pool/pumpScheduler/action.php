@@ -91,7 +91,7 @@ switch($_['action']){
              $result['state'] =  $query; /* mysql_error();*/
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
-                $result['state']=($row['xml']); 
+                $result['state']=($row['lua']); 
             }
             // result return "undef" in state in case no data match
             mysql_free_result($outcome);
