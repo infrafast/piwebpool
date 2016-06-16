@@ -362,11 +362,16 @@ $table = new TableGear($options);
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
   
-<script src="blockly/blockly_compressed.js"></script>
-<script src="blockly/lua_compressed.js"></script>
-<script src="blockly/blocks_compressed.js"></script>
+    <script src="blockly/blockly_compressed.js"></script>
+    <script src="blockly/lua_compressed.js"></script>
+    <script src="blockly/blocks_compressed.js"></script>
 
-<script src="blockly/msg/js/en.js"></script>
+    <script src="blockly/msg/js/en.js"></script>
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+  
   
   <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
   <link rel="stylesheet" href="css/style.css">
@@ -593,8 +598,6 @@ $table = new TableGear($options);
       
 </script>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
 <script>
  /* $( "#actionTable" ).click(function() {
           alert( "Handler for .click() called." );
