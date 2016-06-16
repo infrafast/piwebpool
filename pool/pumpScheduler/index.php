@@ -553,14 +553,14 @@ $table = new TableGear($options);
       return code;
     };
 
-Blockly.Lua['variables_set'] = function(block) {
-  // Variable setter.
-  var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
-      Blockly.Lua.ORDER_NONE) || '0';
-  var varName = Blockly.Lua.variableDB_.getName(
-      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  return varName + ' = ' + argument0 + ';\n';
-};
+    Blockly.Lua['variables_set'] = function(block) {
+      // Variable setter.
+      var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
+          Blockly.Lua.ORDER_NONE) || '0';
+      var varName = Blockly.Lua.variableDB_.getName(
+          block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+      return varName + ' = ' + argument0 + ';\n';
+    };
 
 
   var workspace = Blockly.inject('blocklyDiv',
@@ -575,7 +575,7 @@ Blockly.Lua['variables_set'] = function(block) {
          trashcan: true          
       });
     
-    var xml_text = getXMLScript();
+    var xml_text = alert("getXMLScript();");
    // var xml = Blockly.Xml.textToDom(xml_text);
     //Blockly.Xml.domToWorkspace(xml, workspace);
 
