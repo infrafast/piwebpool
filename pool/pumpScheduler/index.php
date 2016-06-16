@@ -442,12 +442,12 @@ $table = new TableGear($options);
         <block type="setcommand"></block>
         <block type="getcommand"></block>
     </xml>
-     <td>
-     <select>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-     </select> 
-     <textarea rows="8" cols="35" id="scriptarea"></textarea></div>
+     <td>Script
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+        </select><br>
+        <textarea rows="8" cols="35" id="scriptarea"></textarea></div>
      </td>
 </tr>
 </table>
