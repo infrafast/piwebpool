@@ -594,7 +594,7 @@ $table = new TableGear($options);
     
     //fecth the xml code from database
     xml_text = getScript("xml");
-    alert("received: "+xml_text);
+    //alert("received: "+xml_text);
     var xml = Blockly.Xml.textToDom(xml_text);
     Blockly.Xml.domToWorkspace(xml, workspace);
 
