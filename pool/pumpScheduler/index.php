@@ -452,6 +452,26 @@ $table = new TableGear($options);
 </tr>
 </table>
 
+<table class="materialTab">
+<tr class="header" id="logTable">
+<td colspan="2"><b><span>-</span> Mesures</b></td>
+</tr>
+<tr><th>Sonde</th><th>Valeur</th></tr>
+<tr>
+    <td>PH</td>
+    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
+</tr>
+<tr>
+    <td>Redox (mV)</td>
+    <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
+</tr>
+<tr>
+    <td>Temperature (°C)</td>
+    <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
+</tr>
+</table>
+
+
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
