@@ -72,11 +72,11 @@ function getXMLScript(){
 			result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
-			}else xml_text = result.state;
+			}
 	    }
 	});    
-	alert(xml_text);
-	return xml_text;
+//	alert(result.state);
+	return result.state;
 }
 
 
