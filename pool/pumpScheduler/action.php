@@ -49,7 +49,7 @@ switch($_['action']){
 	break;
 
 	case 'getLog':
-        $result['state'] = getlog();;
+        $result['state'] = getLog();;
 	break;
 
 
