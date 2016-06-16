@@ -73,7 +73,7 @@ function getXMLScript(){
 			}
 	    }
 	});    
-	return false;
+	return "toto";
 }
 
 
