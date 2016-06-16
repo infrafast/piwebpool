@@ -620,6 +620,7 @@ $table = new TableGear($options);
     getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
     getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
     getSetting("blocklyTableCollapse", document.getElementById('blocklyTable'));
+    getSetting("logTableCollapse", document.getElementById('logTable'));
 </script>
 
 
