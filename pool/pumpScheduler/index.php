@@ -471,6 +471,8 @@ $table = new TableGear($options);
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
 
+
+    //setup Blockly for LUA
     Blockly.Blocks['sensors'] = {
       init: function() {
         this.appendDummyInput()
