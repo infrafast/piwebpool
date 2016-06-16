@@ -29,7 +29,7 @@ function appendlog($source,$answer,$status){
 }
 
 function getlog($source,$answer,$status){
-    $handle = popen("tail -f /etc/httpd/logs/access.log 2>&1", 'r');
+    $handle = popen("tail -f logfile.txt 2>&1", 'r');
     while(!feof($handle)) {
         $buffer = fgets($handle);
         echo "$buffer<br/>\n";
