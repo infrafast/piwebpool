@@ -442,7 +442,7 @@ $table = new TableGear($options);
         <block type="setcommand"></block>
         <block type="getcommand"></block>
     </xml>
-     <td><textarea rows="5" cols="50" id="scriptarea"></textarea></div></td>
+     <td><textarea rows="8" cols="35" id="scriptarea"></textarea></div></td>
 </tr>
 </table>
 
