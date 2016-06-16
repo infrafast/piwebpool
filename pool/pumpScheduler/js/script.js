@@ -73,7 +73,7 @@ function getXMLScript(){
 			}else return true;
 	    }
 	});    
-	//return true;
+	return true;
 }
 
 
