@@ -447,7 +447,7 @@ $table = new TableGear($options);
             <option value="defaut">main</option>
             <option value="perso">custom</option>
         </select><br>
-        <textarea rows="14" cols="35" id="scriptarea" readonly style="color: red; background-color: lightyellow"></textarea></div>
+        <textarea rows="14" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey"></textarea></div>
      </td>
 </tr>
 </table>
