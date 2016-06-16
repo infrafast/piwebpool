@@ -82,18 +82,8 @@ function getScript(code){
 
 // the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
 function getLog(){
-    var result;
-	$.ajax({
-		type: "POST",
-		url: "./action.php?action=getLog",
-		success: function(r){
-			result = eval(r);
-			if(result.answer != "OK"){          
-				alert('Erreur : '+result.state);
-			}
-	    }
-	});    
-	return result.state;
+	alert('calledGetLog');
+	return "OUTPUT OF GETLOG";
 }
 
 function scenario(){
