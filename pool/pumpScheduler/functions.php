@@ -30,9 +30,10 @@ function appendlog($source,$answer,$status){
 
 function getLog(){
     $data = '';
-    $fp = fopen("logfile.txt", "r");
+    $filename="logfile.txt";
+    $fp = fopen($filename, "r");
     $block = 4096;
-    $max = filesize($this->filename);
+    $max = filesize($filename);
     
     for($len = 0; $len < $max; $len += $block) 
     {
