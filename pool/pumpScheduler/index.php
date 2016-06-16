@@ -469,7 +469,7 @@ $table = new TableGear($options);
 
 <script>
     // retrieve logfile
-    document.getElementById('scriptarea').value = code;
+    document.getElementById('scriptarea').value = getLog();
 
     Blockly.Blocks['sensors'] = {
       init: function() {
