@@ -426,7 +426,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Blockly</th></tr>
 <tr>
-    <td><div id="blocklyDiv" style="height: 300px; width: 70%;"></div></td>
+    <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
