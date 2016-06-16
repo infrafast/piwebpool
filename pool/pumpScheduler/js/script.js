@@ -69,8 +69,9 @@ function getXMLScript(){
 				var result = eval(r);
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
-				}else return result.state;
+				}else
 	}});
+	return result.state;
 }
 
 
