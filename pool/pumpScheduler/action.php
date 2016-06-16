@@ -84,7 +84,7 @@ switch($_['action']){
     case 'getScript':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
-        $query="select `lua` from `scripts` WHERE `id`='".$_['id']."'";
+        $query="select `".$_['code']."` from `scripts` WHERE `id`='".$_['id']."'";
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = "ERROR";
