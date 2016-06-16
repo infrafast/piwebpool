@@ -63,13 +63,13 @@ function updateScript(xml,lua){
 
 // the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
 function getXMLScript(){
-    var xml_text;
+    var result;
 	$.ajax({
 		type: "POST",
 		url: "./action.php?action=getScript&id=main",
 		async:false,
 		success: function(r){
-			var result = eval(r);
+			result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
 			}else xml_text = result.state;
