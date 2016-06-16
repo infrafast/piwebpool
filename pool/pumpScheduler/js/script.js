@@ -70,7 +70,7 @@ function getScript(){
 				var result = eval(r);
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
-				}
+				}else alert('OK : '+result.state);
 	}});
 }
 
