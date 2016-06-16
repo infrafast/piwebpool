@@ -70,10 +70,10 @@ function getXMLScript(){
 			result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
-			}else return true;
+			}
 	    }
 	});    
-	return true;
+	return flase;
 }
 
 
