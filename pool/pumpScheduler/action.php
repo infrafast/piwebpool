@@ -49,11 +49,11 @@ switch($_['action']){
 	break;
 
 	case 'getLog':
-	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
+	    if (false){
 	        $result['answer']  = "ERROR";
 	        $result['state'] = 'Bad parameter';
 	    }else{
-	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
+	        $result['state'] = "logcontent";
 	    }
 	break;
 
