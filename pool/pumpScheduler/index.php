@@ -443,11 +443,11 @@ $table = new TableGear($options);
         <block type="getcommand"></block>
     </xml>
      <td>Script
-        <select>
+        <select  name="luascript" disabled>
             <option value="defaut">main</option>
             <option value="perso">custom</option>
         </select><br>
-        <textarea rows="8" cols="35" id="scriptarea"></textarea></div>
+        <textarea rows="14" cols="35" id="scriptarea"></textarea></div>
      </td>
 </tr>
 </table>
