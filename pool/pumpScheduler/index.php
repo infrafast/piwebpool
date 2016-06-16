@@ -425,6 +425,7 @@ $table = new TableGear($options);
 <td colspan="2"><b><span>-</span> Programmation</b></td>
 </tr>
 <tr><th>Blockly</th></tr>
+<tr><th>Sequence</th><th>Code</th></tr>
 <tr>
     <td><div id="blocklyDiv" style="height: 300px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
