@@ -62,8 +62,6 @@ function updateScript(xml,lua){
 
 
 function getXMLScript(){
-
-	alert('return');
 	return true;
 }
 
