@@ -63,14 +63,14 @@ function updateScript(xml,lua){
 
 function getXMLScript(){
 	$.ajax({
-			type: "POST",
-			url: "./action.php?action=getScript&id=main",
-			success: function(r){
-				var result = eval(r);
-				if(result.answer != "OK"){          
-					alert('Erreur : '+result.state);
-				}
-	}});
+		type: "POST",
+		url: "./action.php?action=getScript&id=main",
+		success: function(r){
+			var result = eval(r);
+			if(result.answer != "OK"){          
+				alert('Erreur : '+result.state);
+			}
+	});
 	alert('return : '+result.state);
 	return result.state;
 }
