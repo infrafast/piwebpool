@@ -469,7 +469,7 @@ $table = new TableGear($options);
 
 <script>
     // retrieve logfile
-    document.getElementById('logFile').value = getLog();
+    document.getElementById('logFile').value = "MY LOG";
 
 
     //setup Blockly for LUA
