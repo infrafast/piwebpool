@@ -59,8 +59,8 @@ if (!$result) {
         $answer="ERROR";
         $state="SetPinState";
     }else{
-        
-        foreach (array("header,custom") as $scriptID) {
+        var concat("header","footer");
+        foreach (array("header,footer") as $scriptID) {
         
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
