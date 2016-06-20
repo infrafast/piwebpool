@@ -76,7 +76,22 @@ if (!$result) {
                 mysql_free_result($result);
             }                
         }
-        $lua = goLua($concat[0].$concat[1],$materials,$pins,$luaFeedback);                
+        foreach ($concat as $scriptID) {
+            // fetch lua code from database
+            $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+            $result = mysql_query($sql, $link);
+            if (!$result) {
+                $answer="ERROR";
+                $state=mysql_error();
+            }else{
+                $luaCode="";
+                while ($row = mysql_fetch_assoc($result)) {
+                    $concat[$i++]=($row['lua']);
+                }
+                mysql_free_result($result);
+            }                
+            $lua = goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback);                
+        }
     }
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
