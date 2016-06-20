@@ -82,9 +82,7 @@ if (!$result) {
                 $state=mysql_error();
             }else{
                 $luaCode="";
-                while ($row = mysql_fetch_assoc($result)) {
-                    $luaCode=($row['lua']);
-                }
+                while ($row = mysql_fetch_assoc($result)) $luaCode=($row['lua']);
                 mysql_free_result($result);
             }                
             $lua = goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback);                
