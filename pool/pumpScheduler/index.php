@@ -562,6 +562,7 @@ $table = new TableGear($options);
             .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+        this.setOutput(true, "Boolean");
         this.setColour(65);
         this.setTooltip('');
         this.setHelpUrl('http://www.example.com/');
