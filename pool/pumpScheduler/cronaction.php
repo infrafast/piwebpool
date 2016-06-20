@@ -74,7 +74,7 @@ if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){
     }else{
         $luaCode="";
         while ($row = mysql_fetch_assoc($result)) {
-            $luaCode=($row[$temp]);
+            $luaCode=($row['lua']);
         }
         mysql_free_result($result);
         
