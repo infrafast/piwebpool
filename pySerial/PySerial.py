@@ -6,11 +6,12 @@ ser = serial.Serial(usbport, 9600)
 # turn on the LEDs
 ser.write("L,1\r")
 ser.write("C,1\r")
+ser.write("STATUS")
 line = ""
 while True:
      data = ser.read()
      if(data == "\r"):
-           print "Received from sensor:" + line
+           print "Recived from sensor:" + line
            line = ""
      else:
            line = line + data
