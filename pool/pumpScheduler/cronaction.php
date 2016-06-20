@@ -63,6 +63,7 @@ mysql_free_result($result);
 $answer="OK";
 if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
     $answer="ERROR";
+    $state="SetPinState";
 }else{
     // fetch lua code from database
     $sql    = "SELECT lua from scripts where id='header'";
@@ -70,9 +71,9 @@ if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){
     if (!$result) {
         $answer=mysql_error();
     }else{
-        $pumpConsign=0;
+        $luaCode="";
         while ($row = mysql_fetch_assoc($result)) {
-            $pumpConsign=($row[$temp]);
+            $luaCode=($row[$temp]);
         }
         mysql_free_result($result);
         
