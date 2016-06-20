@@ -60,7 +60,7 @@ if (!$result) {
         $state="SetPinState";
     }else{
         
-        foreach (array("main,custom") as $scriptID) {
+        foreach (array("header,custom") as $scriptID) {
         
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='header'";
