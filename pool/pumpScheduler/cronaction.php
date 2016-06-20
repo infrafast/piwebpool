@@ -69,7 +69,8 @@ if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){
     $sql    = "SELECT lua from scripts where id='header'";
     $result = mysql_query($sql, $link);
     if (!$result) {
-        $answer=mysql_error();
+        $answer="ERROR";
+        $state=mysql_error();
     }else{
         $luaCode="";
         while ($row = mysql_fetch_assoc($result)) {
