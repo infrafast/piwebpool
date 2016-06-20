@@ -76,8 +76,8 @@ if (!$result) {
                 }
                 mysql_free_result($result);
             }                
-            $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);                
         }
+        $lua = goLua($concat[10].$concat[1],$materials,$pins,$luaFeedback);                
     }
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
