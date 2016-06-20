@@ -66,7 +66,7 @@ switch($_['action']){
     case 'resetSchedule':
         $result['state'] = "reset done";
 
-        $dbms_schema='pumpSchedule.sql';
+        $dbms_schema='scripts.sql';
 
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
@@ -85,7 +85,7 @@ switch($_['action']){
         
     break;
 
-    // restore the xml code from db to blockly thru ajax call
+    // restore the  code from db to blockly thru ajax call
     case 'getScript':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
