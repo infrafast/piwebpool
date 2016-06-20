@@ -6,7 +6,7 @@ ser = serial.Serial(usbport, 9600)
 # turn on the LEDs
 ser.write("L,1\r")
 ser.write("C,1\r")
-ser.write("StATUS\r")
+ser.write("STATUS\r")
 line = ""
 while True:
      data = ser.read()
