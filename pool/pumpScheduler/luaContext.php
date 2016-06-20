@@ -4,9 +4,11 @@ LUA CONTEXT*/
 require_once ("functions.php");
 require_once ("configuration.php");
 
-function goLua($script,$materials,$pins,&$feedback){
+function goLua($file,$materials,$pins,&$feedback){
     try{
-        $lua=new Lua($file);
+        //$lua=new Lua($file);
+        $lua=new Lua();
+        lua->eval("return RETURNOK");
         // record names of the command as variable and manipulate them directly phyisically in lua using set and get functions
         // since the setPinState function gets the logical pin number, we have to get it from the table
     
