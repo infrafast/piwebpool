@@ -60,7 +60,8 @@ if (!$result) {
         $state="SetPinState";
     }else{
         $concat=array("header","footer");
-        foreach (array("header,footer") as $scriptID) {
+        $i=0;
+        foreach ($concat as $scriptID) {
         
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
@@ -71,10 +72,9 @@ if (!$result) {
             }else{
                 $luaCode="";
                 while ($row = mysql_fetch_assoc($result)) {
-                    $luaCode=($row['lua']);
+                    $concat[$i++]=($row['lua']);
                 }
                 mysql_free_result($result);
-             
             }                
             $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);                
         }
