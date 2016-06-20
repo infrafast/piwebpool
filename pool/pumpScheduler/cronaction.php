@@ -63,6 +63,11 @@ mysql_free_result($result);
 $answer="OK";
 
 if (!setPinState($pins[$materials["filtration"]],$pumpConsign)) $answer="ERROR";
+
+
+// fetch lua code from database
+
+
 $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);
 
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
