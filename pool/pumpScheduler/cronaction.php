@@ -60,10 +60,6 @@ while ($row = mysql_fetch_assoc($result)) {
 
 mysql_free_result($result);
 
-
-
-
-
 $answer="OK";
 
 if (!setPinState($pins[$materials["filtration"]],$pumpConsign)) $answer="ERROR";
