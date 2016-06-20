@@ -161,6 +161,7 @@ switch($_['action']){
         break;
 
     case 'lua':
+        $result['state']='';
        if (!goLua("function run() return 'lua works!'; end",$materials,$pins,$result['state'])) $result['answer']  = "ERROR";
        break;
 
