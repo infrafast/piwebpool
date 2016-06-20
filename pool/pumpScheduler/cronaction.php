@@ -59,23 +59,29 @@ if (!$result) {
         $answer="ERROR";
         $state="SetPinState";
     }else{
-        // fetch lua code from database
-        $sql    = "SELECT lua from scripts where id='header'";
-        $result = mysql_query($sql, $link);
-        if (!$result) {
-            $answer="ERROR";
-            $state=mysql_error();
-        }else{
-            $luaCode="";
-            while ($row = mysql_fetch_assoc($result)) {
-                $luaCode=($row['lua']);
-            }
-            mysql_free_result($result);
-            
-            
-            
-            
-            $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);
+        
+        foreach (array("main,custom") as $scriptID) {
+        
+            // fetch lua code from database
+            $sql    = "SELECT lua from scripts where id='header'";
+            $result = mysql_query($sql, $link);
+            if (!$result) {
+                $answer="ERROR";
+                $state=mysql_error();
+            }else{
+                $luaCode="";
+                while ($row = mysql_fetch_assoc($result)) {
+                    $luaCode=($row['lua']);
+                }
+                mysql_free_result($result);
+             
+              
+                
+                
+                $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);
+                
+            }                
+                
         }
     }
 }
