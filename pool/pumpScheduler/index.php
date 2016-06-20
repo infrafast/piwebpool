@@ -502,7 +502,7 @@ $table = new TableGear($options);
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
         this.setPreviousStatement(true, null);
         this.setOutput(true, "Boolean");
-        this.setNextStatement(true, null);
+        //this.setNextStatement(true, null);
         this.setColour(20);
         this.setTooltip('');
         this.setHelpUrl('http://www.example.com/');
