@@ -33,8 +33,8 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         // generate XML for blockly toolbox functions
 
         // execute the script
-        $feedback= $lua->run();
-        if (!$feedback) $feedback = "Runtime error";
+        $feedback= $feedback.$lua->run();
+        if (!$feedback) $feedback = $feedback."Runtime error";
     } catch (LuaException $e) {
          $feedback=$e->getMessage();
          return false;
