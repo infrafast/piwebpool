@@ -522,6 +522,7 @@ $table = new TableGear($options);
     Blockly.Blocks['getcommand'] = {
       init: function() {
         this.appendDummyInput()
+            .appendField("etat")
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
             this.setColour(20);
             this.setOutput(true, "Boolean");
