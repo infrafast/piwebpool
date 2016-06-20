@@ -40,7 +40,7 @@ function retrieveLuaCode($table){
 }
 
 
-function goLua($file,$materials,$pins,&$feedback){
+function goLua($luaCode,$materials,$pins,&$feedback){
     
     try{
         //$lua=new Lua($file);
