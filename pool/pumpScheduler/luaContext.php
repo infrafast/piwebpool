@@ -16,7 +16,7 @@ function retrieveLuaCode($table){
         exit;
     }     
     
-    $sql    = "SELECT lua FROM scripts where id='header';
+    $sql    = "SELECT lua FROM scripts where id='header'";
     $result = mysql_query($sql, $link);
     
     if (!$result) {
