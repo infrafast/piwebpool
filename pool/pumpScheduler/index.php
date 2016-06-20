@@ -529,7 +529,7 @@ $table = new TableGear($options);
     Blockly.Lua['getcommand'] = function(block) {
       var dropdown_command = block.getFieldValue('command');
       // TODO: Assemble Lua into code variable.
-      var code = 'get('+dropdown_command+');\n';
+      var code = 'get('+dropdown_command+')';
       // TODO: Change ORDER_NONE to the correct strength.
       return [code, Blockly.Lua.ORDER_NONE];
     };
