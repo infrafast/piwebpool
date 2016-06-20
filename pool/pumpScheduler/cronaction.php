@@ -75,11 +75,6 @@ if (!$result) {
                 }
                 mysql_free_result($result);
              
-              
-                
-                
-                
-                
             }                
             $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);                
         }
