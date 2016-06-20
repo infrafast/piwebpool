@@ -59,7 +59,7 @@ if (!$result) {
         $answer="ERROR";
         $state="SetPinState";
     }else{
-        var concat=array("header","footer");
+        $concat=array("header","footer");
         foreach (array("header,footer") as $scriptID) {
         
             // fetch lua code from database
