@@ -443,11 +443,14 @@ $table = new TableGear($options);
         <block type="getcommand"></block>
     </xml>
      <td>Script
-        <select  name="luascript" disabled>
-            <option value="defaut">main</option>
-            <option value="perso">custom</option>
-        </select><br>
-        <textarea rows="14" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey"></textarea></div>
+        <select  name="luascript"  id="scriptID">
+            <option value="main">defaut</option>
+            <option value="custom">perso</option>
+        </select>
+        <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
+        <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
+        <br>
+        <textarea rows="17" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey"></textarea></div>
      </td>
 </tr>
 </table>
@@ -457,7 +460,7 @@ $table = new TableGear($options);
 <td colspan="1"><b><span>-</span> Log</b></td>
 </tr>
 <tr><th>Valeur</th></tr>
-<tr><td width="100%"><textarea id="logFile" readonly style="color: grey; background-color: lightgrey width: 100%; height: 150px;"></textarea></td></tr>
+<tr><td width="100%"><textarea cols="100" id="logFile" readonly style="color: grey; background-color: lightgrey width: 100%; height: 150px;"></textarea></td></tr>
 </table>
 
 
@@ -496,7 +499,7 @@ $table = new TableGear($options);
       init: function() {
         this.appendValueInput("NAME")
             .setCheck("Number")
-            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
+            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"], ["info", "info"]]), "command");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(20);
@@ -594,11 +597,7 @@ $table = new TableGear($options);
          trashcan: true          
       });
     
-    //fecth the xml code from database
-    xml_text = getScript("xml");
-    //alert("received: "+xml_text);
-    var xml = Blockly.Xml.textToDom(xml_text);
-    Blockly.Xml.domToWorkspace(xml, workspace);
+    loadXML("main");
 
     // callback function to update code and save in database related xml and lua when the workspace is modified
     workspace.addChangeListener(myUpdateFunction);
@@ -606,11 +605,23 @@ $table = new TableGear($options);
     function myUpdateFunction(event) {
       var code = Blockly.Lua.workspaceToCode(workspace);
       document.getElementById('scriptarea').value = code;
-      var xml = Blockly.Xml.workspaceToDom(workspace);
-      var xml_text = Blockly.Xml.domToText(xml);
-      updateScript(xml_text,code);
     }
     
+    function loadXML(script){
+        //clean the code
+        Blockly.mainWorkspace.clear();
+        //fetch the code from xml table
+        xml_text = getScript("xml", script);
+        //alert("received: "+xml_text);
+        var xml = Blockly.Xml.textToDom(xml_text);
+        Blockly.Xml.domToWorkspace(xml, workspace);
+    }
+
+    function saveCode(script){
+      var xml = Blockly.Xml.workspaceToDom(workspace);
+      var xml_text = Blockly.Xml.domToText(xml);
+      alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
+    }    
       
 </script>
 
