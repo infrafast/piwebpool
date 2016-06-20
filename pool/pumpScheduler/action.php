@@ -10,6 +10,19 @@ require_once('luaContext.php');
 $result['state']  = "undef";
 $result['answer']  = 'OK';
 
+function wd_remove_accents($str, $charset='utf-8')
+{
+    $str = htmlentities($str, ENT_NOQUOTES, $charset);
+    
+    $str = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $str);
+    $str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str); // pour les ligatures e.g. '&oelig;'
+    $str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractères
+    
+    return $str;
+}
+
+
+
 switch($_['action']){
     
     case 'sms':
@@ -112,7 +125,7 @@ switch($_['action']){
     case 'updateScript':
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
-        $query="UPDATE `scripts` SET `xml` = '".htmlspecialchars_decode(iconv('UTF-8','ASCII//TRANSLIT',$_['xml']))."',`lua`='".mysql_real_escape_string(htmlspecialchars_decode($_['lua']))."' WHERE `id`='".$_['id']."'";
+        $query="UPDATE `scripts` SET `xml` = '".htmlspecialchars_decode(wd_remove_accents($_['xml']))."',`lua`='".mysql_real_escape_string(htmlspecialchars_decode($_['lua']))."' WHERE `id`='".$_['id']."'";
         $outcome = mysql_query($query);
         if (!$outcome) {
              $result['answer']  = "ERROR";
