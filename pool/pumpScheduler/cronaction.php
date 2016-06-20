@@ -78,10 +78,10 @@ if (!$result) {
               
                 
                 
-                $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);
+                
                 
             }                
-                
+            $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);                
         }
     }
 }
