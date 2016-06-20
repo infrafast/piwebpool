@@ -8,7 +8,7 @@ ser = serial.Serial(      #initiate the serial connection into the 'ser' variabl
 )
 
 ser.write('\r')     #an initial write to clear the serial buffer
-//flush = ser.read(3) #flush into variable (only needed for EZO circuits) 
+#flush = ser.read(3) #flush into variable (only needed for EZO circuits) 
 
 thread = threading.Thread(target=read_from_port, args=(ser,)) #create the thread to read the serial port, include the target definition and the serial protocol
 thread.start()  #start the thread
