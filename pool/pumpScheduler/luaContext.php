@@ -4,7 +4,17 @@ LUA CONTEXT*/
 require_once ("functions.php");
 require_once ("configuration.php");
 
-function goLua($file,$materials,$pins,&$feedback){
+function retrieveLuaCode($table){
+    // connect to the database
+    if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
+        echo 'Could not connect to mysql';
+        exit;
+    }
+    
+    if (!mysql_select_db($options["database"]["name"], $link)) {
+        echo 'Could not select database';
+        exit;
+    }     
     
     $sql    = "SELECT lua FROM scripts where id='header';
     $result = mysql_query($sql, $link);
@@ -23,6 +33,14 @@ function goLua($file,$materials,$pins,&$feedback){
     //if ($pumpConsign="")
     
     mysql_free_result($result);
+    
+    
+    
+    
+}
+
+
+function goLua($file,$materials,$pins,&$feedback){
     
     try{
         //$lua=new Lua($file);
