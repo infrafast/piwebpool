@@ -499,7 +499,7 @@ $table = new TableGear($options);
       init: function() {
         this.appendValueInput("NAME")
             .setCheck("Number")
-            .appendField("commande")
+            .appendField("commander")
             .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
             
         this.setPreviousStatement(true, null);
