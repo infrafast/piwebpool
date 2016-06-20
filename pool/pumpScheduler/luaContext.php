@@ -8,7 +8,7 @@ function goLua($file,$materials,$pins,&$feedback){
     try{
         //$lua=new Lua($file);
         $lua=new Lua();
-        $lua->eval("function run() return RETURNOK; end");
+        $lua->eval("function run() return 'RETURNOK'; end");
         // record names of the command as variable and manipulate them directly phyisically in lua using set and get functions
         // since the setPinState function gets the logical pin number, we have to get it from the table
     
