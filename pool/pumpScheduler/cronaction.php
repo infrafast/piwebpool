@@ -68,18 +68,16 @@ if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){
     $sql    = "SELECT lua from scripts where id='header'";
     $result = mysql_query($sql, $link);
     if (!$result) {
-        echo "DB Error, could not query the database\n";
-        echo 'MySQL Error: ' . mysql_error();
-        exit;
+        $answer=mysql_error();
+    }else{
+        $pumpConsign=0;
+        while ($row = mysql_fetch_assoc($result)) {
+            $pumpConsign=($row[$temp]);
+        }
+        mysql_free_result($result);
+        
+        $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);
     }
-    $pumpConsign=0;
-    while ($row = mysql_fetch_assoc($result)) {
-        $pumpConsign=($row[$temp]);
-    }
-    mysql_free_result($result);
-    
-    
-    $lua = goLua("function run() return 'RETURNOK'; end",$materials,$pins,$luaFeedback);
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
 appendlog("CRONACTION",$answer,$state);
