@@ -63,7 +63,7 @@ if (!$result) {
         foreach (array("header,custom") as $scriptID) {
         
             // fetch lua code from database
-            $sql    = "SELECT lua from scripts where id='header'";
+            $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
             if (!$result) {
                 $answer="ERROR";
