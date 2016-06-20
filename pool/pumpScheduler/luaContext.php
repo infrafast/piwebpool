@@ -36,7 +36,7 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         $feedback= $lua->run();
         if (!$feedback) $feedback = "Runtime error";
     } catch (LuaException $e) {
-         $feedback= "coucou".$e->getMessage();
+         $feedback=$e->getMessage();
          return false;
     }
     return true;
