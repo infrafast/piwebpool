@@ -1,4 +1,3 @@
-
 <?php
 
 // inclure ici le fichier de la classe
@@ -13,6 +12,7 @@ function sendsms($message){
     }
     return true;
 }
+
 function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
