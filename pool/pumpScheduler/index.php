@@ -504,7 +504,7 @@ $table = new TableGear($options);
             
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setOutput(true, "Boolean");
+        this.setOutput(true, "Text");
         this.setColour(20);
         this.setTooltip('');
         this.setHelpUrl('http://www.example.com/');
