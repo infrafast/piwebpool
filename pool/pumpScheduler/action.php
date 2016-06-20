@@ -66,7 +66,7 @@ switch($_['action']){
     case 'resetSchedule':
         $result['state'] = "reset done";
 
-        $dbms_schema='scripts.sql';
+        $dbms_schema='resetSchedule.sql';
 
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
         mysql_select_db($options["database"]["name"]) or die('error database selection');
