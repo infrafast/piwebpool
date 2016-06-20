@@ -42,6 +42,26 @@ $temp=getPoolTemperature();
 
 
 
+$sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
+$result = mysql_query($sql, $link);
+
+if (!$result) {
+    echo "DB Error, could not query the database\n";
+    echo 'MySQL Error: ' . mysql_error();
+    exit;
+}
+
+$pumpConsign=0;
+while ($row = mysql_fetch_assoc($result)) {
+    $pumpConsign=($row[$temp]);
+}
+// treat error case of unfound timewindow in the table
+//if ($pumpConsign="")
+
+mysql_free_result($result);
+
+
+
 
 
 $answer="OK";
