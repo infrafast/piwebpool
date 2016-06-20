@@ -62,7 +62,6 @@ if (!$result) {
         $concat=array("header","footer");
         $i=0;
         foreach ($concat as $scriptID) {
-        
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
