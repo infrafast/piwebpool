@@ -432,8 +432,8 @@ $table = new TableGear($options);
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
         <block type="sensors"></block>
-        <block type="variables_set"><field name="VAR">variable</field></block>
-        <block type="variables_get"><field name="VAR">variable</field></block>
+        <block type="variables_set"><field name="VAR">info</field></block>
+        <block type="variables_get"><field name="VAR">info</field></block>
         <block type="on_off"></block>
         <block type="message"></block>
         <block type="text"></block>
@@ -499,7 +499,7 @@ $table = new TableGear($options);
       init: function() {
         this.appendValueInput("NAME")
             .setCheck("Number")
-            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"], ["info", "info"]]), "command");
+            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(20);
