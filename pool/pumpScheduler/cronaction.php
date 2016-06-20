@@ -76,7 +76,7 @@ if (!$result) {
                 mysql_free_result($result);
             }                
         }
-        foreach ($concat as $scriptID) {
+        foreach (array("main","customer") as $scriptID) {
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
