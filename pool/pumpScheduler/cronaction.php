@@ -69,10 +69,7 @@ if (!$result) {
                 $answer="ERROR";
                 $state=mysql_error();
             }else{
-                $luaCode="";
-                while ($row = mysql_fetch_assoc($result)) {
-                    $concat[$i++]=($row['lua']);
-                }
+                while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
                 mysql_free_result($result);
             }                
         }
