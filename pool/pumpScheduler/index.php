@@ -479,7 +479,6 @@ $table = new TableGear($options);
     Blockly.Blocks['sensors'] = {
       init: function() {
         this.appendDummyInput()
-            .appendField("etat")
             .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"]]), "select");
         this.setOutput(true, null);
         this.setColour(330);
