@@ -74,6 +74,7 @@ if (!$result) {
                 mysql_free_result($result);
             }                
         }
+        $luaFeedback="";
         foreach (array("main","custom") as $scriptID) {
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
