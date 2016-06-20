@@ -34,12 +34,9 @@ $temp=getPoolTemperature();
 //treat the case when the tw and temp are forced by user thru the GUI
 //in that case override the value here by these value
 //ensure the out of range is captured on client side
-
 //then treat the case where tw and temperature are out of range
 //e.g.: either get defaut values or raise email error notification
 //this would then capture the out of range above
-
-
 
 $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
 $result = mysql_query($sql, $link);
