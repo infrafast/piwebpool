@@ -86,7 +86,7 @@ if (!$result) {
             }else{
                 $luaCode="";
                 while ($row = mysql_fetch_assoc($result)) {
-                    $concat[$i++]=($row['lua']);
+                    $luaCode=($row['lua']);
                 }
                 mysql_free_result($result);
             }                
