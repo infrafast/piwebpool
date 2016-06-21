@@ -484,33 +484,6 @@ $tableSettings = new TableGear($optionsSet);
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
-
-
-<?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB1");
-$serial->confBaudRate(9600);
-$serial->deviceOpen();
-sleep(3);
-$serial->sendMessage("\r");
-$serial->readPort(3);
-$serial->sendMessage("R\r");
-sleep(1);
-echo "read:".$serial->readPort();
-$serial->deviceClose();
-?>
-
-
-
-
-
-
-
-
 <script>
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
