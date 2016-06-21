@@ -109,8 +109,8 @@ function getTemperature(){
 
 
 function getPh(){
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
+    //error_reporting(E_ALL);
+    //ini_set('display_errors', '1');
     $serial = new PhpSerial;
     $serial->deviceSet("/dev/ttyUSB1");
     $serial->confBaudRate(9600);
