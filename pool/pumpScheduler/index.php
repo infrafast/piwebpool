@@ -500,8 +500,8 @@ $serial->confBaudRate(9600);
 $serial->deviceOpen();
 $serial->sendMessage("\r");
 $serial->sendMessage("STATUS\r");
-$serial->deviceClose();
 echo "read:".$serial->readPort();
+$serial->deviceClose();
 ?>
 
 
