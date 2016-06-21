@@ -654,7 +654,7 @@ $tableSettings = new TableGear($optionsSet);
     getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
     getSetting("blocklyTableCollapse", document.getElementById('blocklyTable'));
     getSetting("logTableCollapse", document.getElementById('logTable'));
-    getSetting("settingsTableCollapse", document.getElementById('settingsTable'));
+    getSetting("settingsTableCollapse", document.getElementById('Parametres'));
 </script>
 
 
