@@ -356,16 +356,10 @@ $table = new TableGear($options);
 
 $optionsSet = array();
 $optionsSet["database"] = array();		    
-
-
-// Database host: if omitted defaults to localhost.
-$optionsSet["database"]["host"]        = $optionsSet["database"]["host"];
-
-// Basic database information. These are required.
-$optionsSet["database"]["name"]        = $optionsSet["database"]["name"];
-$optionsSet["database"]["username"]    = $optionsSet["database"]["username"];
-$optionsSet["database"]["password"]    = $optionsSet["database"]["password"] ;
-
+$optionsSet["database"]["host"]        = $options["database"]["host"];
+$optionsSet["database"]["name"]        = $options["database"]["name"];
+$optionsSet["database"]["username"]    = $options["database"]["username"];
+$optionsSet["database"]["password"]    = $options["database"]["password"] ;
 $optionsSet["database"]["table"]  = "settings";
 $optionsSet["pagination"] = array();
 $optionsSet["title"] = "Paramètres";
