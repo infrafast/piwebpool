@@ -434,7 +434,7 @@ $table = new TableGear($options);
         <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
         <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
         <br>
-        <textarea rows="17" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey"></textarea></div>
+        <textarea rows="16" cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey"></textarea></div>
      </td>
 </tr>
 </table>
