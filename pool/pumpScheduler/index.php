@@ -647,7 +647,7 @@ $tableSettings = new TableGear($optionsSet);
           alert( "Handler for .click() called." );
     });*/
     getSetting("actionTable", document.getElementById('actionTable'));
-    getSetting("scheduleTable", document.getElementById('Planificateur'));
+    getSetting("Planificateur", document.getElementById('Planificateur'));
     getSetting("sensorTable", document.getElementById('sensorTable'));
     getSetting("blocklyTable", document.getElementById('blocklyTable'));
     getSetting("logTable", document.getElementById('logTable'));
