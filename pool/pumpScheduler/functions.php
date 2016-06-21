@@ -115,7 +115,7 @@ function getPh(){
     $serial->deviceSet("/dev/ttyUSB1");
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
-    sleep(3);
+    sleep(1);
     $serial->sendMessage("\r");
     $serial->readPort(3);
     $serial->sendMessage("R\r");
