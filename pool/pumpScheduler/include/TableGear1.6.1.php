@@ -392,7 +392,7 @@ class TableGear
             $carat["html"] = "▲";
           }
         }
-        //$html = array(array("tag" => "span", "html" => $html), $carat);
+        if ($options["allowSpan"]) $html = array(array("tag" => "span", "html" => $html), $carat);
         if($this->pagination && $this->pagination["totalPages"] != 1){
           $href = $this->_modifyURIParams(array("sort" => $field, "desc" => $desc, "page" => null));
           $link = array("tag" => "a", "html" => $html, "attrib" => array("href" => $href));
