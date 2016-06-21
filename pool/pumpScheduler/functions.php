@@ -139,7 +139,7 @@ function getORP(){
     sleep(1);
     $ORP=$serial->readPort();
     $serial->deviceClose();    
-    return $ORP;    
+    return intval($ORP);    
    // return intval(rand(300,900));
 }
 
