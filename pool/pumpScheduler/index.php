@@ -498,7 +498,7 @@ $serial->deviceOpen();
 sleep(3);
 $serial->sendMessage("\r");
 $serial->readPort(3);
-$serial->sendMessage("STATUS\r");
+$serial->sendMessage("R\r");
 echo "read:".$serial->readPort();
 $serial->deviceClose();
 ?>
