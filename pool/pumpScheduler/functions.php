@@ -122,7 +122,7 @@ function getPh(){
     sleep(1);
     $ph=$serial->readPort();
     $serial->deviceClose();    
-    return round($ph, 1,PHP_ROUND_HALF_UP);
+    return round($ph, 2,PHP_ROUND_HALF_UP);
     //return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //rand(6,8);
 }
