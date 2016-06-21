@@ -94,7 +94,7 @@ sudo apt-get install php5-curl // used by netatmo
 sudo usermod -a -G dialout www-data    // this is to access the ttyUSB0 from apache
 
 
-You have to change the following line of code in the PhpSerial.php class
+DONE:   You have to change the following line of code in the PhpSerial.php class
 
 FROM:
 
