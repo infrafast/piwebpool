@@ -5,7 +5,7 @@ $('.header').click(function(){
     $(this).nextUntil('tr.header').slideToggle(); 
     var id=$(this).attr('id');
     var urlCall="./action.php?action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
-    alert('urlCall : '+urlCall);
+    //alert('urlCall : '+urlCall);
     $.ajax({
         type: "POST",
     	url: urlCall,
@@ -16,7 +16,7 @@ $('.header').click(function(){
 
 function getSetting(id,elem){
     var urlCall="./action.php?action=getSetting&id="+id;
-    alert('ajaxCall : '+urlCall);
+    //alert('ajaxCall : '+urlCall);
     $.ajax({
         type: "POST",
         url: urlCall,
