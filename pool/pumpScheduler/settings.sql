@@ -8,12 +8,12 @@ CREATE TABLE IF NOT EXISTS `settings` (
 
 INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('scheduler', 1, true, 'Activation planificateur filtration'),
-('logTableCollapse', 1, false, ''),
-('actionTableCollapse', 1, false, ''),
-('blocklyTableCollapse', 1, false, ''),
-('scheduleTableCollapse', 1, false, ''),
-('sensorTableCollapse', 0, false, ''),
-('settingsTableCollapse', 1, false, '');
+('logTable', 1, false, ''),
+('actionTable', 1, false, ''),
+('blocklyTable', 1, false, ''),
+('scheduleTable', 1, false, ''),
+('sensorTable', 0, false, ''),
+('Parametres', 1, false, '');
 
 
 ALTER TABLE `settings`
