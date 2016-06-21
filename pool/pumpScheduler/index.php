@@ -501,8 +501,7 @@ $serial->deviceOpen();
 $serial->sendMessage("\r");
 $serial->sendMessage("STATUS\r");
 $serial->deviceClose();
-
-echo $serial->readPort();
+echo "read:".$serial->readPort();
 ?>
 
 
