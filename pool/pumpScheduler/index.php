@@ -498,6 +498,7 @@ $serial->confBaudRate(9600);
 //$serial->confCharacterLength(8);
 //$serial->confStopBits(1);
 $serial->deviceOpen();
+$serial->sendMessage('\r');
 $serial->sendMessage("Hello from my PHP script, say hi back!");
 
 $serial->deviceClose();
