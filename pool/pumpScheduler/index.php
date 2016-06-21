@@ -491,7 +491,7 @@ $tableSettings = new TableGear($optionsSet);
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$serial = new phpSerial;
+$serial = new PhpSerial;
 $serial->deviceSet("/dev/ttyUSB0");
 $serial->confBaudRate(9600);
 //$serial->confParity("none");
