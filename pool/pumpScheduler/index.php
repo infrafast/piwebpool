@@ -484,8 +484,6 @@ $tableSettings = new TableGear($optionsSet);
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
-<?php echo exec('whoami')?>
-
 <script>
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
