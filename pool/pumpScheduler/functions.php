@@ -107,7 +107,7 @@ function getTemperature(){
     return rand(-4,32);
 }
 
-
+// use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
     //error_reporting(E_ALL);
     //ini_set('display_errors', '1');
