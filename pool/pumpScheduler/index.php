@@ -364,7 +364,7 @@ $optionsSet["database"]["table"]  = "settings";
 $optionsSet["pagination"] = array();
 $optionsSet["title"] = "Paramètres";
 $optionsSet["allowDelete"] = false;
-$options["tableID"]="settingsTable";
+$optionsSet["tableID"]="settingsTable";
 $optionsSet["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
 //$optionsSet["selects"] = array("below0" => array("on" => 1, "off" => 0)); 
 $optionsSet["selects"] = array(
