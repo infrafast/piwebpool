@@ -491,8 +491,7 @@ $tableSettings = new TableGear($optionsSet);
 
 <div><?= $tableSettings->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
+
 
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
