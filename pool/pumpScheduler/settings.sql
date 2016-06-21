@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `settings` (`id`, `value`) VALUES
-('scheduler', 1),
+('scheduler', 1, true, "Activation ),
 ('logTableCollapse', 1),
 ('actionTableCollapse', 1),
 ('blocklyTableCollapse', 1),
