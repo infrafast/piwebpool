@@ -454,11 +454,11 @@ $table = new TableGear($options);
 <tr><th>Action</th><th>Etat</th></tr>
 <tr>
     <td>RAZ Planificateur filtration</td>
-    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
+    <td><div onclick="" class="buttonState warning"></div></td>
 </tr>
 <tr>
     <td>Forcer rafraichissement</td>
-    <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
+    <td><div onclick="" class="buttonState refresh"></div></td>
 </tr>
 </table>
 
