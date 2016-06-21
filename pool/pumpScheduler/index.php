@@ -463,26 +463,6 @@ $tableSettings = new TableGear($optionsSet);
 </table>
 
 <table class="materialTab">
-<tr class="header" id="settingsTable">
-<td colspan="2"><b><span>-</span> Paramètres</b></td>
-</tr>
-<tr><th>Action</th><th>Etat</th></tr>
-<tr>
-    <td>Planificateur de filtration activé</td>
-    <td><div onclick="" class="buttonState on"></div></td>
-</tr>
-<tr>
-    <td>RAZ Planificateur filtration</td>
-    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
-</tr>
-<tr>
-    <td>Forcer rafraichissement</td>
-    <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
-</tr>
-</table>
-
-
-<table class="materialTab">
 <tr class="header" id="logTable">
 <td colspan="1"><b><span>-</span> Log</b></td>
 </tr>
