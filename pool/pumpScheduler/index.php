@@ -440,7 +440,7 @@ $table = new TableGear($options);
 </table>
 
 <table class="materialTab">
-<tr class="header" id="actionTable">
+<tr class="header" id="settingsTable">
 <td colspan="2"><b><span>-</span> Paramètres</b></td>
 </tr>
 <tr><th>Action</th><th>Etat</th></tr>
