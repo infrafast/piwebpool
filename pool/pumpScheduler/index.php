@@ -452,11 +452,6 @@ $table = new TableGear($options);
 <td colspan="2"><b><span>-</span> Paramètres</b></td>
 </tr>
 <tr><th>Action</th><th>Etat</th></tr>
-<?php foreach($materials as $material=>$pin){ ?>
-<tr>
-	<td><?php echo $material; ?></td>
-	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
-<?php } ?>
 <tr>
     <td>RAZ Planificateur filtration</td>
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
