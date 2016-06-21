@@ -4,7 +4,7 @@ $('.header').click(function(){
     $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
     var id=$(this).attr('id');
-    var urlCall="./action.php?action=updateSetting&id="+id+"Collapse"+"&value="+($(this).find('span').text()=='-'?'0':'1');
+    var urlCall="./action.php?action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
     //alert('urlCall : '+urlCall);
     $.ajax({
         type: "POST",
@@ -46,28 +46,31 @@ function changeState(pin,elem){
 	}});
 }
 
-function updateScript(xml,lua){
+function updateScript(xml,lua,script){
 	//alert(xml+" "+lua);
+	var result;
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=updateScript",
-			data:{id:'main',xml:xml,lua:lua},
+			data:{id:script,xml:xml,lua:lua},
+			async:false,
 			success: function(r){
-				var result = eval(r);
+				result = eval(r);
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
 				}
 	}});
+	return result.answer+" "+(result.state==true?"":result.state);
 }
 
 
 // the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
-function getScript(code){
+function getScript(code,script){
     var result;
 	$.ajax({
 		type: "POST",
-		url: "./action.php?action=getScript&id=main",
-		data:{code:code},
+		url: "./action.php?action=getScript",
+		data:{id:script,code:code},
 		async:false,
 		success: function(r){
 			result = eval(r);
