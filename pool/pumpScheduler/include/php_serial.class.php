@@ -45,7 +45,7 @@ class PhpSerial
                 register_shutdown_function(array($this, "deviceClose"));
             } else {
                 trigger_error(
-                    "No stty availible, unable to run.",
+                    "No stty availaible, unable to run.",
                     E_USER_ERROR
                 );
             }
