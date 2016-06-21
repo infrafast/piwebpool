@@ -22,8 +22,6 @@ $options["database"]["table"]  = "pumpSchedule";
 
 $options["pagination"] = array();
 $options["title"] = "Planificateur filtration";
-
-
 // -- Row Deletion
 //
 // allowDelete     = Let rows be deleted from the database.
@@ -353,6 +351,41 @@ $table = new TableGear($options);
 // you MUST include "SQL_CALC_FOUND_ROWS" after the SELECT clause and not have any LIMIT or ORDER BY clauses!
 //
 // $table->fetchData("SELECT SQL_CALC_FOUND_ROWS <FIELD1>,<FIELD2> FROM <DATABASE_TABLE> WHERE <etc..>");
+
+$optionsSet["database"]["table"]  = "pumpSchedule";
+$optionsSet["pagination"] = array();
+$optionsSet["title"] = "Planificateur filtration";
+$optionsSet["allowDelete"] = false;
+$optionsSet["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
+//$optionsSet["selects"] = array("below0" => array("on" => 1, "off" => 0)); 
+$optionsSet["selects"] = array(
+	"below0" => array("on" => 1, "off" => 0),
+	"0to2" => array("on" => 1, "off" => 0),
+	"2to4" => array("on" => 1, "off" => 0),
+	"4to6" => array("on" => 1, "off" => 0),
+	"6to8" => array("on" => 1, "off" => 0),
+	"8to10" => array("on" => 1, "off" => 0),
+	"10to12" => array("on" => 1, "off" => 0),
+	"12to14" => array("on" => 1, "off" => 0),
+	"14to16" => array("on" => 1, "off" => 0),
+	"16to18" => array("on" => 1, "off" => 0),
+	"18to20" => array("on" => 1, "off" => 0),
+	"20to22" => array("on" => 1, "off" => 0),
+	"22to24" => array("on" => 1, "off" => 0),
+	"24to26" => array("on" => 1, "off" => 0),
+	"26to28" => array("on" => 1, "off" => 0),
+	"above28" => array("on" => 1, "off" => 0)
+); 
+$optionsSet["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$optionsSet["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$table = new TableGear($optionsSet);
+
+
+
+
+
+
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
