@@ -484,6 +484,34 @@ $tableSettings = new TableGear($optionsSet);
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
+
+
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+$serial = new phpSerial;
+$serial->deviceSet("/dev/ttyAMA0");
+$serial->confBaudRate(115200);
+$serial->confParity("none");
+$serial->confCharacterLength(8);
+$serial->confStopBits(1);
+$serial->deviceOpen();
+$serial->sendMessage("Hello from my PHP script, say hi back!");
+
+$serial->deviceClose();
+
+echo "I've sended a message! \n\r";
+?>
+
+
+
+
+
+
+
+
 <script>
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
