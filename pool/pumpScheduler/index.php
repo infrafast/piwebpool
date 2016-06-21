@@ -383,14 +383,6 @@ $table = new TableGear($options);
 	<td><?php echo $material; ?></td>
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
 <?php } ?>
-<tr>
-    <td>RAZ Planificateur filtration</td>
-    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
-</tr>
-<tr>
-    <td>Forcer rafraichissement</td>
-    <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
-</tr>
 </table>
 
 <table class="materialTab">
@@ -453,12 +445,16 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Action</th><th>Etat</th></tr>
 <tr>
-    <td>Planificateur filtration activé</td>
+    <td>Planificateur de filtration activé</td>
     <td><div onclick="" class="buttonState on"></div></td>
 </tr>
 <tr>
+    <td>RAZ Planificateur filtration</td>
+    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
+</tr>
+<tr>
     <td>Forcer rafraichissement</td>
-    <td><div onclick="" class="buttonState refresh"></div></td>
+    <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
 </tr>
 </table>
 
@@ -650,7 +646,5 @@ $table = new TableGear($options);
 
 </body>
 </html>
-
-
 
 
