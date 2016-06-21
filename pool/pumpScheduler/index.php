@@ -367,12 +367,6 @@ $optionsSet["transform"]["below0"] = array("tag" => "img","attrib" => array("src
 $optionsSet["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $tableSettings = new TableGear($optionsSet);
 
-
-
-
-
-
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -489,6 +483,9 @@ $tableSettings = new TableGear($optionsSet);
 
 
 <div><?= $table->getTable() ?></div>
+<?= $table->getJavascript("jquery") ?>
+
+<div><?= $tableSettings->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
 <script src="js/jquery.min.js"></script>
