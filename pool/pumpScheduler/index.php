@@ -6,7 +6,7 @@ require_once('functions.php');
 
 include("include/TableGear1.6.1.php");
 
-$options["database"]["table"]  = "pumpSchedule";
+$options["database"]["table"]  = "Planificateur";
 
 //
 // TableGear Usage:
@@ -337,8 +337,6 @@ $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" 
 //             linkCount = 2, 10 pages, current page = 5 will result in:   3 4 5 6 7
 //             linkCount = 2, 10 pages, current page = 9 will result in:   7 8 9 10
 //             etc...
-
-$options["tableID"]="scheduleTable";
 // $options["pagination"]["perPage"] = 10;  // 10 rows per page.
 // $options["pagination"]["prev"] = "prev"; // "prev" link will be shown.
 // $options["pagination"]["next"] = "next"; // "next" link will be shown.
