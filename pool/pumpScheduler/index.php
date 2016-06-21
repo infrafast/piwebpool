@@ -651,7 +651,7 @@ $tableSettings = new TableGear($optionsSet);
     getSetting("sensorTable", document.getElementById('sensorTable'));
     getSetting("blocklyTable", document.getElementById('blocklyTable'));
     getSetting("logTable", document.getElementById('logTable'));
-    getSetting("settingsTable", document.getElementById('Parametres'));
+    getSetting("Parametres", document.getElementById('Parametres'));
 </script>
 
 
