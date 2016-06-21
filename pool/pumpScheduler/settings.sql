@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `description` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `settings` (`id`, `value`) VALUES
+INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('scheduler', 1, true, 'Activation planificateur filtration'),
 ('logTableCollapse', 1, false, ''),
 ('actionTableCollapse', 1, false, ''),
