@@ -11,7 +11,7 @@ INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('logTable', 1, false, ''),
 ('actionTable', 1, false, ''),
 ('blocklyTable', 1, false, ''),
-('scheduleTable', 1, false, ''),
+('Planificateur', 1, false, ''),
 ('sensorTable', 0, false, ''),
 ('Parametres', 1, false, '');
 
