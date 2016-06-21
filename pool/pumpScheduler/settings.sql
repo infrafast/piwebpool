@@ -7,13 +7,13 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `settings` (`id`, `value`) VALUES
-('scheduler', 1, true, "Activation ),
-('logTableCollapse', 1),
-('actionTableCollapse', 1),
-('blocklyTableCollapse', 1),
-('scheduleTableCollapse', 1),
-('sensorTableCollapse', 0),
-('settingsTableCollapse', 1);
+('scheduler', 1, true, 'Activation planificateur filtration'),
+('logTableCollapse', 1, false, ''),
+('actionTableCollapse', 1, false, ''),
+('blocklyTableCollapse', 1, false, ''),
+('scheduleTableCollapse', 1, false, ''),
+('sensorTableCollapse', 0, false, ''),
+('settingsTableCollapse', 1, false, '');
 
 
 ALTER TABLE `settings`
