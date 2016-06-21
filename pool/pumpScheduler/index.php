@@ -361,19 +361,6 @@ $optionsSet["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
 $optionsSet["selects"] = array(
 	"below0" => array("on" => 1, "off" => 0),
 	"0to2" => array("on" => 1, "off" => 0),
-	"2to4" => array("on" => 1, "off" => 0),
-	"4to6" => array("on" => 1, "off" => 0),
-	"6to8" => array("on" => 1, "off" => 0),
-	"8to10" => array("on" => 1, "off" => 0),
-	"10to12" => array("on" => 1, "off" => 0),
-	"12to14" => array("on" => 1, "off" => 0),
-	"14to16" => array("on" => 1, "off" => 0),
-	"16to18" => array("on" => 1, "off" => 0),
-	"18to20" => array("on" => 1, "off" => 0),
-	"20to22" => array("on" => 1, "off" => 0),
-	"22to24" => array("on" => 1, "off" => 0),
-	"24to26" => array("on" => 1, "off" => 0),
-	"26to28" => array("on" => 1, "off" => 0),
 	"above28" => array("on" => 1, "off" => 0)
 ); 
 $optionsSet["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
