@@ -384,10 +384,6 @@ $table = new TableGear($options);
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
 <?php } ?>
 <tr>
-    <td>Execution sequence</td>
-    <td><div onclick="scenario();" class="buttonState play"></div></td>
-</tr>
-<tr>
     <td>RAZ Planificateur filtration</td>
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
 </tr>
