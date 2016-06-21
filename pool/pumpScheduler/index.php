@@ -498,6 +498,7 @@ $serial->confBaudRate(9600);
 //$serial->confCharacterLength(8);
 //$serial->confStopBits(1);
 $serial->deviceOpen();
+sleep(3);//delay
 $serial->sendMessage("\r");
 $serial->sendMessage("STATUS\r");
 echo "read:".$serial->readPort();
