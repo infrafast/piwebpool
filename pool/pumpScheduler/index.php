@@ -5,7 +5,7 @@ require_once('configuration.php');
 require_once('functions.php');
 
 include("include/TableGear1.6.1.php");
-include("include/PHPSeriql.php");
+include("include/php_serial.class.php");
 $options["database"]["table"]  = "pumpSchedule";
 
 //
