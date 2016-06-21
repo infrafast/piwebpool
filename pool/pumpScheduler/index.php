@@ -495,7 +495,7 @@ $serial = new PhpSerial;
 $serial->deviceSet("/dev/ttyUSB0");
 $serial->confBaudRate(9600);
 $serial->deviceOpen();
-sleep(3);//delay
+sleep(3);
 $serial->sendMessage("\r");
 $serial->readPort(3);
 $serial->sendMessage("STATUS\r");
