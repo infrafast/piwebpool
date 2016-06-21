@@ -502,7 +502,7 @@ $serial->sendMessage("\r");
 $serial->sendMessage("STATUS\r");
 $serial->deviceClose();
 
-echo ;
+echo $serial->readPort();
 ?>
 
 
