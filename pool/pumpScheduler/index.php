@@ -337,8 +337,6 @@ $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" 
 //             linkCount = 2, 10 pages, current page = 5 will result in:   3 4 5 6 7
 //             linkCount = 2, 10 pages, current page = 9 will result in:   7 8 9 10
 //             etc...
-
-$options["tableID"]="scheduleTable";
 // $options["pagination"]["perPage"] = 10;  // 10 rows per page.
 // $options["pagination"]["prev"] = "prev"; // "prev" link will be shown.
 // $options["pagination"]["next"] = "next"; // "next" link will be shown.
@@ -362,9 +360,8 @@ $optionsSet["database"]["username"]    = $options["database"]["username"];
 $optionsSet["database"]["password"]    = $options["database"]["password"] ;
 $optionsSet["database"]["table"]  = "settings";
 $optionsSet["pagination"] = array();
-$optionsSet["title"] = "settingsTable";
+$optionsSet["title"] = "Parametres";
 $optionsSet["allowDelete"] = false;
-$optionsSet["tableID"]="settingsTable";
 $optionsSet["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
 //$optionsSet["selects"] = array("below0" => array("on" => 1, "off" => 0)); 
 $optionsSet["selects"] = array(
