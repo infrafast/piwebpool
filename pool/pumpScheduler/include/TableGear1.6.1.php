@@ -55,6 +55,7 @@ class TableGear
     if(!isset($options["editable"]))    $options["editable"] = "allExceptAutoIncrement";
     if(!isset($options["sortable"]))    $options["sortable"] = "all";
     if(!isset($options["allowDelete"])) $options["allowDelete"] = true;
+    if(!isset($options["allowSpan"])) $options["allowSpan"] = true;
     return $options;
   }
 
