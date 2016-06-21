@@ -8,9 +8,9 @@ INSERT INTO `settings` (`id`, `value`) VALUES
 ('scheduler', 1),
 ('logTableCollapse', 1),
 ('actionTableCollapse', 1),
-('blocklyTableCollapse', 0),
+('blocklyTableCollapse', 1),
 ('scheduleTableCollapse', 1),
-('sensorTableCollapse', 1),
+('sensorTableCollapse', 0),
 ('settingsTableCollapse', 1);
 
 
