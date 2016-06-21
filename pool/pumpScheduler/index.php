@@ -453,7 +453,7 @@ $table = new TableGear($options);
 </tr>
 <tr><th>Action</th><th>Etat</th></tr>
 <tr>
-    <td>Planificateur filtration activé</td>
+    <td>Planificateur de filtration activé</td>
     <td><div onclick="" class="buttonState on"></div></td>
 </tr>
 <tr>
