@@ -2,6 +2,7 @@
 
 // inclure ici le fichier de la classe
 require "include/FreeSMS.php";
+include("include/php_serial.class.php");
 
 function sendsms($message){
     $SMSuser = "19107501";
