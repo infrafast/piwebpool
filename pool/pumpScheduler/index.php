@@ -646,12 +646,12 @@ $tableSettings = new TableGear($optionsSet);
  /* $( "#actionTable" ).click(function() {
           alert( "Handler for .click() called." );
     });*/
-    getSetting("actionTableCollapse", document.getElementById('actionTable'));
-    getSetting("scheduleTableCollapse", document.getElementById('Planificateur'));
-    getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
-    getSetting("blocklyTableCollapse", document.getElementById('blocklyTable'));
-    getSetting("logTableCollapse", document.getElementById('logTable'));
-    getSetting("settingsTableCollapse", document.getElementById('Parametres'));
+    getSetting("actionTable", document.getElementById('actionTable'));
+    getSetting("scheduleTable", document.getElementById('Planificateur'));
+    getSetting("sensorTable", document.getElementById('sensorTable'));
+    getSetting("blocklyTable", document.getElementById('blocklyTable'));
+    getSetting("logTable", document.getElementById('logTable'));
+    getSetting("settingsTable", document.getElementById('Parametres'));
 </script>
 
 
