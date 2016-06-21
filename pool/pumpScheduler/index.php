@@ -352,9 +352,23 @@ $table = new TableGear($options);
 //
 // $table->fetchData("SELECT SQL_CALC_FOUND_ROWS <FIELD1>,<FIELD2> FROM <DATABASE_TABLE> WHERE <etc..>");
 
-$optionsSet["database"]["table"]  = "pumpSchedule";
+
+
+$optionsSet = array();
+$optionsSet["database"] = array();		    
+
+
+// Database host: if omitted defaults to localhost.
+$optionsSet["database"]["host"]        = $optionsSet["database"]["host"];
+
+// Basic database information. These are required.
+$optionsSet["database"]["name"]        = $optionsSet["database"]["name"];
+$optionsSet["database"]["username"]    = $optionsSet["database"]["username"];
+$optionsSet["database"]["password"]    = $optionsSet["database"]["password"] ;
+
+$optionsSet["database"]["table"]  = "settings";
 $optionsSet["pagination"] = array();
-$optionsSet["title"] = "Planificateur filtration";
+$optionsSet["title"] = "Paramètres";
 $optionsSet["allowDelete"] = false;
 $optionsSet["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
 //$optionsSet["selects"] = array("below0" => array("on" => 1, "off" => 0)); 
