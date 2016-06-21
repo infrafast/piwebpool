@@ -6,7 +6,7 @@ require_once('functions.php');
 
 include("include/TableGear1.6.1.php");
 
-$options["database"]["table"]  = "Planificateur";
+$options["database"]["table"]  = "pumpSchedule";
 
 //
 // TableGear Usage:
@@ -21,7 +21,7 @@ $options["database"]["table"]  = "Planificateur";
 //
 
 $options["pagination"] = array();
-$options["title"] = "scheduleTable";
+$options["title"] = "Planificateur";
 // -- Row Deletion
 //
 // allowDelete     = Let rows be deleted from the database.
