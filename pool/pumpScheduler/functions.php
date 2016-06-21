@@ -108,7 +108,22 @@ function getTemperature(){
 
 
 function getPh(){
-    return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+    
+    $serial = new PhpSerial;
+    $serial->deviceSet("/dev/ttyUSB1");
+    $serial->confBaudRate(9600);
+    $serial->deviceOpen();
+    sleep(3);
+    $serial->sendMessage("\r");
+    $serial->readPort(3);
+    $serial->sendMessage("R\r");
+    sleep(1);
+    $ph=$serial->readPort();
+    $serial->deviceClose();    
+    return $ph;
+    //return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //rand(6,8);
 }
 
