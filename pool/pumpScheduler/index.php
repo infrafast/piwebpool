@@ -365,7 +365,7 @@ $optionsSet["selects"] = array(
 ); 
 $optionsSet["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $optionsSet["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
-$table = new TableGear($optionsSet);
+$tableSettings = new TableGear($optionsSet);
 
 
 
