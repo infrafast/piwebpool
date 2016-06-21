@@ -489,16 +489,14 @@ $tableSettings = new TableGear($optionsSet);
 <tr><td width="100%"><textarea cols="100" id="logFile" readonly style="color: grey; background-color: lightgrey width: 100%; height: 150px;"></textarea></td></tr>
 </table>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
-
 <div><?= $tableSettings->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
 
-
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
 
 <script>
     // retrieve logfile
