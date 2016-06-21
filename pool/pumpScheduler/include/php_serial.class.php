@@ -41,11 +41,11 @@ class PhpSerial
         $sysName = php_uname();
         if (substr($sysName, 0, 5) === "Linux") {
             $this->_os = "linux";
-            if ($this->_exec("stty") === 0) {
+            if ($this->_exec("stty --version") === 0) {
                 register_shutdown_function(array($this, "deviceClose"));
             } else {
                 trigger_error(
-                    "No stty availaible, unable to run.",
+                    "No stty availible, unable to run.",
                     E_USER_ERROR
                 );
             }
