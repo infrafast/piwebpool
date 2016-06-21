@@ -489,7 +489,7 @@ class TableGear
     $this->_openTag("table class='materialTab'", array("id" => $this->table["id"], "class" => $this->table["class"]));
     $headers = $this->_fetchHeaders();
     if($headers || $this->title){
-      $this->_outputHeaders($headers, true,"tutu" );
+      $this->_outputHeaders($headers, true,$options["tableID"] );
     }
     if($this->footers || $this->totals || $this->addNewRows){
       $this->_openTag("tfoot");
