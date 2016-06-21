@@ -500,10 +500,9 @@ $serial->confBaudRate(9600);
 $serial->deviceOpen();
 $serial->sendMessage("\r");
 $serial->sendMessage("STATUS\r");
-
 $serial->deviceClose();
 
-echo "I've sended a message! \n\r";
+echo ;
 ?>
 
 
