@@ -10,7 +10,8 @@ INSERT INTO `settings` (`id`, `value`) VALUES
 ('actionTableCollapse', 1),
 ('blocklyTableCollapse', 0),
 ('scheduleTableCollapse', 1),
-('sensorTableCollapse', 1);
+('sensorTableCollapse', 1),
+('settingsTableCollapse', 1);
 
 
 ALTER TABLE `settings`
