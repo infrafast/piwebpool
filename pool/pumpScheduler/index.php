@@ -391,10 +391,6 @@ $table = new TableGear($options);
     <td>Forcer rafraichissement</td>
     <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
 </tr>
-<tr>
-    <td>Planificateur</td>
-    <td><div onclick=""></div></td>
-</tr>
 </table>
 
 <table class="materialTab">
