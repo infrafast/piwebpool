@@ -650,7 +650,7 @@ $tableSettings = new TableGear($optionsSet);
           alert( "Handler for .click() called." );
     });*/
     getSetting("actionTableCollapse", document.getElementById('actionTable'));
-    getSetting("scheduleTableCollapse", document.getElementById('scheduleTable'));
+    getSetting("scheduleTableCollapse", document.getElementById('Planificateur'));
     getSetting("sensorTableCollapse", document.getElementById('sensorTable'));
     getSetting("blocklyTableCollapse", document.getElementById('blocklyTable'));
     getSetting("logTableCollapse", document.getElementById('logTable'));
