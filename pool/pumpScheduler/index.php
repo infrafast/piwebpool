@@ -664,7 +664,6 @@ $tableSettings = new TableGear($optionsSet);
     getSetting("Parametres", document.getElementById('Parametres'));
 </script>
 
-
 </body>
 </html>
 
