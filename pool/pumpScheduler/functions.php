@@ -46,7 +46,7 @@ function doGraph(){
     $graph = new verticalLineGraph();
 
     //Parse
-    imagepng($graph->parseCompare($data1, $data2, $cfg));
+    imagepng($graph->parseCompare($data1, $data2, $cfg),"measures.png");
 }
 
 
