@@ -4,8 +4,6 @@
 require_once('configuration.php');
 require_once('functions.php');
 include("include/TableGear1.6.1.php");
-include_once('include/phpMyGraph5.0.php'); 
-
 
 $options["database"]["table"]  = "pumpSchedule";
 
