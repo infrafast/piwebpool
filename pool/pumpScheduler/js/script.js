@@ -139,6 +139,8 @@ function resetSchedule(){
     
 function refreshValue(elem,action){
 	var urlCall = "./action.php?action=get"+action;
+	$(elem).removeClass('off');
+	$(elem).addClass('loading');
 	//alert("refresh "+urlCall);
 	$.ajax({
 			type: "POST",
@@ -146,6 +148,8 @@ function refreshValue(elem,action){
 			async:false,
 			success: function(r){
 				var result = eval(r);
+				$(elem).removeClass('loading');
+				$(elem).addClass('off');
 				if(result.answer == "OK"){          
 				    $(elem).text(result.state);
 				}else{
