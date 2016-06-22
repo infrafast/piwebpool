@@ -474,7 +474,7 @@ $tableSettings = new TableGear($optionsSet);
 <tr><th>Valeur</th></tr>
 <tr><td width="100%">
 <div class="container">
-    <textarea class="text" id="logfild"/></textarea>
+    <textarea class="text" id="logfile"/></textarea>
 </div>
 </td></tr>
 </table>
