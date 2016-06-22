@@ -423,23 +423,18 @@ $tableSettings = new TableGear($optionsSet);
 
 <table class="materialTab">
 <tr class="header" id="sensorTable">
-<td colspan="2"><b><span>-</span> Mesures</b></td>
+<td colspan="3"><b><span>-</span> Mesures</b></td>
 </tr>
-<tr><th>Sonde</th><th>Valeur</th></tr>
+<tr><th>Ph</th><th>Redox</th><th>Temperature</th></tr>
 <tr>
-    <td>PH</td>
     <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
-</tr>
-<tr>
-    <td>Redox (mV)</td>
     <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
-</tr>
-<tr>
-    <td>Temperature (°C)</td>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr>
-<td><img src="graph.php?data=someData" alt="Example code"></td>
+    <td><img src="graph.php?graph=ph" alt="Example code"></td>
+    <td><img src="graph.php?graph=orp" alt="Example code"></td>
+    <td><img src="graph.php?graph=temperature" alt="Example code"></td>
 </tr>
 </table>
 
