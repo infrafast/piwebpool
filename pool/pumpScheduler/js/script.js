@@ -146,8 +146,6 @@ function refreshValue(elem,action){
 			async:false,
 			success: function(r){
 				var result = eval(r);
-				$(elem).removeClass('loading');
-				$(elem).addClass('off');
 				if(result.answer == "OK"){          
 				    $(elem).text(result.state);
 				}else{
