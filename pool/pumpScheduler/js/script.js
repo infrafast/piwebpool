@@ -11,6 +11,7 @@ $('.header').click(function(){
     	url: urlCall,
     	async:false,
         success: function(r){
+
     }});
 });
 
@@ -30,12 +31,16 @@ function getSetting(id,elem){
 function changeState(pin,elem){
 	var newState = ($(elem).hasClass('on')?0:1); 
 	//alert('changeState : pin'+pin+" value"+newState);
+	$(elem).removeClass('off');
+	$(elem).addClass('loading');
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=changeState",
 			data:{pin:pin,state:newState},
 			success: function(r){
 				var result = eval(r);
+				$(elem).removeClass('loading');
+				$(elem).addClass('off');				
 				if(result.state == 1){          
 					$(elem).removeClass('on');
 					$(elem).removeClass('off');
@@ -141,6 +146,8 @@ function refreshValue(elem,action){
 			async:false,
 			success: function(r){
 				var result = eval(r);
+				$(elem).removeClass('loading');
+				$(elem).addClass('off');
 				if(result.answer == "OK"){          
 				    $(elem).text(result.state);
 				}else{
