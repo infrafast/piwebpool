@@ -7,7 +7,7 @@ include_once('include/phpMyGraph5.0.php');
 
 function doGraph(){
 //Set config directives
-    header("Content-type: image/png");
+
     $cfg['title'] = 'Example graph';
     $cfg['width'] = 500;
     $cfg['height'] = 250;
