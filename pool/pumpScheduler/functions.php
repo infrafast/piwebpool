@@ -113,11 +113,11 @@ function readSensor($device){
     $serial->deviceSet($device);
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
-    sleep(2);
+    sleep(1);
     $serial->sendMessage("\r");
     $serial->readPort(3);
     $serial->sendMessage("R\r");
-    sleep(2);
+    sleep(1);
     $val=$serial->readPort();
     $serial->deviceClose();    
     return $val;  
