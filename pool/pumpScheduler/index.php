@@ -411,6 +411,15 @@ $tableSettings = new TableGear($optionsSet);
     <td>Forcer rafraichissement</td>
     <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
 </tr>
+<tr>
+    <td>Calibrer sonde Ph (valeur: 7)</td>
+    <td><div onclick="" class="buttonState play"></div></td>
+</tr>
+<tr>
+    <td>Calibrer sonde Redox (valeur: 650mv)</td>
+    <td><div onclick="" class="buttonState play"></div></td>
+</tr>
+
 </table>
 
 <table class="materialTab">
