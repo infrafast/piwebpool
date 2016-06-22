@@ -107,12 +107,9 @@ function getTemperature(){
     return rand(-4,32);
 }
 
-// use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
-function getPh(){
-    //error_reporting(E_ALL);
-    //ini_set('display_errors', '1');
+function readSensor($device){
     $serial = new PhpSerial;
-    $serial->deviceSet("/dev/ttyUSB1");
+    $serial->deviceSet($device);
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
     sleep(1);
@@ -120,9 +117,15 @@ function getPh(){
     $serial->readPort(3);
     $serial->sendMessage("R\r");
     sleep(1);
-    $ph=$serial->readPort();
+    $val=$serial->readPort();
     $serial->deviceClose();    
-    return round($ph, 2,PHP_ROUND_HALF_UP);
+    return $val;  
+}
+
+
+// use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
+function getPh(){
+    return round(readSensor(), 2,PHP_ROUND_HALF_UP);  
     //return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //rand(6,8);
 }
