@@ -90,7 +90,7 @@ if (!$result) {
             $lua = goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback);                
         }
     }
-    doGraph();
+    echo "<img src='graph.php'></img>";
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
 appendlog("CRONACTION",$answer,$state);
