@@ -490,11 +490,11 @@ $tableSettings = new TableGear($optionsSet);
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
+<img src="graph.php?data=someData" alt="Example code">
+
 <script>
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
-
-
     //setup Blockly for LUA
     Blockly.Blocks['sensors'] = {
       init: function() {
