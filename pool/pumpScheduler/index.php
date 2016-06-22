@@ -462,7 +462,7 @@ $tableSettings = new TableGear($optionsSet);
         <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
         <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
         <br>
-        <textarea cols="35" id="scriptarea" readonly style="color: grey; background-color: lightgrey; height: 100%;"></textarea></div>
+        <textarea cols="35" rows="18" id="scriptarea" readonly style="color: grey; background-color: lightgrey;"></textarea></div>
      </td>
 </tr>
 </table>
