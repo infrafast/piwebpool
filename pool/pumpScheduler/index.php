@@ -463,6 +463,7 @@ $tableSettings = new TableGear($optionsSet);
         <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
         <br>
         <textarea cols="35" rows="24" id="scriptarea" readonly style="color: grey; background-color: lightgrey;"></textarea></div>
+        <input type="button" value="executer" onclick="">
      </td>
 </tr>
 </table>
