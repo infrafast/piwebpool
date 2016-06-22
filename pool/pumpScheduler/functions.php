@@ -46,7 +46,7 @@ header("Content-type: image/png");
     $graph = new verticalLineGraph();
 
     //Parse
-    imagepng($graph->parseCompare($data1, $data2, $cfg),"measures.png");
+    $graph->parseCompare($data1, $data2, $cfg);
 }
 
 
