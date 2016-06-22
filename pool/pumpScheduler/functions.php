@@ -26,7 +26,7 @@ function appendlualog($message){
 }
 
 function appendlog($source,$answer,$status){
-    return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".$source.' ' .html_entity_decode($answer)."][".$status."]\n" , FILE_APPEND | LOCK_EX);
+    return file_put_contents("logfile.txt", "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
 }
 
 function getLog($lines = 10){
