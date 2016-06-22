@@ -473,9 +473,7 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th>Valeur</th></tr>
 <tr><td width="100%">
-<div class="textareacontainer">
     <textarea id="logfile"></textarea>
-</div>
 </td></tr>
 </table>
 
