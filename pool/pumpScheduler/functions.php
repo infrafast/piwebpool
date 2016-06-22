@@ -131,18 +131,7 @@ function getPh(){
 }
 
 function getORP(){
-    $serial = new PhpSerial;
-    $serial->deviceSet("/dev/ttyUSB0");
-    $serial->confBaudRate(9600);
-    $serial->deviceOpen();
-    sleep(1);
-    $serial->sendMessage("\r");
-    $serial->readPort(3);
-    $serial->sendMessage("R\r");
-    sleep(1);
-    $ORP=$serial->readPort();
-    $serial->deviceClose();    
-    return intval($ORP);    
+    return intval(readSensor("/dev/ttyUSB0"));    
    // return intval(rand(300,900));
 }
 
