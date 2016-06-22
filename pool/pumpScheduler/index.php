@@ -484,13 +484,10 @@ $tableSettings = new TableGear($optionsSet);
 <tr><th>Valeur</th></tr>
 <tr><td width="100%"><textarea id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
 </table>
-
 <div><?= $table->getTable() ?></div>
 <?= $table->getJavascript("jquery") ?>
-
 <div><?= $tableSettings->getTable() ?></div>
 <?= $tableSettings->getJavascript("jquery") ?>
-
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
