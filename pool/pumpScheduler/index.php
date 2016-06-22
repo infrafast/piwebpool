@@ -438,6 +438,9 @@ $tableSettings = new TableGear($optionsSet);
     <td>Temperature (°C)</td>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
+<tr>
+
+</tr>
 </table>
 
 <table class="materialTab">
