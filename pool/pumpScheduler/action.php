@@ -136,7 +136,7 @@ switch($_['action']){
         }else{
             $result['state'] = $outcome;
         }       
-        mysql_free_result($outcome);
+        //mysql_free_result($outcome);
     break;
     
     case 'getSetting':
