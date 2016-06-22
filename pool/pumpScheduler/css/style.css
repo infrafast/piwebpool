@@ -157,3 +157,18 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 .hidden{
 	display:none;
 }
+
+.container{
+  padding: 10px;
+  border: 1px solid silver
+}
+
+.container .text{
+  resize: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  height: 100%;
+  margin: -10px;
+}
