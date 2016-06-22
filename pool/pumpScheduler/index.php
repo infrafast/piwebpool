@@ -472,10 +472,8 @@ $tableSettings = new TableGear($optionsSet);
 <td colspan="1"><b><span>-</span> Log</b></td>
 </tr>
 <tr><th>Valeur</th></tr>
-<tr><td width="100%">
-<div class="container">
+<tr><td width="100%" class="container">
     <textarea class="text" id="logfile"/></textarea>
-</div>
 </td></tr>
 </table>
 
