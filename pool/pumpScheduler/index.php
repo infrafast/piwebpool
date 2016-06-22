@@ -494,6 +494,7 @@ $tableSettings = new TableGear($optionsSet);
 
 <?php
 //Set config directives
+    header("Content-type: image/png");
     $cfg['title'] = 'Example graph';
     $cfg['width'] = 500;
     $cfg['height'] = 250;
