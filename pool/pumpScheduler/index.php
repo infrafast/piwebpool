@@ -439,7 +439,7 @@ $tableSettings = new TableGear($optionsSet);
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr>
-
+    <img src="graph.php?data=someData" alt="Example code">
 </tr>
 </table>
 
