@@ -533,7 +533,7 @@ $tableSettings = new TableGear($optionsSet);
     $graph = new verticalLineGraph();
 
     //Parse
-    $graph->parseCompare($data1, $data2, $cfg); 
+    imagepng($graph->parseCompare($data1, $data2, $cfg));
 ?>
 
 
