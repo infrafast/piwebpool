@@ -4,8 +4,8 @@ include_once('include/phpMyGraph5.0.php');
 //Set config directives
 header("Content-type: image/png");
     //$cfg['title'] = 'Example graph';
-    $cfg['width'] = 500;
-    $cfg['height'] = 250;
+    $cfg['width'] = 640;
+    $cfg['height'] = 480;
     
     //Set data 1
     $data1 = array(
