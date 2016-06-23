@@ -105,6 +105,7 @@ if (!$result) {
         while ($row = mysql_fetch_assoc($result)) {
             $measureIndex=($row['value']);
         }    
+        mysql_free_result($result);
     }
     
     
