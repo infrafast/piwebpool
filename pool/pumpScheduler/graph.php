@@ -46,4 +46,5 @@ $graph = new phpMyGraph();
 
 //Parse
 $graph->parseVerticalLineGraph($data,$cfg);
+$graph->parseVerticalSimpleColumnGraph($data,$cfg);
 ?>
