@@ -7,7 +7,7 @@ $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['average-line-visible']=false;
 $cfg['label-visible']=false;
-$cfg['value-label-visible']=false;
+//$cfg['value-label-visible']=false;
 //$cfg['key-visible']=false;
 //$cfg['label']=$_GET["period"];
 
