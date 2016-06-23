@@ -113,6 +113,8 @@ if (!$result) {
     $tempartureValue = getTemperature();
     $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
+        
+    $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
     
     $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$ORPValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME;";
     $result = mysql_query($sql, $link);
