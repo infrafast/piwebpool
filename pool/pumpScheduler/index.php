@@ -445,7 +445,7 @@ $tableSettings = new TableGear($optionsSet);
             <option value="8">sur 8 heures</option>
             <option value="24">dernier jour</option>
             <option value="168">dernière semaine</option>
-    </td></select>     
+    </select></td>
     <td></td>
 </tr>
 </table>
