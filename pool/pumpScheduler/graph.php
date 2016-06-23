@@ -25,7 +25,7 @@ if (!$result) {
 
 while ($row = mysql_fetch_assoc($result)) {
     $pumpConsign=($row[$temp]);
-    $data = array($row['col1'] => $row['col2'],);
+    $data = array($row['id'] => $row['orp'],);
 }
 
 
