@@ -20,7 +20,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 }
 
-$sql    = "select orp,id from (select ".$_GET["graph"].", id from measures order by id desc) tempTable order by ID ASC limit ".intval($_GET["period"]);
+$sql    = "select ".$_GET["graph"].",id from (select ".$_GET["graph"].", id from measures order by id desc) tempTable order by ID ASC limit ".intval($_GET["period"]);
 
 $result = mysql_query($sql, $link);
 
