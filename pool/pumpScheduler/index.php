@@ -653,7 +653,6 @@ $tableSettings = new TableGear($optionsSet);
     }    
       
     function updateGraph(){
-        alert("called click");
         var tbl = document.getElementById('graphID');
         var cells = tbl.getElementsByTagName('td');
         
