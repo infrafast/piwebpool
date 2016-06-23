@@ -30,8 +30,7 @@ if (!$result) {
 }
 
 while ($row = mysql_fetch_assoc($result)) {
-    $pumpConsign=($row[$temp]);
-    $data = array($row['id'] => $row[$_GET["graph"]],);
+    $data = array($row['id'] => $row[$_GET["graph"]]);
 }
 
 
