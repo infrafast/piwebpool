@@ -92,6 +92,19 @@ if (!$result) {
         }
         
     }
+    
+    $sql    = "INSERT into measures() values...";
+    $result = mysql_query($sql, $link);
+    
+    if (!$result) {
+        $answer="ERROR";
+        $state=mysql_error();
+    }else{
+        $pumpConsign=0;
+        while ($row = mysql_fetch_assoc($result)) {
+            $pumpConsign=($row[$temp]);
+        }    
+    
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
 appendlog("CRONACTION",$answer,$state);
