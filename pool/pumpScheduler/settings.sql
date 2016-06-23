@@ -13,7 +13,8 @@ INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('blocklyTable', 1, false, ''),
 ('Planificateur', 1, false, ''),
 ('sensorTable', 0, false, ''),
-('Parametres', 1, false, '');
+('Parametres', 1, false, ''),
+('measureIndex', 0, false, '');
 
 
 ALTER TABLE `settings`
