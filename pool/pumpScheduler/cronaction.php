@@ -108,7 +108,7 @@ if (!$result) {
         
         $phValue = getPh();
         $orpValue = getORP();
-        $pumpValue = getPin($pins[$materials["traitement"]]);
+        $treatmentValue = getPin($pins[$materials["traitement"]]);
         $pumpValue = getPin($pins[$materials["filtration"]]);
         $temperatureValue = getTemperature();
         $measureIndex=$measureIndex+1;
@@ -121,7 +121,7 @@ if (!$result) {
             $answer="ERROR";
             $state=mysql_error();
         }else{
-            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME;";
+            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME;";
             $result = mysql_query($sql, $link);
             if (!$result) {
                 $answer="ERROR";
