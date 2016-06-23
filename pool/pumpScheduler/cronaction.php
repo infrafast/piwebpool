@@ -93,6 +93,7 @@ if (!$result) {
         
     }
     
+    //get and update the index
     $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
     $result = mysql_query($sql, $link);
     
