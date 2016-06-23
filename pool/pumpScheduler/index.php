@@ -427,14 +427,7 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
 <tr>
-    <td>
-        <div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div>
-        <select  name="phPeriod"  id="phPeriod">
-            <option value="main">sur 8 heures</option>
-            <option value="main">dernier jour</option>
-            <option value="custom">dernière semaine</option>
-        </select>        
-    </td>
+    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
     <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
