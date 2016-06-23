@@ -8,34 +8,6 @@ $cfg['average-line-visible']=false;
 $cfg['label']=$_GET["period"];
 
 
-// connect to the database
-if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
-    echo 'Could not connect to mysql';
-    exit;
-}
-
-if (!mysql_select_db($options["database"]["name"], $link)) {
-    echo 'Could not select database';
-    exit;
-}
-
-$sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
-$result = mysql_query($sql, $link);
-
-if (!$result) {
-    $answer="ERROR";
-    $state=mysql_error();
-}else{
-    $pumpConsign=0;
-    while ($row = mysql_fetch_assoc($result)) {
-        $pumpConsign=($row[$temp]);
-    }
-
-
-$query="select col1, col2 from tab1 where sub_project = 'sometext'";
-$result=mysql_query($query);
-$row = mysql_fetch_assoc($result);
-$data = array($row['col1'] => $row['col2'],);
 
 switch($_GET["graph"]){
     
