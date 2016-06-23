@@ -108,7 +108,7 @@ if (!$result) {
         
         $phValue = getPh();
         $orpValue = getORP();
-        $tempartureValue = getTemperature();
+        $temperatureValue = getTemperature();
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
             
