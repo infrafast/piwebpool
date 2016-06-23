@@ -16,6 +16,5 @@ INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('Parametres', 1, false, ''),
 ('measureIndex', 0, false, '');
 
-
 ALTER TABLE `settings`
  ADD PRIMARY KEY (`id`);
