@@ -98,9 +98,7 @@ if (!$result) {
     $tempartureValue = getTemperature();
     
     
-    
-    
-    $sql    = "INSERT into measures() values...";
+    $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`) VALUES ('0', CURRENT_TIMESTAMP,'2', '4', '6') ON DUPLICATE KEY UPDATE id=0, orp=2, ph=4, temperature=6, timestamp=CURRENT_TIME;";
     $result = mysql_query($sql, $link);
     
     if (!$result) {
