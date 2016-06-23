@@ -440,8 +440,8 @@ $tableSettings = new TableGear($optionsSet);
     <td></td>
     <td><select  name="period"  id="period">
             <option value="8">sur 8 heures</option>
-            <option value="8*24">dernier jour</option>
-            <option value="custom">dernière semaine</option>
+            <option value="24">dernier jour</option>
+            <option value=168">dernière semaine</option>
     </td></select>     
     <td></td>
 </tr>
