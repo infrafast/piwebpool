@@ -110,7 +110,7 @@ if (!$result) {
         $orpValue = getORP();
         $tempartureValue = getTemperature();
         $measureIndex=$measureIndex+1;
-            if ($measureIndex>168) $measureIndex=0;
+        if ($measureIndex>168) $measureIndex=0;
             
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
         $result = mysql_query($sql, $link);
