@@ -94,7 +94,7 @@ if (!$result) {
     }
     
     //get and update the index
-    $sql    = "SELECT value 
+    $sql    = "SELECT value from settings where id='measureIndex';";
     $result = mysql_query($sql, $link);
     
     if (!$result) {
