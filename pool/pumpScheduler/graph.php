@@ -8,7 +8,7 @@ $cfg['height'] = 150;
 $cfg['average-line-visible']=false;
 $cfg['label-visible']=false;
 $cfg['value-label-visible']=false;
-//$cfg['']=false;
+$cfg['key-visible']=false;
 //$cfg['label']=$_GET["period"];
 
 // connect to the database
