@@ -45,7 +45,7 @@ header("Content-type: image/png");
 $graph = new phpMyGraph();
 
 //Parse
-if ($_GET["type"]=="bar") $graph->parseVerticalLineGraph($data,$cfg);
-else $graph->parseVerticalSimpleColumnGraph($data,$cfg);
+if ($_GET["type"]=="bar") $graph->parseVerticalSimpleColumnGraph($data,$cfg);
+else $graph->parseVerticalLineGraph($data,$cfg);
 
 ?>
