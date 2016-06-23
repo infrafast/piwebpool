@@ -427,7 +427,7 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th>Ph</th><th>Redox</th><th>Temperature</th></tr>
 <tr>
-    <td style='background-image:url(graph.php?graph=ph);background-repeat:no-repeat;background-size:250px 180px;'></td>
+    <td style='background-image:url(graph.php?graph=ph);background-repeat:no-repeat;background-size:100% 100%;'></td>
     <td><img src="graph.php?graph=orp"></td>
     <td><img src="graph.php?graph=temperature"></td>
 </tr>
