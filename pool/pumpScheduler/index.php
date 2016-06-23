@@ -658,9 +658,10 @@ $tableSettings = new TableGear($optionsSet);
         
         for (var i = 0; i < cells.length; i++)
         {
-            cells[i].addEventListener('click', sbClick, false);
-            var imgSrc = 'ulr(./FoodImages/fruit' + i.toString() + '.jpg)';
+            //cells[i].addEventListener('click', sbClick, false);
+            var imgSrc = 'url(/graph.php?' + i.toString())';
             cells[i].style.backgroundImage=imgSrc;
+            alert (imgSrc);
         }      
     }  
       
