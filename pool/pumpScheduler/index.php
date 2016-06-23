@@ -653,13 +653,9 @@ $tableSettings = new TableGear($optionsSet);
     }    
       
     function updateGraph(){
-        var tbl = document.getElementById('graphID');
-        var cells = tbl.getElementsByTagName('td');
-        
-    	var cols = document.getElementById('tableData').getElementsByTagName('td'), colslen = cols.length, i = -1;
+     	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
     	while(++i < colslen){
-    		if(cols[i].innerHTML <= 5){alert('5 or less');}
-    		else {alert('Greater than 5');}
+    		alert(cols[i].id);
     	}    
     }  
       
