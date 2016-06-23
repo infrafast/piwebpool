@@ -432,7 +432,13 @@ $tableSettings = new TableGear($optionsSet);
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr height=150px>
-    <td style='background-image:url(graph.php?graph=ph);background-repeat:no-repeat;background-size: 100% 100%;'></td>
+    <td style='background-image:url(graph.php?graph=ph);background-repeat:no-repeat;background-size: 100% 100%;'>
+        <select  name="luascript"  id="scriptID">
+            <option value="main">8 heures</option>
+            <option value="main">dernièr jour</option>
+            <option value="custom">dernière semaine</option>
+        </select>
+    </td>
     <td style='background-image:url(graph.php?graph=orp);background-repeat:no-repeat;background-size: 100% 100%;;'></td>
     <td style='background-image:url(graph.php?graph=temperature);background-repeat:no-repeat;background-size: 100% 100%;;'></td>
 </tr>
