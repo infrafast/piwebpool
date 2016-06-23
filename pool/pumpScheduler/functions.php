@@ -112,7 +112,6 @@ function getTemperature(){
 function getPh(){
     return round(readSensor("/dev/ttyUSB1"), 2,PHP_ROUND_HALF_UP);  
     //return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
-    //rand(6,8);
 }
 
 function getORP(){
