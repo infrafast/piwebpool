@@ -108,6 +108,8 @@ if (!$result) {
         
         $phValue = getPh();
         $orpValue = getORP();
+        $pumpValue = getPin($pins[$materials["traitement"]]);
+        $pumpValue = getPin($pins[$materials["filtration"]]);
         $temperatureValue = getTemperature();
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
