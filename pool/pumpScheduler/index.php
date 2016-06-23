@@ -432,13 +432,13 @@ $tableSettings = new TableGear($optionsSet);
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr height=150px>
-    <td style="background-image:url('graph.php?graph=ph');background-repeat:no-repeat;background-size: 100% 100%;"></td>
+    <td style="background-image:url('graph.php?graph=ph&period='+document.getElementById('periodID').value);background-repeat:no-repeat;background-size: 100% 100%;"></td>
     <td style="background-image:url('graph.php?graph=orp');background-repeat:no-repeat;background-size: 100% 100%;"></td>
     <td style="background-image:url('graph.php?graph=temperature');background-repeat:no-repeat;background-size: 100% 100%;"></td>
 </tr>
 <tr>    
     <td></td>
-    <td><select  name="period"  id="period">
+    <td><select  name="period"  id="periodID">
             <option value="8">sur 8 heures</option>
             <option value="24">dernier jour</option>
             <option value="168">dernière semaine</option>
