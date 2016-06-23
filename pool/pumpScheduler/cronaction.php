@@ -112,6 +112,7 @@ if (!$result) {
     $orpValue = getORP();
     $tempartureValue = getTemperature();
     $measureIndex=$measureIndex+1;
+        if ($measureIndex>168) $measureIndex=0;
     
     $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`) VALUES ('".$measureIndex+++"', CURRENT_TIMESTAMP,'"+ $orpValue+"', '"+ $phValue+"', '"+ $temperatureValue+"') ON DUPLICATE KEY UPDATE id="+$measureIndex+", orp=2, ph=4, temperature=6, timestamp=CURRENT_TIME;";
     $result = mysql_query($sql, $link);
