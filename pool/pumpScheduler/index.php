@@ -427,14 +427,14 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th>Ph</th><th>Redox</th><th>Temperature</th></tr>
 <tr>
-    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
-    <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
-    <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
-</tr>
-<tr>
     <td style='background-image:url(graph.php?graph=ph);background-repeat:no-repeat;background-size:250px 180px;'></td>
     <td><img src="graph.php?graph=orp"></td>
     <td><img src="graph.php?graph=temperature"></td>
+</tr>
+<tr>
+    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
+    <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
+    <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 </table>
 
