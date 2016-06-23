@@ -656,13 +656,11 @@ $tableSettings = new TableGear($optionsSet);
         var tbl = document.getElementById('graphID');
         var cells = tbl.getElementsByTagName('td');
         
-        for (var i = 0; i < cells.length; i++)
-        {
-            //cells[i].addEventListener('click', sbClick, false);
-            var imgSrc = 'url(/graph.php?' + i.toString()+')';
-            //cells[i].style.backgroundImage=imgSrc;
-            alert (imgSrc);
-        }      
+    	var cols = document.getElementById('tableData').getElementsByTagName('td'), colslen = cols.length, i = -1;
+    	while(++i < colslen){
+    		if(cols[i].innerHTML <= 5){alert('5 or less');}
+    		else {alert('Greater than 5');}
+    	}    
     }  
       
 </script>
