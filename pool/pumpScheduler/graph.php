@@ -25,7 +25,7 @@ if (!$result) {
 
 while ($row = mysql_fetch_assoc($result)) {
     $pumpConsign=($row[$temp]);
-    $data = array($row['id'] => $row['orp'],);
+    $data = array($row['id'] => $row[$_GET["graph"]],);
 }
 
 
