@@ -5,7 +5,7 @@ include_once('include/phpMyGraph5.0.php');
 $cfg['width'] = 300 ;
 $cfg['height'] = 150;
 $cfg['average-line-visible']=false;
-//$cfg['label']=$_GET["graph"];
+$cfg['label']=$_GET["period"];
 
 switch($_GET["graph"]){
     
