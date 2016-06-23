@@ -1,7 +1,7 @@
 <?php
 
 include_once('include/phpMyGraph5.0.php'); 
-require ('configuration');
+include_once('configuration');
 
 $cfg['width'] = 300 ;
 $cfg['height'] = 150;
