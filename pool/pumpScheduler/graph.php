@@ -6,7 +6,7 @@ require('configuration.php');
 $cfg['width'] = 300 ;
 $cfg['height'] = 150;
 $cfg['average-line-visible']=false;
-$cfg['label']=$_GET["period"];
+//$cfg['label']=$_GET["period"];
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
