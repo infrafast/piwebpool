@@ -101,28 +101,32 @@ if (!$result) {
         $answer="ERROR";
         $state=mysql_error();
     }else{
-        $pumpConsign=0;
         while ($row = mysql_fetch_assoc($result)) {
             $measureIndex=($row['value']);
         }    
         mysql_free_result($result);
-    }
-    
-    
-    $phValue = getPh();
-    $orpValue = getORP();
-    $tempartureValue = getTemperature();
-    $measureIndex=$measureIndex+1;
-        if ($measureIndex>168) $measureIndex=0;
         
-    $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
-    
-    $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$ORPValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME;";
-    $result = mysql_query($sql, $link);
-    
-    if (!$result) {
-        $answer="ERROR";
-        $state=mysql_error();
+        $phValue = getPh();
+        $orpValue = getORP();
+        $tempartureValue = getTemperature();
+        $measureIndex=$measureIndex+1;
+            if ($measureIndex>168) $measureIndex=0;
+            
+        $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
+        $result = mysql_query($sql, $link);
+        
+        if (!$result) {
+            $answer="ERROR";
+            $state=mysql_error();
+        }else{
+            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$ORPValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME;";
+            $result = mysql_query($sql, $link);
+            
+            if (!$result) {
+                $answer="ERROR";
+                $state=mysql_error();
+            }            
+        }
     }
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
