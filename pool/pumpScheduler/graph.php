@@ -10,6 +10,15 @@ $cfg['label']=$_GET["period"];
 
 
 
+// connect to the database
+if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
+    echo 'Could not connect to mysql';
+    exit;
+}
+
+
+
+
 switch($_GET["graph"]){
     
     case 'orp':
