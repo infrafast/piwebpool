@@ -1,0 +1,1 @@
+CREATE TABLE `pool`.`measures` ( `id` INT NOT NULL , `timestamp` TIMESTAMP NOT NULL , `orp` SMALLINT NOT NULL , `ph` FLOAT NOT NULL , `temperature` SMALLINT NOT NULL , UNIQUE `key` (`id`)) ENGINE = InnoDB;
