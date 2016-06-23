@@ -435,7 +435,7 @@ $tableSettings = new TableGear($optionsSet);
     <td style='background-image:url(graph.php?graph=ph);background-repeat:no-repeat;background-size: 100% 100%;'>
         <select  name="luascript"  id="scriptID">
             <option value="main">8 heures</option>
-            <option value="main">dernièr jour</option>
+            <option value="main">dernier jour</option>
             <option value="custom">dernière semaine</option>
         </select>
     </td>
