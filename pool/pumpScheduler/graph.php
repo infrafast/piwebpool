@@ -19,7 +19,23 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 }
 
+$sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
+$result = mysql_query($sql, $link);
 
+if (!$result) {
+    $answer="ERROR";
+    $state=mysql_error();
+}else{
+    $pumpConsign=0;
+    while ($row = mysql_fetch_assoc($result)) {
+        $pumpConsign=($row[$temp]);
+    }
+
+Set data
+$query="select col1, col2 from tab1 where sub_project = 'sometext'";
+$result=mysql_query($query);
+$row = mysql_fetch_assoc($result);
+$data = array($row['col1'] => $row['col2'],);
 
 switch($_GET["graph"]){
     
@@ -78,13 +94,7 @@ switch($_GET["graph"]){
 }
 
 header("Content-type: image/png");
-//Set data
-//$query="select col1, col2 from tab1 where sub_project = 'sometext'";
-//$result=mysql_query($query);
-//$row = mysql_fetch_assoc($result);
-//$data = array(
-//    $row['col1'] => $row['col2'],
-//);
+
 //Create phpMyGraph instance
 $graph = new phpMyGraph();
 
