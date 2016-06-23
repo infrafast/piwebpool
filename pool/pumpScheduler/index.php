@@ -655,7 +655,6 @@ $tableSettings = new TableGear($optionsSet);
     function updateGraph(){
      	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
     	while(++i < colslen){
-    		alert(cols[i].id);
             var imgSrc = 'url(graph.php?'+cols[i].id+'&period='+document.getElementById('periodID').value+')'; 
             cols[i].style.backgroundImage=imgSrc;    		
             alert(imgSrc);
