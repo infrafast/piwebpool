@@ -8,7 +8,11 @@ $cfg['height'] = 150;
 $cfg['average-line-visible']=false;
 $cfg['label']=$_GET["period"];
 
-
+// connect to the database
+if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
+    echo 'Could not connect to mysql';
+    exit;
+}
 
 
 if (!mysql_select_db($options["database"]["name"], $link)) {
