@@ -399,7 +399,7 @@ $tableSettings = new TableGear($optionsSet);
 <tr><th>Action</th><th>Etat</th></tr>
 <?php foreach($materials as $material=>$pin){ ?>
 <tr>
-	<td background-image:url('graph.php?graph=ph&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;><?php echo $material; ?></td>
+	<td style="background-image:url('graph.php?graph=ph&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"><?php echo $material; ?></td>
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
 <?php } ?>
 <tr>
