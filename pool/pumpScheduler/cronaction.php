@@ -93,6 +93,10 @@ if (!$result) {
         
     }
     
+    $phValue = getPh();
+    $orpValue = getORP();
+    $phValue = getPh();
+    
     $sql    = "INSERT into measures() values...";
     $result = mysql_query($sql, $link);
     
@@ -104,6 +108,7 @@ if (!$result) {
         while ($row = mysql_fetch_assoc($result)) {
             $pumpConsign=($row[$temp]);
         }    
+    }
     
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
