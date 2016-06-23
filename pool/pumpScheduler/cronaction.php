@@ -95,7 +95,7 @@ if (!$result) {
     
     $phValue = getPh();
     $orpValue = getORP();
-    $phValue = getPh();
+    $tempartureValue = getTemperature();
     
     $sql    = "INSERT into measures() values...";
     $result = mysql_query($sql, $link);
