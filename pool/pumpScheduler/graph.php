@@ -15,7 +15,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 }
 
-$sql    = "select orp,id from (select orp, id from measures order by id desc) tempTable order by ID ASC limit ".intval($_GET["period"]);
+$sql    = "select orp,id from (select ".$_GET["graph"].", id from measures order by id desc) tempTable order by ID ASC limit ".intval($_GET["period"]);
 $result = mysql_query($sql, $link);
 
 if (!$result) {
@@ -26,28 +26,6 @@ if (!$result) {
 while ($row = mysql_fetch_assoc($result)) {
     $pumpConsign=($row[$temp]);
     $data = array($row['id'] => $row['orp'],);
-}
-
-
-
-switch($_GET["graph"]){
-    
-    case 'orp':
-
-    break;
-    
-    case 'temperature':
-
-    break;
-    
-    case 'ph':
-
-    break;    
-	
-	default:
-		echo "No graph specified, call with?&graph=[temperature|orp|pg]";
-		return;
-	break;
 }
 
 
