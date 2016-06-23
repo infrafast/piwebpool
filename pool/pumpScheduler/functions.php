@@ -108,6 +108,18 @@ function getTemperature(){
     return rand(-4,32);
 }
 
+// use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
+function getPh(){
+    return round(readSensor("/dev/ttyUSB1"), 2,PHP_ROUND_HALF_UP);  
+    //return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
+    //rand(6,8);
+}
+
+function getORP(){
+    return intval(readSensor("/dev/ttyUSB0"));    
+   // return intval(rand(300,900));
+}
+
 function readSensor($device){
     $serial = new PhpSerial;
     $serial->deviceSet($device);
@@ -123,18 +135,6 @@ function readSensor($device){
     return $val;  
 }
 
-
-// use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
-function getPh(){
-    return round(readSensor("/dev/ttyUSB1"), 2,PHP_ROUND_HALF_UP);  
-    //return round( (6 + (8 - 6) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
-    //rand(6,8);
-}
-
-function getORP(){
-    return intval(readSensor("/dev/ttyUSB0"));    
-   // return intval(rand(300,900));
-}
 
 
 function getPoolTemperature(){
