@@ -438,7 +438,7 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr>    
     <td></td>
-    <td><select  name="period"  id="periodID">
+    <td><select  name="period"  id="periodID" onclick='updateGraph();'>
             <option value="8">sur 8 heures</option>
             <option value="24">dernier jour</option>
             <option value="168">dernière semaine</option>
@@ -653,7 +653,7 @@ $tableSettings = new TableGear($optionsSet);
     }    
       
     function updateGraph(){
-        var tbl = document.getElementById('SelectionBoard');
+        var tbl = document.getElementById('graphID');
         var cells = tbl.getElementsByTagName('td');
         
         for (var i = 0; i < cells.length; i++)
