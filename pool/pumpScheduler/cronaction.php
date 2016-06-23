@@ -130,7 +130,8 @@ if (!$result) {
         }
     }
 }
-$state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
+if ($answer=!"ERROR")
+    $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
 appendlog("CRONACTION",$answer,$state);
 echo $answer.$state;
 ?>
