@@ -34,20 +34,6 @@ while ($row = mysql_fetch_assoc($result)) {
 }
 
 
-$data = array(
-    '00' => rand(0,10),
-    '01' => rand(0,10),
-    '02' => rand(0,10),
-    '03' => rand(0,10),
-    '04' => rand(0,10),
-    '05' => rand(0,10),
-    '06' => rand(0,10),
-    '07' => rand(0,10),
-    '08' => rand(0,10),
-    '09' => rand(0,10),
-    '10' => rand(0,10)
-);
-
 header("Content-type: image/png");
 
 //Create phpMyGraph instance
