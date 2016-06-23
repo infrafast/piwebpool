@@ -498,6 +498,7 @@ $tableSettings = new TableGear($optionsSet);
 <script src="js/script.js"></script>
 
 <script>
+
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
     //setup Blockly for LUA
@@ -650,6 +651,18 @@ $tableSettings = new TableGear($optionsSet);
       var xml_text = Blockly.Xml.domToText(xml);
       alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
     }    
+      
+    function updateGraph(){
+        var tbl = document.getElementById('SelectionBoard');
+        var cells = tbl.getElementsByTagName('td');
+        
+        for (var i = 0; i < cells.length; i++)
+        {
+            cells[i].addEventListener('click', sbClick, false);
+            var imgSrc = 'ulr(./FoodImages/fruit' + i.toString() + '.jpg)';
+            cells[i].style.backgroundImage=imgSrc;
+        }      
+    }  
       
 </script>
 
