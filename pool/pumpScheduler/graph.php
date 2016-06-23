@@ -10,12 +10,23 @@ $cfg['label']=$_GET["period"];
 
 
 
-// connect to the database
-if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
-    echo 'Could not connect to mysql';
+if (!mysql_select_db($options["database"]["name"], $link)) {
+    echo 'Could not select database';
     exit;
 }
 
+$sql    = "select orp,id from (select orp, id from measures order by id desc) tempTable order by ID ASC limit ".intval($_GET["period"]);
+$result = mysql_query($sql, $link);
+
+if (!$result) {
+    echo mysql_error();
+    exit;
+}
+
+while ($row = mysql_fetch_assoc($result)) {
+    $pumpConsign=($row[$temp]);
+    $data = array($row['col1'] => $row['col2'],);
+}
 
 
 
