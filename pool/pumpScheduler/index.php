@@ -658,6 +658,7 @@ $tableSettings = new TableGear($optionsSet);
     		alert(cols[i].id);
             var imgSrc = 'url(graph.php?graph='+cols[i].id+'&period='+document.getElementById('periodID').value')'; 
             cols[i].style.backgroundImage=imgSrc;    		
+            alert(imgSrc);
     	}    
     }  
       
