@@ -121,7 +121,7 @@ if (!$result) {
             $answer="ERROR";
             $state=mysql_error();
         }else{
-            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME".", pump=".$pumpValue.", treatment=".$treatmentValue.";";
+            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME".", pump=".$pumpValue.", treatment=".$treatmentValue.";";
             $result = mysql_query($sql, $link);
             if (!$result) {
                 $answer="ERROR";
