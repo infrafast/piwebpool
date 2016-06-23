@@ -432,10 +432,7 @@ $tableSettings = new TableGear($optionsSet);
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr height=150px>
-    <script>
-        var phGraphURL = 'graph.php?graph=ph&period='+document.getElementById('periodID').value;
-    </script>
-    <td style="background-image:url(phGraphURL);background-repeat:no-repeat;background-size: 100% 100%;"></td>
+    <td style="background-image:url('graph.php?graph=ph');background-repeat:no-repeat;background-size: 100% 100%;"></td>
     <td style="background-image:url('graph.php?graph=orp');background-repeat:no-repeat;background-size: 100% 100%;"></td>
     <td style="background-image:url('graph.php?graph=temperature');background-repeat:no-repeat;background-size: 100% 100%;"></td>
 </tr>
