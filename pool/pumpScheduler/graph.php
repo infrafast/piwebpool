@@ -22,6 +22,8 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 $sql    = "select orp,id from (select ".$_GET["graph"].", id from measures order by id desc) tempTable order by ID ASC limit ".intval($_GET["period"]);
 echo $sql;
+exit;
+
 $result = mysql_query($sql, $link);
 
 if (!$result) {
