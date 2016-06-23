@@ -657,7 +657,7 @@ $tableSettings = new TableGear($optionsSet);
     // it update the call to the graph function according to the selected value
      	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
     	while(++i < colslen){
-            var imgSrc = 'url(graph.php?'+cols[i].id+'&period='+document.getElementById('periodID').value+')'; 
+            var imgSrc = 'url(graph.php?'+cols[i].id+'&period='+document.getElementById('periodID').value+'&width=300&height=150)'; 
             cols[i].style.backgroundImage=imgSrc;    		
             //alert(imgSrc);
     	}    
