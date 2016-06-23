@@ -54,13 +54,7 @@ switch($_['action']){
 
 
 	case 'scenario':
-	    $result['state'] = (setPinState($pins[$materials["Filtration"]],0));
-	    sleep(1);
-        $result['state'] = (setPinState($pins[$materials["Filtration"]],1));
-	    sleep(1);
-        $result['state'] = (setPinState($pins[$materials["Prise libre"]],0));
-	    sleep(1);
-        $result['state'] = (setPinState($pins[$materials["Prise libre"]],1));
+
 	break;
 
     case 'resetSchedule':
