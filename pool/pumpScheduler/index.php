@@ -429,7 +429,7 @@ $tableSettings = new TableGear($optionsSet);
 <tr>
     <td>
         <div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div>
-        <select  name="phPeriod"  id="scriptID">
+        <select  name="phPeriod"  id="phPeriod">
             <option value="main">sur 8 heures</option>
             <option value="main">dernier jour</option>
             <option value="custom">dernière semaine</option>
