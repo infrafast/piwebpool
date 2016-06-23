@@ -103,7 +103,7 @@ if (!$result) {
     }else{
         $pumpConsign=0;
         while ($row = mysql_fetch_assoc($result)) {
-            $pumpConsign=($row['value']);
+            $measureIndex=($row['value']);
         }    
     }
     
