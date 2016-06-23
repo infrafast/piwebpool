@@ -9,6 +9,8 @@ $cfg['average-line-visible']=false;
 $cfg['label']=$_GET["period"];
 
 
+
+
 if (!mysql_select_db($options["database"]["name"], $link)) {
     echo 'Could not select database :'.$options["database"]["name"];
     exit;
