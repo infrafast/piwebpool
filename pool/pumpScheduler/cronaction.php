@@ -97,6 +97,9 @@ if (!$result) {
     $orpValue = getORP();
     $tempartureValue = getTemperature();
     
+    
+    
+    
     $sql    = "INSERT into measures() values...";
     $result = mysql_query($sql, $link);
     
@@ -104,7 +107,6 @@ if (!$result) {
         $answer="ERROR";
         $state=mysql_error();
     }
-    
 }
 $state = "{tw:".$tw."}{temp:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
 appendlog("CRONACTION",$answer,$state);
