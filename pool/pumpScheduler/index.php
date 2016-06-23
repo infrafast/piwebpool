@@ -425,7 +425,7 @@ $tableSettings = new TableGear($optionsSet);
 <tr class="header" id="sensorTable">
 <td colspan="3"><b><span>-</span> Mesures</b></td>
 </tr>
-<tr><th>Ph</th><th>Redox</th><th>Temperature</th></tr>
+<tr><th width=30%>Ph</th><th width=30%>Redox</th><th width=30%>Temperature</th></tr>
 <tr>
     <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
     <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
