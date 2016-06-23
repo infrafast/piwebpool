@@ -1,45 +1,79 @@
 <?php
+
 include_once('include/phpMyGraph5.0.php'); 
 
-//Set config directives
-header("Content-type: image/png");
-    //$cfg['title'] = 'Example graph';
-    $cfg['width'] = 640;
-    $cfg['height'] = 480;
-    
-    //Set data 1
-    $data1 = array(
-        '00' => 7,
-        '01' => 7.5,
-        '02' => 7.3,
-        '03' => 6.5,
-        '04' => 6,
-        '05' => 6.3,
-        '06' => 7,
-        '07' => 6,
-        '08' => 7,
-        '09' => 7.2,
-        '10' => 7.3
-    );
+$cfg['width'] = 300 ;
+$cfg['height'] = 150;
+$cfg['average-line-visible']=false;
+//$cfg['label']=$_GET["graph"];
 
-    //Set data 2
-    $data2 = array(
-        '00' => 620,
-        '01' => 625,
-        '02' => 630,
+switch($_GET["graph"]){
+    
+    case 'orp':
+    $data = array(
+        '00' => 700,
+        '01' => 750,
+        '02' => 730,
         '03' => 650,
-        '04' => 645,
-        '05' => 650,
-        '06' => 655,
-        '07' => 652,
-        '08' => 666,
-        '09' => 660,
-        '10' => 660
+        '04' => 600,
+        '05' => 630,
+        '06' => 700,
+        '07' => 600,
+        '08' => 700,
+        '09' => 720,
+        '10' => 730
     );
+    break;
     
-    //Create phpMyGraph instance
-    $graph = new verticalLineGraph();
+    case 'temperature':
+    $data = array(
+        '00' => 10,
+        '01' => 12,
+        '02' => 13,
+        '03' => 15,
+        '04' => 10,
+        '05' => 12,
+        '06' => 10,
+        '07' => 10,
+        '08' => 17,
+        '09' => 12,
+        '10' => 16
+    );
+    break;
+    
+    case 'ph':
+    $data = array(
+        '00' => 7.00,
+        '01' => 7.50,
+        '02' => 7.30,
+        '03' => 6.50,
+        '04' => 6.00,
+        '05' => 6.30,
+        '06' => 7.00,
+        '07' => 6.00,
+        '08' => 7.00,
+        '09' => 7.20,
+        '10' => 7.30
+    );
+    break;    
+	
+	default:
+		echo "No graph specified, call with?&graph=[temperature|orp|pg]";
+		return;
+	break;
+}
 
-    //Parse
-    $graph->parseCompare($data1, $data2, $cfg);
+header("Content-type: image/png");
+//Set data
+//$query="select col1, col2 from tab1 where sub_project = 'sometext'";
+//$result=mysql_query($query);
+//$row = mysql_fetch_assoc($result);
+//$data = array(
+//    $row['col1'] => $row['col2'],
+//);
+//Create phpMyGraph instance
+$graph = new phpMyGraph();
+
+//Parse
+$graph->parseVerticalLineGraph($data,$cfg);
 ?>
