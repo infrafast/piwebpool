@@ -103,11 +103,6 @@ if (!$result) {
     if (!$result) {
         $answer="ERROR";
         $state=mysql_error();
-    }else{
-        $pumpConsign=0;
-        while ($row = mysql_fetch_assoc($result)) {
-            $pumpConsign=($row[$temp]);
-        }    
     }
     
 }
