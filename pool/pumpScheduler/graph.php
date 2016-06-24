@@ -5,7 +5,7 @@ require('configuration.php');
 
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
-$cfg['key-color'] = "00ff00";
+$cfg['key-color'] = "00a2e8";
 //keyvisible = affichage de l'echelle du temps
 
 // connect to the database
