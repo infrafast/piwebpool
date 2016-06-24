@@ -7,7 +7,6 @@ $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['average-line-visible']=false;
 $cfg['key-visible']=false;
-//$cfg['label']=$_GET["period"];
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
@@ -44,6 +43,7 @@ $graph = new phpMyGraph();
 
 //Parse
 if ($_GET["type"]=="bar"){
+    $cfg['label']=$_GET["graph"];
     $cfg['label-visible']=false;
     $cfg['value-label-visible']=false;
     $cfg['zero-line-visible']=false;
