@@ -500,8 +500,8 @@ foreach($materials as $material=>$pin){ ?>
     
     // refresh 
     refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-    refreshValue(document.getElementById('divOrpMeasureID'),'ORP');
-    refreshValue(document.getElementById('divOrpMeasureID'),'ORP');
+    refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+    refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
     
     //setup Blockly for LUA variable
     Blockly.Blocks['sensors'] = {
