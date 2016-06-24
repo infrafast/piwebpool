@@ -152,7 +152,7 @@ function getColor(median,tolerance,value){
     var green = ((1-prop)*255);
     var red = (prop*255);
     //return rgb2hex(green,red,0);
-    return "#"+red.toString(16)+green.toStrin(16)+"00";
+    return "#"+red.toString(16)+green.toString(16)+"00";
 }
 
     
