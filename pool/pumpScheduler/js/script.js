@@ -175,7 +175,7 @@ function refreshValue(elem,action){
                         median=15;
                         tolerance=0.1;                        
                     }
-                    alert('diff:'+getColor(median,tolerance,newValue));
+                    alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
 				}else{
 					alert('Erreur : '+result.answer);
 				}
