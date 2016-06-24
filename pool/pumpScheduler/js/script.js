@@ -155,7 +155,7 @@ function refreshValue(elem,action){
 				$(elem).addClass('off');
 				if(result.answer == "OK"){
 				    var newValue = "<br>"+result.state+"<br><br>";
-                    $(elem).attr("style", "background:green;");
+                    $(elem).attr("style", "background:lightgreen;");
 				    $(elem).html(newValue);
 				}else{
 					alert('Erreur : '+result.answer);
