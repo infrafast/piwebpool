@@ -422,13 +422,13 @@ foreach($materials as $material=>$pin){ ?>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
 </tr>
 <tr>
-    <td></td>
-    <td><select  name="period"  id="periodID" onclick='updateGraph();'>
+    <th></th>
+    <th><select  name="period"  id="periodID" onclick='updateGraph();'>
             <option value="8">sur 8 heures</option>
             <option value="24">dernier jour</option>
             <option value="168">dernière semaine</option>
-    </select></td>
-    <td></td>
+    </select></th>
+    <th></th>
 </tr>
 <tr height="180px" id="graphID">
     <td id="graph=ph" style="background-image:url('graph.php?graph=ph&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
