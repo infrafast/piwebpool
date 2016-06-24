@@ -154,8 +154,8 @@ function getColor(median,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance/100;
-    var green = ((1-prop)*255)-(255*ecart);
-    var red = (prop*255)+(255*ecart);
+    var green = ((1-prop)*255)-(500*ecart);
+    var red = (prop*255)+(500*ecart);
     if (green<0) green=0; if (green>255) green=255;
     if (red<0) red=0; if (red>255) red=255;    
     
