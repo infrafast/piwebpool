@@ -399,7 +399,10 @@ $tableSettings = new TableGear($optionsSet);
 <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
 <?php 
 
-
+$materialsColumn = array(
+			"filtration"=>"pump",
+			"traitement"=>"treatment",
+		    );
 
 foreach($materials as $material=>$pin){ ?>
 
