@@ -46,7 +46,11 @@ $graph = new phpMyGraph();
 if ($_GET["type"]=="bar"){
     $cfg['label-visible']=false;
     $cfg['value-label-visible']=false;
+    $cfg['zero-line-visible']=false;
     $cfg['']=false;
+    $cfg['']=false;
+    $cfg['']=false;
+    $cfg['']=false;    
 
     $graph->parseVerticalSimpleColumnGraph($data,$cfg);
 }
