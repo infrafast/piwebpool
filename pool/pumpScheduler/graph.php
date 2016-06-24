@@ -6,7 +6,6 @@ require('configuration.php');
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['key-color'] = "00a2e8";
-$cfg['key-color'] = "00a2e8";
 $cfg['column-color'] = "00a2e8";
 $cfg['value-label-color'] = "000000";
 
