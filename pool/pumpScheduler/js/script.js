@@ -148,9 +148,9 @@ function getColor(median,tolerance,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance;
-    var green = ((1-prop)*255)
-    var red = (prop*255)
-    return rgbToHex(green,red,0)
+    var green = ((1-prop)*255);
+    var red = (prop*255);
+    return rgbToHex(green,red,0);
 }
 
     
