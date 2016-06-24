@@ -141,7 +141,10 @@ function resetSchedule(){
 }
 
 function getColor(median,tolerance,value){
-    return Math.abs(value - median);
+    var diff = Math.abs(value - median);
+    var ecart = diff/median;
+    var prop = ecart/tolerance;
+    
 }
 
     
