@@ -44,7 +44,7 @@ $graph = new phpMyGraph();
 //Parse
 if ($_GET["type"]=="bar"){
     $cfg['label']=$_GET["graph"];
-    $cfg['label-visible']=false;
+    //$cfg['label-visible']=false;
     $cfg['value-label-visible']=false;
     $cfg['zero-line-visible']=false;
     $cfg['key-visible']=false;
