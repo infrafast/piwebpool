@@ -174,7 +174,7 @@ function refreshValue(elem,action){
                         median=15;
                         tolerance=0.1;                        
                     }
-                    alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
+                    alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue)+' '+action);
                     
                     newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);
