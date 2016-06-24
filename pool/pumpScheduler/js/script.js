@@ -179,7 +179,7 @@ function refreshValue(elem,action){
                         median=15;
                         tolerance=0.1;                        
                     }
-                    alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
+                    alert(getColor(median,tolerance,newValue));
                     
                     newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);    
