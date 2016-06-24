@@ -164,17 +164,17 @@ function refreshValue(elem,action){
 				if(result.answer == "OK"){
                     var median;
                     var tolerance;
-                    if(action=='ph'){
+                    if(action=='Ph'){
                         median=7.24;
                         tolerance=0.04;
-                    }else if (action=='orp'){
+                    }else if (action=='ORP'){
                         median=715;
                         tolerance=0.1;                        
                     }else{
                         median=15;
                         tolerance=0.1;                        
                     }
-                    alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue)+' '+action);
+                    alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
                     
                     newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);
