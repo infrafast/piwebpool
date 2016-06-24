@@ -417,7 +417,7 @@ foreach($materials as $material=>$pin){ ?>
 </tr>
 <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
 <tr>
-    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo "<br>".getPh()."<br>"; ?><br></div></td>
+    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off" style="background: yellow";><?php echo "<br>".getPh()."<br>"; ?><br></div></td>
     <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
 </tr>
