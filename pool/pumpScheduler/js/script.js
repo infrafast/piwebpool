@@ -176,7 +176,7 @@ function refreshValue(elem,action){
                     }
                     alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
                     
-                    var newValue = "<br>"+result.state+"<br><br>";
+                    newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);
                     $(elem).attr("style", "background:lime;");
 
