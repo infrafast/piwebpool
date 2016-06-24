@@ -146,6 +146,7 @@ function getColor(median,tolerance,value){
     var prop = ecart/tolerance;
     var greenHEX = ((1-prop)*255).toString(16);
     var redHEX = (prop*255).toString(16);
+    return 
 }
 
     
@@ -182,7 +183,7 @@ function refreshValue(elem,action){
                     
                     newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);
-                    $(elem).attr("style", "background:lime;");
+                    $(elem).attr("style", "background:#FF69B4;");
 
                     
 				}else{
