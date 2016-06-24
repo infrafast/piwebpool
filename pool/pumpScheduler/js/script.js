@@ -149,8 +149,7 @@ function rgbToHex(r, g, b) {
 }
 
 
-function getColor(median,value){
-    var tolerance = 0.02;
+function getColor(median,tolerance,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance/100;
@@ -158,7 +157,6 @@ function getColor(median,value){
     var red = (prop*255)+(500*ecart);
     if (green<0) green=0; if (green>255) green=255;
     if (red<0) red=0; if (red>255) red=255;    
-    
     return rgbToHex(red,green,0);
 }
 
@@ -182,11 +180,18 @@ function refreshValue(elem,action){
 				if(result.answer == "OK"){
                     var median;
                     var tolerance;
-                    if(action=='Ph') median=7.24;
-                    else if (action=='ORP') median=715;
-                    else median=15;
-                    
-                    var color=getColor(median,newValue);
+                    if(action=='Ph'){
+                        median=7.24;
+                        tolerance=0.02;
+                    }else if (action=='ORP'){
+                        median=715;
+                        tolerance=0.02;                        
+                    }else{
+                        median=15;
+                        tolerance=0.02;                        
+                    }
+
+                    var color=getColor(median,tolerance,newValue);
                     alert(color);
                     $(elem).attr("style", "background:"+color+";");
 
