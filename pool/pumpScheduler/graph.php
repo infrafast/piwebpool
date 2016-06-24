@@ -31,12 +31,13 @@ if (!$result) {
 
 $data = array();
 while ($row = mysql_fetch_assoc($result)){
-    $data[$row['timeStamp']] = $row[$_GET["graph"]];
     $date = strtotime($row['timeStamp']);
     $hour = date('H', $date);    
-    echo "<br>".$row['timeStamp']." ". $row[$_GET["graph"]]." ".$hour;
-} exit;
-
+    //$data[$row['timeStamp']] = $row[$_GET["graph"]];
+    $data[$hour] = $row[$_GET["graph"]];    
+    //echo "<br>".$row['timeStamp']." ". $row[$_GET["graph"]]." ".$hour;
+}
+//exit;
 
 header("Content-type: image/png");
 //Create phpMyGraph instance
