@@ -161,8 +161,17 @@ function refreshValue(elem,action){
 				$(elem).addClass('off');
 				if(result.answer == "OK"){
 				    var newValue = "<br>"+result.state+"<br><br>";
+                    $(elem).html(newValue);
                     $(elem).attr("style", "background:lime;");
-				    $(elem).html(newValue);
+                    if(action=='ph'){
+                        
+                    }else if (action=='orp'){
+                        
+                        
+                    }else{
+                        
+                        
+                    }
 				}else{
 					alert('Erreur : '+result.answer);
 				}
