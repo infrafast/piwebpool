@@ -7,6 +7,7 @@ $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['average-line-visible']=false;
 //$cfg['key-visible']=false;
+$cfg['value-label-visible']=true;
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
