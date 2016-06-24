@@ -418,8 +418,8 @@ foreach($materials as $material=>$pin){ ?>
 <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
 <tr>
     <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo "<br>".getPh()."<br>"; ?><br></div></td>
-    <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
-    <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
+    <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
+    <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
 </tr>
 <tr>
     <th></th>
@@ -500,6 +500,8 @@ foreach($materials as $material=>$pin){ ?>
     
     // refresh 
     refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+    refreshValue(document.getElementById('divOrpMeasureID'),'ORP');
+    refreshValue(document.getElementById('divOrpMeasureID'),'ORP');
     
     //setup Blockly for LUA variable
     Blockly.Blocks['sensors'] = {
