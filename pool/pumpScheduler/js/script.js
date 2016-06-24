@@ -155,7 +155,7 @@ function getColor(median,tolerance,value){
     var prop = ecart/tolerance/100;
     var green = ((1-prop)*255);
     var red = (prop*255);
-    return rgbToHex(green,red,0);
+    return rgbToHex(red,green,0);
 }
 
     
