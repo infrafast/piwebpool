@@ -140,13 +140,17 @@ function resetSchedule(){
     }
 }
 
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
 function getColor(median,tolerance,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance;
-    var greenHEX = ((1-prop)*255).toString(16);
-    var redHEX = (prop*255).toString(16);
-    return "#"+redHEX+greenHEX+"00";
+    var green = ((1-prop)*255)
+    var red = (prop*255)
+    return rgbToHex(green,red,0)
 }
 
     
