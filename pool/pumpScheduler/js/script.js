@@ -142,6 +142,7 @@ function resetSchedule(){
     
 function refreshValue(elem,action){
 	var urlCall = "./action.php?action=get"+action;
+	$(elem).removeAttr("style");
 	$(elem).removeClass('off');
 	$(elem).addClass('loading');
 	//alert("refresh "+urlCall);
