@@ -20,7 +20,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 }
 
-$sql = "select ".$_GET["graph"].",id, timeStamp from (select ".$_GET["graph"].", id, timeStamp from measures order by id desc limit ".intval($_GET["period"]).") tempTable order by timeStamp asc;
+$sql = "select ".$_GET["graph"].",id, timeStamp from (select ".$_GET["graph"].", id, timeStamp from measures order by id desc limit ".intval($_GET["period"]).") tempTable order by timeStamp asc";
 echo $sql; exit;
 $result = mysql_query($sql, $link);
 
