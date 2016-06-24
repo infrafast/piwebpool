@@ -110,13 +110,13 @@ function getTemperature(){
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
-    return round(readSensor("/dev/ttyUSB1"), 2,PHP_ROUND_HALF_UP);  
-    //return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
+    //return round(readSensor("/dev/ttyUSB1"), 2,PHP_ROUND_HALF_UP);  
+    return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
 }
 
 function getORP(){
-    return intval(readSensor("/dev/ttyUSB0"));    
-   //return intval(rand(0,1000));
+    //return intval(readSensor("/dev/ttyUSB0"));    
+   return intval(rand(0,1000));
 }
 
 function readSensor($device){
