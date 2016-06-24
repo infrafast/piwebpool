@@ -165,10 +165,10 @@ function getColor(median,tolerance,value){
         if (red<0) red=0; if (red>255) red=255;    
     }else{
 // tolerance is upper 1 we are displaying a measure like temperature so we use blue color
-        red = ((1-prop)*255)-(500*ecart);
+        green = ((1-prop)*255)-(500*ecart);
         blue = (prop*255)+(500*ecart);
         if (blue<0) blue=0; if (blue>255) blue=255;
-        if (red<0) red=0; if (red>255) red=255;    
+        if (green<0) green=0; if (green>255) green=255;    
     }
 
     return rgbToHex(red,green,blue);
