@@ -47,8 +47,10 @@ if ($_GET["type"]=="bar"){
     $cfg['label-visible']=false;
     $cfg['value-label-visible']=false;
     $cfg['zero-line-visible']=false;
-    $cfg['']=false;
-    $cfg['']=false;
+    $cfg['key-visible']=false;
+    $cfg['value-visible']=false;
+    $cfg['box-border-visible']=false;
+    $cfg['']=false;    
     $cfg['']=false;
     $cfg['']=false;    
 
