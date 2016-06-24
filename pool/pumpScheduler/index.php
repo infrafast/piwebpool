@@ -396,7 +396,7 @@ $tableSettings = new TableGear($optionsSet);
 <tr class="header" id="actionTable">
 <td colspan="2"><b><span>-</span> Commandes</b></td>
 </tr>
-<tr><th>Action</th><th>Etat</th></tr>
+<tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
 <?php foreach($materials as $material=>$pin){ ?>
 <tr >
 	<?php echo "<td style=\"background-image:url('graph.php?graph=pump&period=24&width=400&height=50&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
