@@ -115,7 +115,8 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .header{
-    cursor: pointer;    
+    cursor: pointer;
+    background-repeat:no-repeat	;
 }
 
 .on{
