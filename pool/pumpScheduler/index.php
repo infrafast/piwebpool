@@ -406,7 +406,7 @@ foreach($materials as $material=>$pin){ ?>
 <tr height=80px>
 	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=600&height=70&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
 	</td>
-	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>">OK</div></td>
+	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>">.</div></td>
 </tr>
 <?php } ?>
 </table>
