@@ -146,7 +146,7 @@ function getColor(median,tolerance,value){
     var prop = ecart/tolerance;
     var greenHEX = ((1-prop)*255).toString(16);
     var redHEX = (prop*255).toString(16);
-    return 
+    return "#"+redHEX+greenHEX+"00";
 }
 
     
