@@ -5,7 +5,6 @@ require('configuration.php');
 
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
-$cfg['average-line-visible']=false;
 //keyvisible = affichage de l'echelle du temps
 $cfg['key-visible']=false;
 
@@ -45,7 +44,8 @@ if ($_GET["type"]=="bar"){
     $cfg['key-visible']=false;
     $cfg['value-visible']=false;
     $cfg['box-border-visible']=false;
-    $cfg['horizontal-divider-visible']=false;    
+    $cfg['horizontal-divider-visible']=false;  
+    $cfg['average-line-visible']=false;
     //$cfg['column-divider-visible']=false;
     $cfg['background-color']="F0F0F0";    
 
