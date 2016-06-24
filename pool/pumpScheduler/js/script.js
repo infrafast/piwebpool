@@ -186,7 +186,7 @@ function refreshValue(elem,action){
                         tolerance=0.01;                        
                     }else{
                         median=15;
-                        tolerance=0.1;                        
+                        tolerance=0.01;                        
                     }
 
                     var color=getColor(median,tolerance,newValue);
