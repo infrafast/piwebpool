@@ -160,9 +160,6 @@ function refreshValue(elem,action){
 				$(elem).removeClass('loading');
 				$(elem).addClass('off');
 				if(result.answer == "OK"){
-				    var newValue = "<br>"+result.state+"<br><br>";
-                    $(elem).html(newValue);
-                    $(elem).attr("style", "background:lime;");
                     var median;
                     var tolerance;
                     if(action=='ph'){
@@ -176,6 +173,12 @@ function refreshValue(elem,action){
                         tolerance=0.1;                        
                     }
                     alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
+                    
+                    var newValue = "<br>"+result.state+"<br><br>";
+                    $(elem).html(newValue);
+                    $(elem).attr("style", "background:lime;");
+
+                    
 				}else{
 					alert('Erreur : '+result.answer);
 				}
