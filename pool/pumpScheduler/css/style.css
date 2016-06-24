@@ -110,6 +110,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	width:100%;
 	cursor: pointer;
 	margin:4px auto 0px auto;
+	border: thick solid #0000FF;
 	background-repeat:no-repeat	;
 }
 
