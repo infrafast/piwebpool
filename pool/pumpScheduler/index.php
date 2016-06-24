@@ -498,7 +498,7 @@ foreach($materials as $material=>$pin){ ?>
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
     
-    // refresh 
+    // refresh measures indicators
     refreshValue(document.getElementById('divPhMeasureID'),'Ph');
     refreshValue(document.getElementById('divORPMeasureID'),'ORP');
     refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
