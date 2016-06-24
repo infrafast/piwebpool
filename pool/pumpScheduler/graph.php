@@ -7,7 +7,7 @@ $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['key-color'] = "00a2e8";
 $cfg['key-color'] = "00a2e8";
-$cfg['column-color'] = "00ff00";
+$cfg['column-color'] = "00a2e8";
 $cfg['value-label-color'] = "ff0000";
 
 //keyvisible = affichage de l'echelle du temps
