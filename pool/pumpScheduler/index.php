@@ -407,7 +407,7 @@ $materialsColumn = array(
 foreach($materials as $material=>$pin){ ?>
 
 <tr >
-	<?php echo "<td style=\"background-image:url('graph.php?graph=pump&period=24&width=400&height=50&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
+	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."pump&period=24&width=400&height=50&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
 	</td>
 	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td>
 </tr>
