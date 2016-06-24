@@ -1,6 +1,7 @@
 // Attention : il faudrait exploiter result.state et result.answer et non pas result.error
 
 $('.header').click(function(){
+	$(this).addClass('loading');
     $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
     var id=$(this).attr('id');
