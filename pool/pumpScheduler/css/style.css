@@ -122,13 +122,13 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 .on{
 	/*background-image:url('../images/1.png');*/
 	background-color:#00a2e8;
-	border: thin inset #00a2e8;
+	border: thin outset #00a2e8;
 }
 
 .off{
 	/*background-image:url('../images/0.png');*/
 	background-color:#ffffff;
-	border: thin outset #00a2e8;
+	border: thin inset #00a2e8;
 }
 
 .play{
