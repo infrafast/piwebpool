@@ -172,8 +172,8 @@ function refreshValue(elem,action){
                         median=715;
                         tolerance=0.1;                        
                     }else{
-                        
-                        
+                        median=15;
+                        tolerance=0.1;                        
                     }
 				}else{
 					alert('Erreur : '+result.answer);
