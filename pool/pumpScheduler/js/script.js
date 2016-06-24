@@ -188,13 +188,13 @@ function refreshValue(elem,action){
                         median=15;
                         tolerance=0.1;                        
                     }
-                    newValue = "<br>"+result.state+"<br><br>";
-                    $(elem).html(newValue);
+
                     var color=getColor(median,tolerance,newValue);
                     alert(color);
                     $(elem).attr("style", "background:"+color+";");
 
-                    
+                    newValue = "<br>"+result.state+"<br><br>";
+                    $(elem).html(newValue);
 				}else{
 					alert('Erreur : '+result.answer);
 				}
