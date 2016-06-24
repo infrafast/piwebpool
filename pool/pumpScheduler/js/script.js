@@ -140,10 +140,14 @@ function resetSchedule(){
     }
 }
 
-  function rgb2hex(red, green, blue) {
-        var rgb = blue | (green << 8) | (red << 16);
-        return '#' + (0x1000000 + rgb).toString(16).slice(1);
-  }
+
+function rgbToHex(r, g, b) {
+    if(r < 0 || r > 255) alert("r is out of bounds; "+r);
+    if(g < 0 || g > 255) alert("g is out of bounds; "+g);
+    if(b < 0 || b > 255) alert("b is out of bounds; "+b);
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1,7);
+}
+
 
 function getColor(median,tolerance,value){
     var diff = Math.abs(value - median);
@@ -151,7 +155,7 @@ function getColor(median,tolerance,value){
     var prop = ecart/tolerance;
     var green = ((1-prop)*255);
     var red = (prop*255);
-    return rgb2hex(green,red,0);
+    return rgbToHex(green,red,0);
 }
 
     
