@@ -6,6 +6,7 @@ require('configuration.php');
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['average-line-visible']=false;
+//keyvisible = affichage de l'echelle du temps
 $cfg['key-visible']=false;
 
 // connect to the database
