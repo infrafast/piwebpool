@@ -51,7 +51,7 @@ if ($_GET["type"]=="bar"){
     $cfg['value-visible']=false;
     $cfg['box-border-visible']=false;
     $cfg['horizontal-divider-visible']=false;    
-    $cfg['column-divider-visible']=false;
+    //$cfg['column-divider-visible']=false;
     //$cfg['']=false;    
 
     $graph->parseVerticalSimpleColumnGraph($data,$cfg);
