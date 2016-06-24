@@ -169,8 +169,8 @@ function refreshValue(elem,action){
                         median=7.24;
                         tolerance=0.04;
                     }else if (action=='orp'){
-                        
-                        
+                        median=715;
+                        tolerance=0.1;                        
                     }else{
                         
                         
