@@ -401,8 +401,17 @@ $tableSettings = new TableGear($optionsSet);
 <tr >
 	<?php echo "<td style=\"background-image:url('graph.php?graph=pump&period=24&width=400&height=50&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
 	</td>
-	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td></tr>
+	<td><div onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)=='on'?'off':'on'); ?>"></div></td>
+</tr>
 <?php } ?>
+</table>
+
+
+<table class="materialTab">
+<tr class="header" id="actionTable">
+<td colspan="2"><b><span>-</span> Commandes</b></td>
+</tr>
+<tr><th>Action</th><th>Etat</th></tr>
 <tr>
     <td>RAZ Planificateur filtration</td>
     <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
@@ -421,6 +430,7 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 
 </table>
+
 
 <table class="materialTab">
 <tr class="header" id="sensorTable">
