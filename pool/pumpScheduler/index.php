@@ -412,12 +412,12 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
 <tr>
-    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?><br><input type="button" value="Calibrer (ph:7)" onclick=";"></div></td>
+    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
     <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr height="180px" id="graphID">
-    <td id="graph=ph" style="background-image:url('graph.php?graph=ph&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
+    <td id="graph=ph" style="background-image:url('graph.php?graph=ph&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"><br><input type="button" value="Calibrer (ph:7)" onclick=";"></td>
     <td id="graph=orp" style="background-image:url('graph.php?graph=orp&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
     <td id="graph=temperature" style="background-image:url('graph.php?graph=temperature&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
 </tr>
