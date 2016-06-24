@@ -163,7 +163,7 @@ function refreshValue(elem,action){
 			success: function(r){
 				var result = eval(r);
                 var newValue = result.state;
-				$(elem).html(newValue);
+				
 				$(elem).removeClass('loading');
 				$(elem).addClass('off');
 				if(result.answer == "OK"){
@@ -182,7 +182,7 @@ function refreshValue(elem,action){
                     alert('diff: '+median+' '+newValue+' '+getColor(median,tolerance,newValue));
                     
                     newValue = "<br>"+result.state+"<br><br>";
-                    
+                    $(elem).html(newValue);    
                     $(elem).attr("style", "background:#FF69B4;");
 
                     
