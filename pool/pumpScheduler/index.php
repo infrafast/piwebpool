@@ -497,6 +497,10 @@ foreach($materials as $material=>$pin){ ?>
 
     // retrieve logfile
     document.getElementById('logFile').value = getLog();
+    
+    // refresh 
+    refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+    
     //setup Blockly for LUA variable
     Blockly.Blocks['sensors'] = {
       init: function() {
