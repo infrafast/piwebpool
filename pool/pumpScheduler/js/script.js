@@ -163,8 +163,11 @@ function refreshValue(elem,action){
 				    var newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);
                     $(elem).attr("style", "background:lime;");
+                    var median;
+                    var tolerance;
                     if(action=='ph'){
-                        
+                        median=7.24;
+                        tolerance=0.04;
                     }else if (action=='orp'){
                         
                         
