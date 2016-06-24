@@ -36,9 +36,9 @@ if (!$result) {
 $data = array();
 while ($row = mysql_fetch_assoc($result)){
     $date = strtotime($row['timeStamp']);
-    $hour = date('H:m', $date);    
-    $data[$row['timeStamp']] = $row[$_GET["graph"]];
-    //$data[$hour] = $row[$_GET["graph"]];    
+    $hour = date('H:s', $date);    
+    //$data[$row['timeStamp']] = $row[$_GET["graph"]];
+    $data[$hour] = $row[$_GET["graph"]];    
     //echo "<br>".$row['timeStamp']." ". $row[$_GET["graph"]]." ".$hour;
 }
 //exit;
