@@ -6,8 +6,6 @@ require('configuration.php');
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['average-line-visible']=false;
-//$cfg['label-visible']=false;
-//$cfg['value-label-visible']=false;
 $cfg['key-visible']=false;
 //$cfg['label']=$_GET["period"];
 
@@ -45,7 +43,14 @@ header("Content-type: image/png");
 $graph = new phpMyGraph();
 
 //Parse
-if ($_GET["type"]=="bar") $graph->parseVerticalSimpleColumnGraph($data,$cfg);
-else $graph->parseVerticalLineGraph($data,$cfg);
+if ($_GET["type"]=="bar"){
+    $cfg['label-visible']=false;
+    $cfg['value-label-visible']=false;
+    $cfg['']=false;
+
+    $graph->parseVerticalSimpleColumnGraph($data,$cfg);
+}
+else 
+    $graph->parseVerticalLineGraph($data,$cfg);
 
 ?>
