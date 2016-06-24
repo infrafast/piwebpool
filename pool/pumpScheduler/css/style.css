@@ -111,6 +111,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	cursor: pointer;
 	margin:0px 0px 0px 0px ;
 	font-size:xx-large;
+	vertical-align: middle;
 	background-repeat:no-repeat	;
 }
 
