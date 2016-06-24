@@ -115,7 +115,7 @@ function getPh(){
 }
 
 function getORP(){
-return intval(readSensor("/dev/ttyUSB0"));    
+    return intval(readSensor("/dev/ttyUSB0"));    
    //return intval(rand(0,1000));
 }
 
