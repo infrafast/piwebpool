@@ -32,7 +32,7 @@ if (!$result) {
 $data = array();
 while ($row = mysql_fetch_assoc($result)){
     $data[$row['timeStamp']] = $row[$_GET["graph"]];
-    echo "\n".$row['timeStamp']." ". $row[$_GET["graph"]];
+    echo "<br>".$row['timeStamp']." ". $row[$_GET["graph"]];
 } exit;
 
 
