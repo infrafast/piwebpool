@@ -6,7 +6,7 @@ require('configuration.php');
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 //keyvisible = affichage de l'echelle du temps
-$cfg['key-visible']=false;
+//$cfg['key-visible']=false;
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
@@ -54,7 +54,6 @@ if ($_GET["type"]=="bar"){
     $cfg['horizontal-divider-visible']=false;  
     $cfg['average-line-visible']=false;
     //$cfg['column-divider-visible']=false;
-    $cfg['key-visible']=true;
     $cfg['background-color']="F0F0F0";    
 
     $graph->parseVerticalSimpleColumnGraph($data,$cfg);
