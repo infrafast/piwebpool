@@ -31,6 +31,7 @@ if (!$result) {
 
 $data = array();
 while ($row = mysql_fetch_assoc($result)) $data[$row['timeStamp']] = $row[$_GET["graph"]];
+echo $data; exit;
 
 header("Content-type: image/png");
 //Create phpMyGraph instance
