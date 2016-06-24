@@ -412,6 +412,15 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
 <tr>
+    <td></td>
+    <td><select  name="period"  id="periodID" onclick='updateGraph();'>
+            <option value="8">sur 8 heures</option>
+            <option value="24">dernier jour</option>
+            <option value="168">dernière semaine</option>
+    </select></td>
+    <td></td>
+</tr>
+<tr>
     <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
     <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
     <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
@@ -427,16 +436,6 @@ $tableSettings = new TableGear($optionsSet);
     <td></td>
 </tr>
 
-
-<tr>
-    <td></td>
-    <td><select  name="period"  id="periodID" onclick='updateGraph();'>
-            <option value="8">sur 8 heures</option>
-            <option value="24">dernier jour</option>
-            <option value="168">dernière semaine</option>
-    </select></td>
-    <td></td>
-</tr>
 </table>
 
 <table class="materialTab">
