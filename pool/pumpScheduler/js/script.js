@@ -152,7 +152,7 @@ function refreshValue(elem,action){
 				$(elem).removeClass('loading');
 				$(elem).addClass('off');
 				if(result.answer == "OK"){          
-				    $(elem).text(result.state);
+				    $(elem).text("<br>"+result.state+"<br>");
 				}else{
 					alert('Erreur : '+result.answer);
 				}
