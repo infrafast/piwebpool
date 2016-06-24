@@ -503,6 +503,10 @@ foreach($materials as $material=>$pin){ ?>
     refreshValue(document.getElementById('divORPMeasureID'),'ORP');
     refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
     
+    
+    // draw measures graph
+    updateGraph();
+    
     //setup Blockly for LUA variable
     Blockly.Blocks['sensors'] = {
       init: function() {
