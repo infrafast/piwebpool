@@ -156,7 +156,7 @@ function refreshValue(elem,action){
 				if(result.answer == "OK"){
 				    var newValue = "<br>"+result.state+"<br>";
                     alert(newValue);
-				    $(elem).innerHtml();
+				    $(elem).innerHtml(newValue);
 				}else{
 					alert('Erreur : '+result.answer);
 				}
