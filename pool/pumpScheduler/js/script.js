@@ -149,7 +149,8 @@ function rgbToHex(r, g, b) {
 }
 
 
-function getColor(median,tolerance,value){
+function getColor(median,value){
+    var tolerance = 0.02;
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance/100;
