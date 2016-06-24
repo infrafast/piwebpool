@@ -208,7 +208,6 @@ function refreshValue(elem,action){
                     var color=getColor(median,tolerance,newValue);
                     //alert(color);
                     $(elem).attr("style", "background:"+color+";");
-                    $(elem).attr("style", "color: white;");
 
                     newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);
