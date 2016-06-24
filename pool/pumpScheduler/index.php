@@ -406,32 +406,6 @@ $tableSettings = new TableGear($optionsSet);
 <?php } ?>
 </table>
 
-
-<table class="materialTab">
-<tr class="header" id="paramTable">
-<td colspan="2"><b><span>-</span> Commandes</b></td>
-</tr>
-<tr><th>Action</th><th>Etat</th></tr>
-<tr>
-    <td>RAZ Planificateur filtration</td>
-    <td><div onclick="resetSchedule();" class="buttonState warning"></div></td>
-</tr>
-<tr>
-    <td>Forcer rafraichissement</td>
-    <td><div onclick="forceCron();" class="buttonState refresh"></div></td>
-</tr>
-<tr>
-    <td>Calibrer sonde Ph (valeur: 7)</td>
-    <td><div onclick="" class="buttonState play"></div></td>
-</tr>
-<tr>
-    <td>Calibrer sonde Redox (valeur: 650mv)</td>
-    <td><div onclick="" class="buttonState play"></div></td>
-</tr>
-
-</table>
-
-
 <table class="materialTab">
 <tr class="header" id="sensorTable">
 <td colspan="3"><b><span>-</span> Mesures</b></td>
