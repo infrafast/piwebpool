@@ -412,6 +412,11 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
 <tr>
+    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
+    <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
+    <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
+</tr>
+<tr>
     <td></td>
     <td><select  name="period"  id="periodID" onclick='updateGraph();'>
             <option value="8">sur 8 heures</option>
@@ -419,11 +424,6 @@ $tableSettings = new TableGear($optionsSet);
             <option value="168">dernière semaine</option>
     </select></td>
     <td></td>
-</tr>
-<tr>
-    <td><div onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo getPh(); ?></div></td>
-    <td><div onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo getORP(); ?></div></td>
-    <td><div onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo getTemperature(); ?></div></td>
 </tr>
 <tr height="180px" id="graphID">
     <td id="graph=ph" style="background-image:url('graph.php?graph=ph&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
