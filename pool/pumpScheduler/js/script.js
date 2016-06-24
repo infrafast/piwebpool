@@ -192,7 +192,7 @@ function refreshValue(elem,action){
                     $(elem).html(newValue);
                     var color=getColor(median,tolerance,newValue);
                     alert(color);
-                    $(elem).attr("style", "background:"++";");
+                    $(elem).attr("style", "background:"+color+";");
 
                     
 				}else{
