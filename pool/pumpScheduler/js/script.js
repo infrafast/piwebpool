@@ -188,11 +188,9 @@ function refreshValue(elem,action){
                         median=15;
                         tolerance=0.1;                        
                     }
-                    alert(getColor(median,tolerance,newValue));
-                    
                     newValue = "<br>"+result.state+"<br><br>";
                     $(elem).html(newValue);    
-                    $(elem).attr("style", "background:#FF69B4;");
+                    $(elem).attr("style", "background:"+getColor(median,tolerance,newValue)+";");
 
                     
 				}else{
