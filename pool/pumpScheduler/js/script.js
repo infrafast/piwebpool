@@ -179,17 +179,10 @@ function refreshValue(elem,action){
 				if(result.answer == "OK"){
                     var median;
                     var tolerance;
-                    if(action=='Ph'){
-                        median=7.24;
-                        tolerance=0.02;
-                    }else if (action=='ORP'){
-                        median=715;
-                        tolerance=0.01;                        
-                    }else{
-                        median=15;
-                        tolerance=0.01;                        
-                    }
-
+                    if(action=='Ph') median=7.24;
+                    else if (action=='ORP') median=715;
+                    else median=15;
+                    
                     var color=getColor(median,tolerance,newValue);
                     alert(color);
                     $(elem).attr("style", "background:"+color+";");
