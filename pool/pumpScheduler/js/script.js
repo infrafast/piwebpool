@@ -46,7 +46,7 @@ function changeState(pin,elem){
 					$(elem).removeClass('on');
 					$(elem).removeClass('off');
 					$(elem).addClass((newState==1?'on':'off')); 
-					$(elem).getElementById("content").innerHTML = "<br>whatever<br>";
+					$(elem).getElementById("commandButtonID").innerHTML = "<br>whatever<br>";
 				}else{
 					alert('Erreur : '+result.answer);
 				}
