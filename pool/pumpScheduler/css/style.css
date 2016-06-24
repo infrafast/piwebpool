@@ -114,6 +114,9 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background-repeat:no-repeat	;
 }
 
+.header{
+    cursor: pointer;    
+}
 
 .on{
 	background-image:url('../images/1.png');
@@ -133,6 +136,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 .refresh{
 	background-image:url('../images/refresh.png');
+}
+
+.loading{
+    background-image:url('../images/loading.gif');
 }
 
 /* ===============
