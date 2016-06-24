@@ -139,6 +139,12 @@ function resetSchedule(){
         location.reload(true);
     }
 }
+
+function getColor(median,tolerance){
+    
+    
+}
+
     
 function refreshValue(elem,action){
 	var urlCall = "./action.php?action=get"+action;
