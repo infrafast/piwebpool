@@ -183,7 +183,7 @@ function refreshValue(elem,action){
                     else if (action=='ORP') median=715;
                     else median=15;
                     
-                    var color=getColor(median,tolerance,newValue);
+                    var color=getColor(median,newValue);
                     alert(color);
                     $(elem).attr("style", "background:"+color+";");
 
