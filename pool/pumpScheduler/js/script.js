@@ -189,8 +189,10 @@ function refreshValue(elem,action){
                         tolerance=0.1;                        
                     }
                     newValue = "<br>"+result.state+"<br><br>";
-                    $(elem).html(newValue);    
-                    $(elem).attr("style", "background:"+getColor(median,tolerance,newValue)+";");
+                    $(elem).html(newValue);
+                    var color=getColor(median,tolerance,newValue);
+                    alert(color);
+                    $(elem).attr("style", "background:"++";");
 
                     
 				}else{
