@@ -141,7 +141,7 @@ function resetSchedule(){
 }
 
 function getColor(median,tolerance,value){
-    return Math.abs(a - b);
+    return Math.abs(median - value);
 }
 
     
