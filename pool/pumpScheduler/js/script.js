@@ -140,9 +140,10 @@ function resetSchedule(){
     }
 }
 
-function rgbToHex(r, g, b) {
-    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
+  function rgb2hex(red, green, blue) {
+        var rgb = blue | (green << 8) | (red << 16);
+        return '#' + (0x1000000 + rgb).toString(16).slice(1)
+  }
 
 function getColor(median,tolerance,value){
     var diff = Math.abs(value - median);
