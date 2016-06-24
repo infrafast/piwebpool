@@ -7,7 +7,6 @@ $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['average-line-visible']=false;
 //$cfg['key-visible']=false;
-$cfg['value-label-visible']=true;
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
@@ -31,11 +30,7 @@ if (!$result) {
 }
 
 $data = array();
-while ($row = mysql_fetch_assoc($result)) {
-    //$data = array($row['id'] => $row[$_GET["graph"]],);
-    $data[$row['timeStamp']] = $row[$_GET["graph"]];
-}
-
+while ($row = mysql_fetch_assoc($result)) $data[$row['timeStamp']] = $row[$_GET["graph"]];
 
 header("Content-type: image/png");
 
