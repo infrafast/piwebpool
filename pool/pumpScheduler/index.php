@@ -421,7 +421,14 @@ $tableSettings = new TableGear($optionsSet);
     <td id="graph=orp" style="background-image:url('graph.php?graph=orp&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
     <td id="graph=temperature" style="background-image:url('graph.php?graph=temperature&period=8&width=300&height=150');background-repeat:no-repeat;background-size: 100% 100%;"></td>
 </tr>
-<tr>    
+<tr>
+    <td><input type="button" value="Calibrer (ph:7)" onclick=";"></td>
+    <td><input type="button" value="Calibrer (650mv)" onclick=";"></td>
+    <td></td>
+</tr>
+
+
+<tr>
     <td></td>
     <td><select  name="period"  id="periodID" onclick='updateGraph();'>
             <option value="8">sur 8 heures</option>
