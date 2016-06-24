@@ -12,8 +12,8 @@ $('.header').click(function(){
     	url: urlCall,
     	async:false,
         success: function(r){
-            $(this).removeClass('loading');
     }});
+    $(this).removeClass('loading');
 });
 
 function getSetting(id,elem){
