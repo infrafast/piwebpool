@@ -153,9 +153,10 @@ function refreshValue(elem,action){
 				var result = eval(r);
 				$(elem).removeClass('loading');
 				$(elem).addClass('off');
-				if(result.answer == "OK"){          
-				    alert(result.state);
-				    $(elem).innerHtml("<br>"+result.state+"<br>");
+				if(result.answer == "OK"){
+				    var newValue = "<br>"+result.state+"<br>";
+                    alert(newValue);
+				    $(elem).innerHtml();
 				}else{
 					alert('Erreur : '+result.answer);
 				}
