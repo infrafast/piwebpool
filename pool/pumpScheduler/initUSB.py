@@ -1,6 +1,5 @@
 import os         #import OS module to easily exit the program
 import serial     #import serial module to enable serial commands
-import threading  #import threading module to create a separate thread for reading the serial port
 
 ser0 = serial.Serial(      #initiate the serial connection into the 'ser' variable
   port='/dev/ttyUSB0',    #set the port address of the Atlas stamp
