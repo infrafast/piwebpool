@@ -27,8 +27,8 @@ def read_from_port(ser):    #create definition for your serial read thread
 ser0.write('\r')     #an initial write to clear the serial buffer
 ser1.write('\r')
 
-ser0.read_from_port(3)
-ser1.read_from_port(3)
+read_from_port(ser0)
+read_from_port(ser0)
 
 ser.close()           #close the serial port
 ser1.close()
