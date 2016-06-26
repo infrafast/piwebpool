@@ -24,10 +24,10 @@ def read_from_port(ser):    #create definition for your serial read thread
     else:
       line = line + data    #append the data onto the line variable
 
-ser.write('\r')     #an initial write to clear the serial buffer
+ser0.write('\r')     #an initial write to clear the serial buffer
 ser1.write('\r')
 
-ser.read_from_port(3)
+ser0.read_from_port(3)
 ser1.read_from_port(3)
 
 ser.close()           #close the serial port
