@@ -16,19 +16,11 @@ ser1 = serial.Serial(      #initiate the serial connection into the 'ser' variab
 #  baudrate=9600          #set the baudrate
 #)
 
-def read_from_port(ser):    #create definition for your serial read thread
-  while True:               #start the While loop
-    data = ser.read()       #read the serial port and store in the 'data' variable
-    if(data == "\r"):       #if there is a carriage return
-      line = ""             #set the variable back to nothing
-    else:
-      line = line + data    #append the data onto the line variable
-
 ser0.write('\r')     #an initial write to clear the serial buffer
 ser1.write('\r')
 
-read_from_port(ser0)
-read_from_port(ser0)
+ser0.read()
+ser1.read()
 
 ser.close()           #close the serial port
 ser1.close()
