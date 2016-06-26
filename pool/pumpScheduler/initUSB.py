@@ -22,6 +22,6 @@ ser1.write('\r')
 ser0.read()
 ser1.read()
 
-ser.close()           #close the serial port
+ser0.close()           #close the serial port
 ser1.close()
 os._exit(1)           #exit the program
