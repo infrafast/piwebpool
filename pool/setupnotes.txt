@@ -90,6 +90,15 @@ OPTION 2 -------------------------------------------- NOT WOKRING, USE RELAY  IN
     AuthUser=admin@infrafast.com
     AuthPass=Quxxxxxxxx04
     UseSTARTTLS=YES    
+    rewriteDomain=infrafast.com
+
+2) vi /etc/ssmtp/revaliases
+www-data:admin@infrafast.com:mail.gandi.net:587
+
+3) 
+sudo usermod -a -G root www-data
+chmod 770 /etc/ssmtp/ssmtp.conf
+
 
 
 
