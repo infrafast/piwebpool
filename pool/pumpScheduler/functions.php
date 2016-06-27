@@ -18,7 +18,7 @@ function sendsms($message){
 function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
-    $message=htmlentities(wordwrap($message,70));
+    $message=html_entity_decode(wordwrap($message,70));
     $to = "szemrot@hotmail.com";
     $subject = "Pool Notification";
     $from = "admin@infrafast.com";
