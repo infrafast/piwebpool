@@ -22,7 +22,7 @@ function sendemail($message){
     $message=html_entity_decode(wordwrap($message,70));
     $to = "szemrot@hotmail.com";
     $subject = "Pool Notification";
-    $from = "admin@infrafast.com";
+    $from = "noreply@pool";
     $headers = "From:" . $from;
     $result = mail($to,$subject,$message,$headers);
     appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
