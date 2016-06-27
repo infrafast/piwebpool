@@ -423,8 +423,8 @@ foreach($materials as $material=>$pin){ ?>
 </tr>
 <tr>
     <th></th>
-    <th><select  name="period"  id="periodID" onclick='updateGraph();'>
-            <option value="8">sur 8 heures</option>
+    <th>Historique sur <select  name="period"  id="periodID" onclick='updateGraph();'>
+            <option value="8">8 heures</option>
             <option value="24">dernier jour</option>
             <option value="168">dernière semaine</option>
     </select></th>
