@@ -85,7 +85,7 @@ OPTION 2 -------------------------------------------- NOT WOKRING, USE RELAY  IN
 1) apt-get install ssmtp
 2) vi /etc/ssmtp/ssmtp.conf
     root=postmaster
-    mailhub=smtp.gmail.com:587
+    mailhub=mail.gandi.net:587
     hostname=piweb
     AuthUser=@gmail.com
     AuthPass=YourGMailPassword
