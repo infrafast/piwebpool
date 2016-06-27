@@ -271,12 +271,6 @@ $options["selects"] = array(
 
 // $options["inputFormat"]["<FIELD>"] = "numeric";         // Finds numeric values. ex. $2,432,44.00 => 243244.00
 
-
-
-
-
-
-
 // -- Transform
 //
 // Although there are a few different types of data formats, sometimes this isn't enough to get your data
