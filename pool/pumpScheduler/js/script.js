@@ -64,6 +64,7 @@ function updateScript(xml,lua,script){
 			data:{id:script,xml:xml,lua:lua},
 			async:false,
 			processData: false,
+			contentType: 'application/octet-stream',
 			success: function(r){
 				result = eval(r);
 				if(result.answer != "OK"){          
