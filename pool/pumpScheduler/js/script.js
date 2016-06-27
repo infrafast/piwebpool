@@ -61,7 +61,7 @@ function updateScript(xml,lua,script){
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=updateScript",
-			data:{id:script,xml:xml,lua:"info='à l\\\\\\'huile de COCO';"},
+			data:{id:script,xml:xml,lua:lua},
 			async:false,
 			success: function(r){
 				result = eval(r);
