@@ -23,6 +23,7 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         $lua->assign("temperature",getTemperature());
         $lua->assign("ph",getPh());
         $lua->assign("orp",getORP());
+        $lua->assign("time",getCurrentTimeWindow());
         
         $lua->registerCallback("set", 'setPinState'); 
         $lua->registerCallback("get", 'getPin'); 
