@@ -139,7 +139,7 @@ appendlog("CRONACTION",$answer,$state, $logfilename);
 exec("sync");
 
 // purge logfile
-$X = 500; // Number of lines to remove
+$X = 5; // Number of lines to remove
 $lines = file($logfilename);
 $first_line = $lines[0];
 $lines = array_slice($lines, $X + 2);
