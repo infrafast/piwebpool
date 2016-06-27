@@ -464,6 +464,7 @@ foreach($materials as $material=>$pin){ ?>
         <block type="math_number"></block>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
+        <block type="date"></block>
     </xml>
      <td>Script
         <select  name="luascript"  id="scriptID">
