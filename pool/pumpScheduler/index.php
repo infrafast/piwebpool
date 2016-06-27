@@ -476,6 +476,7 @@ foreach($materials as $material=>$pin){ ?>
     </xml>
   <tr>
   <tr>
+    <th>Code preview</th>
     <tr><div><td width="100%"><textarea rows="10" readonly style="color: grey; width: 100%;"></textarea></td></div></tr>
 </table>
 
