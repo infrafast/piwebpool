@@ -11,7 +11,7 @@ function sendsms($message){
     $feedback="void";            
     $result=true;
     if (!sms( $SMSuser, $SMSkey, $message,$feedback )) $result=false;
-    appendlog("sendsms",$result,$feedback);
+    appendlog("sendsms:",$result,$feedback);
     return $result;
 }
 
