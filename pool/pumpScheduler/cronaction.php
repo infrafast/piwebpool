@@ -144,7 +144,7 @@ $line_to_strip = 25;
 $logfilenameTmp = $logfilename."tmp";
 $new_file = new SplFileObject($logfilenameTmp, 'w');
 
-foreach (new LimitIterator(new SplFileObject('logfile.txt'), $line_to_strip) as $line)
+foreach (new LimitIterator(new SplFileObject($logfilename), $line_to_strip) as $line)
     $new_file->fwrite($line); 
 unlink($logfilename);
 rename('logfile2.txt',$logfilename);
