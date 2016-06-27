@@ -108,6 +108,9 @@ sendmail_path = /usr/sbin/sendmail -t -i
 //allow apache to write to log.
 touch logfile.txt
 chmod a+w logfile.txt 
+// give access to apache to the folder where logfile and otehr file are stored
+sudo usermod -a -G webide www-data
+
 
 
 the application uses blockly from google scripts
