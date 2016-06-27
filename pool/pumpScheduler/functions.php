@@ -5,7 +5,7 @@ require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
 
-function sendsms($message,&$feedback){
+function sendsms($message){
     $SMSuser = "19107501";
     $SMSkey = "1NXCXBzJGbNsdb";
     $feedback="void";            
@@ -18,7 +18,7 @@ function sendsms($message,&$feedback){
 function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
-    //mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
+    return mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
     return false; 
 }
 
