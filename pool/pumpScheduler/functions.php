@@ -20,10 +20,9 @@ function sendemail($message){
     // subject and recipee should be extracted from settings.
     $message=wordwrap($message,70);
 
-    $to = “szemrot@hotmail.com”;
+    $to = "szemrot@hotmail.com”;
     $subject = “Pool Notification”;
-    $message = “This is a test email”;
-    $from = “you@your.domain”;
+    $from = “admin@infrafast.com”;
     $headers = “From:” . $from;
     mail($to,$subject,$message,$headers);
     echo “Mail Sent.”;
