@@ -141,7 +141,7 @@ exec("sync");
 // purge logfile
 $lines = file($logfilename);
 $nLine = count($lines);
-if ($nLine>25){
+if ($nLine>168){
     $X = 5; // Number of lines to remove
     $first_line = $lines[0];
     $lines = array_slice($lines, $X + 2);
