@@ -99,7 +99,8 @@ www-data:admin@infrafast.com:mail.gandi.net:587
 sudo usermod -a -G root www-data
 chmod 770 /etc/ssmtp/ssmtp.conf
 
-
+4) vi /etc/php5/apache2/php.ini
+sendmail_path = /usr/sbin/sendmail -t -i
 
 
 
