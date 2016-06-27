@@ -432,8 +432,8 @@ foreach($materials as $material=>$pin){ ?>
 </tr>
 <tr height="180px" id="graphID">
     <td id="graph=ph" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
-    <td id="graph=orp" style="background-repeat:no-repeat;background-size: 100% 100%; background-image: url('images/loading.gif');"></td>
-    <td id="graph=temperature" style="background-repeat:no-repeat;background-size: 100% 100%; background-image: url('images/loading.gif');"></td>
+    <td id="graph=orp" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
+    <td id="graph=temperature" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
 </tr>
 <tr>
     <td><input type="button" value="Calibrer (ph:7)" onclick=";"></td>
