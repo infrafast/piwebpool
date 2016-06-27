@@ -138,20 +138,5 @@ appendlog("CRONACTION",$answer,$state, $logfilename);
 // sync data to disk
 exec("sync");
 
-// purge logfile
-$lines = file($logfilename);
-$nLine = count($lines);
-if ($nLine>176){
-    $X = 8; // Number of lines to remove
-    $first_line = $lines[0];
-    $lines = array_slice($lines, $X + 2);
-    $lines = array_merge(array($first_line, "\n"), $lines);
-    // Write to file
-    $file = fopen($logfilename, 'w');
-    fwrite($file, implode('', $lines));
-    fclose($file);
-}
-
-
 echo $answer.$state;
 ?>
