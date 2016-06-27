@@ -640,7 +640,7 @@ foreach($materials as $material=>$pin){ ?>
 
     function myUpdateFunction(event) {
       var code = Blockly.Lua.workspaceToCode(workspace);
-      document.getElementById('scriptarea').value = code;
+      document.getElementById('scriptareaID').value = code;
     }
     
     function loadXML(script){
