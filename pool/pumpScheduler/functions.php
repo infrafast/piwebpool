@@ -5,7 +5,7 @@ require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
 
-function sendsms($message){
+function sendsms($message,&$feedback){
     $SMSuser = "19107501";
     $SMSkey = "1NXCXBzJGbNsdb";
     $feedback="void";            
