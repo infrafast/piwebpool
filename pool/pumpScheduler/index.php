@@ -474,13 +474,10 @@ foreach($materials as $material=>$pin){ ?>
         <block type="setcommand"></block>
         <block type="getcommand"></block>
     </xml>
-     <td>Script
-  
-        <br>
-        <textarea cols="35" rows="23" id="scriptarea" readonly style="color: grey; background-color: lightgrey;"></textarea></div>
-        <br>
-     </td>
-</tr>
+  <tr>
+  <tr>
+    <tr><div><td width="100%"><textarea rows="25" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></div></tr>
+   </td>
 </table>
 
 <table class="materialTab">
