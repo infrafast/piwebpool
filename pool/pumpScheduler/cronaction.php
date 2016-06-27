@@ -140,7 +140,7 @@ exec("sync");
 
 
 // purge logfile
-$line_to_strip = 25;
+$line_to_strip = 2;
 $logfilenameTmp = $logfilename.".tmp";
 $new_file = new SplFileObject($logfilenameTmp, 'w');
 
