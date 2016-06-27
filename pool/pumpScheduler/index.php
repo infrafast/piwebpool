@@ -445,7 +445,7 @@ foreach($materials as $material=>$pin){ ?>
 
 <table class="materialTab">
 <tr class="header" id="blocklyTable">
-<td colspan="2"><b><span>-</span> Programmation</b></td>
+<td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
 <tr><th>Sequence</th><th>Code</th></tr>
 <tr>
