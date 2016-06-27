@@ -477,7 +477,7 @@ foreach($materials as $material=>$pin){ ?>
   <tr>
   <tr>
     <th>Code preview</th>
-    <tr><td id="scriptareaID" width="100%"><textarea rows="10" readonly style="color: grey; width: 100%;">Erreur chargement de script</textarea></div></tr>
+    <tr><td width="100%"><textarea id="scriptareaID" rows="10" readonly style="color: grey; width: 100%;">Erreur chargement de script</textarea></div></tr>
 </table>
 
 <table class="materialTab">
