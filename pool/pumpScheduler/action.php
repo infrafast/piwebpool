@@ -91,7 +91,7 @@ switch($_['action']){
         }else{
             while ($row = mysql_fetch_assoc($outcome)) {
                 // decode special caharacter like accent so they are sent back in the correct text format
-                $result['state']=mysql_real_escape_string(html_entity_decode(($row[$_['code']]))); 
+                $result['state']=html_entity_decode(($row[$_['code']])); 
             }
             // result return "undef" in state in case no data match
             mysql_free_result($outcome);
