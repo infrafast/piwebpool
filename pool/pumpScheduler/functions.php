@@ -35,6 +35,7 @@ function appendlualog($message){
 
 function appendlog($source,$answer,$status,$filename="logfile.txt"){
 // Appends lines to file and makes sure the file doesn't grow too much
+    $result=true;
     $text =  "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" ;
 	if (!file_exists($filename)) { touch($filename); chmod($filename, 0666); }
 	if (filesize($filename) > 2*1024*1024) {
@@ -47,6 +48,7 @@ function appendlog($source,$answer,$status,$filename="logfile.txt"){
 	if (!$handle = fopen($filename, 'a')) die("<p>\nCannot open file ($filename)");
 	if (fwrite($handle, $text) === FALSE) die("<p>\nCannot write to file ($filename)");
 	fclose($handle);
+	return $result;
     //return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
 }
 
