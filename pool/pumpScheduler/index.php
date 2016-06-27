@@ -431,7 +431,7 @@ foreach($materials as $material=>$pin){ ?>
     <th></th>
 </tr>
 <tr height="180px" id="graphID">
-    <td id="graph=ph" style="background-repeat:no-repeat;background-size: 100% 100%; background-image: url('images/loading.gif');"></td>
+    <td id="graph=ph" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
     <td id="graph=orp" style="background-repeat:no-repeat;background-size: 100% 100%; background-image: url('images/loading.gif');"></td>
     <td id="graph=temperature" style="background-repeat:no-repeat;background-size: 100% 100%; background-image: url('images/loading.gif');"></td>
 </tr>
