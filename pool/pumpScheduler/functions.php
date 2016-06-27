@@ -4,7 +4,6 @@
 require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
-require('configuration.php');
 
 function sendsms($message){
     $SMSuser = "19107501";
@@ -34,7 +33,7 @@ function appendlualog($message){
     return appendlog("LUA","OK",$message);
 }
 
-function appendlog($source,$answer,$status){
+function appendlog($source,$answer,$status, $){
     return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
 }
 
