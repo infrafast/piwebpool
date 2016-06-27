@@ -449,7 +449,7 @@ foreach($materials as $material=>$pin){ ?>
 </tr>
 <tr><th>Sequence</th><th>Code</th></tr>
 <tr>
-    <td><div id="blocklyDiv" style="height: 500px; width: 100%;"></div></td>
+    <td><div id="blocklyDiv" style="height: 500px; width: 300px;"></div></td>
     <xml id="toolbox" style="display: none">
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
