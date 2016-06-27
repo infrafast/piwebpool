@@ -140,12 +140,13 @@ exec("sync");
 
 
 // purge logfile
-$line_to_strip = 5;
+$line_to_strip = 25;
 $new_file = new SplFileObject('logfile2.txt', 'w');
 
 foreach (new LimitIterator(new SplFileObject('logfile.txt'), $line_to_strip) as $line)
     $new_file->fwrite($line); 
-
+unlink('logfile.txt');
+rename('logfile2.txt','logfile.txt');
 
 
 echo $answer.$state;
