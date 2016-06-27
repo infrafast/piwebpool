@@ -15,9 +15,9 @@ $myUser = (isset($_SESSION['currentUser'])?unserialize($_SESSION['currentUser'])
 //Récuperation et sécurisation de toutes les variables POST et GET
 $_ = array();
 foreach($_POST as $key=>$val){
-	$_[$key]=($val);
+	$_[$key]=secure($val);
 }
 foreach($_GET as $key=>$val){
-	$_[$key]=($val);
+	$_[$key]=secure($val);
 }
 ?>
