@@ -33,7 +33,7 @@ function appendlualog($message){
     return appendlog("LUA","OK",$message);
 }
 
-function appendlog($source,$answer,$status,$logfilename){
+function appendlog($source,$answer,$status,$logfilename="logfile.txt"){
     return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
 }
 
