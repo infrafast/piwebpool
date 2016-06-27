@@ -62,7 +62,6 @@ function updateScript(xml,lua,script){
 			type: "POST",
 			url: "./action.php?action=updateScript",
 			data:{id:script,xml:xml,lua:lua},
-			contentType: 'application/json; charset=utf-8',
 			async:false,
 			success: function(r){
 				result = eval(r);
