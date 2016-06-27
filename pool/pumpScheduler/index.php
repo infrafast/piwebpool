@@ -447,7 +447,15 @@ foreach($materials as $material=>$pin){ ?>
 <tr class="header" id="blocklyTable">
 <td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
-<tr><th>Sequence</th><th>Code</th></tr>
+<tr><th>
+      <select  name="luascript"  id="scriptID">
+            <option value="main">defaut</option>
+            <option value="custom">perso</option>
+        </select>
+        <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
+        <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
+        <input type="button" value="executer" onclick="">
+</th></tr>
 <tr>
     <td><div id="blocklyDiv" style="height: 500px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
@@ -467,15 +475,10 @@ foreach($materials as $material=>$pin){ ?>
         <block type="getcommand"></block>
     </xml>
      <td>Script
-        <select  name="luascript"  id="scriptID">
-            <option value="main">defaut</option>
-            <option value="custom">perso</option>
-        </select>
-        <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
-        <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
+  
         <br>
         <textarea cols="35" rows="23" id="scriptarea" readonly style="color: grey; background-color: lightgrey;"></textarea></div>
-        <br><input type="button" value="executer" onclick="">
+        <br>
      </td>
 </tr>
 </table>
