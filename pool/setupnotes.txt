@@ -82,6 +82,10 @@ vi /etc/php5/apache2/php.ini
 sendmail_path 	/usr/sbin/sendmail -t -i
 
 OPTION 2 -------------------------------------------- NOT WOKRING, USE RELAY  INSTEAD , SEE NEXT
+1) apt-get install ssmtp
+2) 
+
+
 
 
 //allow apache to write to log.
