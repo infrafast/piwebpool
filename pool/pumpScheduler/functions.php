@@ -33,8 +33,21 @@ function appendlualog($message){
     return appendlog("LUA","OK",$message);
 }
 
-function appendlog($source,$answer,$status,$logfilename="logfile.txt"){
-    return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
+function appendlog($source,$answer,$status,$filename="logfile.txt"){
+// Appends lines to file and makes sure the file doesn't grow too much
+    $text =  "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" ;
+	if (!file_exists($filename)) { touch($filename); chmod($filename, 0666); }
+	if (filesize($filename) > 2*1024*1024) {
+		$filename2 = "$filename.old";
+		if (file_exists($filename2)) unlink($filename2);
+		rename($filename, $filename2);
+		touch($filename); chmod($filename,0666);
+	}
+	if (!is_writable($filename)) die("<p>\nCannot open log file ($filename)");
+	if (!$handle = fopen($filename, 'a')) die("<p>\nCannot open file ($filename)");
+	if (fwrite($handle, $text) === FALSE) die("<p>\nCannot write to file ($filename)");
+	fclose($handle);
+    //return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
 }
 
 function getLog($logfilename, $lines = 24){
