@@ -46,7 +46,7 @@ function appendlog($source,$answer,$status,$filename="logfile.txt"){
 	}
 	if (!is_writable($filename)) die("<p>\nCannot open log file ($filename)");
 	if (!$handle = fopen($filename, 'a')) die("<p>\nCannot open file ($filename)");
-	if (fwrite($handle, $text) === FALSE) die("<p>\nCannot write to file ($filename)");
+	if (fwrite($handle, $text) === false) die("<p>\nCannot write to file ($filename)");
 	fclose($handle);
 	return $result;
     //return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
