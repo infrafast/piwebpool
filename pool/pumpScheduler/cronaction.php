@@ -134,5 +134,6 @@ if ($answer=="OK")
     //$state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
     $state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign==1?"MARCHE":"ARRET")."}{Lua:".$luaFeedback."}";    
 appendlog("CRONACTION",$answer,$state);
+exec("sync");
 echo $answer.$state;
 ?>
