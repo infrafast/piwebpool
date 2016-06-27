@@ -64,7 +64,6 @@ function updateScript(xml,lua,script){
 			data:{id:script,xml:xml,lua:lua},
 			contentType: 'application/json; charset=utf-8',
 			async:false,
-            dataType: "script",
 			success: function(r){
 				result = eval(r);
 				if(result.answer != "OK"){          
