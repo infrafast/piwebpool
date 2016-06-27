@@ -104,7 +104,7 @@ TO:
 if ($this->_exec("stty --version") === 0) {
 
 
-
+NOW SETUP THE STARTUP SCRIPT
 vi /etc/rc.local
-addline 
+addline to initialize the USB pot (if not, then PHP function is not running)
     python /home/webide/repositories/my-pi-projects/pool/pumpScheduler/initUSB.py
