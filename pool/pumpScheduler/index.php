@@ -447,7 +447,8 @@ foreach($materials as $material=>$pin){ ?>
 <tr class="header" id="blocklyTable">
 <td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
-<tr><th style="width: 100%;">
+<th style="width: 100%;">
+     
       <select  name="luascript"  id="scriptID">
             <option value="main">defaut</option>
             <option value="custom">perso</option>
@@ -455,7 +456,7 @@ foreach($materials as $material=>$pin){ ?>
         <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
         <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
         <input type="button" value="executer" onclick="">
-</th></tr>
+</th>
 <tr>
     <td><div id="blocklyDiv" style="height: 500px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
