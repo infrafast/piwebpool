@@ -87,8 +87,8 @@ OPTION 2 -------------------------------------------- NOT WOKRING, USE RELAY  IN
     root=postmaster
     mailhub=mail.gandi.net:587
     hostname=piweb
-    AuthUser=@gmail.com
-    AuthPass=YourGMailPassword
+    AuthUser=admin@infrafast.com
+    AuthPass=Quxxxxxxxx04
     UseSTARTTLS=YES    
 
 
