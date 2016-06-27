@@ -4,6 +4,7 @@
 require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
+require('configuration.php');
 
 function sendsms($message){
     $SMSuser = "19107501";
