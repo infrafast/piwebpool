@@ -29,7 +29,7 @@ function sendemail($message){
     return $result;
 }
 
-function appendlualog($message){
+function appendlualog($message,$logfilename){
     return appendlog("LUA","OK",$message);
 }
 
