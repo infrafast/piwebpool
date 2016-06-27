@@ -29,6 +29,7 @@ $materials = array(
 $options = array();
 $options["database"] = array();		    
 
+$logfilename = "logfile.txt";
 
 // Database host: if omitted defaults to localhost.
 $options["database"]["host"]        = "localhost";
