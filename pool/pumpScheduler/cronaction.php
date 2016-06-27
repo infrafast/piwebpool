@@ -140,14 +140,12 @@ exec("sync");
 
 // purge logfile
 $X = 100; // Number of lines to remove
-
 $lines = file($logfilename);
 $first_line = $lines[0];
 $lines = array_slice($lines, $X + 2);
 $lines = array_merge(array($first_line, "\n"), $lines);
-
 // Write to file
-$file = fopen('log.txt', 'w');
+$file = fopen($logfilename, 'w');
 fwrite($file, implode('', $lines));
 fclose($file);
 
