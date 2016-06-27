@@ -9,17 +9,18 @@ function sendsms($message){
     $SMSuser = "19107501";
     $SMSkey = "1NXCXBzJGbNsdb";
     $feedback="void";            
-    if (!sms( $SMSuser, $SMSkey, $message,$feedback )){
-        return false;
-    }
-    return true;
+    $result=true;
+    if (!sms( $SMSuser, $SMSkey, $message,$feedback )) $result=false;
+    appendlog("sendsms",$result,$feedback);
+    return $result;
 }
 
 function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
-    return mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
-    return false; 
+    $result=mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
+    appendlog("sendemail",$result,$feedback);
+    return $result;
 }
 
 function appendlualog($message){
