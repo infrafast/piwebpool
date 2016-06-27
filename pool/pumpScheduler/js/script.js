@@ -55,9 +55,8 @@ function changeState(pin,elem){
 }
 
 function updateScript(xml,lua,script){
-	//alert(xml+" "+lua);
-	var result;
-	alert("receive before ajax: "+lua+"\n"+xml);
+    var result;
+	//alert("receive before ajax: "+lua+"\n"+xml);
 	$.ajax({
 			type: "POST",
 			url: "./action.php?action=updateScript",
