@@ -131,7 +131,8 @@ if (!$result) {
     }
 }
 if ($answer=="OK")
-    $state = "{Heure:".$tw."}{temperature:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
+    //$state = "{Heure:".$tw."}{temperature:".$temp."}{setPinState:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
+    $state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".$pumpConsign."}{Lua:".$luaFeedback."}";
 appendlog("CRONACTION",$answer,$state);
 echo $answer.$state;
 ?>
