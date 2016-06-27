@@ -62,7 +62,7 @@ function updateScript(xml,lua,script){
 			type: "POST",
 			url: "./action.php?action=updateScript",
 			data:{id:script,xml:xml,lua:"info='à l\'huile de morue';"},
-			dataType: "",
+			dataType: "xml",
 			async:false,
 			success: function(r){
 				result = eval(r);
