@@ -59,7 +59,7 @@ function updateScript(xml,lua,script){
 	var result;
 	alert("receive before ajax: "+lua);
 	$.ajax({
-			type: "POST",
+			type: "GET",
 			url: "./action.php?action=updateScript",
 			data:{id:script,xml:xml,lua:lua},
 			async:false,
