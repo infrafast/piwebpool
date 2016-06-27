@@ -63,8 +63,7 @@ function updateScript(xml,lua,script){
 			url: "./action.php?action=updateScript",
 			data:{id:script,xml:xml,lua:lua},
 			async:false,
-			processData: false,
-			contentType: 'application/octet-stream',
+            dataType: "script",
 			success: function(r){
 				result = eval(r);
 				if(result.answer != "OK"){          
