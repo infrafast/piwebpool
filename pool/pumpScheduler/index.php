@@ -476,7 +476,7 @@ foreach($materials as $material=>$pin){ ?>
     </xml>
   <tr>
   <tr>
-    <tr><div><td width="100%"><textarea rows="25" readonly style="color: grey; width: 100%;"></textarea></td></div></tr>
+    <tr><div><td width="100%"><textarea rows="10" readonly style="color: grey; width: 100%;"></textarea></td></div></tr>
 </table>
 
 <table class="materialTab">
