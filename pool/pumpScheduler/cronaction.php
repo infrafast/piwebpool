@@ -134,6 +134,19 @@ if ($answer=="OK")
     //$state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
     $state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{Programme:".$luaFeedback."}";    
 appendlog("CRONACTION",$answer,$state);
+
+// sync data to disk
 exec("sync");
+
+
+// purge logfile
+$line_to_strip = 5;
+$new_file = new SplFileObject('logfile2.txt', 'w');
+
+foreach (new LimitIterator(new SplFileObject('logfile.txt'), $line_to_strip) as $line)
+    $new_file->fwrite($line); 
+
+
+
 echo $answer.$state;
 ?>
