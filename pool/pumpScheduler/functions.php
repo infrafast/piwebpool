@@ -19,7 +19,16 @@ function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
     $message=wordwrap($message,70);
-    $result=mail("szemrot@hotmail.com","piweb pool manager",$message);
+
+    $to = “szemrot@hotmail.com”;
+    $subject = “Pool Notification”;
+    $message = “This is a test email”;
+    $from = “you@your.domain”;
+    $headers = “From:” . $from;
+    mail($to,$subject,$message,$headers);
+    echo “Mail Sent.”;
+
+
     appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
