@@ -6,6 +6,6 @@ require_once('functions.php');
 //sendsms("test");
 
 $ms="warningEau = ' Attention à la qualité de l'eau!';";
-echo htmlspecialchars(addslashes($ms));
+echo stripslashes(htmlspecialchars(addslashes($ms)));
 
 ?>
