@@ -62,11 +62,6 @@ CODE
 );
 ?>
 
-sudo apt-get install sendmail
-configure php mail send
-vi /etc/php5/apache2/php.ini
-sendmail_path 	/usr/sbin/sendmail -t -i
-
 //Operating System: Linux Solution: sendmail is searching for a FQDN ( fully qualified domain name ).
 //To resolve this problem change /etc/hosts: FROM:
 127.0.0.1       localhost
@@ -77,6 +72,16 @@ TO:
 
 edit /etc/hostname and change raspberrypi to piweb
 
+
+
+
+OPTION 1 -------------------------------------------- NOT WOKRING, USE RELAY  INSTEAD , SEE NEXT
+sudo apt-get install sendmail
+configure php mail send
+vi /etc/php5/apache2/php.ini
+sendmail_path 	/usr/sbin/sendmail -t -i
+
+OPTION 2 -------------------------------------------- NOT WOKRING, USE RELAY  INSTEAD , SEE NEXT
 
 
 //allow apache to write to log.
