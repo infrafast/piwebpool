@@ -39,7 +39,7 @@ function appendlog($source,$answer,$status){
 
 function getLog($lines = 24){
     $data = '';
-    $filename="./logfile.txt";
+    $filename="./".$logfilename;
     $fp = fopen($filename, "r");
     $block = 4096;
     $max = filesize($filename);
