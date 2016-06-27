@@ -11,7 +11,7 @@ function sendsms($message){
     $feedback="void";            
     $result=true;
     if (!sms( $SMSuser, $SMSkey, $message,$feedback )) $result=false;
-    appendlog("sendsms:",$result,$feedback);
+    appendlog("sendsms:",$result==true?"OK":"ERROR",$feedback);
     return $result;
 }
 
@@ -19,7 +19,7 @@ function sendemail($message){
     // send email
     // subject and recipee should be extracted from settings.
     $result=mail("szemrot@hotmail.com","piweb pool manager",wordwrap($message,70));
-    appendlog("sendemail:",$result,$message);
+    appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
 
