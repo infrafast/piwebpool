@@ -36,7 +36,7 @@ function appendlualog($message){
 function appendlog($source,$answer,$status,$filename="logfile.txt"){
 // Appends lines to file and makes sure the file doesn't grow too much
     $result=true;
-    // remove \n and \r so logfile are written on one line only
+    // remove \n and \r so logfile are written on one line only except the last one
     $text =  preg_replace('~[\r\n]+~', '', "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]")."\n";
 	if (!file_exists($filename)) { touch($filename); chmod($filename, 0666); }
 	if (filesize($filename) > 2*1024*1024) {
