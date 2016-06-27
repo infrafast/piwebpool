@@ -169,7 +169,7 @@ function getPoolTemperature(){
 }
 
 function secure($string){
-	//return htmlentities(stripslashes($string),NULL,'UTF-8');
+	return htmlentities(stripslashes($string),NULL,'UTF-8');
 }
 
 function getCurrentTimeWindow(){
