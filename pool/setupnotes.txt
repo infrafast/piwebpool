@@ -62,10 +62,25 @@ CODE
 );
 ?>
 
-usod apt-get install sendmail
+sudo apt-get install sendmail
 configure php mail send
 vi /etc/php5/apache2/php.ini
 sendmail_path 	/usr/sbin/sendmail -t -i
+
+//Operating System: Linux Solution: sendmail is searching for a FQDN ( fully qualified domain name ). In our case the host name is "debian" and that is not a FQDN. 
+//To resolve this problem change /etc/hosts: FROM:
+
+127.0.0.1       localhost
+127.0.1.1       debian
+
+TO:
+
+127.0.0.1       localhost.localdomain localhost debian
+127.0.1.1       debian
+
+
+
+
 
 //allow apache to write to log.
 touch logfile.txt
