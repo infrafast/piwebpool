@@ -83,7 +83,13 @@ sendmail_path 	/usr/sbin/sendmail -t -i
 
 OPTION 2 -------------------------------------------- NOT WOKRING, USE RELAY  INSTEAD , SEE NEXT
 1) apt-get install ssmtp
-2) 
+2) vi /etc/ssmtp/ssmtp.conf
+    root=postmaster
+    mailhub=smtp.gmail.com:587
+    hostname=piweb
+    AuthUser=@gmail.com
+    AuthPass=YourGMailPassword
+    UseSTARTTLS=YES    
 
 
 
