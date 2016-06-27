@@ -20,14 +20,11 @@ function sendemail($message){
     // subject and recipee should be extracted from settings.
     $message=wordwrap($message,70);
 
-    $to = "szemrot@hotmail.com”;
-    $subject = “Pool Notification”;
-    $from = “admin@infrafast.com”;
-    $headers = “From:” . $from;
-    mail($to,$subject,$message,$headers);
-    echo “Mail Sent.”;
-
-
+    $to = "szemrot@hotmail.com";
+    $subject = "Pool Notification";
+    $from = "admin@infrafast.com";
+    $headers = "From:" . $from;
+    $return = mail($to,$subject,$message,$headers);
     appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
