@@ -133,7 +133,7 @@ if (!$result) {
 if ($answer=="OK")
     //$state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".$pins[$materials["filtration"]]." ".$pumpConsign."}{Lua:".$luaFeedback."}";
     $state = "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{Programme:".$luaFeedback."}";    
-appendlog("CRONACTION",$answer,$state);
+appendlog("CRONACTION",$answer,$state, $logfilename);
 
 // sync data to disk
 exec("sync");
