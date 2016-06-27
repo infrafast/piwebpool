@@ -182,7 +182,7 @@ function getCurrentTimeWindow(){
     $prefixDigit="";
     if (strlen($tw)<2) $prefixDigit="0";
     // convert to text with hour so it match the row name in table
-    $tw=$prefixDigit.$tw."h";
+    $tw=$prefixDigit.$tw;
     return $tw;
 }
 
