@@ -447,7 +447,7 @@ foreach($materials as $material=>$pin){ ?>
 <tr class="header" id="blocklyTable">
 <td colspan="1"><b><span>-</span> Programmation</b></td>
 </tr>
-<tr><th>
+<tr><th style="width: 100%;">
       <select  name="luascript"  id="scriptID">
             <option value="main">defaut</option>
             <option value="custom">perso</option>
