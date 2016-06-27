@@ -75,6 +75,9 @@ TO:
 127.0.0.1       localhost.localdomain piweb
 127.0.1.1       piweb piweb.infrafast.com
 
+edit /etc/hostname and change raspberrypi to piweb
+
+
 
 //allow apache to write to log.
 touch logfile.txt
