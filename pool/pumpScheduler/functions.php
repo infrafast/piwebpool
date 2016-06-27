@@ -23,7 +23,7 @@ function sendemail($message){
     $subject = "Pool Notification";
     $from = "admin@infrafast.com";
     $headers = "From:" . $from;
-    $return = mail($to,$subject,$message,$headers);
+    $result = mail($to,$subject,$message,$headers);
     appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
