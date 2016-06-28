@@ -109,15 +109,6 @@ function getLog(){
 	return result.state;
 }
 
-function scenario(){
-	$.ajax({
-		    type: "POST",
-			url: "./action.php?action=scenario",
-		    success: function(r){}
-	});
-	alert('Sequence demarée');
-}
-
 function forceCron(){
 	$.ajax({
 		    type: "POST",
