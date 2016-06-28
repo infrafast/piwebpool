@@ -106,8 +106,8 @@ if (!$result) {
         }    
         mysql_free_result($result);
         
-//        $treatmentValue = getPin($pins[$materials["traitement"]]);
-//        $pumpValue = getPin($pins[$materials["filtration"]]);
+        $treatmentValue = getPin($pins[$materials["traitement"]]);
+        $pumpValue = getPin($pins[$materials["filtration"]]);
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
