@@ -175,7 +175,7 @@ function secure($string){
 
 function getCurrentTimeWindow(){
     // get the current hours and force multiple to 2
-    $tw=date("H");
+    $tw=getCurrentTime();
     //$tw=06; 
     if ($tw/2 <> intval($tw/2)) $tw-=1;
     // format to 2 digit (prefix 0) 
@@ -186,6 +186,10 @@ function getCurrentTimeWindow(){
     return $tw;
 }
 
+function getCurrentTime(){
+    // get the current hours and force multiple to 2
+    return date("H");
+}
 
 //
 // remove_comments will strip the sql comment lines out of an uploaded sql file
