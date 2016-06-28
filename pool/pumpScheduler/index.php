@@ -508,7 +508,7 @@ foreach($materials as $material=>$pin){ ?>
     Blockly.Blocks['sensors'] = {
       init: function() {
         this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"]]), "select");
+            .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["heure", "hour"]]), "select");
         this.setOutput(true, null);
         this.setColour(330);
         this.setTooltip('');
