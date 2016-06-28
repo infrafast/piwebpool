@@ -392,12 +392,7 @@ $tableSettings = new TableGear($optionsSet);
 </tr>
 <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
 <?php 
-$materialsColumn = array(
-			"filtration"=>"pump",
-			"traitement1"=>"treatment1",
-			"traitement2"=>"treatment2",
-			"pac"=>"pac"
-		    );
+
 foreach($materials as $material=>$pin){ ?>
 <tr height=80px>
 	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
