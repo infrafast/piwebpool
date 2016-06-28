@@ -561,7 +561,7 @@ foreach($materials as $material=>$pin){ ?>
       init: function() {
         this.appendDummyInput()
             .appendField("etat")
-                        .appendField(new Blockly.FieldDropdown([
+            .appendField(new Blockly.FieldDropdown([
                 <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
                 ["",""]
               ]), "command");            
