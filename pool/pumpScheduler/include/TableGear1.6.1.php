@@ -772,7 +772,7 @@ class TableGear
       }
       $this->_closeTag("tr");
     }
-    //$this->_closeTag("thead");
+    $this->_closeTag("thead");
   }
 
   function _setOptions($options)
