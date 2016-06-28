@@ -127,7 +127,7 @@ if (!$result) {
             $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue;
             foreach($materials as $material){
                 $materialsValue[$material] = getPin($pins[$materials[$material]]);
-            	$sql = $sql."', '".$treatmentValue."', '".$pumpValue."'";
+            	$sql = $sql."', '".$materialsValue[$material]."'";
             }            
             $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
             foreach($materialsvalue as $material=>$value) $sql = $sql.", ".$material."=".$value;
