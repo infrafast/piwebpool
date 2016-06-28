@@ -591,7 +591,6 @@ class TableGear
       $newDataRowID = "newDataRow_" . $this->table["id"];
       $this->_constructDataRow($emptyDataRow, 1, false, array("id" => $newDataRowID, "class" => "newRow"));
       $this->_closeTag("tbody");
-      $this->_closeTag("thead");
       $this->_closeTag("table");
       $this->_openTag("div", array("class" => "submit"));
       $this->_openTag("input", array("type" => "hidden", "name" => "insert", "value" => "true"));
