@@ -130,7 +130,7 @@ if (!$result) {
             	$sql = $sql."', '".$materialsValue[$material]."'";
             }            
             $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
-            foreach($materialsvalue as $material=>$value) $sql = $sql.", ".$material."=".$value;
+            foreach($materialsvalue as $material) $sql = $sql.", ".$material."=".$materialsvalue[$material];
             $sql = $sql.";";
 
             echo $sql; exit;
