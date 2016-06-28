@@ -108,21 +108,20 @@ if (!$result) {
         
         $phValue = getPh();
         $orpValue = getORP();
-        
+
+        $materialsvalue = $materials;
+
         foreach($materials as $material=>$pin){
-        $materialsColumn[$material];
-        	echo $pin; 
+            $materialsValue[$material] = getPin($pins[$materials[$material]]);
         	getPinState($pin,$pins);
         }
 
         
-        $treatmentValue = getPin($pins[$materials["traitement"]]);
-        $pumpValue = getPin($pins[$materials["filtration"]]);
-        $temperatureValue = getTemperature();
+//        $treatmentValue = getPin($pins[$materials["traitement"]]);
+//        $pumpValue = getPin($pins[$materials["filtration"]]);
+//        $temperatureValue = getTemperature();
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
-        
-            
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
         $result = mysql_query($sql, $link);
         
