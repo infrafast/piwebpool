@@ -533,7 +533,6 @@ class TableGear
       }
     }
     $this->_closeTag("tbody");
-    $this->_closeTag("thead");
     $this->_closeTag("table");
     if($this->pagination && $this->totalRows > $this->pagination["perPage"]){
       $this->_openTag("div", array("class" => "pagination"));
