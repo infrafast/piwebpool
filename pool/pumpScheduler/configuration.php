@@ -26,8 +26,7 @@ $materials = array(
 		    "traitement2"=>15,
 		    "pac"=>16);
 
-
-//correspondance to the sql table
+//correspondance to the sql table (do not change)
 $materialsColumn = array(
 			"filtration"=>"pump",
 			"traitement1"=>"treatment1",
@@ -35,6 +34,8 @@ $materialsColumn = array(
 			"pac"=>"pac"
 		    );
 		    
+
+
 $options = array();
 $options["database"] = array();		    
 
