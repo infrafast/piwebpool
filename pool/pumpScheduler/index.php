@@ -493,6 +493,10 @@ foreach($materials as $material=>$pin){ ?>
 <tr><td width="100%"><textarea rows="5" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
 </table>
 
+<div><?= $table->getTable() ?></div>
+<?= $table->getJavascript("jquery") ?>
+<div><?= $tableSettings->getTable() ?></div>
+<?= $tableSettings->getJavascript("jquery") ?>
 
 
 
