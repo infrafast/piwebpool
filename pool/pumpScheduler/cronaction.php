@@ -129,7 +129,7 @@ if (!$result) {
             foreach($materials as $material=>$pin) $sql = $sql.", ".$material."=".getPin($pins[$materials[$material]]);
             $sql = $sql.";";
 
-            echo $sql; exit;
+//            echo $sql; exit;
 
 //            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME".", pump=".$pumpValue.", treatment=".$treatmentValue.";";
             $result = mysql_query($sql, $link);
