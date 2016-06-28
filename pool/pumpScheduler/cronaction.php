@@ -124,11 +124,16 @@ if (!$result) {
             $materialsvalue = $materials;
             
             $sql = "INSERT INTO 'measures' ('id', 'timestamp', 'orp', 'ph', 'temperature'";
-            foreach($materials as $material=>$pin){
+            foreach($materials as $material=>$pin) $sql = $sql.", '".$material."'";
+            $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue;
+            foreach($materials as $material){
                 $materialsValue[$material] = getPin($pins[$materials[$material]]);
-            	getPinState($pin,$pins);
-            	$sql = $sql.", '".$material."'"
+            	$sql = $sql."', '".$treatmentValue."', '".$pumpValue."'";
             }            
+            $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
+            foreach($materialsvalue as $material=>$value) $sql = $sql.", ".$material."=".$value;
+            $sql = $sql.";";
+
 //            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME".", pump=".$pumpValue.", treatment=".$treatmentValue.";";
             $result = mysql_query($sql, $link);
             if (!$result) {
