@@ -118,7 +118,6 @@ function forceCron(){
 			result = eval(r);
 	    }
 	});   
-	return result.answer;
 }
 
 function resetSchedule(){
