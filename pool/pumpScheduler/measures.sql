@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `measures` (
 -- Contenu de la table `measures`
 --
 
-INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`, `pump`, `treatment`) VALUES
+INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`, `pump`, `treatment1`) VALUES
 (4, '2016-06-23 13:55:00', 646, 5.89, 31, 0, 0),
 (5, '2016-06-23 13:55:57', 646, 5.95, -2, 0, 0),
 (6, '2016-06-23 13:56:26', 646, 5.91, 21, 0, 0),
