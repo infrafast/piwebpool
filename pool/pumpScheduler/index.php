@@ -394,7 +394,7 @@ $tableSettings = new TableGear($optionsSet);
 <?php 
 $materialsColumn = array(
 			"filtration"=>"pump",
-			"traitement"=>"treatment",
+			"traitement1"=>"treatment1",
 		    );
 foreach($materials as $material=>$pin){ ?>
 <tr height=80px>
