@@ -151,7 +151,7 @@ switch($_['action']){
         break;        
         
     case 'forceCron':
-        //$result['state'] = shell_exec('./hourlycrontab.sh');
+        $result['state'] = shell_exec('./hourlycrontab.sh');
         // not a good solution as it will be executed by apache with no write access to the logs
         break;
 
