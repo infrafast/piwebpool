@@ -122,7 +122,6 @@ if (!$result) {
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
         
-        
             
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
         $result = mysql_query($sql, $link);
