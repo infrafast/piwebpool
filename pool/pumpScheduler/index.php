@@ -446,7 +446,7 @@ foreach($materials as $material=>$pin){ ?>
                 </select>
                 <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
                 <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
-                <input type="button" value="executer" onclick="">
+                <input type="button" value="executer" onclick="forceCron();">
         </th>
     </tr>
     <tr>
