@@ -14,7 +14,7 @@ INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('Planificateur', 1, false, ''),
 ('sensorTable', 0, false, ''),
 ('Parametres', 1, false, ''),
-('measureIndex', 129, false, '');
+('measureIndex', 0, false, '');
 
 ALTER TABLE `settings`
  ADD PRIMARY KEY (`id`);
