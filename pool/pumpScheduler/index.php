@@ -453,28 +453,26 @@ foreach($materials as $material=>$pin){ ?>
     <tr>
       <td><div id="blocklyDiv" style="height: 500px; width: 100%;"></div></td>
         <xml id="toolbox" style="display: none">
-        <category name="Controle">
+
             <block type="controls_if"></block>
             <block type="logic_compare"></block>
             <block type="logic_operation"></block>
-        </category>
-        <category name="Variables">
+
+
             <block type="sensors"></block>
             <block type="variables_set"><field name="VAR">info</field></block>
             <block type="variables_get"><field name="VAR">variable</field></block>
             <block type="on_off"></block>
             <block type="math_number"></block>
-        </category>        
-        <category name="Texte">
+
             <block type="message"></block>
             <block type="text"></block>
             <block type="text_getSubstring"></block>        
             <block type="text_join"></block>
-        </category>                
-        <category name="Commande">
+
             <block type="setcommand"></block>
             <block type="getcommand"></block>
-        </category>                        
+
         </xml>
     <tr>
         <th>Code preview</th>
