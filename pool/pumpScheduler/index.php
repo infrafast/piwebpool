@@ -386,13 +386,17 @@ $tableSettings = new TableGear($optionsSet);
 </head>
 <body>
 
+
 <table class="materialTab">
 <tr class="header" id="actionTable">
 <td colspan="2"><b><span>-</span> Commandes</b></td>
 </tr>
 <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
 <?php 
-
+$materialsColumn = array(
+			"filtration"=>"pump",
+			"traitement"=>"treatment",
+		    );
 foreach($materials as $material=>$pin){ ?>
 <tr height=80px>
 	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
@@ -412,7 +416,7 @@ foreach($materials as $material=>$pin){ ?>
     <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
     <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
 </tr>
-<tr>tra
+<tr>
     <th></th>
     <th>Historique sur <select  name="period"  id="periodID" onclick='updateGraph();'>
             <option value="8">8 heures</option>
@@ -433,6 +437,8 @@ foreach($materials as $material=>$pin){ ?>
 </tr>
 
 </table>
+
+
 
 <table class="materialTab">
 <tr class="header" id="blocklyTable">
