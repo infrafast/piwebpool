@@ -541,7 +541,7 @@ foreach($materials as $material=>$pin){ ?>
                 <?php 
                     foreach($materials as $material=>$pin){
                     //$materialsColumn[$material]
-                    echo "[\"".$material."\",\"".$material."\"]"; 
+                    echo '["'.$material."','".$material."']"; 
                 ?>
               ]), "command");
         this.setPreviousStatement(true, null);
