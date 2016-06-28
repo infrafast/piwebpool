@@ -561,7 +561,10 @@ foreach($materials as $material=>$pin){ ?>
       init: function() {
         this.appendDummyInput()
             .appendField("etat")
-            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement1", "traitement1"],["traitement2", "traitement2"],["pac", "pac"]]), "command");
+                        .appendField(new Blockly.FieldDropdown([
+                <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                ["",""]
+              ]), "command");            
             this.setColour(20);
             this.setOutput(true, "Boolean");
       }
