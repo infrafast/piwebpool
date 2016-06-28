@@ -537,7 +537,7 @@ foreach($materials as $material=>$pin){ ?>
         this.appendValueInput("NAME")
             .setCheck("Number")
             .appendField("commander")
-            .appendField(new Blockly.FieldDropdown([[<?php echo "filtration"; ?>, "filtration"], ["traitement1", "traitement1"],["traitement2", "traitement2"],["pac", "pac"]]), "command");
+            .appendField(new Blockly.FieldDropdown([[<?php echo "\"filtration\""; ?>, "filtration"], ["traitement1", "traitement1"],["traitement2", "traitement2"],["pac", "pac"]]), "command");
             
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
