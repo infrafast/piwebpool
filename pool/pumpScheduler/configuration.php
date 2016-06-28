@@ -24,7 +24,8 @@ $materials = array(
 			"filtration"=>11,
 			"traitement1"=>12,
 		    "traitement2"=>15,
-		    "pac"=>16);
+		    "pac"=>16,
+		    "TOTO"=>0);
 
 //correspondance to the sql table (do not change)
 $materialsColumn = array(
