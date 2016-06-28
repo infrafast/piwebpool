@@ -466,7 +466,6 @@ foreach($materials as $material=>$pin){ ?>
 
             <block type="message"></block>
             <block type="text"></block>
-            <block type="text_getSubstring"></block>        
             <block type="text_join"></block>
 
             <block type="setcommand"></block>
