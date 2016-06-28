@@ -129,7 +129,7 @@ function forceCron(){
 			}
 	    }
 	});   
-	//alert('calledGetLog');
+	alert(result.state);
 	return result.state;
 }
 
