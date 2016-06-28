@@ -108,6 +108,14 @@ if (!$result) {
         
         $phValue = getPh();
         $orpValue = getORP();
+        
+        foreach($materials as $material=>$pin){
+        $materialsColumn[$material];
+        	echo $pin; 
+        	getPinState($pin,$pins);
+        }
+
+        
         $treatmentValue = getPin($pins[$materials["traitement"]]);
         $pumpValue = getPin($pins[$materials["filtration"]]);
         $temperatureValue = getTemperature();
