@@ -110,7 +110,7 @@ function getLog(){
 }
 
 function forceCron(){
-	alert("Script en cours d'execution");
+	alert("Execution des scripts en cours");
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?action=forceCron",
