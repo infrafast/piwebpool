@@ -541,7 +541,7 @@ foreach($materials as $material=>$pin){ ?>
                 <?php 
                     foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],'; 
                 ?>
-              ]), "command");
+              ["",""]]), "command");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(20);
