@@ -543,7 +543,7 @@ foreach($materials as $material=>$pin){ ?>
             
 <?php 
 foreach($materials as $material=>$pin){
-    .$materialsColumn[$material].    
+    //$materialsColumn[$material]
     
     
 } ?>            
