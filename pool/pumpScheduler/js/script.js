@@ -122,9 +122,15 @@ function forceCron(){
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?action=forceCron",
-		    success: function(r){
-	}});
-	alert('Execution en cours');
+		success: function(r){
+			result = eval(r);
+			if(result.answer != "OK"){          
+				alert('Erreur : '+result.state);
+			}
+	    }
+	});   
+	//alert('calledGetLog');
+	return result.state;
 }
 
 function resetSchedule(){
