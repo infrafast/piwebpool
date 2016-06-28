@@ -113,6 +113,7 @@ function forceCron(){
 	alert("call force cron");
 	$.ajax({
 		    type: "POST",
+		    async: false,
 			url: "./action.php?action=forceCron",
 		success: function(r){
 			result = eval(r);
