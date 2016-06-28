@@ -34,8 +34,6 @@ $materialsColumn = array(
 			"pac"=>"pac"
 		    );
 		    
-
-
 $options = array();
 $options["database"] = array();		    
 
