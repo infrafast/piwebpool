@@ -52,11 +52,6 @@ switch($_['action']){
         $result['state'] = getLog($logfilename);
 	break;
 
-
-	case 'scenario':
-
-	break;
-
     case 'resetSchedule':
         $result['state'] = "reset done";
 
