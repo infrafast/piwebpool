@@ -124,7 +124,7 @@ function forceCron(){
 			url: "./action.php?action=forceCron",
 		    success: function(r){
 	}});
-	alert('refresh done');
+	alert('Execution en cours');
 }
 
 function resetSchedule(){
