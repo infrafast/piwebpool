@@ -129,7 +129,7 @@ if (!$result) {
             	$sql = $sql.", '".$materialsValue[$material]."'";
             }            
             $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
-            foreach($materialsvalue as $material) $sql = $sql.", ".$material."=".getPin($pins[$materials[$material]]);
+            foreach($materials as $material) $sql = $sql.", ".$material."=".getPin($pins[$materials[$material]]);
             $sql = $sql.";";
 
             echo $sql; exit;
