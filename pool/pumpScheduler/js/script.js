@@ -110,6 +110,7 @@ function getLog(){
 }
 
 function forceCron(){
+	alert("call force cron");
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?action=forceCron",
