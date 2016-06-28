@@ -451,7 +451,7 @@ foreach($materials as $material=>$pin){ ?>
         </th>
     </tr>
     <tr>
-      <div id="blocklyDiv" style="height: 500px; width: 100%;"></div>
+      <td><div id="blocklyDiv" style="height: 500px; width: 100%;"></div></td>
         <xml id="toolbox" style="display: none">
         <category name="Controle">
             <block type="controls_if"></block>
