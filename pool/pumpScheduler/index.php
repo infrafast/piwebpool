@@ -415,7 +415,7 @@ foreach($materials as $material=>$pin){ ?>
     <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
     <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
 </tr>
-<tr>
+<tr>tra
     <th></th>
     <th>Historique sur <select  name="period"  id="periodID" onclick='updateGraph();'>
             <option value="8">8 heures</option>
@@ -537,7 +537,7 @@ foreach($materials as $material=>$pin){ ?>
         this.appendValueInput("NAME")
             .setCheck("Number")
             .appendField("commander")
-            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
+            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement1", "traitement1"],["traitement2", "traitement2"],["pac", "pac"]]), "command");
             
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
