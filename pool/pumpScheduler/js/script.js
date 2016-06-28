@@ -124,12 +124,9 @@ function forceCron(){
 			url: "./action.php?action=forceCron",
 		success: function(r){
 			result = eval(r);
-			if(result.answer != "OK"){          
-				alert('Erreur : '+result.state);
-			}
 	    }
 	});   
-	alert(result.state);
+	alert(result.answer+' '+result.state);
 	return result.state;
 }
 
