@@ -110,7 +110,7 @@ function getLog(){
 }
 
 function forceCron(){
-	alert("call force cron");
+	alert("Script en cours d'execution");
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?action=forceCron",
@@ -118,8 +118,7 @@ function forceCron(){
 			result = eval(r);
 	    }
 	});   
-	alert(result.answer+' '+result.state);
-	return result.state;
+	return result.answer;
 }
 
 function resetSchedule(){
