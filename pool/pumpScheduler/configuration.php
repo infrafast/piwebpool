@@ -25,7 +25,13 @@ $materials = array(
 			"traitement1"=>12,
 		    "traitement2"=>15,
 		    "pac"=>16);
-		    
+
+$materialsColumn = array(
+			"filtration"=>"pump",
+			"traitement1"=>"treatment1",
+			"traitement2"=>"treatment2",
+			"pac"=>"pac"
+		    );
 		    
 $options = array();
 $options["database"] = array();		    
