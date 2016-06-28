@@ -22,8 +22,9 @@ $pins[26] = 11;
 
 $materials = array(
 			"filtration"=>11,
-			"traitement"=>12,
-		    );
+			"traitement1"=>12,
+		    "traitement2"=>15,
+		    "pac"=>16);
 		    
 		    
 $options = array();
