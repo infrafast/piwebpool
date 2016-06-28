@@ -159,4 +159,5 @@ add to rc.local:
     echo "-fy" > /forcefsck
     This will create that file with that content. This will be detected at boot and force a run of fsck -fy on the root filesystem. It's then erased, which is why it must be replaced via rc.local.
 
+http://juice4halt.com/
 
