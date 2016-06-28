@@ -539,10 +539,14 @@ foreach($materials as $material=>$pin){ ?>
             .appendField("commander")
             .appendField(new Blockly.FieldDropdown([
                 <?php echo "[\"filtration\",\"filtration\"]"; ?>
-              ,["traitement1", "traitement1"],["traitement2", "traitement2"],["pac", "pac"]]), "command");
+              ]), "command");
             
 <?php 
-foreach($materials as $material=>$pin){} ?>            
+foreach($materials as $material=>$pin){
+    .$materialsColumn[$material].    
+    
+    
+} ?>            
             
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
