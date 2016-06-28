@@ -40,7 +40,7 @@ function appendlog($source,$answer,$status,$filename="logfile.txt"){
     $text =  preg_replace('~[\r\n]+~', '', "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]")."\n";
 	if (!file_exists($filename)) { touch($filename); chmod($filename, 0666); }
 	if (filesize($filename) > 37868) {
-		$filename2 = $filename."old";
+		$filename2 = $filename.".old";
 		if (file_exists($filename2)) unlink($filename2);
 		rename($filename, $filename2);
 		touch($filename); chmod($filename,0666);
