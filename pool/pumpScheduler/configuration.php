@@ -26,6 +26,8 @@ $materials = array(
 		    "traitement2"=>15,
 		    "pac"=>16);
 
+
+//correspondance to the sql table
 $materialsColumn = array(
 			"filtration"=>"pump",
 			"traitement1"=>"treatment1",
