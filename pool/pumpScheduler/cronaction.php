@@ -121,10 +121,10 @@ if (!$result) {
             $orpValue = getORP();
             $temperatureValue = getTemperature();    
 
-            $sql = "INSERT INTO 'measures' ('id', 'timestamp', 'orp', 'ph', 'temperature'";
-            foreach($materials as $material=>$pin) $sql = $sql.", '".$material."'";
-            $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue;
-            foreach($materials as $material=>$pin) $sql = $sql.", '".getPin($pins[$materials[$material]])."'";
+            $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
+            foreach($materials as $material=>$pin) $sql = $sql.", `".$material."`";
+            $sql = $sql.") VALUES (`".$measureIndex."`, CURRENT_TIMESTAMP,`".$orpValue."`, `".$phValue."`, `".$temperatureValue;
+            foreach($materials as $material=>$pin) $sql = $sql.", `".getPin($pins[$materials[$material]])."`";
             $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
             foreach($materials as $material=>$pin) $sql = $sql.", ".$material."=".getPin($pins[$materials[$material]]);
             $sql = $sql.";";
