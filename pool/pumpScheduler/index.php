@@ -456,9 +456,11 @@ foreach($materials as $material=>$pin){ ?>
 <tr>
     <td><div id="blocklyDiv" style="height: 500px; width: 100%;"></div></td>
     <xml id="toolbox" style="display: none">
+    <category name="Core">
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
+    </category>
         <block type="sensors"></block>
         <block type="variables_set"><field name="VAR">info</field></block>
         <block type="variables_get"><field name="VAR">variable</field></block>
