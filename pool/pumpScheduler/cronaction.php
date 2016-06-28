@@ -106,17 +106,6 @@ if (!$result) {
         }    
         mysql_free_result($result);
         
-        $phValue = getPh();
-        $orpValue = getORP();
-
-        $materialsvalue = $materials;
-
-        foreach($materials as $material=>$pin){
-            $materialsValue[$material] = getPin($pins[$materials[$material]]);
-        	getPinState($pin,$pins);
-        }
-
-        
 //        $treatmentValue = getPin($pins[$materials["traitement"]]);
 //        $pumpValue = getPin($pins[$materials["filtration"]]);
 //        $temperatureValue = getTemperature();
@@ -124,12 +113,23 @@ if (!$result) {
         if ($measureIndex>168) $measureIndex=0;
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
         $result = mysql_query($sql, $link);
-        
         if (!$result) {
             $answer="ERROR";
             $state=mysql_error();
         }else{
-            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME".", pump=".$pumpValue.", treatment=".$treatmentValue.";";
+            
+            $phValue = getPh();
+            $orpValue = getORP();
+    
+            $materialsvalue = $materials;
+            
+            $sql = "INSERT INTO 'measures' ('id', 'timestamp', 'orp', 'ph', 'temperature'";
+            foreach($materials as $material=>$pin){
+                $materialsValue[$material] = getPin($pins[$materials[$material]]);
+            	getPinState($pin,$pins);
+            	$sql = $sql.", '".$material."'"
+            }            
+//            $sql    = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`,`pump`,`treatment` ) VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."', '".$treatmentValue."', '".$pumpValue."') ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME".", pump=".$pumpValue.", treatment=".$treatmentValue.";";
             $result = mysql_query($sql, $link);
             if (!$result) {
                 $answer="ERROR";
