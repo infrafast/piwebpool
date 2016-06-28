@@ -492,6 +492,10 @@ foreach($materials as $material=>$pin){ ?>
 <tr><th>Valeur</th></tr>
 <tr><td width="100%"><textarea rows="5" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
 </table>
+
+
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
