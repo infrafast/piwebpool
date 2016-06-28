@@ -559,7 +559,7 @@ foreach($materials as $material=>$pin){ ?>
       init: function() {
         this.appendDummyInput()
             .appendField("etat")
-            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement", "traitement"]]), "command");
+            .appendField(new Blockly.FieldDropdown([["filtration", "filtration"], ["traitement1", "traitement1"],["traitement2", "traitement2"],["pac", "pac"]]), "command");
             this.setColour(20);
             this.setOutput(true, "Boolean");
       }
