@@ -6,7 +6,9 @@ CREATE TABLE IF NOT EXISTS `measures` (
   `ph` float NOT NULL,
   `temperature` smallint(6) NOT NULL,
   `pump` tinyint(4) NOT NULL,
-  `treatment` tinyint(4) NOT NULL
+  `treatment1` tinyint(4) NOT NULL,
+  `treatment2` tinyint(4) NOT NULL,
+  `pac` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
