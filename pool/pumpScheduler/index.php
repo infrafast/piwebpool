@@ -694,5 +694,3 @@ foreach($materials as $material=>$pin){ ?>
 
 </body>
 </html>
-
-
