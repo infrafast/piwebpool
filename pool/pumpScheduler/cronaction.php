@@ -108,7 +108,6 @@ if (!$result) {
         
 //        $treatmentValue = getPin($pins[$materials["traitement"]]);
 //        $pumpValue = getPin($pins[$materials["filtration"]]);
-//        $temperatureValue = getTemperature();
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
@@ -120,7 +119,7 @@ if (!$result) {
             
             $phValue = getPh();
             $orpValue = getORP();
-    
+            $temperatureValue = getTemperature();    
             $materialsvalue = $materials;
             
             $sql = "INSERT INTO 'measures' ('id', 'timestamp', 'orp', 'ph', 'temperature'";
