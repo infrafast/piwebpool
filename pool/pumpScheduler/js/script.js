@@ -25,6 +25,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
         }else alert(messageBox);
 	$.ajax({
 		    type: "POST",
+		    traditional: true,
 			url: "./action.php",
 			data: UrlData,
 			async:async,
