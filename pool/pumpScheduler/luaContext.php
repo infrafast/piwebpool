@@ -20,11 +20,16 @@ function goLua($luaCode,$materials,$pins,&$feedback){
             
             // generate XML for blockly toolbox variable
         }
-        $lua->assign("temperature",getTemperature());
-        $lua->assign("ph",getPh());
-        $lua->assign("orp",getORP());
-        $lua->assign("period",intval(getCurrentTimeWindow()));
-        $lua->assign("hour",intval(getCurrentTime()));
+        
+        foreach ($exportedVariable as $variable=>$variableCall)
+            $lua->assign($variable,$variableCall);
+        
+        
+        //$lua->assign("temperature",getTemperature());
+        //$lua->assign("ph",getPh());
+        //$lua->assign("orp",getORP());
+        //$lua->assign("period",intval(getCurrentTimeWindow()));
+        //$lua->assign("hour",intval(getCurrentTime()));
         
         $lua->registerCallback("set", 'setPinState'); 
         $lua->registerCallback("get", 'getPin'); 
