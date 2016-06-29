@@ -98,14 +98,6 @@ function getScript(code,script){
 	return result.state;
 }
 
-function rgbToHex(r, g, b) {
-    if(r < 0 || r > 255) alert("r is out of bounds; "+r);
-    if(g < 0 || g > 255) alert("g is out of bounds; "+g);
-    if(b < 0 || b > 255) alert("b is out of bounds; "+b);
-    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1,7);
-}
-
-
 function getColorVal(middleVal,compareVal){
     var diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
@@ -116,7 +108,6 @@ function getColorVal(middleVal,compareVal){
     return (colorSensor);
 }
 
-    
 function refreshValue(elem,action){
 	var urlCall = "./action.php?action=get"+action;
 	$(elem).removeAttr("style");
