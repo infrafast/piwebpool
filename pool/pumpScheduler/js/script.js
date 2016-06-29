@@ -24,7 +24,7 @@ function calibrate(sensor){
 	$.ajax({
 		    type: "POST",
 			url: "./action.php",
-			data:{action:calibrate,sensor:sensor},
+			data:{action:"calibrate",sensor:sensor},
 			async:false,
 		success: function(r){
 			result = eval(r);
@@ -35,11 +35,12 @@ function calibrate(sensor){
 
 
 function getSetting(id,elem){
-    var urlCall="./action.php?action=getSetting&id="+id;
+    var urlCall="./action.php";
     //alert('ajaxCall : '+urlCall);
     $.ajax({
         type: "POST",
         url: urlCall,
+        data:{action:"getSetting",id:id},
         success: function(r){
             var result = eval(r);
             if (result.state == "1") $(elem).click();
