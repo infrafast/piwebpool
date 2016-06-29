@@ -687,7 +687,7 @@ foreach($materials as $material=>$pin){ ?>
     var collapsableTableList = ['actionTable'];
     
     for (var tableID in collapsableTableList) {
-      if (actionCall('action=getSetting&id='+tableID,false)=="1") document.getElementById(tableID).click();
+      if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
     }
 
     //if (actionCall('action=getSetting&id=actionTable',false)=="1") document.getElementById('actionTable').click();
