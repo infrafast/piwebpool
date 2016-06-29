@@ -23,7 +23,16 @@ function actionCall(data, messageBox=null, confirm=false){
             if (true !== r) return;
         }
     }else alert(messageBox);
-    
+	$.ajax({
+		    type: "POST",
+			url: "./action.php",
+			data:{action:"calibrate",sensor:sensor},
+			async:false,
+		success: function(r){
+			result = eval(r);
+			alert("Résultat étalonnage: "+result.answer);
+	    }
+	});    
 }
 
 
