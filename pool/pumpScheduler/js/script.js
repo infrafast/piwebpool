@@ -19,8 +19,8 @@ $('.header').click(function(){
 function actionCall(data, async=true, messageBox=null, feedback=false, confirm=false){
     if (messageBox!==null)
         if (confirm!==false){
-            alert("this is a confirmation box");
-            var r = confirm(messageBox);
+            confirm("this is a confirmation box");
+            //var r = confirm(messageBox);
             //if (true !== r) return;
         }else alert(messageBox);
 	$.ajax({
