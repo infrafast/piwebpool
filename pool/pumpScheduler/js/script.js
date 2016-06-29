@@ -17,10 +17,10 @@ $('.header').click(function(){
 });
 
 function actionCall(data, messageBox=null, confirm=false){
-    if (messageBox!=null){
-        if (confirm!=false){
+    if (messageBox!==null){
+        if (confirm!==false){
             var r = confirm(messageBox);
-            if (true != r) return;
+            if (true !== r) return;
         }else  alert(messageBox);
     }
 }
