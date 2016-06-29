@@ -44,6 +44,7 @@ function getSetting(id,elem=null){
         type: "POST",
         url: urlCall,
         data:{action:"getSetting",id:id},
+        async: false,
         success: function(r){
             var result = eval(r);
 //            if (result.state == "1" && elem!==null) $(elem).click();
