@@ -40,7 +40,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 function getSetting(id){
     var urlCall="./action.php";
     var result;
-    //alert('ajaxCall : '+urlCall);
+    alert('ajaxCall : '+urlCall);
     $.ajax({
         type: "POST",
         url: urlCall,
