@@ -28,6 +28,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		    traditional: true,
 			url: "./action.php",
 			data: "{" + JSON.stringify(UrlData) + "}",
+			contentType: "application/json; charset=utf-8",
 			async:async,
 		success: function(r){
 			result = eval(r);
