@@ -500,8 +500,6 @@ $tableSettings = new TableGear($optionsSet);
           if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
         }
     
-    
-    
         // retrieve logfile
         document.getElementById('logFile').value = getLog();
         
@@ -648,6 +646,14 @@ $tableSettings = new TableGear($optionsSet);
     
         // callback function to update code and save in database related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
+    
+    
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        //
+        //   UTILITIES FUNCTIONS
+        //
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        
+    
     
         function myUpdateFunction(event) {
           var code = Blockly.Lua.workspaceToCode(workspace);
