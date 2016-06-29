@@ -404,9 +404,9 @@ $tableSettings = new TableGear($optionsSet);
     </tr>
     <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
     <tr>
-        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo "<br>".getPh()."<br>"; ?><br></div></td>
-        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
-        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
+        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off"><br></div></td>
+        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><br></div></td>
+        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><br></div></td>
     </tr>
     <tr>
         <th></th>
