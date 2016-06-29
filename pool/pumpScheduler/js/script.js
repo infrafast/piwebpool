@@ -52,7 +52,7 @@ function getSetting(id){
             if (result.state == "undef") alert('Setting undefined : '+id);
         }
     });   
-    return result.statet;
+    return result.state;
 }
 
 function changeState(pin,elem){
