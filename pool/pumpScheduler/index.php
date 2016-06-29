@@ -697,6 +697,7 @@ $tableSettings = new TableGear($optionsSet);
             //elem.addClass('loading');
             if (actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',true, true)!=false)
                 refreshValue(elem,id);
+                 refreshValue(document.getElementById('divPhMeasureID'),'Ph');
             //elem.removeClass('loading');
         }
           
