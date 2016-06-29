@@ -30,7 +30,7 @@ function actionCall(data, wait=true, messageBox=null, feedback=false, confirm=fa
 			async:wait,
 		success: function(r){
 			result = eval(r);
-			
+			if (feedback===true) alert("Resultat: "+result.answer+(result.answer===true?"":result.state));
 	    }
 	});
 	return result.state;
