@@ -138,7 +138,8 @@ function getDevice($id){
             
         break;
     	default:
-    	break;        
+    	break; 
+    }
 }
 
 
