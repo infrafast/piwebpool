@@ -15,12 +15,15 @@ switch($_['action']){
     case 'calibrate':
         switch($_['id']){
             case 'ph':
+                //"Cal,mid,7.00\n";
             break;
             case 'orp':
             break;
             case 'temp':
             break;
         	default:
+        	     $result['answer']="ERROR";
+        	     $result['state']="unknown device ".$_['id'];
         	break;            
         }
     break;
