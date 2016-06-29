@@ -16,7 +16,7 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
-function actionCall(data, messageBox=null, confirm=false){
+function actionCall(data, messageBox=null, return=false, confirm=false){
     if (messageBox!==null){
         if (confirm!==false){
             var r = confirm(messageBox);
