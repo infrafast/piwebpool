@@ -146,7 +146,8 @@ function resetSchedule(){
     if (true == r) {
     	$.ajax({
     			type: "POST",
-    			url: "./action.php?action=resetSchedule",
+    			url: "./action.php",
+    			data:{action:"resetSchedule"},
     			async:false,
     			success: function(r){
     		 }});
