@@ -139,7 +139,7 @@ function rgbToHex(r, g, b) {
 }
 
 
-function getColor(median,tolerance,value){
+function getColor(median,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance/100;
@@ -148,18 +148,10 @@ function getColor(median,tolerance,value){
     var green = 0;
     var blue =0;
     
-    if (tolerance<1){
-        green = ((1-prop)*255)-(500*ecart);
-        red = (prop*255)+(500*ecart);
-        if (green<0) green=0; if (green>255) green=255;
-        if (red<0) red=0; if (red>255) red=255;    
-    }else{
-// tolerance is upper 1 we are displaying a measure like temperature so we use blue color
-        green = ((1-prop)*255)-(500*ecart);
-        blue = (prop*255)+(500*ecart);
-        if (blue<0) blue=0; if (blue>255) blue=255;
-        if (green<0) green=0; if (green>255) green=255;    
-    }
+    green = ((1-prop)*255)-(500*ecart);
+    red = (prop*255)+(500*ecart);
+    if (green<0) green=0; if (green>255) green=255;
+    if (red<0) red=0; if (red>255) red=255;    
 
     return rgbToHex(red,green,blue);
 }
