@@ -12,9 +12,11 @@ $result['answer']  = 'OK';
 
 switch($_['action']){
     
-    
     case 'calibrate':
-        "Cal,mid,7.00\n";
+    
+        
+        
+        //"Cal,mid,7.00\n";
     break;
     
     case 'sms':
