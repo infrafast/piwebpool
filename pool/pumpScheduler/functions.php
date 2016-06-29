@@ -135,7 +135,10 @@ function getTemperature(){
 function getDevice($id){
     switch($id){
         case 'ph':
-            
+        break;
+        case 'orp':
+        break;
+        case 'temp':
         break;
     	default:
     	break; 
