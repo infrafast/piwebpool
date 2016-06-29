@@ -115,7 +115,8 @@ function getLog(){
     var result;
 	$.ajax({
 		type: "POST",
-		url: "./action.php?action=getLog",
+		url: "./action.php",
+		data:{action:"getLog"},
 		async:false,
 		success: function(r){
 			result = eval(r);
