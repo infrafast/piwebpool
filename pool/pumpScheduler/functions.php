@@ -161,13 +161,13 @@ function getORP(){
    //return intval(rand(0,1000));
 }
 
-function readSensor($device){
+function readSensor($device,$command="R\r"){
     $serial = new PhpSerial;
     $serial->deviceSet($device);
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
     sleep(2);
-    $serial->sendMessage("R\r");
+    $serial->sendMessage($command);
     sleep(1);
     $val=$serial->readPort();
     $serial->deviceClose();    
