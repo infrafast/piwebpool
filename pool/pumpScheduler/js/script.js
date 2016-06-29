@@ -33,7 +33,7 @@ function actionCall(data, wait=true, messageBox=null, feedback=false, confirm=fa
 			
 	    }
 	});
-	return result.answer;
+	return result.state;
 }
 
 
