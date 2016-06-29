@@ -23,7 +23,8 @@ function calibrate(sensor){
     var urlCall="./action.php";
 	$.ajax({
 		    type: "POST",
-			url: "./action.php?action=forceCron",
+			url: "./action.php",
+			data:{action:calibrate,sensor:sensor},
 			async:false,
 		success: function(r){
 			result = eval(r);
