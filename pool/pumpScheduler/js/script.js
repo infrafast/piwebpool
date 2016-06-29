@@ -21,8 +21,7 @@ function actionCall(data, async=true, messageBox=null, feedback=false, confirm=f
         if (confirm!==false){
             var r = confirm(messageBox);
             if (true !== r) return;
-        }
-        else alert(messageBox);
+        }else alert(messageBox);
     }
 	$.ajax({
 		    type: "POST",
