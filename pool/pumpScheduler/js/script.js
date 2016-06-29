@@ -146,8 +146,7 @@ function getColor(middleVal,compareVal){
     if (ecartVal>0.5) alert('Tomato');
     if (ecartVal>0.3) alert('Orange');
     if (ecartVal>0.1) alert('Yellow');
-    alert(ecartVal);
-    return colorName;
+    return 'grey';
 }
 
     
