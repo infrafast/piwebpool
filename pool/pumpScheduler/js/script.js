@@ -142,13 +142,14 @@ function rgbToHex(r, g, b) {
 function getColor(median,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
+
     
-    var red = 0;
-    var green = 0;
-    var blue =0;
+    if (ecart>0,5) colorName='tomato';
     
     
-    return rgbToHex(red,green,blue);
+    
+    
+    return colorName;
 }
 
     
