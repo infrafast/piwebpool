@@ -158,7 +158,6 @@ function getPh(){
         if ($v1>0 and $v1<10) return $v1;
     }
     return false;
-    
     //return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
 }
 
