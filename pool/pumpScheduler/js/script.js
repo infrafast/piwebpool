@@ -184,7 +184,7 @@ function refreshValue(elem,action){
 	$(elem).removeAttr("style");
 	$(elem).removeClass('off');
 	$(elem).addClass('loading');
-	alert("refresh "+urlCall);
+	//alert("refresh "+urlCall);
 	$.ajax({
     	type: "POST",
     	url: urlCall,
