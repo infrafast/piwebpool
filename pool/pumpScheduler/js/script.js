@@ -175,7 +175,7 @@ function refreshValue(elem,action){
                 newValue = "<br>"+result.state+"<br><br>";
                 $(elem).html(newValue);
     		}else{
-    			alert('Erreur : '+result.answer);
+    			alert('Erreur : '+result.state);
     		}
     	}
 	});
