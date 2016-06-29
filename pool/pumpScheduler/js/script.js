@@ -56,7 +56,7 @@ function changeState(pin,elem){
 	$.ajax({
 			type: "POST",
 			url: "./action.php",
-			data:{action: "changeState", pin:pin,state:newState},
+			data:{action:"changeState", pin:pin,state:newState},
 			success: function(r){
 				var result = eval(r);
 				$(elem).removeClass('loading');
@@ -78,8 +78,8 @@ function updateScript(xml,lua,script){
 	//alert("receive before ajax: "+lua+"\n"+xml);
 	$.ajax({
 			type: "POST",
-			url: "./action.php?action=updateScript",
-			data:{id:script,xml:xml,lua:lua},
+			url: "./action.php",
+			data:{action:"updateScript",id:script,xml:xml,lua:lua},
 			async:false,
 			success: function(r){
 				result = eval(r);
