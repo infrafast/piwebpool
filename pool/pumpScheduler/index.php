@@ -442,7 +442,7 @@ $tableSettings = new TableGear($optionsSet);
                     </select>
                     <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
                     <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
-                    <input type="button" value="executer" onclick="actionCall('action=forceCron',true,'Execution demarée');">
+                    <input type="button" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée');">
             </th>
         </tr>
         <tr>
