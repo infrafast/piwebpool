@@ -145,6 +145,9 @@ function getColor(median,value){
 
     
     if (ecart>0,5) colorName='tomato';
+    if () colorname='';
+    if () colorname='';
+    if () colorname='';
     
     
     
