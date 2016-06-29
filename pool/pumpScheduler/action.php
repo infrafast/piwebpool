@@ -13,10 +13,16 @@ $result['answer']  = 'OK';
 switch($_['action']){
     
     case 'calibrate':
-    
-        
-        
-        //"Cal,mid,7.00\n";
+        switch($_['id']){
+            case 'ph':
+            break;
+            case 'orp':
+            break;
+            case 'temp':
+            break;
+        	default:
+        	break;            
+        }
     break;
     
     case 'sms':
