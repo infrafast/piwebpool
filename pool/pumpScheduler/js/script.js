@@ -16,8 +16,13 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
-function actionCall(){
-    
+function actionCall(data, messageBox=null, confirm=false){
+    if (messageBox!=null){
+        if (confirm!=false){
+            
+            
+        }else  alert(messageBox);
+    }
 }
 
 
