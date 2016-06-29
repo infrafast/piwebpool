@@ -687,7 +687,7 @@ foreach($materials as $material=>$pin){ ?>
  /* $( "#actionTable" ).click(function() {
           alert( "Handler for .click() called." );
     });*/
-    if (actionCall('action=calibrate&id=ph',false,'Placer la sonde dans Ph7\npendant 2 minutes puis confirmez',true, true);=="1") document.getElementById('actionTable').click();
+    if (actionCall('action=getSetting&id=actionTable');=="1") document.getElementById('actionTable').click();
     //getSetting("Planificateur", document.getElementById('Planificateur'));
     //getSetting("sensorTable", document.getElementById('sensorTable'));
     //getSetting("blocklyTable", document.getElementById('blocklyTable'));
