@@ -12,6 +12,11 @@ $result['answer']  = 'OK';
 
 switch($_['action']){
     
+    
+    case 'calibrate':
+        //Cal,mid,X.XX<CR>
+    break;
+    
     case 'sms':
             if (!sms($_['message'])){
                 $result['answer']="ERROR";
