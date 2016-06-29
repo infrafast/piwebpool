@@ -48,6 +48,7 @@ function getSetting(id,elem){
             if (result.state == "1") $(elem).click();
             if (result.state == "undef") alert('Setting undefined : '+id);
     }});   
+    return result.state;
 }
 
 function changeState(pin,elem){
