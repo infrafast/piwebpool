@@ -26,7 +26,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 	$.ajax({
 		    type: "POST",
 			url: "./action.php",
-			data:UrlData,
+			data: UrlData,
 			async:async,
 		success: function(r){
 			result = eval(r);
