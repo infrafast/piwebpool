@@ -644,7 +644,7 @@ $tableSettings = new TableGear($optionsSet);
         
         loadXML("main");
     
-        // callback function to update code and save in database related xml and lua when the workspace is modified
+        // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
     
     
@@ -690,7 +690,5 @@ $tableSettings = new TableGear($optionsSet);
         }  
           
     </script>
-    
-
     </body>
 </html>
