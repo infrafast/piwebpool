@@ -133,10 +133,12 @@ function getTemperature(){
 }
 
 function getDevice($id){
-    case $id="":
-        
-    break;
-        
+    switch($id){
+        case 'ph':
+            
+        break;
+    	default:
+    	break;        
 }
 
 
