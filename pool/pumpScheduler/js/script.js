@@ -36,23 +36,6 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 }
 
 
-//function getSetting(id,elem){
-function getSetting(id){
-    var urlCall="./action.php";
-    var result;
-    $.ajax({
-        type: "POST",
-        url: urlCall,
-        data:{action:"getSetting",id:id},
-        async: false,
-        success: function(r){
-            result = eval(r);
-            //if (result.state == "1") $(elem).click();
-            if (result.state == "undef") alert('Setting undefined : '+id);
-        }
-    });   
-    return result.state;
-}
 
 function changeState(pin,elem){
 	var newState = ($(elem).hasClass('on')?0:1); 
