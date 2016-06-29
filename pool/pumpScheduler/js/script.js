@@ -145,7 +145,7 @@ function getColor(middleVal,compareVal){
     var colorName='LimeGreen';
     //if (0.2>0.5) colorName='Tomato';
     //if (0.2>0.3) colorname='Orange';
-    if (0.2>0.1) colorname='Yellow';
+    if ('0.2'>'0.1') colorname='Yellow';
     return colorName;
 }
 
