@@ -684,18 +684,6 @@ foreach($materials as $material=>$pin){ ?>
 </script>
 
 <script>
-    var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-    
-    for (var tableID in collapsableTableList) {
-      if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
-    }
-
-    //if (actionCall('action=getSetting&id=actionTable',false)=="1") document.getElementById('actionTable').click();
-    //getSetting("Planificateur", document.getElementById('Planificateur'));
-    //getSetting("sensorTable", document.getElementById('sensorTable'));
-    //getSetting("blocklyTable", document.getElementById('blocklyTable'));
-    //getSetting("logTable", document.getElementById('logTable'));
-    //getSetting("Parametres", document.getElementById('Parametres'));
 </script>
 
 </body>
