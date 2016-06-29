@@ -55,8 +55,8 @@ function changeState(pin,elem){
 	$(elem).addClass('loading');
 	$.ajax({
 			type: "POST",
-			url: "./action.php?action=changeState",
-			data:{pin:pin,state:newState},
+			url: "./action.php",
+			data:{action: "changeState", pin:pin,state:newState},
 			success: function(r){
 				var result = eval(r);
 				$(elem).removeClass('loading');
