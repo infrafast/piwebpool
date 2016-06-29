@@ -155,7 +155,7 @@ function getDevice($id){
 function getPh(){
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
-        if ($v1>0 and $v1<1000) return $v1;
+        if ($v1>0 and $v1<10) return $v1;
     }
     return false;
     
@@ -168,8 +168,6 @@ function getORP(){
         if ($v1>0 and $v1<1000) return $v1;
     }
     return false;    
-    
-    return 
    //return intval(rand(0,1000));
 }
 
