@@ -691,7 +691,7 @@ $tableSettings = new TableGear($optionsSet);
         
         
         function calibrateAndRefresh(id){
-            //var elemID = 'div'+ID+'MeasureID';
+            var elemID = 'div'+ID+'MeasureID';
             alert('calibrateAndRefresh ');
             elem = document.getElementById(elemID);
             elem.addClass('loading');
