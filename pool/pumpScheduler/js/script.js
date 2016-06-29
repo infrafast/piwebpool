@@ -28,7 +28,7 @@ function calibrate(sensor){
 			async:false,
 		success: function(r){
 			result = eval(r);
-			alert("Etalonnage: "+result.answer);
+			alert("Résultat étalonnage: "+result.answer);
 	    }
 	}); 
 }
