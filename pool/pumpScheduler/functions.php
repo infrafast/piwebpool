@@ -5,14 +5,6 @@ require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
 
-$exportedVariable = array(
-        "temperature"=>getTemperature(),
-        "ph"=>getPh(),
-        "orp"=>getORP(),
-        "period"=>intval(getCurrentTimeWindow()),
-        "hour"=>intval(getCurrentTime()),
-    );
-
 
 function sendsms($message){
     $SMSuser = "19107501";
