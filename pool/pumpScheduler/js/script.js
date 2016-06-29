@@ -27,7 +27,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		    type: "POST",
 		    traditional: true,
 			url: "./action.php",
-			data: UrlData,
+			data: "{" + JSON.stringify(UrlData) + "}",
 			async:async,
 		success: function(r){
 			result = eval(r);
