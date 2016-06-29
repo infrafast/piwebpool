@@ -130,20 +130,6 @@ function forceCron(){
 	});   
 }
 
-function resetSchedule(){
-    var r = confirm("This will reset your schedule with defaut value");
-    if (true == r) {
-    	$.ajax({
-    			type: "POST",
-    			url: "./action.php",
-    			data:{action:"resetSchedule"},
-    			async:false,
-    			success: function(r){
-    		 }});
-        location.reload(true);
-    }
-}
-
 
 function rgbToHex(r, g, b) {
     if(r < 0 || r > 255) alert("r is out of bounds; "+r);
