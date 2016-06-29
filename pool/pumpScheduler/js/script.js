@@ -170,7 +170,7 @@ function refreshValue(elem,action){
                 if(action=='Ph') median=7.24;
                 else if (action=='ORP') median=715;
                 else median=25;
-                $(elem).attr("style", "background:"+getColor(median,newValue)+";");
+                $(elem).attr("style", "background:"+getColorVal(median,newValue)+";");
                 newValue = "<br>"+result.state+"<br><br>";
                 $(elem).html(newValue);
     		}else{
