@@ -141,7 +141,7 @@ function rgbToHex(r, g, b) {
 
 function getColor(median,value){
     var diff = Math.abs(value - median);
-    var ecart = intval(diff/median*100);
+    var ecart = floor(diff/median*100);
 
     var colorName='LimeGreen';
     if (ecart>50) colorName='Tomato';
