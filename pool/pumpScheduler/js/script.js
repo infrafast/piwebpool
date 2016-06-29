@@ -16,7 +16,7 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
-function actionCall(data, messageBox=null, feedback=false, confirm=false){
+function actionCall(data, wait=true, messageBox=null, feedback=false, confirm=false){
     if (messageBox!==null){
         if (confirm!==false){
             var r = confirm(messageBox);
@@ -27,7 +27,7 @@ function actionCall(data, messageBox=null, feedback=false, confirm=false){
 		    type: "POST",
 			url: "./action.php",
 			data:data,
-			async:false,
+			async:wait,
 		success: function(r){
 			result = eval(r);
 			alert("Résultat étalonnage: "+result.answer);
