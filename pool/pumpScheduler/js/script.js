@@ -144,9 +144,8 @@ function getColor(median,value){
     var ecart = diff/median;
     
     var red = 0;
-    var green = 255;
+    var green = 0;
     var blue =0;
-    
     
     
     return rgbToHex(red,green,blue);
