@@ -691,9 +691,11 @@ $tableSettings = new TableGear($optionsSet);
         
         
         function calibrateAndRefresh(id){
+            elem=document.getElementById('div'+ID+'MeasureID');
+            elem.addClass('loading');
             if (actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',true, true)!=false)
-                refreshValue(document.getElementById('div'+ID+'MeasureID'),id);
-            
+                refreshValue(elem,id);
+            elem.removeClass('loading');
         }
           
     </script>
