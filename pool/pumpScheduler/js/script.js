@@ -148,11 +148,6 @@ function getColor(median,value){
     var green = 0;
     var blue =0;
     
-    green = ((1-prop)*255)-(500*ecart);
-    red = (prop*255)+(500*ecart);
-    if (green<0) green=0; if (green>255) green=255;
-    if (red<0) red=0; if (red>255) red=255;    
-
     return rgbToHex(red,green,blue);
 }
 
