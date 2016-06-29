@@ -36,22 +36,6 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 }
 
 
-function calibrate(sensor){
-    alert("Tremper la sonde dans une solution Ph 7 puis attendre deux minutes");
-    var urlCall="./action.php";
-	$.ajax({
-		    type: "POST",
-			url: "./action.php",
-			data:{action:"calibrate",sensor:sensor},
-			async:false,
-		success: function(r){
-			result = eval(r);
-			alert("Résultat étalonnage: "+result.answer);
-	    }
-	}); 
-}
-
-
 function getSetting(id,elem){
     var urlCall="./action.php";
     //alert('ajaxCall : '+urlCall);
