@@ -14,10 +14,10 @@ switch($_['action']){
     
     case 'calibrate':
         switch($_['id']){
-            case 'ph':
+            case 'Ph':
                 $result['state']=readSensor(getDevice("ph"),"Cal,mid,7.00\n");
             break;
-            case 'orp':
+            case 'ORP':
             break;
             case 'temp':
             break;
