@@ -369,328 +369,325 @@ $tableSettings = new TableGear($optionsSet);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Gestion piscine</title>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
-  
-<script src="blockly/blockly_compressed.js"></script>
-<script src="blockly/lua_compressed.js"></script>
-<script src="blockly/blocks_compressed.js"></script>
-
-<script src="blockly/msg/js/fr.js"></script>
-  
-  <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-
-<table class="materialTab">
-<tr class="header" id="actionTable">
-<td colspan="2"><b><span>-</span> Commandes</b></td>
-</tr>
-<tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
-<?php 
-foreach($materials as $material=>$pin){ ?>
-<tr height=80px>
-	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
-	</td>
-	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
-</tr>
-<?php } ?>
-</table>
-
-<table class="materialTab">
-<tr class="header" id="sensorTable">
-<td colspan="3"><b><span>-</span> Mesures</b></td>
-</tr>
-<tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
-<tr>
-    <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo "<br>".getPh()."<br>"; ?><br></div></td>
-    <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
-    <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
-</tr>
-<tr>
-    <th></th>
-    <th>Historique sur <select  name="period"  id="periodID" onclick='updateGraph();'>
-            <option value="8">8 heures</option>
-            <option value="24">dernier jour</option>
-            <option value="168">dernière semaine</option>
-    </select></th>
-    <th></th>
-</tr>
-<tr height="180px" id="graphID">
-    <td id="graph=ph" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
-    <td id="graph=orp" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
-    <td id="graph=temperature" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
-</tr>
-<tr>
-    <td><input type="button" value="Etalonner (ph7)" onclick="actionCall('action=calibrate&id=ph',false,'Placer la sonde dans Ph7\npendant 2 minutes puis confirmez',true, true);"></td>
-    <td><input type="button" value="Etalonner (650mv)" onclick="actionCall('action=calibrate&id=orp',false,'Placer la sonde dans solution 650mV\npendant 2 minutes puis confirmez',true, true);"></td>
-    <td></td>
-</tr>
-
-</table>
-
-<table class="materialTab">
-    <tr class="header" id="blocklyTable">
-        <td colspan="1"><b><span>-</span> Programmation</b></td>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Gestion piscine</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/lua_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/msg/js/fr.js"></script>
+        <script src="js/script.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    
+    <table class="materialTab">
+    <tr class="header" id="actionTable">
+    <td colspan="2"><b><span>-</span> Commandes</b></td>
+    </tr>
+    <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
+    <?php 
+    foreach($materials as $material=>$pin){ ?>
+    <tr height=80px>
+    	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
+    	</td>
+    	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
+    </tr>
+    <?php } ?>
+    </table>
+    
+    <table class="materialTab">
+    <tr class="header" id="sensorTable">
+    <td colspan="3"><b><span>-</span> Mesures</b></td>
+    </tr>
+    <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
+    <tr>
+        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off"><?php echo "<br>".getPh()."<br>"; ?><br></div></td>
+        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off"><?php echo "<br>".getORP()."<br>"; ?><br></div></td>
+        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off"><?php echo"<br>".getTemperature()."<br>";?><br></div></td>
     </tr>
     <tr>
-        <th style="width: 100%;">
-              <select  name="luascript"  id="scriptID">
-                    <option value="main">defaut</option>
-                    <option value="custom">perso</option>
-                </select>
-                <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
-                <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
-                <input type="button" value="executer" onclick="forceCron();">
-        </th>
+        <th></th>
+        <th>Historique sur <select  name="period"  id="periodID" onclick='updateGraph();'>
+                <option value="8">8 heures</option>
+                <option value="24">dernier jour</option>
+                <option value="168">dernière semaine</option>
+        </select></th>
+        <th></th>
+    </tr>
+    <tr height="180px" id="graphID">
+        <td id="graph=ph" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
+        <td id="graph=orp" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
+        <td id="graph=temperature" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
     </tr>
     <tr>
-      <td><div id="blocklyDiv" style="height: 500px; "></div></td>
-        <xml id="toolbox" style="display: none">
-
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="logic_operation"></block>
-
-            <block type="sensors"></block>
-            <block type="variables_set"><field name="VAR">info</field></block>
-            <block type="variables_get"><field name="VAR">variable</field></block>
-            <block type="on_off"></block>
-            <block type="math_number"></block>
-
-            <block type="message"></block>
-            <block type="text"></block>
-            <block type="text_join"></block>
-
-            <block type="setcommand"></block>
-            <block type="getcommand"></block>
-
-        </xml>
-    <tr>
-        <th>Code preview</th>
+        <td><input type="button" value="Etalonner (ph7)" onclick="actionCall('action=calibrate&id=ph',false,'Placer la sonde dans Ph7\npendant 2 minutes puis confirmez',true, true);"></td>
+        <td><input type="button" value="Etalonner (650mv)" onclick="actionCall('action=calibrate&id=orp',false,'Placer la sonde dans solution 650mV\npendant 2 minutes puis confirmez',true, true);"></td>
+        <td></td>
     </tr>
-    <tr>
-        <td width="100%"><textarea id="scriptareaID" rows="10" readonly style="color: grey; width: 100%;">Erreur chargement de script</textarea>
+    
+    </table>
+    
+    <table class="materialTab">
+        <tr class="header" id="blocklyTable">
+            <td colspan="1"><b><span>-</span> Programmation</b></td>
+        </tr>
+        <tr>
+            <th style="width: 100%;">
+                  <select  name="luascript"  id="scriptID">
+                        <option value="main">defaut</option>
+                        <option value="custom">perso</option>
+                    </select>
+                    <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
+                    <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
+                    <input type="button" value="executer" onclick="forceCron();">
+            </th>
+        </tr>
+        <tr>
+          <td><div id="blocklyDiv" style="height: 500px; "></div></td>
+            <xml id="toolbox" style="display: none">
+    
+                <block type="controls_if"></block>
+                <block type="logic_compare"></block>
+                <block type="logic_operation"></block>
+    
+                <block type="sensors"></block>
+                <block type="variables_set"><field name="VAR">info</field></block>
+                <block type="variables_get"><field name="VAR">variable</field></block>
+                <block type="on_off"></block>
+                <block type="math_number"></block>
+    
+                <block type="message"></block>
+                <block type="text"></block>
+                <block type="text_join"></block>
+    
+                <block type="setcommand"></block>
+                <block type="getcommand"></block>
+    
+            </xml>
+        <tr>
+            <th>Code preview</th>
+        </tr>
+        <tr>
+            <td width="100%"><textarea id="scriptareaID" rows="10" readonly style="color: grey; width: 100%;">Erreur chargement de script</textarea>
+        </tr>
+    </table>
+    
+    
+    <table class="materialTab">
+    <tr class="header" id="logTable">
+    <td colspan="1"><b><span>-</span> Log</b></td>
     </tr>
-</table>
-
-
-<table class="materialTab">
-<tr class="header" id="logTable">
-<td colspan="1"><b><span>-</span> Log</b></td>
-</tr>
-<tr><th>Valeur</th></tr>
-<tr><td width="100%"><textarea rows="5" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
-</table>
-
-<div><?= $table->getTable() ?></div>
-<?= $table->getJavascript("jquery") ?>
-<div><?= $tableSettings->getTable() ?></div>
-<?= $tableSettings->getJavascript("jquery") ?>
-
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
-
-<script>
-
-    // retrieve logfile
-    document.getElementById('logFile').value = getLog();
+    <tr><th>Valeur</th></tr>
+    <tr><td width="100%"><textarea rows="5" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
+    </table>
     
-    // refresh measures indicators
-    refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-    refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-    refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+    <div><?= $table->getTable() ?></div>
+    <?= $table->getJavascript("jquery") ?>
+    <div><?= $tableSettings->getTable() ?></div>
+    <?= $tableSettings->getJavascript("jquery") ?>
     
     
-    // draw measures graph
-    updateGraph();
     
-    //setup Blockly for LUA variable
-    Blockly.Blocks['sensors'] = {
-      init: function() {
-        this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["heure", "hour"]]), "select");
-        this.setOutput(true, null);
-        this.setColour(330);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
-      }
-    };
+    <script src="js/jquery.min.js"></script>
     
-    Blockly.Lua['sensors'] = function(block) {
-      var dropdown_select = block.getFieldValue('select');
-      // TODO: Assemble Lua into code variable.
-      var code = dropdown_select;
-      // TODO: Change ORDER_NONE to the correct strength.
-      return [code, Blockly.Lua.ORDER_NONE];
-    };
     
-    Blockly.Blocks['setcommand'] = {
-      init: function() {
-        this.appendValueInput("NAME")
-            .setCheck("Number")
-            .appendField("commander")
-            .appendField(new Blockly.FieldDropdown([
-                <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
-                ["",""]
-              ]), "command");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(20);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
-      }
-    };
+    <script>
     
-    Blockly.Lua['setcommand'] = function(block) {
-      var dropdown_command = block.getFieldValue('command');
-      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
-      // TODO: Assemble Lua into code variable.
-      var code = 'set('+dropdown_command+','+value_name+');\n';
-      return code;
-    };
-
-    Blockly.Blocks['getcommand'] = {
-      init: function() {
-        this.appendDummyInput()
-            .appendField("etat")
-            .appendField(new Blockly.FieldDropdown([
-                <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
-                ["",""]
-              ]), "command");            
+        // retrieve logfile
+        document.getElementById('logFile').value = getLog();
+        
+        // refresh measures indicators
+        refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+        refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+        refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+        
+        
+        // draw measures graph
+        updateGraph();
+        
+        //setup Blockly for LUA variable
+        Blockly.Blocks['sensors'] = {
+          init: function() {
+            this.appendDummyInput()
+                .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["heure", "hour"]]), "select");
+            this.setOutput(true, null);
+            this.setColour(330);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };
+        
+        Blockly.Lua['sensors'] = function(block) {
+          var dropdown_select = block.getFieldValue('select');
+          // TODO: Assemble Lua into code variable.
+          var code = dropdown_select;
+          // TODO: Change ORDER_NONE to the correct strength.
+          return [code, Blockly.Lua.ORDER_NONE];
+        };
+        
+        Blockly.Blocks['setcommand'] = {
+          init: function() {
+            this.appendValueInput("NAME")
+                .setCheck("Number")
+                .appendField("commander")
+                .appendField(new Blockly.FieldDropdown([
+                    <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                    ["",""]
+                  ]), "command");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
             this.setColour(20);
-            this.setOutput(true, "Boolean");
-      }
-    };
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };
+        
+        Blockly.Lua['setcommand'] = function(block) {
+          var dropdown_command = block.getFieldValue('command');
+          var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+          // TODO: Assemble Lua into code variable.
+          var code = 'set('+dropdown_command+','+value_name+');\n';
+          return code;
+        };
     
-    Blockly.Lua['getcommand'] = function(block) {
-      var dropdown_command = block.getFieldValue('command');
-      // TODO: Assemble Lua into code variable.
-      var code = 'get('+dropdown_command+')';
-      // TODO: Change ORDER_NONE to the correct strength.
-      return [code, Blockly.Lua.ORDER_NONE];
-    };
-
-    Blockly.Blocks['on_off'] = {
-      init: function() {
-        this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["marche", "1"], ["arret", "0"]]), "command");
-        this.setOutput(true, "Number");
-        this.setColour(20);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
-      }
-    };
-
-
-    Blockly.Lua['on_off'] = function(block) {
-      var dropdown_command = block.getFieldValue('command');
-      // TODO: Assemble Lua into code variable.
-      var code = dropdown_command;
-      // TODO: Change ORDER_NONE to the correct strength.
-      return [code, Blockly.Lua.ORDER_NONE];
-    };
-
-    Blockly.Blocks['message'] = {
-      init: function() {
-        this.appendValueInput("NAME")
-            .setCheck(["String", "Number"])
-            .appendField("notifier")
-            .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(65);
-        this.setTooltip('');
-        this.setHelpUrl('http://www.example.com/');
-      }
-    };
-
-    Blockly.Lua['message'] = function(block) {
-      var dropdown_command = block.getFieldValue('command');
-      var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
-      // TODO: Assemble Lua into code variable.
-      var code = dropdown_command+'('+value_name+');\n';
-      return code;
-    };
-
-    Blockly.Lua['variables_set'] = function(block) {
-      // Variable setter.
-      var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
-          Blockly.Lua.ORDER_NONE) || '0';
-      var varName = Blockly.Lua.variableDB_.getName(
-          block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-      return varName + ' = ' + argument0 + ';\n';
-    };
-
-
-  var workspace = Blockly.inject('blocklyDiv',
-      {toolbox: document.getElementById('toolbox'),
-        zoom:
-             {controls: true,
-              wheel: true,
-              startScale: 1.0,
-              maxScale: 3,
-              minScale: 0.3,
-              scaleSpeed: 1.2},
-         trashcan: true          
-      });
+        Blockly.Blocks['getcommand'] = {
+          init: function() {
+            this.appendDummyInput()
+                .appendField("etat")
+                .appendField(new Blockly.FieldDropdown([
+                    <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                    ["",""]
+                  ]), "command");            
+                this.setColour(20);
+                this.setOutput(true, "Boolean");
+          }
+        };
+        
+        Blockly.Lua['getcommand'] = function(block) {
+          var dropdown_command = block.getFieldValue('command');
+          // TODO: Assemble Lua into code variable.
+          var code = 'get('+dropdown_command+')';
+          // TODO: Change ORDER_NONE to the correct strength.
+          return [code, Blockly.Lua.ORDER_NONE];
+        };
     
-    loadXML("main");
-
-    // callback function to update code and save in database related xml and lua when the workspace is modified
-    workspace.addChangeListener(myUpdateFunction);
-
-    function myUpdateFunction(event) {
-      var code = Blockly.Lua.workspaceToCode(workspace);
-      document.getElementById('scriptareaID').value = code;
-    }
+        Blockly.Blocks['on_off'] = {
+          init: function() {
+            this.appendDummyInput()
+                .appendField(new Blockly.FieldDropdown([["marche", "1"], ["arret", "0"]]), "command");
+            this.setOutput(true, "Number");
+            this.setColour(20);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };
     
-    function loadXML(script){
-        //clean the code
-        Blockly.mainWorkspace.clear();
-        //fetch the code from xml table
-        xml_text = getScript("xml", script);
-        //alert("received: "+xml_text);
-        var xml = Blockly.Xml.textToDom(xml_text);
-        Blockly.Xml.domToWorkspace(xml, workspace);
-    }
-
-    function saveCode(script){
-      var xml = Blockly.Xml.workspaceToDom(workspace);
-      var xml_text = Blockly.Xml.domToText(xml);
-      alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
-      //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
-    }    
-      
-    function updateGraph(){
-    // this function is called when user change the combo to choose measures rendition period graph
-    // it update the call to the graph function according to the selected value
-     	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
-    	while(++i < colslen){
-    	    cols[i].style.backgroundSize="100% 100%";
-            var imgSrc = 'url(graph.php?'+cols[i].id+'&period='+document.getElementById('periodID').value+'&width=500&height=200)'; 
-            cols[i].style.backgroundImage=imgSrc; 		
-            //alert(imgSrc);
-    	}    
-    }  
-      
-</script>
-
-<script>
-    var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
     
-    for (var tableID in collapsableTableList) {
-      if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
-    }
-</script>
-
-
-</body>
+        Blockly.Lua['on_off'] = function(block) {
+          var dropdown_command = block.getFieldValue('command');
+          // TODO: Assemble Lua into code variable.
+          var code = dropdown_command;
+          // TODO: Change ORDER_NONE to the correct strength.
+          return [code, Blockly.Lua.ORDER_NONE];
+        };
+    
+        Blockly.Blocks['message'] = {
+          init: function() {
+            this.appendValueInput("NAME")
+                .setCheck(["String", "Number"])
+                .appendField("notifier")
+                .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(65);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };
+    
+        Blockly.Lua['message'] = function(block) {
+          var dropdown_command = block.getFieldValue('command');
+          var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+          // TODO: Assemble Lua into code variable.
+          var code = dropdown_command+'('+value_name+');\n';
+          return code;
+        };
+    
+        Blockly.Lua['variables_set'] = function(block) {
+          // Variable setter.
+          var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
+              Blockly.Lua.ORDER_NONE) || '0';
+          var varName = Blockly.Lua.variableDB_.getName(
+              block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+          return varName + ' = ' + argument0 + ';\n';
+        };
+    
+    
+      var workspace = Blockly.inject('blocklyDiv',
+          {toolbox: document.getElementById('toolbox'),
+            zoom:
+                 {controls: true,
+                  wheel: true,
+                  startScale: 1.0,
+                  maxScale: 3,
+                  minScale: 0.3,
+                  scaleSpeed: 1.2},
+             trashcan: true          
+          });
+        
+        loadXML("main");
+    
+        // callback function to update code and save in database related xml and lua when the workspace is modified
+        workspace.addChangeListener(myUpdateFunction);
+    
+        function myUpdateFunction(event) {
+          var code = Blockly.Lua.workspaceToCode(workspace);
+          document.getElementById('scriptareaID').value = code;
+        }
+        
+        function loadXML(script){
+            //clean the code
+            Blockly.mainWorkspace.clear();
+            //fetch the code from xml table
+            xml_text = getScript("xml", script);
+            //alert("received: "+xml_text);
+            var xml = Blockly.Xml.textToDom(xml_text);
+            Blockly.Xml.domToWorkspace(xml, workspace);
+        }
+    
+        function saveCode(script){
+          var xml = Blockly.Xml.workspaceToDom(workspace);
+          var xml_text = Blockly.Xml.domToText(xml);
+          alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
+          //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
+        }    
+          
+        function updateGraph(){
+        // this function is called when user change the combo to choose measures rendition period graph
+        // it update the call to the graph function according to the selected value
+         	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
+        	while(++i < colslen){
+        	    cols[i].style.backgroundSize="100% 100%";
+                var imgSrc = 'url(graph.php?'+cols[i].id+'&period='+document.getElementById('periodID').value+'&width=500&height=200)'; 
+                cols[i].style.backgroundImage=imgSrc; 		
+                //alert(imgSrc);
+        	}    
+        }  
+          
+    </script>
+    
+    <script>
+        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
+        
+        for (var tableID in collapsableTableList) {
+          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
+        }
+    </script>
+    
+    
+    </body>
 </html>
