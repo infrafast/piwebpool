@@ -16,6 +16,11 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
+function actionCall(){
+    
+}
+
+
 function calibrate(sensor){
     alert("Tremper la sonde dans une solution Ph 7 puis attendre deux minutes");
     var urlCall="./action.php";
