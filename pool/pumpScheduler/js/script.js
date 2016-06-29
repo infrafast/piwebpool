@@ -50,7 +50,8 @@ function getSetting(id){
             result = eval(r);
             //if (result.state == "1") $(elem).click();
             if (result.state == "undef") alert('Setting undefined : '+id);
-    }});   
+        }
+    });   
     return resul.statet;
 }
 
