@@ -17,7 +17,6 @@ $('.header').click(function(){
 });
 
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
-    alert(UrlData);
     if (messageBox!==null)
         if (confirmation!==false){
             var r = confirm(messageBox);
@@ -28,6 +27,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			url: "./action.php?"+UrlData,
 			async:async,
 		success: function(r){
+		    alert(UrlData);
 			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer===true?"":" "+result.state));
 	    }
