@@ -139,15 +139,15 @@ function rgbToHex(r, g, b) {
 }
 
 
-function getColor(median,value){
-    var diff = Math.abs(value - median);
-    var ecart = diff/median;
+function getColor(middleVal,compareVal){
+    var diffVal = Math.abs(compareVal - middleVal);
+    var ecartVal = diffVal/middleVal;
 
     var colorName='LimeGreen';
-    if (ecart>0.5) colorName='Tomato';
-    if (ecart>0.3) colorname='Orange';
-    if (ecart>0.1) colorname='Yellow';
-    alert(ecart);
+    if (ecartVal>0.5) colorName='Tomato';
+    if (ecartVal>0.3) colorname='Orange';
+    if (ecartVal>0.1) colorname='Yellow';
+    alert(ecartVal);
     return colorName;
 }
 
