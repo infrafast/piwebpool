@@ -684,10 +684,13 @@ foreach($materials as $material=>$pin){ ?>
 </script>
 
 <script>
- /* $( "#actionTable" ).click(function() {
-          alert( "Handler for .click() called." );
-    });*/
-    if (actionCall('action=getSetting&id=actionTable')=="1") document.getElementById('actionTable').click();
+    var collapsableTableList = ['actionTable'];
+    
+    for (var i in array) {
+      if (actionCall('action=getSetting&id='+i,false)=="1") document.getElementById(i).click();
+    }
+
+    //if (actionCall('action=getSetting&id=actionTable',false)=="1") document.getElementById('actionTable').click();
     //getSetting("Planificateur", document.getElementById('Planificateur'));
     //getSetting("sensorTable", document.getElementById('sensorTable'));
     //getSetting("blocklyTable", document.getElementById('blocklyTable'));
