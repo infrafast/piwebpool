@@ -143,15 +143,11 @@ function getColor(median,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
 
-    
-    if (ecart>0,5) colorName='tomato';
-    if () colorname='';
-    if () colorname='';
-    if () colorname='';
-    
-    
-    
-    
+    colorName='LimeGreen';
+    if (ecart>0,5) colorName='Tomato';
+    if (ecart>0,3) colorname='';
+    if (ecart>0,1) colorname='';
+
     return colorName;
 }
 
