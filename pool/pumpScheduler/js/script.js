@@ -16,8 +16,8 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
-function actionCall(data, async=true, messageBox=null, feedback=false, confirmation=false){
-    alert(data);
+function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
+    alert(UrlData);
     if (messageBox!==null)
         if (confirmation!==false){
             var r = confirm(messageBox);
@@ -26,7 +26,7 @@ function actionCall(data, async=true, messageBox=null, feedback=false, confirmat
 	$.ajax({
 		    type: "POST",
 			url: "./action.php",
-			data:data,
+			data:UrlData,
 			async:async,
 		success: function(r){
 			result = eval(r);
