@@ -28,7 +28,6 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		    type: "POST",
 			url: "./action.php",
 			data: UrlData,
-			contentType: "application/json; charset=utf-8",
 			async:async,
 		success: function(r){
 			result = eval(r);
