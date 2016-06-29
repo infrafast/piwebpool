@@ -17,8 +17,6 @@ $('.header').click(function(){
 });
 
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
-    UrlData = JSON.stringify(UrlData);
-    UrlData = UrlData.replace(/"/g,"");
     alert(UrlData);
     if (messageBox!==null)
         if (confirmation!==false){
@@ -27,8 +25,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
         }else alert(messageBox);
 	$.ajax({
 		    type: "POST",
-			url: "./action.php",
-			data: UrlData,
+			url: "./action.php?"+UrlData,
 			async:async,
 		success: function(r){
 			result = eval(r);
