@@ -20,7 +20,7 @@ function actionCall(data, async=true, messageBox=null, feedback=false, confirm=f
     if (messageBox!==null)
         if (confirm!==false){
             alert("this is a confirmation box");
-            //var r = confirm(messageBox);
+            var r = confirm(messageBox);
             //if (true !== r) return;
         }else alert(messageBox);
 	$.ajax({
