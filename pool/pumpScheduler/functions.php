@@ -141,7 +141,7 @@ function getDevice($id){
             return "/dev/ttyUSB0";
         break;
         case 'temp':
-            return "";
+            return "/dev/ttyUSB2";
         break;
     	default:
     	    return "/dev/ttyUSB0";
