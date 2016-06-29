@@ -51,7 +51,7 @@ function getSetting(id){
             //if (result.state == "1") $(elem).click();
             if (result.state == "undef") alert('Setting undefined : '+id);
     }});   
-    return result;
+    return resul.statet;
 }
 
 function changeState(pin,elem){
