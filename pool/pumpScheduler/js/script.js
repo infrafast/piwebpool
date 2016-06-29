@@ -19,18 +19,19 @@ $('.header').click(function(){
 Cal,mid,X.XX<CR>
 
 function calibrate(sensor){
+    alert("Tremper la sonde dans une solution Ph 7 puis attendre deux minutes");
     var urlCall="./action.php";
-    $.ajax({
-        type: "POST",
-        url: urlCall,
-        data:{sensor:sensor, action: calibrate},
-        success: function(r){
-            var result = eval(r);
-            if (result.state == "1") $(elem).click();
-            if (result.state == "undef") alert('Setting undefined : '+id);
-    }});   
+	$.ajax({
+		    type: "POST",
+			url: "./action.php?action=forceCron",
+			async:false,
+		success: function(r){
+			result = eval(r);
+			alert("Etalonnage: "+result.answer)
+	    }
+	}); 
+	
 }
-
 
 
 function getSetting(id,elem){
