@@ -37,7 +37,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 
 
 //function getSetting(id,elem){
-function getSetting(id,elem=null){
+function getSetting(id){
     var urlCall="./action.php";
     //alert('ajaxCall : '+urlCall);
     $.ajax({
