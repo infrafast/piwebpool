@@ -142,11 +142,11 @@ function rgbToHex(r, g, b) {
 function getColor(middleVal,compareVal){
     var diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
-    //var colorName='LimeGreen';
-    if (ecartVal>0.5) alert('Tomato');
-    if (ecartVal>0.3) alert('Orange');
-    if (ecartVal>0.1) alert('Yellow');
-    return 'grey';
+    var colorSensor='LimeGreen';
+    if (ecartVal>0.5) colorSensor='Tomato';
+    if (ecartVal>0.3) colorSensor='Orange';
+    if (ecartVal>0.1) colorSensor='Yellow';
+    return colorSensor;
 }
 
     
