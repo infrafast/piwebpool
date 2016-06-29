@@ -145,8 +145,8 @@ function getColor(median,value){
 
     colorName='LimeGreen';
     if (ecart>0,5) colorName='Tomato';
-    if (ecart>0,3) colorname='';
-    if (ecart>0,1) colorname='';
+    if (ecart>0,3) colorname='Orange';
+    if (ecart>0,1) colorname='Yellow';
 
     return colorName;
 }
