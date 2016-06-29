@@ -148,6 +148,8 @@ function getColor(median,value){
     var green = 255;
     var blue =0;
     
+    
+    
     return rgbToHex(red,green,blue);
 }
 
