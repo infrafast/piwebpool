@@ -22,7 +22,8 @@ function actionCall(data, async=true, messageBox=null, feedback=false, confirm=f
             var r = confirm(messageBox);
             if (true !== r) return;
         }
-    }else alert(messageBox);
+        else alert(messageBox);
+    }
 	$.ajax({
 		    type: "POST",
 			url: "./action.php",
