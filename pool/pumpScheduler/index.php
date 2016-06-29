@@ -501,7 +501,7 @@ $tableSettings = new TableGear($optionsSet);
         }
     
         // retrieve logfile
-        document.getElementById('logFile').value = getLog();
+        document.getElementById('logFile').value = actionCall('action=getLog',false);
         
         // refresh measures indicators
         refreshValue(document.getElementById('divPhMeasureID'),'Ph');
