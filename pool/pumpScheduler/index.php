@@ -687,7 +687,7 @@ foreach($materials as $material=>$pin){ ?>
  /* $( "#actionTable" ).click(function() {
           alert( "Handler for .click() called." );
     });*/
-    if (getSetting("actionTable")=="1") document.getElementById('actionTable').click();
+    alert (getSetting("actionTable"); // document.getElementById('actionTable').click();
     //getSetting("Planificateur", document.getElementById('Planificateur'));
     //getSetting("sensorTable", document.getElementById('sensorTable'));
     //getSetting("blocklyTable", document.getElementById('blocklyTable'));
