@@ -423,7 +423,7 @@ $tableSettings = new TableGear($optionsSet);
         <td id="graph=temperature" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
     </tr>
     <tr>
-        <td><input type="button" value="Etalonner (ph7)" onclick="actionCall('action=calibrate&id=ph',false,'Placer la sonde dans Ph7\npendant 2 minutes puis confirmez',true, true);"></td>
+        <td><input type="button" value="Etalonner (ph7)" onclick="actionCall('action=calibrate&id=ph',false,'Placer la sonde dans Ph7\npendant 2 minutes puis confirmez',true, true);refreshValue(document.getElementById('divPhMeasureID'),'Ph');"></td>
         <td><input type="button" value="Etalonner (650mv)" onclick="actionCall('action=calibrate&id=orp',false,'Placer la sonde dans solution 650mV\npendant 2 minutes puis confirmez',true, true);"></td>
         <td></td>
     </tr>
