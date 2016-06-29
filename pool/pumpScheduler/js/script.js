@@ -185,10 +185,8 @@ function refreshValue(elem,action){
                 var tolerance;
                 if(action=='Ph'){
                     median=7.24;
-                    tolerance=0.01;
                 }else if (action=='ORP'){
                     median=715;
-                    tolerance=0.02;                        
                 }else{
                     median=25;
                 }
