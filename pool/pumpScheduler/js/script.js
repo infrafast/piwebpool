@@ -174,9 +174,8 @@ function refreshValue(elem,action){
                 if(action=='Ph') median=7.24;
                 else if (action=='ORP') median=715;
                 else median=25;
-                var color=getColor(median,newValue);
                 //alert(color);
-                $(elem).attr("style", "background:"+color+";");
+                $(elem).attr("style", "background:"+getColor(median,newValue)+";");
                 newValue = "<br>"+result.state+"<br><br>";
                 $(elem).html(newValue);
     		}else{
