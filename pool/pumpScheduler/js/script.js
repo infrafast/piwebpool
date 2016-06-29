@@ -16,6 +16,23 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
+Cal,mid,X.XX<CR>
+
+function clibrate(sensor){
+    var urlCall="./action.php";
+    $.ajax({
+        type: "POST",
+        url: urlCall,
+        data:{sensor:sensor, action: calibrate},
+        success: function(r){
+            var result = eval(r);
+            if (result.state == "1") $(elem).click();
+            if (result.state == "undef") alert('Setting undefined : '+id);
+    }});   
+}
+
+
+
 function getSetting(id,elem){
     var urlCall="./action.php?action=getSetting&id="+id;
     //alert('ajaxCall : '+urlCall);
