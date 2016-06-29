@@ -144,7 +144,7 @@ function getColor(middleVal,compareVal){
     var ecartVal = diffVal/middleVal;
     var colorSensor="LimeGreen";
     if (ecartVal>0.5) colorSensor="Tomato";
-    if (ecartVal>0.3) alercolorSensort="Orange";
+    if (ecartVal>0.3) colorSensor="Orange";
     if (ecartVal>0.1) colorSensor="Yellow";
     return colorSensor;
 }
