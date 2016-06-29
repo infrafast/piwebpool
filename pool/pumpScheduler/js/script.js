@@ -18,7 +18,7 @@ $('.header').click(function(){
 
 Cal,mid,X.XX<CR>
 
-function clibrate(sensor){
+function calibrate(sensor){
     var urlCall="./action.php";
     $.ajax({
         type: "POST",
