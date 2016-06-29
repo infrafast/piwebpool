@@ -133,7 +133,8 @@ function forceCron(){
 	alert("Execution des scripts en cours");
 	$.ajax({
 		    type: "POST",
-			url: "./action.php?action=forceCron",
+			url: "./action.php",
+			data:{action:"forceCron"},
 		success: function(r){
 			result = eval(r);
 	    }
