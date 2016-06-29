@@ -182,7 +182,7 @@ function refreshValue(elem,action){
                 }else{
                     median=25;
                 }
-                var color=getColor(median,tolerance,newValue);
+                var color=getColor(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "background:"+color+";");
                 newValue = "<br>"+result.state+"<br><br>";
