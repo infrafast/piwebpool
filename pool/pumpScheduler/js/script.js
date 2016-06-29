@@ -142,7 +142,6 @@ function rgbToHex(r, g, b) {
 function getColor(middleVal,compareVal){
     var diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
-
     var colorName='LimeGreen';
     if (ecartVal>0.5) colorName='Tomato';
     if (ecartVal>0.3) colorname='Orange';
@@ -169,7 +168,6 @@ function refreshValue(elem,action){
     		$(elem).addClass('off');
     		if(result.answer == "OK"){
                 var median;
-                var tolerance;
                 if(action=='Ph') median=7.24;
                 else if (action=='ORP') median=715;
                 else median=25;
