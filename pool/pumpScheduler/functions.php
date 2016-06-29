@@ -154,12 +154,12 @@ function getDevice($id){
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
+    return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<10) return $v1;
     }
     return false;
-    //return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
 }
 
 function getORP(){
