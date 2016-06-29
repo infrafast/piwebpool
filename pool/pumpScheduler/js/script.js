@@ -27,9 +27,9 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			url: "./action.php?"+UrlData,
 			async:async,
 		success: function(r){
-		    alert(UrlData);
 			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer===true?"":" "+result.state));
+		    alert(UrlData);
 	    }
 	});
 	return result.state;
