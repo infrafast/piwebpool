@@ -693,7 +693,7 @@ $tableSettings = new TableGear($optionsSet);
         function calibrateAndRefresh(id){
             var elemID = 'div'+id+'MeasureID';
             var elem = document.getElementById(elemID);
-
+            elem.style.backgroundImage='images/loading.gif';
             if(actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',false, true)=="OK")
                 elem.click();                
         }
