@@ -18,10 +18,10 @@ function goLua($luaCode,$materials,$pins,&$feedback){
             $lua->assign($material, $pins[$pin]);     
             //echo "{material: ".$material." pin:".$pins[$pin]."}";
             
-            // generate XML for blockly toolbox variable
+            
         }
-        
-        //foreach ($exportedVariable as $variable=>$variableCall)
+        // generate VARIABLE LIST 
+                //foreach ($exportedVariable as $variable=>$variableCall)
 //            $lua->assign($variable,$variableCall);
         
         
