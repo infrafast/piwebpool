@@ -26,7 +26,7 @@ function actionCall(data, messageBox=null, feedback=false, confirm=false){
 	$.ajax({
 		    type: "POST",
 			url: "./action.php",
-			data:{action:"calibrate",sensor:sensor},
+			data:data,
 			async:false,
 		success: function(r){
 			result = eval(r);
