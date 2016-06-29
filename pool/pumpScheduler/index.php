@@ -424,7 +424,7 @@ $tableSettings = new TableGear($optionsSet);
     </tr>
     <tr>
         <td id="PhCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner (ph7)" onclick="calibrateAndRefresh('Ph');"></td>
-        <td><input type="button" value="Etalonner (650mv)" onclick="actionCall('action=calibrate&id=ORP',false,'Placer la sonde dans solution 650mV\npendant 2 minutes puis confirmez',true, true);"></td>
+        <td><input type="button" value="Etalonner (650mv)" onclick="calibrateAndRefresh('ORP');"></td>
         <td></td>
     </tr>
     
