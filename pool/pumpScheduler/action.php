@@ -14,7 +14,7 @@ switch($_['action']){
     
     
     case 'calibrate':
-        //Cal,mid,X.XX<CR>
+        "Cal,mid,7.00\n";
     break;
     
     case 'sms':
