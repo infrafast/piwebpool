@@ -37,14 +37,17 @@ switch($_['action']){
 
 	case 'getTemperature':
 	    $result['state'] = getTemperature();
+	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	    
 	case 'getORP':
 	    $result['state'] = getORP();
+	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 
 	case 'getPh':
 	    $result['state'] = getPh();
+	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	
 	case 'changeState':
