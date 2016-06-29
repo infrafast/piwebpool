@@ -29,7 +29,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			async:async,
 		success: function(r){
 			result = eval(r);
-			if (feedback===true) alert("Resultat: "+result.answer+(result.answer===true?"":" "+result.state));
+			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
 	    }
 	});
 	return result.state;
