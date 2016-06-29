@@ -26,13 +26,12 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?"+UrlData,
-			async:false,
+			async:async,
 		success: function(r){
 			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer===true?"":" "+result.state));
 	    }
 	});
-	alert(result.state);
 	return result.state;
 }
 
