@@ -493,6 +493,14 @@ $tableSettings = new TableGear($optionsSet);
     <script src="js/script.js"></script>
     
     <script>
+        // collapse all table as per settings stored in the database
+        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
+        
+        for (var tableID in collapsableTableList) {
+          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
+        }
+    
+    
     
         // retrieve logfile
         document.getElementById('logFile').value = getLog();
@@ -677,14 +685,6 @@ $tableSettings = new TableGear($optionsSet);
           
     </script>
     
-    <script>
-        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-        
-        for (var tableID in collapsableTableList) {
-          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
-        }
-    </script>
-    
-    
+
     </body>
 </html>
