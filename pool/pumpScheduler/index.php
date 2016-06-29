@@ -694,7 +694,7 @@ $tableSettings = new TableGear($optionsSet);
             var elemID = 'div'+id+'MeasureID';
             var elem = document.getElementById(elemID);
 
-            if (actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',true, true)!=false)
+            if (actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',false, true)!=false)
                 alert("call next");
         }
           
