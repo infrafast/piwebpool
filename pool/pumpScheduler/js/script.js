@@ -17,6 +17,7 @@ $('.header').click(function(){
 });
 
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
+    var result;
     if (messageBox!==null)
         if (confirmation!==false){
             var r = confirm(messageBox);
