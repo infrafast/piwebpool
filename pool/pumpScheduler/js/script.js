@@ -17,6 +17,7 @@ $('.header').click(function(){
 });
 
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
+    UrlData = JSON.stringify(UrlData);
     alert(UrlData);
     if (messageBox!==null)
         if (confirmation!==false){
@@ -27,7 +28,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		    type: "POST",
 		    traditional: true,
 			url: "./action.php",
-			data: "{" + JSON.stringify(UrlData) + "}",
+			data: "{" + UrlData + "}",
 			contentType: "application/json; charset=utf-8",
 			async:async,
 		success: function(r){
