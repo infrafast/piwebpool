@@ -21,7 +21,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
     if (messageBox!==null)
         if (confirmation!==false){
             result = confirm(messageBox);
-            if (true !== result) return;
+            if (true !== result) return false;
         }else alert(messageBox);
 	$.ajax({
 		    type: "POST",
