@@ -144,10 +144,10 @@ function getColor(median,value){
     var ecart = diff/median;
 
     var colorName='LimeGreen';
-    if (ecart>0.5) colorName='Tomato';
-    else if (ecart>0.3) colorname='Orange';
-    else if (ecart>0.1) colorname='Yellow';
-    alert(colorName);
+    if (ecart>0.5) colorName='Tomato'
+    if (ecart>0.3) colorname='Orange';
+    if (ecart>0.1) colorname='Yellow';
+    alert(ecart);
     return colorName;
 }
 
