@@ -21,8 +21,9 @@ function actionCall(data, messageBox=null, confirm=false){
         if (confirm!==false){
             var r = confirm(messageBox);
             if (true !== r) return;
-        }else  alert(messageBox);
-    }
+        }
+    }else alert(messageBox);
+    
 }
 
 
