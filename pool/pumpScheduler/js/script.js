@@ -16,9 +16,9 @@ $('.header').click(function(){
     $(this).removeClass('loading');
 });
 
-function actionCall(data, async=true, messageBox=null, feedback=false, confirm=false){
+function actionCall(data, async=true, messageBox=null, feedback=false, confirmation=false){
     if (messageBox!==null)
-        if (confirm!==false){
+        if (confirmation!==false){
             confirm("this is a confirmation box");
             //var r = confirm(messageBox);
             //if (true !== r) return;
