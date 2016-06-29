@@ -36,8 +36,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 }
 
 
-//function getSetting(id,elem){
-function getSetting(id){
+function getSetting(id,elem){
     var urlCall="./action.php";
     var result;
     //alert('ajaxCall : '+urlCall);
@@ -48,10 +47,9 @@ function getSetting(id){
         async: false,
         success: function(r){
             result = eval(r);
-//            if (result.state == "1" && elem!==null) $(elem).click();
+            if (result.state == "1") $(elem).click();
             if (result.state == "undef") alert('Setting undefined : '+id);
     }});   
-    return result.state;
 }
 
 function changeState(pin,elem){
