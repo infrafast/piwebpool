@@ -143,8 +143,8 @@ function getColor(middleVal,compareVal){
     var diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
     var colorName='LimeGreen';
-    if (0.2>0.5) colorName='Tomato';
-    if (0.2>0.3) colorname='Orange';
+    //if (0.2>0.5) colorName='Tomato';
+    //if (0.2>0.3) colorname='Orange';
     if (0.2>0.1) colorname='Yellow';
     return colorName;
 }
