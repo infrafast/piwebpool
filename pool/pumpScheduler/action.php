@@ -16,6 +16,7 @@ switch($_['action']){
         switch($_['id']){
             case 'Ph':
                 readSensor(getDevice("ph"),"Cal,mid,7.00\n");
+                $result['state']  = "done";
             break;
             case 'ORP':
             break;
