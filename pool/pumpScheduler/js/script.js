@@ -18,6 +18,7 @@ $('.header').click(function(){
 
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
     UrlData = JSON.stringify(UrlData);
+    UrlData = UrlData.replace(/"/g,"");
     alert(UrlData);
     if (messageBox!==null)
         if (confirmation!==false){
