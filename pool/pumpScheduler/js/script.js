@@ -203,37 +203,35 @@ function refreshValue(elem,action){
 	$(elem).addClass('loading');
 	//alert("refresh "+urlCall);
 	$.ajax({
-			type: "POST",
-			url: urlCall,
-			async:false,
-			success: function(r){
-				var result = eval(r);
-                var newValue = result.state;
-				
-				$(elem).removeClass('loading');
-				$(elem).addClass('off');
-				if(result.answer == "OK"){
-                    var median;
-                    var tolerance;
-                    if(action=='Ph'){
-                        median=7.24;
-                        tolerance=0.01;
-                    }else if (action=='ORP'){
-                        median=715;
-                        tolerance=0.02;                        
-                    }else{
-                        median=25;
-                        tolerance=2;                        
-                    }
-
-                    var color=getColor(median,tolerance,newValue);
-                    //alert(color);
-                    $(elem).attr("style", "background:"+color+";");
-
-                    newValue = "<br>"+result.state+"<br><br>";
-                    $(elem).html(newValue);
-				}else{
-					alert('Erreur : '+result.answer);
-				}
-	}});
+    	type: "POST",
+    	url: urlCall,
+    	async:false,
+    	success: function(r){
+    		var result = eval(r);
+            var newValue = result.state;
+    		$(elem).removeClass('loading');
+    		$(elem).addClass('off');
+    		if(result.answer == "OK"){
+                var median;
+                var tolerance;
+                if(action=='Ph'){
+                    median=7.24;
+                    tolerance=0.01;
+                }else if (action=='ORP'){
+                    median=715;
+                    tolerance=0.02;                        
+                }else{
+                    median=25;
+                    tolerance=2;                        
+                }
+                var color=getColor(median,tolerance,newValue);
+                //alert(color);
+                $(elem).attr("style", "background:"+color+";");
+                newValue = "<br>"+result.state+"<br><br>";
+                $(elem).html(newValue);
+    		}else{
+    			alert('Erreur : '+result.answer);
+    		}
+    	}
+	});
 }
