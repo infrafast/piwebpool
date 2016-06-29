@@ -32,7 +32,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
 	    }
 	});
-	return result.answer;
+	return result.state;
 }
 
 
