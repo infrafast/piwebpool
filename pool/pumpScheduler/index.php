@@ -427,8 +427,8 @@ foreach($materials as $material=>$pin){ ?>
     <td id="graph=temperature" style="background-repeat:no-repeat; background-image: url('images/loading.gif');"></td>
 </tr>
 <tr>
-    <td><input type="button" value="Etalonner (ph7)" onclick="calibrate("ph");"></td>
-    <td><input type="button" value="Etalonner (650mv)" onclick="calibrate("orp");"></td>
+    <td><input type="button" value="Etalonner (ph7)" onclick="actionCall('{action:"calibrate", id:"ph"}',false,'Placer la sonde dans Ph7 pendant 2 minutes puis confirmez',true);"></td>
+    <td><input type="button" value="Etalonner (650mv)" onclick=";"></td>
     <td></td>
 </tr>
 
