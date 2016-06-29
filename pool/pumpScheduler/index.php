@@ -696,7 +696,6 @@ $tableSettings = new TableGear($optionsSet);
             document.getElementById("PhCalibrateID").style.backgroundImage='images/loading.gif';
             if(actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',false, true)=="OK")
                 elem.click();   
-                elem.click();
         }
           
     </script>
