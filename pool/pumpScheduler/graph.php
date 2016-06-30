@@ -123,8 +123,8 @@ switch ($_GET["type"]){
         
         $the_box        = calculateTextBox($text_string, $font_ttf, $font_size, $text_angle); 
         
-        $imgWidth    = $the_box["width"] + $text_padding; 
-        $imgHeight    = $the_box["height"] + $text_padding; 
+        $imgWidth    = $cfg['width'] + $text_padding; 
+        $imgHeight    = $cfg['height'] + $text_padding; 
         
         $image = imagecreate($imgWidth,$imgHeight); 
         imagefill($image, imagecolorallocate($image,200,200,200)); 
