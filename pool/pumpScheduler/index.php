@@ -729,24 +729,7 @@ $tableSettings = new TableGear($optionsSet);
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }
-        
-        function loadWeather(location, woeid) {
-          alert("loaded ok");
-          $.simpleWeather({
-            location: location,
-            woeid: woeid,
-            unit: 'c',
-            success: function(weather) {
-              html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-            $("#weather").html(html);
-           },
-            error: function(error) {
-              $("#weather").html('<p>'+error+'</p>');
-              alert("error");
-            }
-          });
-        }  
-        
+
     </script>
     </body>
 </html>
