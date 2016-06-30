@@ -492,7 +492,7 @@ $tableSettings = new TableGear($optionsSet);
     <script src="js/script.js"></script>
     
     <script>
-        var graphTypes = ["lineType", "barType", "textType"]; 
+        <?php echo'var graphTypes = ["lineType", "barType", "textType"];';  ?>
         
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
