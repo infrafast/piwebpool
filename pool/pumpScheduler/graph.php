@@ -79,7 +79,8 @@ switch ($_GET["type"]){
         $height = 480;
         $fontsize = 5;
     
-        $text=$hint;
+        $text=$hint[0];
+        
     
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
