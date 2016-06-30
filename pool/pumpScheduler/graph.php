@@ -58,7 +58,7 @@ header("Content-type: image/png");
 $graph = new phpMyGraph();
 //Parse
 switch ($_GET["type"]){
-    case "bar":
+    case "barType":
         $cfg['label']=$_GET["title"];
         //$cfg['label-visible']=false;
         $cfg['value-label-visible']=false;
@@ -74,7 +74,7 @@ switch ($_GET["type"]){
     
         $graph->parseVerticalSimpleColumnGraph($data,$cfg);
     break;
-    case "text":
+    case "textType":
         $width = 640;
         $height = 480;
         $fontsize = 5;
@@ -93,7 +93,7 @@ switch ($_GET["type"]){
         imagepng($img);
         imagedestroy($img);
     break;
-    default:
+    case "lineType":
         $cfg['key-visible']=true;
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
