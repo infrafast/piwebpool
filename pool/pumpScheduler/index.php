@@ -698,9 +698,11 @@ $tableSettings = new TableGear($optionsSet);
             alert("currentGraphType/i= "+currentGraphType+"/"+i);
             
             if (i!=-1){
+                i++;
                 if (i>(graphTypes.length)-1) i=0;
-                alert('i '+i);
-                nextGraphType = graphTypes[i];
+                nextGraphType = graphTypes[i];                
+                alert("nextGraphType/i= "+nextGraphType+"/"+i);
+
             }
             element.removeClass(currentGraphType);
             element.addClass(nextGraphType);
