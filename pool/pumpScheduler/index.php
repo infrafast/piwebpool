@@ -678,7 +678,7 @@ $tableSettings = new TableGear($optionsSet);
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
           
-        function updateGraph(){
+        function updateGraphs(){
         // this function is called when user change the combo to choose measures rendition period graph
         // it update the call to the graph function according to the selected value
          	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
