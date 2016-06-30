@@ -17,8 +17,9 @@ $hint = array(
 			""=>"pac",
 		    ""=>"treatment1",
     	    ""=>"treatment2",
-		    ""=>"",              
-		    ""=>""                
+		    ""=>"ph",
+		    ""=>"orp",              		    
+		    ""=>"temperature"                
                 );
 
 // connect to the database
