@@ -14,7 +14,7 @@ $cfg['value-label-color'] = "000000";
 $cfg['background-color'] = "f0f0f0";
 //keyvisible = affichage de l'echelle du temps
 
-$text=null;
+$text_string=null;
 
 $hint = array(
 			"pump"=>array("pump message1","pump message 2"),
@@ -49,11 +49,6 @@ function calculateTextBox($text,$fontFile,$fontSize,$fontAngle) {
      "box"    => $rect
     );
 } 
-
-
-
-
-
 
 
 // STARTS HERE
@@ -116,22 +111,41 @@ switch ($_GET["type"]){
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
     case "textType":
-        $text=$hint[$_GET["graph"]][0];
-        $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
+        $text_string=$hint[$_GET["graph"]][0];
+        $text_string.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
         // treat message in function (periode). ex: forecast
     default:
-        if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
-        $img = imagecreate($cfg['width'], $cfg['height']);
-        // Transparent background
-        $black = imagecolorallocate($img, 0, 0, 0);
-        imagecolortransparent($img, $black);
-        // Red text
-        $fontsize = 5;
-        $red = imagecolorallocate($img, 255, 0, 0);
-        imagestring($img, $fontsize, 0, 0, utf8_decode($text), $red);
-    
-        imagepng($img);
-        imagedestroy($img);
+        if ($text_string==null) $text_string="unknown or undefined graph type ".$_GET["type"];
+        
+        $font_ttf        = "./fonts/arial.ttf"; 
+        $font_size        = 22; 
+        $text_angle        = 0; 
+        $text_padding    = 10; // Img padding - around text 
+        
+        $the_box        = calculateTextBox($text_string, $font_ttf, $font_size, $text_angle); 
+        
+        $imgWidth    = $the_box["width"] + $text_padding; 
+        $imgHeight    = $the_box["height"] + $text_padding; 
+        
+        $image = imagecreate($imgWidth,$imgHeight); 
+        imagefill($image, imagecolorallocate($image,200,200,200)); 
+        
+        $color = imagecolorallocate($image,0,0,0); 
+        imagettftext($image, 
+            $font_size, 
+            $text_angle, 
+            $the_box["left"] + ($imgWidth / 2) - ($the_box["width"] / 2), 
+            $the_box["top"] + ($imgHeight / 2) - ($the_box["height"] / 2), 
+            $color, 
+            $font_ttf, 
+            $text_string); 
+        
+        header("Content-Type: image/gif"); 
+        imagegif($image); 
+        imagedestroy($image);
+            
+        
+
     break;    
 }
 
