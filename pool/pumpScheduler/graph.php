@@ -79,6 +79,8 @@ switch ($_GET["type"]){
         $height = 480;
         $fontsize = 5;
     
+        $text=$hint($graph)
+    
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
