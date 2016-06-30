@@ -65,36 +65,30 @@ switch ($_GET["type"]){
         $graph->parseVerticalSimpleColumnGraph($data,$cfg);
     break;
     case "text":
-        
-    break
-    defaut:
+        $width = 640;
+        $height = 480;
+        $text = "My Text";
+        $fontsize = 5;
+    
+        $img = imagecreate($width, $height);
+    
+        // Transparent background
+        $black = imagecolorallocate($img, 0, 0, 0);
+        imagecolortransparent($img, $black);
+    
+        // Red text
+        $red = imagecolorallocate($img, 255, 0, 0);
+        imagestring($img, $fontsize, 0, 0, $text, $red);
+    
+        header('Content-type: image/png');
+        imagepng($img);
+        imagedestroy($img);
+    break;
+    default:
         $cfg['key-visible']=true;
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
 }
-
-
-}
-
-    $width = 640;
-    $height = 480;
-    $text = "My Text";
-    $fontsize = 5;
-
-    $img = imagecreate($width, $height);
-
-    // Transparent background
-    $black = imagecolorallocate($img, 0, 0, 0);
-    imagecolortransparent($img, $black);
-
-    // Red text
-    $red = imagecolorallocate($img, 255, 0, 0);
-    imagestring($img, $fontsize, 0, 0, $text, $red);
-
-    header('Content-type: image/png');
-    imagepng($img);
-    imagedestroy($img);
-
 
 
 ?>
