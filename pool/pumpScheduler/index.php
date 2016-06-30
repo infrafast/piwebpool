@@ -517,7 +517,6 @@ $tableSettings = new TableGear($optionsSet);
             loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
           });
         
-        alert("loaded ok");
         
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
