@@ -70,7 +70,7 @@ switch ($_GET["type"]){
         $text = "My Text";
         $fontsize = 5;
     
-        $img = imagecreate($width, $height);
+        $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
         imagecolortransparent($img, $black);
