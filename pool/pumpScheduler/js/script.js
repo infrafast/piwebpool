@@ -98,43 +98,6 @@ function getScript(code,script){
 	return result.state;
 }
 
-
-function rgbToHex(r, g, b) {
-    if(r < 0 || r > 255) alert("r is out of bounds; "+r);
-    if(g < 0 || g > 255) alert("g is out of bounds; "+g);
-    if(b < 0 || b > 255) alert("b is out of bounds; "+b);
-    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1,7);
-}
-
-
-function getColor(median,value){
-    var tolerance = 0.1;
-    var diff = Math.abs(value - median);
-    var ecart = diff/median;
-    var prop = ecart/tolerance/100;
-
-    
-    var red = 0;
-    var green = 0;
-    var blue =0;
-    
-    if (tolerance<1){
-        green = ((1-prop)*255)-(500*ecart);
-        red = (prop*255)+(500*ecart);
-        if (green<0) green=0; if (green>255) green=255;
-        if (red<0) red=0; if (red>255) red=255;    
-    }else{
-// tolerance is upper 1 we are displaying a measure like temperature so we use blue color
-        green = ((1-prop)*255)-(500*ecart);
-        blue = (prop*255)+(500*ecart);
-        if (blue<0) blue=0; if (blue>255) blue=255;
-        if (green<0) green=0; if (green>255) green=255;    
-    }
-
-    return rgbToHex(red,green,blue);
-}
-
-
 function getColorVal(middleVal,compareVal){
     //return "grey";
     
