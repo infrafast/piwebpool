@@ -128,7 +128,6 @@ switch ($_GET["type"]){
         
         $image = imagecreate($imgWidth,$imgHeight); 
         imagefill($image, imagecolorallocate($image,200,200,200)); 
-        
         $color = imagecolorallocate($image,0,0,0); 
         imagettftext($image, 
             $font_size, 
@@ -142,9 +141,6 @@ switch ($_GET["type"]){
         header("Content-Type: image/gif"); 
         imagegif($image); 
         imagedestroy($image);
-            
-        
-
     break;    
 }
 
