@@ -12,6 +12,7 @@ $cfg['key-color'] = "00a2e8";
 $cfg['column-color'] = "00a2e8";
 $cfg['value-label-color'] = "000000";
 $cfg['background-color'] = "f0f0f0";
+$cfg['box-border-visible']=false;
 //keyvisible = affichage de l'echelle du temps
 
 $text=null;
@@ -74,7 +75,6 @@ switch ($_GET["type"]){
         $cfg['zero-line-visible']=false;
         $cfg['key-visible']=false;
         $cfg['value-visible']=false;
-        $cfg['box-border-visible']=false;
         $cfg['horizontal-divider-visible']=false;  
         $cfg['average-line-visible']=false;
         //$cfg['column-divider-visible']=false;
