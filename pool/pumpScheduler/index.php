@@ -390,7 +390,7 @@ $tableSettings = new TableGear($optionsSet);
     
     <tr>
         <th>OK<br><br><br></th>
-        <div id="weather"></div>
+        <th><div id="weather"></div></th>
         <th>OK</th>
     </tr>
 
