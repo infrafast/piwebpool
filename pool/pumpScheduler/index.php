@@ -694,9 +694,9 @@ $tableSettings = new TableGear($optionsSet);
             var currentGraphType = element.classList.item(0);
             // locate the class in the list to get the next one
             var i=graphTypes.indexOf(currentGraphType);
-            alert('i '+i)
             if (i!=-1){
-                if (i==graphTypes.length) i=0;
+                if (i++>graphTypes.length) i=0;
+                alert('i '+i);
                 nextGraphType = graphTypes[i];
             }
             updateGraph(element,nextGraphType);
