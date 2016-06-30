@@ -684,7 +684,7 @@ $tableSettings = new TableGear($optionsSet);
             element.style.backgroundSize="100% 100%";
             // need tu tune the width/hgith 
             //var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width=500&height=200&type='+typeGraph+')';
-            var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+typeGraph+')';
+            var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
             element.style.backgroundImage=imgSrc; 	     
         }
         
@@ -698,9 +698,9 @@ $tableSettings = new TableGear($optionsSet);
                 if (++i>(graphTypes.length)-1) i=0;
                 alert('i '+i);
                 nextGraphType = graphTypes[i];
-                element.removeClass(currentGraphType);
-                element.addClass(nextGraphType);
             }
+            element.removeClass(currentGraphType);
+            element.addClass(nextGraphType);
             updateGraph(element);
         }
           
