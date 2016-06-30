@@ -509,7 +509,7 @@ $tableSettings = new TableGear($optionsSet);
     
         // refresh commands graphs
         
-        <?php foreach($materials as $material=>$pin) echo "graphUpdate(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
+        <?php foreach($materials as $material=>$pin) echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
     
             // retrieve logfile
         document.getElementById('logFile').value = actionCall('action=getLog',false);
