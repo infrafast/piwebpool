@@ -423,7 +423,6 @@ $tableSettings = new TableGear($optionsSet);
     <?php 
     foreach($materials as $material=>$pin){ ?>
     <tr "height=80px" id="commandsTableID">
-    
     	<?php echo "<td class='textType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);' style=\"background-image:url(images/loading.gif); background-repeat:no-repeat;\">"?></td>
     	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
     </tr>
@@ -708,6 +707,8 @@ $tableSettings = new TableGear($optionsSet);
         // it update the call to the graph function according to the selected value
          	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
         	while(++i < colslen) updateGraph(cols[i]);
+        	
+        	
         	//add the code to also update the command graphs -> commandsTableID
         }  
         
