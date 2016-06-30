@@ -79,7 +79,7 @@ switch ($_GET["type"]){
         $height = 480;
         $fontsize = 5;
     
-        $text=$hint[[$_GET["graph"][0]];
+        $text=$hint[$_GET["graph"][0]];
         
     
         $img = imagecreate($cfg['width'], $cfg['height']);
