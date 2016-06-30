@@ -704,8 +704,8 @@ $tableSettings = new TableGear($optionsSet);
         function updateGraphs(){
         // this function is called when user change the combo to choose measures rendition period graph
         // it update the call to the graph function according to the selected value
-         	for (){
-             	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
+         	for (commandsID 'graphID'){
+             	var cols = document.getElementById($tableToUpdate).getElementsByTagName('td'), colslen = cols.length, i = -1;
             	while(++i < colslen) updateGraph(cols[i],cols[i].classList.item(0))
          	}
         }  
