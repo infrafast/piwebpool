@@ -11,7 +11,7 @@ $cfg['value-label-color'] = "000000";
 $cfg['background-color'] = "f0f0f0";
 //keyvisible = affichage de l'echelle du temps
 
- $text=null;
+$text=null;
 
 $hint = array(
 			"pump"=>array("pump message1","pump message 2"),
@@ -82,6 +82,7 @@ switch ($_GET["type"]){
     case "textType":
         $text=$hint[$_GET["graph"]][0];
     default:
+        if ($text==null) $text="grapj type missing";
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
