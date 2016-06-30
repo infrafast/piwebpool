@@ -692,9 +692,9 @@ $tableSettings = new TableGear($optionsSet);
         function toggleGraph(element){
             var nextGraphType = "undef";
             var currentGraphType = element.classList.item(0);
-            alert('currentGraphType '+currentGraphType)
             // locate the class in the list to get the next one
             var i=graphTypes.indexOf(currentGraphType);
+            alert('i '+i)
             if (i!=-1){
                 if (i==graphTypes.length) i=0;
                 nextGraphType = graphTypes[i];
