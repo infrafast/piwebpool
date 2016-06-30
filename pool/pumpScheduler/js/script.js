@@ -139,16 +139,29 @@ function rgbToHex(r, g, b) {
 }
 
 
-function getColor(median,value){
+function getColor(median,tolerance,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
+    var prop = ecart/tolerance/100;
+    
+    var red = 0;
+    var green = 0;
+    var blue =0;
+    
+    if (tolerance<1){
+        green = ((1-prop)*255)-(500*ecart);
+        red = (prop*255)+(500*ecart);
+        if (green<0) green=0; if (green>255) green=255;
+        if (red<0) red=0; if (red>255) red=255;    
+    }else{
+// tolerance is upper 1 we are displaying a measure like temperature so we use blue color
+        green = ((1-prop)*255)-(500*ecart);
+        blue = (prop*255)+(500*ecart);
+        if (blue<0) blue=0; if (blue>255) blue=255;
+        if (green<0) green=0; if (green>255) green=255;    
+    }
 
-    colorName='LimeGreen';
-    if (ecart>0,5) colorName='Tomato';
-    if (ecart>0,3) colorname='Orange';
-    if (ecart>0,1) colorname='Yellow';
-
-    return colorName;
+    return rgbToHex(red,green,blue);
 }
 
     
@@ -170,11 +183,19 @@ function refreshValue(elem,action){
     		if(result.answer == "OK"){
                 var median;
                 var tolerance;
-                if(action=='Ph') median=7.24;
-                else if (action=='ORP') median=715;
-                else median=25;
+                if(action=='Ph'){
+                    median=7.24;
+                    tolerance=0.01;
+                }else if (action=='ORP'){
+                    median=715;
+                    tolerance=0.02;                        
+                }else{
+                    median=25;
+                    tolerance=2;                        
+                }
+                var color=getColor(median,tolerance,newValue);
                 //alert(color);
-                $(elem).attr("style", "background:"+getColor(median,newValue)+";");
+                $(elem).attr("style", "background:"+color+";");
                 newValue = "<br>"+result.state+"<br><br>";
                 $(elem).html(newValue);
     		}else{
