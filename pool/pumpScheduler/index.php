@@ -677,6 +677,11 @@ $tableSettings = new TableGear($optionsSet);
           alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
+        
+        function updateGraph(element){
+            
+        }
+        
           
         function updateGraphs(){
         // this function is called when user change the combo to choose measures rendition period graph
