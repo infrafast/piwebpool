@@ -76,7 +76,7 @@ switch ($_GET["type"]){
         imagecolortransparent($img, $black);
         // Red text
         $red = imagecolorallocate($img, 255, 0, 0);
-        imagestring($img, $fontsize, 0, 0, $text, $red);
+        imagestring($img, $fontsize, 0, 0, utf8_decode($text), $red);
     
         imagepng($img);
         imagedestroy($img);
