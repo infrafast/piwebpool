@@ -71,11 +71,9 @@ switch ($_GET["type"]){
         $fontsize = 5;
     
         $img = imagecreate($width, $height);
-    
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
         imagecolortransparent($img, $black);
-    
         // Red text
         $red = imagecolorallocate($img, 255, 0, 0);
         imagestring($img, $fontsize, 0, 0, $text, $red);
