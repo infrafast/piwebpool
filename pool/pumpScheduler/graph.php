@@ -138,7 +138,6 @@ switch ($_GET["type"]){
             $font_ttf, 
             $text_string); 
         
-        header("Content-Type: image/gif"); 
         imagegif($image); 
         imagedestroy($image);
     break;    
