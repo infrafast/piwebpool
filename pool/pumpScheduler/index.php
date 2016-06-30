@@ -701,7 +701,7 @@ $tableSettings = new TableGear($optionsSet);
                 element.removeClass(currentGraphType);
                 element.addClass(nextGraphType);
             }
-            updateGraph(element,nextGraphType);
+            updateGraph(element);
         }
           
         function updateGraphs(){
