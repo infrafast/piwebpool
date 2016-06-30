@@ -80,7 +80,6 @@ switch ($_GET["type"]){
         $cfg['average-line-visible']=false;
         //$cfg['column-divider-visible']=false;
         $cfg['key-visible']=true;
-        $cfg['background-color']="F0F0F0";    
     
         $graph->parseVerticalSimpleColumnGraph($data,$cfg);
     break;
