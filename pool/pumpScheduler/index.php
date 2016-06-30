@@ -403,9 +403,9 @@ $tableSettings = new TableGear($optionsSet);
         <th></th>
     </tr>
     <tr height="180px" id="graphID">
-        <td id="graph=ph" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
-        <td id="graph=orp" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
-        <td id="graph=temperature" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
+        <td class='lineType' id="graph=ph" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
+        <td class='lineType' id="graph=orp" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
+        <td class='lineType' id="graph=temperature" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
     </tr>
     <tr>
         <td id="PhCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner (ph7)" onclick="calibrateAndRefresh('Ph');"></td>
