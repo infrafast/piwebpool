@@ -701,8 +701,6 @@ $tableSettings = new TableGear($optionsSet);
                 i++;
                 if (i>(graphTypes.length)-1) i=0;
                 nextGraphType = graphTypes[i];                
-                alert("nextGraphType/i= "+nextGraphType+"/"+i);
-
             }
             element.removeClass(currentGraphType);
             element.addClass(nextGraphType);
