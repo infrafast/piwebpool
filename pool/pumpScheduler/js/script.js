@@ -139,10 +139,11 @@ function rgbToHex(r, g, b) {
 }
 
 
-function getColor(median,tolerance,value){
+function getColor(median,value){
     var diff = Math.abs(value - median);
     var ecart = diff/median;
     var prop = ecart/tolerance/100;
+    var tolerance = 0.1;
     
     var red = 0;
     var green = 0;
@@ -193,7 +194,7 @@ function refreshValue(elem,action){
                     median=25;
                     tolerance=2;                        
                 }
-                var color=getColor(median,tolerance,newValue);
+                var color=getColor(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "background:"+color+";");
                 newValue = "<br>"+result.state+"<br><br>";
