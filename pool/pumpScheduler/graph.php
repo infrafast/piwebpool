@@ -79,7 +79,7 @@ switch ($_GET["type"]){
         $height = 480;
         $fontsize = 5;
     
-        $text="toto"; //$hint($graph);
+        $text=$hint[$graph];
     
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
