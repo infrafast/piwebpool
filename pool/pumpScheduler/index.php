@@ -383,18 +383,12 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
+<div id="weather"></div>
+
     <table class="materialTab">
     <tr class="header" id="sensorTable">
     <td colspan="3"><b><span>-</span> Mesures</b></td>
     </tr>
-    
-    <tr>
-        <th>OK<br><br><br></th>
-        <th><div id="weather"></div></th>
-        <th>OK</th>
-    </tr>
-
-    
     
     <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
     <tr>
