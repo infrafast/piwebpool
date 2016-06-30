@@ -696,8 +696,8 @@ $tableSettings = new TableGear($optionsSet);
             var i=graphTypes.indexOf(currentGraphType);
             if (i!=-1){
                 if (i==graphTypes.length);
-            }
-            updateGraph(element,graphTypes[1]);
+            }else
+            updateGraph(element,nextGraphType);
             
         }
           
