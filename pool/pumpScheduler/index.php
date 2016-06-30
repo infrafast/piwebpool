@@ -685,7 +685,7 @@ $tableSettings = new TableGear($optionsSet);
         
         function updateGraph(element){
             var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
-            alert("imgSrc="+imgSrc);
+            //alert("imgSrc="+imgSrc);
             element.style.backgroundSize="100% 100%";
             element.style.backgroundImage=imgSrc; 	     
         }
