@@ -35,6 +35,8 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 	return result.state;
 }
 
+
+
 function changeState(pin,elem){
 	var newState = ($(elem).hasClass('on')?0:1); 
 	//alert('changeState : pin'+pin+" value"+newState);
@@ -96,16 +98,60 @@ function getScript(code,script){
 	return result.state;
 }
 
-function getColorVal(middleVal,compareVal){
-    var diffVal = Math.abs(compareVal - middleVal);
-    var ecartVal = diffVal/middleVal;
-    var colorSensor="LimeGreen";
-    if (ecartVal>0.5) colorSensor="Tomato";
-    if (ecartVal>0.3) colorSensor="Orange";
-    if (ecartVal>0.1) colorSensor="Yellow";
-    return (colorSensor);
+
+// the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
+function getLog(){
+    var result;
+	$.ajax({
+		type: "POST",
+		url: "./action.php",
+		data:{action:"getLog"},
+		async:false,
+		success: function(r){
+			result = eval(r);
+			if(result.answer != "OK"){          
+				alert('Erreur : '+result.state);
+			}
+	    }
+	});   
+	//alert('calledGetLog');
+	return result.state;
 }
 
+function forceCron(){
+	alert("Execution des scripts en cours");
+	$.ajax({
+		    type: "POST",
+			url: "./action.php",
+			data:{action:"forceCron"},
+		success: function(r){
+			result = eval(r);
+	    }
+	});   
+}
+
+
+function rgbToHex(r, g, b) {
+    if(r < 0 || r > 255) alert("r is out of bounds; "+r);
+    if(g < 0 || g > 255) alert("g is out of bounds; "+g);
+    if(b < 0 || b > 255) alert("b is out of bounds; "+b);
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1,7);
+}
+
+
+function getColor(median,value){
+    var diff = Math.abs(value - median);
+    var ecart = diff/median;
+
+    colorName='LimeGreen';
+    if (ecart>0,5) colorName='Tomato';
+    if (ecart>0,3) colorname='Orange';
+    if (ecart>0,1) colorname='Yellow';
+
+    return colorName;
+}
+
+    
 function refreshValue(elem,action){
 	var urlCall = "./action.php?action=get"+action;
 	$(elem).removeAttr("style");
@@ -123,14 +169,16 @@ function refreshValue(elem,action){
     		$(elem).addClass('off');
     		if(result.answer == "OK"){
                 var median;
+                var tolerance;
                 if(action=='Ph') median=7.24;
                 else if (action=='ORP') median=715;
                 else median=25;
-                $(elem).attr("style", "background:"+getColorVal(median,newValue)+";");
+                //alert(color);
+                $(elem).attr("style", "background:"+getColor(median,newValue)+";");
                 newValue = "<br>"+result.state+"<br><br>";
                 $(elem).html(newValue);
     		}else{
-    			alert('Erreur : '+result.state);
+    			alert('Erreur : '+result.answer);
     		}
     	}
 	});
