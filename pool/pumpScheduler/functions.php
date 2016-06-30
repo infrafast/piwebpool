@@ -131,7 +131,7 @@ function setPinState($pin,$state){
 
 function getTemperature(){
     // must return flase if wrong value
-    return rand(-4,32);
+    return rand(30,32);
 }
 
 function getDevice($id){
