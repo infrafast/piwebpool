@@ -3,6 +3,10 @@
 include_once('include/phpMyGraph5.0.php'); 
 require('configuration.php');
 
+
+//if(!isset($_GET['text'])) $_GET['text'] = "Hello, world!";
+
+
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
 $cfg['key-color'] = "00a2e8";
@@ -98,6 +102,5 @@ switch ($_GET["type"]){
         imagedestroy($img);
     break;    
 }
-
 
 ?>
