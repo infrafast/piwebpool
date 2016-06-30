@@ -127,7 +127,7 @@ switch ($_GET["type"]){
         $imgHeight    = $cfg['height'] + $text_padding; 
         
         $image = imagecreate($imgWidth,$imgHeight); 
-        imagefill($image, imagecolorallocate($image,200,200,200)); 
+        imagefill($image, imagecolorallocate($image,20,20,20)); 
         $color = imagecolorallocate($image,0,0,0); 
         imagettftext($image, 
             $font_size, 
