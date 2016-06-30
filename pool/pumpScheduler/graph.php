@@ -116,7 +116,7 @@ switch ($_GET["type"]){
         // treat message in function (periode). ex: forecast
     default:
         if ($text_string==null) $text_string="unknown or undefined graph type ".$_GET["type"];
-        $font_ttf = "./fonts/arial.ttf"; 
+        $font_ttf = getcwd().'/arial.ttf'; 
         $font_size = 22; 
         $text_angle        = 0; 
         $text_padding    = 10; // Img padding - around text 
