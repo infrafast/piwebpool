@@ -166,6 +166,17 @@ function getColor(median,value){
     return rgbToHex(red,green,blue);
 }
 
+
+function getColorVal(middleVal,compareVal){
+    var diffVal = Math.abs(compareVal - middleVal);
+    var ecartVal = diffVal/middleVal;
+    var colorSensor="LimeGreen";
+    if (ecartVal>0.5) colorSensor="Tomato";
+    if (ecartVal>0.3) colorSensor="Orange";
+    if (ecartVal>0.1) colorSensor="Yellow";
+    return (colorSensor);
+}
+
     
 function refreshValue(elem,action){
 	var urlCall = "./action.php?action=get"+action;
@@ -188,7 +199,7 @@ function refreshValue(elem,action){
                 if(action=='Ph') median=7.24;
                 else if (action=='ORP') median=715; 
                 else median=25;
-                var color=getColor(median,newValue);
+                var color=getColorVal(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "background:"+color+";");
                 newValue = "<br>"+result.state+"<br><br>";
