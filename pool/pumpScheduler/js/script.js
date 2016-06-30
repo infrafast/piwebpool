@@ -138,10 +138,10 @@ function getColor(median,value){
 function getColorVal(middleVal,compareVal){
     var diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
-    var colorSensor="LimeGreen";
     if (ecartVal>0.5) alert("Tomato");
     else if (ecartVal>0.3) alert("Orange");
     else if (ecartVal>0.1) alert("Yellow");
+    else alert("LimeGreen");
     return (colorSensor);
 }
 
