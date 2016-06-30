@@ -492,7 +492,7 @@ $tableSettings = new TableGear($optionsSet);
     <script src="js/script.js"></script>
     
     <script>
-        <?php echo'var graphTypes = ["lineType", "barType", "textType"];';  ?>
+        var graphTypes = ["lineType", "barType", "textType"]; 
         
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
@@ -506,6 +506,13 @@ $tableSettings = new TableGear($optionsSet);
         refreshValue(document.getElementById('divORPMeasureID'),'ORP');
         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
     
+    
+        // refresh commands graphs
+        
+    <?php 
+    foreach($materials as $material=>$pin){
+        echo "graphUpdate('graph=".$materialsColumn[$material]."')";
+    ?>
     
     
         // retrieve logfile
@@ -707,7 +714,6 @@ $tableSettings = new TableGear($optionsSet);
         // it update the call to the graph function according to the selected value
          	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
         	while(++i < colslen) updateGraph(cols[i]);
-        	
         	
         	//add the code to also update the command graphs -> commandsTableID
         }  
