@@ -47,25 +47,54 @@ header("Content-type: image/png");
 //Create phpMyGraph instance
 $graph = new phpMyGraph();
 //Parse
-if ($_GET["type"]=="bar"){
-    $cfg['label']=$_GET["title"];
-    //$cfg['label-visible']=false;
-    $cfg['value-label-visible']=false;
-    $cfg['zero-line-visible']=false;
-    $cfg['key-visible']=false;
-    $cfg['value-visible']=false;
-    $cfg['box-border-visible']=false;
-    $cfg['horizontal-divider-visible']=false;  
-    $cfg['average-line-visible']=false;
-    //$cfg['column-divider-visible']=false;
-    $cfg['key-visible']=true;
-    $cfg['background-color']="F0F0F0";    
+switch ($_GET["type"]){
+    case "bar":
+        $cfg['label']=$_GET["title"];
+        //$cfg['label-visible']=false;
+        $cfg['value-label-visible']=false;
+        $cfg['zero-line-visible']=false;
+        $cfg['key-visible']=false;
+        $cfg['value-visible']=false;
+        $cfg['box-border-visible']=false;
+        $cfg['horizontal-divider-visible']=false;  
+        $cfg['average-line-visible']=false;
+        //$cfg['column-divider-visible']=false;
+        $cfg['key-visible']=true;
+        $cfg['background-color']="F0F0F0";    
+    
+        $graph->parseVerticalSimpleColumnGraph($data,$cfg);
+    break;
+    case "text":
+        
+    break
+    defaut:
+        $cfg['key-visible']=true;
+        $graph->parseVerticalLineGraph($data,$cfg);
+    break;
+}
 
-    $graph->parseVerticalSimpleColumnGraph($data,$cfg);
+
 }
-else{
-    $cfg['key-visible']=true;
-    $graph->parseVerticalLineGraph($data,$cfg);
-}
+
+    $width = 640;
+    $height = 480;
+    $text = "My Text";
+    $fontsize = 5;
+
+    $img = imagecreate($width, $height);
+
+    // Transparent background
+    $black = imagecolorallocate($img, 0, 0, 0);
+    imagecolortransparent($img, $black);
+
+    // Red text
+    $red = imagecolorallocate($img, 255, 0, 0);
+    imagestring($img, $fontsize, 0, 0, $text, $red);
+
+    header('Content-type: image/png');
+    imagepng($img);
+    imagedestroy($img);
+
+
 
 ?>
