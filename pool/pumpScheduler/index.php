@@ -382,22 +382,7 @@ $tableSettings = new TableGear($optionsSet);
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-    
-    <table class="materialTab">
-    <tr class="header" id="actionTable">
-    <td colspan="2"><b><span>-</span> Commandes</b></td>
-    </tr>
-    <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
-    <?php 
-    foreach($materials as $material=>$pin){ ?>
-    <tr height=80px>
-    	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
-    	</td>
-    	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
-    </tr>
-    <?php } ?>
-    </table>
-    
+
     <table class="materialTab">
     <tr class="header" id="sensorTable">
     <td colspan="3"><b><span>-</span> Mesures</b></td>
@@ -427,7 +412,22 @@ $tableSettings = new TableGear($optionsSet);
         <td id="ORPCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner (650mv)" onclick="calibrateAndRefresh('ORP');"></td>
         <td></td>
     </tr>
+    </table>
+
     
+    <table class="materialTab">
+    <tr class="header" id="actionTable">
+    <td colspan="2"><b><span>-</span> Commandes</b></td>
+    </tr>
+    <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
+    <?php 
+    foreach($materials as $material=>$pin){ ?>
+    <tr height=80px>
+    	<?php echo "<td style=\"background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=bar&title=".$material."');background-repeat:no-repeat;background-size: 100% 100%;\">"?>
+    	</td>
+    	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
+    </tr>
+    <?php } ?>
     </table>
     
     <table class="materialTab">
