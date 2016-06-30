@@ -690,13 +690,13 @@ $tableSettings = new TableGear($optionsSet);
         
         
         function toggleGraph(element){
-            //element.classList.item(0);
+            var currentGraphType = element.classList.item(0);
             var graphType = "undef";
-            var i=graphTypes.indexOf(element);
+            var i=graphTypes.indexOf(currentGraphType);
             if (i!=-1){
                 if (i==graphTypes.length);
             }
-            updateGraph(element,graphType);
+            updateGraph(element,graphTypes[1]);
             
         }
           
