@@ -423,7 +423,7 @@ $tableSettings = new TableGear($optionsSet);
     <?php 
     foreach($materials as $material=>$pin){ ?>
     <tr "height=80px" id="commandsTableID">
-    	<?php echo "<td class='textType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);' style=\"background-image:url(images/loading.gif); background-repeat:no-repeat;\">"?></td>
+    	<?php echo "<td class='barType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);' style=\"background-image:url(images/loading.gif); background-repeat:no-repeat;\">"?></td>
     	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
     </tr>
     <?php } ?>
