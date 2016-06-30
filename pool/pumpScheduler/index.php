@@ -387,6 +387,15 @@ $tableSettings = new TableGear($optionsSet);
     <tr class="header" id="sensorTable">
     <td colspan="3"><b><span>-</span> Mesures</b></td>
     </tr>
+    
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    
+    
     <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
     <tr>
         <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off"><br></div></td>
