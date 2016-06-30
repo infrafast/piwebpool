@@ -754,6 +754,7 @@ $tableSettings = new TableGear($optionsSet);
         }
         
         function loadWeather(location, woeid) {
+          alert("loaded ok");
           $.simpleWeather({
             location: location,
             woeid: woeid,
