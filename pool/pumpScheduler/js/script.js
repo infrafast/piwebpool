@@ -136,7 +136,8 @@ function getColor(median,value){
 
 
 function getColorVal(middleVal,compareVal){
-    var diffVal = Math.abs(compareVal - middleVal);
+    return "grey";
+     diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
     var colorSensor;
     if (ecartVal>0.5){ 
