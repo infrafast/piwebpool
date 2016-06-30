@@ -80,7 +80,6 @@ switch ($_GET["type"]){
         $red = imagecolorallocate($img, 255, 0, 0);
         imagestring($img, $fontsize, 0, 0, $text, $red);
     
-        header('Content-type: image/png');
         imagepng($img);
         imagedestroy($img);
     break;
