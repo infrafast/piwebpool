@@ -185,16 +185,9 @@ function refreshValue(elem,action){
     		if(result.answer == "OK"){
                 var median;
                 var tolerance;
-                if(action=='Ph'){
-                    median=7.24;
-
-                }else if (action=='ORP'){
-                    median=715;
-
-                }else{
-                    median=25;
-
-                }
+                if(action=='Ph') median=7.24;
+                else if (action=='ORP') median=715; 
+                else median=25;
                 var color=getColor(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "background:"+color+";");
