@@ -682,7 +682,9 @@ $tableSettings = new TableGear($optionsSet);
         
         function updateGraph(element,typeGraph){
             element.style.backgroundSize="100% 100%";
-            var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width=500&height=200&type='+typeGraph+')'; 
+            // need tu tune the width/hgith 
+            //var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width=500&height=200&type='+typeGraph+')';
+            var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+typeGraph+')'; 
             element.style.backgroundImage=imgSrc; 	     
         }
         
