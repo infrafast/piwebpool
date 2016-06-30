@@ -500,13 +500,15 @@ $tableSettings = new TableGear($optionsSet);
           if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
         }
     
-        // retrieve logfile
-        document.getElementById('logFile').value = actionCall('action=getLog',false);
-        
         // refresh measures indicators
         refreshValue(document.getElementById('divPhMeasureID'),'Ph');
         refreshValue(document.getElementById('divORPMeasureID'),'ORP');
         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+    
+    
+    
+        // retrieve logfile
+        document.getElementById('logFile').value = actionCall('action=getLog',false);
         
         
         // draw measures graph
