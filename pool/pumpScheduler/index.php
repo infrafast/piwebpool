@@ -686,7 +686,7 @@ $tableSettings = new TableGear($optionsSet);
         
         
         function toggleGraph(element){
-            
+            updateGraph(element,'barType');
         }
           
         function updateGraphs(){
