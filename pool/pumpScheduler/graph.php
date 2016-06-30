@@ -14,7 +14,7 @@ $cfg['background-color'] = "f0f0f0";
 
 $hint = array(
 			"pump"=>"Pump message",
-			"pac"=> array("PAC message1","PAC message 2)",
+			"pac"=>array("PAC message1","PAC message 2)",
 		    "treatment1"=>"treatment 1 message",
     	    "treatment2"=>"treamtemt 2 message",
 		    "ph"=>"ph message",
@@ -79,7 +79,7 @@ switch ($_GET["type"]){
         $height = 480;
         $fontsize = 5;
     
-        $text=$hint[[$_GET["graph"]][0];
+        $text=$hint[$_GET["graph"]];
         
     
         $img = imagecreate($cfg['width'], $cfg['height']);
