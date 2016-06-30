@@ -199,6 +199,13 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
   DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
 */
+body {
+  padding: 45px 25px;
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #0d0d0d;
+}
+
+
 
 @font-face {
     font-family: 'weather';
