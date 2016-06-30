@@ -679,7 +679,9 @@ $tableSettings = new TableGear($optionsSet);
         }    
         
         function updateGraph(element){
-            
+            element.style.backgroundSize="100% 100%";
+            var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width=500&height=200&type=lineType)'; 
+            element.style.backgroundImage=imgSrc; 	     
         }
         
           
@@ -687,12 +689,7 @@ $tableSettings = new TableGear($optionsSet);
         // this function is called when user change the combo to choose measures rendition period graph
         // it update the call to the graph function according to the selected value
          	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
-        	while(++i < colslen){
-        	    cols[i].style.backgroundSize="100% 100%";
-                var imgSrc = 'url(graph.php?'+cols[i].id+'&period='+document.getElementById('periodID').value+'&width=500&height=200&type=lineType)'; 
-                cols[i].style.backgroundImage=imgSrc; 		
-                //alert(imgSrc);
-        	}    
+        	while(++i < colslen) updateGraph(cols[i]);
         }  
         
         
