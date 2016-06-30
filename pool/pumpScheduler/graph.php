@@ -97,6 +97,10 @@ switch ($_GET["type"]){
         $cfg['key-visible']=true;
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
+    case "lineType":
+        $cfg['key-visible']=true;
+        $graph->parseVerticalLineGraph($data,$cfg);
+    break;    
 }
 
 
