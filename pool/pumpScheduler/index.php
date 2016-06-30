@@ -507,10 +507,6 @@ $tableSettings = new TableGear($optionsSet);
         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
     
     
-        // refresh commands graphs
-        
-        <?php foreach($materials as $material=>$pin) echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
-    
             // retrieve logfile
         document.getElementById('logFile').value = actionCall('action=getLog',false);
         
@@ -714,6 +710,11 @@ $tableSettings = new TableGear($optionsSet);
         	
         	//add the code to also update the command graphs -> commandsTableID
         }  
+        
+        function updateCommandsGraphs(){    
+            // refresh commands graphs
+            <?php foreach($materials as $material=>$pin) echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
+        }
         
         
         function calibrateAndRefresh(id){
