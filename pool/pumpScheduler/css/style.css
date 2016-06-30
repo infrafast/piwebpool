@@ -212,7 +212,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 #weather {
-  width: 500px;
+  width: 100%;
   margin: 0px auto;
   text-align: center;
   text-transform: uppercase;
