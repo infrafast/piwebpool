@@ -132,8 +132,8 @@ switch ($_GET["type"]){
         imagettftext($image, 
             $font_size, 
             $text_angle, 
-            $the_box["left"] + ($imgWidth / 2) - ($the_box["width"] / 2), 
-            $the_box["top"] + ($imgHeight / 2) - ($the_box["height"] / 2), 
+            $the_box["left"] + ($imgWidth / 2) - ($cfg['width'] / 2), 
+            $the_box["top"] + ($imgHeight / 2) - ($cfg['height'] / 2), 
             $color, 
             $font_ttf, 
             $text_string); 
