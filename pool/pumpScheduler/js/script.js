@@ -154,7 +154,6 @@ function getColorVal(middleVal,compareVal){
         colorSensor = "LimeGreen";
         
     }
-    alert(colorSensor);
     return (colorSensor);
 }
 
