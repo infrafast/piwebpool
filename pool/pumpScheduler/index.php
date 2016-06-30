@@ -397,7 +397,7 @@ $tableSettings = new TableGear($optionsSet);
         <th></th>
         <th>Historique sur <select  name="period"  id="periodID" onclick='updateGraphs();'>
                 <option value="8">8 heures</option>
-                <option value="24">dernier jour</option>
+                <option selected="selected" value="24">dernier jour</option>
                 <option value="168">dernière semaine</option>
         </select></th>
         <th></th>
