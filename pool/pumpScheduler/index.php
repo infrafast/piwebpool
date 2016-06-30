@@ -415,14 +415,14 @@ $tableSettings = new TableGear($optionsSet);
     </table>
 
     
-    <table class="materialTab">
+    <table class="materialTab" id="commandsTableID">
     <tr class="header" id="actionTable">
     <td colspan="2"><b><span>-</span> Commandes</b></td>
     </tr>
     <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
     <?php 
     foreach($materials as $material=>$pin){ ?>
-    <tr height=80px id="commandsID">
+    <tr height=80px>
     	<?php echo "<td class='barType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);' style=\"background-image:url(graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&title=".$material."&type=textType); background-repeat:no-repeat;background-size: 100% 100%;\">"?></td>
     	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
     </tr>
@@ -706,9 +706,6 @@ $tableSettings = new TableGear($optionsSet);
         // it update the call to the graph function according to the selected value
          	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
         	while(++i < colslen) updateGraph(cols[i],cols[i].classList.item(0));
-        	var cols = document.getElementById('commandID').getElementsByTagName('tr'), colslen = cols.length, i = -1;
-        	while(++i < colslen) updateGraph(cols[i],cols[i].classList.item(0));
-
         }  
         
         
