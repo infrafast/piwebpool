@@ -135,7 +135,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .hintGraph{
-	background-image:url('graph.php?graph=".$materialsColumn[$material]."&period=24&width=850&height=90&type=text&title=".$material."');
+	background-image:url('graph.php?graph=pump&period=24&width=850&height=90&type=text');
 	border: thin inset #00a2e8;
 }
 
