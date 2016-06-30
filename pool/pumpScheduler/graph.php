@@ -1,4 +1,4 @@
- <?php
+<?php
 
 include_once('include/phpMyGraph5.0.php'); 
 require('configuration.php');
