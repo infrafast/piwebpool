@@ -12,11 +12,13 @@ $cfg['background-color'] = "f0f0f0";
 //keyvisible = affichage de l'echelle du temps
 
 
-$hintPH = array(
-                );
-$hintORP = array(
-                );
-$hintTemp = array(
+$hint = array(
+			""=>"pump",
+			""=>"pac",
+		    ""=>"treatment1",
+    	    ""=>"treatment2",
+		    ""=>""                
+		    ""=>""                
                 );
 
 // connect to the database
