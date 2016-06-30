@@ -74,32 +74,25 @@ switch ($_GET["type"]){
     
         $graph->parseVerticalSimpleColumnGraph($data,$cfg);
     break;
+    case "lineType":
+        $cfg['key-visible']=true;
+        $graph->parseVerticalLineGraph($data,$cfg);
+    break;
     case "textType":
-        $width = 640;
-        $height = 480;
-        $fontsize = 5;
-    
         $text=$hint[$_GET["graph"]][0];
-        
-    
+    default:
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
         imagecolortransparent($img, $black);
         // Red text
+        $fontsize = 5;
         $red = imagecolorallocate($img, 255, 0, 0);
         imagestring($img, $fontsize, 0, 0, utf8_decode($text), $red);
     
         imagepng($img);
         imagedestroy($img);
-    break;
-    case "lineType":
-        $cfg['key-visible']=true;
-        $graph->parseVerticalLineGraph($data,$cfg);
-    break;
-    case "lineType":
-        $cfg['key-visible']=true;
-        $graph->parseVerticalLineGraph($data,$cfg);
+    
     break;    
 }
 
