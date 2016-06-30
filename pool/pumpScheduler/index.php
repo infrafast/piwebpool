@@ -765,6 +765,7 @@ $tableSettings = new TableGear($optionsSet);
            },
             error: function(error) {
               $("#weather").html('<p>'+error+'</p>');
+              alert("error");
             }
           });
         }  
