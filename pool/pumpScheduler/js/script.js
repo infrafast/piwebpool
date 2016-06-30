@@ -147,6 +147,8 @@ function getColorVal(middleVal,compareVal){
         colorSensor = "Orange";
     }else if (ecartVal>0.2){ 
         colorSensor = "Yellow";
+    }else if (ecartVal>0.1){ 
+        colorSensor = "GreenYellow";
     }else{ 
         colorSensor = "LimeGreen";
     }
