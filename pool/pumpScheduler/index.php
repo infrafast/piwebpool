@@ -688,8 +688,8 @@ $tableSettings = new TableGear($optionsSet);
         
         
         function toggleGraph(element){
-            element.classList.item(0);
-            updateGraph(element,'barType');
+            //element.classList.item(0);
+            updateGraph(element,graphTypes[3]);
             
         }
           
