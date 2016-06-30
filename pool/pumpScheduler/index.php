@@ -685,7 +685,6 @@ $tableSettings = new TableGear($optionsSet);
             alert("imgSrc="+imgSrc);
             element.style.backgroundSize="100% 100%";
             element.style.backgroundImage=imgSrc; 	     
-            
         }
         
         
