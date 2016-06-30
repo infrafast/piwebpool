@@ -81,6 +81,7 @@ switch ($_GET["type"]){
     break;
     case "textType":
         $text=$hint[$_GET["graph"]][0];
+        // treat message in function (periode). ex: forecast
     default:
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
         $img = imagecreate($cfg['width'], $cfg['height']);
