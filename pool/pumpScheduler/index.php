@@ -419,7 +419,7 @@ $tableSettings = new TableGear($optionsSet);
     <tr class="header" id="actionTable">
     <td colspan="2"><b><span>-</span> Commandes</b></td>
     </tr>
-    <tr><th>Etat ces dernières 24h</th><th>Etat actuel</th></tr>
+    <tr><th>Historique</th><th>Etat actuel</th></tr>
     <?php 
     foreach($materials as $material=>$pin){ ?>
     <tr height=80px>
