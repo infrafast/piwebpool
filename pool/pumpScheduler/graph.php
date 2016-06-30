@@ -82,7 +82,7 @@ switch ($_GET["type"]){
     case "textType":
         $text=$hint[$_GET["graph"]][0];
     default:
-        if ($text==null) $text="graph type missing";
+        if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
