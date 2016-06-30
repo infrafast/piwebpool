@@ -503,6 +503,39 @@ $tableSettings = new TableGear($optionsSet);
     <script>
         var graphTypes = ["lineType", "barType", "textType"]; 
         
+        
+        // Docs at http://simpleweatherjs.com
+        
+        /* Does your browser support geolocation? */
+        if ("geolocation" in navigator) {
+          $('.js-geolocation').show(); 
+        } else {
+          $('.js-geolocation').hide();
+        }
+        
+        /* Where in the world are you? */
+          navigator.geolocation.getCurrentPosition(function(position) {
+            loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+            alert("loaded ok");
+          });
+        
+        function loadWeather(location, woeid) {
+          $.simpleWeather({
+            location: location,
+            woeid: woeid,
+            unit: 'c',
+            success: function(weather) {
+              html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+            $("#weather").html(html);
+           },
+            error: function(error) {
+              $("#weather").html('<p>'+error+'</p>');
+            }
+          });
+        }        
+        
+        
+        
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
         
@@ -738,37 +771,6 @@ $tableSettings = new TableGear($optionsSet);
             calibrate.style.backgroundImage="url('')";
         }
         
-        
-        // Docs at http://simpleweatherjs.com
-        
-        /* Does your browser support geolocation? */
-        if ("geolocation" in navigator) {
-          $('.js-geolocation').show(); 
-        } else {
-          $('.js-geolocation').hide();
-        }
-        
-        /* Where in the world are you? */
-          navigator.geolocation.getCurrentPosition(function(position) {
-            loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
-            alert("loaded ok");
-          });
-        
-        function loadWeather(location, woeid) {
-          $.simpleWeather({
-            location: location,
-            woeid: woeid,
-            unit: 'c',
-            success: function(weather) {
-              html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-            $("#weather").html(html);
-           },
-            error: function(error) {
-              $("#weather").html('<p>'+error+'</p>');
-            }
-          });
-        }
-                
         
     </script>
     </body>
