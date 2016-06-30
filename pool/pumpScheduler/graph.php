@@ -92,7 +92,6 @@ switch ($_GET["type"]){
     
         imagepng($img);
         imagedestroy($img);
-    
     break;    
 }
 
