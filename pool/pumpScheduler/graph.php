@@ -67,7 +67,7 @@ switch ($_GET["type"]){
     case "text":
         $width = 640;
         $height = 480;
-        $text = "La filtration a fonctionné 80% du temps ces dernieres 24 heures";
+        $text = "La filtration a fonctionne 80% du temps ces dernieres 24 heures";
         $fontsize = 5;
     
         $img = imagecreate($cfg['width'], $cfg['height']);
