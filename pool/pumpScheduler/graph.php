@@ -11,6 +11,7 @@ $cfg['value-label-color'] = "000000";
 $cfg['background-color'] = "f0f0f0";
 //keyvisible = affichage de l'echelle du temps
 
+ $text=null;
 
 $hint = array(
 			"pump"=>array("pump message1","pump message 2"),
