@@ -14,7 +14,7 @@ $cfg['value-label-color'] = "000000";
 $cfg['background-color'] = "f0f0f0";
 //keyvisible = affichage de l'echelle du temps
 
-$text_string=null;
+$text=null;
 
 $hint = array(
 			"pump"=>array("pump message1","pump message 2"),
@@ -88,11 +88,11 @@ switch ($_GET["type"]){
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
     case "textType":
-        $text_string=$hint[$_GET["graph"]][0];
-        $text_string.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
+        $text=$hint[$_GET["graph"]][0];
+        $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
         // treat message in function (periode). ex: forecast
     default:
-        if ($text_string==null) $text_string="unknown or undefined graph type ".$_GET["type"];
+        if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
         $img = imagecreate($cfg['width'], $cfg['height']);
         // Transparent background
         $black = imagecolorallocate($img, 0, 0, 0);
