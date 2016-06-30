@@ -423,7 +423,7 @@ $tableSettings = new TableGear($optionsSet);
     <?php 
     foreach($materials as $material=>$pin){ ?>
     <tr height=80px>
-    	<?php echo "<td style=\"background-repeat:no-repeat;background-size: 100% 100%;\">"?></td>
+    	<?php echo "<td class=hintGraph style=\"background-repeat:no-repeat;background-size: 100% 100%;\">"?></td>
     	<td><div id="commandButtonID" onclick="changeState(<?php echo $pin; ?>,this)" class="buttonState <?php echo (getPinState($pin,$pins)==1?'on':'off'); ?>"><?php echo "<br>".(getPinState($pin,$pins)==1?'on':'off')."<br><br>";?></div></td>
     </tr>
     <?php } ?>
