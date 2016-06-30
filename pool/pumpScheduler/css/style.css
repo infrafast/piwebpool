@@ -134,11 +134,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	border: thin inset #00a2e8;
 }
 
-.hintGraph{
-	background-image:url('graph.php?graph=pump&period=24&width=850&height=90&type=text');
-	border: thin inset #00a2e8;
-}
-
 
 .play{
 	background-image:url('../images/play.png');
