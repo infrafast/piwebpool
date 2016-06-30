@@ -751,6 +751,7 @@ $tableSettings = new TableGear($optionsSet);
         /* Where in the world are you? */
           navigator.geolocation.getCurrentPosition(function(position) {
             loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+            alert("loaded ok");
           });
         
         function loadWeather(location, woeid) {
