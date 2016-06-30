@@ -81,7 +81,7 @@ switch ($_GET["type"]){
     break;
     case "textType":
         $text=$hint[$_GET["graph"]][0];
-        $text.="Les stats sont effectuées sur la base de ".$_GET["period"];
+        $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
         // treat message in function (periode). ex: forecast
     default:
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
