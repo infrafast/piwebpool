@@ -684,6 +684,10 @@ $tableSettings = new TableGear($optionsSet);
             element.style.backgroundImage=imgSrc; 	     
         }
         
+        
+        function toggleGraph(element){
+            
+        }
           
         function updateGraphs(){
         // this function is called when user change the combo to choose measures rendition period graph
