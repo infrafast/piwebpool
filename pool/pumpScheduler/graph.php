@@ -17,7 +17,7 @@ $hint = array(
 			""=>"pac",
 		    ""=>"treatment1",
     	    ""=>"treatment2",
-		    ""=>""                
+		    ""=>"",              
 		    ""=>""                
                 );
 
