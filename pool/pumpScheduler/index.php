@@ -696,7 +696,7 @@ $tableSettings = new TableGear($optionsSet);
             var i=graphTypes.indexOf(currentGraphType);
             if (i!=-1){
                 alert('lenght '+graphTypes.length);
-                if (++i>graphTypes.length) i=0;
+                if (++i>(graphTypes.length)-1) i=0;
                 alert('i '+i);
                 nextGraphType = graphTypes[i];
             }
