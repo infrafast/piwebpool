@@ -511,7 +511,7 @@ $tableSettings = new TableGear($optionsSet);
         
         
         // draw measures graph
-        updateGraph();
+        updateGraphs();
         
         //setup Blockly for LUA variable
         Blockly.Blocks['sensors'] = {
