@@ -13,13 +13,13 @@ $cfg['background-color'] = "f0f0f0";
 
 
 $hint = array(
-			"pump"=>"Pump message",
+			"pump"=>array("pump message1","pump message 2"),
 			"pac"=>array("PAC message1","PAC message 2"),
-		    "treatment1"=>"treatment 1 message",
-    	    "treatment2"=>"treamtemt 2 message",
-		    "ph"=>"ph message",
-		    "orp"=>"rp message",              		    
-		    "temperature"=>"temperature message"                
+		    "treatment1"=>array("treatment1 message1","treatment1 message 2"),
+    	    "treatment2"=>array("treatment2 message1","treatment2 message 2"),
+		    "ph"=>array("ph message1","ph message 2"),
+		    "orp"=>array("orp message1","orp message 2"),              		    
+		    "temperature"=>array("temperature message1","temperature message 2")                
                 );
 
 // connect to the database
