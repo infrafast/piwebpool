@@ -99,38 +99,6 @@ function getScript(code,script){
 }
 
 
-// the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
-function getLog(){
-    var result;
-	$.ajax({
-		type: "POST",
-		url: "./action.php",
-		data:{action:"getLog"},
-		async:false,
-		success: function(r){
-			result = eval(r);
-			if(result.answer != "OK"){          
-				alert('Erreur : '+result.state);
-			}
-	    }
-	});   
-	//alert('calledGetLog');
-	return result.state;
-}
-
-function forceCron(){
-	alert("Execution des scripts en cours");
-	$.ajax({
-		    type: "POST",
-			url: "./action.php",
-			data:{action:"forceCron"},
-		success: function(r){
-			result = eval(r);
-	    }
-	});   
-}
-
-
 function rgbToHex(r, g, b) {
     if(r < 0 || r > 255) alert("r is out of bounds; "+r);
     if(g < 0 || g > 255) alert("g is out of bounds; "+g);
