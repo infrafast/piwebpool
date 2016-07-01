@@ -134,8 +134,8 @@ if (!$result) {
 
             $result = mysql_query($sql, $link);
             if (!$result) {
-                $answer="ERROR";
-                $state=mysql_error()." ".$sql;
+                $answer.="+ERROR";
+                $state.="+".mysql_error()." ".$sql;
             }            
         }
     }
