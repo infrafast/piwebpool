@@ -8,7 +8,7 @@
     $dev=getDeviceFromFile();
     if ($dev!=null){
         echo "devices are:\n";
-        foreach ($dev as $device) echo $device."\n";
+        foreach ($dev as $device=>$id) echo $id.":".$device."\n";
     }else echo "\nerror";
 
 ?>
