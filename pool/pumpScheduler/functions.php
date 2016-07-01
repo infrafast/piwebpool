@@ -192,7 +192,6 @@ function getORP(){
 }
 
 function readSensor($device,$command="R\r"){
-    echo "-------------> DEVICE:".$device;
     $serial = new PhpSerial;
     $serial->deviceSet($device);
     $serial->confBaudRate(9600);
