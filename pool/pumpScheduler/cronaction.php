@@ -140,7 +140,7 @@ if (!$result) {
         }
     }
 }
-$state.="{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{Programme:".$luaFeedback."}";    
+$state.="{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{Scripts=".$luaFeedback."}";    
 appendlog("CRONACTION",$answer,$state, $logfilename);
 
 // sync data to disk
