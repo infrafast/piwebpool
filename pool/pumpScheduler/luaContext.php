@@ -46,7 +46,7 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         echo "\n**********".$feedback."STOP";
     } catch (LuaException $e) {
          $feedback=$feedback." ".$e->getMessage();
-         echo "##########".$feedback."STOP";
+         echo "\n##########".$feedback."STOP";
          return false;
     }
     return true;
