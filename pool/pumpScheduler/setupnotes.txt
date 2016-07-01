@@ -18,6 +18,8 @@ TODO LIST
     - export data to sql script
     - implement installation wizard
     - implement forecast / interpretation of the data
+    - implement i18n
+    
 
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
