@@ -55,6 +55,7 @@ class TableGear
     if(!isset($options["editable"]))    $options["editable"] = "allExceptAutoIncrement";
     if(!isset($options["sortable"]))    $options["sortable"] = "all";
     if(!isset($options["allowDelete"])) $options["allowDelete"] = true;
+    if(!isset($options["allowSpan"])) $options["allowSpan"] = true;
     return $options;
   }
 
@@ -391,7 +392,7 @@ class TableGear
             $carat["html"] = "▲";
           }
         }
-        //$html = array(array("tag" => "span", "html" => $html), $carat);
+        if ($options["allowSpan"]) $html = array(array("tag" => "span", "html" => $html), $carat);
         if($this->pagination && $this->pagination["totalPages"] != 1){
           $href = $this->_modifyURIParams(array("sort" => $field, "desc" => $desc, "page" => null));
           $link = array("tag" => "a", "html" => $html, "attrib" => array("href" => $href));
@@ -488,7 +489,7 @@ class TableGear
     $this->_openTag("table class='materialTab'", array("id" => $this->table["id"], "class" => $this->table["class"]));
     $headers = $this->_fetchHeaders();
     if($headers || $this->title){
-      $this->_outputHeaders($headers, true);
+      $this->_outputHeaders($headers, true,$this->title );
     }
     if($this->footers || $this->totals || $this->addNewRows){
       $this->_openTag("tfoot");
@@ -519,7 +520,7 @@ class TableGear
       }
       $this->_closeTag("tfoot");
     }
-    //$this->_openTag("tbody");
+    $this->_openTag("tbody");
     if(!$this->data){
       $this->_openTag("tr", array("class" => "noDataRow odd"));
       $this->_openTag("td", array("colspan" => count($headers)));
@@ -744,9 +745,9 @@ class TableGear
     return $emptyDataRow;
   }
 
-  function _outputHeaders($headers, $showTitle = false)
+  function _outputHeaders($headers, $showTitle = false, $id)
   {
-    $this->_openTag("thead class='header' id='scheduleTable'");
+    $this->_openTag("thead class='header' id='".$id."'");
     if($this->title && $showTitle){
       $this->_openTag("tr");
       $this->_openTag("td", array("colspan" => count($headers), "class" => "title"));
