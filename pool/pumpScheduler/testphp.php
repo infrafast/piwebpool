@@ -9,6 +9,9 @@
     if ($dev!=null){
         echo "devices are:\n";
         foreach ($dev as $id=>$device) echo $id.":".$device."\n";
+        
+        echo "call: ".$dev["ph"];
+        
     }else echo "\nerror";
 
 ?>
