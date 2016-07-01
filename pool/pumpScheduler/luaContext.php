@@ -32,9 +32,9 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         if($orpValue==null)  $orpValue=-99;
         if($temperatureValue==null)  $temperatureValue=-99;
         
-        $lua->assign("temperature",getTemperature());
-        $lua->assign("ph",getPh());
-        $lua->assign("orp",getORP());
+        $lua->assign("temperature",$temperatureValue);
+        $lua->assign("ph",$phValue);
+        $lua->assign("orp",$orpValue);
         $lua->assign("period",intval(getCurrentTimeWindow()));
         $lua->assign("hour",intval(getCurrentTime()));
         
