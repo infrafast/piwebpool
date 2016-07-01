@@ -19,7 +19,7 @@ ser1 = serial.Serial(      #initiate the serial connection into the 'ser' variab
 ser0.write('\r')     #an initial write to clear the serial buffer
 ser1.write('\r')
 
-ser0.read(3)
+ser0.read(3)    #need to determine which device is in which port
 ser1.read(3)
 
 ser0.close()           #close the serial port
