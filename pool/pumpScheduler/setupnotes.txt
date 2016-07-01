@@ -17,7 +17,7 @@ TODO LIST
     - add user/admin setup
     - export data to sql script
     - implement installation wizard
-    
+    - implement forecast / interpretation of the data
 
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
