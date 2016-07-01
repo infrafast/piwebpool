@@ -19,8 +19,12 @@ switch($_['action']){
                 $result['state']  = "done";
             break;
             case 'ORP':
+                readSensor(getDevice("ph"),"Cal,mid,7.00\n");
+                $result['state']  = "done";
             break;
             case 'temp':
+                readSensor(getDevice("ph"),"Cal,mid,7.00\n");
+                $result['state']  = "done";
             break;
         	default:
         	     $result['answer']="ERROR";
