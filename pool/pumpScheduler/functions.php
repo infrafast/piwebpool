@@ -172,24 +172,6 @@ function getDevice($id){
 }
 
 
-function getDeviceOLD($id){
-    switch($id){
-        case 'ph':
-            return "/dev/ttyUSB1";
-        break;
-        case 'orp':
-            return "/dev/ttyUSB0";
-        break;
-        case 'temp':
-            return "/dev/ttyUSB2";
-        break;
-    	default:
-    	    return "/dev/ttyUSB0";
-    	break; 
-    }
-}
-
-
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
     //return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
