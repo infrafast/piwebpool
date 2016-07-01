@@ -13,10 +13,15 @@ sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpSched
 pause
 
 #database
+echo create database
 mysql pool -uroot -pQuintal74605 < ./sql/create.sql
+echo create measures table
 mysql pool -uroot -pQuintal74605 < ./sql/measures.sql
+echo create pump shcedule table
 mysql pool -uroot -pQuintal74605 < ./sql/pumpSchedule.sql
+echo create scripts table
 mysql pool -uroot -pQuintal74605 < ./sql/scripts.sql
+echo create settings table
 mysql pool -uroot -pQuintal74605 < ./sql/settings.sql
 pause
 
