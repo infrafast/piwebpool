@@ -4,7 +4,7 @@
 
     //sendemail("test");
     //sendsms("test");
-    $id="ph";
+    $id="orp";
     $dev=getDeviceZ($id);
     if ($dev!=null) echo $id."=".$dev;
     else echo "\nerror";
