@@ -25,6 +25,13 @@ function goLua($luaCode,$materials,$pins,&$feedback){
 //            $lua->assign($variable,$variableCall);
         
         
+        $phValue = getPh();
+        $orpValue = getORP();
+        $temperatureValue = getTemperature();
+        if($phValue==null)  $phValue=-99;
+        if($orpValue==null)  $orpValue=-99;
+        if($temperatureValue==null)  $temperatureValue=-99;
+        
         $lua->assign("temperature",getTemperature());
         $lua->assign("ph",getPh());
         $lua->assign("orp",getORP());
