@@ -68,7 +68,7 @@ if (!$result) {
             $result = mysql_query($sql, $link);
             if (!$result) {
                 $answer.="+ERROR";
-                $state=."+".mysql_error();
+                $state.="+".mysql_error();
             }else{
                 while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
                 mysql_free_result($result);
@@ -80,8 +80,8 @@ if (!$result) {
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
             if (!$result) {
-                $answer="ERROR";
-                $state=mysql_error();
+                $answer.="+ERROR";
+                $state.="+".mysql_error();
             }else{
                 $luaCode="";
                 while ($row = mysql_fetch_assoc($result)) $luaCode=($row['lua']);
@@ -89,8 +89,8 @@ if (!$result) {
             }
             // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
             if(!goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback)){
-                $answer="ERROR";                
-                $state="LUA ".$luaFeedback;
+                $answer.="+ERROR";                
+                $state.="+LUA ".$luaFeedback;
             }
         }
         
