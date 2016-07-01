@@ -157,14 +157,18 @@ function getTemperature(){
 }
 
 function getDeviceZ($id){
-    $dev=getDeviceFromFile();
-    if ($dev!=null){
-        echo "devices are:\n";
-        foreach ($dev as $id=>$device) echo $id.":".$device."\n";
+    
+    if ($data = file('USBdevices.id')){
+        $returnArray = array();
+        foreach($data as $line) {
+            $explode = explode(":", $line);
+            $returnArray[$explode[0]] = $explode[1];
+        }
         
-        echo "call: ".$dev["tutu"];
+        return $returnArray[$id];
+      
         
-    }else echo "\nerror";
+    }else return null;    
 }
 
 
