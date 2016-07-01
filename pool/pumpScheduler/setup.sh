@@ -27,7 +27,9 @@ pause
 phpize
 pause
 ./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
+pause
 sudo make
+pause
 sudo make install
 pause
 
