@@ -32,6 +32,8 @@ sudo make
 pause
 sudo make install
 pause
+cd ..
+rm -rf lua-1.0.0
 
 #website
 echo "CONFIGURING APACHE"
