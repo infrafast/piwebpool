@@ -156,7 +156,7 @@ function getTemperature(){
     return rand(30,32);
 }
 
-function getDeviceZ($id){
+function getDevice($id){
     try{
         if ($data = file('USBdevices.id')){
             $returnArray = array();
@@ -172,7 +172,7 @@ function getDeviceZ($id){
 }
 
 
-function getDevice($id){
+function getDeviceOLD($id){
     switch($id){
         case 'ph':
             return "/dev/ttyUSB1";
