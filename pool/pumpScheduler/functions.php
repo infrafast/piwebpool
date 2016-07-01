@@ -152,7 +152,7 @@ function setPinState($pin,$state){
 }
 
 function getTemperature(){
-    // must return flase if wrong value
+    // must return false  if wrong value
     return rand(30,32);
 }
 
