@@ -5,6 +5,7 @@ pause(){
 }
 
 #necessary packages
+# php-pear and php5-dev are for pecl and compliation of lua for php
 sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev
 sudo pecl install lua-1.1.0
 pause
