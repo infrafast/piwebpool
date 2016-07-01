@@ -164,7 +164,7 @@ function getDevice($id){
                 $explode = explode(":", $line);
                 $returnArray[$explode[0]] = $explode[1];
             }
-            return $returnArray[$id];
+            return preg_replace( "/\r|\n/", "", $returnArray[$id]);
         }
     }catch (Exception $e){
     }
