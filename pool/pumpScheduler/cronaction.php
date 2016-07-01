@@ -120,7 +120,6 @@ if (!$result) {
             if($phValue==null)  $phValue=-99;
             if($orpValue==null)  $orpValue=-99;
             if($temperatureValue==null)  $temperatureValue=-99;
-            
 
             $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
             foreach($materials as $material=>$pin) $sql = $sql.", `".$materialsColumn[$material]."`";
