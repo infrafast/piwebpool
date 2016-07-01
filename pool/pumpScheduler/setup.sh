@@ -24,6 +24,7 @@ pause
 ./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
 pause
 sudo make
+pause
 sudo make install
 cd ..
 sudo rm -rf lua-1.0.0
