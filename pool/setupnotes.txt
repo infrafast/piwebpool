@@ -98,7 +98,6 @@ root:root@your.domain:smtp.gmail.com:587
 
 3) 
 sudo usermod -a -G root www-data
-chmod 774 /etc/ssmtp/ssmtp.conf
 
 4) vi /etc/php5/apache2/php.ini
 sendmail_path = /usr/sbin/sendmail -t -i
@@ -108,24 +107,14 @@ sendmail_path = /usr/sbin/sendmail -t -i
 //allow apache to write to log.
 touch logfile.txt
 chmod a+w logfile.txt 
-// give access to apache to the folder where logfile and otehr file are stored
-sudo usermod -a -G webide www-data
-
-
 
 the application uses blockly from google scripts
 
-change (/etc/apache2/site-enable/eniac or via webmin)
-    from WSGIScriptAlias / /var/www/eniac/eniac/wsgi.py^
-    to WSGIScriptAlias /eniac /var/www/eniac/eniac/wsgi.py^
-    change port virtual host to 8080 for eniac
 install piwire lib
-create symlink /var/www/html/  ->pumpScheduler folder
-install adafruit webide
-install mysql-server --fix-missing
+
+
 install phpmyadmin
-create database pool
-inject sql code into table via phpmyadmin
+
 chmod 0775 stylesheet and javascripts to enable dynamc display
 sudo apt-get install anacron
 symlink ln -s /var/www/html/pumpScheduler/hourlycrontab.sh /etc/cron.hourly/pumpScheduler
