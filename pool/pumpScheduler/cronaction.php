@@ -93,8 +93,6 @@ if (!$result) {
             if(!goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback)){
                 $answer.="+ERROR";                
                 $state.="+LUA ".$luaFeedback;
-                echo $luaFeedback;
-                
             }
         }
         
