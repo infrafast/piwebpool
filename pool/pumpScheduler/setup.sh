@@ -34,3 +34,11 @@ sudo ln -s /var/www/html/pumpScheduler/hourlycrontab.sh /etc/cron.hourly/pumpSch
 #this is to access the ttyUSB0 from apache
 sudo usermod -a -G dialout www-data
 
+#installing gprio command
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+git pull origin
+cd wiringPi
+./build
+cd ..
+rm -rf wiringPi
