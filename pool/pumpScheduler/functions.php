@@ -156,6 +156,18 @@ function getTemperature(){
     return rand(30,32);
 }
 
+function getDeviceZ($id){
+    $dev=getDeviceFromFile();
+    if ($dev!=null){
+        echo "devices are:\n";
+        foreach ($dev as $id=>$device) echo $id.":".$device."\n";
+        
+        echo "call: ".$dev["tutu"];
+        
+    }else echo "\nerror";
+}
+
+
 function getDevice($id){
     switch($id){
         case 'ph':
@@ -401,17 +413,6 @@ function split_sql_file($sql, $delimiter)
    }
 
    return $output;
-}
-
-function getDeviceFromFile(){
-    if ($data = file('USBdevices.id')){
-        $returnArray = array();
-        foreach($data as $line) {
-            $explode = explode(":", $line);
-            $returnArray[$explode[0]] = $explode[1];
-        }
-        return $returnArray;
-    }else return null;
 }
 
 ?>
