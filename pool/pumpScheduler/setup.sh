@@ -6,6 +6,7 @@ pause(){
 
 #necessary packages
 sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server lua5.1 liblua5.1
+sudo pecl install lua-1.1.0
 pause
 
 #website
