@@ -61,11 +61,14 @@ sudo usermod -a -G dialout www-data
 pause
 
 #
-echo installing gprio command
+echo installing gpio command
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 git pull origin
 ./build
 cd ..
 rm -rf wiringPi
+
+#system startup and hardening
+sudo echo "python /home/webide/repositories/my-pi-projects/pool/pumpScheduler/initUSB.py" >> /etc/rc.local
 
