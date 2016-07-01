@@ -10,7 +10,7 @@
         echo "devices are:\n";
         foreach ($dev as $id=>$device) echo $id.":".$device."\n";
         
-        echo "call: ".$dev["orp"];
+        echo "call: ".$dev["tutu"];
         
     }else echo "\nerror";
 
