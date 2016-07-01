@@ -16,6 +16,8 @@ TODO LIST
     - ADD EMAIL in setting
     - add user/admin setup
     - export data to sql script
+    - implement installation wizard
+    
 
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
