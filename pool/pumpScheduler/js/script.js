@@ -149,7 +149,6 @@ function refreshValue(elem,action){
                 $(elem).attr("style", "background:"+red+";");
                 newValue = "<br>ERROR<br><br>";
                 $(elem).html(newValue);
-    			
     		}
     	}
 	});
