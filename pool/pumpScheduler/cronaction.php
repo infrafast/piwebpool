@@ -101,8 +101,8 @@ if (!$result) {
     $result = mysql_query($sql, $link);
     
     if (!$result) {
-        $answer="ERROR";
-        $state=mysql_error();
+        $answer.="+ERROR";
+        $state.="+".mysql_error();
     }else{
         while ($row = mysql_fetch_assoc($result)) {
             $measureIndex=($row['value']);
@@ -113,8 +113,8 @@ if (!$result) {
         $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
         $result = mysql_query($sql, $link);
         if (!$result) {
-            $answer="ERROR";
-            $state=mysql_error();
+            $answer.="+ERROR";
+            $state.="+".mysql_error();
         }else{
             
             $phValue = getPh();
