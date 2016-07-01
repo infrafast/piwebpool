@@ -1,2 +1,6 @@
 #!/bin/sh
-sed -n q </dev/tty
+pause{
+    sed -n q </dev/tty
+}
+
+pause
