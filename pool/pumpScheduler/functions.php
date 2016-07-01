@@ -151,11 +151,6 @@ function setPinState($pin,$state){
 	return true;
 }
 
-function getTemperature(){
-    // must return false  if wrong value
-    return rand(30,32);
-}
-
 function getDevice($id){
     try{
         if ($data = file('USBdevices.id')){
@@ -172,9 +167,13 @@ function getDevice($id){
 }
 
 
+function getTemperature(){
+    // must return false  if wrong value
+    return rand(30,32);
+}
+
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
-    return false;
     //return round( (0 + (10 - 0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
@@ -184,7 +183,6 @@ function getPh(){
 }
 
 function getORP(){
-    return false;
     //return intval(rand(0,1000));
     for ($i = 0; $i < 2; $i++){
         $v1 = intval(readSensor(getDevice("orp")));      
