@@ -40,7 +40,6 @@ echo installing gprio command
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 git pull origin
-cd wiringPi
 ./build
 cd ..
 rm -rf wiringPi
