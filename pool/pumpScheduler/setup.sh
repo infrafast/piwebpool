@@ -17,7 +17,7 @@ echo create database
 mysql pool -uroot -pQuintal74605 < ./sql/create.sql
 echo create measures table
 mysql pool -uroot -pQuintal74605 < ./sql/measures.sql
-echo create pump shcedule table
+echo create pump schedule table
 mysql pool -uroot -pQuintal74605 < ./sql/pumpSchedule.sql
 echo create scripts table
 mysql pool -uroot -pQuintal74605 < ./sql/scripts.sql
