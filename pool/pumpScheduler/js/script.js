@@ -147,7 +147,7 @@ function refreshValue(elem,action){
                 $(elem).html(newValue);
     		}else{
                 $(elem).attr("style", "background:"+red+";");
-                newValue = "<br>"+result.state+"<br><br>";
+                newValue = "<br>ERROR<br><br>";
                 $(elem).html(newValue);
     			
     		}
