@@ -20,7 +20,9 @@ wget https://pecl.php.net/get/lua-1.0.0.tgz
 tar zxvf lua-1.0.0.tgz
 cd lua-1.0.0
 phpize
+pause
 ./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
+pause
 sudo make
 sudo make install
 cd ..
