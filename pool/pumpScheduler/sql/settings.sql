@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `userSetting` BOOLEAN NOT NULL ,
   `description` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
- 
+  
 INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('scheduler', 1, true, 'Activation planificateur filtration'),
 ('logTable', 1, false, ''),
