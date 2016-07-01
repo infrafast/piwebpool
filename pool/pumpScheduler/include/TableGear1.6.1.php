@@ -12,8 +12,6 @@
  *
  */
 
-// restore 01.07.2016
-
 $tgTableID = 0;
 
 error_reporting(E_ERROR);
