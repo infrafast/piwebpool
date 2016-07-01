@@ -44,7 +44,7 @@ function sendemail($message){
     //html decode to display accents
     $message=html_entity_decode(wordwrap($message,70));
     $to = "szemrot@hotmail.com";
-    $subject = "Pool Notification";
+    $subject = "Notification de".;
     $from = "noreply@piweb.infrafast.com";
     $headers = "From:" . $from;
     $result = mail($to,$subject,$message,$headers);
