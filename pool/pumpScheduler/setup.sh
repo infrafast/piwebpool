@@ -70,5 +70,5 @@ cd ..
 rm -rf wiringPi
 
 #system startup and hardening
-sudo echo "python /home/webide/repositories/my-pi-projects/pool/pumpScheduler/initUSB.py" >> /etc/rc.local
+sudo echo "python /var/www/html/pumpScheduler/initUSB.py" >> /etc/rc.local
 
