@@ -1,6 +1,7 @@
 #!/bin/sh
 function pause(){
-    sed -n q </dev/tty
+   sed -n q </dev/tty
 }
+
 
 pause
