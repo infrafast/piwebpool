@@ -25,6 +25,7 @@ switch($_['action']){
                 $result['state']  = "done";
             break;
             case 'temp':
+                // not implemented yet
                 $result['state']  = "done";
             break;
         	default:
