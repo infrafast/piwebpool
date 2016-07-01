@@ -24,7 +24,7 @@ phpize
 sudo make
 sudo make install
 cd ..
-rm -rf lua-1.0.0
+sudo rm -rf lua-1.0.0
 
 #website
 echo "CONFIGURING APACHE"
