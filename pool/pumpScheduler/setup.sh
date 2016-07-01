@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#necessary packages
+sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server
+
 #website root
 sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpScheduler /var/www/html/
 
