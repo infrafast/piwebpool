@@ -7,7 +7,7 @@ pause(){
 #necessary packages
 # php-pear and php5-dev are for pecl and compliation of lua for php
 #note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
-sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev
+sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev python-serial
 pause
 
 # installing and compiling LUA for PHP
