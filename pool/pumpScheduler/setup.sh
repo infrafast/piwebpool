@@ -1,7 +1,7 @@
 #!/bin/sh
-function pause(){
-   sed -n q </dev/tty
+pause(){
+ read -rsp $'Press enter to continue...\n'
 }
 
-
 pause
+
