@@ -20,7 +20,7 @@ sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
 pause
 wget https://pecl.php.net/get/lua-1.0.0.tgz
 pause
-tar zxvf https://pecl.php.net/get/lua-1.0.0.tgz
+tar zxvf lua-1.0.0.tgz
 pause
 cd lua-1.0.0
 pause
