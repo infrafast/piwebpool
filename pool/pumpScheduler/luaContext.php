@@ -43,11 +43,9 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         $retval = $lua->run();
         if (!$retval) $feedback = $feedback." "."Runtime error";
         else $feedback = $feedback.$retval;
-        
-        echo "\n**********".$feedback."STOP\n";
+
     } catch (LuaException $e) {
          $feedback=$feedback." ".$e->getMessage();
-         echo "\n##########".$feedback."STOP\n";
          return false;
     }
     return true;
