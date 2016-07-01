@@ -13,11 +13,11 @@ sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpSched
 pause
 
 #database
-mysql -u root -p Quintal74605 pool < ./sql/create.sql
-mysql -u root -p Quintal74605 pool < ./sql/measures.sql
-mysql -u root -p Quintal74605 pool < ./sql/pumpSchedule.sql
-mysql -u root -p Quintal74605 pool < ./sql/scripts.sql
-mysql -u root -p Quintal74605 pool < ./sql/settings.sql
+mysql pool -uroot -pQuintal74605 < ./sql/create.sql
+mysql pool -uroot -pQuintal74605 < ./sql/measures.sql
+mysql pool -uroot -pQuintal74605 < ./sql/pumpSchedule.sql
+mysql pool -uroot -pQuintal74605 < ./sql/scripts.sql
+mysql pool -uroot -pQuintal74605 < ./sql/settings.sql
 pause
 
 #file permission and configuration
