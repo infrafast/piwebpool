@@ -88,7 +88,10 @@ if (!$result) {
                 mysql_free_result($result);
             }
             // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
-            $lua = goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback);                
+            if(!goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback)){
+                $answer="ERROR";                
+                $state="LUA ".$luaFeedback;
+            }
         }
         
     }
