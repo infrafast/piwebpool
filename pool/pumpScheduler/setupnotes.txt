@@ -15,7 +15,7 @@ TODO LIST
     - move all js code to js
     - ADD EMAIL in setting
     - add user/admin setup
-
+    - export data to sql script
 
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
