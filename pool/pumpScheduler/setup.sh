@@ -51,6 +51,7 @@ pause
 #file permission and configuration
 sudo chmod 774 /etc/ssmtp/ssmtp.conf
 sudo usermod -a -G webide www-data
+chmod g+w ..
 chmod 0775 css js
 #periodic execution of the script
 sudo ln -s /var/www/html/pumpScheduler/hourlycrontab.sh /etc/cron.hourly/pumpScheduler
