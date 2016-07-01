@@ -25,8 +25,6 @@ switch($_['action']){
                 $result['state']  = "done";
             break;
             case 'temp':
-                readSensor(getDevice("ph"),"Cal,clear\n");
-                readSensor(getDevice("ph"),"Cal,mid,7.00\n");
                 $result['state']  = "done";
             break;
         	default:
