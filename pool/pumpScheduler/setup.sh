@@ -19,6 +19,10 @@ sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
 wget https://pecl.php.net/get/lua-1.0.0.tgz
 tar zxvf https://pecl.php.net/get/lua-1.0.0.tgz
 cd lua-1.0.0
+phpize
+./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
+sudo make
+sudo make install
 pause
 
 #website
