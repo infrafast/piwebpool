@@ -106,7 +106,7 @@ if (!$result) {
         }    
         mysql_free_result($result);
         
-        //$treatmentValue = getPin($pins[$materials["traitement"]]);
+        $treatmentValue = getPin($pins[$materials["traitement"]]);
         $pumpValue = getPin($pins[$materials["filtration"]]);
         $measureIndex=$measureIndex+1;
         if ($measureIndex>168) $measureIndex=0;
