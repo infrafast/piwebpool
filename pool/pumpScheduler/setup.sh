@@ -1,5 +1,5 @@
 #!/bin/sh
-function pause{
+function pause(){
     sed -n q </dev/tty
 }
 
