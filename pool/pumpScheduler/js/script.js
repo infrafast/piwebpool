@@ -146,7 +146,10 @@ function refreshValue(elem,action){
                 newValue = "<br>"+result.state+"<br><br>";
                 $(elem).html(newValue);
     		}else{
-    			alert('Erreur : '+result.state);
+                $(elem).attr("style", "background:"+color+";");
+                newValue = "<br>"+result.state+"<br><br>";
+                $(elem).html(newValue);
+    			
     		}
     	}
 	});
