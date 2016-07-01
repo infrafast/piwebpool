@@ -16,7 +16,9 @@ sudo ln -s /usr/include/lua5.1 /usr/include/lua
 sudo ln -s /usr/include/lua5.1/* /usr/include
 sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.a /usr/lib/liblua.a
 sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
-sudo pecl install lua-1.1.0
+wget https://pecl.php.net/get/lua-1.0.0.tgz
+tar zxvf https://pecl.php.net/get/lua-1.0.0.tgz
+cd lua-1.0.0
 pause
 
 #website
