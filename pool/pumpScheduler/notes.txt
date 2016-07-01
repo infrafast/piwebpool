@@ -58,31 +58,8 @@ PLATFORM SETUP FROM SCRACTH
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 HISTORICAL NOTES
-
-
-
-
-
-
+-------------------------------------------------------------------
 Add extension=lua.so to php.ini file (could be /etc/php5/(cli+apache)/php.ini)
 find "Dynamic Extensions" and add extension=lua.so
 /etc/init.d/apache2 restart
@@ -105,12 +82,3 @@ FROM:
 if ($this->_exec("stty") === 0) {
 TO:
 if ($this->_exec("stty --version") === 0) {
-
-
-
-
-
-     
-
-
-
