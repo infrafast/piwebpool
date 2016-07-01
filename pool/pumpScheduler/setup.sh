@@ -1,4 +1,2 @@
 #!/bin/sh
-
-read -p "$*"
-
+sed -n q </dev/tty
