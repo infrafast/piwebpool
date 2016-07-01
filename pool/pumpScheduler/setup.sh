@@ -8,8 +8,9 @@ pause(){
 sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server lua5.1 liblua5.1
 pause
 
-#website root
+#website
 sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpScheduler /var/www/html/
+sudo sed -i -e 's/DocumentRoot /var/www/html/DocumentRoot /var/www/html/pumpScheduler' /etc/apache2/sites-available/000-default
 pause
 
 #database
