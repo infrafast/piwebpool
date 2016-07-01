@@ -11,7 +11,7 @@ pause
 #website
 echo "CONFIGURING APACHE"
 sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpScheduler /var/www/html/
-sudo sed 's_DocumentRoot /var/www/html_DocumentRoot /var/www/html/pumpScheduler_' /etc/apache2/sites-available/000-default
+sudo sed 's_DocumentRoot /var/www/html_DocumentRoot /var/www/html/pumpScheduler_' /etc/apache2/sites-available/000-default.conf
 sudo service apache2 restart
 pause
 
