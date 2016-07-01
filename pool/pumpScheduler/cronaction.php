@@ -78,6 +78,7 @@ if (!$result) {
         }
         $luaFeedback="";
         foreach (array("main","custom") as $scriptID) {
+            $luaFeedback.=$scriptID."=>";
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
@@ -90,7 +91,7 @@ if (!$result) {
                 mysql_free_result($result);
             }
             // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
-            goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$scriptID."=>".$luaFeedback);
+            goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback);
         }
         
     }
