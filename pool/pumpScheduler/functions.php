@@ -157,18 +157,18 @@ function getTemperature(){
 }
 
 function getDeviceZ($id){
-    
-    if ($data = file('USBdevices.id')){
-        $returnArray = array();
-        foreach($data as $line) {
-            $explode = explode(":", $line);
-            $returnArray[$explode[0]] = $explode[1];
+    try{
+        if ($data = file('USBdevices.id')){
+            $returnArray = array();
+            foreach($data as $line) {
+                $explode = explode(":", $line);
+                $returnArray[$explode[0]] = $explode[1];
+            }
+            return $returnArray[$id];
         }
-        
-        return $returnArray[$id];
-      
-        
-    }else return null;    
+    }catch (Exception $e){
+    }
+    return null;
 }
 
 
