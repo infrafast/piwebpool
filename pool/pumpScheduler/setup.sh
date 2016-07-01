@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#website root
+sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpScheduler /var/www/html/
+
 #database
 mysql -uroot -p Quintal74605 pool < ./sql/create.sql
 mysql -uroot -p Quintal74605 pool < ./sql/measures.sql
