@@ -12,7 +12,7 @@ pause
 
 # installing and compiling LUA for PHP
 echo NOW SETTING UP LUA FOR PHP
-sudo ln -s /usr/include/lua5.1/* /usr/include/
+sudo ln -s /usr/include/lua5.1 /usr/include/lua
 sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.a /usr/lib/liblua.a
 sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
 sudo pecl install lua-1.1.0
