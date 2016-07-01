@@ -6,7 +6,15 @@ pause(){
 
 #necessary packages
 # php-pear and php5-dev are for pecl and compliation of lua for php
+#note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
 sudo apt-get --assume-yes install apache2 php5 php5-mysql ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev
+pause
+
+# installing and compiling LUA for PHP
+echo NOW SETTING UP LUA FOR PHP
+sudo ln -s /usr/include/lua5.1/* /usr/include/
+sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.a /usr/lib/liblua.a
+sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
 sudo pecl install lua-1.1.0
 pause
 
