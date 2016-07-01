@@ -26,6 +26,9 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 } 
 
+$answer="OK";
+$state="";
+
 // what time is it now?
 $tw=getCurrentTimeWindow()."h";
 // what is the temperature
@@ -54,7 +57,6 @@ if (!$result) {
     
     mysql_free_result($result);
     
-    $answer="OK";
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
         $answer.="+ERROR";
         $state.="+SetPinState";
