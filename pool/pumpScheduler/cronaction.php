@@ -56,8 +56,8 @@ if (!$result) {
     
     $answer="OK";
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
-        $answer="ERROR";
-        $state="SetPinState";
+        $answer.="+ERROR";
+        $state.="+SetPinState";
     }else{
         $concat=array("header","footer");
         $i=0;
@@ -67,8 +67,8 @@ if (!$result) {
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
             if (!$result) {
-                $answer="ERROR";
-                $state=mysql_error();
+                $answer.="+ERROR";
+                $state=."+".mysql_error();
             }else{
                 while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
                 mysql_free_result($result);
