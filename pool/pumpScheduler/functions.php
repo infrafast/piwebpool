@@ -169,7 +169,12 @@ function getDevice($id){
 
 function getTemperature(){
     // must return false  if wrong value
-    return rand(30,32);
+    //return rand(30,32);
+    $serial = new PhpSerial;
+    $serial->deviceSet("/dev/ttyUSB2");
+    $serial->confBaudRate(9600);
+    $serial->deviceOpen();
+    $val=$serial->readPort();    
 }
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
