@@ -8,6 +8,9 @@
     //$dev=getDeviceZ($id);
     //if ($dev!=null) echo $id."=".$dev;
     //else echo "\nerror";
-    echo getTemperature();
+    echo getTemperature()."\n";
+    echo getORP()."\n";
+    echo getPh()."\n";
+    
 
 ?>
