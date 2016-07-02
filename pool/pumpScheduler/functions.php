@@ -175,6 +175,7 @@ function getTemperature(){
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
     $val=$serial->readPort();    
+    return $val;
 }
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
