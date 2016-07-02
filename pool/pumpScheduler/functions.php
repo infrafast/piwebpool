@@ -174,7 +174,7 @@ function getTemperature(){
     $serial->deviceSet("/dev/ttyUSB2");
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
-    sleep(2);
+    sleep(1);
     $data=$serial->readPort();
     return intval($data);
 }
