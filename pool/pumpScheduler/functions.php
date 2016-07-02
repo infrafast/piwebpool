@@ -175,11 +175,7 @@ function getTemperature(){
     $serial->confBaudRate(9600);
     $serial->deviceOpen();
     sleep(2);
-    $c="";
-    $data="";
-    while ($c!='\r')
-        $c=$serial->readPort();
-        $data.=$c;
+    $data=$serial->readPort();
     return intval($data);
 }
 
