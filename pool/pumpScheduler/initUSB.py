@@ -16,16 +16,19 @@ ser2 = serial.Serial(      #initiate the serial connection into the 'ser' variab
   baudrate=9600          #set the baudrate
 
 
-
-
 ser0.write('\r')     #an initial write to clear the serial buffer
 ser1.write('\r')
 ser2.write('\r')
 
-
 ser0.read(3)    #need to determine which device is in which port
 ser1.read(3)
 ser2.read(3)
+
+ser0.write('C,0\r')     #disqble continuous reqd mode
+ser1.write('C,0\r')     #disqble continuous reqd mode
+ser2.write('C,0\r')     #disqble continuous reqd mode
+
+
 
 ser0.close()           #close the serial port
 ser1.close()
