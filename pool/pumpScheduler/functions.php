@@ -178,7 +178,7 @@ function getTemperature(){
     $c="";
     $data="";
     while ($c!='\r')
-        $c=$serial->readPort(1);
+        $c=$serial->readPort();
         $data.=$c;
     return intval($data);
 }
