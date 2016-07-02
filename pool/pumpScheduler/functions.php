@@ -171,8 +171,8 @@ function getTemperature(){
     // must return false  if wrong value
     //return rand(30,32);
     for ($i = 0; $i < 2; $i++){
-        $v1 = round(readSensor(getDevice("temperature")), 2,PHP_ROUND_HALF_UP);  
-        if ($v1>0 and $v1<10) return $v1;
+        $v1 = round(readSensor(getDevice("temperature")), 1,PHP_ROUND_HALF_UP);  
+        if ($v1>0 and $v1<35) return $v1;
     }
     return false;
 }
