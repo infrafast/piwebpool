@@ -29,7 +29,6 @@ ser1.write('C,0\r')     #disqble continuous reqd mode
 ser2.write('C,0\r')     #disqble continuous reqd mode
 
 
-
 ser0.close()           #close the serial port
 ser1.close()
 ser2.close()
