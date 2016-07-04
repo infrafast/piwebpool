@@ -27,7 +27,7 @@ tar zxvf lua-1.0.0.tgz
 cd lua-1.0.0
 phpize
 pause
-echo COMPLILING LUA FOR PHP
+echo "COMPILING LUA FOR PHP"
 ./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
 sudo make
 sudo make install
@@ -45,19 +45,21 @@ sudo service apache2 restart
 pause
 
 #database
-echo create database
+#at the end, need to have only one master sql file that do everything
+echo "create database"
 mysql pool -uroot -pQuintal74605 < ./sql/create.sql
-echo create measures table
+echo "create measures table"
 mysql pool -uroot -pQuintal74605 < ./sql/measures.sql
-echo create pump schedule table
+echo "create pump schedule table"
 mysql pool -uroot -pQuintal74605 < ./sql/pumpSchedule.sql
-echo create scripts table
+echo "create scripts table"
 mysql pool -uroot -pQuintal74605 < ./sql/scripts.sql
-echo create settings table
+echo "create settings table"
 mysql pool -uroot -pQuintal74605 < ./sql/settings.sql
 pause
 
 #file permission and configuration
+echo "setting up permission and others"
 sudo chmod 774 /etc/ssmtp/ssmtp.conf
 sudo usermod -a -G webide www-data
 chmod g+w .
@@ -69,12 +71,13 @@ sudo usermod -a -G dialout www-data
 pause
 
 #
-echo installing gpio command
+echo "installing gpio command"
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 git pull origin
 ./build
 cd ..
+echo "REMOVING TEMP FILES"
 rm -rf wiringPi
 
 #system startup and hardening
