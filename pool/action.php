@@ -195,7 +195,12 @@ switch($_['action']){
             $result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
 	    }else if (isset($_GET['switchTreatment1PLC'])){
 	        $_['action'] = "PLC";
+            setPinState($pins[$materials["traitement1"]],$_GET['SwitchTreatment1PLC']);
+            $result['state'] = getPin($pins[$materials["treatment1"]]); //idem as getFilterStatePCL;
 	    }else if (isset($_GET['getFilterStatePLC'])){
+	        $_['action'] = "PLC";
+	        $result['state'] = getPin($pins[$materials["filtration"]]);
+	    }else if (isset($_GET['getgetFilterStatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
     	}else{    
