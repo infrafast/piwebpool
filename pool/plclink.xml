@@ -10,7 +10,7 @@
 					<title>Temperature</title>
 					<name>Temperature</name>
 					<description>URL JSON STATE</description>
-                    <affichage>heater</affichage>
+                    <affichage>pulse</affichage>
                     <type>json</type>
                     <unit>°C</unit>
                     <text>state</text> 
