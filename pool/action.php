@@ -199,9 +199,8 @@ switch($_['action']){
 	    // no "action" parameter, do we have one from PCL?, we flag it as such for the JSON return value to be properly formatted
 	    if (isset($_GET['SwitchFilterPCL'])){
 	        $_['action'] = "PCL";
-            $result['state']  = "value: ".$_GET['SwitchFilterPCL'];
-            
-            
+            setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPCL']);
+            $result['state']  = "value: ".getPin($pins[$materials["filtration"]]);            
             
 	    }else if (isset($_GET['switchTreatment1PCL'])){
 	        $_['action'] = "PCL";
