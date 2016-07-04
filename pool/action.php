@@ -197,9 +197,7 @@ switch($_['action']){
 
 	default:
 	    // no "action" parameter, do we have one from PCL?
-	    $param=$_[0][0];
-	    echo "WRONG".$param;
-	    if ($param == "switchFilterPCL"){
+	    if ((isset($_GET['switchFilterPCL'])){
              $result['state']  = "switchFilterPCL";
 	    }else if (isset($_GET['switchTreatment1PCL'])){
 	        
