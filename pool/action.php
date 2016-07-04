@@ -41,12 +41,12 @@ switch($_['action']){
             }
         break;
 
-	case 'getTemperature':
+	case 'getTemp':
 	    $result['state'] = getTemperature();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	    
-	case 'getTemp':
+	case 'getTemp2':
 	    $result['state'] = getTemperature()."";
         echo json_encode($result);
 	    exit;	    
