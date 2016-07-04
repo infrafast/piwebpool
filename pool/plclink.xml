@@ -14,7 +14,7 @@
                     <unit>°C</unit>
                     <text>state</text> 
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?action=getTemperature</url>
+					<url>http://piweb.infrafast.com/action.php?action=getTemperature&format=json</url>
 				</item>
 			</items>
 		</room>
