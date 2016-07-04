@@ -240,13 +240,12 @@ switch($_['action']){
 	    if (isset($_GET['SwitchFilterPCL'])){
 	        $_['action'] = "PCL";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPCL']);
+            appendlualog("get from PCL: ".$_GET['SwitchFilterPCL']);
             $result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
-
 	    }else if (isset($_GET['switchTreatment1PCL'])){
 	        $_['action'] = "PCL";
 	    }else if (isset($_GET['getFilterStatePCL'])){
 	        $_['action'] = "PCL";
-	        $result['state']  = getPin($pins[$materials["filtration"]]); //getPin();
     	}else{    
         	$result['answer']  = "ERROR";
     		foreach($_ as $key=>$val){
