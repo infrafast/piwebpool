@@ -241,6 +241,7 @@ switch($_['action']){
 	        $_['action'] = "PCL";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPCL']);
             $result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
+            echo xml_encode($result); exit;
 	    }else if (isset($_GET['switchTreatment1PCL'])){
 	        $_['action'] = "PCL";
 	    }else if (isset($_GET['getFilterStatePCL'])){
