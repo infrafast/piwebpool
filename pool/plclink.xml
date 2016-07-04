@@ -15,16 +15,16 @@
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePLC</url>
 				</item>
-				<item id="2"> 
-					<title>Filtration</title>
-					<name>Pump</name>
-					<description>Etat pompe</description>
-                    <type>json</type>
-                    <text>state</text> 
+				<item id="0"> 
+					<title>ORP</title>
+					<name>ORP</name>
+					<description>Desynfectant (600-750mv) </description>
+                    <type>json</type><text>state</text> 
+                    <unit>°C</unit>
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?getFilterStatePLC</url>
-				</item>
-				<item id="1"> 
+					<url>http://piweb.infrafast.com/action.php?action=getORPPLC</url>
+				</item>				
+				<item id="3"> 
 					<title>Pompe</title>
 					<name>Pompe</name>
 					<description>Etat filtration</description>
