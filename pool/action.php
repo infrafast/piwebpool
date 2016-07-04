@@ -47,7 +47,7 @@ switch($_['action']){
 	    break;
 	    
 	case 'getTemp':
-        echo json_encode(getTemperature());
+        echo getTemperature();
 	    exit;	    
 	    
 	case 'getORP':
