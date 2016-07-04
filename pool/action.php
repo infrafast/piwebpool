@@ -54,6 +54,7 @@ switch($_['action']){
         break;
 
 	case 'getTemperature':
+	case 'getTemperaturePCL':
 	    $result['state'] = getTemperature();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
