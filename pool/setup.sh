@@ -65,7 +65,7 @@ sudo usermod -a -G webide www-data
 chmod g+w .
 chmod -R 0775 css js include
 #periodic execution of the script
-sudo ln -s /var/www/html/pumpScheduler/hourlycrontab.sh /etc/cron.hourly/poolScheduler
+sudo ln -s /var/www/html/pool/hourlycrontab.sh /etc/cron.hourly/poolScheduler
 #this is to access the ttyUSB0 from apache
 sudo usermod -a -G dialout www-data
 pause
@@ -85,7 +85,7 @@ echo "cloning Blockly"
 git clone https://github.com/google/blockly.git 
 
 #system startup and hardening
-#sudo echo "python /var/www/html/pumpScheduler/initUSB.py" >> /etc/rc.local
+#sudo echo "python /var/www/html/pool/initUSB.py" >> /etc/rc.local
 echo "Some remaining action have to be done manually"
 echo "Then, test with sudo ./hourlycrontab.sh"
 
