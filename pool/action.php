@@ -208,7 +208,6 @@ switch($_['action']){
 	        $result['state']  = getPin($pins[$materials["filtration"]]); //getPin();
     	}else{    
         	$result['answer']  = "ERROR";
-    		
     		foreach($_ as $key=>$val){
             	$param.=" ".$key.":".$val;
             	$_[$key]=secure($val);
