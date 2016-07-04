@@ -24,6 +24,7 @@ known bugs:
     - for very first installation, the updateCommandsGraphs() function generate following URL:
         http://piweb.infrafast.com/graph.php?graph=treatment2&period=168&width=0&height=0&type=barType
         size being 0, the graph generate a text -> invalid $this-ip image
+        the reason is that width and height are probably not set up properly or in the right order in the style property. 
         
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
