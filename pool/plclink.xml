@@ -27,8 +27,8 @@
 				<item id="1"> 
 					<title>Pompe</title>
 					<name>Filtration</name>
-					<description>Switch filter: </description>
-                    <type>json</type><text>state</text>
+					<description>Switch filter*** </description>
+                    <type>direct</type><text>state</text>
                     <affichage>switch</affichage>
                     <link>http://piweb.infrafast.com/action.php?SwitchFilterPCL=%d</link>
                     <url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
