@@ -198,7 +198,7 @@ switch($_['action']){
 	default:
 	    // no "action" parameter, do we have one from PCL?
 	    
-	    $param=$_key[0];
+	    $param=$_[0];
 	    if ($param == "switchFilterPCL"){
              $result['state']  = "switchFilterPCL";
 	    }else if (isset($_GET['switchTreatment1PCL'])){
@@ -208,7 +208,7 @@ switch($_['action']){
     	}else{    
         	$result['answer']  = "ERROR";
     		
-    		foreach($_POST as $key=>$val){
+    		foreach($_ as $key=>$val){
             	$_[$key]=secure($val);
             }
     		
