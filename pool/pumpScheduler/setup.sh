@@ -86,6 +86,7 @@ git clone https://github.com/google/blockly.git
 
 #system startup and hardening
 #sudo echo "python /var/www/html/pumpScheduler/initUSB.py" >> /etc/rc.local
-echo "Remaining action to be done manually are:"
+echo "Some remaining action have to be done manually"
+echo "Then, test with sudo ./hourlycrontab.sh"
 
 
