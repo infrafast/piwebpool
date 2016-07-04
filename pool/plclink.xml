@@ -7,7 +7,7 @@
 			<title>pool</title>
 			<items> 
 				<item id="0"> 
-					<title>Temperature</title>
+					<title>Temp piscine</title>
 					<display>block</display>
 					<name>Temperature</name>
 					<description>Temperature piscine</description>
