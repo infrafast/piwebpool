@@ -71,7 +71,7 @@ PLATFORM SETUP FROM SCRACTH
     FromLineOverride=YES
 
 /etc/ssmtp/revaliases
-    "www-data:admin@infrafast.com:mail.gandi.net:587" >> 
+    "www-data:admin@infrafast.com:mail.gandi.net:587"
 
 6) install blockly
 
