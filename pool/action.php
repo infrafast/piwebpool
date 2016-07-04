@@ -202,6 +202,7 @@ switch($_['action']){
 
 $returnValue = json_encode($result);
 
+// in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
 if (strpos($_['action'], 'PCL') === false) {
     $returnValue = '('.$returnValue.')';
 }
