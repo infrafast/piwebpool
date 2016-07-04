@@ -70,6 +70,10 @@ PLATFORM SETUP FROM SCRACTH
     rewriteDomain=infrafast.com
     FromLineOverride=YES
 
+
+6) install blockly
+
+
 ---------------------------------------------------------
 HISTORICAL NOTES
 -------------------------------------------------------------------
