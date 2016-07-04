@@ -9,13 +9,23 @@
 				<item id="0"> 
 					<title>Temperature</title>
 					<name>Temperature</name>
-					<description>Eau à PCL</description>
+					<description>Eau à </description>
                     <type>json</type>
                     <unit>°C</unit>
                     <text>state</text> 
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePCL</url>
 				</item>
+				
+				<item id="1"> 
+					<title>Pompe</title>
+					<name>Pompe</name>
+					<description>Status filtration</description>
+                    <IW>1</IW>
+                    <affichage>switch</affichage>
+                    <link>http://piweb.infrafast.com/action.php?SwitchFiler=%d</link>
+				</item>
+				
 			</items>
 		</room>
 	</rooms>
