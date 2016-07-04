@@ -9,7 +9,7 @@
 				<item id="0"> 
 					<title>Temperature</title>
 					<name>Temperature</name>
-					<description>URL JSON OK</description>
+					<description>URL JSON</description>
                     <type>json</type>
                     <unit>°C</unit>
                     <text>state</text> 
