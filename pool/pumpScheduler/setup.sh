@@ -8,25 +8,32 @@ pause(){
 # php-pear and php5-dev are for pecl and compliation of lua for php
 #note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
 #php5-gd is for image png generation
+echo "DOWNLOADING AND SETTING UP ALL NECESSARY PACKAGES"
 sudo apt-get --assume-yes install apache2 php5 php5-mysql php5-gd ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev python-serial
 pause
 
-# installing and compiling LUA for PHP
-echo NOW SETTING UP LUA FOR PHP
+# installing and compiling LUA 
+echo "NOW CONFIGURING LUA  (symlink and lobrary copy)"
 sudo ln -s /usr/include/lua5.1 /usr/include/lua
 sudo ln -s /usr/include/lua5.1/* /usr/include
 sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.a /usr/lib/liblua.a
 sudo cp /usr/lib/arm-linux-gnueabihf/liblua5.1.so /usr/lib/liblua.so
+pause
+echo "DOWNLOADING LUA FOR PHP"
 #to be noticed: install via PECL is not working because 1.1.0 lead to compliation error -> sudo pecl install lua-1.1.0  fail
 #therefore, we download 1.0.0 and compile it /set it up manually
 wget https://pecl.php.net/get/lua-1.0.0.tgz
 tar zxvf lua-1.0.0.tgz
 cd lua-1.0.0
 phpize
+pause
+echo COMPLILING LUA FOR PHP
 ./configure --with-php-config=/usr/bin/php-config --with-lua=/usr/bin/lua
 sudo make
 sudo make install
 cd ..
+pause
+echo "REMOVING TEMP FILES"
 sudo rm -rf lua-1.0.0*
 
 #website
