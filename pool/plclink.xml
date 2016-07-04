@@ -33,8 +33,6 @@
                     <link>http://piweb.infrafast.com/action.php?SwitchFilterPCL=%d</link>
                     <url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
 				</item>
-
-				
 			</items>
 		</room>
 	</rooms>
