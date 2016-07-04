@@ -47,7 +47,7 @@ switch($_['action']){
 	    break;
 	    
 	case 'getTemp':
-        echo  return preg_replace( "/\r|\n/", "", getTemperature()."");
+        echo preg_replace( "/\r|\n/", "", getTemperature()."");
         exit;	    
 	    
 	case 'getORP':
