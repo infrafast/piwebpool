@@ -201,6 +201,12 @@ switch($_['action']){
 }
 
 $returnValue = json_encode($result);
+
+if (strpos($_['action'], 'PCL') === false) {
+    echo 'true';
+}
+
+
 echo '('.$returnValue.')';
 
 ?>
