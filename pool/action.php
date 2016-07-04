@@ -66,6 +66,7 @@ switch($_['action']){
 	    break;
 
 	case 'getPh':
+	case 'getPhPCL':
 	    $result['state'] = getPh();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
