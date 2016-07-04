@@ -18,9 +18,9 @@
 				<item id="1"> 
 					<title>ORP</title>
 					<name>ORP</name>
-					<description>Desynfectant (600-750mv) </description>
+					<description>Desynfectant (600-750) </description>
                     <type>json</type><text>state</text> 
-                    <unit>°C</unit>
+                    <unit>mV</unit>
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getORPPLC</url>
 				</item>				
