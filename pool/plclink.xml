@@ -26,7 +26,7 @@
 				</item>
 				<item id="1"> 
 					<title>Pompe</title>
-					<name>Filtration</name>
+					<name>Pompe</name>
 					<description>Etat filtration</description>
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
