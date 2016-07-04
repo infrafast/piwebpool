@@ -203,10 +203,8 @@ switch($_['action']){
 $returnValue = json_encode($result);
 
 if (strpos($_['action'], 'PCL') === false) {
-    echo 'true';
+    $returnValue = '('.$returnValue.')';
 }
-
-
-echo '('.$returnValue.')';
+echo $returnValue;
 
 ?>
