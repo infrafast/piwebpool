@@ -21,7 +21,7 @@ TODO LIST
     - implement i18n
 
 known bugs:
-    - for very first installation, the updateCommandGraph function generate following URL:
+    - for very first installation, the updateCommandsGraphs() function generate following URL:
         http://piweb.infrafast.com/graph.php?graph=treatment2&period=168&width=0&height=0&type=barType
         size being 0, the graph generate a text -> invalid $this-ip image
 
