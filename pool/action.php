@@ -46,6 +46,11 @@ switch($_['action']){
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	    
+	case 'getTemp':
+	    $result['state'] = getTemperature()."";
+        echo json_encode($result);
+	    exit;	    
+	    
 	case 'getORP':
 	    $result['state'] = getORP();
 	    if ($result['state']==false) $result['answer']="ERROR";
