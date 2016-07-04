@@ -11,7 +11,7 @@
 					<display>block</display>
 					<name>Temp</name>
 					<description>Temperature piscine</description>
-					<type>text</type>
+					<type>json</type>
 					<unit>°C</unit>
 					<format>%f</format>
 					<affichage>text</affichage>
