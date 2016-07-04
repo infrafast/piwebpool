@@ -200,10 +200,10 @@ switch($_['action']){
 	    }else if (isset($_GET['getFilterStatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
-	    }else if (isset($_GET['getgetFilterStatePLC'])){
+	    }else if (isset($_GET['getgetTreatment1StatePLC'])){
 	        $_['action'] = "PLC";
-	        $result['state'] = getPin($pins[$materials["filtration"]]);
-    	}else{    
+	        $result['state'] = getPin($pins[$materials["treatment1"]]);
+	    }else{    
         	$result['answer']  = "ERROR";
     		foreach($_ as $key=>$val){
             	$param.=" ".$key.":".$val;
