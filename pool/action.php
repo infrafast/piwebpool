@@ -205,7 +205,7 @@ switch($_['action']){
 	        
 	    }else if (isset($_GET['getFilterStatePCL'])){
 	        $_['action'] = "PCL";
-	        $result['state']  = $pins[$materials["traitement1"]]; //getPin();
+	        $result['state']  = $pins[$materials["traitement2"]]; //getPin();
     	}else{    
         	$result['answer']  = "ERROR";
     		
