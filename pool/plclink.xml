@@ -15,7 +15,7 @@
 					<unit>°C</unit>
 					<format>%f</format>
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?action=getTemperature</url>
+					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
 				</item>
 			</items>
 		</room>
