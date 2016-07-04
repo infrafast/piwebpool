@@ -11,6 +11,18 @@ $result['state']  = "undef";
 $result['answer']  = 'OK';
 
 switch($_['action']){
+
+
+// ACTION FOR PCLLINK (PURE JSON QUERY)
+	case 'getTemp':
+	    $result['state'] = getTemperature();
+	    //$result['state'] = getTemperature();   // no "" WORKS!!! 
+        echo json_encode($result);
+	    exit;	    
+
+
+// ACTION FOR WEBAPP (JSON QUERY UNDER BRACKET)
+
     
     case 'calibrate':
         switch($_['id']){
