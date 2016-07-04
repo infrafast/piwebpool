@@ -247,6 +247,7 @@ switch($_['action']){
 	    }else if (isset($_GET['getFilterStatePCL'])){
 	        $_['action'] = "PCL";
 	        $result['state']  = getPin($pins[$materials["filtration"]]); //getPin();
+	        echo xml_encode($result); exit;
     	}else{    
         	$result['answer']  = "ERROR";
     		foreach($_ as $key=>$val){
