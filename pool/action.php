@@ -18,9 +18,10 @@ switch($_['action']){
 	    $result['state'] = getTemperature();
 	    if  ($result['state']==false)  $result['state']="ERR";
 	    //$result['state'] = getTemperature();   // no "" WORKS!!! 
-        echo json_encode($result);
-	    exit;	    
 
+
+        echo json_encode($result);
+        exit;
 
 // ACTION FOR WEBAPP (JSON QUERY UNDER BRACKET)
 
