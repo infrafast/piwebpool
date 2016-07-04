@@ -192,6 +192,7 @@ switch($_['action']){
 	break;
 }
 
-echo '('.json_encode($result).')';
+$returnValue = json_encode($result);
+echo '('.$returnValue.')';
 
 ?>
