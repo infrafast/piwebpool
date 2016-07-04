@@ -10,7 +10,7 @@
 					<title>Temperature</title>
 					<display>block</display>
 					<name>Temperature</name>
-					<description>Temperature piscine</description>
+					<description>Temperature piscine TEXT</description>
 					<type>text</type>
 					<unit>°C</unit>
 					<affichage>text</affichage>
