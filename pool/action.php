@@ -208,7 +208,7 @@ switch($_['action']){
 
     	}else{    
         	$result['answer']  = "ERROR";
-    		$result['state'] = 'Undefined action '.$_['action'];
+    		$result['state'] = 'Undefined action '.$param;
 	    }
 	break;
 }
