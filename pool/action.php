@@ -48,7 +48,7 @@ switch($_['action']){
 	    
 	case 'getTemp':
 	    $result['state'] = getTemperature();
-	    //$result['state'] = getTemperature();   // WORKS!!!
+	    //$result['state'] = getTemperature();   // no "" WORKS!!! 
         echo json_encode($result);
 	    exit;	    
 	    
