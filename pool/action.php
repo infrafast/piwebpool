@@ -18,8 +18,6 @@ switch($_['action']){
 	    $result['state'] = getTemperature();
 	    if  ($result['state']==false)  $result['state']="ERR";
 	    //$result['state'] = getTemperature();   // no "" WORKS!!! 
-
-
         echo json_encode($result);
         exit;
 
