@@ -50,7 +50,7 @@ function xml_encode($mixed,$domElement=null,$DOMDocument=null){
 
 
 
-// actions compatibles WEB et PCLLINK
+// actions compatibles WEB et PLC Link
 switch($_['action']){
 
 // ACTION FOR PCLLINK (PURE JSON QUERY)
@@ -93,19 +93,19 @@ switch($_['action']){
         break;
 
 	case 'getTemperature':
-	case 'getTemperaturePCL':
+	case 'getTemperaturePLC':
 	    $result['state'] = getTemperature();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	    
-    case 'getORPPCL':
+    case 'getORPPLC':
 	case 'getORP':
 	    $result['state'] = getORP();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 
 	case 'getPh':
-	case 'getPhPCL':
+	case 'getPhPLC':
 	    $result['state'] = getPh();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
@@ -261,7 +261,7 @@ switch($_['action']){
 $returnValue = json_encode($result);
 
 // in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
-if (strpos($_['action'], 'PCL') === false) {
+if (strpos($_['action'], 'PLC') === false) {
     $returnValue = '('.$returnValue.')';
 }
 echo $returnValue;
