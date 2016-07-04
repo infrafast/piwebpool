@@ -30,7 +30,7 @@
 					<description>Etat filtration</description>
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
-                    <link>http://piweb.infrafast.com/action.php?SwitchFilterPLC=%d</link>
+                    <wagolink>http://piweb.infrafast.com/action.php?SwitchFilterPLC=%d</wagolink>
                     <url>http://piweb.infrafast.com/action.php?getFilterStatePLC</url>
 				</item>
 			</items>
