@@ -10,8 +10,8 @@ require_once('luaContext.php');
 $result['state']  = "undef";
 $result['answer']  = 'OK';
 
+// actions compatibles WEB et PCLLINK
 switch($_['action']){
-
 
 // ACTION FOR PCLLINK (PURE JSON QUERY)
 	case 'getTemp':
@@ -23,7 +23,6 @@ switch($_['action']){
 
 // ACTION FOR WEBAPP (JSON QUERY UNDER BRACKET)
 
-    
     case 'calibrate':
         switch($_['id']){
             case 'Ph':
@@ -197,7 +196,12 @@ switch($_['action']){
        break;
 
 	default:
-		$result['answer']  = "ERROR";
+	    // no "action" parameter, do we have one from PCL?
+	    switch($_['switchFilterPCL']){
+	    
+	    
+	    default:    
+    	$result['answer']  = "ERROR";
 		$result['state'] = 'Undefined action '.$_['action'];
 	break;
 }
