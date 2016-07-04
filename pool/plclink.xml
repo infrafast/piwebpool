@@ -12,8 +12,6 @@
 					<name>Temp pool JSON</name>
 					<description>Temperature piscine</description>
 					<type>json</type>
-					<unit>°C</unit>
-					<format>%f</format>
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
 				</item>
