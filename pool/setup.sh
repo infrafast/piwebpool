@@ -62,7 +62,7 @@ pause
 echo "setting up permission and others"
 sudo chmod 774 /etc/ssmtp/ssmtp.conf
 sudo usermod -a -G webide www-data
-chmod g+w .
+chmod g+w ../pool
 chmod -R 0775 css js include
 #periodic execution of the script
 sudo ln -s /var/www/html/pool/hourlycrontab.sh /etc/cron.hourly/poolScheduler
