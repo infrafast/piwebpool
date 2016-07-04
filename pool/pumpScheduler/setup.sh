@@ -47,7 +47,7 @@ pause
 #database
 #at the end, need to have only one master sql file that do everything
 echo "create database"
-mysql pool -uroot -pQuintal74605 < ./sql/create.sql
+mysql -uroot -pQuintal74605 < ./sql/create.sql
 echo "create measures table"
 mysql pool -uroot -pQuintal74605 < ./sql/measures.sql
 echo "create pump schedule table"
