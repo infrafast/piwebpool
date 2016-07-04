@@ -12,7 +12,7 @@
 					<description>URL JSON</description>
                     <affichage>text</affichage>
                     <type>json</type>
-                    <text>temp</text> 
+                    <text>state</text> 
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
 				</item>
 			</items>
