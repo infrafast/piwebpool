@@ -11,7 +11,7 @@
 					<display>block</display>
 					<name>Temperature</name>
 					<description>URL JSON</description>
-					<type>json</type>
+					<type>text</type>
 					<unit>°C</unit>
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
