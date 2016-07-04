@@ -13,7 +13,7 @@
                     <type>json</type><text>state</text> 
                     <unit>°C</unit>
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePCL</url>
+					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePLC</url>
 				</item>
 				<item id="2"> 
 					<title>Filtration</title>
@@ -22,7 +22,7 @@
                     <type>json</type>
                     <text>state</text> 
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
+					<url>http://piweb.infrafast.com/action.php?getFilterStatePLC</url>
 				</item>
 				<item id="1"> 
 					<title>Pompe</title>
