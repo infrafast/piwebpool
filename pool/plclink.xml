@@ -10,7 +10,7 @@
 					<title>Temperature</title>
 					<display>block</display>
 					<name>Temperature</name>
-					<description>Temperature piscine URL JSON</description>
+					<description>URL JSON</description>
 					<type>json</type>
 					<unit>°C</unit>
 					<affichage>text</affichage>
