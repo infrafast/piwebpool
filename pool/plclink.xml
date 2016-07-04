@@ -9,7 +9,7 @@
 				<item id="0"> 
 					<title>Temperature</title>
 					<display>block</display>
-					<name>Temp pool JSON</name>
+					<name>Temp pool JSON simple</name>
 					<description>Temperature piscine</description>
 					<type>json</type>
 					<affichage>text</affichage>
