@@ -194,7 +194,7 @@ switch($_['action']){
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
             appendlualog("get from PLC: ".$_GET['SwitchFilterPCL']);
             $result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
-	    }else if (isset($_GET['switchTreatment1PCL'])){
+	    }else if (isset($_GET['switchTreatment1PLC'])){
 	        $_['action'] = "PLC";
 	    }else if (isset($_GET['getFilterStatePLC'])){
 	        $_['action'] = "PLC";
