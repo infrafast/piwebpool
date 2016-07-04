@@ -10,7 +10,7 @@
 					<title>Temperature</title>
 					<name>Temperature</name>
 					<description>URL JSON</description>
-					<type>text</type>
+					<type>json</type>
 					<unit>°C</unit>
 					<affichage>bit</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
