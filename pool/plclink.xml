@@ -8,11 +8,11 @@
 			<items> 
 				<item id="0"> 
 					<title>Temperature</title>
-					
 					<name>Temperature</name>
 					<description>URL JSON</description>
 					<type>text</type>
 					<unit>°C</unit>
+					<format>%x</format>
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
 				</item>
