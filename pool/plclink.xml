@@ -31,7 +31,7 @@
 					<description>Switch filtration</description>
                     <IW>1</IW>
                     <affichage>switch</affichage>
-                    <link>http://piweb.infrafast.com/action.php?SwitchFiler=%d</link>
+                    <link>http://piweb.infrafast.com/action.php?SwitchFilter=%d</link>
                     <url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
 				</item>
 
