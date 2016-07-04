@@ -17,15 +17,6 @@
 					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePCL</url>
 				</item>
 				<item id="1"> 
-					<title>Pompe</title>
-					<name>Pompe</name>
-					<description>Switch filtration</description>
-                    <IW>1</IW>
-                    <affichage>switch</affichage>
-                    <link>http://piweb.infrafast.com/action.php?SwitchFiler=%d</link>
-                    <url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
-				</item>
-				<item id="2"> 
 					<title>Filtration</title>
 					<name>Filtration</name>
 					<description>Etat pompe</description>
@@ -33,6 +24,15 @@
                     <text>state</text> 
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
+				</item>
+				<item id="2"> 
+					<title>Pompe</title>
+					<name>Pompe</name>
+					<description>Switch filtration</description>
+                    <IW>1</IW>
+                    <affichage>switch</affichage>
+                    <link>http://piweb.infrafast.com/action.php?SwitchFiler=%d</link>
+                    <url>http://piweb.infrafast.com/action.php?getFilterStatePCL</url>
 				</item>
 
 				
