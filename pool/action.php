@@ -59,6 +59,7 @@ switch($_['action']){
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	    
+    case 'getORPPCL':
 	case 'getORP':
 	    $result['state'] = getORP();
 	    if ($result['state']==false) $result['answer']="ERROR";
