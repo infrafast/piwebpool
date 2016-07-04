@@ -28,7 +28,7 @@
 				<item id="1"> 
 					<title>Pompe</title>
 					<name>Pompe</name>
-					<description>Switch filtration</description>
+					<description>Switch filtration: </description>
 
                     <affichage>switch</affichage>
                     <link>http://piweb.infrafast.com/action.php?SwitchFilterPCL=%d</link>
