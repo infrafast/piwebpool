@@ -27,7 +27,7 @@
 				<item id="1"> 
 					<title>Pompe</title>
 					<name>Filtration</name>
-					<description>Switch filter{} </description>
+					<description>Switch filter=</description>
                     <type>direct</type>
                     <affichage>switch</affichage>
                     <link>http://piweb.infrafast.com/action.php?SwitchFilterPCL=%d</link>
