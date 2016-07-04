@@ -70,6 +70,8 @@ PLATFORM SETUP FROM SCRACTH
     rewriteDomain=infrafast.com
     FromLineOverride=YES
 
+/etc/ssmtp/revaliases
+    "www-data:admin@infrafast.com:mail.gandi.net:587" >> 
 
 6) install blockly
 
