@@ -240,7 +240,8 @@ switch($_['action']){
 	    if (isset($_GET['SwitchFilterPCL'])){
 	        $_['action'] = "PCL";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPCL']);
-            $result['state'] = "".getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
+            //$result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
+            $result['state'] = "on";
 	    }else if (isset($_GET['switchTreatment1PCL'])){
 	        $_['action'] = "PCL";
 	    }else if (isset($_GET['getFilterStatePCL'])){
