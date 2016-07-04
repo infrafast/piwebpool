@@ -210,7 +210,7 @@ switch($_['action']){
             	$param.=" ".$key.":".$val;
             	$_[$key]=secure($val);
             }
-    		$result['state'] = 'Undefined action '.$param;
+    		$result['state'] = 'Undefined call '.$param;
 	    }
 	break;
 }
