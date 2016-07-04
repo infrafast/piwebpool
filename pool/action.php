@@ -42,7 +42,7 @@ switch($_['action']){
         break;
 
 	case 'getTemp':
-	    $result['state'] = getTemperature();
+	    $result['state'] = "".getTemperature();
 	    if ($result['state']==false) $result['answer']="ERROR";
 	    break;
 	    
