@@ -47,7 +47,7 @@ switch($_['action']){
 	    break;
 	    
 	case 'getTemp':
-	    $result['state'] = getTemperature();
+	    $result['state'] = getTemperature()."";
         echo json_encode($result);
 	    exit;	    
 	    
