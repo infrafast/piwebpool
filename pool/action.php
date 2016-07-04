@@ -198,11 +198,12 @@ switch($_['action']){
 	default:
 	    // no "action" parameter, do we have one from PCL?
 	    switch($_['switchFilterPCL']){
+        
 	    
-	    
-	    default:    
-    	$result['answer']  = "ERROR";
-		$result['state'] = 'Undefined action '.$_['action'];
+    	    default:    
+        	$result['answer']  = "ERROR";
+    		$result['state'] = 'Undefined action '.$_['action'];
+	    }
 	break;
 }
 
