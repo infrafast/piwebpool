@@ -47,8 +47,8 @@ switch($_['action']){
 	    break;
 	    
 	case 'getTemp':
-        echo preg_replace( "/\r|\n/", "", getTemperature()."");
-        exit;	    
+        echo json_encode(getTemperature());
+	    exit;	    
 	    
 	case 'getORP':
 	    $result['state'] = getORP();
