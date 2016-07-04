@@ -200,7 +200,7 @@ switch($_['action']){
 	    }else if (isset($_GET['getFilterStatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
-	    }else if (isset($_GET['getgetTreatment1StatePLC'])){
+	    }else if (isset($_GET['getTreatment1StatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["treatment1"]]);
 	    }else{    
