@@ -8,7 +8,7 @@
 			<items> 
 				<item id="0"> 
 					<title>Temperature</title>
-					<display>not</display>
+					<display>block</display>
 					<name>Temperature</name>
 					<description>Temperature piscine</description>
 					<type>text</type>
