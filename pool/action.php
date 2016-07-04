@@ -209,9 +209,9 @@ switch($_['action']){
         	$result['answer']  = "ERROR";
     		
     		foreach($_ as $key=>$val){
+            	$param.=$key.":".$val;
             	$_[$key]=secure($val);
             }
-    		
     		$result['state'] = 'Undefined action '.$param;
 	    }
 	break;
