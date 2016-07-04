@@ -32,8 +32,8 @@ echo "COMPILING LUA FOR PHP"
 sudo make
 sudo make install
 cd ..
-pause
 echo "REMOVING TEMP FILES"
+pause
 sudo rm -rf lua-1.0.0*
 
 #website
