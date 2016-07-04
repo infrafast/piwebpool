@@ -68,6 +68,8 @@ chmod -R 0775 css js include
 sudo ln -s /var/www/html/pumpScheduler/hourlycrontab.sh /etc/cron.hourly/pumpScheduler
 #this is to access the ttyUSB0 from apache
 sudo usermod -a -G dialout www-data
+echo "www-data:admin@infrafast.com:mail.gandi.net:587" >> /etc/ssmtp/revaliases add
+     
 pause
 
 #
