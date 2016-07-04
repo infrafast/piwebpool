@@ -9,7 +9,7 @@
 				<item id="0"> 
 					<title>Temperature</title>
 					<name>Temperature</name>
-					<description>URL JSON</description>
+					<description>URL JSON STATE</description>
                     <affichage>text</affichage>
                     <type>json</type>
                     <text>state</text> 
