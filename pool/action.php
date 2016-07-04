@@ -238,14 +238,14 @@ switch($_['action']){
 	default:
 	    // no "action" parameter, do we have one from PCL?, we flag it as such for the JSON return value to be properly formatted
 	    if (isset($_GET['SwitchFilterPCL'])){
-	        $_['action'] = "PCL";
+	        $_['action'] = "PLC";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPCL']);
-            appendlualog("get from PCL: ".$_GET['SwitchFilterPCL']);
+            appendlualog("get from PLC: ".$_GET['SwitchFilterPCL']);
             $result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
 	    }else if (isset($_GET['switchTreatment1PCL'])){
-	        $_['action'] = "PCL";
+	        $_['action'] = "PLC";
 	    }else if (isset($_GET['getFilterStatePCL'])){
-	        $_['action'] = "PCL";
+	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
     	}else{    
         	$result['answer']  = "ERROR";
