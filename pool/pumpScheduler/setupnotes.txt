@@ -20,6 +20,8 @@ TODO LIST
     - implement forecast / interpretation of the data
     - implement i18n
     - persistant variable
+    - variable "jour" dans blockly (getDate())
+    
 
 known bugs:
     - for very first installation, the updateCommandsGraphs() function generate following URL:
