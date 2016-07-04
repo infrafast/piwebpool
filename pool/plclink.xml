@@ -11,9 +11,8 @@
 					<display>block</display>
 					<name>Temperature</name>
 					<description>Temperature piscine</description>
-					<type>json</type>
+					<type>text</type>
 					<unit>°C</unit>
-					<format>%f</format>
 					<affichage>text</affichage>
 					<link>http://piweb.infrafast.com/action.php?action=getTemp</link>
 				</item>
