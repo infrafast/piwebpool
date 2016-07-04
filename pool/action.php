@@ -200,6 +200,9 @@ switch($_['action']){
 	    if (isset($_GET['SwitchFilterPCL'])){
 	        $_['action'] = "PCL";
             $result['state']  = "value: ".$_GET['SwitchFilterPCL'];
+            
+            
+            
 	    }else if (isset($_GET['switchTreatment1PCL'])){
 	        $_['action'] = "PCL";
 	        
