@@ -38,7 +38,7 @@ sudo rm -rf lua-1.0.0*
 
 #website
 echo "CONFIGURING APACHE"
-sudo ln -s /usr/share/adafruit/webide/repositories/my-pi-projects/pool/pumpScheduler /var/www/html/
+sudo ln -s /usr/share/adafruit/webide/repositories/piweb/pool/pumpScheduler /var/www/html/
 #document root to be DocumentRoot /var/www/html/pumpScheduler
 sudo sed -i 's_DocumentRoot /var/www/html_DocumentRoot /var/www/html/pumpScheduler_' /etc/apache2/sites-available/000-default.conf
 sudo service apache2 restart
