@@ -12,7 +12,7 @@
 					<description>URL JSON</description>
 					<type>text</type>
 					<unit>°C</unit>
-					<affichage>text</affichage>
+					<affichage>heater</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
 				</item>
 			</items>
