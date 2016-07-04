@@ -10,9 +10,8 @@
 					<title>Temperature</title>
 					<name>Temperature</name>
 					<description>Eau à </description>
-                    <type>json</type>
+                    <type>json</type><text>state</text> 
                     <unit>°C</unit>
-                    <text>state</text> 
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePCL</url>
 				</item>
