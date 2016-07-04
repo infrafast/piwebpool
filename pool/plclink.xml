@@ -12,6 +12,7 @@
 					<description>URL JSON STATE</description>
                     <affichage>text</affichage>
                     <type>json</type>
+                    <unit>°C</unit>
                     <text>state</text> 
 					<url>http://piweb.infrafast.com/action.php?action=getTemp</url>
 				</item>
