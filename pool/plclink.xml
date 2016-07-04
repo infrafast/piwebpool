@@ -29,7 +29,7 @@
 					<title>Pompe</title>
 					<name>Pompe</name>
 					<description>Switch filter: </description>
-                    <type>json</type>
+                    <type>text</type>
                     <affichage>switch</affichage>
                     <text>state</text>
                     <link>http://piweb.infrafast.com/action.php?SwitchFilterPCL=%d</link>
