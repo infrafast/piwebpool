@@ -4,7 +4,7 @@
 	<title>piweb</title>
 	<rooms> 
 		<room id="0"> 
-			<title>pool</title>
+			<title>Piscine</title>
 			<items> 
 				<item id="0"> 
 					<title>Temperature</title>
