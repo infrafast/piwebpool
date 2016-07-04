@@ -7,9 +7,9 @@
 			<title>pool</title>
 			<items> 
 				<item id="0"> 
-					<title>Temp piscine</title>
+					<title>Temperature</title>
 					<display>block</display>
-					<name>Temperature</name>
+					<name>Temp</name>
 					<description>Temperature piscine</description>
 					<type>text</type>
 					<unit>°C</unit>
