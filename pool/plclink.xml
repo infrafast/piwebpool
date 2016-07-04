@@ -10,10 +10,12 @@
 					<title>Temperature</title>
 					<name>Temperature</name>
 					<description>URL JSON STATE</description>
-                    <affichage>pulse</affichage>
                     <type>json</type>
                     <unit>°C</unit>
                     <text>state</text> 
+                    <minimum>0</minimum>
+					<maximum>35</maximum>
+					<affichage>wheel</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemperature</url>
 				</item>
 			</items>
