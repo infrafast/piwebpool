@@ -19,6 +19,7 @@ TODO LIST
     - implement installation wizard
     - implement forecast / interpretation of the data
     - implement i18n
+    - persistant variable
 
 known bugs:
     - for very first installation, the updateCommandsGraphs() function generate following URL:
