@@ -15,7 +15,7 @@
                     <text>state</text> 
                     <minimum>0</minimum>
 					<maximum>35</maximum>
-					<affichage>bar</affichage>
+					<affichage>water</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getTemperature</url>
 				</item>
 			</items>
