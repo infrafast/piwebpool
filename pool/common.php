@@ -1,6 +1,6 @@
 <?php
 /*
- @nom: common
+ @nom: common 
  @auteur: Idleman (idleman@idleman.fr)
  @description: Page incluse dans tous (ou presque) les fichiers du projet, inclus les entitées SQL et récupère/traite les variables de requetes
 */
