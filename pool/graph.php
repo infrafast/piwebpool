@@ -96,49 +96,11 @@ $analyse = array(
 
 
 $hint = array(
-		    "pump"=>array("up"=>"pump up hint message",
-		                "down"=>"pump down hint message",
-		                "stable"=>"pump stable hint message"
+		    "ph"=>array("up"=>array("high"=>"","low"=>"","correct"=>""),
+		                "down"=>array("high"=>"","low"=>"","correct"=>""),
+		                "stable"=>array("high"=>"","low"=>"","correct"=>""),
 		                ),
-		                
-		    "pac"=>array("up"=>"pac up hint message",
-		                "down"=>"pac down hint message",
-		                "stable"=>"pac stable hint message"
-		                ),
-		                
-		    "treatment1"=>array("up"=>"treatment1 up hint message",
-		                "down"=>"treatment1 down hint message",
-		                "stable"=>"treatment1 stable hint message"
-		                ),
-		                
-		    "treatment2"=>array("up"=>"treatment2 up hint message",
-		                "down"=>"treatment2 down hint message",
-		                "stable"=>"treatment2 stable hint message"
-		                ),
-
-		    "ph"=>array("up"=>"ph up hint message",
-		                "down"=>"ph down hint message",
-		                "stable"=>"ph stable hint message",
-		                "high"=>"",
-		                "low"=>"",
-		                "correct"=>"",
-		                ),
-		                
-		    "orp"=>array("up"=>"orp up hint message",
-		                "down"=>"orp down hint message",
-		                "stable"=>"orp stable hint message",
-		                "high"=>"",
-		                "low"=>"",
-		                "correct"=>"",
-		                ),             		    
-		                
-		    "temperature"=>array("up"=>"temperature up hint message",
-		                "down"=>"temperature down hint message",
-		                "stable"=>"temperature stable hint message",
-		                "high"=>"",
-		                "low"=>"",
-		                "correct"=>"",
-		                )
+		    ""=>array("up"=>array(""))
             );
 
 // connect to the database
@@ -221,8 +183,7 @@ switch ($_GET["type"]){
         $text.="\nconclusion:".$trendIndicator;
         
         $text.="\n".$analyse[$_GET["graph"]][$trendIndicator];
-        $text.="\n".$hint[$_GET["graph"]][$trendIndicator];        
-    
+
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
 
