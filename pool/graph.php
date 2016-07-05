@@ -57,12 +57,12 @@ $analyse = array(
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
 		                "stable"=>"ph down message"),
-		    "orp"=>array("up"=>"ph up message",
-		                "down"=>"ph down message",
-		                "stable"=>"ph down message"),             		    
-		    "temperature"=>array("up"=>"ph up message",
-		                "down"=>"ph down message",
-		                "stable"=>"ph down message"),             
+		    "orp"=>array("up"=>"orp up message",
+		                "down"=>"orp down message",
+		                "stable"=>"orp down message"),             		    
+		    "temperature"=>array("up"=>"temperature up message",
+		                "down"=>"temperature down message",
+		                "stable"=>"temperature down message"),             
                 );
 
 // connect to the database
