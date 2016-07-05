@@ -166,6 +166,7 @@ switch ($_GET["type"]){
             break;
         }
 
+        $avg=($avg+$values[count($values)])/2;
         $diffVal = $avg-$reference;
         $ecartVal = $diffVal/$reference;
         $currentValueIndicator = "correct"; 
