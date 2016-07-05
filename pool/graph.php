@@ -170,14 +170,11 @@ switch ($_GET["type"]){
         $ecartVal = $diffVal/$reference;
         $currentValueIndicator = "correct"; 
         
-        if (ecartVal>0.6){ 
+        if ($ecartVal>0.6){ 
              $currentValueIndicator = "high";
-        }else if (ecartVal>0.4){ 
-             $currentValueIndicator = "";
-        }else if (ecartVal>0.2){ 
-             $currentValueIndicator = "Yellow";
-        }        
-        
+        }else if (ecartVal>-0.6){ 
+             $currentValueIndicator = "low";
+        }
         
 
         //$text.="\nTrend:".$trend;
