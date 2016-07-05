@@ -118,12 +118,18 @@ $hint = array(
 
 		    "ph"=>array("up"=>"ph up hint message",
 		                "down"=>"ph down hint message",
-		                "stable"=>"ph stable hint message"
+		                "stable"=>"ph stable hint message",
+		                "high"=>"",
+		                "low"=>"",
+		                "correct"=>"",
 		                ),
 		                
 		    "orp"=>array("up"=>"orp up hint message",
 		                "down"=>"orp down hint message",
-		                "stable"=>"orp stable hint message"
+		                "stable"=>"orp stable hint message",
+		                "high"=>"",
+		                "low"=>"",
+		                "correct"=>"",
 		                ),             		    
 		                
 		    "temperature"=>array("up"=>"temperature up hint message",
