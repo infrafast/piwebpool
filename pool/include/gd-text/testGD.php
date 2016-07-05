@@ -8,21 +8,19 @@ require "src/VerticalAlignment.php";
 
 use GDText\Box;
 use GDText\Color;
+$im = imagecreatetruecolor(500, 500);
+$backgroundColor = imagecolorallocate($im, 0, 18, 64);
+imagefill($im, 0, 0, $backgroundColor);
 
-$img = imagecreatefromjpeg('image.jpg');
+$box = new Box($im);
+$box->setFontFace(__DIR__.'/Pacifico.ttf'); // http://www.dafont.com/pacifico.font
+$box->setFontSize(80);
+$box->setFontColor([255, 255, 255]);
+$box->setTextShadow([0, 0, 0, 50], 0, -2);
+$box->setLeading(0.7);
+$box->setBox(20, 20, 460, 460);
+$box->setTextAlign('center', 'center');
+$box->draw("Pacifico");
 
-$textbox = new Box($img);
-$textbox->setFontSize(12);
-$textbox->setFontFace('arial.ttf');
-$textbox->setFontColor(new Color(0, 0, 0));
-$textbox->setBox(
-    50,  // distance from left edge
-    50,  // distance from top edge
-    200, // textbox width
-    100  // textbox height
-);
-
-// now we have to align the text horizontally and vertically inside the textbox
-$textbox->setTextAlign('center', 'top');
-// it accepts multiline text
-$textbox->draw("This is\na string of text");
+header("Content-type: image/png");
+imagepng($im);
