@@ -126,11 +126,7 @@ switch ($_GET["type"]){
         }
         $text.="\nTrend:".getTrend($values);
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
-        // treat message in function (periode). ex: forecast
-        // $data contains all info
-        
-        
-        
+
     default:
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
 
