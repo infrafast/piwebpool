@@ -210,11 +210,11 @@ switch ($_GET["type"]){
         //$text.="\nratio:".$ratio;
         //$text.="\ntrend:".$trendIndicator;
         //$text.="\nvalue:".$currentValueIndicator;
-        $text.="\navg:".$avg;
-        $text.="\nreference:".$reference;
-        $text.="\ndiffVal:".$diffVal;
-        $text.="\necartVal:".$ecartVal;
-        $text.="\ncurrentValueIndicator:".$currentValueIndicator;
+        //$text.="\navg:".$avg;
+        //$text.="\nreference:".$reference;
+        //$text.="\ndiffVal:".$diffVal;
+        //$text.="\necartVal:".$ecartVal;
+        //$text.="\ncurrentValueIndicator:".$currentValueIndicator;
         
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
 
