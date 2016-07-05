@@ -85,6 +85,47 @@ $analyse = array(
 		                )
             );
 
+
+$hint = array(
+		    "pump"=>array("up"=>"pump up hint message",
+		                "down"=>"pump down hint message",
+		                "stable"=>"pump stable hint message"
+		                ),
+		                
+		    "pac"=>array("up"=>"pac up hint message",
+		                "down"=>"pac down hint message",
+		                "stable"=>"pac stable hint message"
+		                ),
+		                
+		    "treatment1"=>array("up"=>"treatment1 up hint message",
+		                "down"=>"treatment1 down hint message",
+		                "stable"=>"treatment1 stable hint message"
+		                ),
+		                
+		    "treatment2"=>array("up"=>"treatment2 up hint message",
+		                "down"=>"treatment2 down hint message",
+		                "stable"=>"treatment2 stable hint message"
+		                ),
+
+		    "ph"=>array("up"=>"ph up hint message",
+		                "down"=>"ph down hint message",
+		                "stable"=>"ph stable hint message"
+		                ),
+		                
+		    "orp"=>array("up"=>"orp up hint message",
+		                "down"=>"orp down hint message",
+		                "stable"=>"orp stable hint message"
+		                ),             		    
+		                
+		    "temperature"=>array("up"=>"temperature up hint message",
+		                "down"=>"temperature down hint message",
+		                "stable"=>"temperature stable hint message"
+		                )
+            );
+
+
+
+
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
