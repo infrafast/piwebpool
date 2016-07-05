@@ -1,6 +1,58 @@
 
+fieldset
+{
+border: none;
+padding: 0;
+}
+
+form {
+  padding: 1em;
+}
+
+table
+{
+font-size: 0.9em;
+width: 100%;
+background-color: #ffffff;
+padding: 1em;
+}
+
+tr.odd
+{
+background-color: #eaeaea;
+}
+
+tr.noDataRow td {
+  text-align: center;
+}
+
+table th.title
+{
+text-align: center;
+}
 
 
+th,td
+{
+text-align: left;
+}
+
+td
+{
+height: 1.6em;
+padding: 0 0.5em;
+}
+
+td.editable
+{
+width: 200px;
+height: 22px;
+}
+
+th.sortable
+{
+cursor: pointer;
+}
 
 tr.loading {
   color: #dddddd;
