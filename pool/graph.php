@@ -175,7 +175,6 @@ switch ($_GET["type"]){
         }else if (ecartVal>-0.6){ 
              $currentValueIndicator = "low";
         }
-        
 
         //$text.="\nTrend:".$trend;
         //$text.="\naverage:".$avg;
