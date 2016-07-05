@@ -48,52 +48,6 @@ $cfg['box-border-visible']=false;
 
 $text=null;
 
-$analyse = array(
-		    "pump"=>array("up"=>"pump up message",
-		                "down"=>"pump down message",
-		                "stable"=>"pump stable message"
-		                ),
-		                
-		    "pac"=>array("up"=>"pac up message",
-		                "down"=>"pac down message",
-		                "stable"=>"pac stable message"
-		                ),
-		                
-		    "treatment1"=>array("up"=>"treatment1 up message",
-		                "down"=>"treatment1 down message",
-		                "stable"=>"treatment1 stable message"
-		                ),
-		                
-		    "treatment2"=>array("up"=>"treatment2 up message",
-		                "down"=>"treatment2 down message",
-		                "stable"=>"treatment2 stable message"
-		                ),
-
-		    "ph"=>array("up"=>"ph up message",
-		                "down"=>"ph down message",
-		                "stable"=>"ph stable message",
-		                "high"=>"",
-		                "low"=>"",
-		                "correct"=>"",
-		                ),
-		                
-		    "orp"=>array("up"=>"orp up message",
-		                "down"=>"orp down message",
-		                "stable"=>"orp stable message",
-		                "high"=>"",
-		                "low"=>"",
-		                "correct"=>"",
-		                ),             		    
-		                
-		    "temperature"=>array("up"=>"temperature up message",
-		                "down"=>"temperature down message",
-		                "stable"=>"temperature stable message",
-		                "high"=>"",
-		                "low"=>"",
-		                "correct"=>"",
-		                )
-            );
-
 
 $hint = array(
 		    "ph"=>array("up"=>array("high"=>"ph up high","low"=>"ph up low","correct"=>"ph up correct"),
@@ -197,7 +151,18 @@ switch ($_GET["type"]){
         if ($ratio>$threshold) $trendIndicator="up";
         if ($ratio<-$threshold) $trendIndicator="down";
         
-        $currentValueIndicator = "correct"; // low correct;
+        $currentValueIndicator = "correct"; 
+        switch ($_GET["graph"]){
+            case "ph":
+                
+            break;
+            case "orp";
+            
+            break;
+            default:
+            break;
+        }
+        
 
         //$text.="\nTrend:".$trend;
         //$text.="\naverage:".$avg;
