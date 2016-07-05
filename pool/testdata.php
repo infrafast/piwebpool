@@ -61,5 +61,6 @@ for ($x = 0; $x <= 10; $x++) {
         }
     }
     echo "\nph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue." pinVal:".$pinVal."\n";    
+    sleep(1);
 }
 ?>
