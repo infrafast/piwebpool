@@ -24,7 +24,7 @@ $PopulationOfTexas = array(
     1999 => 6.56, // in millions
     2000 => 6.45,
     2001 => 6.50,
-    2002 => 6.51
+    2002 => 6.55
 );
 
 //generate an array sohwing the difference in each year compared to the previous year
