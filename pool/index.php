@@ -193,7 +193,6 @@ $tableSettings = new TableGear($optionsSet);
         
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-        
         for (var tableID in collapsableTableList) {
           if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") document.getElementById(collapsableTableList[tableID]).click();
         }
