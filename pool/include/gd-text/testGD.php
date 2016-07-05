@@ -3,6 +3,8 @@
 require "src/Box.php";
 require "src/Color.php";
 require "src/TextWrapping.php";
+require "src/HorizontalAlignment.php";
+require "src/VerticalAlignment.php";
 
 use GDText\Box;
 use GDText\Color;
