@@ -156,7 +156,7 @@ switch ($_GET["type"]){
                 $text.="Ces dernières 8 heures,";
             break;
             case 24:
-                $text.="Lors de cette dernière journée,";
+                $text.="Au cours de cette dernière journée,";
             break;
             case 168:
                 $text.="Sur la semaine,";
