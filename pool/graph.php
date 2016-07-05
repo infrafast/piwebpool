@@ -125,6 +125,8 @@ switch ($_GET["type"]){
             $values[] =  $value;
         }
         $text.="\nTrend:".getTrend($values);
+        $text.="\naverage:".array_sum($values) / count($values);
+
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
 
     default:
