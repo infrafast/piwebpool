@@ -9,6 +9,8 @@ require "include/gd-text/TextWrapping.php";
 require "include/gd-text/HorizontalAlignment.php";
 require "include/gd-text/VerticalAlignment.php";
 
+use GDText\Box;
+use GDText\Color;
 
 //if(!isset($_GET['text'])) $_GET['text'] = "Hello, world!";
 //
