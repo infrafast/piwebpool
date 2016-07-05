@@ -27,7 +27,7 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
-function leastSquareFit(array $values) {
+function getTrend(array $values) {
     $x_sum = array_sum(array_keys($values));
     $y_sum = array_sum($values);
     $meanX = $x_sum / count($values);
