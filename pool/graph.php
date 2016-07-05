@@ -94,7 +94,7 @@ while ($row = mysql_fetch_assoc($result)){
 }
 //exit;
 
-header("Content-type: image/png");
+//header("Content-type: image/png");
 //Create phpMyGraph instance
 $graph = new phpMyGraph();
 //Parse
@@ -125,8 +125,8 @@ switch ($_GET["type"]){
             $values[] =  $value;
         }
         $text.="\nTrend:".getTrend($values);
-        //print_r($data); echo "<br>";
-        //print_r($values); echo "<br>".$text; exit;
+        print_r($data); echo "<br>";
+        print_r($values); echo "<br>".$text; exit;
         // treat message in function (periode). ex: forecast
         // $data contains all info
         
