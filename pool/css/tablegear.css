@@ -1,4 +1,13 @@
 
+
+body
+{
+margin: 0 auto;
+padding: 0 0px 0px 0px;
+font-family: Tahoma, Helvetica, Arial, sans-serif;
+background: #444;
+}
+
 fieldset
 {
 border: none;
