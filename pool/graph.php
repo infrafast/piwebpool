@@ -186,11 +186,11 @@ switch ($_GET["type"]){
         
         $currentValueIndicator = "correct"; // low correct;
 
-        $text.="\nTrend:".$trend;
-        $text.="\naverage:".$avg;
-        $text.="\nratio:".$ratio;
-        $text.="\ntrend:".$trendIndicator;
-        $text.="\nvalue:".$currentValueIndicator;
+        //$text.="\nTrend:".$trend;
+        //$text.="\naverage:".$avg;
+        //$text.="\nratio:".$ratio;
+        //$text.="\ntrend:".$trendIndicator;
+        //$text.="\nvalue:".$currentValueIndicator;
         
         $text.="\n".$analyse[$_GET["graph"]][$trendIndicator];
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
