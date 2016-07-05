@@ -72,6 +72,6 @@ if (!$result) {
     }
 }
 
-echo "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}";    
+echo "ok";    
 
 ?>
