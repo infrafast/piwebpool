@@ -71,17 +71,26 @@ $analyse = array(
 
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
-		                "stable"=>"ph stable message"
+		                "stable"=>"ph stable message",
+		                "high"=>"",
+		                "low"=>"",
+		                "correct"=>"",
 		                ),
 		                
 		    "orp"=>array("up"=>"orp up message",
 		                "down"=>"orp down message",
-		                "stable"=>"orp stable message"
+		                "stable"=>"orp stable message",
+		                "high"=>"",
+		                "low"=>"",
+		                "correct"=>"",
 		                ),             		    
 		                
 		    "temperature"=>array("up"=>"temperature up message",
 		                "down"=>"temperature down message",
-		                "stable"=>"temperature stable message"
+		                "stable"=>"temperature stable message",
+		                "high"=>"",
+		                "low"=>"",
+		                "correct"=>"",
 		                )
             );
 
@@ -122,8 +131,6 @@ $hint = array(
 		                "stable"=>"temperature stable hint message"
 		                )
             );
-
-
 
 
 // connect to the database
