@@ -159,6 +159,11 @@ switch ($_GET["type"]){
             case "orp";
             
             break;
+            case "temperature";
+            
+            break;
+        
+
             default:
             break;
         }
