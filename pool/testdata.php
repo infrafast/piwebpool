@@ -72,6 +72,6 @@ if (!$result) {
     }
 }
 
-echo "ph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue;    
+echo "\nph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue."\n";    
 
 ?>
