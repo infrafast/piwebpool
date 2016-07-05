@@ -8,6 +8,8 @@ require "src/VerticalAlignment.php";
 use GDText\Box;
 use GDText\Color;
 
+header("Content-type: image/png");
+
 $im = imagecreatetruecolor(500, 500);
 $backgroundColor = imagecolorallocate($im, 0, 18, 64);
 imagefill($im, 0, 0, $backgroundColor);
@@ -22,5 +24,4 @@ $box->setBox(20, 20, 460, 460);
 $box->setTextAlign('left', 'top');
 $box->draw("Franchise Bold");
 
-header("Content-type: image/png");
 ?>
