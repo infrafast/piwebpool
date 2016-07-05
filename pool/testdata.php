@@ -38,8 +38,8 @@ for ($x = 0; $x <= 128; $x++) {
             $state.="+".mysql_error();
         }else{
             
-            $phValue = getPh()+($x/2);
-            $orpValue = getORP()+($x*50);
+            $phValue = getPh();
+            $orpValue = getORP();
             $temperatureValue = getTemperature();
     		$pinVal=getVal();
     		
