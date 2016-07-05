@@ -115,11 +115,11 @@ switch ($_GET["type"]){
     case "textType":
         $text=$hint[$_GET["graph"]][0];
         $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
-        //$text.="\nTrend:".getTrend();
         $values = array();
-foreach ($data as $value) {
-    $values[] =  $value;
-}
+        foreach ($data as $value) {
+            $values[] =  $value;
+        }
+        $text.="\nTrend:".getTrend($values);
         print_r($values); exit;
         // treat message in function (periode). ex: forecast
         // $data contains all info
