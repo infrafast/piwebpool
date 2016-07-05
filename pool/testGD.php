@@ -4,7 +4,7 @@ require "includes/gd-text/Box.php";
 require "includes/gd-text/Color.php";
 require "includes/gd-text/TextWrapping.php";
 require "includes/gd-text/HorizontalAlignment.php";
-require "includes/gd-text//VerticalAlignment.php";
+require "includes/gd-text/VerticalAlignment.php";
 
 use GDText\Box;
 use GDText\Color;
