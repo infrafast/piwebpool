@@ -1,29 +1,4 @@
 
-tr.odd
-{
-background-color: #eaeaea;
-}
-
-tr.noDataRow td {
-  text-align: center;
-}
-
-table th.title
-{
-text-align: center;
-}
-
-
-th,td
-{
-text-align: left;
-}
-
-td
-{
-height: 1.6em;
-padding: 0 0.5em;
-}
 
 td.editable
 {
