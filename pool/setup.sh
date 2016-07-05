@@ -4,7 +4,7 @@ pause(){
  sed -n q </dev/tty
 }
 
-#necessary packages
+#necessary packages 
 # php-pear and php5-dev are for pecl and compliation of lua for php
 #note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
 #php5-gd is for image png generation
