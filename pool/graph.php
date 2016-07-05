@@ -133,6 +133,8 @@ switch ($_GET["type"]){
         if ($ratio>$threshold) $conclusion="up";
         if ($ratio<-$threshold) $conclusion="down";
 
+        //use the conclusion to get variable in array $hint by string name
+
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
         $text.="\nratio:".$ratio;
