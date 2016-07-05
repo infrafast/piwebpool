@@ -166,6 +166,9 @@ switch ($_GET["type"]){
             break;
         }
         $currentValueIndicator = "correct"; 
+        $diffVal = abs($avg - $reference);
+        
+        
         var ecartVal = diffVal/middleVal;
         var colorSensor;
         if (ecartVal>0.6){ 
