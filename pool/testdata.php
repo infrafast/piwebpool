@@ -59,6 +59,6 @@ for ($x = 0; $x <= 128; $x++) {
         }
     }
     echo "\n".$x."/".$measureIndex." ph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue." pinVal:".$pinVal."\n";    
-    sleep(0.5);
+    sleep(1);
 }
 ?>
