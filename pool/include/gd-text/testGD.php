@@ -23,4 +23,4 @@ $box->setTextAlign('left', 'top');
 $box->draw("Franchise Bold");
 
 header("Content-type: image/png");
-?> 
+?>
