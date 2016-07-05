@@ -27,25 +27,6 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
-function getTrend(array $values) {
-    return "coucou";
-    $x_sum = array_sum(array_keys($values));
-    $y_sum = array_sum($values);
-    $meanX = $x_sum / count($values);
-    $meanY = $y_sum / count($values);
-    // calculate sums
-    $mBase = $mDivisor = 0.0;
-    foreach($values as $i => $value) {
-        $mBase += ($i - $meanX) * ($value - $meanY);
-        $mDivisor += ($i - $meanX) * ($i - $meanX);
-    }
-
-    // calculate slope
-    $slope = $mBase / $mDivisor;
-    return $slope;
-}   //  function leastSquareFit()
-
-
 function sendsms($message){
     $SMSuser = "19107501";
     $SMSkey = "1NXCXBzJGbNsdb";
