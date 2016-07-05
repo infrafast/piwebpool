@@ -99,7 +99,7 @@ $hint = array(
 		    "ph"=>array("up"=>array("high"=>"ph up high","low"=>"ph up low","correct"=>"ph up correct"),
 		                "down"=>array("high"=>"ph down high","low"=>"ph down low","correct"=>"ph down correct"),
 		                "stable"=>array("high"=>"ph stable high","low"=>"ph stable low","correct"=>"ph stable correct"),
-		                ),
+		                )
             );
 
 // connect to the database
