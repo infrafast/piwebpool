@@ -1,22 +1,4 @@
 
-fieldset
-{
-border: none;
-padding: 0;
-}
-
-form {
-  padding: 1em;
-}
-
-table
-{
-font-size: 0.9em;
-width: 100%;
-background-color: #ffffff;
-padding: 1em;
-}
-
 tr.odd
 {
 background-color: #eaeaea;
