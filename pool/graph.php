@@ -116,7 +116,7 @@ switch ($_GET["type"]){
         $text=$hint[$_GET["graph"]][0];
         $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
         //$text.="\nTrend:".getTrend();
-        print_r(array_column($data,0)); exit;
+        print_r(array_column($data,1)); exit;
         // treat message in function (periode). ex: forecast
         // $data contains all info
         
