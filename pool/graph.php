@@ -127,10 +127,11 @@ switch ($_GET["type"]){
         $trend=getTrend($values);
         $avg=array_sum($values) / count($values);
         $ratio=$trend/$avg;
+        $threshold=0.008;
 
         $conclusion="stable";
-        if ($ratio>0.01) $conclusion="up";
-        if ($ratio<-0.01) $conclusion="down";
+        if ($ratio>$threshold) $conclusion="up";
+        if ($ratio<-$threshold) $conclusion="down";
 
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
