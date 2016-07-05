@@ -14,7 +14,7 @@ imagefill($im, 0, 0, $backgroundColor);
 
 $box = new Box($im);
 //$box->setFontFace('/usr/share/adafruit/webide/repositories/piweb/pool/include/gd-text/Roboto-Rggular.ttf'); // http://www.dafont.com/franchise.font
-$box->setFontFace(__DIR__.'Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
+$box->setFontFace(__DIR__.'test/LinLibertine_R.ttf'); // http://www.dafont.com/franchise.font
 $box->setFontColor(new Color(255, 75, 140));
 $box->setTextShadow(new Color(0, 0, 0, 50), 2, 2);
 $box->setFontSize(40);
