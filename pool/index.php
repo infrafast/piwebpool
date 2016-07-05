@@ -65,8 +65,8 @@ $optionsSet["selects"] = array(
 	"blocklyTable" => array("invisible" => 1, "visible" => 0),
 	"scheduler" => array("activé" => 1, "désactivé" => 0)
 ); 
-$optionsSet["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
-$optionsSet["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+$optionsSet["transform"]["logTable"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
+
 $tableSettings = new TableGear($optionsSet);
 
 
