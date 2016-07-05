@@ -59,7 +59,6 @@ $optionsSet["sortable"]  = "";
 $optionsSet["selects"] = array(
 	"userSetting" => array("visible" => 1, "invisible" => 0)
 ); 
-$optionsSet["transform"]["logTable"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $tableSettings = new TableGear($optionsSet);
 
 
