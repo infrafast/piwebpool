@@ -100,7 +100,6 @@ $hint = array(
 		                "down"=>array("high"=>"","low"=>"","correct"=>""),
 		                "stable"=>array("high"=>"","low"=>"","correct"=>""),
 		                ),
-		    ""=>array("up"=>array(""))
             );
 
 // connect to the database
