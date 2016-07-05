@@ -1,5 +1,9 @@
 <?php
-require __DIR__.'/../vendor/autoload.php';
+require "src/Box.php";
+require "src/Color.php";
+require "src/HorizontalAlignment.php";
+require "src/TextWrapping.php";
+require "src/VerticalAlignment.php";
 
 use GDText\Box;
 use GDText\Color;
