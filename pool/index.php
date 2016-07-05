@@ -388,6 +388,7 @@ $tableSettings = new TableGear($optionsSet);
             }
             element.classList.remove(currentGraphType);
             element.classList.add(nextGraphType);
+            updateGraph(element,'images/loading.gif?');
             updateGraph(element);
         }
           
