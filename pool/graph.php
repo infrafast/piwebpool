@@ -53,11 +53,16 @@ $analyse = array(
 			"pac"=>array("PAC message1","PAC message 2"),
 		    "treatment1"=>array("treatment1 message1","treatment1 message 2"),
     	    "treatment2"=>array("treatment2 message1","treatment2 message 2"),
+
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
 		                "stable"=>"ph down message"),
-		    "orp"=>array("orp message1","orp message 2"),              		    
-		    "temperature"=>array("temperature message1","temperature message 2")                
+		    "orp"=>array("up"=>"ph up message",
+		                "down"=>"ph down message",
+		                "stable"=>"ph down message"),             		    
+		    "temperature"=>array("up"=>"ph up message",
+		                "down"=>"ph down message",
+		                "stable"=>"ph down message"),             
                 );
 
 // connect to the database
