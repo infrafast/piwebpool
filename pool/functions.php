@@ -1,6 +1,7 @@
 <?php
 
 // inclure ici le fichier de la classe
+//
 require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
