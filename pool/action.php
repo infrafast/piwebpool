@@ -11,6 +11,9 @@ require_once('luaContext.php');
 $result['state']  = "undef";
 $result['answer']  = 'OK';
 
+
+header('Content-Type: application/json');
+
 // actions compatibles WEB et PLC Link
 switch($_['action']){
 
