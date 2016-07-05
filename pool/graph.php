@@ -181,7 +181,7 @@ switch ($_GET["type"]){
                 $text.="Sur la semaine,";
             break;
             default:
-            
+                $text.="Sur une periode de ".$_GET["period"]."heures";
             break;
         }
         $values = array();
