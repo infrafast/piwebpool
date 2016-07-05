@@ -29,7 +29,7 @@
 					<title>PH</title>
 					<name>PH</name>
 					<description>Taux Ph (6.5-7.5) </description>
-                    <type>json</type><text>//state</text> 
+                    <type>json</type><text>state</text> 
 					<affichage>text</affichage>
 					<url>http://piweb.infrafast.com/action.php?action=getPhPLC</url>
 				</item>					
@@ -37,7 +37,7 @@
 					<title>Pompe</title>
 					<name>Pompe</name>
 					<description>Etat filtration</description>
-                    <type>json</type><text>//state</text>
+                    <type>json</type><text>state</text>
                     <affichage>switch</affichage>
                     <link>http://piweb.infrafast.com/action.php?SwitchFilterPLC=%d</link>
                     <url>http://piweb.infrafast.com/action.php?getFilterStatePLC</url>
