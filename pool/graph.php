@@ -170,9 +170,9 @@ switch ($_GET["type"]){
         $ecartVal = $diffVal/$reference;
         $currentValueIndicator = "correct"; 
         
-        if ($ecartVal>0.4){ 
+        if ($ecartVal>0.15){ 
              $currentValueIndicator = "high";
-        }else if (ecartVal<-0.3){ 
+        }else if (ecartVal<-0.15){ 
              $currentValueIndicator = "low";
         }
 
