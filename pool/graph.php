@@ -106,7 +106,6 @@ switch ($_GET["type"]){
 
         $im = imagecreate($cfg['width'], $cfg['height']);
         $backgroundColor = imagecolorallocate($im, 0, 0, 0);
-        imagefill($im, 0, 0, $backgroundColor);
         imagecolortransparent($img, $backgroundColor);
 
         $box = new Box($im);
