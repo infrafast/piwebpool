@@ -49,10 +49,21 @@ $cfg['box-border-visible']=false;
 $text=null;
 
 $analyse = array(
-			"pump"=>array("pump message1","pump message 2"),
-			"pac"=>array("PAC message1","PAC message 2"),
-		    "treatment1"=>array("treatment1 message1","treatment1 message 2"),
-    	    "treatment2"=>array("treatment2 message1","treatment2 message 2"),
+		    "pump"=>array("up"=>"pump up message",
+		                "down"=>"pump down message",
+		                "stable"=>"pump stable message"),
+		                
+		    "pac"=>array("up"=>"pac up message",
+		                "down"=>"pac down message",
+		                "stable"=>"pac stable message"),
+		                
+		    "treatment1"=>array("up"=>"treatment1 up message",
+		                "down"=>"treatment1 down message",
+		                "stable"=>"treatment1 stable message"),
+		                
+		    "treatment2"=>array("up"=>"treatment2 up message",
+		                "down"=>"treatment2 down message",
+		                "stable"=>"treatment2 stable message"),
 
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
