@@ -51,9 +51,9 @@ $text=null;
 
 $hint = array(
 		    "ph"=>array("up"=>array(
-		                    "high"=>"le Ph a grimpà à un niveau anormalement elevé.\Vous devriez vérifier le fonctionnement du régulateur\nou injecter du Ph-",
-		                    "low"=>"ph up low",
-		                    "correct"=>"ph up correct"),
+		                    "high"=>"le Ph a grimpé à un niveau anormalement elevé.\nVous devriez vérifier le fonctionnement du régulateur\nou injecter du Ph-",
+		                    "low"=>"le Ph est faible mais en augmentation, c'est bon signe.\nA surveiller cependant.",
+		                    "correct"=>"le PH à augementé à un niveau correct.\nSurveiller qu'il ne dépasse pas 7.5 dans pes prochaines heures."),
 		                "down"=>array(
 		                    "high"=>"ph down high",
 		                    "low"=>"ph down low",
