@@ -209,7 +209,7 @@ switch ($_GET["type"]){
         $box->setFontColor(new Color(0, 0, 0, 50));
         $box->setTextShadow(new Color(200, 200, 200), 2, 2);
         $box->setFontSize(15);
-        $box->setBox(5, 5, 460, 460);
+        $box->setBox(10, 5, 460, 460);
         $box->setTextAlign('left', 'top');
         $box->draw($text);
         
