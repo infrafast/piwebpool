@@ -61,6 +61,9 @@ class TableGear
 
   function _errorOnRequiredFields()
   {
+    $this->_errorOnField($this->database["name"], "<DATABASE_NAME>", "Database required.");
+    $this->_errorOnField($this->database["username"], "<DATABASE_USERNAME>", "Username required.");
+    $this->_errorOnField($this->database["table"], "<DATABASE_TABLE>", "Table required.");
   }
 
   function _errorOnField($field, $default, $message)
@@ -74,7 +77,7 @@ class TableGear
 
   function connect()
   {
-    $db = $this->database;
+    $db = $db = new SQLite3('mysqlitedb.db');
     if($db["server"])   $server = $db["server"];
     elseif($db["host"]) $server = $db["host"];
     else                $server = "localhost";
