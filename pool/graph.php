@@ -144,7 +144,7 @@ switch ($_GET["type"]){
         $text.="\nratio:".$ratio;
         $text.="\nconclusion:".$conclusion;
         
-        $text=$analyse[$_GET["graph"]][$conclusion];        
+        $text.=$analyse[$_GET["graph"]][$conclusion];        
     
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
