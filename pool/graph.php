@@ -134,7 +134,10 @@ $hint = array(
 		                
 		    "temperature"=>array("up"=>"temperature up hint message",
 		                "down"=>"temperature down hint message",
-		                "stable"=>"temperature stable hint message"
+		                "stable"=>"temperature stable hint message",
+		                "high"=>"",
+		                "low"=>"",
+		                "correct"=>"",
 		                )
             );
 
