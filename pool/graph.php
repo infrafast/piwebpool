@@ -38,11 +38,6 @@ $hint = array(
 		    "temperature"=>array("temperature message1","temperature message 2")                
                 );
 
-
-
-// STARTS HERE
-
-
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
@@ -101,6 +96,10 @@ switch ($_GET["type"]){
         $text=$hint[$_GET["graph"]][0];
         $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
         // treat message in function (periode). ex: forecast
+        // $data contains all info
+        
+        
+        
     default:
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
 
