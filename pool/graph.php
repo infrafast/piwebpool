@@ -82,7 +82,7 @@ $analyse = array(
 		    "temperature"=>array("up"=>"temperature up message",
 		                "down"=>"temperature down message",
 		                "stable"=>"temperature stable message"
-		                ),             
+		                )
             );
 
 // connect to the database
