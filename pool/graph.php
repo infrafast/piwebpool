@@ -48,7 +48,7 @@ $cfg['box-border-visible']=false;
 
 $text=null;
 
-$hint = array(
+$analyse = array(
 			"pump"=>array("pump message1","pump message 2"),
 			"pac"=>array("PAC message1","PAC message 2"),
 		    "treatment1"=>array("treatment1 message1","treatment1 message 2"),
