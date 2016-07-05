@@ -60,8 +60,8 @@ $hint = array(
 		                    "correct"=>"Attention le Ph est dans les normes\nmais il diminue. A surveiller"),
 		                "stable"=>array(
 		                    "high"=>"le Ph dépasse la norme.\nIl est conseillé d'augmenter le traitement Ph-\nou vérifier le bon réglage de votre régulateur.",
-		                    "low"=>"le Ph est en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
-		                    "correct"=>"le Ph est stable et dans les normes.\nC'est bon signe!"),
+		                    "low"=>"le Ph reste en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
+		                    "correct"=>"le Ph reste stable et dans les normes.\nC'est bon signe!"),
 		                ),
 		    "orp"=>array("up"=>array(
 		                    "high"=>"orp up high",
