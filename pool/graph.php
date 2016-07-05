@@ -12,6 +12,27 @@ require "include/gd-text/VerticalAlignment.php";
 use GDText\Box;
 use GDText\Color;
 
+//////////////////////////////////////////////////
+function getTrend(array $values) {
+    return "coucou";
+    $x_sum = array_sum(array_keys($values));
+    $y_sum = array_sum($values);
+    $meanX = $x_sum / count($values);
+    $meanY = $y_sum / count($values);
+    // calculate sums
+    $mBase = $mDivisor = 0.0;
+    foreach($values as $i => $value) {
+        $mBase += ($i - $meanX) * ($value - $meanY);
+        $mDivisor += ($i - $meanX) * ($i - $meanX);
+    }
+
+    // calculate slope
+    $slope = $mBase / $mDivisor;
+    return $slope;
+}   //  function leastSquareFit()
+//////////////////////////////////////////////////////
+
+
 //if(!isset($_GET['text'])) $_GET['text'] = "Hello, world!";
 //
 
