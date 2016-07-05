@@ -13,6 +13,11 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
     exit;
 } 
 
+function getVal(){
+	return intval()rand(0,1));
+}
+
+
 $answer="OK";
 $state="";
 
@@ -55,13 +60,14 @@ if (!$result) {
         if($phValue==null)  $phValue=-99;
         if($orpValue==null)  $orpValue=-99;
         if($temperatureValue==null)  $temperatureValue=-99;
-
+		$pinVal=getVal();
+		
         $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
         foreach($materials as $material=>$pin) $sql = $sql.", `".$materialsColumn[$material]."`";
         $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."'";
-        foreach($materials as $material=>$pin) $sql = $sql.", '".getPin($pins[$materials[$material]])."'";
+        foreach($materials as $material=>$pin) $sql = $sql.", '".$pinVal."'";
         $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
-        foreach($materials as $material=>$pin) $sql = $sql.", ".$materialsColumn[$material]."=".getPin($pins[$materials[$material]]);
+        foreach($materials as $material=>$pin) $sql = $sql.", ".$materialsColumn[$material]."=".$pinVal;
         $sql = $sql.";";
 
         $result = mysql_query($sql, $link);
@@ -72,6 +78,6 @@ if (!$result) {
     }
 }
 
-echo "\nph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue."\n";    
+echo "\nph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue." pinVal:".$pinVal."\n";    
 
 ?>
