@@ -172,7 +172,7 @@ switch ($_GET["type"]){
         
         if ($ecartVal>0.09){ 
              $currentValueIndicator = "high";
-        }else if (ecartVal<-0.15){ 
+        }else if (ecartVal<-0.09){ 
              $currentValueIndicator = "low";
         }
 
