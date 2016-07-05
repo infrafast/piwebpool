@@ -120,7 +120,7 @@ switch ($_GET["type"]){
 foreach ($data as $value) {
     $values[] =  $value;
 }
-        print_r(); exit;
+        print_r($values); exit;
         // treat message in function (periode). ex: forecast
         // $data contains all info
         
