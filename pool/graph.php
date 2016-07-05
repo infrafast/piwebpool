@@ -127,7 +127,7 @@ switch ($_GET["type"]){
         $trend=getTrend($values);
         $avg=array_sum($values) / count($values);
         $ratio=$trend/$avg;
-        $threshold=0.008;
+        $threshold=0.005;
 
         $conclusion="stable";
         if ($ratio>$threshold) $conclusion="up";
