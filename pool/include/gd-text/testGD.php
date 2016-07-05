@@ -1,6 +1,7 @@
 <?php
 
-require "src/";
+require "src/Box.php";
+require "src/Color.php";
 
 use GDText\Box;
 use GDText\Color;
