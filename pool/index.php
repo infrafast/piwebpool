@@ -57,9 +57,7 @@ $optionsSet["title"] = "Parametres";
 $optionsSet["allowDelete"] = false;
 $optionsSet["sortable"]  = ""; 
 $optionsSet["selects"] = array(
-	"userSetting" => array("visible" => 1, "invisible" => 0),
-	"blocklyTable" => array("invisible" => 1, "visible" => 0),
-	"scheduler" => array("activé" => 1, "désactivé" => 0)
+	"userSetting" => array("visible" => 1, "invisible" => 0)
 ); 
 $optionsSet["transform"]["logTable"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $tableSettings = new TableGear($optionsSet);
