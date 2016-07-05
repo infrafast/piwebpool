@@ -59,5 +59,6 @@ for($i=0;$i<5;$i++){
 
 print_r($predictions);
 
+echo leastSquareFit($PopulationOfTexas);
 
 ?>
