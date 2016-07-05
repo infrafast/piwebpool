@@ -1,7 +1,6 @@
 <?php
 
 include_once('include/phpMyGraph5.0.php'); 
-include("functions.php");
 require('configuration.php');
 
 require "include/gd-text/Box.php";
