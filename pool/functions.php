@@ -186,7 +186,7 @@ function getPh(){
 }
 
 function getORP(){
-    return intval(rand(300,330));
+    return intval(rand(700,760));
     for ($i = 0; $i < 2; $i++){
         $v1 = intval(readSensor(getDevice("orp")));      
         if ($v1>0 and $v1<1000) return $v1;
