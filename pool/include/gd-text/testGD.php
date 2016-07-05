@@ -13,7 +13,7 @@ $backgroundColor = imagecolorallocate($im, 0, 18, 64);
 imagefill($im, 0, 0, $backgroundColor);
 
 $box = new Box($im);
-$box->setFontFace(__DIR__.'/Pacifico.ttf'); // http://www.dafont.com/pacifico.font
+$box->setFontFace('arial.ttf'); // http://www.dafont.com/pacifico.font
 $box->setFontSize(80);
 $box->setFontColor([255, 255, 255]);
 $box->setTextShadow([0, 0, 0, 50], 0, -2);
