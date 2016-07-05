@@ -2,6 +2,7 @@
 
 require "src/Box.php";
 require "src/Color.php";
+require "src/TextWrapping.php";
 
 use GDText\Box;
 use GDText\Color;
