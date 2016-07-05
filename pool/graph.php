@@ -211,16 +211,17 @@ switch ($_GET["type"]){
         $ratio=$trend/$avg;
         $threshold=0.005;
 
-        $conclusion="stable";
-        if ($ratio>$threshold) $conclusion="up";
-        if ($ratio<-$threshold) $conclusion="down";
+        $trendIndicator="stable";
+        if ($ratio>$threshold) $trendIndicator="up";
+        if ($ratio<-$threshold) $trendIndicator="down";
 
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
         $text.="\nratio:".$ratio;
-        $text.="\nconclusion:".$conclusion;
+        $text.="\nconclusion:".$trendIndicator;
         
-        $text.="\n".$analyse[$_GET["graph"]][$conclusion];        
+        $text.="\n".$analyse[$_GET["graph"]][$trendIndicator];
+        $text.="\n".$hint[$_GET["graph"]][$trendIndicator];        
     
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
