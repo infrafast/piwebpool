@@ -374,6 +374,56 @@ $tableSettings = new TableGear($optionsSet);
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
+        function updateGraph(element){
+            var imgSrc = 'url(graph.php?'+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
+            //alert("imgSrc="+imgSrc);
+            element.style.backgroundSize="100% 100%";
+            element.style.backgroundImage=imgSrc; 	     
+        }
+        
+        
+        function toggleGraph(element){
+            var nextGraphType = "undef";
+            var currentGraphType = element.classList.item(0);
+            // locate the class in the list to get the next one
+            var i=graphTypes.indexOf(currentGraphType);
+            if (i!=-1){
+                i++;
+                if (i>(graphTypes.length)-1) i=0;
+                nextGraphType = graphTypes[i];                
+            }
+            element.classList.remove(currentGraphType);
+            element.classList.add(nextGraphType);
+            updateGraph(element);
+        }
+          
+        function updateGraphs(){
+        // this function is called when user change the combo to choose measures rendition period graph
+        // it update the call to the graph function according to the selected value
+         	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
+        	while(++i < colslen) updateGraph(cols[i]);
+            updateCommandsGraphs();
+        }  
+        
+        function updateCommandsGraphs(){    
+            // refresh commands graphs
+            <?php foreach($materials as $material=>$pin) echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
+        }
+        
+        
+        function calibrateAndRefresh(id){
+            var elemID = 'div'+id+'MeasureID';
+            var elem = document.getElementById(elemID);
+            //add loading icon
+            var calibrateID=id+"CalibrateID";
+            var calibrate=document.getElementById(calibrateID);
+            calibrate.style.backgroundImage="url('images/loading.gif')";
+            if(actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',false, true)!=false)
+                elem.click();
+            //remove loading icon
+            calibrate.style.backgroundImage="url('')";
+        }        
+        
     </script>
     </body>
 </html>
