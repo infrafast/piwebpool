@@ -130,7 +130,7 @@ switch ($_GET["type"]){
         
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
-        $text.="\nratio:".$avg;
+        $text.="\nratio:".$ratio;
         
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
