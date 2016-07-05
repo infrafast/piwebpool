@@ -165,22 +165,17 @@ switch ($_GET["type"]){
             default:
             break;
         }
+
+        $diffVal = $avg-$reference;
+        $ecartVal = $diffVal/$reference;
         $currentValueIndicator = "correct"; 
-        $diffVal = abs($avg - $reference);
         
-        
-        var ecartVal = diffVal/middleVal;
-        var colorSensor;
         if (ecartVal>0.6){ 
-            colorSensor = "Tomato";
+             $currentValueIndicator = "high";
         }else if (ecartVal>0.4){ 
-            colorSensor = "Orange";
+             $currentValueIndicator = "";
         }else if (ecartVal>0.2){ 
-            colorSensor = "Yellow";
-        }else if (ecartVal>0.1){ 
-            colorSensor = "GreenYellow";
-        }else{ 
-            colorSensor = "LimeGreen";
+             $currentValueIndicator = "Yellow";
         }        
         
         
