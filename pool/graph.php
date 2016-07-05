@@ -170,7 +170,6 @@ switch ($_GET["type"]){
         //$text.="\ntrend:".$trendIndicator;
         //$text.="\nvalue:".$currentValueIndicator;
         
-        $text.="\n".$analyse[$_GET["graph"]][$trendIndicator];
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
