@@ -5,7 +5,7 @@
 	<rooms> 
 		<room id="0"> 
 			<title>Piscine</title>
-			<refresh>5000</refresh>
+			<refresh>2000</refresh>
 			<items> 
 				<item id="0"> 
 					<title>Temperature</title>
