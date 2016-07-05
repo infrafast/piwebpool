@@ -14,7 +14,6 @@ use GDText\Color;
 
 //////////////////////////////////////////////////
 function getTrend(array $values) {
-    return "coucou";
     $x_sum = array_sum(array_keys($values));
     $y_sum = array_sum($values);
     $meanX = $x_sum / count($values);
