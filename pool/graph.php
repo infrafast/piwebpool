@@ -10,7 +10,6 @@ require "include/gd-text/HorizontalAlignment.php";
 require "include/gd-text/VerticalAlignment.php";
 
 
-
 //if(!isset($_GET['text'])) $_GET['text'] = "Hello, world!";
 //
 
