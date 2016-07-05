@@ -68,13 +68,15 @@ $analyse = array(
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
 		                "stable"=>"ph stable message"),
+		                
 		    "orp"=>array("up"=>"orp up message",
 		                "down"=>"orp down message",
 		                "stable"=>"orp stable message"),             		    
+		                
 		    "temperature"=>array("up"=>"temperature up message",
 		                "down"=>"temperature down message",
 		                "stable"=>"temperature stable message"),             
-                );
+            );
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
