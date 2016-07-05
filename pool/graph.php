@@ -182,9 +182,9 @@ switch ($_GET["type"]){
         //$text.="\ntrend:".$trendIndicator;
         //$text.="\nvalue:".$currentValueIndicator;
         $text.="\nreference:".$reference;
-        $text.="\n:diffVal".$diffVal;
-        $text.="\n:ecartVal".$ecartVal;
-        $text.="\n:currentValueIndicator".$currentValueIndicator;
+        $text.="\ndiffVal:".$diffVal;
+        $text.="\necartVal:".$ecartVal;
+        $text.="\ncurrentValueIndicator:".$currentValueIndicator;
         
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
 
