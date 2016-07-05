@@ -202,7 +202,6 @@ $tableSettings = new TableGear($optionsSet);
         refreshValue(document.getElementById('divORPMeasureID'),'ORP');
         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
     
-    
             // retrieve logfile
         document.getElementById('logFile').value = actionCall('action=getLog',false);
         
