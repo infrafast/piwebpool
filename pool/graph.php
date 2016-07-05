@@ -170,7 +170,7 @@ switch ($_GET["type"]){
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
     case "textType":
-        $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
+        $text.="Les stats sont effectuées sur la base de ".$_GET["period"];
         $values = array();
         foreach ($data as $value) {
             $values[] =  $value;
