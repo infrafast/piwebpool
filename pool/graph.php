@@ -103,17 +103,7 @@ switch ($_GET["type"]){
         // treat message in function (periode). ex: forecast
     default:
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
-        $img = imagecreate($cfg['width'], $cfg['height']);
-        // Transparent background
-        $black = imagecolorallocate($img, 0, 0, 0);
-        imagecolortransparent($img, $black);
-        // Red text
-        $fontsize = 5;
-        $red = imagecolorallocate($img, 255, 0, 0);
-        imagestring($img, $fontsize, 0, 0, utf8_decode($text), $red);
-    
-        imagepng($img);
-        imagedestroy($img);
+
 
     break;    
 }
