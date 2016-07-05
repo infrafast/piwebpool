@@ -56,7 +56,7 @@ $analyse = array(
 
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
-		                "stable"=>"ph down message"),
+		                "stable"=>"ph stable message"),
 		    "orp"=>array("up"=>"orp up message",
 		                "down"=>"orp down message",
 		                "stable"=>"orp down message"),             		    
