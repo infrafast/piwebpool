@@ -123,6 +123,7 @@ switch ($_GET["type"]){
             $values[] =  $value;
         }
         $text.="\nTrend:".getTrend($values);
+        print_r($data); echo "<br>";
         print_r($values); echo "<br>".$text; exit;
         // treat message in function (periode). ex: forecast
         // $data contains all info
