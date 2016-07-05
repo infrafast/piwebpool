@@ -124,8 +124,14 @@ switch ($_GET["type"]){
         foreach ($data as $value) {
             $values[] =  $value;
         }
-        $text.="\nTrend:".getTrend($values);
-        $text.="\naverage:".array_sum($values) / count($values);
+        $trend=getTrend($values);
+        $avg=array_sum($values) / count($values);
+        $ratio=$trend/average;
+        
+        $text.="\nTrend:".$trend;
+        $text.="\naverage:".$avg;
+        $text.="\nratio:".$avg;
+        
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
 
