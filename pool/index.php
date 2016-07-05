@@ -205,7 +205,6 @@ $tableSettings = new TableGear($optionsSet);
             // retrieve logfile
         document.getElementById('logFile').value = actionCall('action=getLog',false);
         
-        
         // draw measures graph
         updateGraphs();
         
@@ -342,13 +341,11 @@ $tableSettings = new TableGear($optionsSet);
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
     
-    
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //
         //   UTILITIES FUNCTIONS
         //
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        
-    
     
         function myUpdateFunction(event) {
           var code = Blockly.Lua.workspaceToCode(workspace);
@@ -379,7 +376,6 @@ $tableSettings = new TableGear($optionsSet);
             element.style.backgroundImage=imgSrc; 	     
         }
         
-        
         function toggleGraph(element){
             var nextGraphType = "undef";
             var currentGraphType = element.classList.item(0);
@@ -407,7 +403,6 @@ $tableSettings = new TableGear($optionsSet);
             // refresh commands graphs
             <?php foreach($materials as $material=>$pin) echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
         }
-        
         
         function calibrateAndRefresh(id){
             var elemID = 'div'+id+'MeasureID';
