@@ -105,7 +105,7 @@ switch ($_GET["type"]){
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
 
         $im = imagecreatetruecolor($cfg['width'], $cfg['height']);
-        $backgroundColor = imagecolorallocate($im, 0, 18, 64);
+        $backgroundColor = imagecolorallocate($im, 0, 0, 0);
         imagefill($im, 0, 0, $backgroundColor);
         
         $box = new Box($im);
