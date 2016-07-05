@@ -16,6 +16,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 function getVal(){
 	return intval(rand(0,1));
 }
+
 for ($x = 0; $x <= 128; $x++) {
     $sql    = "SELECT value from settings where id='measureIndex';";
     $result = mysql_query($sql, $link);
@@ -57,7 +58,7 @@ for ($x = 0; $x <= 128; $x++) {
             }            
         }
     }
-    echo "\n".$x." ph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue." pinVal:".$pinVal."\n";    
+    echo "\n".$x."/".$measureIndex." ph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue." pinVal:".$pinVal."\n";    
     sleep(1);
 }
 ?>
