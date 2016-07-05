@@ -1,4 +1,4 @@
-// Attention : il faudrait exploiter result.state et result.answer et non pas result.error
+// Attention  : il faudrait exploiter result.state et result.answer et non pas result.error
 
 $('.header').click(function(){
 	$(this).addClass('loading');
