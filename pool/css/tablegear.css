@@ -1,10 +1,26 @@
+
+
+body
+{
+margin: 0 auto;
+padding: 0 20px 20px 20px;
+font-family: Tahoma, Helvetica, Arial, sans-serif;
+background: #444;
+}
+
 fieldset
 {
 border: none;
 padding: 0;
 }
 
-
+table
+{
+font-size: 0.9em;
+width: 100%;
+background-color: #ffffff;
+padding: 1em;
+}
 
 tr.odd
 {
