@@ -89,7 +89,7 @@ while ($row = mysql_fetch_assoc($result)){
 }
 //exit;
 
-header("Content-type: image/png");
+//header("Content-type: image/png");
 //Create phpMyGraph instance
 $graph = new phpMyGraph();
 //Parse
