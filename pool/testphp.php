@@ -3,10 +3,10 @@
 	require_once('functions.php');
 
 $PopulationOfTexas = array(
-    1999 => 20.56, // in millions
-    2000 => 20.86,
-    2001 => 20.99,
-    2002 => 20.80
+    1999 => 6.56, // in millions
+    2000 => 6.45,
+    2001 => 6.50,
+    2002 => 6.51
 );
 
 //generate an array sohwing the difference in each year compared to the previous year
