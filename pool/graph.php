@@ -108,7 +108,6 @@ switch ($_GET["type"]){
         $backgroundColor = imagecolorallocate($im, 0, 0, 0);
         imagecolortransparent($img, $backgroundColor);
         //imagefill($im, 0, 0, $backgroundColor);
-        imagecolortransparent();
         
         $box = new Box($im);
         $box->setFontFace('./fonts/Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
