@@ -120,7 +120,7 @@ switch ($_GET["type"]){
         $graph->parseVerticalLineGraph($data,$cfg);
     break;
     case "textType":
-        $text=$hint[$_GET["graph"]]["down"];
+        $text=$analyse[$_GET["graph"]]["down"];
         $text.="\nLes stats sont effectuées sur la base de ".$_GET["period"];
         $values = array();
         foreach ($data as $value) {
@@ -135,7 +135,6 @@ switch ($_GET["type"]){
         if ($ratio>$threshold) $conclusion="up";
         if ($ratio<-$threshold) $conclusion="down";
 
-        //use the conclusion to get variable in array $hint by string name
 
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
