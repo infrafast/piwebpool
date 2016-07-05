@@ -172,13 +172,13 @@ switch ($_GET["type"]){
     case "textType":
         switch ($_GET["period"]){
             case 8:
-                $text.="Sur cette journée";
+                $text.="Ces dernières 8 heures,";
             break;
             case 24:
-                $text.="Les stats sont effectuées sur la base de";
+                $text.="Lors de cette dernière journée,";
             break;
-            case 8:
-                $text.="Les stats sont effectuées sur la base de";
+            case 168:
+                $text.="Sur la semaine,";
             break;
             default:
             
