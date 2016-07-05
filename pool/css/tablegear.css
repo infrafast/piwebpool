@@ -1,15 +1,6 @@
 
 
-td.editable
-{
-width: 200px;
-height: 22px;
-}
 
-th.sortable
-{
-cursor: pointer;
-}
 
 tr.loading {
   color: #dddddd;
