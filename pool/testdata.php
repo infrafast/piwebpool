@@ -88,6 +88,6 @@ if (!$result) {
         }
     }
 }
-echo "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
+echo "{Heure:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}";    
 
 ?>
