@@ -5,7 +5,7 @@ require "src/HorizontalAlignment.php";
 require "src/TextWrapping.php";
 require "src/VerticalAlignment.php";
 
-//use GDText\Box;
+use GDText\Box;
 //use GDText\Color;
 
 $im = imagecreatetruecolor(500, 500);
