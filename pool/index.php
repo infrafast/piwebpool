@@ -9,7 +9,6 @@ $options["pagination"] = array();
 $options["title"] = "Planificateur";
 $options["allowDelete"] = false;
 $options["sortable"]  = ""; 
-
 $options["selects"] = array(
 	"below0" => array("on" => 1, "off" => 0),
 	"0to2" => array("on" => 1, "off" => 0),
@@ -28,7 +27,6 @@ $options["selects"] = array(
 	"26to28" => array("on" => 1, "off" => 0),
 	"above28" => array("on" => 1, "off" => 0)
 ); 
-
 $options["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["2to4"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
@@ -45,7 +43,6 @@ $options["transform"]["22to24"] = array("tag" => "img","attrib" => array("src" =
 $options["transform"]["24to26"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["26to28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
-
 $table = new TableGear($options);
 
 $optionsSet = array();
@@ -59,14 +56,12 @@ $optionsSet["pagination"] = array();
 $optionsSet["title"] = "Parametres";
 $optionsSet["allowDelete"] = false;
 $optionsSet["sortable"]  = ""; 
-
 $optionsSet["selects"] = array(
 	"actionTable" => array("invisible" => 1, "visible" => 0),
 	"blocklyTable" => array("invisible" => 1, "visible" => 0),
 	"scheduler" => array("activé" => 1, "désactivé" => 0)
 ); 
 $optionsSet["transform"]["logTable"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
-
 $tableSettings = new TableGear($optionsSet);
 
 
