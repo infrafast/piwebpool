@@ -61,9 +61,9 @@ $optionsSet["allowDelete"] = false;
 $optionsSet["sortable"]  = ""; 
 
 $optionsSet["selects"] = array(
-	"actionTable " => array("ouvert" => 1, "ouverte" => 0),
-	"blocklyTable " => array("on" => 1, "off" => 0),
-	"above28" => array("on" => 1, "off" => 0)
+	"actionTable" => array("invisible" => 1, "visible" => 0),
+	"blocklyTable" => array("invisible" => 1, "visible" => 0),
+	"scheduler" => array("activé" => 1, "désactivé" => 0)
 ); 
 $optionsSet["transform"]["below0"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
 $optionsSet["transform"]["0to2"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
