@@ -16,7 +16,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 function getVal(){
 	return intval(rand(0,1));
 }
-for ($x = 0; $x <= 10; $x++) {
+for ($x = 0; $x <= 128; $x++) {
     $sql    = "SELECT value from settings where id='measureIndex';";
     $result = mysql_query($sql, $link);
     
