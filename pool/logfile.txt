@@ -1,0 +1,8 @@
+[2016-07-04 15:44:15][sendemail: OK][Temperature: 35°C]
+[2016-07-04 15:44:15][LUA OK][Temperature: 35°C] 
+[2016-07-04 15:44:17][CRONACTION OK][{Heure:14h}{temperature:above28}{Filtration:MARCHE}{|main:OK|custom:OK}]
+[2016-07-04 17:45:08][LUA OK][get from PCL: 0]
+[2016-07-04 17:45:21][LUA OK][get from PCL: 1]
+[2016-07-04 17:45:34][LUA OK][get from PCL: 0]
+[2016-07-04 17:45:47][LUA OK][get from PCL: 1]
+[2016-07-04 17:49:15][LUA OK][get from PLC: 0]
