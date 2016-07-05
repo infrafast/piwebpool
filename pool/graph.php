@@ -138,8 +138,7 @@ switch ($_GET["type"]){
         $text.="\nratio:".$ratio;
         $text.="\nconclusion:".$conclusion;
         
-        
-        
+    
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
 
