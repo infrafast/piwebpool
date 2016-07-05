@@ -14,8 +14,7 @@ $result['answer']  = 'OK';
 // actions compatibles WEB et PLC Link
 switch($_['action']){
 
-// ACTION FOR WEBAPP (JSON QUERY UNDER BRACKET)
-
+// ACTION FOR WEBAPP and PLCLINK (JSON QUERY UNDER BRACKET)
     case 'calibrate':
         switch($_['id']){
             case 'Ph':
@@ -193,11 +192,11 @@ switch($_['action']){
 	    if (isset($_GET['SwitchFilterPLC'])){
 	        $_['action'] = "PLC";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
-            $result['state'] = getPin($pins[$materials["filtration"]]); //idem as getFilterStatePCL;
+            $result['state'] = getPin($pins[$materials["filtration"]]);
 	    }else if (isset($_GET['SwitchTreatment1PLC'])){
 	        $_['action'] = "PLC";
             setPinState($pins[$materials["traitement1"]],$_GET['SwitchTreatment1PLC']);
-            $result['state'] = getPin($pins[$materials["treatment1"]]); //idem as getFilterStatePCL;
+            $result['state'] = getPin($pins[$materials["treatment1"]]); 
 	    }else if (isset($_GET['getFilterStatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
