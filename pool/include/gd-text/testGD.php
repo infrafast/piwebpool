@@ -13,7 +13,6 @@ $backgroundColor = imagecolorallocate($im, 0, 18, 64);
 imagefill($im, 0, 0, $backgroundColor);
 
 $box = new Box($im);
-putenv('GDFONTPATH=' . realpath('.'));
 $box->setFontFace('/usr/share/adafruit/webide/repositories/piweb/pool/include/gd-text/Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
 $box->setFontColor(new Color(255, 75, 140));
 $box->setTextShadow(new Color(0, 0, 0, 50), 2, 2);
