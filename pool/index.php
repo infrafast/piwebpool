@@ -8,7 +8,7 @@ $options["database"]["table"]  = "pumpSchedule";
 $options["pagination"] = array();
 $options["title"] = "Planificateur";
 $options["allowDelete"] = false;
-$options["sortable"]  = ""; //array("<FIELD1>", "<FIELD2", "ETC...");
+$options["sortable"]  = ""; 
 
 $options["selects"] = array(
 	"below0" => array("on" => 1, "off" => 0),
