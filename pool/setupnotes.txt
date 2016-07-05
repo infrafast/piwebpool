@@ -21,6 +21,8 @@ TODO LIST
     - implement i18n
     - persistant variable
     - variable "jour" dans blockly (getDate())
+    - use PDO or mysqli 
+    - use sqlite
     
 
 known bugs:
