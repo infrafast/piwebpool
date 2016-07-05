@@ -6,7 +6,7 @@ require "src/TextWrapping.php";
 require "src/VerticalAlignment.php";
 
 use GDText\Box;
-//use GDText\Color;
+use GDText\Color;
 
 $im = imagecreatetruecolor(500, 500);
 $backgroundColor = imagecolorallocate($im, 0, 18, 64);
