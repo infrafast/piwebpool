@@ -176,7 +176,7 @@ switch ($_GET["type"]){
         if ($ratio>$threshold) $trendIndicator="up";
         if ($ratio<-$threshold) $trendIndicator="down";
         
-        $currentValueIndicator = "low"; // low correct;
+        $currentValueIndicator = "correct"; // low correct;
 
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
