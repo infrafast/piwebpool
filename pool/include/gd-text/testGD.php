@@ -20,7 +20,7 @@ $box->setTextShadow(new Color(0, 0, 0, 50), 2, 2);
 $box->setFontSize(40);
 $box->setBox(20, 20, 460, 460);
 $box->setTextAlign('left', 'top');
-$box->draw("Franchise\nBold");
+$box->draw("Franchise Bold");
 
 header("Content-type: image/png");
 ?>
