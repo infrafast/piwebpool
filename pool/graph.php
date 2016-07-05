@@ -100,13 +100,13 @@ $hint = array(
 		                "down"=>array("high"=>"ph down high","low"=>"ph down low","correct"=>"ph down correct"),
 		                "stable"=>array("high"=>"ph stable high","low"=>"ph stable low","correct"=>"ph stable correct"),
 		                ),
-		    "orp"=>array("up"=>array("high"=>"ph up high","low"=>"ph up low","correct"=>"ph up correct"),
-		                "down"=>array("high"=>"ph down high","low"=>"ph down low","correct"=>"ph down correct"),
-		                "stable"=>array("high"=>"ph stable high","low"=>"ph stable low","correct"=>"ph stable correct"),
+		    "orp"=>array("up"=>array("high"=>"orp up high","low"=>"orp up low","correct"=>"orp up correct"),
+		                "down"=>array("high"=>"orp down high","low"=>"orp down low","correct"=>"orp down correct"),
+		                "stable"=>array("high"=>"orp stable high","orp"=>"ph stable low","correct"=>"orp stable correct"),
 		                ),
-		    "temperature"=>array("up"=>array("high"=>"ph up high","low"=>"ph up low","correct"=>"ph up correct"),
-		                "down"=>array("high"=>"ph down high","low"=>"ph down low","correct"=>"ph down correct"),
-		                "stable"=>array("high"=>"ph stable high","low"=>"ph stable low","correct"=>"ph stable correct"),
+		    "temperature"=>array("up"=>array("high"=>"temperature up high","low"=>"temperature up low","correct"=>"temperature up correct"),
+		                "down"=>array("high"=>"temperature down high","low"=>"temperature down low","correct"=>"temperature down correct"),
+		                "stable"=>array("high"=>"temperature stable high","low"=>"temperature stable low","correct"=>"temperature stable correct"),
 		                )
             );
 
