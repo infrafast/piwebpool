@@ -181,7 +181,8 @@ switch ($_GET["type"]){
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
         $text.="\nratio:".$ratio;
-        $text.="\nconclusion:".$trendIndicator;
+        $text.="\ntrend:".$trendIndicator;
+        $text.="\nvalue:".$currentValueIndicator;
         
         $text.="\n".$analyse[$_GET["graph"]][$trendIndicator];
 
