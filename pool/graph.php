@@ -126,7 +126,7 @@ switch ($_GET["type"]){
         }
         $trend=getTrend($values);
         $avg=array_sum($values) / count($values);
-        $ratio=$trend/average;
+        $ratio=$trend/$average;
         
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
