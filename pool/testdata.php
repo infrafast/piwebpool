@@ -39,7 +39,7 @@ for ($x = 0; $x <= 128; $x++) {
         }else{
             
             $phValue = getPh()-($x/10);
-            $orpValue = getORP()+($x*2);
+            $orpValue = getORP()+($x*10);
             $temperatureValue = getTemperature();
     		$pinVal=getVal();
     		
