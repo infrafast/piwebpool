@@ -40,9 +40,6 @@ for ($x = 0; $x <= 128; $x++) {
             $phValue = getPh();
             $orpValue = getORP();
             $temperatureValue = getTemperature();
-            if($phValue==null)  $phValue=-99;
-            if($orpValue==null)  $orpValue=-99;
-            if($temperatureValue==null)  $temperatureValue=-99;
     		$pinVal=getVal();
     		
             $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
