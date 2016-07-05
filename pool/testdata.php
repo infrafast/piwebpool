@@ -72,6 +72,6 @@ if (!$result) {
     }
 }
 
-echo "ok";    
+echo "ph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue;    
 
 ?>
