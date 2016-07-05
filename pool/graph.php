@@ -115,7 +115,7 @@ switch ($_GET["type"]){
         $box->setFontSize(10);
         $box->setBox(20, 20, 460, 460);
         $box->setTextAlign('left', 'top');
-        $box->draw("Franchise\nBold");
+        $box->draw($text);
         
         header("Content-type: image/png");
         imagepng($im);
