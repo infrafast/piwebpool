@@ -12,4 +12,3 @@ INSERT INTO `scripts` (`id`, `xml`, `lua`) VALUES
 
 ALTER TABLE `scripts`
  ADD PRIMARY KEY (`id`);
-  
