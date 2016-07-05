@@ -73,7 +73,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 // use order by timeStamp to really get the last value but they are aggregated by day...
 //$sql = "select ".$_GET["graph"].",id, timeStamp from (select ".$_GET["graph"].", id, timeStamp from measures order by timeStamp desc limit ".intval($_GET["period"]).") tempTable order by timeStamp asc";
 // use order by id for test purpose
-$sql = "select ".$_GET["graph"].",id, timeStamp from (select ".$_GET["graph"].", id, timeStamp from measures order by timeStamp desc limit ".intval($_GET["period"]).") tempTable order by timeStamp asc";
+$sql = "select ".$_GET["graph"].",id, timeStamp from (select ".$_GET["graph"].", id, timeStamp from measures order by timeStamp desc limit ".intval($_GET["period"]).") tempTable order by id asc";
 //echo $sql; exit;
 $result = mysql_query($sql, $link);
 
