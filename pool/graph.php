@@ -51,31 +51,38 @@ $text=null;
 $analyse = array(
 		    "pump"=>array("up"=>"pump up message",
 		                "down"=>"pump down message",
-		                "stable"=>"pump stable message"),
+		                "stable"=>"pump stable message"
+		                ),
 		                
 		    "pac"=>array("up"=>"pac up message",
 		                "down"=>"pac down message",
-		                "stable"=>"pac stable message"),
+		                "stable"=>"pac stable message"
+		                ),
 		                
 		    "treatment1"=>array("up"=>"treatment1 up message",
 		                "down"=>"treatment1 down message",
-		                "stable"=>"treatment1 stable message"),
+		                "stable"=>"treatment1 stable message"
+		                ),
 		                
 		    "treatment2"=>array("up"=>"treatment2 up message",
 		                "down"=>"treatment2 down message",
-		                "stable"=>"treatment2 stable message"),
+		                "stable"=>"treatment2 stable message"
+		                ),
 
 		    "ph"=>array("up"=>"ph up message",
 		                "down"=>"ph down message",
-		                "stable"=>"ph stable message"),
+		                "stable"=>"ph stable message"
+		                ),
 		                
 		    "orp"=>array("up"=>"orp up message",
 		                "down"=>"orp down message",
-		                "stable"=>"orp stable message"),             		    
+		                "stable"=>"orp stable message"
+		                ),             		    
 		                
 		    "temperature"=>array("up"=>"temperature up message",
 		                "down"=>"temperature down message",
-		                "stable"=>"temperature stable message"),             
+		                "stable"=>"temperature stable message"
+		                ),             
             );
 
 // connect to the database
