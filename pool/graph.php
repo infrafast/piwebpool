@@ -151,23 +151,21 @@ switch ($_GET["type"]){
         if ($ratio>$threshold) $trendIndicator="up";
         if ($ratio<-$threshold) $trendIndicator="down";
         
-        $currentValueIndicator = "correct"; 
+        $reference=0;
         switch ($_GET["graph"]){
             case "ph":
-                
+                $reference=7.3;                
             break;
             case "orp";
-            
+                $reference=700;
             break;
             case "temperature";
-            
+                $reference=27;
             break;
-        
-
             default:
             break;
         }
-        
+        $currentValueIndicator = "correct"; 
 
         //$text.="\nTrend:".$trend;
         //$text.="\naverage:".$avg;
