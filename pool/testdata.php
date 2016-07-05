@@ -14,7 +14,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 } 
 
 function getVal(){
-	return intval()rand(0,1));
+	return intval(rand(0,1));
 }
 
 
