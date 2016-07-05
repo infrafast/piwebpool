@@ -110,8 +110,8 @@ switch ($_GET["type"]){
 
         $box = new Box($im);
         $box->setFontFace('./fonts/Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
-        $box->setFontColor(new Color(200, 200, 200));
-        $box->setTextShadow(new Color(0, 0, 0, 50), 2, 2);
+        $box->setFontColor(new Color(0, 0, 0, 50));
+        $box->setTextShadow(new Color(200, 200, 200), 2, 2);
         $box->setFontSize(15);
         $box->setBox(20, 20, 460, 460);
         $box->setTextAlign('left', 'top');
