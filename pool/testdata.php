@@ -28,6 +28,11 @@ generate(168,7.6,8,780,800,$link,$materialsColumn,$materials,$pins);
 //histeresis
 
 //peak
+generate(24,6.5,6.5,600,600,$link,$materialsColumn,$materials,$pins);generate(100,6.5,9,600,600,$link,$materialsColumn,$materials,$pins);generate(20,9,6.5,600,600,$link,$materialsColumn,$materials,$pins);generate(24,6.5,6.5,600,600,$link,$materialsColumn,$materials,$pins); 
+generate(24,7.2,7.2,700,700,$link,$materialsColumn,$materials,$pins);generate(120,7.2,7.2,700,700,$link,$materialsColumn,$materials,$pins);generate(24,7.2,7.2,700,700,$link,$materialsColumn,$materials,$pins);
+generate(24,8.5,8.5,980,950,$link,$materialsColumn,$materials,$pins);generate(120,8.5,8.5,980,950,$link,$materialsColumn,$materials,$pins);generate(24,8.5,8.5,980,950,$link,$materialsColumn,$materials,$pins);
+
+
 
 //waves
 
