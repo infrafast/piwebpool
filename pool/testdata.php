@@ -53,7 +53,7 @@ function generate($period,$phv1,$phv2,$orpv1,$orpv2,$link,$materialsColumn,$mate
             }else{
                 
                 $phValue+=$phStep+(rand(0,3)==1?0:intval(rand(-$phValue*0.05,$phValue*0.05)));
-                $orpValue+=$orpStep;//+intval(rand(-($orpnoise),$orpnoise));
+                $orpValue+=$orpStep+(rand(0,3)==1?0:intval(rand(-$orpValue*0.05,$orpValue*0.05)));
                 
                 $temperatureValue = getTemperature();
         		$pinVal=intval(rand(0,1));
