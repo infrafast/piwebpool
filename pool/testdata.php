@@ -2,8 +2,6 @@
 require_once('configuration.php');
 require_once('functions.php');
 
-
-function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
     // connect to the database
     if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
         echo 'Could not connect to mysql';
@@ -14,10 +12,10 @@ function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
         echo 'Could not select database';
         exit;
     } 
-    
-    function getVal(){
-    	return intval(rand(0,1));
-    }
+
+
+
+function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
     
     for ($x = 0; $x <= $period; $x++) {
         $sql    = "SELECT value from settings where id='measureIndex';";
