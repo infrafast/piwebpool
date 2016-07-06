@@ -103,3 +103,13 @@ FROM:
 if ($this->_exec("stty") === 0) {
 TO:
 if ($this->_exec("stty --version") === 0) {
+
+
+---------------------------------------------------------
+GIT
+-------------------------------------------------------------------
+git status
+git add -A .                 (action a faire = stagging)
+git status
+git commit -a -m "comment"   (commit les changement add/delete/update/etc...)
+git push origin master       (envoi les datas au repository remote)
