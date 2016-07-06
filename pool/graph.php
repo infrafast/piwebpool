@@ -90,11 +90,11 @@ $hint = array(
 		                    "correct"=>"orp down correct"),
 		                "stable"=>array(
 		                    "high"=>"orp stable high",
-		                    "orp"=>"ph stable low",
+		                    "low"=>"ph stable low",
 		                    "correct"=>"orp stable correct"),
 		                "unstable"=>array(
 		                    "high"=>"orp unstable high",
-		                    "orp"=>"orp unstable low",
+		                    "low"=>"orp unstable low",
 		                    "correct"=>"orp unstable correct"	),	                    
                     ),
 		    "temperature"=>array("up"=>array(
@@ -111,7 +111,7 @@ $hint = array(
 		                            "correct"=>"temperature stable correct"),
 		                        "unstable"=>array(
 		                            "high"=>"temperature unstable high",
-		                            "orp"=>"temperature unstable low",
+		                            "low"=>"temperature unstable low",
 		                            "correct"=>"temperature unstable correct"),			                            
                 )
             );
