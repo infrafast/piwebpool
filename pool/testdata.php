@@ -27,7 +27,7 @@ generate(24,1,3,0.3,1,300,10);
 
 
 
-function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise){
+function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link){
     $phStep = ($phv2 - $phv1)/$period;
     $phvalue = $phv1;
     $orpStep = ($orpv2 - $orpv1)/$period;
