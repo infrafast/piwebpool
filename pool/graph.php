@@ -245,6 +245,8 @@ switch ($_GET["type"]){
         //$text.="\ndiffVal:".$diffVal;
         //$text.="\necartVal:".$ecartVal;
         //$text.="\ncurrentValueIndicator:".$currentValueIndicator;
+        $text.="\nstdev:".$stdev;
+        $text.="\nratioDev:".$ratioDev;
         
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
 
