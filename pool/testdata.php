@@ -19,7 +19,7 @@ function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
     	return intval(rand(0,1));
     }
     
-    for ($x = 0; $x <= 24; $x++) {
+    for ($x = 0; $x <= $period; $x++) {
         $sql    = "SELECT value from settings where id='measureIndex';";
         $result = mysql_query($sql, $link);
         
