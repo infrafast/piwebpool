@@ -64,19 +64,19 @@ $text=null;
 
 $hint = array(
 		    "ph"=>array("up"=>array(
-		                    "high"=>"Ph unstable highh",
-		                    "low"=>"Ph unstable highh",
-		                    "correct"=>"Ph unstable highh"),
+		                    "high"=>"Ph up high",
+		                    "low"=>"Ph up low",
+		                    "correct"=>"Ph up correct"),
 		                "down"=>array(
-		                    "high"=>"Ph unstable highh",
-		                    "low"=>"Ph unstable highh",
-		                    "correct"=>"Ph unstable highh"),
+		                    "high"=>"Ph down high",
+		                    "low"=>"Ph down low",
+		                    "correct"=>"Ph down correct"),
 		                "stable"=>array(
-		                    "high"=>"Ph unstable highh",
-		                    "low"=>"Ph unstable highh",
-		                    "correct"=>"Ph unstable high"),
+		                    "high"=>"Ph stable high",
+		                    "low"=>"Ph stable low",
+		                    "correct"=>"Ph stable correct"),
 		                "unstable"=>array(
-		                    "high"=>"Ph unstable highh ",
+		                    "high"=>"Ph unstable high",
 		                    "low"=>"Ph unstable low",
 		                    "correct"=>"Ph unstable correct"),		                    
                 ),
