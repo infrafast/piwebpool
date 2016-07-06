@@ -80,6 +80,6 @@ echo leastSquareFit($PopulationOfTexas);
 
 echo "\nstdev: ".standard_deviation($PopulationOfTexas);
 
-echo "getdevice id ".getDevice("orp");
+echo "getdevice id ".getDevice("temp");
 
 ?>
