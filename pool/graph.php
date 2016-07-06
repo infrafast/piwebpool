@@ -62,7 +62,11 @@ $hint = array(
 		                    "high"=>"le Ph reste au dessus de la norme.\nIl est conseillé d'augmenter le traitement Ph-\nou vérifier le bon réglage de votre régulateur.",
 		                    "low"=>"le Ph reste en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
 		                    "correct"=>"le Ph reste stable et dans les normes.\nC'est bon signe!"),
-		                ),
+		                "unsstable"=>array(
+		                    "high"=>"le Ph reste au dessus de la norme.\nIl est conseillé d'augmenter le traitement Ph-\nou vérifier le bon réglage de votre régulateur.",
+		                    "low"=>"le Ph reste en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
+		                    "correct"=>"le Ph reste stable et dans les normes.\nC'est bon signe!"),		                    
+                ),
 		    "orp"=>array("up"=>array(
 		                    "high"=>"orp up high",
 		                    "low"=>"orp up low",
@@ -75,7 +79,11 @@ $hint = array(
 		                    "high"=>"orp stable high",
 		                    "orp"=>"ph stable low",
 		                    "correct"=>"orp stable correct"),
-		                ),
+		                "unstable"=>array(
+		                    "high"=>"orp stable high",
+		                    "orp"=>"ph stable low",
+		                    "correct"=>"orp stable correct"	),	                    
+                    ),
 		    "temperature"=>array("up"=>array(
 	                                "high"=>"temperature up high",
 	                                "low"=>"temperature up low",
@@ -88,7 +96,11 @@ $hint = array(
 		                            "high"=>"temperature stable high",
 		                            "low"=>"temperature stable low",
 		                            "correct"=>"temperature stable correct"),
-		                )
+		                        "unstable"=>array(
+		                            "high"=>"orp stable high",
+		                            "orp"=>"ph stable low",
+		                            "correct"=>"orp stable correct"),			                            
+                )
             );
 
 // connect to the database
