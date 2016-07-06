@@ -53,7 +53,7 @@ function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link,$ma
                 $state.="+".mysql_error();
             }else{
                 
-                $phValue+=$phStep+intval(rand(-$phnoise,$phnoise));
+                $phValue+=$phStep+intval(rand(-($phnoise+$phStep),$phnoise+$phStep));
                 $orpValue+=$orpStep+intval(rand(-$orpnoise,$orpnoise));
                 
                 $temperatureValue = getTemperature();
