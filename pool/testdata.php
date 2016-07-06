@@ -41,7 +41,7 @@ function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
                 $phValue = round( ($phMin + ($phMax - $phMin) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP)+$phCoef;
                 $orpValue = intval(rand($orpMin,$orpMax))+$orpCoef;
                 $temperatureValue = getTemperature();
-        		$pinVal=getVal();
+        		$pinVal=intval(rand(0,1));
         		
                 $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
                 foreach($materials as $material=>$pin) $sql = $sql.", `".$materialsColumn[$material]."`";
