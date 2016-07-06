@@ -29,9 +29,9 @@ generate(24,2,2.5,0.3,1,300,10,$link,$materialsColumn,$materials,$pins);
 
 function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link,$materialsColumn,$materials,$pins){
     $phStep = ($phv2 - $phv1)/$period;
-    $phValue = 0;
+    $phValue = $phv1;
     $orpStep = ($orpv2 - $orpv1)/$period;
-    $orpValue = 0;
+    $orpValue = $orpv1;
     
     for ($x = 0; $x <= $period; $x++) {
         $sql    = "SELECT value from settings where id='measureIndex';";
