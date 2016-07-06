@@ -4,7 +4,7 @@ import threading  #import threading module to create a separate thread for readi
 
 ser = serial.Serial(      #initiate the serial connection into the 'ser' variable
   port='/dev/ttyUSB2',    #set the port address of the Atlas stamp
-  baudrate=34800          #set the baudrate
+  baudrate=9600          #set the baudrate
 )
 
 def read_from_port(ser):    #create definition for your serial read thread
