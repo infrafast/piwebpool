@@ -33,15 +33,15 @@ function leastSquareFit(array $values) {
 	require_once('functions.php');
 
 $PopulationOfTexas = array(
-    0 => 6.56, // in millions
-    1 => 6.45,
-    2 => 6.50,
-    3 => 6.55,
-    4 => 10.51,
-    5 => 6.49,
-    6 => 6.48,
-    7 => 6.47,
-    8 => 6.5,
+    0 => 700.56, // in millions
+    1 => 706.45,
+    2 => 705.50,
+    3 => 704.55,
+    4 => 703.51,
+    5 => 700.49,
+    6 => 702.48,
+    7 => 706.47,
+    8 => 710.5,
 );
 
 //generate an array sohwing the difference in each year compared to the previous year
