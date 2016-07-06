@@ -18,6 +18,9 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 generate(168,6.9,7,680,720,$link,$materialsColumn,$materials,$pins);
 //generate(168,1.01,3.01,1,300,$link,$materialsColumn,$materials,$pins);
 //decrease
+//generate(168,3.01,1.01,500,300,$link,$materialsColumn,$materials,$pins);
+//generate(168,7.2,7,700,720,$link,$materialsColumn,$materials,$pins);
+//generate(168,8,7.9,900,800,$link,$materialsColumn,$materials,$pins);
 
 //stable
 
