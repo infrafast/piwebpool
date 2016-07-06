@@ -196,8 +196,6 @@ switch ($_GET["type"]){
         }
         $trend=getTrend($values);
         $avg=array_sum($values) / count($values);
-        $avg=($avg+$values[count($values)-1])/2;
-        // we ponderate the average by re-avergaring with the last measure to make sure the instant value is not falsing the overall estimation
 
         $ratio=$trend/$avg;
         $threshold=0.005;
@@ -224,6 +222,10 @@ switch ($_GET["type"]){
             default:
             break;
         }
+
+        $avg=($avg+$values[count($values)-1])/2;
+        // we ponderate the average by re-avergaring with the last measure to make sure the instant value is not falsing the overall estimation
+
 
         $diffVal = $avg-$reference;
         $ecartVal = $diffVal/$reference;
