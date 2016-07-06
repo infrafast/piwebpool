@@ -64,17 +64,17 @@ $text=null;
 
 $hint = array(
 		    "ph"=>array("up"=>array(
-		                    "high"=>"le Ph a grimpé à un niveau anormalement elevé.\nVous devriez vérifier le fonctionnement du régulateur\nou injecter du Ph-",
-		                    "low"=>"le Ph est faible mais en augmentation, c'est bon signe.\nA surveiller cependant.",
-		                    "correct"=>"le PH à augementé à un niveau correct.\nSurveiller qu'il ne dépasse pas 7.5 dans pes prochaines heures."),
+		                    "high"=>"Ph unstable highh",
+		                    "low"=>"Ph unstable highh",
+		                    "correct"=>"Ph unstable highh"),
 		                "down"=>array(
-		                    "high"=>"le Ph diminue mais reste trop elevé.\nC'est bon signe mais à surveiller.",
-		                    "low"=>"Le Ph est en train de chuter.\nIl est conseillé de l'augmenter avec du Ph+",
-		                    "correct"=>"Attention le Ph est dans les normes\nmais il diminue. A surveiller"),
+		                    "high"=>"Ph unstable highh",
+		                    "low"=>"Ph unstable highh",
+		                    "correct"=>"Ph unstable highh"),
 		                "stable"=>array(
-		                    "high"=>"le Ph reste au dessus de la norme.\nIl est conseillé d'augmenter le traitement Ph-\nou vérifier le bon réglage de votre régulateur.",
-		                    "low"=>"le Ph reste en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
-		                    "correct"=>"le Ph reste stable et dans les normes.\nC'est bon signe!"),
+		                    "high"=>"Ph unstable highh",
+		                    "low"=>"Ph unstable highh",
+		                    "correct"=>"Ph unstable highh"),
 		                "unstable"=>array(
 		                    "high"=>"Ph unstable highh ",
 		                    "low"=>"Ph unstable low",
