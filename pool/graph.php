@@ -235,16 +235,16 @@ switch ($_GET["type"]){
              $currentValueIndicator = "low";
         }
 
-        //$text.="\nTrend:".$trend;
-        //$text.="\naverage:".$avg;
-        //$text.="\nratio:".$ratio;
-        //$text.="\ntrend:".$trendIndicator;
-        //$text.="\nvalue:".$currentValueIndicator;
-        //$text.="\navg:".$avg;
-        //$text.="\nreference:".$reference;
-        //$text.="\ndiffVal:".$diffVal;
-        //$text.="\necartVal:".$ecartVal;
-        //$text.="\ncurrentValueIndicator:".$currentValueIndicator;
+        $text.="\nTrend:".$trend;
+        $text.="\naverage:".$avg;
+        $text.="\nratio:".$ratio;
+        $text.="\ntrend:".$trendIndicator;
+        $text.="\nvalue:".$currentValueIndicator;
+        $text.="\navg:".$avg;
+        $text.="\nreference:".$reference;
+        $text.="\ndiffVal:".$diffVal;
+        $text.="\necartVal:".$ecartVal;
+        $text.="\ncurrentValueIndicator:".$currentValueIndicator;
         $text.="\nstdev:".$stdev;
         $text.="\nratioDev:".$ratioDev;
         
