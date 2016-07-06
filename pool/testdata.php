@@ -2,16 +2,28 @@
 require_once('configuration.php');
 require_once('functions.php');
 
-    // connect to the database
-    if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
-        echo 'Could not connect to mysql';
-        exit;
-    }
-    
-    if (!mysql_select_db($options["database"]["name"], $link)) {
-        echo 'Could not select database';
-        exit;
-    } 
+// connect to the database
+if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
+    echo 'Could not connect to mysql';
+    exit;
+}
+
+if (!mysql_select_db($options["database"]["name"], $link)) {
+    echo 'Could not select database';
+    exit;
+} 
+
+//increase
+
+//decrease
+
+//stable
+
+//histeresis
+
+//peak
+
+//waves
 
 
 
