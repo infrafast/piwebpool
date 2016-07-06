@@ -64,21 +64,21 @@ $text=null;
 
 $hint = array(
 		    "ph"=>array("up"=>array(
-		                    "high"=>"le Ph a grimpé à un niveau anormalement elevé.\nVous devriez vérifier le fonctionnement du régulateur\nou injecter du Ph-",
-		                    "low"=>"le Ph est faible mais en augmentation, c'est bon signe.\nA surveiller cependant.",
-		                    "correct"=>"le PH à augementé à un niveau correct.\nSurveiller qu'il ne dépasse pas 7.5 dans pes prochaines heures."),
+		                    "high"=>"Ph up high",
+		                    "low"=>"Ph up low",
+		                    "correct"=>"Ph up correct"),
 		                "down"=>array(
-		                    "high"=>"le Ph diminue mais reste trop elevé.\nC'est bon signe mais à surveiller.",
-		                    "low"=>"Le Ph est en train de chuter.\nIl est conseillé de l'augmenter avec du Ph+",
-		                    "correct"=>"Attention le Ph est dans les normes\nmais il diminue. A surveiller"),
+		                    "high"=>"Ph down high",
+		                    "low"=>"Ph down low",
+		                    "correct"=>"Ph down correct"),
 		                "stable"=>array(
-		                    "high"=>"le Ph reste au dessus de la norme.\nIl est conseillé d'augmenter le traitement Ph-\nou vérifier le bon réglage de votre régulateur.",
-		                    "low"=>"le Ph reste en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
-		                    "correct"=>"le Ph reste stable et dans les normes.\nC'est bon signe!"),
-		                "unsstable"=>array(
-		                    "high"=>"le Ph ",
-		                    "low"=>"le Ph ",
-		                    "correct"=>"le Ph "),		                    
+		                    "high"=>"Ph stable high",
+		                    "low"=>"Ph stable low",
+		                    "correct"=>"Ph stable correct"),
+		                "unstable"=>array(
+		                    "high"=>"Ph unstable high",
+		                    "low"=>"Ph unstable low",
+		                    "correct"=>"Ph unstable correct"),		                    
                 ),
 		    "orp"=>array("up"=>array(
 		                    "high"=>"orp up high",
@@ -90,11 +90,11 @@ $hint = array(
 		                    "correct"=>"orp down correct"),
 		                "stable"=>array(
 		                    "high"=>"orp stable high",
-		                    "orp"=>"ph stable low",
+		                    "low"=>"ph stable low",
 		                    "correct"=>"orp stable correct"),
 		                "unstable"=>array(
 		                    "high"=>"orp unstable high",
-		                    "orp"=>"ph unstable low",
+		                    "low"=>"orp unstable low",
 		                    "correct"=>"orp unstable correct"	),	                    
                     ),
 		    "temperature"=>array("up"=>array(
@@ -110,9 +110,9 @@ $hint = array(
 		                            "low"=>"temperature stable low",
 		                            "correct"=>"temperature stable correct"),
 		                        "unstable"=>array(
-		                            "high"=>"orp unstable high",
-		                            "orp"=>"ph unstable low",
-		                            "correct"=>"orp unstable correct"),			                            
+		                            "high"=>"temperature unstable high",
+		                            "low"=>"temperature unstable low",
+		                            "correct"=>"temperature unstable correct"),			                            
                 )
             );
 
@@ -145,9 +145,9 @@ $data = array();
 while ($row = mysql_fetch_assoc($result)){
     $date = strtotime($row['timeStamp']);
     $hour = date('DH', $date);    
-    $data[$row['timeStamp']] = $row[$_GET["graph"]];
+    //$data[$row['timeStamp']] = $row[$_GET["graph"]];
     // ******* HOUR
-    //$data[$hour] = $row[$_GET["graph"]];    
+    $data[$hour] = $row[$_GET["graph"]];    
    // echo "<br>".$row['timeStamp']." ". $row[$_GET["graph"]]." ".$hour;
 }
 //exit;
@@ -196,13 +196,17 @@ switch ($_GET["type"]){
         }
         $trend=getTrend($values);
         $avg=array_sum($values) / count($values);
+
         $ratio=$trend/$avg;
-        $threshold=0.005;
+        $threshold=0.0002; //0.005
 
         $trendIndicator="stable";
         if ($ratio>$threshold) $trendIndicator="up";
         if ($ratio<-$threshold) $trendIndicator="down";
         $stdev = standard_deviation($values);
+        $ratioDev=$stdev/$avg;
+        if ($ratioDev>0.2) $trendIndicator="unstable";
+        
         
         $reference=0;
         switch ($_GET["graph"]){
@@ -231,16 +235,18 @@ switch ($_GET["type"]){
              $currentValueIndicator = "low";
         }
 
-        //$text.="\nTrend:".$trend;
-        //$text.="\naverage:".$avg;
-        //$text.="\nratio:".$ratio;
-        //$text.="\ntrend:".$trendIndicator;
-        //$text.="\nvalue:".$currentValueIndicator;
-        //$text.="\navg:".$avg;
-        //$text.="\nreference:".$reference;
-        //$text.="\ndiffVal:".$diffVal;
-        //$text.="\necartVal:".$ecartVal;
-        //$text.="\ncurrentValueIndicator:".$currentValueIndicator;
+        $text.="\nTrend:".$trend;
+        $text.="\naverage:".$avg;
+        $text.="\nratio:".$ratio;
+        $text.="\ntrend:".$trendIndicator;
+        $text.="\nvalue:".$currentValueIndicator;
+        $text.="\navg:".$avg;
+        $text.="\nreference:".$reference;
+        $text.="\ndiffVal:".$diffVal;
+        $text.="\necartVal:".$ecartVal;
+        $text.="\ncurrentValueIndicator:".$currentValueIndicator;
+        $text.="\nstdev:".$stdev;
+        $text.="\nratioDev:".$ratioDev;
         
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
 
