@@ -61,4 +61,5 @@ function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
         echo "\n".$x."/".$measureIndex." ph:".$phValue." ORP:".$orpValue." Temp:".$temperatureValue." pinVal:".$pinVal."\n";    
         sleep(1);
     }
+}
 ?>
