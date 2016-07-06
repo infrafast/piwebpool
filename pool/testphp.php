@@ -33,10 +33,15 @@ function leastSquareFit(array $values) {
 	require_once('functions.php');
 
 $PopulationOfTexas = array(
-    1999 => 6.56, // in millions
-    2000 => 6.45,
-    2001 => 6.50,
-    2002 => 6.55
+    0 => 6.56, // in millions
+    1 => 6.45,
+    2 => 6.50,
+    3 => 6.55,
+    4 => 6.51,
+    5 => 6.49,
+    6 => 6.48,
+    7 => 6.47,
+    8 => 6.5,
 );
 
 //generate an array sohwing the difference in each year compared to the previous year
@@ -73,6 +78,6 @@ print_r($predictions);
 
 echo leastSquareFit($PopulationOfTexas);
 
-echo "stdev: ".standard_deviation($PopulationOfTexas);
+echo "\nstdev: ".standard_deviation($PopulationOfTexas);
 
 ?>
