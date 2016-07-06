@@ -3,7 +3,7 @@ import serial     #import serial module to enable serial commands
 import threading  #import threading module to create a separate thread for reading the serial port
 
 ser = serial.Serial(      #initiate the serial connection into the 'ser' variable
-  port='/dev/ttyUSB0',    #set the port address of the Atlas stamp
+  port='/dev/ttyUSB1',    #set the port address of the Atlas stamp
   baudrate=9600          #set the baudrate
 )
 
