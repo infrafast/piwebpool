@@ -49,8 +49,7 @@ function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link,$ma
             $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
             $result = mysql_query($sql, $link);
             if (!$result) {
-                $answer.="+ERROR";
-                $state.="+".mysql_error();
+                echo mysql_error(); exit;
             }else{
                 
                 $phValue+=$phStep;//+intval(rand(-($phnoise),$phnoise));
