@@ -69,7 +69,7 @@ function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link,$ma
         
                 $result = mysql_query($sql, $link);
                 if (!$result) {
-                    echo "error".mysql_error()." ".$sql; exit
+                    echo "error".mysql_error()." ".$sql; exit;
                 }            
             }
         }
