@@ -40,8 +40,8 @@ function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
                 $state.="+".mysql_error();
             }else{
                 
-                $phValue = round( (7.0 + (7.5 - 7.0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
-                $orpValue = intval(rand(700,750));
+                $phValue = round( (7.0 + (7.5 - 7.0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP)+$phCoef;
+                $orpValue = intval(rand(700,750))+$proCoef;
                 $temperatureValue = getTemperature();
         		$pinVal=getVal();
         		
