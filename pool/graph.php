@@ -207,7 +207,7 @@ switch ($_GET["type"]){
         if ($ratio<-$threshold) $trendIndicator="down";
         $stdev = standard_deviation($values);
         $ratioDev=$stdev/$avg;
-        if ($ratioDev>0.05) $trendIndicator="unstable";
+        if ($ratioDev>0.04) $trendIndicator="unstable";
         
         
         $reference=0;
