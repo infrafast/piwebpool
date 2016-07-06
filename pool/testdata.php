@@ -28,6 +28,10 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 
 function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise){
+    $phStep = ($phv2 - $phv1)/$period;
+    $phvalue = $phv1;
+    $orpStep =
+    $orpValue = $orpv1;
     
     for ($x = 0; $x <= $period; $x++) {
         $sql    = "SELECT value from settings where id='measureIndex';";
@@ -50,8 +54,10 @@ function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise){
                 $state.="+".mysql_error();
             }else{
                 
-                $phValue = round( ($phv1 + ($phv2 - $phv1) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP)+$phnoise;
-                $orpValue = intval(rand($orpv1,$orpv2))+$orpnoise;
+                //$phValue = round( ($phv1 + ($phv2 - $phv1) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP)+$phnoise;
+                //$orpValue = intval(rand($orpv1,$orpv2))+$orpnoise;
+                
+                
                 $temperatureValue = getTemperature();
         		$pinVal=intval(rand(0,1));
         		
