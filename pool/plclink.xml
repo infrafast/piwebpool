@@ -39,8 +39,8 @@
 					<description>Etat filtration</description>
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
-                    <link>http://piweb.infrafast.com/action.php?SwitchFilterPLC=%d</link>
-                    <url>http://piweb.infrafast.com/action.php?getFilterStatePLC</url>
+                    <link>http://piweb3.infrafast.com/action.php?SwitchFilterPLC=%d</link>
+                    <url>http://piweb3.infrafast.com/action.php?getFilterStatePLC</url>
 				</item>
 				<item id="4"> 
 					<title>Traitement</title>
@@ -48,8 +48,8 @@
 					<description>Etat traitement</description>
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
-                    <link>http://piweb.infrafast.com/action.php?SwitchTreatment1PLC=%d</link>
-                    <url>http://piweb.infrafast.com/action.php?getTreatment1StatePLC</url>
+                    <link>http://piweb3.infrafast.com/action.php?SwitchTreatment1PLC=%d</link>
+                    <url>http://piweb3.infrafast.com/action.php?getTreatment1StatePLC</url>
 				</item>				
 			</items>
 		</room>
