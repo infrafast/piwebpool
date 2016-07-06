@@ -54,7 +54,7 @@ function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link,$ma
             }else{
                 
                 $phValue+=$phStep+round( (0.0 + ($phnoise - 0.0) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);;
-                $orpValue.=$orpStep+intval(rand(0,$orpnoise));
+                $orpValue+=$orpStep+intval(rand(0,$orpnoise));
                 
                 $temperatureValue = getTemperature();
         		$pinVal=intval(rand(0,1));
