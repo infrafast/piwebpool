@@ -172,7 +172,7 @@ function getTemperature(){
         $v1 = round(readSensor(getDevice("temp")), 1,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<35) return $v1;
     }
-    return false;
+    return $v1;
 }
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
@@ -182,7 +182,7 @@ function getPh(){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<10) return $v1;
     }
-    return false;
+    return $v1;
 }
 
 function getORP(){
