@@ -22,9 +22,9 @@ generate(168,7.6,8,780,800,$link,$materialsColumn,$materials,$pins);
 //generate(168,7.2,7,700,720,$link,$materialsColumn,$materials,$pins);
 //generate(168,8,7.9,900,800,$link,$materialsColumn,$materials,$pins);
 //stable
-//generate(168,3.01,1.01,500,300,$link,$materialsColumn,$materials,$pins);
-//generate(168,7.2,7,700,720,$link,$materialsColumn,$materials,$pins);
-//generate(168,8,7.9,900,800,$link,$materialsColumn,$materials,$pins);
+//generate(168,6.5,6.5,600,600,$link,$materialsColumn,$materials,$pins);
+//generate(168,7.2,7.2,700,700,$link,$materialsColumn,$materials,$pins);
+//generate(168,8.5,8.5,980,950,$link,$materialsColumn,$materials,$pins);
 //histeresis
 
 //peak
