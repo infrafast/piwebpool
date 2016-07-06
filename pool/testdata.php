@@ -17,7 +17,7 @@ function getVal(){
 	return intval(rand(0,1));
 }
 
-for ($x = 0; $x <= 128; $x++) {
+for ($x = 0; $x <= 24; $x++) {
     $sql    = "SELECT value from settings where id='measureIndex';";
     $result = mysql_query($sql, $link);
     
