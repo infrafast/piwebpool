@@ -202,6 +202,7 @@ switch ($_GET["type"]){
         $trendIndicator="stable";
         if ($ratio>$threshold) $trendIndicator="up";
         if ($ratio<-$threshold) $trendIndicator="down";
+        $stdev = standard_deviation($values);
         
         $reference=0;
         switch ($_GET["graph"]){
