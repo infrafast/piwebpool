@@ -38,8 +38,7 @@ function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link){
         $result = mysql_query($sql, $link);
         
         if (!$result) {
-            $answer.="+ERROR";
-            $state.="+".mysql_error();
+                echo "failed query index"; exit;
         }else{
             while ($row = mysql_fetch_assoc($result)) {
                 $measureIndex=($row['value']);
