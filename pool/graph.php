@@ -225,8 +225,6 @@ switch ($_GET["type"]){
 
         $avg=($avg+$values[count($values)-1])/2;
         // we ponderate the average by re-avergaring with the last measure to make sure the instant value is not falsing the overall estimation
-
-
         $diffVal = $avg-$reference;
         $ecartVal = $diffVal/$reference;
         $currentValueIndicator = "correct"; 
