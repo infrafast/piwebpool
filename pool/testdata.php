@@ -52,7 +52,8 @@ function generate($period,$phv1,$phv2,$orpv1,$orpv2,$link,$materialsColumn,$mate
                 echo mysql_error(); exit;
             }else{
                 
-                $phValue=round(($phStep*$x)+($phv1+(rand(0,8)<3?0:rand(-0.9,0.9))),3,PHP_ROUND_HALF_EVEN);
+                $phValue=($phStep*$x)+$phv1;
+                $phvalue=rand($phvalue*1,$phvalue*1.2)
                 $orpValue=($orpStep*$x)+($orpv1+(rand(0,8)<3?0:intval(rand(-$orpValue*0.01,$orpValue*0.05))));
                 
                 $temperatureValue = getTemperature();
