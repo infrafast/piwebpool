@@ -30,7 +30,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise){
     $phStep = ($phv2 - $phv1)/$period;
     $phvalue = $phv1;
-    $orpStep =
+    $orpStep = ($orpv2 - $orpv1)/$period;
     $orpValue = $orpv1;
     
     for ($x = 0; $x <= $period; $x++) {
