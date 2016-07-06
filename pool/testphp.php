@@ -61,4 +61,6 @@ print_r($predictions);
 
 echo leastSquareFit($PopulationOfTexas);
 
+echo "stdev: ".stats_standard_deviation($PopulationOfTexas);
+
 ?>
