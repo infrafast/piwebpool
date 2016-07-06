@@ -14,7 +14,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 } 
 
 //increase
-generate(24,1,3,0.3,1,300,10,$link);
+generate(24,1,3,0.3,1,300,10,$link,$materialsColumn,$materials,$pins);
 //decrease
 
 //stable
@@ -27,7 +27,7 @@ generate(24,1,3,0.3,1,300,10,$link);
 
 
 
-function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link){
+function generate($period,$phv1,$phv2,$phnoise,$orpv1,$orpv2,$orpnoise,$link,$materialsColumn,$materials,$pins){
     $phStep = ($phv2 - $phv1)/$period;
     $phValue = $phv1;
     $orpStep = ($orpv2 - $orpv1)/$period;
