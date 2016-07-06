@@ -5,7 +5,7 @@
 	<rooms> 
 		<room id="0"> 
 			<title>Piscine</title>
-			<refresh>2000</refresh>
+			<refresh>10000</refresh>
 			<items> 
 				<item id="0"> 
 					<title>Temperature</title>
@@ -14,7 +14,7 @@
                     <type>json</type><text>state</text> 
                     <unit>°C</unit>
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?action=getTemperaturePLC</url>
+					<url>http://piweb3.infrafast.com/action.php?action=getTemperaturePLC</url>
 				</item>
 				<item id="1"> 
 					<title>ORP</title>
@@ -23,7 +23,7 @@
                     <type>json</type><text>state</text> 
                     <unit>mV</unit>
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?action=getORPPLC</url>
+					<url>http://piweb3.infrafast.com/action.php?action=getORPPLC</url>
 				</item>
 				<item id="2"> 
 					<title>PH</title>
@@ -31,7 +31,7 @@
 					<description>Taux Ph (6.5-7.5) </description>
                     <type>json</type><text>state</text> 
 					<affichage>text</affichage>
-					<url>http://piweb.infrafast.com/action.php?action=getPhPLC</url>
+					<url>http://piweb3.infrafast.com/action.php?action=getPhPLC</url>
 				</item>					
 				<item id="3"> 
 					<title>Pompe</title>
