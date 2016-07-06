@@ -41,7 +41,7 @@ function generate($period,$phMin,$phMax,$phCoef,$orpMin,$orpMax,$orpCoef){
             }else{
                 
                 $phValue = round( ($phMin + ($phMax - $phMin) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP)+$phCoef;
-                $orpValue = intval(rand($orpMin,$orpMax))+$proCoef;
+                $orpValue = intval(rand($orpMin,$orpMax))+$orpCoef;
                 $temperatureValue = getTemperature();
         		$pinVal=getVal();
         		
