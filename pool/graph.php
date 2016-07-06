@@ -75,7 +75,7 @@ $hint = array(
 		                    "high"=>"le Ph reste au dessus de la norme.\nIl est conseillé d'augmenter le traitement Ph-\nou vérifier le bon réglage de votre régulateur.",
 		                    "low"=>"le Ph reste en dessous de la norme.\nIl est conseillé d'augmenter le traitement Ph+\nou vérifier le bon réglage de votre régulateur.",
 		                    "correct"=>"le Ph reste stable et dans les normes.\nC'est bon signe!"),
-		                "unsstable"=>array(
+		                "unstable"=>array(
 		                    "high"=>"le Ph ",
 		                    "low"=>"le Ph ",
 		                    "correct"=>"le Ph "),		                    
@@ -94,7 +94,7 @@ $hint = array(
 		                    "correct"=>"orp stable correct"),
 		                "unstable"=>array(
 		                    "high"=>"orp unstable high",
-		                    "orp"=>"ph unstable low",
+		                    "orp"=>"orp unstable low",
 		                    "correct"=>"orp unstable correct"	),	                    
                     ),
 		    "temperature"=>array("up"=>array(
@@ -110,9 +110,9 @@ $hint = array(
 		                            "low"=>"temperature stable low",
 		                            "correct"=>"temperature stable correct"),
 		                        "unstable"=>array(
-		                            "high"=>"orp unstable high",
-		                            "orp"=>"ph unstable low",
-		                            "correct"=>"orp unstable correct"),			                            
+		                            "high"=>"temperature unstable high",
+		                            "orp"=>"temperature unstable low",
+		                            "correct"=>"temperature unstable correct"),			                            
                 )
             );
 
