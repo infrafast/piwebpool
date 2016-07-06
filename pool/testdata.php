@@ -23,7 +23,7 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 //generate(168,8,7.9,900,800,$link,$materialsColumn,$materials,$pins);
 //stable
 //generate(168,6.5,6.5,600,600,$link,$materialsColumn,$materials,$pins);
-generate(168,7.2,7.2,700,700,$link,$materialsColumn,$materials,$pins);
+generate(168,12.2,12.2,700,700,$link,$materialsColumn,$materials,$pins);
 //generate(168,8.5,8.5,980,950,$link,$materialsColumn,$materials,$pins);
 //histeresis
 
