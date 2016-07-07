@@ -230,8 +230,8 @@ switch ($_GET["type"]){
         $trendIndicator="stable";
         if ($ratio>$threshold) $trendIndicator="up";
         if ($ratio<-$threshold) $trendIndicator="down";
-        $stdev = standard_deviation($values);
-        $ratioDev=$stdev/$avg;
+        $deviation = ecarttype($values);
+        $ratioDev=$deviation/$avg;
         if ($ratioDev>0.2) $trendIndicator="unstable";
         
         
@@ -274,7 +274,7 @@ switch ($_GET["type"]){
         $text.="\ndiffVal:".$diffVal;
         $text.="\necartVal:".$ecartVal;
         $text.="\ncurrentValueIndicator:".$currentValueIndicator;
-        $text.="\nstdev:".$stdev;
+        $text.="\ndeviation:".$deviation;
         $text.="\nratioDev:".$ratioDev;
 
 
