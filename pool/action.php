@@ -200,7 +200,7 @@ switch($_['action']){
 	    }else if (isset($_GET['SwitchTreatment1PLC'])){
 	        $_['action'] = "PLC";
             setPinState($pins[$materials["traitement1"]],$_GET['SwitchTreatment1PLC']);
-            $result['state'] = "'".getPin($pins[$materials["traitement1"]])."'"; 
+            $result['state'] = "".getPin($pins[$materials["traitement1"]]).""; 
 	    }else if (isset($_GET['getTreatment1StatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["traitement1"]]);
