@@ -232,7 +232,7 @@ switch ($_GET["type"]){
         if ($ratio<-$threshold) $trendIndicator="down";
         $deviation = ecarttype($values);
         $ratioDev=$deviation/$avg;
-        if ($ratioDev>0.2) $trendIndicator="unstable";
+        if ($ratioDev>0.05) $trendIndicator="unstable";
         
         
         $reference=0;
