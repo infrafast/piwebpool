@@ -235,6 +235,8 @@ switch ($_GET["type"]){
              $currentValueIndicator = "low";
         }
 
+        $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
+        $text.="\n\n\n\n"
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
         $text.="\nratio:".$ratio;
@@ -247,8 +249,7 @@ switch ($_GET["type"]){
         $text.="\ncurrentValueIndicator:".$currentValueIndicator;
         $text.="\nstdev:".$stdev;
         $text.="\nratioDev:".$ratioDev;
-        
-        $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
+
 
         //print_r($data); echo "<br>"; print_r($values); echo "<br>".$text; exit;
 
