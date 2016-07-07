@@ -236,7 +236,7 @@ switch ($_GET["type"]){
         }
 
         $text.="\n".$hint[$_GET["graph"]][$trendIndicator][$currentValueIndicator];
-        $text.="\n\n\n\n"
+        $text.="\n\n\n\n";
         $text.="\nTrend:".$trend;
         $text.="\naverage:".$avg;
         $text.="\nratio:".$ratio;
