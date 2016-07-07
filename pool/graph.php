@@ -30,6 +30,33 @@ function getTrend(array $values) {
     return $slope;
 }   //  function leastSquareFit()
 
+
+function ecarttype($array, $nbdecimals=2) {
+    if (is_array($array)){
+        //moyenne des valeurs
+        reset($array);
+        $somme=0;
+        $nbelement=count($array);
+        foreach ($array as $value) {
+            $somme += floatval($value);
+        }
+        $moyenne = $somme/$nbelement;
+        //numerateur
+        reset($array);
+        $sigma=0;
+        foreach ($array as $value) {
+            $sigma += pow((floatval($value)-$moyenne),2);
+        }
+        //denominateur = $nbelement
+        $ecarttype = sqrt($sigma/$nbelement);
+        return number_format($ecarttype, $nbdecimals);
+    }else{
+        return false;
+    }
+}
+
+
+
 function standard_deviation($aValues, $bSample = false)
 {
     $fMean = array_sum($aValues) / count($aValues);
