@@ -203,7 +203,7 @@ switch($_['action']){
             $result['state'] = "".getPin($pins[$materials["traitement1"]]).""; 
 	    }else if (isset($_GET['getTreatment1StatePLC'])){
 	        $_['action'] = "PLC";
-	        $result['state'] = getPin($pins[$materials["traitement1"]]);
+	        $result['state'] = "".getPin($pins[$materials["traitement1"]])."";
 	    }else{    
         	$result['answer']  = "ERROR";
     		foreach($_ as $key=>$val){
