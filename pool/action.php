@@ -194,13 +194,13 @@ switch($_['action']){
 	        $_['action'] = "PLC";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
             $result['state'] = getPin($pins[$materials["filtration"]]);
+	    }else if (isset($_GET['getFilterStatePLC'])){
+	        $_['action'] = "PLC";
+	        $result['state'] = getPin($pins[$materials["filtration"]]);
 	    }else if (isset($_GET['SwitchTreatment1PLC'])){
 	        $_['action'] = "PLC";
             setPinState($pins[$materials["traitement1"]],$_GET['SwitchTreatment1PLC']);
             $result['state'] = getPin($pins[$materials["traitement1"]]); 
-	    }else if (isset($_GET['getFilterStatePLC'])){
-	        $_['action'] = "PLC";
-	        $result['state'] = getPin($pins[$materials["filtration"]]);
 	    }else if (isset($_GET['getTreatment1StatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["traitement1"]]);
