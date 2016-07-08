@@ -101,7 +101,7 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'getState':
-            getState($_,$result);
+            getState($_,$materials,$result);
     	break;
     
     	case 'changeState':
