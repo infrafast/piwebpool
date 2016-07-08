@@ -37,7 +37,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 
 
 
-function changeState(pin,elem){
+function changeState(material,elem){
 	var newState = ($(elem).hasClass('on')?0:1); 
 	//alert('changeState : pin'+pin+" value"+newState);
 	$(elem).removeClass('off');
