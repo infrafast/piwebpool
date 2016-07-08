@@ -119,7 +119,7 @@ function getColorVal(middleVal,compareVal){
 
     
 function refreshValue(elem,action){
-	var urlCall = "./action.php?action=get"+action;
+	var urlCall = "./action.php?extendedJson&action=get"+action;
 	$(elem).removeAttr("style");
 	$(elem).removeClass('off');
 	$(elem).addClass('loading');
