@@ -11,6 +11,7 @@ $('.header').click(function(){
         type: "POST",
     	url: urlCall,
     	async:false,
+    	data:{material:material,state:newState,extendedJson:true},
         success: function(r){
     }});
     $(this).removeClass('loading');
@@ -27,6 +28,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		    type: "POST",
 			url: "./action.php?"+UrlData,
 			async:async,
+			data:{material:material,state:newState,extendedJson:true},
 		success: function(r){
 			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
@@ -45,7 +47,7 @@ function changeState(material,elem){
 	$.ajax({
 			type: "POST",
 			url: "./changeState.php",
-			data:{material:material,state:newState,extendedJson},
+			data:{material:material,state:newState,extendedJson:true},
 			success: function(r){
 				var result = eval(r);
 				$(elem).removeClass('loading');
@@ -68,7 +70,7 @@ function updateScript(xml,lua,script){
 	$.ajax({
 			type: "POST",
 			url: "./action.php",
-			data:{action:"updateScript",id:script,xml:xml,lua:lua},
+			data:{action:"updateScript",id:script,xml:xml,lua:lua,extendedJson:true},
 			async:false,
 			success: function(r){
 				result = eval(r);
