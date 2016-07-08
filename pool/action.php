@@ -81,7 +81,7 @@ if(isset($_['action'])){
     	
     	case 'changeState':
     	    if (array_key_exists($_['material'], $materials)){
-    	        if (){ 
+    	        if ($_['state']==0 || $_['state']==1){ 
             	    //$result['state'] = setPinState($pins[$_['pin']],$_['state']);
             	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
     	        }else{
