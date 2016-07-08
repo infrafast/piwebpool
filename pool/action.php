@@ -9,12 +9,6 @@ require_once('luaContext.php');
 
 $result = array('state'=>'undef', 'answer'=>'OK');
 
-$param="";
-foreach($_ as $key=>$val){
-	$param.=" ".$key."=".$val;
-	$_[$key]=secure($val);
-}
-
 //appendlog("graph.php",$param,"");
 
 function getState($_,$materials,&$result){
