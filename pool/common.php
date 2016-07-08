@@ -21,4 +21,9 @@ foreach($_POST as $key=>$val){
 foreach($_GET as $key=>$val){
 	$_[$key]=secure($val);
 }
+$params="";
+foreach($_ as $key=>$val){
+	$params.=" ".$key."=".$val;
+	$_[$key]=secure($val);
+}
 ?>
