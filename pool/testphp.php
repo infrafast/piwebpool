@@ -1,5 +1,5 @@
  <?php
-    include ("fonctions.php");
+    include ("functions.php");
  
  
     echo "\ntemp: ".getTemperature()."\n";
