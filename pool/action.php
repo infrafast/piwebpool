@@ -206,6 +206,9 @@ if(isset($_['action'])){
         $result['state'] = "parameter material missing";
     } 
 }else{   
+    foreach (){
+        
+    }
 	$result['answer']  = "ERROR";
 	$result['state'] = 'Undefined call '.$params;
 }
