@@ -122,7 +122,7 @@ function getColorVal(middleVal,compareVal){
 
     
 function refreshValue(elem,material){
-	var urlCall = "./action.php?getState="+action;
+	var urlCall = "./action.php?getState="+material;
 	$(elem).removeAttr("style");
 	$(elem).removeClass('off');
 	$(elem).addClass('loading');
