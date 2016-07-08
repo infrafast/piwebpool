@@ -90,7 +90,7 @@ if(isset($_['action'])){
     	        }
     	    }else{
     	        $result['state'] = "ERROR";
-                $result['state'] = "bad or missing parameter:".$_['material'];
+                $result['state'] = "bad or missing parameter 'material':".$_['material'];
     	    }
     	break;
     	
