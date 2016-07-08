@@ -95,6 +95,7 @@ if(isset($_['action'])){
     	break;
     	
     	case 'getState':
+    	case 'getStatePLC':
             if (array_key_exists($_['material'], $materials)){    	    
     	        //$result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
     	        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
