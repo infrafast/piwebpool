@@ -28,7 +28,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			url: "./action.php?"+UrlData,
 			async:async,
 		success: function(r){
-			result =(r);
+			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
 	    }
 	});
@@ -47,7 +47,7 @@ function changeState(pin,elem){
 			url: "./action.php",
 			data:{action:"changeState", pin:pin,state:newState},
 			success: function(r){
-				var result =(r);
+				var result = eval(r);
 				$(elem).removeClass('loading');
 				$(elem).addClass('off');				
 				if(result.state == 1){          
@@ -71,7 +71,7 @@ function updateScript(xml,lua,script){
 			data:{action:"updateScript",id:script,xml:xml,lua:lua},
 			async:false,
 			success: function(r){
-				result =(r);
+				result = eval(r);
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
 				}
@@ -89,7 +89,7 @@ function getScript(code,script){
 		data:{action:"getScript",id:script,code:code},
 		async:false,
 		success: function(r){
-			result =(r);
+			result = eval(r);
 			if(result.answer != "OK"){          
 				alert('Erreur : '+result.state);
 			}
@@ -130,7 +130,7 @@ function refreshValue(elem,action){
     	url: urlCall,
     	async:false,
     	success: function(r){
-    		var result =(r);
+    		var result = eval(r);
             var newValue = result.state;
     		$(elem).removeClass('loading');
     		$(elem).addClass('off');
