@@ -37,7 +37,8 @@
 					<title>Pompe</title>
 					<name>Pompe</name>
 					<description>Etat filtration</description>
-                    <type>json</type><text>state</text>
+                    <type>json</type>
+                    <text>state</text>
                     <affichage>switch</affichage>
                     <link>http://http://piweb3.infrafast.com/action.php?filtration=%d</link>
                     <url>http://piweb3.infrafast.com/action.php?getState=filtration</url>
