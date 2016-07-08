@@ -192,18 +192,15 @@ switch($_['action']){
 	    header('Content-Type: application/json');
 	    if (isset($_GET['SwitchStatePLC'])){
 	        $_['action'] = "PLC";
+	        
+	        if(isset($mode)) {					// sortie JSON ou XML
+	if( $mode == "json") {
+	        
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
             $result['state'] = getPin($pins[$materials["filtration"]]);
 	    }else if (isset($_GET['getStatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
-	    }else if (isset($_GET['SwitchTreatment1PLC'])){
-	        $_['action'] = "PLC";
-            setPinState($pins[$materials["traitement1"]],$_GET['SwitchTreatment1PLC']);
-            $result['state'] = "".getPin($pins[$materials["traitement1"]]).""; 
-	    }else if (isset($_GET['getTreatment1StatePLC'])){
-	        $_['action'] = "PLC";
-	        $result['state'] = "".getPin($pins[$materials["traitement1"]])."";
 	    }else{    
         	$result['answer']  = "ERROR";
     		foreach($_ as $key=>$val){
