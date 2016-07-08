@@ -19,7 +19,8 @@ foreach($_ as $key=>$val){
 
 function getState($_,&$result){
     if(isset($_['material'])){
-        if (array_key_exists($_['material'], $materials)){    	    
+        $material=$_['material'];
+        if (array_key_exists($material, $materials)){    	    
             $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
         }else{
             $result['state'] = "ERROR";
