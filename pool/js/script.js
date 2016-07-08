@@ -45,7 +45,7 @@ function changeState(material,elem){
 	$.ajax({
 			type: "POST",
 			url: "./action.php",
-			data:{action:"changeState", pin:pin,state:newState},
+			data:{action:"changeState", material:material,state:newState},
 			success: function(r){
 				var result = eval(r);
 				$(elem).removeClass('loading');
