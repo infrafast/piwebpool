@@ -190,7 +190,8 @@ if(isset($_['action'])){
            break;
     
     	default:
-
+    	    $result['answer']  = "ERROR";
+            $result['state'] =$_['action'];
     	break;
     }
 }else if (isset($_GET['SwitchStatePLC'])){
@@ -208,8 +209,6 @@ if(isset($_['action'])){
     }
 	$result['state'] = 'Undefined call '.$param;
 }
-
-
 
 
 $returnValue = json_encode($result);
