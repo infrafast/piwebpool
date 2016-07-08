@@ -235,6 +235,6 @@ if(isset($_['action'])){
 
 $returnValue = json_encode($result);
 //header('Content-Type: application/json');
-echo "(".$returnValue.")";
+//echo "(".$returnValue.")";
 
 ?>
