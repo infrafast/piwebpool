@@ -52,14 +52,14 @@ function changeState(material,elem){
 				var result = eval(r);
 				$(elem).removeClass('loading');
 				$(elem).addClass('off');				
-				if(result.state == 1){          
+				if(result.answer == "OK"){          
 					$(elem).removeClass('on');
 					$(elem).removeClass('off');
 					$(elem).addClass((newState==1?'on':'off')); 
 					$(elem).html('<br>'+(newState==1?'on':'off')+'<br><br>');
 					//$(elem).getElementById("commandButtonID").innerHTML = "<br>whatever<br>";
 				}else{
-					alert('Erreur : '+result.answer);
+					alert('Erreur : '+result.state);
 				}
 	}});
 }
