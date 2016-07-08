@@ -9,7 +9,7 @@ require_once('luaContext.php');
 
 $result = array('state'=>'undef', 'answer'=>'OK');
 
-//appendlog("graph.php",$param,"");
+//appendlog("graph.php",$params,"");
 
 function getState($_,$materials,&$result){
     if(isset($_['material'])){
