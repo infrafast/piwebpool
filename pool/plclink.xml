@@ -39,7 +39,7 @@
 					<description>Etat filtration</description>
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
-                    <link>http://piweb3.infrafast.com/filtration=%d</link>
+                    <link>http://http://piweb3.infrafast.com/action.php?filtration=%d</link>
                     <url>http://piweb3.infrafast.com/action.php?getState=filtration</url>
 				</item>
 				<item id="4"> 
