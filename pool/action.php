@@ -17,7 +17,19 @@ foreach($_ as $key=>$val){
 
 //appendlog("graph.php",$param,"");
 
-// actions compatibles WEB et PLC Link
+
+function getState(){
+    
+    
+}
+
+function changeState(){
+    
+    
+}
+
+
+
 
 if(isset($_['action'])){
     switch($_['action']){
