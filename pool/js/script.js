@@ -46,7 +46,7 @@ function changeState(material,elem){
 	$(elem).addClass('loading');
 	$.ajax({
 			type: "POST",
-			url: "./changeState.php",
+			url: "./action.php",
 			data:{material:material,state:newState,extendedJson:true},
 			success: function(r){
 				var result = eval(r);
