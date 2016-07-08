@@ -22,7 +22,7 @@ function getState($_,&$result){
         $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
     }else{
         $result['state'] = "ERROR";
-        $result['state'] = "bad or missing parameter 'material':".$_['material']." full params->".$param;
+        $result['state'] = "bad or missing parameter 'material':".$_['material'];
     }   
 }
 
