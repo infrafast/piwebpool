@@ -32,15 +32,5 @@
 				<text>state</text>
 				<url>http://piweb3.infrafast.com/plc.php?mode=json</url>
 			</item>
-			<item id="3">
-				<title>Test</title>
-				<name>Switch XML NON STABLE</name>
-				<affichage>switch</affichage>
-				<description>Manque de stabilité en commutation</description>
-				<type>xml</type>
-				<text>param/value/struct/member/value/string</text>
-				<url>http://piweb3.infrafast.com/plc.php?mode=xml</url>
-				<link>http://piweb3.infrafast.com/plc.php?data=%d</link>
-			</item>
 		</items>
 </wagoml>
