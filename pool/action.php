@@ -80,21 +80,11 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'changeState':
-    	    if (intval($_['state'])<0 or intval($_['state'])>1 or intval($_['pin'])<1 or intval($_['pin'])>26){
-    	        $result['answer']  = 'ERROR';     
-    	        $result['state'] = " Bad parameter";
-    	    }else{
-    	        $result['state'] = setPinState($pins[$_['pin']],$_['state']);
-    	    }
+    	    $result['state'] = setPinState($pins[$_['pin']],$_['state']);
     	break;
     	
     	case 'getState':
-    	    if (intval($_['pin'])<1 or intval($_['pin'])>26){
-    	        $result['answer']  = "ERROR";
-    	        $result['state'] = 'Bad parameter';
-    	    }else{
-    	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
-    	    }
+	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
     	break;
     
     	case 'getLog':
