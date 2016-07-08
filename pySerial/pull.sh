@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 while read line; do
      if [ "$line" != "EOF" ]; then
           echo "$line" > usb2
