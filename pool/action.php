@@ -199,6 +199,7 @@ if(isset($_['action'])){
         if (isset($_[$material])){
             setPinState($pins[$materials["traitement1"]],$_GET['traitement1']);
             $result['state'] = getPin($pins[$materials["traitement1"]]);
+            exit;
         }
     }
 }
