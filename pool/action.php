@@ -85,7 +85,8 @@ if(isset($_['action'])){
     	break;
     	
     	case 'getState':
-	        $result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
+	        //$result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
+	        $result['state'] = (getPin($pins[$materials[$_['pin']]])=='off'?false:true);
     	break;
     
     	case 'getLog':
