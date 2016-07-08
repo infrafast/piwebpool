@@ -180,7 +180,7 @@ if(isset($_['action'])){
     }
 }else if (isset($_['getState'])){
     if(isset($_['material'])){
-        $material=$_['material'];
+        $material=$_['getState'];
         if (array_key_exists($material, $materials)){    	    
             $result['state'] = getPin($pins[$materials[$material]]);
         }else{
