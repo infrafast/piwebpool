@@ -79,6 +79,16 @@ if(isset($_['action'])){
     	    }
     	    break;
     	
+    	case 'getState':
+    	case 'getStatePLC':
+            if (array_key_exists($_['material'], $materials)){    	    
+    	        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
+            }else{
+    	        $result['state'] = "ERROR";
+                $result['state'] = "bad or missing parameter:".$_['material'];
+    	    }    	        
+    	break;
+    
     	case 'changeState':
     	    if (array_key_exists($_['material'], $materials)){
     	        if ($_['state']=="0" || $_['state']=="1"){ 
@@ -91,17 +101,8 @@ if(isset($_['action'])){
     	        $result['state'] = "ERROR";
                 $result['state'] = "bad or missing parameter 'material':".$_['material'];
     	    }
-    	break;
-    	
-    	case 'getState':
-    	case 'getStatePLC':
-            if (array_key_exists($_['material'], $materials)){    	    
-    	        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
-            }else{
-    	        $result['state'] = "ERROR";
-                $result['state'] = "bad or missing parameter:".$_['material'];
-    	    }    	        
-    	break;
+    	break;    
+    
     
     	case 'getLog':
             $result['state'] = getLog($logfilename);
