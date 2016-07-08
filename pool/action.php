@@ -17,7 +17,7 @@ foreach($_ as $key=>$val){
 
 //appendlog("graph.php",$param,"");
 
-function getState($_,&$result){
+function getState($_, $materials,&$result){
     if(isset($_['material'])){
         $material=$_['material'];
         if (array_key_exists($material, $materials)){    	    
