@@ -1,6 +1,6 @@
 #!/bin/sh
 while read line; do
-    if [ "$line" != "EOF" ]; then
+    if [ "$line" != "\r" ]; then
         echo "$line" > usb2
     else
         break
