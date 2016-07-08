@@ -191,7 +191,7 @@ if(isset($_['action'])){
     
     	default:
     	    $result['answer']  = "ERROR";
-            $result['state'] =$_['action'];
+            $result['state'] = "undefined action: ".$_['action'];
     	break;
     }
 }else if (isset($_GET['SwitchStatePLC'])){
