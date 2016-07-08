@@ -7,9 +7,7 @@
 require_once('common.php');
 require_once('luaContext.php');
 
-
-$result['state']  = "undef";
-$result['answer']  = 'OK';
+$result = array('state'=>'undef', 'answer'=>'OK');
 
 // actions compatibles WEB et PLC Link
 
