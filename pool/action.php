@@ -208,10 +208,18 @@ if(isset($_['action'])){
     $result['state'] = getPin($pins[$materials["traitement1"]]);
 ////////// GET
 }else if (isset($_GET['getState'])){
-
-    
-    
-    
+    if(isset($_['material'])){
+        $material=$_['material'];
+        if (array_key_exists($material, $materials)){    	    
+            $result['state'] = getPin($pins[$materials[$materials]]);
+        }else{
+            $result['state'] = "ERROR";
+            $result['state'] = "undefined material:".$material;
+        }   
+    }else{
+        $result['state'] = "ERROR";
+        $result['state'] = "parameter material missing";
+    } 
 }else{   
 	$result['answer']  = "ERROR";
 	$result['state'] = 'Undefined call '.$param;
