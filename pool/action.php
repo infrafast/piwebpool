@@ -14,7 +14,7 @@ foreach($_ as $key=>$val){
 	$param.=" ".$key."=".$val;
 	$_[$key]=secure($val);
 }
-
+// check parameters validity
 if (isset($_['state'])){
     if ($_['state']=="0" || $_['state']=="1"){ 
         $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
