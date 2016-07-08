@@ -9,6 +9,14 @@ require_once('luaContext.php');
 
 $result = array('state'=>'undef', 'answer'=>'OK');
 
+$param="";
+foreach($_ as $key=>$val){
+	$param.=" ".$key.":".$val;
+	$_[$key]=secure($val);
+}
+
+
+
 // actions compatibles WEB et PLC Link
 
 if(isset($_['action'])){
