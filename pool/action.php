@@ -211,7 +211,7 @@ if(isset($_['action'])){
     if(isset($_['material'])){
         $material=$_['material'];
         if (array_key_exists($material, $materials)){    	    
-            $result['state'] = getPin($pins[$materials[$materials]]);
+            $result['state'] = getPin($pins[$materials[$material]]);
         }else{
             $result['state'] = "ERROR";
             $result['state'] = "undefined material:".$material;
