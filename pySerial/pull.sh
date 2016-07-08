@@ -1,7 +1,7 @@
 #!/bin/sh
-awk `
+awk '
 /EOF/ {exit;}
- {print;}` < /dev/ttyUSB2 > usb2    
+ {print;}' < /dev/ttyUSB2 > usb2    
 
 
 
