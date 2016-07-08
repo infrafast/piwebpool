@@ -167,7 +167,7 @@ function getDevice($id){
 
 
 function getTemperature(){
-    return round( (25.5 + (28.5 - 25.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
+    //return round( (25.5 + (28.5 - 25.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //
     $v1="ERR";
     $v1=file_get_contents("usb2",$v1);
@@ -182,7 +182,7 @@ function getTemperature(){
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
-    return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
+    //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 1; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<10) return $v1;
@@ -191,7 +191,7 @@ function getPh(){
 }
 
 function getORP(){
-    return intval(rand(633,640));
+    //return intval(rand(633,640));
     for ($i = 0; $i < 1; $i++){
         $v1 = intval(readSensor(getDevice("orp")));      
         if ($v1>0 and $v1<1000) return $v1;
