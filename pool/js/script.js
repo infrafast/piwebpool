@@ -28,7 +28,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		    type: "POST",
 			url: "./action.php?"+UrlData,
 			async:async,
-			data:{material:material,state:newState,extendedJson:true},
+			data:{extendedJson:true},
 		success: function(r){
 			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
