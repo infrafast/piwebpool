@@ -92,12 +92,7 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'getState':
-            if (array_key_exists($_['material'], $materials)){    	    
-    	        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
-            }else{
-    	        $result['state'] = "ERROR";
-                $result['state'] = "bad or missing parameter 'material':".$_['material'];
-    	    }    	        
+            $result = getState(); 	        
     	break;
     
     	case 'changeState':
