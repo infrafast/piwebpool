@@ -23,8 +23,8 @@ $pins[26] = 11;
 $materials = array(
 			"filtration"=>11,
 			"traitement1"=>16,
-		    "traitement2"=>15,
-		    "pac"=>12);
+		    "traitement2"=>12,
+		    "pac"=>15);
 
 //correspondance to the sql table (do not change)
 $materialsColumn = array(
