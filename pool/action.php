@@ -51,7 +51,7 @@ if(isset($_['action'])){
     	    $result['state'] = getTemperature();
     	    if ($result['state']==false){
     	        $result['answer']="ERROR";
-    	        $result['state']="N/A";
+    	        $result['state']="indispo ";
     	    }
     	    break;
     	    
@@ -60,7 +60,7 @@ if(isset($_['action'])){
     	    $result['state'] = getORP();
     	    if ($result['state']==false){
     	        $result['answer']="ERROR";
-    	        $result['state']="N/A";
+    	        $result['state']="indispo ";
     	    }
     	    break;
     
@@ -69,7 +69,7 @@ if(isset($_['action'])){
     	    $result['state'] = getPh();
     	    if ($result['state']==false){
     	        $result['answer']="ERROR";
-    	        $result['state']="N/A";
+    	        $result['state']=indispo ;
     	    }
     	    break;
     	
