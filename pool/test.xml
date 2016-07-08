@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wagoml PUBLIC "-//wagoml org//DTD WAGOML 1.0//EN" "http://pautex.fr/wago/DTD/WagoML-1.0.dtd">
+<wagoml version="1.0" xmlns="http://pautex.fr/wago/">
+
+		<items>
+			<item id="0">
+				<title>Test</title>
+				<name>Test 1 switch Direct</name>
+				<refresh>2000</refresh>
+				<affichage>switch</affichage>
+				<description>Etat de la filtration</description>
+				<type>direct</type>
+				<url>http://plclink.fr/test/setdata.php</url>
+				<link>http://plclink.fr/test/setdata.php?data=%d</link>
+			</item>
+			<item id="1">
+				<title>Test</title>
+				<name>Test 2 switch JSON</name>
+				<affichage>switch</affichage>
+				<description>Etat de la filtration</description>
+				<type>json</type>
+				<text>state</text>
+				<url>http://plclink.fr/test/setdata.php?mode=json</url>
+				<link>http://plclink.fr/test/setdata.php?data=%d</link>
+			</item>
+			<item id="2">
+				<title>Test</title>
+				<name>Test 3 TEXT JSON</name>
+				<affichage>text</affichage>
+				<description>Etat de la filtration</description>
+				<type>json</type>
+				<text>state</text>
+				<url>http://plclink.fr/test/setdata.php?mode=json</url>
+			</item>
+			<item id="3">
+				<title>Test</title>
+				<name>Switch XML NON STABLE</name>
+				<affichage>switch</affichage>
+				<description>Manque de stabilité en commutation</description>
+				<type>xml</type>
+				<text>param/value/struct/member/value/string</text>
+				<url>http://plclink.fr/test/setdata.php?mode=xml</url>
+				<link>http://plclink.fr/test/setdata.php?data=%d</link>
+			</item>
+		</items>
+</wagoml>
