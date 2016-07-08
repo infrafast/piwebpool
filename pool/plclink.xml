@@ -40,7 +40,7 @@
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
                     <link>http://piweb3.infrafast.com/action.php?SwitchFilterPLC=%d</link>
-                    <url>http://piweb3.infrafast.com/action.php?getFilterStatePLC</url>
+                    <url>http://piweb3.infrafast.com/action.php?getStatePLC=filtration</url>
 				</item>
 				<item id="4"> 
 					<title>Traitement</title>
@@ -49,7 +49,7 @@
                     <type>json</type><text>state</text>
                     <affichage>switch</affichage>
                     <link>http://piweb3.infrafast.com/action.php?SwitchTreatment1PLC=%d</link>
-                    <url>http://piweb3.infrafast.com/action.php?getTreatment1StatePLC</url>
+                    <url>http://piweb3.infrafast.com/action.php?getStatePLC=traitement1</url>
 				</item>				
 			</items>
 		</room>
