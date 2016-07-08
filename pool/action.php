@@ -80,7 +80,7 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'changeState':
-    	    if (in_array($_['material'], $materials)){
+    	    if (array_key_exists($_['material'], $materials)){
         	    //$result['state'] = setPinState($pins[$_['pin']],$_['state']);
         	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
     	    }else{
@@ -90,7 +90,7 @@ if(isset($_['action'])){
     	break;
     	
     	case 'getState':
-            if (in_array($_['material'], $materials)){    	    
+            if (array_key_exists($_['material'], $materials)){    	    
     	        //$result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
     	        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
             }else{
