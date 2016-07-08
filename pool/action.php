@@ -215,11 +215,6 @@ if(isset($_['action'])){
     $result['state'] = getPin($pins[$materials[$material]]);
 }else{   
 	$result['answer']  = "ERROR";
-	$param="";
-	foreach($_ as $key=>$val){
-    	$param.=" ".$key.":".$val;
-    	$_[$key]=secure($val);
-    }
 	$result['state'] = 'Undefined call '.$param;
 }
 
