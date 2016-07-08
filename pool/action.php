@@ -86,7 +86,7 @@ if(isset($_['action'])){
             	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
     	        }else{
         	        $result['state'] = "ERROR";
-                    $result['state'] = "bad or missing parameter:".$_['state'];   
+                    $result['state'] = "bad or missing parameter 'state':".$_['state'];   
     	        }
     	    }else{
     	        $result['state'] = "ERROR";
