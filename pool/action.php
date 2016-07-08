@@ -21,7 +21,7 @@ function getState($_,$materials,&$result){
     if(isset($_['material'])){
         $material=$_['material'];
         if (array_key_exists($material, $materials)){    	    
-            $result['state'] = (getPin($pins[$materials[$materials]])==0?false:true);
+            $result['state'] = getPin($pins[$materials[$materials]]);
         }else{
             $result['state'] = "ERROR";
             $result['state'] = "undefined material:".$material;
