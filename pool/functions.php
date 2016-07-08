@@ -167,12 +167,10 @@ function getDevice($id){
 
 
 function getTemperature(){
-    //return round( (25.5 + (28.5 - 25.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
+    return round( (25.5 + (28.5 - 25.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 1; $i++){
         $v1 = round(readSensor(getDevice("temp")), 1,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<50) return $v1;
-        //readSensor(getDevice("temp"),'\r');
-        //sleep(1);
     }
     return false;
 }
@@ -183,9 +181,6 @@ function getPh(){
     for ($i = 0; $i < 1; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<10) return $v1;
-        readSensor(getDevice("temp"),'\r');
-        sleep(1);
-        
     }
     return false;
 }
@@ -195,8 +190,6 @@ function getORP(){
     for ($i = 0; $i < 1; $i++){
         $v1 = intval(readSensor(getDevice("orp")));      
         if ($v1>0 and $v1<1000) return $v1;
-        //readSensor(getDevice("temp"),'\r');
-        sleep(1);
     }
     return false;    
 }
