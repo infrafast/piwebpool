@@ -80,9 +80,9 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'changeState':
-    	    if (in_array($_['pin'], $materials)){
+    	    if (in_array($_['material'], $materials)){
         	    //$result['state'] = setPinState($pins[$_['pin']],$_['state']);
-        	    $result['state'] = setPinState($pins[$materials[$_['pin']]],$_['state']);
+        	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
     	    }else{
     	        $result['state'] = "ERROR";
                 $result['state'] = "bad or missing parameter:".$_['pin'];
