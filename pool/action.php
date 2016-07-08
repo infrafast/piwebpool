@@ -183,15 +183,6 @@ if(isset($_['action'])){
             $result['state'] = "undefined action: ".$_['action'];
     	break;
     }
-///////////////////////////////// PLC COMMANDS STARTS HERE /////////////////////////////////////    
-////////// SET
-}else if (isset($_GET['filtration'])){
-    setPinState($pins[$materials["filtration"]],$_GET['filtration']);
-    $result['state'] = getPin($pins[$materials["filtration"]]);
-}else if (isset($_GET['traitement1'])){
-    setPinState($pins[$materials["traitement1"]],$_GET['traitement1']);
-    $result['state'] = getPin($pins[$materials["traitement1"]]);
-////////// GET
 }else if (isset($_GET['getState'])){
     if(isset($_['material'])){
         $material=$_['material'];
@@ -206,11 +197,15 @@ if(isset($_['action'])){
         $result['state'] = "parameter material missing";
     } 
 }else{   
-    foreach (){
-        
-    }
+    // finally, do we have to execute a material type command
 	$result['answer']  = "ERROR";
 	$result['state'] = 'Undefined call '.$params;
+    foreach($materials as $material=>$pin){
+        if (isset($_[$material])){
+            setPinState($pins[$materials["traitement1"]],$_GET['traitement1']);
+            $result['state'] = getPin($pins[$materials["traitement1"]]);
+        }
+    }
 }
 
 $returnValue = json_encode($result);
