@@ -88,7 +88,7 @@ function getScript(code,script){
 	$.ajax({
 		type: "POST",
 		url: "./action.php",
-		data:{action:"getScript",id:script,code:code},
+		data:{action:"getScript",id:script,code:code,extendedJson:true},
 		async:false,
 		success: function(r){
 			result = eval(r);
