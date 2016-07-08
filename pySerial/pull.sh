@@ -1,4 +1,4 @@
 #!/bin/sh
 awk '
-/\neu/ {exit;}
+/EOF/ {exit;}
  {print;}' < /dev/ttyUSB2     
