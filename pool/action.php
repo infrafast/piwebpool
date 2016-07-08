@@ -227,6 +227,7 @@ if(isset($_['action'])){
 ////////// GET
 }else if (isset($_GET['getStatePLC'])){
     $material = $_GET['getStatePLC'];
+    
     $result['state'] = getPin($pins[$materials[$material]]);
 }else{   
 	$result['answer']  = "ERROR";
