@@ -190,20 +190,17 @@ if(isset($_['action'])){
            break;
     
     	default:
-    	    // no "action" parameter, do we have one from PCL?, we flag it as such for the JSON return value to be properly formatted
-    	    header('Content-Type: application/json');
-    	    if (isset($_GET['SwitchStatePLC'])){
-    	        $_['action'] = "PLC";
-    	        
-                setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
-                $result['state'] = getPin($pins[$materials["filtration"]]);
-    	    }else if (isset($_GET['getStatePLC'])){
-    	        $_['action'] = "PLC";
-    	        $result['state'] = getPin($pins[$materials["filtration"]]);
-    	    }
+
     	break;
     }
-}else{    
+}else if (isset($_GET['SwitchStatePLC'])){
+    $_['action'] = "PLC";
+    setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
+    $result['state'] = getPin($pins[$materials["filtration"]]);
+}else if (isset($_GET['getStatePLC'])){
+    $_['action'] = "PLC";
+    $result['state'] = getPin($pins[$materials["filtration"]]);
+}else{   
 	$result['answer']  = "ERROR";
 	foreach($_ as $key=>$val){
     	$param.=" ".$key.":".$val;
@@ -221,6 +218,7 @@ $returnValue = json_encode($result);
 if (strpos($_['action'], 'PLC') === false) {
     $returnValue = '('.$returnValue.')';
 }
+//header('Content-Type: application/json');
 echo $returnValue;
 
 ?>
