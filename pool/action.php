@@ -190,11 +190,11 @@ switch($_['action']){
 	default:
 	    // no "action" parameter, do we have one from PCL?, we flag it as such for the JSON return value to be properly formatted
 	    header('Content-Type: application/json');
-	    if (isset($_GET['SwitchFilterPLC'])){
+	    if (isset($_GET['SwitchStatePLC'])){
 	        $_['action'] = "PLC";
             setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
             $result['state'] = getPin($pins[$materials["filtration"]]);
-	    }else if (isset($_GET['getFilterStatePLC'])){
+	    }else if (isset($_GET['getStatePLC'])){
 	        $_['action'] = "PLC";
 	        $result['state'] = getPin($pins[$materials["filtration"]]);
 	    }else if (isset($_GET['SwitchTreatment1PLC'])){
