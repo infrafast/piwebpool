@@ -167,7 +167,7 @@ function getDevice($id){
 
 
 function getTemperature(){
-    //return rand(25,28);
+    return round( (25.5 + (28.5 - 25.5) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 1; $i++){
         $v1 = round(readSensor(getDevice("temp")), 1,PHP_ROUND_HALF_UP);  
         if ($v1>0 and $v1<50) return $v1;
