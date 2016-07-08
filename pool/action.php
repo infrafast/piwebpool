@@ -195,11 +195,9 @@ if(isset($_['action'])){
     	break;
     }
 }else if (isset($_GET['SwitchStatePLC'])){
-    $_['action'] = "PLC";
     setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
     $result['state'] = getPin($pins[$materials["filtration"]]);
 }else if (isset($_GET['getStatePLC'])){
-    $_['action'] = "PLC";
     $result['state'] = getPin($pins[$materials["filtration"]]);
 }else{   
 	$result['answer']  = "ERROR";
@@ -212,10 +210,6 @@ if(isset($_['action'])){
 }
 
 $returnValue = json_encode($result);
-// in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
-//if (strpos($_['action'], 'PLC') === false) {
-//    $returnValue = '('.$returnValue.')';
-//}
 header('Content-Type: application/json');
 echo $returnValue;
 
