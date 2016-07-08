@@ -200,17 +200,19 @@ if(isset($_['action'])){
     	    }else if (isset($_GET['getStatePLC'])){
     	        $_['action'] = "PLC";
     	        $result['state'] = getPin($pins[$materials["filtration"]]);
-    	    }else{    
-            	$result['answer']  = "ERROR";
-        		foreach($_ as $key=>$val){
-                	$param.=" ".$key.":".$val;
-                	$_[$key]=secure($val);
-                }
-        		$result['state'] = 'Undefined call '.$param;
     	    }
     	break;
     }
+}else{    
+	$result['answer']  = "ERROR";
+	foreach($_ as $key=>$val){
+    	$param.=" ".$key.":".$val;
+    	$_[$key]=secure($val);
+    }
+	$result['state'] = 'Undefined call '.$param;
 }
+
+
 
 
 $returnValue = json_encode($result);
