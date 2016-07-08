@@ -128,7 +128,6 @@ function refreshValue(elem,action){
     	type: "POST",
     	url: urlCall,
     	async:false,
-    	data: {extendedJson:true},
     	success: function(r){
     		var result = eval(r);
             var newValue = result.state;
