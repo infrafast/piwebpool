@@ -197,7 +197,7 @@ if(isset($_['action'])){
 	$result['state'] = 'Undefined call '.$params;
     foreach($materials as $material=>$pin){
         if (isset($_[$material])){
-            setPinState($pins[$materials["traitement1"]],$_GET['traitement1']);
+            setPinState($pins[$materials[$material]],$_[$material]);
             $result['state'] = getPin($pins[$materials["traitement1"]]);
             break;
         }
