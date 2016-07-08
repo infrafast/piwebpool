@@ -245,7 +245,7 @@ if(isset($_['action'])){
 
 $returnValue = json_encode($result);
 // in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
-if (strpos($param, 'PLC') === false) {
+if (isset($_GET['extendedJson'])) {
     $returnValue = '('.$returnValue.')';
 }
 //header('Content-Type: application/json');
