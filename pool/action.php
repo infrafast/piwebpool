@@ -234,7 +234,7 @@ if(isset($_['action'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchTreatment1']);
     $result['state'] = getPin($pins[$materials["traitement1"]]);
 ////////// GET
-}else if (isset($_GET['getStatePLC'])){
+}else if (isset($_GET['getState'])){
     $_['material'] = $_GET['getStatePLC'];
     getState($_,$materials,$result);
     //$result['state'] = getPin($pins[$materials[$material]]);
