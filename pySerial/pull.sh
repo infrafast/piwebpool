@@ -1,6 +1,6 @@
 #!/bin/sh
 while read line; do
-    if [ "$line" != "\r" ]; then
+    if [ "$line" != "toto" ]; then
         echo "$line" > usb2
     else
         break
