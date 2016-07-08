@@ -15,6 +15,15 @@ foreach($_ as $key=>$val){
 	$_[$key]=secure($val);
 }
 
+if (isset($_['state'])){
+    if ($_['state']=="0" || $_['state']=="1"){ 
+        $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
+    }else{
+        $result['state'] = "ERROR";
+        $result['state'] = "bad or missing parameter 'state':".$_['state'];   
+    }
+}
+
 //appendlog("graph.php",$param,"");
 
 // actions compatibles WEB et PLC Link
@@ -80,7 +89,6 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'getState':
-    	case 'getStatePLC':
             if (array_key_exists($_['material'], $materials)){    	    
     	        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
             }else{
@@ -91,12 +99,7 @@ if(isset($_['action'])){
     
     	case 'changeState':
     	    if (array_key_exists($_['material'], $materials)){
-    	        if ($_['state']=="0" || $_['state']=="1"){ 
-            	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
-    	        }else{
-        	        $result['state'] = "ERROR";
-                    $result['state'] = "bad or missing parameter 'state':".$_['state'];   
-    	        }
+        	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
     	    }else{
     	        $result['state'] = "ERROR";
                 $result['state'] = "bad or missing parameter 'material':".$_['material'];
