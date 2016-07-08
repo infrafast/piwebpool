@@ -15,7 +15,7 @@ foreach($_ as $key=>$val){
 	$_[$key]=secure($val);
 }
 
-appendlog("graph.php",$param,"");
+//appendlog("graph.php",$param,"");
 
 // actions compatibles WEB et PLC Link
 
