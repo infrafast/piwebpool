@@ -222,7 +222,7 @@ if(isset($_['action'])){
     } 
 }else{   
 	$result['answer']  = "ERROR";
-	$result['state'] = 'Undefined call '.$param;
+	$result['state'] = 'Undefined call '.$params;
 }
 
 $returnValue = json_encode($result);
