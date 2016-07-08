@@ -96,7 +96,7 @@ if(isset($_['action'])){
     	    break;
     	
     	case 'getState':
-            $result = getState(); 	        
+            getState($_,$result);
     	break;
     
     	case 'changeState':
