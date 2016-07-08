@@ -194,6 +194,7 @@ if(isset($_['action'])){
         if (isset($_[$material])){
             setPinState($pins[$materials[$material]],$_[$material]);
             $result['state'] = getPin($pins[$materials[$material]]);
+            $result['answer']  = "OK";
             break;
         }
     }
