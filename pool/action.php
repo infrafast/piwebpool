@@ -11,7 +11,7 @@ $result = array('state'=>'undef', 'answer'=>'OK');
 
 $param="";
 foreach($_ as $key=>$val){
-	$param.=" ".$key.":".$val;
+	$param.=" ".$key."=".$val;
 	$_[$key]=secure($val);
 }
 
