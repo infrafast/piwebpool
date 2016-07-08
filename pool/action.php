@@ -90,7 +90,7 @@ if(isset($_['action'])){
     	break;
     	
     	case 'getState':
-            if (in_array($_['pin'], $materials)){    	    
+            if (in_array($_['material'], $materials)){    	    
     	        //$result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
     	        $result['state'] = (getPin($pins[$materials[$_['pin']]])=='off'?false:true);
             }else{
