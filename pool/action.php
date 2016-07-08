@@ -224,10 +224,6 @@ if(isset($_['action'])){
 }else if (isset($_GET['SwitchTreatment1PLC'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchTreatment1PLC']);
     $result['state'] = getPin($pins[$materials["traitement1"]]);
-////////// GET
-}else if (isset($_GET['getStatePLC'])){
-    $material = $_GET['getStatePLC'];
-    $result['state'] = getPin($pins[$materials[$material]]);
 }else{   
 	$result['answer']  = "ERROR";
 	$result['state'] = 'Undefined call '.$param;
