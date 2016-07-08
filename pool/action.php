@@ -194,7 +194,10 @@ if(isset($_['action'])){
             $result['state'] = "undefined action: ".$_['action'];
     	break;
     }
-}else if (isset($_GET['SwitchStatePLC'])){
+}else if (isset($_GET['SwitchFilterPLC'])){
+    setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
+    $result['state'] = getPin($pins[$materials["filtration"]]);
+}else if (isset($_GET['SwitchFilterPLC'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
     $result['state'] = getPin($pins[$materials["filtration"]]);
 }else if (isset($_GET['getStatePLC'])){
