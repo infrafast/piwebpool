@@ -45,7 +45,7 @@ function changeState(material,elem){
 	$.ajax({
 			type: "POST",
 			url: "./changeState.php",
-			data:{material:material,state:newState},
+			data:{material:material,state:newState,extendedJson},
 			success: function(r){
 				var result = eval(r);
 				$(elem).removeClass('loading');
@@ -120,7 +120,7 @@ function getColorVal(middleVal,compareVal){
 
     
 function refreshValue(elem,action){
-	var urlCall = "action.php?getState=get"+action;
+	var urlCall = "./action.php?getState=get"+action;
 	$(elem).removeAttr("style");
 	$(elem).removeClass('off');
 	$(elem).addClass('loading');
