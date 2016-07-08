@@ -26,14 +26,6 @@ function getState($_,$materials,&$result){
     }  
 }
 
-function changeState(){
-    
-    
-}
-
-
-
-
 if(isset($_['action'])){
     switch($_['action']){
     
@@ -94,25 +86,6 @@ if(isset($_['action'])){
     	    }
     	    break;
     	
-    	case 'getState':
-            getState($_,$materials,$result);
-    	break;
-    
-    	case 'changeState':
-    	    if (array_key_exists($_['material'], $materials)){
-    	        if ($_['state']=="0" || $_['state']=="1"){ 
-            	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
-    	        }else{
-        	        $result['state'] = "ERROR";
-                    $result['state'] = "bad or missing parameter 'state':".$_['state'];   
-    	        }
-    	    }else{
-    	        $result['state'] = "ERROR";
-                $result['state'] = "bad or missing parameter 'material':".$_['material'];
-    	    }
-    	break;    
-    
-    
     	case 'getLog':
             $result['state'] = getLog($logfilename);
     	break;
