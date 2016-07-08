@@ -25,9 +25,8 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
         }else alert(messageBox);
 	$.ajax({
 		    type: "POST",
-			url: "./action.php?"+UrlData,
+			url: "./action.php?extendedJson&"+UrlData,
 			async:async,
-			data:{extendedJson:true},
 		success: function(r){
 			result = eval(r);
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
