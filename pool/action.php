@@ -213,10 +213,10 @@ if(isset($_['action'])){
 
 $returnValue = json_encode($result);
 // in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
-if (strpos($_['action'], 'PLC') === false) {
-    $returnValue = '('.$returnValue.')';
-}
-//header('Content-Type: application/json');
+//if (strpos($_['action'], 'PLC') === false) {
+//    $returnValue = '('.$returnValue.')';
+//}
+header('Content-Type: application/json');
 echo $returnValue;
 
 ?>
