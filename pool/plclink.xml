@@ -40,8 +40,8 @@
                     <type>json</type>
                     <text>state</text>
                     <affichage>switch</affichage>
-                    <link>http://piweb3.infrafast.com/action.php?filtration=%d</link>
                     <url>http://piweb3.infrafast.com/action.php?getState=filtration</url>
+                    <link>http://piweb3.infrafast.com/action.php?filtration=%d</link>                    
 				</item>
 				<item id="4"> 
 					<title>Traitement</title>
@@ -50,8 +50,8 @@
                     <type>json</type>
                     <text>state</text>
                     <affichage>switch</affichage>
-                    <link>http://piweb3.infrafast.com/action.php?traitement1=%d</link>
                     <url>http://piweb3.infrafast.com/action.php?getState=traitement1</url>
+                    <link>http://piweb3.infrafast.com/action.php?traitement1=%d</link>
 				</item>				
 			</items>
 		</room>
