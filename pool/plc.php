@@ -23,7 +23,7 @@ if( ! $data) $data = 0;
 if(isset($mode)) {					// sortie JSON ou XML
 	if( $mode == "json") {			// sortie json
 		// simule exactement reponse de type : {"state":"0","answer":"OK"}  
-		header('Content-Type: application/json’);		// pas forcement utile
+		header('Content-Type: application/json');
 		// echo '{"state":"' . $data . '","answer":"OK"} '; 	// ca marche pas ?!
 		$json = array('state'=>$data, 'answer'=>'OK');	// ca marche !
 		echo json_encode( $json );
