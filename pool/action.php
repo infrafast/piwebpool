@@ -90,8 +90,13 @@ if(isset($_['action'])){
     	break;
     	
     	case 'getState':
-	        //$result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
-	        $result['state'] = (getPin($pins[$materials[$_['pin']]])=='off'?false:true);
+            if (in_array($_['pin'], $materials)){    	    
+    	        //$result['state'] = (getPinState($_['pin'],$pins)=='off'?false:true);
+    	        $result['state'] = (getPin($pins[$materials[$_['pin']]])=='off'?false:true);
+            }else{
+    	        $result['state'] = "ERROR";
+                $result['state'] = "bad or missing parameter:".$_['pin'];
+    	    }    	        
     	break;
     
     	case 'getLog':
