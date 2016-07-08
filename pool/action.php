@@ -14,15 +14,6 @@ foreach($_ as $key=>$val){
 	$param.=" ".$key."=".$val;
 	$_[$key]=secure($val);
 }
-// check parameters validity
-if (isset($_['state'])){
-    if ($_['state']=="0" || $_['state']=="1"){ 
-        $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
-    }else{
-        $result['state'] = "ERROR";
-        $result['state'] = "bad or missing parameter 'state':".$_['state'];   
-    }
-}
 
 //appendlog("graph.php",$param,"");
 
@@ -99,7 +90,12 @@ if(isset($_['action'])){
     
     	case 'changeState':
     	    if (array_key_exists($_['material'], $materials)){
-        	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
+    	        if ($_['state']=="0" || $_['state']=="1"){ 
+            	    $result['state'] = setPinState($pins[$materials[$_['material']]],$_['state']);
+    	        }else{
+        	        $result['state'] = "ERROR";
+                    $result['state'] = "bad or missing parameter 'state':".$_['state'];   
+    	        }
     	    }else{
     	        $result['state'] = "ERROR";
                 $result['state'] = "bad or missing parameter 'material':".$_['material'];
@@ -230,7 +226,6 @@ if(isset($_['action'])){
 ////////// GET
 }else if (isset($_GET['getStatePLC'])){
     $material = $_GET['getStatePLC'];
-    
     $result['state'] = getPin($pins[$materials[$material]]);
 }else{   
 	$result['answer']  = "ERROR";
