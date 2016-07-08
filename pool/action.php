@@ -179,18 +179,13 @@ if(isset($_['action'])){
     	break;
     }
 }else if (isset($_['getState'])){
-    if(isset($_['material'])){
-        $material=$_['getState'];
-        if (array_key_exists($material, $materials)){    	    
-            $result['state'] = getPin($pins[$materials[$material]]);
-        }else{
-            $result['state'] = "ERROR";
-            $result['state'] = "undefined material:".$material;
-        }   
+    $material=$_['getState'];
+    if (array_key_exists($material, $materials)){    	    
+        $result['state'] = getPin($pins[$materials[$material]]);
     }else{
         $result['state'] = "ERROR";
-        $result['state'] = "parameter material missing";
-    } 
+        $result['state'] = "undefined material:".$material;
+    }   
 }else{   
     // finally, do we have to execute a material type command
 	$result['answer']  = "ERROR";
