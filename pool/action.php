@@ -69,7 +69,7 @@ if(isset($_['action'])){
     	    $result['state'] = getPh();
     	    if ($result['state']==false){
     	        $result['answer']="ERROR";
-    	        $result['state']=indispo ;
+    	        $result['state']="indispo ";
     	    }
     	    break;
     	
