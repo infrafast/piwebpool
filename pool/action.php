@@ -11,21 +11,6 @@ $result = array('state'=>'undef', 'answer'=>'OK');
 
 //appendlog("graph.php",$params,"");
 
-function getState($_,$materials,&$result){
-    if(isset($_['material'])){
-        $material=$_['material'];
-        if (array_key_exists($material, $materials)){    	    
-            $result['state'] = getPin($pins[$materials[$materials]]);
-        }else{
-            $result['state'] = "ERROR";
-            $result['state'] = "undefined material:".$material;
-        }   
-    }else{
-        $result['state'] = "ERROR";
-        $result['state'] = "parameter material missing";
-    }  
-}
-
 if(isset($_['action'])){
     switch($_['action']){
     
