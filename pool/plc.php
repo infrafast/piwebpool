@@ -28,9 +28,6 @@ if(isset($mode)) {					// sortie JSON ou XML
 		$json = array('state'=>$data, 'answer'=>'OK');	// ca marche !
 		echo json_encode( $json );
 	} 
-	else if($mode == "xml") {		// sortie xml  a faire
-		echo $data;
-	}
 }
 else {
 	echo $data;						// sortie direct 1 ou 0
