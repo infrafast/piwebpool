@@ -44,8 +44,7 @@ function changeState(material,elem){
 	$(elem).addClass('loading');
 	$.ajax({
 			type: "POST",
-			url: "./action.php?"+material+"="+newState,
-			data:{extendedJson:true},
+			url: "./action.php?extendedJson&"+material+"="+newState,
 			success: function(r){
 				var result = eval(r);
 				$(elem).removeClass('loading');
