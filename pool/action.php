@@ -194,12 +194,15 @@ if(isset($_['action'])){
             $result['state'] = "undefined action: ".$_['action'];
     	break;
     }
+///////////////////////////////// PLC COMMANDS STARTS HERE /////////////////////////////////////    
 }else if (isset($_GET['SwitchFilterPLC'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
     $result['state'] = getPin($pins[$materials["filtration"]]);
 }else if (isset($_GET['SwitchTreatment1PLC'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchTreatment1PLC']);
     $result['state'] = getPin($pins[$materials["traitement1"]]);
+////////////////////////////////////////////////
+    
 }else if (isset($_GET['getStatePLC'])){
     $material = $_GET['getStatePLC'];
     $result['state'] = getPin($pins[$materials[$material]]);
