@@ -195,7 +195,7 @@ function getORP(){
     for ($i = 0; $i < 1; $i++){
         $v1 = intval(readSensor(getDevice("orp")));      
         if ($v1>0 and $v1<1000) return $v1;
-        readSensor(getDevice("temp"),'\r');
+        //readSensor(getDevice("temp"),'\r');
         sleep(1);
     }
     return false;    
