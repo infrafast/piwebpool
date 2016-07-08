@@ -47,7 +47,8 @@
 					<title>Traitement</title>
 					<name>Traitement</name>
 					<description>Etat traitement</description>
-                    <type>json</type><text>state</text>
+                    <type>json</type>
+                    <text>state</text>
                     <affichage>switch</affichage>
                     <link>http://piweb3.infrafast.com/action.php?traitement1=%d</link>
                     <url>http://piweb3.infrafast.com/action.php?getState=traitement1</url>
