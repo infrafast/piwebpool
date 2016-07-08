@@ -198,7 +198,8 @@ if(isset($_['action'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
     $result['state'] = getPin($pins[$materials["filtration"]]);
 }else if (isset($_GET['getStatePLC'])){
-    $result['state'] = getPin($pins[$materials["filtration"]]);
+    $material = $_GET['getStatePLC'];
+    $result['state'] = getPin($pins[$materials[$material]]);
 }else{   
 	$result['answer']  = "ERROR";
 	$param="";
