@@ -26,7 +26,10 @@ function getState($_,&$result){
             $result['state'] = "ERROR";
             $result['state'] = "bad or missing parameter 'material':".$_['material'];
         }   
-    }
+    }else{
+        $result['state'] = "ERROR";
+        $result['state'] = "parameter material missing";
+    }  
 }
 
 function changeState(){
