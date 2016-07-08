@@ -18,12 +18,14 @@ foreach($_ as $key=>$val){
 //appendlog("graph.php",$param,"");
 
 function getState($_,&$result){
-    if (array_key_exists($_['material'], $materials)){    	    
-        $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
-    }else{
-        $result['state'] = "ERROR";
-        $result['state'] = "bad or missing parameter 'material':".$_['material'];
-    }   
+    if(isset()){
+        if (array_key_exists($_['material'], $materials)){    	    
+            $result['state'] = (getPin($pins[$materials[$_['material']]])=='off'?false:true);
+        }else{
+            $result['state'] = "ERROR";
+            $result['state'] = "bad or missing parameter 'material':".$_['material'];
+        }   
+    }
 }
 
 function changeState(){
