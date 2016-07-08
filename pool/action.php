@@ -13,7 +13,7 @@ $result['answer']  = 'OK';
 
 // actions compatibles WEB et PLC Link
 
-if(isset($_['action']){
+if(isset($_['action'])){
     switch($_['action']){
     
     // ACTION FOR WEBAPP and PLCLINK (JSON QUERY UNDER BRACKET)
@@ -211,6 +211,8 @@ if(isset($_['action']){
     	break;
     }
 }
+
+
 $returnValue = json_encode($result);
 
 // in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
