@@ -167,6 +167,7 @@ function getDevice($id){
 
 
 function getTemperature(){
+    $v1="ERR";
     file_get_contents("usb2",$v1);
     return $v1;
     //return round( (25.5 + (28.5 - 25.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
