@@ -178,7 +178,7 @@ if(isset($_['action'])){
             $result['state'] = "undefined action: ".$_['action'];
     	break;
     }
-}else if (isset($_GET['getState'])){
+}else if (isset($_['getState'])){
     if(isset($_['material'])){
         $material=$_['material'];
         if (array_key_exists($material, $materials)){    	    
@@ -205,7 +205,7 @@ if(isset($_['action'])){
 
 $returnValue = json_encode($result);
 // in case the action include keyword "PCL" it means we expect a standard json answer, without the ( )
-if (isset($_GET['extendedJson'])) {
+if (isset($_['extendedJson'])) {
     $returnValue = '('.$returnValue.')';
 }
 //header('Content-Type: application/json');
