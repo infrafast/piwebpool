@@ -227,11 +227,11 @@ if(isset($_['action'])){
     }
 ///////////////////////////////// PLC COMMANDS STARTS HERE /////////////////////////////////////    
 ////////// SET
-}else if (isset($_GET['SwitchFilterPLC'])){
+}else if (isset($_GET['SwitchFilter'])){
     setPinState($pins[$materials["filtration"]],$_GET['SwitchFilterPLC']);
     $result['state'] = getPin($pins[$materials["filtration"]]);
-}else if (isset($_GET['SwitchTreatment1PLC'])){
-    setPinState($pins[$materials["filtration"]],$_GET['SwitchTreatment1PLC']);
+}else if (isset($_GET['SwitchTreatment1'])){
+    setPinState($pins[$materials["filtration"]],$_GET['SwitchTreatment1']);
     $result['state'] = getPin($pins[$materials["traitement1"]]);
 ////////// GET
 }else if (isset($_GET['getStatePLC'])){
