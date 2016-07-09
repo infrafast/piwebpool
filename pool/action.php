@@ -130,9 +130,7 @@ if(isset($_['action'])){
             
             
             appendlualog(htmlspecialchars_decode($_['lua']));
-            appendlualog($_['lua']);
-            
-            
+
             
             $outcome = mysql_query($query);
             if (!$outcome) {
