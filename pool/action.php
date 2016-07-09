@@ -128,12 +128,6 @@ if(isset($_['action'])){
             mysql_select_db($options["database"]["name"]) or die('error database selection');
             $cleanLuaCode=htmlspecialchars_decode($_['lua']);
             $query="UPDATE `scripts` SET `xml` = '".mysql_real_escape_string(htmlspecialchars_decode($_['xml']))."',`lua`='".mysql_real_escape_string($cleanLuaCode)."' WHERE `id`='".$_['id']."'";
-            
-            
-            appendlualog($_['lua']);
-            appendlualog($cleanLuaCode);
-
-            
             $outcome = mysql_query($query);
             if (!$outcome) {
                  $result['answer']  = "ERROR";
