@@ -127,7 +127,8 @@ if(isset($_['action'])){
             mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
             mysql_select_db($options["database"]["name"]) or die('error database selection');
             $cleanLuaCode=mysql_real_escape_string(htmlspecialchars_decode($_['lua']));
-            $query="UPDATE `scripts` SET `xml` = '".mysql_real_escape_string(htmlspecialchars_decode($_['xml']))."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
+            $cleanXMLCode=mysql_real_escape_string(htmlspecialchars_decode($_['xml']));
+            $query="UPDATE `scripts` SET `xml` = '".$cleanXMLCode."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
             
              appendlualog($cleanLuaCode);
             
