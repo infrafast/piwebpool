@@ -414,7 +414,7 @@ $tableSettings = new TableGear($optionsSet);
             var calibrateID=id+"CalibrateID";
             var calibrate=document.getElementById(calibrateID);
             calibrate.style.backgroundImage="url('images/loading.gif')";
-            if(actionCall('action=calibrate&id='+id,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',false, true)!=false)
+            if(actionCall('action=calibrate&id='+id+'&value='+calVal,false,'Placer la sonde dans la solution\npendant 2 minutes puis confirmez',false, true)!=false)
                 elem.click();
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
