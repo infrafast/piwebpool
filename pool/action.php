@@ -19,13 +19,15 @@ if(isset($_['action'])){
                 case 'Ph':
                     if (!isset($_['value'])) $_['value']="7.00";
                     readSensor(getDevice("ph"),"Cal,clear\n");
-                    readSensor(getDevice("ph"),"Cal,mid,".$_['value']."\n");
+                    $frame="Cal,mid,".$_['value']."\n";
+                    readSensor(getDevice("ph"),$frame);
                     $result['state']  = "done";
                 break;
                 case 'ORP':
                     if (!isset($_['value'])) $_['value']="650";
                     readSensor(getDevice("ph"),"Cal,clear\n");
-                    readSensor(getDevice("ph"),"Cal,".$_['value']."\n");
+                    $frame ="Cal,".$_['value']."\n";
+                    readSensor(getDevice("ph"),$frame);
                     $result['state']  = "done";
                 break;
                 case 'temp':
