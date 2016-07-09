@@ -126,7 +126,7 @@ if(isset($_['action'])){
         case 'updateScript':
             mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
             mysql_select_db($options["database"]["name"]) or die('error database selection');
-            $cleanLuaCode="if (coucou) > 15 then quaité de l\'eau"; //mysql_real_escape_string(htmlspecialchars_decode($_['lua']));
+            $cleanLuaCode=mysql_real_escape_string(htmlspecialchars_decode($_['lua']));
             $cleanXMLCode=mysql_real_escape_string(htmlspecialchars_decode($_['xml']));
             $query="UPDATE `scripts` SET `xml` = '".$cleanXMLCode."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
             
