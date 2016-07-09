@@ -407,7 +407,7 @@ $tableSettings = new TableGear($optionsSet);
             <?php foreach($materials as $material=>$pin) echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
         }
         
-        function calibrateAndRefresh(id){
+        function calibrateAndRefresh(id,calVal){
             var elemID = 'div'+id+'MeasureID';
             var elem = document.getElementById(elemID);
             //add loading icon
