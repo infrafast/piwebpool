@@ -129,7 +129,7 @@ if(isset($_['action'])){
             $cleanLuaCode=mysql_real_escape_string(htmlspecialchars_decode($_['lua']));
             $query="UPDATE `scripts` SET `xml` = '".mysql_real_escape_string(htmlspecialchars_decode($_['xml']))."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
             
-            
+             appendlualog($cleanLuaCode);
             
             $outcome = mysql_query($query);
             if (!$outcome) {
