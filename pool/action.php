@@ -23,8 +23,9 @@ if(isset($_['action'])){
                     $result['state']  = "done";
                 break;
                 case 'ORP':
+                    if (!isset($_['value'])) $_['value']="650";
                     readSensor(getDevice("ph"),"Cal,clear\n");
-                    readSensor(getDevice("ph"),"Cal,650\n");
+                    readSensor(getDevice("ph"),"Cal,".$_['value']."\n");
                     $result['state']  = "done";
                 break;
                 case 'temp':
