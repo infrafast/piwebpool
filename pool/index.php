@@ -107,7 +107,7 @@ $tableSettings = new TableGear($optionsSet);
     </tr>
     <tr>
         <td id="PhCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" onclick="calibrateAndRefresh('Ph');"><input type="text" name="phValue" value="7.00" maxlength="4" size="4"></td>
-        <td id="ORPCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" onclick="calibrateAndRefresh('ORP');"><input type="text" name="orpValue" value="650" maxlength="4" size="4"></td>
+        <td id="ORPCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" onclick="calibrateAndRefresh('ORP');"><input type="text" name="orpValue" value="650" maxlength="4" size="4">mV</td>
         <td></td>
     </tr>
     </table>
