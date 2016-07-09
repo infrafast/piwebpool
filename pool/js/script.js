@@ -64,7 +64,6 @@ function changeState(material,elem){
 
 function updateScript(xml,lua,script){
     var result;
-	//alert("receive before ajax: "+lua+"\n"+xml);
 	$.ajax({
 			type: "POST",
 			url: "./action.php",
@@ -75,6 +74,7 @@ function updateScript(xml,lua,script){
 				if(result.answer != "OK"){          
 					alert('Erreur : '+result.state);
 				}
+				alert("received  ajax: "+lua+"\n");
 	}});
 	return result.answer+" "+(result.state==true?"":result.state);
 }
