@@ -17,8 +17,9 @@ if(isset($_['action'])){
         case 'calibrate':
             switch($_['id']){
                 case 'Ph':
+                    if (!isset($_['value'])) $_['value']="7.00";
                     readSensor(getDevice("ph"),"Cal,clear\n");
-                    readSensor(getDevice("ph"),"Cal,mid,7.00\n");
+                    readSensor(getDevice("ph"),"Cal,mid,".$_['value']."\n");
                     $result['state']  = "done";
                 break;
                 case 'ORP':
