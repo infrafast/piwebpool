@@ -21,14 +21,16 @@ if(isset($_['action'])){
                     readSensor(getDevice("ph"),"Cal,clear\n");
                     $frame="Cal,mid,".$_['value']."\n";
                     readSensor(getDevice("ph"),$frame);
-                    $result['state']  = "done";
+                    $result['state']  = "calibration faite";
+                    appendlualog($frame);
                 break;
                 case 'ORP':
                     if (!isset($_['value'])) $_['value']="650";
                     readSensor(getDevice("ph"),"Cal,clear\n");
                     $frame ="Cal,".$_['value']."\n";
                     readSensor(getDevice("ph"),$frame);
-                    $result['state']  = "done";
+                    $result['state']  = "calibration faite";
+                    appendlualog($frame);
                 break;
                 case 'temp':
                     // not implemented yet
