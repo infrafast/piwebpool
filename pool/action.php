@@ -129,7 +129,7 @@ if(isset($_['action'])){
             $query="UPDATE `scripts` SET `xml` = '".mysql_real_escape_string(htmlspecialchars_decode($_['xml']))."',`lua`='".mysql_real_escape_string(htmlspecialchars_decode($_['lua']))."' WHERE `id`='".$_['id']."'";
             
             
-            appendlualog($_['lua']);
+            appendlualog(htmlspecialchars_decode($_['lua']));
             appendlualog($_['lua']);
             
             
