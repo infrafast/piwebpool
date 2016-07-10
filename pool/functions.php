@@ -47,12 +47,12 @@ function sendemail($message){
     $from = "noreply@piweb.infrafast.com";
     $headers = "From:" . $from;
     $result = mail($to,$subject,$message,$headers);
-    appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
+    //appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
 
 function appendlualog($message){
-    return appendlog("LUA","OK",$message);
+    return appendlog("NOTIFICATION","SCRIPT",$message);
 }
 
 function appendlog($source,$answer,$status,$filename="logfile.txt"){

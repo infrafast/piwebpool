@@ -141,7 +141,7 @@ if (!$result) {
     }
 }
 $state.="{periode:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
-appendlog("CRONACTION",$answer,$state, $logfilename);
+appendlog("ACTIONS PERIODIQUES",$answer,$state, $logfilename);
 
 // sync data to disk
 exec("sync");

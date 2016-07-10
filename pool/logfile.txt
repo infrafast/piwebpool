@@ -369,3 +369,5 @@
 [2016-07-10 17:17:07][sendemail: OK][à 17h: 31.1°C, 565mV, 6.62ph]
 [2016-07-10 17:17:07][LUA OK][à 17h: 31.1°C, 565mV, 6.62ph]
 [2016-07-10 17:17:14][CRONACTION OK][{periode:16h}{temperature:above28}{Filtration:MARCHE}{|main:OK|custom:OK}]
+[2016-07-10 18:17:06][LUA OK][à 18h: 31.2°C, 574mV, 6.67ph]
+[2016-07-10 18:17:13][CRONACTION OK][{periode:18h}{temperature:above28}{Filtration:MARCHE}{|main:OK|custom:OK}]
