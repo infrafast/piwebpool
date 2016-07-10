@@ -3,17 +3,17 @@ import serial     #import serial module to enable serial commands
 
 ser0 = serial.Serial(      #initiate the serial connection into the 'ser' variable
   port='/dev/ttyUSB0',    #set the port address of the Atlas stamp
-  baudrate=38400          #set the baudrate
+  baudrate=9600          #set the baudrate
 )
 
 ser1 = serial.Serial(      #initiate the serial connection into the 'ser' variable
   port='/dev/ttyUSB1',    #set the port address of the Atlas stamp
-  baudrate=38400          #set the baudrate
+  baudrate=9600        #set the baudrate
 )
 
 ser2 = serial.Serial(      #initiate the serial connection into the 'ser' variable
   port='/dev/ttyUSB2',    #set the port address of the Atlas stamp
-  baudrate=38400          #set the baudrate
+  baudrate=9600          #set the baudrate
 )
 
 ser0.write('\r')     #an initial write to clear the serial buffer
