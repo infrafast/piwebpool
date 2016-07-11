@@ -11,7 +11,7 @@ INSERT INTO `scripts` (`id`, `xml`, `lua`) VALUES
 );
 
 INSERT INTO INTO `scripts` (`id`, `xml`, `lua`) VALUES 
-(NOW(), LOAD_FILE('/tmp/my_file.txt')
+('header', '', LOAD_FILE('/tmp/my_file.txt')
 
 );
 
