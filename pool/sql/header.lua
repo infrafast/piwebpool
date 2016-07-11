@@ -168,7 +168,7 @@ writers = {
 		end;
 }
 
-memories = persistence.load("storage.lua");
+memoire = persistence.load("storage.lua");
 
 function run()
     info="OK";
