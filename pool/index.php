@@ -345,6 +345,16 @@ $tableSettings = new TableGear($optionsSet);
             return [cleanCode, Blockly.Lua.ORDER_NONE];
         };
     
+    
+        Blockly.Lua['math_change'] = function(block) {
+            // Add to a variable in place.
+            var argument0 = Blockly.Lua.valueToCode(block, 'DELTA',
+              Blockly.Lua.ORDER_ADDITIVE) || '0';
+            var varName = Blockly.Lua.variableDB_.getName(
+              block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+            return varName + ' = ' + varName + ' + ' + argument0 + '\n';
+        };
+    
       var workspace = Blockly.inject('blocklyDiv',
           {toolbox: document.getElementById('toolbox'),
             zoom:
