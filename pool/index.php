@@ -355,7 +355,7 @@ $tableSettings = new TableGear($optionsSet);
             var cleanVarName = varName.replace("_5B", "[");
             var cleanVarName = cleanVarName.replace("_5D", "]");               
               
-            return varName + ' = ' + varName + ' + ' + argument0 + '\n';
+            return cleanVarName + ' = ' + cleanVarName + ' + ' + argument0 + '\n';
         };
     
       var workspace = Blockly.inject('blocklyDiv',
