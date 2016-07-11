@@ -170,4 +170,4 @@ writers = {
 
 function run()
     info="OK";
-    compteur = persistence.load("storage.lua");
+    compteurs = persistence.load("storage.lua");
