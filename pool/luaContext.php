@@ -20,11 +20,7 @@ function goLua($luaCode,$materials,$pins,&$feedback){
             
             
         }
-        // generate VARIABLE LIST 
-                //foreach ($exportedVariable as $variable=>$variableCall)
-//            $lua->assign($variable,$variableCall);
-        
-        
+
         $phValue = getPh();
         $orpValue = getORP();
         $temperatureValue = getTemperature();
