@@ -46,6 +46,8 @@ pause
 
 #database
 #at the end, need to have only one master sql file that do everything
+cp ./sql/header.lua /tmp
+cp ./sql/footer.lua /tmp
 echo "create database"
 mysql -uroot -pQuintal74605 < ./sql/create.sql
 echo "create measures table"
