@@ -344,8 +344,8 @@ $tableSettings = new TableGear($optionsSet);
             );
             var cleanCode = code.replace("_5B", "[");
             var cleanCode = cleanCode.replace("_5D", "]"); 
-            var cleanVarName = cleanVarName.replace("_22", "'");  
-            var cleanVarName = cleanVarName.replace("_22", "'");             
+            var cleanCode = cleanCode.replace("_22", "'");  
+            var cleanCode = cleanCode.replace("_22", "'");             
             return [cleanCode, Blockly.Lua.ORDER_NONE];
         };
     
