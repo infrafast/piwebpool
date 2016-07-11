@@ -330,7 +330,8 @@ $tableSettings = new TableGear($optionsSet);
 
             var cleanVarName = varName.replace("_5B", "[");
             var cleanVarName = cleanVarName.replace("_5D", "]");
-            var cleanVarName = cleanVarName.replace("_22", "'");           
+            var cleanVarName = cleanVarName.replace("_22", "'");  
+            var cleanVarName = cleanVarName.replace("_22", "'");  
               
           return cleanVarName + ' = ' + argument0 + ';\n';
         };
