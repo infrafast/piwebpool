@@ -323,7 +323,7 @@ $tableSettings = new TableGear($optionsSet);
           var varName = Blockly.Lua.variableDB_.getName(
               block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
 
-            var cleanCode = argument0.replace("_5B", "[");
+            var cleanCode = varName.replace("_5B", "[");
             var cleanCode = cleanCode.replace("_5D", "]");               
               
           return varName + ' = ' + cleanCode + ';\n';
