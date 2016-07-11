@@ -331,7 +331,7 @@ $tableSettings = new TableGear($optionsSet);
                 block.getFieldValue('VAR'),
                 Blockly.Variables.NAME_TYPE
             );
-            return [code, Blockly.Lua.ORDER_ATOMIC];
+            return [code, Blockly.Lua.ORDER_NONE];
         };
     
     
