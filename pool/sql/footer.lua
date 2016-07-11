@@ -1,3 +1,3 @@
-    persistence.store("storage.lua", persitentVar);
+    persistence.store("storage.lua", persistentVar);
     return info; 
 end
