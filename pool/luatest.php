@@ -50,7 +50,7 @@ foreach (array("main","custom") as $scriptID) {
 }
         
 $state.="{".$luaFeedback."}";    
-appendlog("ACTIONS PERIODIQUES",$answer,$state, $logfilename);
+appendlog("LUATEST",$answer,$state, $logfilename);
 
 // sync data to disk
 exec("sync");
