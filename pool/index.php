@@ -156,6 +156,7 @@ $tableSettings = new TableGear($optionsSet);
                 <block type="on_off"></block>
                 <block type="math_number"></block>
                 <block type="math_arithmetic"></block>
+                <block type="math_change"></block>
                 <block type="message"></block>
                 <block type="text"></block>
                 <block type="text_join"></block>
