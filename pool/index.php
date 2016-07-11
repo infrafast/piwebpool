@@ -168,7 +168,7 @@ $tableSettings = new TableGear($optionsSet);
             <th>Code preview</th>
         </tr>
         <tr>
-            <td width="100%"><textarea id="scriptareaID" rows="10" readonly style="color: grey; width: 100%;">Erreur chargement de script</textarea>
+            <td width="100%"><textarea id="scriptareaID" rows="10"  style="color: grey; width: 100%;">Erreur chargement de script</textarea>
         </tr>
     </table>
     
