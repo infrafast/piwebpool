@@ -144,29 +144,6 @@ $tableSettings = new TableGear($optionsSet);
         </tr>
         <tr>
           <td><div id="blocklyDiv" style="height: 500px; width:100%"></div></td>
-            <xml id="toolbox" style="display: none">
-            <category id="catControl" colour="230" name="Control">
-                <block type="controls_if"></block>
-                <block type="logic_compare"></block>
-                <block type="logic_operation"></block>
-            </category>
-            <category id="catVar" colour="230" name="Variables">
-                <block type="sensors"></block>
-                <block type="variables_set"><field name="VAR">info</field></block>
-                <block type="variables_get"><field name="VAR">variable</field></block>
-                <block type="on_off"></block>
-                <block type="math_number"></block>
-                <block type="math_arithmetic"></block>
-                <block type="math_change"></block>
-                <block type="message"></block>
-                <block type="text"></block>
-                <block type="text_join"></block>
-            </category>
-            <category id="catCommands" colour="230" name="Commandes">    
-                <block type="setcommand"></block>
-                <block type="getcommand"></block>
-            </category>    
-            </xml>
         <tr>
             <th>Code preview</th>
         </tr>
