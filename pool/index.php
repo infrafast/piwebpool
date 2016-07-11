@@ -327,7 +327,7 @@ $tableSettings = new TableGear($optionsSet);
               Blockly.Lua.ORDER_NONE) || '0';
           var varName = Blockly.Lua.variableDB_.getName(
               block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-
+            // for some reason the code generatr convert some character into their HEX code, we reconvertt them back
             var cleanVarName = varName.replace("_5B", "[");
             var cleanVarName = cleanVarName.replace("_5D", "]");
             var cleanVarName = cleanVarName.replace("_22", "'");  
