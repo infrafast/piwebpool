@@ -325,6 +325,13 @@ $tableSettings = new TableGear($optionsSet);
           return varName + ' = ' + argument0 + ';\n';
         };
     
+        Blockly.Lua['variables_get'] = function(block) {
+            // Variable getter.
+            var code = Blockly.Lua.variableDB_.getName(block.getFieldValue('VAR'),
+            Blockly.Variables.NAME_TYPE);
+            return "*"+[code, Blockly.Lua.ORDER_ATOMIC];
+        };
+    
     
       var workspace = Blockly.inject('blocklyDiv',
           {toolbox: document.getElementById('toolbox'),
