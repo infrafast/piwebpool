@@ -352,6 +352,9 @@ $tableSettings = new TableGear($optionsSet);
               Blockly.Lua.ORDER_ADDITIVE) || '0';
             var varName = Blockly.Lua.variableDB_.getName(
               block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+            var cleanVarName = varName.replace("_5B", "[");
+            var cleanVarName = cleanVarName.replace("_5D", "]");               
+              
             return varName + ' = ' + varName + ' + ' + argument0 + '\n';
         };
     
