@@ -329,7 +329,7 @@ $tableSettings = new TableGear($optionsSet);
             // Variable getter.
             var code = Blockly.Lua.variableDB_.getName(block.getFieldValue('VAR'),
             Blockly.Variables.NAME_TYPE);
-            return [code, Blockly.Lua.ORDER_ATOMIC];
+            return [code, Blockly.Lua.ORDER_MEMBER];
         };
     
     
