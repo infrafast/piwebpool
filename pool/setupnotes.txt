@@ -23,6 +23,7 @@ TODO LIST
     - variable "jour" dans blockly (getDate())
     - use PDO or mysqli 
     - use sqlite
+    - script combo populated by select * from scripts ID
     
 
 known bugs:
