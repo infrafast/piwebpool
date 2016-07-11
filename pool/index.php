@@ -331,6 +331,8 @@ $tableSettings = new TableGear($optionsSet);
                 block.getFieldValue('VAR'),
                 Blockly.Variables.NAME_TYPE
             );
+            var cleanCode = code.replace("_5B", "[");
+            var cleanCode = cleanCode.replace("_5D", "]"); 
             return [code, Blockly.Lua.ORDER_NONE];
         };
     
