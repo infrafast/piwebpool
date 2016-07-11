@@ -1,6 +1,6 @@
 -- Persistent Data
-local multiRefObjects = {
-
-} -- multiRefObjects
-local obj1 = nil
-return obj1
+return {
+	[1] = 1;
+	[2] = 2;
+	[3] = 3;
+}
