@@ -175,7 +175,7 @@ $tableSettings = new TableGear($optionsSet);
                 <block type="logic_compare"></block>
                 <block type="logic_operation"></block>
 
-                <block type="sensors"></block>
+                <block type="dynamicData"></block>
                 <block type="variables_set"><field name="VAR">info</field></block>
                 <block type="variables_get"><field name="VAR">variable</field></block>
                 <block type="on_off"></block>
@@ -216,16 +216,16 @@ $tableSettings = new TableGear($optionsSet);
         updateGraphs();
         
         //setup Blockly for LUA variable
-        Blockly.Blocks['sensors'] = {
+        Blockly.Blocks['dynamicData'] = {
           init: function() {
             this.appendDummyInput()
-                .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["heure", "hour"]]), "select");
+                .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["memoire[0]", "memory0"],["memoire[1]", "count1"],["memoire[2]", "count2"]]), "select");
             this.setOutput(true, null);
             this.setColour(330);
           }
         };
         
-        Blockly.Lua['sensors'] = function(block) {
+        Blockly.Lua['dynamicData'] = function(block) {
           var dropdown_select = block.getFieldValue('select');
           // TODO: Assemble Lua into code variable.
           var code = dropdown_select;
