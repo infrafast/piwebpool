@@ -167,3 +167,5 @@ writers = {
 			file:write("nil --[[userdata]]\n");
 		end;
 }
+
+function run() info="OK";
