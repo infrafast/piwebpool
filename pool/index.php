@@ -151,8 +151,8 @@ $tableSettings = new TableGear($optionsSet);
                 <block type="logic_operation"></block>
     
                 <block type="sensors"></block>
-                <block type="variables_set"><field name="VAR">info,compteurs comptage;compte</field></block>
-                <block type="variables_get"><field name="VAR">variable,compteur</field></block>
+                <block type="variables_set"><field name="VAR">info</field></block>
+                <block type="variables_get"><field name="VAR">variable</field></block>
                 <block type="on_off"></block>
                 <block type="math_number"></block>
     
