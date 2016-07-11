@@ -333,7 +333,7 @@ $tableSettings = new TableGear($optionsSet);
             );
             var cleanCode = code.replace("_5B", "[");
             var cleanCode = cleanCode.replace("_5D", "]"); 
-            return [code, Blockly.Lua.ORDER_NONE];
+            return [cleanCode, Blockly.Lua.ORDER_NONE];
         };
     
     
