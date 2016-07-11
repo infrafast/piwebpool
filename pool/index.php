@@ -145,7 +145,7 @@ $tableSettings = new TableGear($optionsSet);
         <tr>
           <td><div id="blocklyDiv" style="height: 500px; width:100%"></div></td>
             <xml id="toolbox" style="display: none">
-            <category id="catControl" colour="230" name="Controle">
+            <category id="catControl" colour="230" name="Control">
                 <block type="controls_if"></block>
                 <block type="logic_compare"></block>
                 <block type="logic_operation"></block>
