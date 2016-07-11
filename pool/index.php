@@ -225,7 +225,7 @@ $tableSettings = new TableGear($optionsSet);
           // TODO: Assemble Lua into code variable.
           var code = dropdown_select;
           // TODO: Change ORDER_NONE to the correct strength.
-          return [code, Blockly.Lua.ORDER_NONE];
+          return "*"+[code, Blockly.Lua.ORDER_NONE];
         };
         
         Blockly.Blocks['setcommand'] = {
