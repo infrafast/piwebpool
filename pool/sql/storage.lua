@@ -1,4 +1,4 @@
 -- Persistent Data
 return {
-	["compteur"] = 125;
+	125;
 }
