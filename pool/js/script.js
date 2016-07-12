@@ -30,7 +30,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 		success: function(r){
 			result = eval(r);
 			// we should take more benefit by displaying the state and not the answer
-			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
+			if (feedback===true) alert("Resultat: "+result.answer=="OK"?"OK":" "+result.state);
 	    }
 	});
 	return result.state;
