@@ -29,7 +29,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			async:async,
 		success: function(r){
 			result = eval(r);
-			// we should take more benefir by displaying the state and not the answer
+			// we should take more benefit by displaying the state and not the answer
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
 	    }
 	});
