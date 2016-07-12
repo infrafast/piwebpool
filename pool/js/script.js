@@ -20,7 +20,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
     var result;
     if (messageBox!==null)
         if (confirmation!==false){
-            result = confirm(messageBox+"\n"+UrlData);
+            result = confirm(messageBox);
             if (true !== result) return false;
         }else alert(messageBox);
 	$.ajax({
@@ -29,8 +29,8 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
 			async:async,
 		success: function(r){
 			result = eval(r);
-			// we should take more benefit by displaying the state and not the answer
-			if (feedback===true) alert("Resultat: "+result.answer=="OK"?"OK":" "+result.state);
+			// we should take more benefir by displaying the state and not the answer
+			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
 	    }
 	});
 	return result.state;
@@ -61,6 +61,23 @@ function changeState(material,elem){
 				}
 	}});
 }
+
+function updateScript(xml,lua,script){
+    var result;
+	$.ajax({
+			type: "POST",
+			url: "./action.php",
+			data:{action:"updateScript",id:script,xml:xml,lua:lua,extendedJson:true},
+			async:false,
+			success: function(r){
+				result = eval(r);
+				if(result.answer != "OK"){          
+					alert('Erreur : '+result.state);
+				}
+	}});
+	return result.answer+" "+(result.state==true?"":result.state);
+}
+
 
 // the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
 function getScript(code,script){
