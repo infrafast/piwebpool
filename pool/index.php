@@ -406,10 +406,8 @@ $tableSettings = new TableGear($optionsSet);
           var xml = Blockly.Xml.workspaceToDom(workspace);
           var xml_text = Blockly.Xml.domToText(xml);
           //alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
+          data:{action:"updateScript",id:script,xml:xml,lua:lua,extendedJson:true},
           
-          
-          
-          //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
         function updateGraph(element,link='graph.php?'){
