@@ -137,7 +137,7 @@ if(isset($_['action'])){
                  $result['answer']  = "ERROR";
                  $result['state'] =  mysql_error(); /* mysql_error();*/
             }else{
-                $result['state'] = $outcome;
+                $result['state'] = "Sauvegarde effectuée";
             }       
             mysql_free_result($outcome);
         break;        
