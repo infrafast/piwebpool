@@ -62,23 +62,6 @@ function changeState(material,elem){
 	}});
 }
 
-function updateScript(xml,lua,script){
-    var result;
-	$.ajax({
-			type: "POST",
-			url: "./action.php",
-			data:{action:"updateScript",id:script,xml:xml,lua:lua,extendedJson:true},
-			async:false,
-			success: function(r){
-				result = eval(r);
-				if(result.answer != "OK"){          
-					alert('Erreur : '+result.state);
-				}
-	}});
-	return result.answer+" "+(result.state==true?"":result.state);
-}
-
-
 // the getXML has to be sync (async=flase) otehrwise we can't fetch the info frpm the database and return "undefined" variable value
 function getScript(code,script){
     var result;
