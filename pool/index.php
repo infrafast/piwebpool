@@ -405,7 +405,7 @@ $tableSettings = new TableGear($optionsSet);
         function saveCode(script){
           var xml = Blockly.Xml.workspaceToDom(workspace);
           var xml_text = Blockly.Xml.domToText(xml);
-          alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
+          //alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
