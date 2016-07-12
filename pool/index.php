@@ -405,8 +405,8 @@ $tableSettings = new TableGear($optionsSet);
         function saveCode(script){
           var xml = Blockly.Xml.workspaceToDom(workspace);
           var xml_text = Blockly.Xml.domToText(xml);
-          //alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
-          actionCall('action=updateScript&id='+script+'&xml='+xml_text+'&lua='+Blockly.Lua.workspaceToCode(workspace),false,"Confirmez vous la sauvegarde" ,true, true);
+          alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
+          //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
         function updateGraph(element,link='graph.php?'){
