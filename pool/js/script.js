@@ -20,7 +20,7 @@ function actionCall(UrlData, async=true, messageBox=null, feedback=false, confir
     var result;
     if (messageBox!==null)
         if (confirmation!==false){
-            result = confirm(messageBox)+"script: \n"+UrlData;
+            result = confirm(messageBox+"script: \n"+UrlData);
             if (true !== result) return false;
         }else alert(messageBox);
 	$.ajax({
