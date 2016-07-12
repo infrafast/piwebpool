@@ -407,9 +407,6 @@ $tableSettings = new TableGear($optionsSet);
           var xml_text = Blockly.Xml.domToText(xml);
           //alert("Sauvegarde: "+updateScript(xml_text,Blockly.Lua.workspaceToCode(workspace),script));
           actionCall('action=updateScript&id='+script+'&xml='+xml_text+'&lua='+Blockly.Lua.workspaceToCode(workspace),false,"Confirmez vous la sauvegarde" ,true, true);
-          
-
-          
         }    
         
         function updateGraph(element,link='graph.php?'){
