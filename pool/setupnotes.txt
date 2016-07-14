@@ -27,7 +27,7 @@ TODO LIST
     - mouse pointer over graph
     - calibration bug review
     - check rc.local execution (conditions initiales)
-    - implement wifi wizard
+    - implement wifi wizard (https://github.com/sabhiram/raspberry-wifi-conf)
     
 
 known bugs:
