@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo python /
+nohup python readTemp.py < /dev/null > usb2 2>&1 &
