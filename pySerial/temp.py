@@ -17,4 +17,4 @@ while True:               #start the While loop
         print line    #print the output
         line = ""             #set the variable back to nothing
     else:
-    line = line + data    #append the data onto the line variable
+        line = line + data    #append the data onto the line variable
