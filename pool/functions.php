@@ -197,7 +197,15 @@ function getORP(){
 
 function readSensorStream($device){
     $v1="ERR";
-    $v1=file_get_contents($device,$v1);
+//    $v1=file_get_contents($device,$v1);
+
+   if($fh = fopen("filename","r")){
+      while (!feof($fh)){
+         $v1[] = fgets($fh,9999);
+      }
+      fclose($fh);
+    } 
+
     return substr($v1,0,5);
 }
 
