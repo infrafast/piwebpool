@@ -199,7 +199,7 @@ function readSensorStream($device){
     $v1="ERR";
 //    $v1=file_get_contents($device,$v1);
 
-   if($fh = fopen("filename","r")){
+   if($fh = fopen($device,"r")){
       while (!feof($fh)){
          $v1[] = fgets($fh,9999);
       }
