@@ -176,7 +176,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 .container{
   padding: 10px;
   border: 1px solid silver;
-  	cursor: pointer;
 }
 
 .container .text{
