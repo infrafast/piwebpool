@@ -169,9 +169,9 @@ function getDevice($id){
 function getTemperature(){
     //return round( (0.5 + (2.5 - 0.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //
-    //$v1="ERR";
-    //$v1=file_get_contents("usb2",$v1);
-    //return substr($v1,0,5);
+    $v1="ERR";
+    $v1=file_get_contents("usb2",$v1);
+    return substr($v1,0,5);
     //
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("temp")), 1,PHP_ROUND_HALF_UP);  
