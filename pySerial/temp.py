@@ -12,9 +12,9 @@ ser.write('\r')     #an initial write to clear the serial buffer
 
 line=""                #initiate read variable we'll call 'line'
 while True:               #start the While loop
-    data = ser.read()       #read the serial port and store in the 'data' variable
-    if(data == "\r"):       #if there is a carriage return
-        print line    #print the output
-        line = ""             #set the variable back to nothing
-    else:
+data = ser.read()       #read the serial port and store in the 'data' variable
+if(data == "\r"):       #if there is a carriage return
+print line    #print the output
+line = ""             #set the variable back to nothing
+else:
 line = line + data    #append the data onto the line variable
