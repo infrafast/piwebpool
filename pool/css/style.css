@@ -115,7 +115,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	text-shadow: 2px 2px #A0A0A0;
 	vertical-align: middle;
 	background-repeat:no-repeat	;
-	cursor: pointer;
 }
 
 .header{
@@ -187,4 +186,5 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
   border: none;
   height: 100%;
   margin: -10px;
+  	cursor: pointer;
 }
