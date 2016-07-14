@@ -8,11 +8,11 @@ ser = serial.Serial(      #initiate the serial connection into the 'ser' variabl
 )
 
 def read_from_port(ser):    #create definition for your serial read thread
-  line="Go!"                #initiate read variable we'll call 'line'
+  line=""                #initiate read variable we'll call 'line'
   while True:               #start the While loop
     data = ser.read()       #read the serial port and store in the 'data' variable
     if(data == "\r"):       #if there is a carriage return
-      print ">> " + line    #print the output
+      print line    #print the output
       line = ""             #set the variable back to nothing
     else:
       line = line + data    #append the data onto the line variable
@@ -22,14 +22,5 @@ ser.write('\r')     #an initial write to clear the serial buffer
 
 thread = threading.Thread(target=read_from_port, args=(ser,)) #create the thread to read the serial port, include the target definition and the serial protocol
 thread.start()  #start the thread
-print '\r\nEnter your commands below.\r\nInsert "exit" to leave the application.'
 
 while True:
-  input = raw_input("")  # get keyboard/command input
-
-  if input == 'exit':     #if you type 'exit'
-    ser.close()           #close the serial port
-    os._exit(1)           #exit the program
-
-  else:
-    ser.write(input + "\r") #write the command to the serial port
