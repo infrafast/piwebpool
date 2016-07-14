@@ -26,6 +26,7 @@ TODO LIST
     - script combo populated by select * from scripts ID
     - mouse pointer over graph
     - calibration bug review
+    - check rc.local execution (conditions initiales)
     
     
 
