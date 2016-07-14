@@ -195,11 +195,11 @@ function getORP(){
     return false;    
 }
 
-function readSensor($device){
+function readSensorStream($device){
     $v1="ERR";
     $v1=file_get_contents("usb2",$v1);
-    return substr($v1,0,5)
-
+    return substr($v1,0,5);
+}
 
 function readSensor($device,$command="R\r"){
     $serial = new PhpSerial;
