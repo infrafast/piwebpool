@@ -7,8 +7,10 @@ ser = serial.Serial(      #initiate the serial connection into the 'ser' variabl
   baudrate=9600          #set the baudrate
 )
 
-def read_from_port(ser):    #create definition for your serial read thread
-  line=""                #initiate read variable we'll call 'line'
+ser.write('\r')     #an initial write to clear the serial buffer
+#flush = ser.read(3) #flush into variable (only needed for EZO circuits)
+
+ line=""                #initiate read variable we'll call 'line'
   while True:               #start the While loop
     data = ser.read()       #read the serial port and store in the 'data' variable
     if(data == "\r"):       #if there is a carriage return
@@ -16,11 +18,3 @@ def read_from_port(ser):    #create definition for your serial read thread
       line = ""             #set the variable back to nothing
     else:
       line = line + data    #append the data onto the line variable
-
-ser.write('\r')     #an initial write to clear the serial buffer
-#flush = ser.read(3) #flush into variable (only needed for EZO circuits)
-
-thread = threading.Thread(target=read_from_port, args=(ser,)) #create the thread to read the serial port, include the target definition and the serial protocol
-thread.start()  #start the thread
-
-while True:
