@@ -24,6 +24,7 @@ TODO LIST
     - use PDO or mysqli 
     - use sqlite
     - script combo populated by select * from scripts ID
+    - mouse pointer over graph    
     
 
 known bugs:
