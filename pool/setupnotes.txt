@@ -69,6 +69,7 @@ PLATFORM SETUP FROM SCRACTH
 /etc/rc.local add 
      python /var/www/html/pool/initUSB.py 
      echo "-fy" > /forcefsck
+     nohup /var/www/html/pool/pull.sh < /dev/null > ./logFile 2>&1 &
 
  /etc/ssmtp/ssmtp.conf add
     root=postmaster
