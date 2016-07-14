@@ -197,7 +197,7 @@ function getORP(){
 
 function readSensorStream($device){
     $v1="ERR";
-    $v1=file_get_contents("usb2",$v1);
+    $v1=file_get_contents(getDevice($device),$v1);
     return substr($v1,0,5);
 }
 
