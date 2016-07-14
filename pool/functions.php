@@ -202,7 +202,7 @@ function readSensorStream($device){
     //echo $v1;
     $filename = "/dev/ttyUSB2";
     $handle = fopen($filename, "r");
-    $v1 = fread($handle, filesize($filename));
+    $v1 = fread($handle, 4);
     fclose($handle);
     return substr($v1,0,5);
 }
