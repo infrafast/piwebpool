@@ -1,4 +1,4 @@
 #!/bin/sh
 awk '
 /EOF/ {exit;}
- {print;}' < /dev/ttyUSB1 > usb1
+ {print;}' < /dev/ttyUSB2 > usb2
