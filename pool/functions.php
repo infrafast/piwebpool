@@ -198,8 +198,16 @@ function getORP(){
 
 function readSensorStream($device){
     $v1="ERR";
-    $v1=file_get_contents("/dev/ttyUSB2",$v1);
+    //$v1=file_get_contents("/dev/ttyUSB2",$v1);
     //echo $v1;
+    $names=file('/dev/ttyUSB2');
+    // To check the number of lines
+    echo count($names).'<br>';
+    foreach($names as $name)
+    {
+       echo $name.'<br>';
+    }    
+    
     return substr($v1,0,5);
 }
 
