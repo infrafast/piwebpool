@@ -201,7 +201,7 @@ function readSensorStream($device){
 
    if($fh = fopen($device,"r")){
       while (!feof($fh)){
-         $v1[] = fgets($fh,9999);
+         $v1 = fgets($fh,9999);
       }
       fclose($fh);
     } 
