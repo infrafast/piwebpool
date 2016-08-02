@@ -192,7 +192,7 @@ if (!$result) {
                 //print_r($arr);
                 foreach($arr as $val)
                 {
-                        echo $val.' ';       
+                        echo $val[0].' ';       
                 }                 
             }
         }
