@@ -21,15 +21,10 @@ $devices = array(
 			27=>array($phValue,$sensorURL),
 			28=>array($temperatureValue,$sensorURL),
 			29=>array($orpValue,$sensorURL),
-			30=>array($,$actuatorURL),
-			31=>array($,$actuatorURL)
+			30=>array($filterValue,$actuatorURL),
+			31=>array($treatment1Value,$actuatorURL)
 		);
 
-
-//            $
-//            $
-//            
-//            $treatment1Value
 //            $treatment2Value
 //            $pacValue
 
