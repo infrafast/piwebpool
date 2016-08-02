@@ -27,7 +27,14 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 function getValuesArray($materials){
-    $values array();
+    $values = array(
+        "%temp"=>0,
+        "%orp"=>0,
+        "%ph"=>0,
+        "%t1"=>0,
+        "%t2"=>0,
+        "%pac"=>0,
+    );
     
 }
 
