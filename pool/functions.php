@@ -27,7 +27,7 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
-function JsonAPIcall($jsonCall,$devID,$value){
+function JsonAPIcall($jsonCall,$devID,$value,$statusKey,$statusOK){
     // update  Domoticz JSON
     if(!function_exists("curl_init")) die("cURL extension is not installed");
     // url: $id[1] deviceID = $device value: $id[0]
@@ -48,9 +48,8 @@ function JsonAPIcall($jsonCall,$devID,$value){
     $output = curl_exec( $ch );
     curl_close($ch);
     $arr = json_decode($output,true);
-    //print_r($arr);
-    // error processing goes here
-    //echo $arr[$statusKey]; 
+    if ($arr[$statusKey]!=$statusOK) return false;
+    else return true;
 }
 
 
