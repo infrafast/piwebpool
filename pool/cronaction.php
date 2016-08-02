@@ -168,31 +168,32 @@ if (!$result) {
             
             // update  Domoticz JSON
             if(!function_exists("curl_init")) die("cURL extension is not installed");
-            $curl_options = array(
-                                CURLOPT_URL => $url,
-                                CURLOPT_HEADER => 0,
-                                CURLOPT_RETURNTRANSFER => TRUE,
-                                CURLOPT_TIMEOUT => 0,
-                                CURLOPT_SSL_VERIFYPEER => 0,
-                                CURLOPT_FOLLOWLOCATION => TRUE,
-                                CURLOPT_ENCODING => 'gzip,deflate',
-                        );
-            
-                        $ch = curl_init();
-                        curl_setopt_array( $ch, $curl_options );
-                        $output = curl_exec( $ch );
-                        curl_close($ch);
-            
-            $arr = json_decode($output,true);
-            
-            foreach($arr['items'] as $val)
-            {
-                    echo $val['thumbnailURL'].'<br>';       
-            }            
             // url: $id[1] deviceID = $device value: $id[0]
             foreach($devices as $device=>$id){ 
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
+                
+                $curl_options = array(
+                                    CURLOPT_URL => $url,
+                                    CURLOPT_HEADER => 0,
+                                    CURLOPT_RETURNTRANSFER => TRUE,
+                                    CURLOPT_TIMEOUT => 0,
+                                    CURLOPT_SSL_VERIFYPEER => 0,
+                                    CURLOPT_FOLLOWLOCATION => TRUE,
+                                    CURLOPT_ENCODING => 'gzip,deflate',
+                            );
+                
+                            $ch = curl_init();
+                            curl_setopt_array( $ch, $curl_options );
+                            $output = curl_exec( $ch );
+                            curl_close($ch);
+                
+                $arr = json_decode($output,true);
+                
+                foreach($arr['items'] as $val)
+                {
+                        echo $val['thumbnailURL'].'<br>';       
+                }                 
             }
         }
     }
