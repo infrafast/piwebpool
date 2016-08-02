@@ -1,444 +1,194 @@
 <?php
+// this script is to be executed periodically thru anacron by putting it to the hourly folder (or other means) at least every 2hours in order to query the
+// scheduler table to switch the pump on/ff accordingly
 
-// inclure ici le fichier de la classe
+
+// since this script can be called from CLI (thru crontab) check if the module exension Lua is loaded or force the load
+//if (!extension_loaded('lua')) {
+//    dl('lua.so');
+//}
+// otherwise run this script from cli as:
+//php -dextension=lua.so cronaction.php
 //
-require "include/FreeSMS.php";
-include("include/php_serial.class.php");
-include_once('include/phpMyGraph5.0.php'); 
 
-/*
-wiringPi
-Pin 	BCM
-GPIO 	Name 	Header 	Name 	BCM
-GPIO 	wiringPi
-Pin
-– 	– 	3.3v 	1 | 2 	5v 	– 	–
-8 	0 	SDA0 	3 | 4 	DNC 	– 	–
-9 	1 	SCL0 	5 | 6 	0v 	– 	–
-7 	4 	GPIO 7 	7 | 8 	TxD 	14 	15
-– 	– 	DNC 	9 | 10 	RxD 	15 	16
-0 	17 	GPIO 0 	11 | 12 	GPIO 1 	18 	1
-2 	21 	GPIO 2 	13 | 14 	DNC 	– 	–
-3 	22 	GPIO 3 	15 | 16 	GPIO 4 	23 	4
-– 	– 	DNC 	17 | 18 	GPIO 5 	24 	5
-12 	10 	MOSI 	19 | 20 	DNC 	– 	–
-13 	9 	MISO 	21 | 22 	GPIO 6 	25 	6
-14 	11 	SCLK 	23 | 24 	CE0 	8 	10
-– 	– 	DNC 	25 | 26 	CE1 	7 	11
-*/
+require_once('configuration.php');
+require_once('functions.php');
+require_once('luaContext.php');
 
-function JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK){
-    // update  Domoticz JSON
-    if(!function_exists("curl_init")) die("cURL extension is not installed");
-    $curl_options = array(
-                        CURLOPT_URL => $jsonCall,
-                        CURLOPT_HEADER => 0,
-                        CURLOPT_RETURNTRANSFER => TRUE,
-                        CURLOPT_TIMEOUT => 0,
-                        CURLOPT_SSL_VERIFYPEER => 0,
-                        CURLOPT_FOLLOWLOCATION => TRUE,
-                        CURLOPT_ENCODING => 'gzip,deflate',
-                        CURLOPT_USERPWD => $username . ":" . $password                                    
-                );
-    $ch = curl_init();
-    curl_setopt_array( $ch, $curl_options );
-    $output = curl_exec( $ch );
-    curl_close($ch);
-    $arr = json_decode($output,true);
-    if ($arr[$statusKey]!=$statusOK) return false;
-    else return true;
+$phValue = 0;
+$orpValue = 0;
+$temperatureValue = 0;
+$filterValue = 0;
+$treatment1Value = 0;
+$treatment2Value = 0;
+$pacValue = 0;
+
+
+// for domoticz should be put as user settings.
+$username="admin";
+$password="Quintal74604";
+
+$statusKey = "status";
+$statusOK = "OK";
+$statusNOK = "Error";
+
+$sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
+$actuatorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v";
+$devices = array(
+			27=>array(&$phValue,$sensorURL),
+			28=>array(&$temperatureValue,$sensorURL),
+			29=>array(&$orpValue,$sensorURL),
+			30=>array(&$filterValue,$actuatorURL),
+			31=>array(&$treatment1Value,$actuatorURL)
+		);
+
+//            $treatment2Value
+//            $pacValue
+
+// connect to the database
+if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
+    echo 'Could not connect to mysql';
+    exit;
 }
 
+if (!mysql_select_db($options["database"]["name"], $link)) {
+    echo 'Could not select database';
+    exit;
+} 
 
-function sendsms($message){
-    $SMSuser = "19107501";
-    $SMSkey = "1NXCXBzJGbNsdb";
-    $feedback="void";            
-    $result=true;
-    if (!sms( $SMSuser, $SMSkey, $message,$feedback )) $result=false;
-    appendlog("sendsms:",$result==true?"OK":"ERROR",$feedback);
-    return $result;
-}
+$answer="OK";
+$state="";
 
-function sendemail($message){
-    // send email
-    // subject and recipee should be extracted from settings.
-    //html decode to display accents
-    $message=html_entity_decode(wordwrap($message,70));
-    $to = "szemrot@hotmail.com";
-    $subject = "Notification de ".gethostname();
-    $from = "noreply@piweb.infrafast.com";
-    $headers = "From:" . $from;
-    $result = mail($to,$subject,$message,$headers);
-    //appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
-    return $result;
-}
+// what time is it now?
+$tw=getCurrentTimeWindow()."h";
+// what is the temperature
+$temp=getPoolTemperature();
 
-function appendlualog($message){
-    return appendlog("NOTIFICATION","SCRIPT",$message);
-}
+//treat the case when the tw and temp are forced by user thru the GUI
+//in that case override the value here by these value
+//ensure the out of range is captured on client side
+//then treat the case where tw and temperature are out of range
+//e.g.: either get defaut values or raise email error notification
+//this would then capture the out of range above
 
-function appendlog($source,$answer,$status,$filename="logfile.txt"){
-// Appends lines to file and makes sure the file doesn't grow too much
-    $result=true;
-    // remove \n and \r so logfile are written on one line only except the last one
-    $text =  preg_replace('~[\r\n]+~', '', "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]")."\n";
-	if (!file_exists($filename)) { touch($filename); chmod($filename, 0666); }
-	// file = 50kB
-	if (filesize($filename) > 50000) {
-		$filename2 = $filename.".old";
-		if (file_exists($filename2)) unlink($filename2);
-		rename($filename, $filename2);
-		touch($filename); chmod($filename,0666);
-	}
-	if (!is_writable($filename)) die("<p>\nCannot open log file ($filename)");
-	if (!$handle = fopen($filename, 'a')) die("<p>\nCannot open file ($filename)");
-	if (fwrite($handle, $text) === false) die("<p>\nCannot write to file ($filename)");
-	fclose($handle);
-	return $result;
-    //return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
-}
+$sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
+$result = mysql_query($sql, $link);
 
-function getLog($logfilename, $lines = 24){
-    $data = '';
-    $filename="./".$logfilename;
-    $fp = fopen($filename, "r");
-    $block = 4096;
-    $max = filesize($filename);
+if (!$result) {
+    $answer="ERROR";
+    $state=mysql_error();
+}else{
+    $pumpConsign=0;
+    while ($row = mysql_fetch_assoc($result)) {
+        $pumpConsign=($row[$temp]);
+    }
+    // treat error case of unfound timewindow in the table
+    //if ($pumpConsign="")
     
-    for($len = 0; $len < $max; $len += $block) 
-    {
-        $seekSize = ($max - $len > $block) ? $block : $max - $len;
-        fseek($fp, ($len + $seekSize) * -1, SEEK_END);
-        $data = fread($fp, $seekSize) . $data;
+    mysql_free_result($result);
     
-        if(substr_count($data, "\n") >= $lines + 1) 
-        {
-            /* Make sure that the last line ends with a '\n' */
-            if(substr($data, strlen($data)-1, 1) !== "\n") {
-                $data .= "\n";
+    if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
+        $answer.="+ERROR";
+        $state.="+SetPinState";
+    }else{
+        $concat=array("header","footer");
+        $i=0;
+        foreach ($concat as $scriptID) {
+            // fetch lua header and footer code
+            // i.e. the run() and return
+            $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+            $result = mysql_query($sql, $link);
+            if (!$result) {
+                $answer.="+ERROR";
+                $state.="+".mysql_error();
+            }else{
+                while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
+                mysql_free_result($result);
+            }                
+        }
+        $luaFeedback="";
+        foreach (array("main","custom") as $scriptID) {
+            $luaFeedback.="|".$scriptID.":";
+            // fetch lua code from database
+            $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+            $result = mysql_query($sql, $link);
+            if (!$result) {
+                $answer.="+ERROR";
+                $state.="+".mysql_error();
+            }else{
+                $luaCode="";
+                while ($row = mysql_fetch_assoc($result)) $luaCode=htmlspecialchars_decode(($row['lua']));
+                mysql_free_result($result);
             }
+            // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
+            goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback);
+        }
+        
+    }
     
-            preg_match("!(.*?\n){". $lines ."}$!", $data, $match);
-            fclose($fp);
-            return $match[0];
+    //get and update the index
+    $sql    = "SELECT value from settings where id='measureIndex';";
+    $result = mysql_query($sql, $link);
+    
+    if (!$result) {
+        $answer.="+ERROR";
+        $state.="+".mysql_error();
+    }else{
+        while ($row = mysql_fetch_assoc($result)) {
+            $measureIndex=($row['value']);
+        }    
+        mysql_free_result($result);
+        $measureIndex=$measureIndex+1;
+        if ($measureIndex>168) $measureIndex=0;
+        $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
+        $result = mysql_query($sql, $link);
+        if (!$result) {
+            $answer.="+ERROR";
+            $state.="+".mysql_error();
+        }else{
+            
+            $phValue = getPh();
+            $orpValue = getORP();
+            $temperatureValue = getTemperature();
+            $filterValue = (getPin($pins[$materials["filtration"]]))=="1"?"Off":"On";
+            $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
+            $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
+            $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
+            // ---------------------------------------------------
+            if($phValue==null)  $phValue=-99;
+            if($orpValue==null)  $orpValue=-99;
+            if($temperatureValue==null)  $temperatureValue=-99;
+            // ---------------------------------------------------
+            $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
+            foreach($materials as $material=>$pin) $sql = $sql.", `".$materialsColumn[$material]."`";
+            $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."'";
+            foreach($materials as $material=>$pin) $sql = $sql.", '".getPin($pins[$materials[$material]])."'";
+            $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
+            foreach($materials as $material=>$pin) $sql = $sql.", ".$materialsColumn[$material]."=".getPin($pins[$materials[$material]]);
+            $sql = $sql.";";
+            $result = mysql_query($sql, $link);
+            if (!$result) {
+                $answer.="+ERROR";
+                $state.="+".mysql_error()." ".$sql;
+            }
+            // update  Domoticz JSON
+            // url: $id[1] deviceID = $device value: $id[0]
+            foreach($devices as $device=>$id){ 
+                $jsonCall = str_replace("%i",$device,$id[1]);
+                $jsonCall = str_replace("%v",$id[0],$jsonCall);
+                if (JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK)==false){
+                    $state.="{JsonAPIcall failed}";
+                    break;
+                };
+            }
         }
     }
-    fclose($fp);
-    return $data; 
 }
+$state.="{periode:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
+appendlog("ACTIONS PERIODIQUES",$answer,$state, $logfilename);
 
+// sync data to disk
+exec("sync");
 
-function sms($SMSkey, $SMSuser,$message,&$feedback){
-     $sms = new FreeMobile();
-    $sms->setKey($SMSkey)
-        ->setUser($SMSuser);
-    try {
-        // envoi d'un message
-        $sms->send($message);
-        $feedback = "sent";
-        return true;
-    } catch (Exception $e) {
-        $feedback = $e->getCode()." ".$e->getMessage();
-        //echo "Erreur sur envoi de SMS: ".$feedback;
-        return false;
-    }    
-}
-
-
-function getPinState($pin,$pins){
-	$commands = array();
-	return getPin($pins[$pin]);
-}
-
-function getPin($pin){
-    // this function is to abstract one parameter when called from lua
-    // it return 0 or 1 to beconsistent with set and to ease the testing 
-    // contrary to the sub-function which is called from php
-    exec("gpio read ".$pin,$commands,$return);
-    //echo "exec gpio read ".$pin;
-    // relay : normally close
-    return (trim($commands[0])=="1"?0:1);
-}
-
-function setPinState($pin,$state){
-    //Definis le PIN en tant que sortie
-	system("gpio mode ".$pin." out");
-	//Active/désactive le pin
-	$state=($state==0?1:0);
-	
-	system("gpio write ".$pin." ".$state);
-	//echo "{gpio write ".$pin." ".$state."}";
-	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
-	return true;
-}
-
-function getDevice($id){
-    try{
-        if ($data = file('USBdevices.id')){
-            $returnArray = array();
-            foreach($data as $line) {
-                $explode = explode(":", $line);
-                $returnArray[$explode[0]] = $explode[1];
-            }
-            return preg_replace( "/\r|\n/", "", $returnArray[$id]);
-        }
-    }catch (Exception $e){
-    }
-    return null;
-}
-
-
-function getTemperature(){
-    //return round( (0.5 + (2.5 - 0.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
-    //
-    for ($i = 0; $i < 2; $i++){
-        $v1 = round(readSensor(getDevice("temp")), 1,PHP_ROUND_HALF_UP);
-        //$v1 = round(readSensorStream("usb2"), 1,PHP_ROUND_HALF_UP);  
-        if ($v1>0 and $v1<50) return $v1;
-    }
-    return false;
-}
-
-// use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
-function getPh(){
-    //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
-    for ($i = 0; $i < 2; $i++){
-        $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
-        if ($v1>0 and $v1<10) return $v1;
-    }
-    return false;
-}
-
-function getORP(){
-    //return intval(rand(633,640));
-    for ($i = 0; $i < 2; $i++){
-        $v1 = intval(readSensor(getDevice("orp")));      
-        if ($v1>0 and $v1<1000) return $v1;
-    }
-    return false;    
-}
-
-function readSensorStream($device){
-    $v1="ERR";
-    //$v1=file_get_contents("/dev/ttyUSB2",$v1);
-    //echo $v1;
-    $filename = "/dev/ttyUSB2";
-    $handle = fopen($filename, "r");
-    $v1 = fread($handle);
-    fclose($handle);
-    return substr($v1,0,5);
-}
-
-function readSensor($device,$command="R\r"){
-    $serial = new PhpSerial;
-    $serial->deviceSet($device);
-    $serial->confBaudRate(9600);
-    $serial->deviceOpen();
-    //sleep(2);
-    $serial->sendMessage($command);
-    sleep(1);
-    $val=$serial->readPort();
-    $serial->deviceClose();    
-    return $val;  
-}
-
-
-
-function getPoolTemperature(){
-    // should curl to Eniac
-    $temp=getTemperature();
-    $temp=intval($temp);
-    if ($temp/2 <> intval($temp/2)) $temp-=1;
-    $tempRange=$temp."to".($temp+2);
-    if ($temp>=28) $tempRange="above28";
-    if ($temp<0) $tempRange="below0";
-    return $tempRange;
-}
-
-function secure($string){
-	return htmlentities(($string),NULL,'UTF-8');
-	//return htmlentities(stripslashes($string),NULL,'UTF-8');
-}
-
-function getCurrentTimeWindow(){
-    // get the current hours and force multiple to 2
-    $tw=getCurrentTime();
-    //$tw=06; 
-    if ($tw/2 <> intval($tw/2)) $tw-=1;
-    // format to 2 digit (prefix 0) 
-    $prefixDigit="";
-    if (strlen($tw)<2) $prefixDigit="0";
-    // convert to text with hour so it match the row name in table
-    $tw=$prefixDigit.$tw;
-    return $tw;
-}
-
-function getCurrentTime(){
-    // get the current hours and force multiple to 2
-    return date("H");
-}
-
-//
-// remove_comments will strip the sql comment lines out of an uploaded sql file
-// specifically for mssql and postgres type files in the install....
-//
-function remove_comments(&$output)
-{
-   $lines = explode("\n", $output);
-   $output = "";
-
-   // try to keep mem. use down
-   $linecount = count($lines);
-
-   $in_comment = false;
-   for($i = 0; $i < $linecount; $i++)
-   {
-      if( preg_match("/^\/\*/", preg_quote($lines[$i])) )
-      {
-         $in_comment = true;
-      }
-
-      if( !$in_comment )
-      {
-         $output .= $lines[$i] . "\n";
-      }
-
-      if( preg_match("/\*\/$/", preg_quote($lines[$i])) )
-      {
-         $in_comment = false;
-      }
-   }
-
-   unset($lines);
-   return $output;
-}
-
-//
-// remove_remarks will strip the sql comment lines out of an uploaded sql file
-//
-function remove_remarks($sql)
-{
-   $lines = explode("\n", $sql);
-
-   // try to keep mem. use down
-   $sql = "";
-
-   $linecount = count($lines);
-   $output = "";
-
-   for ($i = 0; $i < $linecount; $i++)
-   {
-      if (($i != ($linecount - 1)) || (strlen($lines[$i]) > 0))
-      {
-         if (isset($lines[$i][0]) && $lines[$i][0] != "#")
-         {
-            $output .= $lines[$i] . "\n";
-         }
-         else
-         {
-            $output .= "\n";
-         }
-         // Trading a bit of speed for lower mem. use here.
-         $lines[$i] = "";
-      }
-   }
-
-   return $output;
-
-}
-
-//
-// split_sql_file will split an uploaded sql file into single sql statements.
-// Note: expects trim() to have already been run on $sql.
-//
-function split_sql_file($sql, $delimiter)
-{
-   // Split up our string into "possible" SQL statements.
-   $tokens = explode($delimiter, $sql);
-
-   // try to save mem.
-   $sql = "";
-   $output = array();
-
-   // we don't actually care about the matches preg gives us.
-   $matches = array();
-
-   // this is faster than calling count($oktens) every time thru the loop.
-   $token_count = count($tokens);
-   for ($i = 0; $i < $token_count; $i++)
-   {
-      // Don't wanna add an empty string as the last thing in the array.
-      if (($i != ($token_count - 1)) || (strlen($tokens[$i] > 0)))
-      {
-         // This is the total number of single quotes in the token.
-         $total_quotes = preg_match_all("/'/", $tokens[$i], $matches);
-         // Counts single quotes that are preceded by an odd number of backslashes,
-         // which means they're escaped quotes.
-       $escaped_quotes = preg_match_all("/(?<!\\\\)(\\\\\\\\)*\\\\'/", $tokens[$i], $matches);
-
-         $unescaped_quotes = $total_quotes - $escaped_quotes;
-
-         // If the number of unescaped quotes is even, then the delimiter did NOT occur inside a string literal.
-         if (($unescaped_quotes % 2) == 0)
-         {
-            // It's a complete sql statement.
-            $output[] = $tokens[$i];
-            // save memory.
-            $tokens[$i] = "";
-         }
-         else
-         {
-            // incomplete sql statement. keep adding tokens until we have a complete one.
-            // $temp will hold what we have so far.
-            $temp = $tokens[$i] . $delimiter;
-            // save memory..
-            $tokens[$i] = "";
-
-            // Do we have a complete statement yet?
-            $complete_stmt = false;
-
-            for ($j = $i + 1; (!$complete_stmt && ($j < $token_count)); $j++)
-            {
-               // This is the total number of single quotes in the token.
-               $total_quotes = preg_match_all("/'/", $tokens[$j], $matches);
-               // Counts single quotes that are preceded by an odd number of backslashes,
-               // which means they're escaped quotes.
-               $escaped_quotes = preg_match_all("/(?<!\\\\)(\\\\\\\\)*\\\\'/", $tokens[$j], $matches);
-
-               $unescaped_quotes = $total_quotes - $escaped_quotes;
-
-               if (($unescaped_quotes % 2) == 1)
-               {
-                  // odd number of unescaped quotes. In combination with the previous incomplete
-                  // statement(s), we now have a complete statement. (2 odds always make an even)
-                  $output[] = $temp . $tokens[$j];
-
-                  // save memory.
-                  $tokens[$j] = "";
-                  $temp = "";
-
-                  // exit the loop.
-                  $complete_stmt = true;
-                  // make sure the outer loop continues at the right point.
-                  $i = $j;
-               }
-               else
-               {
-                  // even number of unescaped quotes. We still don't have a complete statement.
-                  // (1 odd and 1 even always make an odd)
-                  $temp .= $tokens[$j] . $delimiter;
-                  // save memory.
-                  $tokens[$j] = "";
-               }
-
-            } // for..
-         } // else
-      }
-   }
-
-   return $output;
-}
-
+echo $answer.$state;
 ?>
-
