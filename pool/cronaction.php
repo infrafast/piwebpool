@@ -157,7 +157,13 @@ if (!$result) {
                 $state.="+".mysql_error()." ".$sql;
             }
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v");
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v");
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v");
+            
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v");
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v");            
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v");            
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v");            
 
 
         }
