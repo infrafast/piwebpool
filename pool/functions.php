@@ -28,14 +28,14 @@ Pin
 */
 
 function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
-    $phValue = getPh();
+    
     
     
     $filterValue = (getPin($pins[$materials["filtration"]]))=="1"?"Off":"On";
     $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
     $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
     $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
-    if($phValue==null)  $phValue=-99;
+    
     
     
     $pos = strpos($url, "%temp");
@@ -52,7 +52,13 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
         $url = str_replace("%orp",$orpValue,$url);    
     }    
     
-    
+    $pos = strpos($url, "%ph");
+    if ($pos != false) {
+        $phValue = getPh();    
+        if($phValue==null)  $phValue=-99;      
+        $url = str_replace("%ph",$orpValue,$url);    
+    }    
+     
     
 
     
