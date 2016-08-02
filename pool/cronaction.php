@@ -150,11 +150,11 @@ if (!$result) {
                 $state.="+".mysql_error()." ".$sql;
             }
             
-            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph");
-            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp");
-            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp");
-            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter");
-            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1");            
+            weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph");
+            weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp");
+            weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp");
+            weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter");
+            weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1");            
         }
     }
 }
