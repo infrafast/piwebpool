@@ -180,6 +180,7 @@ if (!$result) {
                                     CURLOPT_SSL_VERIFYPEER => 0,
                                     CURLOPT_FOLLOWLOCATION => TRUE,
                                     CURLOPT_ENCODING => 'gzip,deflate',
+                                    CURLOPT_USERPWD, $username . ":" . $password                                    
                             );
                 $ch = curl_init();
                 curl_setopt_array( $ch, $curl_options );
