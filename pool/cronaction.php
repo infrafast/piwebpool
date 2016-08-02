@@ -156,16 +156,10 @@ if (!$result) {
                 $answer.="+ERROR";
                 $state.="+".mysql_error()." ".$sql;
             }
-            // update  Domoticz JSON
-            // url: $id[1] deviceID = $device value: $id[0]
-            foreach($devices as $device=>$id){ 
-                $jsonCall = str_replace("%i",$device,$id[1]);
-                $jsonCall = str_replace("%v",$id[0],$jsonCall);
-                if (JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK)==false){
-                    $state.="{JsonAPIcall failed}";
-                    break;
-                };
-            }
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v");
+            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v");
+
+
         }
     }
 }
