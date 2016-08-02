@@ -25,6 +25,8 @@ $pacValue = 0;
 
 
 // for domoticz
+$username="admin";
+$password="Quintal74604";
 
 $sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
 $actuatorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v";
