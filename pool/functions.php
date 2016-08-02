@@ -44,7 +44,7 @@ function weburl($materials,$url,$username="admin",$password="Quintal74604",$stat
     if ($pos != false) {
         $phValue = getPh();    
         if($phValue==null)  $phValue=-99;      
-        $url = str_replace("%ph",$orpValue,$url);    
+        $url = str_replace("%ph",$phValue,$url);    
     }    
     $url=str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
     $url=str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
