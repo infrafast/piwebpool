@@ -23,13 +23,6 @@ $treatment1Value = 0;
 $treatment2Value = 0;
 $pacValue = 0;
 
-
-// for domoticz should be put as user settings.
-$username="admin";
-$password="Quintal74604";
-$statusKey = "status";
-$statusOK = "OK";
-
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
@@ -156,11 +149,14 @@ if (!$result) {
                 $answer.="+ERROR";
                 $state.="+".mysql_error()." ".$sql;
             }
-            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph");
-            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp");
-            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp");
-            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter");
-            weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1");            
+            
+            
+            
+            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph");
+            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp");
+            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp");
+            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter");
+            weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1");            
         }
     }
 }
