@@ -189,7 +189,7 @@ if (!$result) {
                 $output = curl_exec( $ch );
                 curl_close($ch);
                 $arr = json_decode($output,true);
-                print_r($arr);
+                //print_r($arr);
                 foreach($arr as $val)
                 {
                         echo $val.' ';       
