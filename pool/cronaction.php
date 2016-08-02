@@ -168,7 +168,7 @@ if (!$result) {
             
             // update  Domoticz JSON
             if(!function_exists("curl_init")) die("cURL extension is not installed");
-             $curl_options = array(
+            $curl_options = array(
                                 CURLOPT_URL => $url,
                                 CURLOPT_HEADER => 0,
                                 CURLOPT_RETURNTRANSFER => TRUE,
