@@ -176,7 +176,10 @@ if (!$result) {
             foreach($devices as $device=>$id){ 
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
-                JsonAPIcall($jsonCall,$statusKey,$statusOK);
+                if (JsonAPIcall($jsonCall,$statusKey,$statusOK)==false){
+                    $state=.$state."";
+                    break;
+                };
             }
         }
     }
