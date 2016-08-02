@@ -28,9 +28,8 @@ Pin
 */
 
 
-function weburl(){
-    
-    
+function weburl($url,$username,$password,$statusKey,$statusOK){
+    JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
 }
 
 function JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK){
