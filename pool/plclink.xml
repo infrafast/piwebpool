@@ -28,7 +28,7 @@
 				<item id="2"> 
 					<title>PH</title>
 					<name>PH</name>
-					<description>Taux Ph (6.5-7.5) </description>
+					<description>Taux Ph (7.0-7.5) </description>
                     <type>json</type><text>state</text> 
 					<affichage>text</affichage>
 					<url>http://piweb3.infrafast.com/action.php?action=getPh</url>
