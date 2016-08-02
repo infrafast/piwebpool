@@ -174,7 +174,7 @@ if (!$result) {
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
                 $curl_options = array(
                                     CURLOPT_URL => $jsonCall,
-                                    CURLOPT_HEADER => 0,
+                                    CURLOPT_HEADER => 1,
                                     CURLOPT_RETURNTRANSFER => TRUE,
                                     CURLOPT_TIMEOUT => 0,
                                     CURLOPT_SSL_VERIFYPEER => 0,
