@@ -365,6 +365,40 @@ $tableSettings = new TableGear($optionsSet);
               
             return cleanVarName + ' = ' + cleanVarName + ' + ' + argument0 + '\n';
         };
+
+        Blockly.Blocks['webcall'] = {
+          init: function() {
+            this.appendDummyInput()
+                .appendField("URL")
+                .appendField(new Blockly.FieldTextInput("http://server/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph"), "url")
+                .appendField("user")
+                .appendField(new Blockly.FieldTextInput(""), "user")
+                .appendField("pass")
+                .appendField(new Blockly.FieldTextInput(""), "password")
+                .appendField("reponse")
+                .appendField(new Blockly.FieldTextInput("status"), "statusKey")
+                .appendField("ok")
+                .appendField(new Blockly.FieldTextInput("ok"), "statusOk");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(120);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };        
+        
+        Blockly.Lua['webcall'] = function(block) {
+          var text_url = block.getFieldValue('url');
+          var text_user = block.getFieldValue('user');
+          var text_password = block.getFieldValue('password');
+          var text_statuskey = block.getFieldValue('statusKey');
+          var text_statusok = block.getFieldValue('statusOk');
+          // TODO: Assemble JavaScript into code variable.
+          //var code = 'web("'+text_url+'","'+text_user+'","'+text_password+'","'+text_statuskey+'","'+text_statuskey+'","'+text_statusok+'");\n';
+          var code = '...;\n';          
+          return code;
+        };        
+        
     
       var workspace = Blockly.inject('blocklyDiv',
           {toolbox: document.getElementById('toolbox'),
