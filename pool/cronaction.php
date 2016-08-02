@@ -167,7 +167,7 @@ if (!$result) {
             }
             
             // update  Domoticz JSON
-            foreach($device as $devices=>$id){ 
+            foreach($devices as $device=>$id){ 
                 $jsonCall=$devices[$id][1];
                 echo "\n".$jsonCall;
             }
