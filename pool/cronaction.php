@@ -27,7 +27,6 @@ $pacValue = 0;
 // for domoticz should be put as user settings.
 $username="admin";
 $password="Quintal74604";
-
 $statusKey = "status";
 $statusOK = "OK";
 
