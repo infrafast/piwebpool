@@ -46,10 +46,10 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
         if($phValue==null)  $phValue=-99;      
         $url = str_replace("%ph",$orpValue,$url);    
     }    
-    str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
-    str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
-    str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
-    str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
+    $url=str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
+    $url=str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
+    $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
+    $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
     
     return JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
 }
