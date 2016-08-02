@@ -149,7 +149,7 @@ if (!$result) {
                 $answer.="+ERROR";
                 $state.="+".mysql_error()." ".$sql;
             }
-            if (!weburl($materials,$pins,"http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph","status","Ok")) $state.="{api update ph failed}";
+            if (!weburl($materials,$pins,"http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph","status","OK")) $state.="{api update ph failed}";
             if (!weburl($materials,$pins,"http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp")) $state.="{api update temp failed}";
             if (!weburl($materials,$pins,"http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp")) $state.="{api update orp failed}";
             if (!weburl($materials,$pins,"http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter")) $state.="{api update filter failed}";
