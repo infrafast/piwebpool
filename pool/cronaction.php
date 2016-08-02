@@ -194,7 +194,9 @@ if (!$result) {
                 curl_close($ch);
                 $arr = json_decode($output,true);
                 //print_r($arr);
-                //echo $arr[$statusKey];
+                // error processing goes here
+                //echo $arr[$statusKey]; 
+                
             }
         }
     }
