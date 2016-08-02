@@ -182,9 +182,13 @@ $tableSettings = new TableGear($optionsSet);
                 <block type="math_number"></block>
                 <block type="math_arithmetic"></block>
                 <block type="math_change"></block>
+                
+                <block type="webcall"></block>
                 <block type="message"></block>
                 <block type="text"></block>
                 <block type="text_join"></block>
+
+
 
                 <block type="setcommand"></block>
                 <block type="getcommand"></block>
