@@ -244,7 +244,7 @@ switch ($_GET["type"]){
                 $reference=730;
             break;
             case "temperature";
-                $reference=27;
+                $reference=28;
             break;
             default:
             break;
