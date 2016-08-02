@@ -50,12 +50,10 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
         $url = str_replace("%ph",$orpValue,$url);    
     }    
      
-    str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url); = ;
-    $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
-    $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
-    $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
-
-
+    str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
+    str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
+    str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
+    str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
     
     
     JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
