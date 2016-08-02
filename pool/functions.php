@@ -27,6 +27,12 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
+
+function weburl(){
+    
+    
+}
+
 function JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK){
     // update  Domoticz JSON
     if(!function_exists("curl_init")) die("cURL extension is not installed");
