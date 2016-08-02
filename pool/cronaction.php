@@ -171,9 +171,6 @@ if (!$result) {
             foreach($devices as $device=>$id){ 
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],jsonCall);
-                
-                
-                $jsonCall=$id[0];  
                 $state.=" ".$jsonCall;
             }
         }
