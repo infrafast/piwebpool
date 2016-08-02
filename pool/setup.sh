@@ -8,6 +8,7 @@ pause(){
 # php-pear and php5-dev are for pecl and compliation of lua for php
 #note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
 #php5-gd is for image png generation
+#php5-curl is for connecting to donmoticz or any other system via JSON call
 echo "DOWNLOADING AND SETTING UP ALL NECESSARY PACKAGES"
 sudo apt-get update
 sudo apt-get --assume-yes install apache2 php5 php5-mysql php5-gd ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev python-serial php5-curl
