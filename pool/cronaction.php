@@ -177,7 +177,7 @@ if (!$result) {
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
                 if (JsonAPIcall($jsonCall,$statusKey,$statusOK)==false){
-                    $state=.$state."";
+                    $state.="{JsonAPIcall failed}";
                     break;
                 };
             }
