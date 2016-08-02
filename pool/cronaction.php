@@ -15,6 +15,15 @@ require_once('configuration.php');
 require_once('functions.php');
 require_once('luaContext.php');
 
+$phValue = 0;
+$orpValue = 0;
+$temperatureValue = 0;
+$filterValue = 0;
+$treatment1Value = 0;
+$treatment2Value = 0;
+$pacValue = 0;
+
+
 // for domoticz
 
 $sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
