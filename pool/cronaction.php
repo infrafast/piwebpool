@@ -28,6 +28,10 @@ $pacValue = 0;
 $username="admin";
 $password="Quintal74604";
 
+$statusKey = "status";
+$statusOK = "OK";
+$statusNOK = "Error";
+
 $sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
 $actuatorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v";
 $devices = array(
