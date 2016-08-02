@@ -27,7 +27,7 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 function getValuesArray($materials){
-        
+    $values array();
     
 }
 
@@ -40,7 +40,6 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
     $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
     $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
     $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
-
     if($phValue==null)  $phValue=-99;
     if($orpValue==null)  $orpValue=-99;
     if($temperatureValue==null)  $temperatureValue=-99;
