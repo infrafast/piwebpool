@@ -215,6 +215,31 @@ $tableSettings = new TableGear($optionsSet);
         // draw measures graph
         updateGraphs();
         
+        
+        Blockly.Blocks['webcall'] = {
+          init: function() {
+            this.appendDummyInput()
+                .appendField("URL")
+                .appendField(new Blockly.FieldTextInput("http://server/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph"), "url")
+                .appendField("user")
+                .appendField(new Blockly.FieldTextInput(""), "user")
+                .appendField("pass")
+                .appendField(new Blockly.FieldTextInput(""), "password")
+                .appendField("reponse")
+                .appendField(new Blockly.FieldTextInput("status"), "statusKey")
+                .appendField("ok")
+                .appendField(new Blockly.FieldTextInput("ok"), "statusOk");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(120);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };        
+        
+        
+        
+        
         //setup Blockly for LUA variable
         Blockly.Blocks['dynamicData'] = {
           init: function() {
