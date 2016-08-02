@@ -50,15 +50,10 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
     $url=str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
     $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
     $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
-    
-    return JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
-}
 
-function JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK){
-    // update  Domoticz JSON
     if(!function_exists("curl_init")) die("cURL extension is not installed");
     $curl_options = array(
-                        CURLOPT_URL => $jsonCall,
+                        CURLOPT_URL => $url,
                         CURLOPT_HEADER => 0,
                         CURLOPT_RETURNTRANSFER => TRUE,
                         CURLOPT_TIMEOUT => 0,
@@ -75,7 +70,6 @@ function JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK){
     if ($arr[$statusKey]!=$statusOK) return false;
     else return true;
 }
-
 
 function sendsms($message){
     $SMSuser = "19107501";
