@@ -188,8 +188,6 @@ $tableSettings = new TableGear($optionsSet);
                 <block type="text"></block>
                 <block type="text_join"></block>
 
-
-
                 <block type="setcommand"></block>
                 <block type="getcommand"></block>
 
