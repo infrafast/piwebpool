@@ -59,8 +59,7 @@ function weburl($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
                         CURLOPT_TIMEOUT => 0,
                         CURLOPT_SSL_VERIFYPEER => 0,
                         CURLOPT_FOLLOWLOCATION => TRUE,
-                        CURLOPT_ENCODING => 'gzip,deflate',
-                        CURLOPT_USERPWD => $username . ":" . $password                                    
+                        CURLOPT_ENCODING => 'gzip,deflate'                                    
                 );
     $ch = curl_init();
     curl_setopt_array( $ch, $curl_options );
