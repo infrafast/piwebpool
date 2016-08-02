@@ -370,7 +370,7 @@ $tableSettings = new TableGear($optionsSet);
           init: function() {
             this.appendDummyInput()
                 .appendField("URL")
-                .appendField(new Blockly.FieldTextInput("http://server/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph"), "url")
+                .appendField(new Blockly.FieldTextInput("http://"), "url")
                 .appendField("user")
                 .appendField(new Blockly.FieldTextInput(""), "user")
                 .appendField("pass")
