@@ -17,7 +17,7 @@ require_once('luaContext.php');
 
 // for domoticz
 
-$sensorURL = "";
+$sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
 $actuatorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v";
 
 $devices = array(
