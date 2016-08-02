@@ -172,6 +172,7 @@ if (!$result) {
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
             }
+            if(!function_exists("curl_init")) die("cURL extension is not installed");
         }
     }
 }
