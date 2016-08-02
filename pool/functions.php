@@ -50,7 +50,8 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
     str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
     str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
     str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
-    JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
+    
+    return JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
 }
 
 function JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK){
