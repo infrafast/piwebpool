@@ -170,7 +170,7 @@ if (!$result) {
             // url: $id[1] deviceID = $device value: $id[0]
             foreach($devices as $device=>$id){ 
                 $jsonCall = str_replace("%i",$device,$id[1]);
-                $jsonCall = str_replace("%v",$id[0],jsonCall);
+                $jsonCall = str_replace("%v",$id[0],$jsonCall);
                 $state.=" ".$jsonCall;
             }
         }
