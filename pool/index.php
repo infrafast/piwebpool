@@ -386,20 +386,20 @@ $tableSettings = new TableGear($optionsSet);
             this.setHelpUrl('http://www.example.com/');
           }
         };        
-        
+       
         Blockly.Lua['webcall'] = function(block) {
           var text_url = block.getFieldValue('url');
           var text_user = block.getFieldValue('user');
           var text_password = block.getFieldValue('password');
           var text_statuskey = block.getFieldValue('statusKey');
           var text_statusok = block.getFieldValue('statusOk');
-          // TODO: Assemble JavaScript into code variable.
-          //var code = 'web("'+text_url+'","'+text_user+'","'+text_password+'","'+text_statuskey+'","'+text_statuskey+'","'+text_statusok+'");\n';
-          var code = '...;\n';          
+          // TODO: Assemble Lua into code variable.
+          var code = '...\n';
+        //var code = 'web("'+text_url+'","'+text_user+'","'+text_password+'","'+text_statuskey+'","'+text_statuskey+'","'+text_statusok+'");\n';
           return code;
-        };        
+        };       
         
-    
+
       var workspace = Blockly.inject('blocklyDiv',
           {toolbox: document.getElementById('toolbox'),
             zoom:
