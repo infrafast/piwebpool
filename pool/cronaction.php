@@ -159,7 +159,6 @@ if (!$result) {
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph");
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp");
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp");
-            
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter");
             weburl("http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1");            
         }
