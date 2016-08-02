@@ -39,6 +39,7 @@ pause
 sudo rm -rf lua-1.0.0*
 
 #website
+
 echo "CONFIGURING APACHE"
 sudo ln -s /usr/share/adafruit/webide/repositories/piweb/pool/ /var/www/html/
 #document root to be DocumentRoot /var/www/html/pool
