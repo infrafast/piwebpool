@@ -17,6 +17,9 @@ require_once('luaContext.php');
 
 // for domoticz
 
+$sensorURL = "";
+$actuatorURL = "";
+
 $devices = array(
 			27=>array($phValue,$sensorURL),
 			28=>array($temperatureValue,$sensorURL),
