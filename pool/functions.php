@@ -27,7 +27,7 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
-function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
+function weburl($materials,$url,$username="admin",$password="Quintal74604",$statusKey="status",$statusOK="OK"){
     $pos = strpos($url, "%temp");
     if ($pos != false) {
         $temperatureValue = getTemperature();    
