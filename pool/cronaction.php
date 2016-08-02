@@ -150,8 +150,6 @@ if (!$result) {
                 $state.="+".mysql_error()." ".$sql;
             }
             
-            
-            
             weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph");
             weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp");
             weburl($materials,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp");
