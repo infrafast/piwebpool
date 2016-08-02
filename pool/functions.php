@@ -28,34 +28,28 @@ Pin
 */
 
 function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
-
     $pos = strpos($url, "%temp");
     if ($pos != false) {
         $temperatureValue = getTemperature();    
         if($temperatureValue==null)  $temperatureValue=-99;        
         $url = str_replace("%temp",$temperatureValue,$url);    
     } 
-
     $pos = strpos($url, "%orp");
     if ($pos != false) {
         $orpValue = getORP();    
         if($orpValue==null)  $orpValue=-99;        
         $url = str_replace("%orp",$orpValue,$url);    
     }    
-    
     $pos = strpos($url, "%ph");
     if ($pos != false) {
         $phValue = getPh();    
         if($phValue==null)  $phValue=-99;      
         $url = str_replace("%ph",$orpValue,$url);    
     }    
-     
     str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
     str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
     str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
     str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
-    
-    
     JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
 }
 
