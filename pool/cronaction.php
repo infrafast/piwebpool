@@ -16,17 +16,19 @@ require_once('functions.php');
 require_once('luaContext.php');
 
 // for domoticz
-$devices = array(
-			27=>($phValue,$sensorURL),
-			28=>(16,),
-		    29=>(12,),
-		    30=>(15,));
 
+$devices = array(
+			27=>array($phValue,$sensorURL),
+			28=>array($filterValue,$sensorURL),
+			29=>array($,$sensorURL),
+			30=>array($,$actuatorURL),
+			31=>array($,$actuatorURL)
+		);
 
 
 //            $orpValue
 //            $temperatureValue
-//            $filterValue
+//            
 //            $treatment1Value
 //            $treatment2Value
 //            $pacValue
