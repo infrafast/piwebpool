@@ -37,7 +37,6 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
     $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
     $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
     
-    
     JsonAPIcall($url,$username,$password,$statusKey,$statusOK);    
 }
 
