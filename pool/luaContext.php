@@ -39,6 +39,7 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         $lua->registerCallback("log", 'appendlualog');
         $lua->registerCallback("sms", 'sendsms');
         $lua->registerCallback("email", 'sendemail');
+        $lua->registerCallback("web", 'weburl');
 
         // generate XML for blockly toolbox functions
 
