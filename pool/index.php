@@ -246,7 +246,7 @@ $tableSettings = new TableGear($optionsSet);
           var text_statuskey = block.getFieldValue('statusKey');
           var text_statusok = block.getFieldValue('statusOk');
           // TODO: Assemble JavaScript into code variable.
-          var code = '...;\n';
+          var code = 'web("'+text_url+'","'+text_user+'","'+text_password+'","'+text_statuskey+'","'+text_statuskey+'","'+text_statusok+'");\n';          
           return code;
         };
         
