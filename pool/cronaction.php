@@ -167,8 +167,12 @@ if (!$result) {
             }
             
             // update  Domoticz JSON
+            // url: $id[1] deviceID = $device value: $id[0]
             foreach($devices as $device=>$id){ 
-                $jsonCall=$id[0];  // url: $id[1]    deviceID = $device value: $id[0]
+                str_replace("%i",$device,$id[1]);
+                
+                
+                $jsonCall=$id[0];  
                 $state.=" ".$jsonCall;
             }
         }
