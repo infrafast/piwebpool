@@ -309,7 +309,7 @@ $tableSettings = new TableGear($optionsSet);
                 .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command");
             this.setPreviousStatement(true, null);
             this.setNextStatement(true, null);
-            this.setColour(120);
+            this.setColour(65);
             this.setTooltip('');
             this.setHelpUrl('http://www.example.com/');
           }
@@ -381,7 +381,7 @@ $tableSettings = new TableGear($optionsSet);
                 .appendField(new Blockly.FieldTextInput("ok"), "statusOk");
             this.setPreviousStatement(true, null);
             this.setNextStatement(true, null);
-            this.setColour(120);
+            this.setColour(65);
             this.setTooltip('');
             this.setHelpUrl('http://www.example.com/');
           }
