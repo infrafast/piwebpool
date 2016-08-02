@@ -181,14 +181,11 @@ if (!$result) {
                                     CURLOPT_FOLLOWLOCATION => TRUE,
                                     CURLOPT_ENCODING => 'gzip,deflate',
                             );
-                
-                            $ch = curl_init();
-                            curl_setopt_array( $ch, $curl_options );
-                            $output = curl_exec( $ch );
-                            curl_close($ch);
-                
+                $ch = curl_init();
+                curl_setopt_array( $ch, $curl_options );
+                $output = curl_exec( $ch );
+                curl_close($ch);
                 $arr = json_decode($output,true);
-                
                 foreach($arr['items'] as $val)
                 {
                         echo $val['thumbnailURL'].'<br>';       
