@@ -19,7 +19,7 @@
 				<item id="1"> 
 					<title>ORP</title>
 					<name>ORP</name>
-					<description>Desinfectant (600-750) </description>
+					<description>Desinfectant (650-750) </description>
                     <type>json</type><text>state</text> 
                     <unit>mV</unit>
 					<affichage>text</affichage>
