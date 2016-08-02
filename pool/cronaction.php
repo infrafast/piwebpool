@@ -172,9 +172,8 @@ if (!$result) {
             foreach($devices as $device=>$id){ 
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
-                
                 $curl_options = array(
-                                    CURLOPT_URL => $url,
+                                    CURLOPT_URL => $jsonCall,
                                     CURLOPT_HEADER => 0,
                                     CURLOPT_RETURNTRANSFER => TRUE,
                                     CURLOPT_TIMEOUT => 0,
