@@ -28,21 +28,12 @@ Pin
 */
 
 function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
-    
-    
-    
-    $filterValue = (getPin($pins[$materials["filtration"]]))=="1"?"Off":"On";
-    $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
-    $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
-    $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
-    
-    
-    
+
     $pos = strpos($url, "%temp");
     if ($pos != false) {
         $temperatureValue = getTemperature();    
         if($temperatureValue==null)  $temperatureValue=-99;        
-        $url = str_replace("%t",$temperatureValue,$url);    
+        $url = str_replace("%temp",$temperatureValue,$url);    
     } 
 
     $pos = strpos($url, "%orp");
@@ -59,7 +50,12 @@ function weburl($materials,$url,$username,$password,$statusKey,$statusOK){
         $url = str_replace("%ph",$orpValue,$url);    
     }    
      
-    
+    $pos = strpos($url, "%t1");
+    if ($pos != false) {
+        $phValue = getPh();    
+        if($phValue==null)  $phValue=-99;      
+        $url = str_replace("%ph",$orpValue,$url);    
+    }  
 
     
     
