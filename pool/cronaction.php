@@ -121,7 +121,7 @@ if (!$result) {
             $orpValue = getORP();
             $temperatureValue = getTemperature();
             //$filterValue = getPin($pins[$materials["filtration"]]);
-            //$treatment1Value = getPin($pins[$materials["filtration"]]);
+            //$treatment1Value = getPin($pins[$materials["treatment1"]]);
             //$treatment2Value = getPin($pins[$materials["filtration"]]);
             //$pacValue = getPin($pins[$materials["filtration"]]);
             // ---------------------------------------------------
