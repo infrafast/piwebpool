@@ -32,10 +32,6 @@ $statusKey = "status";
 $statusOK = "OK";
 $statusNOK = "Error";
 
-
-//            $treatment2Value
-//            $pacValue
-
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
     echo 'Could not connect to mysql';
