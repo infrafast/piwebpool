@@ -237,8 +237,16 @@ $tableSettings = new TableGear($optionsSet);
           }
         };        
         
-        
-        
+        Blockly.JavaScript['webcall'] = function(block) {
+          var text_url = block.getFieldValue('url');
+          var text_user = block.getFieldValue('user');
+          var text_password = block.getFieldValue('password');
+          var text_statuskey = block.getFieldValue('statusKey');
+          var text_statusok = block.getFieldValue('statusOk');
+          // TODO: Assemble JavaScript into code variable.
+          var code = '...;\n';
+          return code;
+        };
         
         //setup Blockly for LUA variable
         Blockly.Blocks['dynamicData'] = {
