@@ -194,7 +194,7 @@ if (!$result) {
                 curl_close($ch);
                 $arr = json_decode($output,true);
                 //print_r($arr);
-                echo $arr[$statusOK];
+                echo $arr[eval($statusOK)];
             }
         }
     }
