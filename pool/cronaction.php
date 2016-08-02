@@ -19,15 +19,15 @@ require_once('luaContext.php');
 
 $devices = array(
 			27=>array($phValue,$sensorURL),
-			28=>array($filterValue,$sensorURL),
-			29=>array($,$sensorURL),
+			28=>array($temperatureValue,$sensorURL),
+			29=>array($orpValue,$sensorURL),
 			30=>array($,$actuatorURL),
 			31=>array($,$actuatorURL)
 		);
 
 
-//            $orpValue
-//            $temperatureValue
+//            $
+//            $
 //            
 //            $treatment1Value
 //            $treatment2Value
