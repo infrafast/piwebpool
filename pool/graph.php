@@ -238,7 +238,7 @@ switch ($_GET["type"]){
         $reference=0;
         switch ($_GET["graph"]){
             case "ph":
-                $reference=7.3;                
+                $reference=7.25;                
             break;
             case "orp";
                 $reference=700;
