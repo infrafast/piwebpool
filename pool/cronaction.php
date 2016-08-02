@@ -19,7 +19,6 @@ require_once('luaContext.php');
 
 $sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
 $actuatorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v";
-
 $devices = array(
 			27=>array($phValue,$sensorURL),
 			28=>array($temperatureValue,$sensorURL),
@@ -30,8 +29,6 @@ $devices = array(
 
 //            $treatment2Value
 //            $pacValue
-
-
 
 // connect to the database
 if (!$link = mysql_connect($options["database"]["host"], $options["database"]["username"], $options["database"]["password"])) {
