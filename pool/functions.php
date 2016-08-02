@@ -28,7 +28,7 @@ Pin
 */
 
 
-function weburl($url,){
+function weburl($url,$username,$password,$statusKey,$statusOK){
     $phValue = getPh();
     $orpValue = getORP();
     $temperatureValue = getTemperature();
