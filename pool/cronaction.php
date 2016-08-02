@@ -120,9 +120,9 @@ if (!$result) {
             $phValue = getPh();
             $orpValue = getORP();
             $temperatureValue = getTemperature();
-            //getPinState($pins[$materials["filtration"]]);
-            //getPinState($pins[$materials["filtration"]]);
-            //getPinState($pins[$materials["filtration"]]);
+            //getPin($pins[$materials["filtration"]]);
+            //getPin($pins[$materials["filtration"]]);
+            //getPin($pins[$materials["filtration"]]);
             // ---------------------------------------------------
             if($phValue==null)  $phValue=-99;
             if($orpValue==null)  $orpValue=-99;
