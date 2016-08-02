@@ -150,11 +150,11 @@ if (!$result) {
                 $state.="+".mysql_error()." ".$sql;
             }
             
-            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph")) ;
-            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp"));
-            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp"));
-            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter"));
-            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1"));            
+            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph")) $state.="{api update ph failed}";
+            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp")) $state.="{api update temp failed}";
+            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp")) $state.="{api update orp failed}";
+            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=30&switchcmd=%filter")) $state.="{api update filter failed}";
+            if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=31&switchcmd=%t1")) $state.="{api update traitement1 failed}";            
         }
     }
 }
