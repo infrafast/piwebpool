@@ -176,7 +176,7 @@ if (!$result) {
             foreach($devices as $device=>$id){ 
                 $jsonCall = str_replace("%i",$device,$id[1]);
                 $jsonCall = str_replace("%v",$id[0],$jsonCall);
-                if (JsonAPIcall($materials,$jsonCall,$username,$password,$statusKey,$statusOK)==false){
+                if (JsonAPIcall($jsonCall,$username,$password,$statusKey,$statusOK)==false){
                     $state.="{JsonAPIcall failed}";
                     break;
                 };
