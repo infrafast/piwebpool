@@ -29,11 +29,11 @@ $pacValue = 0;
 $sensorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=%i&nvalue=0&svalue=%v";
 $actuatorURL = "http://domoticz.infrafast.com/json.htm?type=command&param=switchlight&idx=%i&switchcmd=%v";
 $devices = array(
-			27=>array($phValue,$sensorURL),
-			28=>array($temperatureValue,$sensorURL),
-			29=>array($orpValue,$sensorURL),
-			30=>array($filterValue,$actuatorURL),
-			31=>array($treatment1Value,$actuatorURL)
+			27=>array(eval($phValue),$sensorURL),
+			28=>array(eval($temperatureValue),$sensorURL),
+			29=>array(eval($orpValue),$sensorURL),
+			30=>array(eval($filterValue),$actuatorURL),
+			31=>array(eval($treatment1Value),$actuatorURL)
 		);
 
 //            $treatment2Value
