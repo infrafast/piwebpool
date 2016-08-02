@@ -189,11 +189,11 @@ if (!$result) {
                 $output = curl_exec( $ch );
                 curl_close($ch);
                 $arr = json_decode($output,true);
-//                print_r($arr);
-                foreach($arr['status'] as $val)
-                {
-                        echo $val['thumbnailURL'].'<br>';       
-                }                 
+                print_r($arr);
+//                foreach($arr['status'] as $val)
+//                {
+//                        echo $val['thumbnailURL'].'<br>';       
+//                }                 
             }
         }
     }
