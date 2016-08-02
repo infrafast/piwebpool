@@ -241,7 +241,7 @@ switch ($_GET["type"]){
                 $reference=7.25;                
             break;
             case "orp";
-                $reference=700;
+                $reference=730;
             break;
             case "temperature";
                 $reference=27;
