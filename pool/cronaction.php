@@ -190,7 +190,7 @@ if (!$result) {
                 curl_close($ch);
                 $arr = json_decode($output,true);
                 //print_r($arr);
-                foreach($arr["status]"] as $val=>$status)
+                foreach($arr["status"] as $val=>$status)
                 {
                         echo $status.' ';       
                 }                 
