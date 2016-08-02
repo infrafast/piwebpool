@@ -186,7 +186,7 @@ if (!$result) {
                 $output = curl_exec( $ch );
                 curl_close($ch);
                 $arr = json_decode($output,true);
-                echo $arr;
+                echo $jsonCall;
 //                foreach($arr['status'] as $val)
 //                {
 //                        echo $val['thumbnailURL'].'<br>';       
