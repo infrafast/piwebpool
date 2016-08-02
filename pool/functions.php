@@ -47,9 +47,9 @@ function weburl($materials,$pins,$url,$username="admin",$password="Quintal74604"
         $url = str_replace("%ph",$phValue,$url);    
     }    
     $url=str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
-    $url=str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On");
-    $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On");
-    $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On");
+    $url=str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On",$url);
+    $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On",$url);
+    $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On",$url);
 
     if(!function_exists("curl_init")) die("cURL extension is not installed");
     $curl_options = array(
