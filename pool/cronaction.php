@@ -149,7 +149,6 @@ if (!$result) {
                 $answer.="+ERROR";
                 $state.="+".mysql_error()." ".$sql;
             }
-            
             if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=27&nvalue=0&svalue=%ph")) $state.="{api update ph failed}";
             if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=28&nvalue=0&svalue=%temp")) $state.="{api update temp failed}";
             if (!weburl($materials,$pins,"http://domoticz.infrafast.com/json.htm?type=command&param=udevice&idx=29&nvalue=0&svalue=%orp")) $state.="{api update orp failed}";
