@@ -192,7 +192,7 @@ if (!$result) {
                 //print_r($arr);
                 foreach($arr as $val["status"]=>$status)
                 {
-                        echo $status.' ';       
+                        echo $val["status"].' ';       
                 }                 
             }
         }
