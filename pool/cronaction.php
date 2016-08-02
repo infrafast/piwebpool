@@ -151,12 +151,17 @@ if (!$result) {
             $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
             foreach($materials as $material=>$pin) $sql = $sql.", ".$materialsColumn[$material]."=".getPin($pins[$materials[$material]]);
             $sql = $sql.";";
-
             $result = mysql_query($sql, $link);
             if (!$result) {
                 $answer.="+ERROR";
                 $state.="+".mysql_error()." ".$sql;
-            }            
+            }
+            
+            // update  Domoticz JSON
+            foreach($device as $devices=>$id) 
+                echo '["'.$material.'","'.$material.'"],';            
+            
+            
         }
     }
 }
