@@ -190,7 +190,7 @@ if (!$result) {
                 curl_close($ch);
                 $arr = json_decode($output,true);
                 //print_r($arr);
-                echo $arr["status"];
+                echo $arr[$status_key];
             }
         }
     }
