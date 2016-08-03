@@ -34,7 +34,7 @@ function goLua($luaCode,$materials,$pins,&$feedback){
         $lua->assign("period",intval(getCurrentTimeWindow()));
         $lua->assign("hour",intval(getCurrentTime()));
         
-        $lua->registerCallback("set", 'setPinState'); 
+        $lua->registerCallback("set", 'setLuaPinState'); 
         $lua->registerCallback("get", 'getLuaPin'); 
         $lua->registerCallback("log", 'appendlualog');
         $lua->registerCallback("sms", 'sendsms');
