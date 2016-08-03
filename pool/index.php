@@ -400,10 +400,10 @@ $tableSettings = new TableGear($optionsSet);
             this.appendValueInput("url")
                 .setCheck("String")
                 .appendField("URL");
-            this.appendValueInput("reponse")
+            this.appendValueInput("statuskey")
                 .setCheck("String")
                 .appendField("reponse");
-            this.appendValueInput("NAME")
+            this.appendValueInput("statusok")
                 .setCheck("String")
                 .appendField("OK");
             this.setPreviousStatement(true, null);
@@ -412,14 +412,14 @@ $tableSettings = new TableGear($optionsSet);
             this.setTooltip('');
             this.setHelpUrl('http://www.example.com/');
           }
-        };        
+        };      
         
         Blockly.Lua['weburl'] = function(block) {
           var value_url = Blockly.Lua.valueToCode(block, 'url', Blockly.Lua.ORDER_ATOMIC);
-          var value_reponse = Blockly.Lua.valueToCode(block, 'reponse', Blockly.Lua.ORDER_ATOMIC);
-          var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+          var value_statuskey = Blockly.Lua.valueToCode(block, 'statuskey', Blockly.Lua.ORDER_ATOMIC);
+          var value_statusok = Blockly.Lua.valueToCode(block, 'statusok', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          var code = 'web("'+value_url+'","'+value_reponse+'","'+value_name+'");\n';
+          var code = 'web("'+value_url+'","'+value_statuskey+'","'+value_statusok+'");\n';
           return code;
         };        
         
