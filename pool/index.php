@@ -396,35 +396,7 @@ $tableSettings = new TableGear($optionsSet);
           return code;
         };       
         
-Blockly.Blocks['weburl'] = {
-  init: function() {
-    this.appendValueInput("url")
-        .setCheck("String")
-        .appendField("URL");
-    this.appendValueInput("statuskey")
-        .setCheck("String")
-        .appendField("reponse");
-    this.appendValueInput("statusOK")
-        .setCheck("String")
-        .appendField("OK");
-    this.setOutput(true, "String");
-    this.setColour(160);
-    this.setTooltip('');
-    this.setHelpUrl('http://www.example.com/');
-  }
-};
-
-Blockly.Lua['weburl'] = function(block) {
-  var value_url = Blockly.Lua.valueToCode(block, 'url', Blockly.Lua.ORDER_ATOMIC);
-  var value_statuskey = Blockly.Lua.valueToCode(block, 'statuskey', Blockly.Lua.ORDER_ATOMIC);
-  var value_statusok = Blockly.Lua.valueToCode(block, 'statusok', Blockly.Lua.ORDER_ATOMIC);
-  // TODO: Assemble Lua into code variable.
-  var code = 'web('+value_url+','+value_statuskey+','+value_statusok+');\n';
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.Lua.ORDER_NONE];
-};
-        
-        Blockly.Blocks['weburl2'] = {
+        Blockly.Blocks['weburl'] = {
           init: function() {
             this.appendValueInput("url")
                 .setCheck("String")
@@ -439,7 +411,7 @@ Blockly.Lua['weburl'] = function(block) {
           }
         };     
         
-        Blockly.Lua['weburl2'] = function(block) {
+        Blockly.Lua['weburl'] = function(block) {
           var value_url = Blockly.Lua.valueToCode(block, 'url', Blockly.Lua.ORDER_ATOMIC);
           var value_statuskey = Blockly.Lua.valueToCode(block, 'statuskey', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
