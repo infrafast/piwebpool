@@ -70,6 +70,7 @@ function weburl($url,$statusKey,$statusOK){
     $output = curl_exec( $ch );
     curl_close($ch);
     $arr = json_decode($output,true);
+    appendlog("weburl call: ".$url);
     if ($arr[$statusKey]!=$statusOK) return false;
     else return true;    
 }
@@ -94,7 +95,7 @@ function sendemail($message){
     $from = "noreply@piweb.infrafast.com";
     $headers = "From:" . $from;
     $result = mail($to,$subject,$message,$headers);
-    //appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
+    appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
 
