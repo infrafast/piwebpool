@@ -168,10 +168,6 @@ writers = {
 		end;
 }
 
-memoire = {["gel"] = 0, b = "test"};
-persistence.store("storage.lua", memoire);
-memoire = persistence.load("storage.lua");
-
 memoire = persistence.load("storage.lua");
 
 function run()
