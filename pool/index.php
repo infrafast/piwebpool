@@ -256,8 +256,8 @@ $tableSettings = new TableGear($optionsSet);
           var dropdown_command = block.getFieldValue('command');
           var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          value_name.replace('(', '';
-          value_name.replace('')', '';
+          value_name.replace('(', '');
+          value_name.replace('')', '');
           var code = 'set('+dropdown_command+','+'"'+value_name+'");\n';
           return code;
         };
