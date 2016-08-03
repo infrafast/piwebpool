@@ -143,7 +143,7 @@ $tableSettings = new TableGear($optionsSet);
             </th>
         </tr>
         <tr>
-          <td><div id="blocklyDiv" style="height: 500px; width:100%"></div></td>
+          <td><div id="blocklyDiv" style="height: 800px; width:100%"></div></td>
         <tr>
             <th>Code preview</th>
         </tr>
