@@ -370,7 +370,7 @@ $tableSettings = new TableGear($optionsSet);
           init: function() {
             this.appendValueInput("url")
                 .setCheck("String")
-                .appendField("URL");
+                .appendField("Appel URL");
             this.appendValueInput("statuskey")
                 .setCheck("String")
                 .appendField("reponse");
