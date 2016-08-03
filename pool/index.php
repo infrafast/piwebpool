@@ -368,7 +368,7 @@ $tableSettings = new TableGear($optionsSet);
 
         Blockly.Blocks['weburl'] = {
           init: function() {
-            this.appendValueInput("url")
+            this.appendDummyInput("url")
                 .setCheck("String")
                 .appendField("Appel URL");
             this.appendValueInput("statuskey")
