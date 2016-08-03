@@ -374,7 +374,7 @@ $tableSettings = new TableGear($optionsSet);
             this.appendValueInput("statuskey")
                 .setCheck("String")
                 .appendField("reponse");
-            this.setOutput(true, "String");
+            this.setOutput(true, null); //"String"
             this.setColour(65);
             this.setTooltip('');
             this.setHelpUrl('http://www.example.com/');
