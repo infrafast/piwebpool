@@ -169,7 +169,7 @@ writers = {
 }
 
 memoire = {["gel"] = 0, b = "test"};
-persistence.store("storage.lua", t_original);
+persistence.store("storage.lua", memoire);
 t_restored = persistence.load("storage.lua");
 
 memoire = persistence.load("storage.lua");
