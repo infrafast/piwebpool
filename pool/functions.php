@@ -71,8 +71,7 @@ function weburl($url,$statusKey,$statusOK){
     curl_close($ch);
     $arr = json_decode($output,true);
     appendlog("weburl call: ".$url,$statusKey,$arr[$statusKey]);
-    if ($arr[$statusKey]!=$statusOK) return false;
-    else return true;    
+    return $arr[$statusKey];
 }
 
 function sendsms($message){
