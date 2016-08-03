@@ -163,6 +163,10 @@ function getPin($pin){
     return (trim($commands[0])=="1"?0:1);
 }
 
+function setLuaPinState($pin,$state){
+    return setPinState($pin,$state=="On"?1:0);
+}
+
 function setPinState($pin,$state){
     //Definis le PIN en tant que sortie
 	system("gpio mode ".$pin." out");
