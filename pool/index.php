@@ -258,7 +258,7 @@ $tableSettings = new TableGear($optionsSet);
           // TODO: Assemble Lua into code variable.
           value_name = value_name.substring(1,value_name.length - 1);
 
-          var code = 'set('+dropdown_command+','+'"'+value_name+'");\n';
+          var code = 'set('+dropdown_command+','+value_name+');\n';
           return code;
         };
     
