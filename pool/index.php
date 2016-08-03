@@ -419,7 +419,7 @@ $tableSettings = new TableGear($optionsSet);
           var value_reponse = Blockly.Lua.valueToCode(block, 'reponse', Blockly.Lua.ORDER_ATOMIC);
           var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          var code = '...\n';
+          var code = 'web("'+value_url+'","'+value_reponse+'","'+value_name+'");\n';
           return code;
         };        
         
