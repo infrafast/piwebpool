@@ -238,7 +238,7 @@ $tableSettings = new TableGear($optionsSet);
         Blockly.Blocks['setcommand'] = {
           init: function() {
             this.appendValueInput("NAME")
-                .setCheck("Number")
+                .setCheck("String")
                 .appendField("commander")
                 .appendField(new Blockly.FieldDropdown([
                     <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
