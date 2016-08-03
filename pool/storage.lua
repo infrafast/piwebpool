@@ -2,5 +2,8 @@
 local multiRefObjects = {
 
 } -- multiRefObjects
-local obj1 = nil
+local obj1 = {
+	["b"] = "test";
+	["gel"] = 0;
+}
 return obj1
