@@ -269,7 +269,7 @@ $tableSettings = new TableGear($optionsSet);
                     ["",""]
                   ]), "command");            
                 this.setColour(20);
-                this.setOutput(true, "Boolean");
+                this.setOutput(true, "String");
           }
         };
         
