@@ -404,16 +404,12 @@ $tableSettings = new TableGear($optionsSet);
             this.appendValueInput("statuskey")
                 .setCheck("String")
                 .appendField("reponse");
-            this.appendValueInput("statusok")
-                .setCheck("String")
-                .appendField("OK");
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
+            this.setOutput(true, "String");
             this.setColour(160);
             this.setTooltip('');
             this.setHelpUrl('http://www.example.com/');
           }
-        };      
+        };     
         
         Blockly.Lua['weburl'] = function(block) {
           var value_url = Blockly.Lua.valueToCode(block, 'url', Blockly.Lua.ORDER_ATOMIC);
