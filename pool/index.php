@@ -367,35 +367,6 @@ $tableSettings = new TableGear($optionsSet);
             return cleanVarName + ' = ' + cleanVarName + ' + ' + argument0 + '\n';
         };
 
-        Blockly.Blocks['webcall'] = {
-          init: function() {
-            this.appendDummyInput()
-                .appendField("URL")
-                .appendField(new Blockly.FieldTextInput("http://"), "url")
-                .appendField("reponse")
-                .appendField(new Blockly.FieldTextInput("status"), "statusKey")
-                .appendField("ok")
-                .appendField(new Blockly.FieldTextInput("ok"), "statusOk");
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(65);
-            this.setTooltip('');
-            this.setHelpUrl('http://www.example.com/');
-          }
-        };        
-       
-        Blockly.Lua['webcall'] = function(block) {
-          var text_url = block.getFieldValue('url');
-          var text_user = block.getFieldValue('user');
-          var text_password = block.getFieldValue('password');
-          var text_statuskey = block.getFieldValue('statusKey');
-          var text_statusok = block.getFieldValue('statusOk');
-          // TODO: Assemble Lua into code variable.
-        //  var code = '...\n';
-        var code = 'web("'+text_url+'","'+text_user+'","'+text_password+'","'+text_statuskey+'","'+text_statusok+'");\n';
-          return code;
-        };       
-        
         Blockly.Blocks['weburl'] = {
           init: function() {
             this.appendValueInput("url")
@@ -405,7 +376,7 @@ $tableSettings = new TableGear($optionsSet);
                 .setCheck("String")
                 .appendField("reponse");
             this.setOutput(true, "String");
-            this.setColour(160);
+            this.setColour(65);
             this.setTooltip('');
             this.setHelpUrl('http://www.example.com/');
           }
