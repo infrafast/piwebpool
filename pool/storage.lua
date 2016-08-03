@@ -8,7 +8,7 @@ local obj1 = {
 	["clef"] = "text";
 	[1] = 1;
 	["test"] = "3&deg;C attention &agrave; la qualit&eacute; de l'eau et aux caract&egrave;res sp&eacute;&ccedil;iaux [] {} \"OK";
-	["jel"] = 1;
+	["gel"] = 1;
 	["temperatureFaible"] = 1;
 }
 return obj1
