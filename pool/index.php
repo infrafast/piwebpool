@@ -420,7 +420,7 @@ $tableSettings = new TableGear($optionsSet);
           var value_statuskey = Blockly.Lua.valueToCode(block, 'statuskey', Blockly.Lua.ORDER_ATOMIC);
           var value_statusok = Blockly.Lua.valueToCode(block, 'statusok', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          var code = 'web("'+value_url+'","'+value_statuskey+'","'+value_statusok+'");\n';
+          var code = 'web('+value_url+','+value_statuskey+','+value_statusok+');\n';
           return code;
         };        
         
