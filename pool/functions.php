@@ -57,6 +57,7 @@ function webcall($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
 }
 
 function weburl($url,$statusKey){
+    appendlog("WEBURL",$url);
     if(!function_exists("curl_init")) die("cURL extension is not installed");
     $curl_options = array(
                         CURLOPT_URL => $url,
@@ -72,7 +73,7 @@ function weburl($url,$statusKey){
     $output = curl_exec( $ch );
     curl_close($ch);
     $arr = json_decode($output,true);
-    appendlog("WEBURL".$url,$statusKey,$arr[$statusKey]);
+    appendlog("WEBURL",$statusKey,$arr[$statusKey]);
     return $arr[$statusKey];
 }
 
