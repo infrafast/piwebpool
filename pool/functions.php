@@ -151,8 +151,6 @@ function getPinState($pin,$pins){
 
 function getLuaPin($pin){
 	return getPin($pin)==0?"Off":"On";
-	
-	
 }
 
 
