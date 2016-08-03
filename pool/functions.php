@@ -82,7 +82,7 @@ function sendsms($message){
     $feedback="void";            
     $result=true;
     if (!sms( $SMSuser, $SMSkey, $message,$feedback )) $result=false;
-    appendlog("sendsms:",$result==true?"OK":"ERROR",$feedback);
+    appendlog("SENDSMS:",$result==true?"OK":"ERROR",$feedback);
     return $result;
 }
 
