@@ -149,6 +149,14 @@ function getPinState($pin,$pins){
 	return getPin($pins[$pin]);
 }
 
+function getLuaPin($pin){
+	return getPin($pin)==0?"Off":"On";
+	
+	
+}
+
+
+
 function getPin($pin){
     // this function is to abstract one parameter when called from lua
     // it return 0 or 1 to beconsistent with set and to ease the testing 
