@@ -177,6 +177,7 @@ if(isset($_['action'])){
         case 'forceCron':
             $result['state'] = shell_exec('./hourlycrontab.sh');
             // not a good solution as it will be executed by apache with no write access to the logs
+            // for strange reason this also return {|main:Runtime error|custom:Runtime error}]  in the log
             break;
     
         case 'lua':
