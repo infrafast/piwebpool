@@ -51,7 +51,27 @@ function webcall($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
     $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On",$url);
     $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On",$url);
 
-    weburl();
+    return weburl();
+}
+
+function weburl($url,$statusKey,$statusOK){
+    if(!function_exists("curl_init")) die("cURL extension is not installed");
+    $curl_options = array(
+                        CURLOPT_URL => $url,
+                        CURLOPT_HEADER => 0,
+                        CURLOPT_RETURNTRANSFER => TRUE,
+                        CURLOPT_TIMEOUT => 0,
+                        CURLOPT_SSL_VERIFYPEER => 0,
+                        CURLOPT_FOLLOWLOCATION => TRUE,
+                        CURLOPT_ENCODING => 'gzip,deflate'                                    
+                );
+    $ch = curl_init();
+    curl_setopt_array( $ch, $curl_options );
+    $output = curl_exec( $ch );
+    curl_close($ch);
+    $arr = json_decode($output,true);
+    if ($arr[$statusKey]!=$statusOK) return false;
+    else return true;    
 }
 
 function sendsms($message){
