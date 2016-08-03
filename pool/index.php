@@ -419,7 +419,7 @@ Blockly.Lua['weburl'] = function(block) {
   var value_statuskey = Blockly.Lua.valueToCode(block, 'statuskey', Blockly.Lua.ORDER_ATOMIC);
   var value_statusok = Blockly.Lua.valueToCode(block, 'statusOK', Blockly.Lua.ORDER_ATOMIC);
   // TODO: Assemble Lua into code variable.
-  var code = 'web('+value_url+','+value_statuskey+','+value_statusok+'');\n';
+  var code = 'web('+value_url+','+value_statuskey+','+value_statusok+');\n';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Lua.ORDER_NONE];
 };
