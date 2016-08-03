@@ -414,6 +414,14 @@ $tableSettings = new TableGear($optionsSet);
           }
         };        
         
+        Blockly.Lua['weburl'] = function(block) {
+          var value_url = Blockly.Lua.valueToCode(block, 'url', Blockly.Lua.ORDER_ATOMIC);
+          var value_reponse = Blockly.Lua.valueToCode(block, 'reponse', Blockly.Lua.ORDER_ATOMIC);
+          var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+          // TODO: Assemble Lua into code variable.
+          var code = '...\n';
+          return code;
+        };        
         
 
       var workspace = Blockly.inject('blocklyDiv',
