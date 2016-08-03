@@ -164,7 +164,7 @@ function getPin($pin){
 }
 
 function setLuaPinState($pin,$state){
-    return setPinState($pin,$state=="On"?1:0);
+    return setPinState($pin,$state=="Off"?0:1);
 }
 
 function setPinState($pin,$state){
