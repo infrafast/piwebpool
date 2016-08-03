@@ -395,6 +395,26 @@ $tableSettings = new TableGear($optionsSet);
           return code;
         };       
         
+        Blockly.Blocks['weburl'] = {
+          init: function() {
+            this.appendValueInput("url")
+                .setCheck("String")
+                .appendField("URL");
+            this.appendValueInput("reponse")
+                .setCheck("String")
+                .appendField("reponse");
+            this.appendValueInput("NAME")
+                .setCheck("String")
+                .appendField("OK");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(160);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };        
+        
+        
 
       var workspace = Blockly.inject('blocklyDiv',
           {toolbox: document.getElementById('toolbox'),
