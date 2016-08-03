@@ -298,7 +298,7 @@ $tableSettings = new TableGear($optionsSet);
         Blockly.Lua['on_off'] = function(block) {
           var dropdown_command = block.getFieldValue('command');
           // TODO: Assemble Lua into code variable.
-          var code = dropdown_command;
+          var code = '"'+dropdown_command+'"';
           // TODO: Change ORDER_NONE to the correct strength.
           return [code, Blockly.Lua.ORDER_NONE];
         };
