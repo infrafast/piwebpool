@@ -27,35 +27,6 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
-function webcall($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
-    $pos = strpos($url, "%temp");
-    if ($pos != false) {
-        $temperatureValue = getTemperature();    
-        if($temperatureValue==null)  $temperatureValue=-99;        
-        $url = str_replace("%temp",$temperatureValue,$url);    
-    } 
-    $pos = strpos($url, "%orp");
-    if ($pos != false) {
-        $orpValue = getORP();    
-        if($orpValue==null)  $orpValue=-99;        
-        $url = str_replace("%orp",$orpValue,$url);    
-    }    
-    $pos = strpos($url, "%ph");
-    if ($pos != false) {
-        $phValue = getPh();    
-        if($phValue==null)  $phValue=-99;      
-        $url = str_replace("%ph",$phValue,$url);    
-    }    
-    $url=str_replace("%filter",(getPin($pins[$materials["filtration"]]))=="1"?"Off":"On",$url);
-    $url=str_replace("%t1",(getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On",$url);
-    $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On",$url);
-    $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On",$url);
-
-    $val=weburl($url,$statusKey,$statusOK);
-    if ($val!=$statusOK) return false;
-    else return true;    
-}
-
 function weburl($url,$statusKey){
     appendlog("WEBURL",$url,$statusKey);
     if(!function_exists("curl_init")) die("cURL extension is not installed");
