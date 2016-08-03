@@ -51,7 +51,7 @@ function webcall($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
     $url=str_replace("%t2",(getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On",$url);
     $url=str_replace("%pac",(getPin($pins[$materials["pac"]]))=="1"?"Off":"On",$url);
 
-    return weburl();
+    return weburl($url,$statusKey,$statusOK);
 }
 
 function weburl($url,$statusKey,$statusOK){
