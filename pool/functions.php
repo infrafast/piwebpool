@@ -27,7 +27,7 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
-function weburl($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
+function webcall($materials,$pins,$url,$statusKey="status",$statusOK="OK"){
     $pos = strpos($url, "%temp");
     if ($pos != false) {
         $temperatureValue = getTemperature();    
