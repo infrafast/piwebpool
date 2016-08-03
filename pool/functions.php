@@ -96,7 +96,7 @@ function sendemail($message){
     $from = "noreply@piweb.infrafast.com";
     $headers = "From:" . $from;
     $result = mail($to,$subject,$message,$headers);
-    appendlog("sendemail:",$result==true?"OK":"ERROR",$message);
+    appendlog("SENDMAIL:",$result==true?"OK":"ERROR",$message);
     return $result;
 }
 
