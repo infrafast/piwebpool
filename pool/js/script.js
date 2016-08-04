@@ -15,6 +15,7 @@ if ("geolocation" in navigator) {
   });
 
 function loadWeather(location, woeid) {
+    alert("loadWeather");
   $.simpleWeather({
     location: location,
     woeid: woeid,
@@ -22,8 +23,7 @@ function loadWeather(location, woeid) {
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
     $("#weather").html(html);
-    alert("DONE");
-   },
+    },
     error: function(error) {
       $("#weather").html('<p>'+error+'</p>');
     }
