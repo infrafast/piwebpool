@@ -123,5 +123,9 @@ git push origin master       (envoi les datas au repository remote)
 
 sudo apt-get install npm
 sudo npm install bower -g
+npm update
+bower install
+sudo npm run-script provision
+
 
 
