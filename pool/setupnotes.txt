@@ -19,8 +19,8 @@ TODO LIST
     - implement installation wizard
     - finalize forecast / interpretation of the data
     - implement i18n
-    - persistant variable
-    - variable "jour" dans blockly (getDate())
+
+
     - use PDO or mysqli 
     - use sqlite
     - script combo populated by select * from scripts ID
