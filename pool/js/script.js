@@ -166,7 +166,8 @@ if ("geolocation" in navigator) {
 
 /* Where in the world are you? */
 navigator.geolocation.getCurrentPosition(function(position) {
-    loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+    //loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+    loadWeather("45.840491, 6.085538"); //load weather using your lat/lng coordinates
 });
 
 function loadWeather(location, woeid) {
