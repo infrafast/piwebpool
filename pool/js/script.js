@@ -10,9 +10,9 @@ if ("geolocation" in navigator) {
 }
 
 /* Where in the world are you? */
-  navigator.geolocation.getCurrentPosition(function(position) {
+navigator.geolocation.getCurrentPosition(function(position) {
     loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
-  });
+});
 
 function loadWeather(location, woeid) {
   $.simpleWeather({
