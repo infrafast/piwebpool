@@ -126,6 +126,6 @@ sudo npm install bower -g
 npm update
 bower install
 sudo npm run-script provision
-
+sudo npm start
 
 
