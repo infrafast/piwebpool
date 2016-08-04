@@ -79,6 +79,8 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
+<div id="weather"></div>
+
     <table class="materialTab">
     <tr class="header" id="sensorTable">
     <td colspan="3"><b><span>-</span> Mesures</b></td>
