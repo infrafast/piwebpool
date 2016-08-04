@@ -175,7 +175,7 @@ function loadWeather(location, woeid) {
     woeid: woeid,
     unit: 'c',
     success: function(weather) {
-      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+' '+weather.city'</h2>';
       $("#weather").html(html);
     },
     error: function(error) {
