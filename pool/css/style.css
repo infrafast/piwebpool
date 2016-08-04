@@ -194,7 +194,9 @@ WEATHER
 --------------*/
 
 body {
+  padding: 45px 25px;
   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #0d0d0d;
 }
 
 @font-face {
