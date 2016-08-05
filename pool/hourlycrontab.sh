@@ -5,7 +5,7 @@ cd /var/www/html/pool
 php -dextension=lua.so cronaction.php
 
 # cron script for checking wlan connectivity
-# change 192.168.1.1 to whatever IP you want to check.
+# and reboot raspberry in case of loss
 IP_FOR_TEST="www.google.com"
 PING_COUNT=1
 
