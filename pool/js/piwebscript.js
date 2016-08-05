@@ -140,19 +140,21 @@ function refreshValue(elem,action){
                 var tolerance;
                 var icon;
                 if(action=='Ph'){
-                    
-                  median=7.24;  
+                    icon="<i class='wi wi-night-sleet'></i>";
+                    median=7.24;  
                 } 
                 else if (action=='ORP'){
-                  median=700;   
+                    icon="<i class='wi wi-night-sleet'></i>";
+                    median=700;   
                 } 
                 else{
-                  median=28;  
+                    icon="<i class='wi wi-night-sleet'></i>";
+                    median=28;  
                 } 
                 var color=getColorVal(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "color:"+color+";");
-                newValue = ""+result.state+"<i class='wi wi-night-sleet'></i>";
+                newValue = ""+result.state+icon;
                 $(elem).html(newValue);
     		}else{
                 $(elem).attr("style", "background:red;");
