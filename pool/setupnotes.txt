@@ -117,6 +117,9 @@ git status
 git commit -a -m "comment"   (commit les changement add/delete/update/etc...)
 git push origin master       (envoi les datas au repository remote)
 
+git tag -a v1.4 -m "my version 1.4"
+
+
 git push --follow-tags
 git push --tags                    push all tags
 
