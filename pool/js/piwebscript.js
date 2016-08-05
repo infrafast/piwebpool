@@ -138,9 +138,15 @@ function refreshValue(elem,action){
     		if(result.answer == "OK"){
                 var median;
                 var tolerance;
-                if(action=='Ph') median=7.24;
-                else if (action=='ORP') median=700; 
-                else median=28;
+                if(action=='Ph'){
+                  median=7.24;  
+                } 
+                else if (action=='ORP'){
+                  median=700;   
+                } 
+                else{
+                  median=28;  
+                } 
                 var color=getColorVal(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "color:"+color+";");
