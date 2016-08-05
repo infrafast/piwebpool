@@ -68,13 +68,14 @@ $tableSettings = new TableGear($optionsSet);
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Gestion piscine</title>
-        <script type="text/javascript" src="js/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
         <script src="blockly/blockly_compressed.js"></script>
         <script src="blockly/lua_compressed.js"></script>
         <script src="blockly/blocks_compressed.js"></script>
         <script src="blockly/msg/js/fr.js"></script>
         
+        <script src="js/raphael.js"></script>
         <script src="js/bubbles.js"></script>
         
         <link rel="stylesheet" href="css/tablegear.css" />
@@ -84,15 +85,12 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
-<input id="toggle" type="button" value=" Stop " />
-<div id="canvas"></div><div id="info"></div>    
-
     <table class="materialTab">
     <tr class="header" id="sensorTable">
         <td colspan="3"><b><span>-</i></span> Mesures</b></td>
     </tr>
     <tr>
-        <th colspan="3"><div id="weather">Affichage météo?</div></th>
+        <th colspan="3"><div id="weather">Affichage météo?</div><div id="canvas"></div></th>
     </tr>
     <tr>
         <th width=33%>ph</th><th width=33%>redox</th><th width=33%>température</th>

@@ -69,7 +69,7 @@
     }
     
     window.onload = function () {
-        paper = Raphael("canvas", 500, 500);
+        paper = Raphael("canvas", 500, 50);
         circs = paper.set();
         for (i = 0; i < 30; ++i)
         {

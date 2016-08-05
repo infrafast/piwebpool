@@ -11,9 +11,12 @@ pause(){
 #php5-curl is for connecting to donmoticz or any other system via JSON call
 echo "DOWNLOADING AND SETTING UP ALL NECESSARY PACKAGES"
 sudo apt-get update
-sudo apt-get --assume-yes install apache2 php5 php5-mysql php5-gd ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev python-serial php5-curl
+sudo apt-get --assume-yes install apache2 php5 php5-mysql php5-gd ssmtp anacron mysql-server lua5.1 liblua5.1 php-pear php5-dev python-serial php5-curl watchdog
 pause
-
+echo "watchdog setup"
+sudo modprobe bcm2708_wdog
+sudo update-rc.d watchdog defaults
+pause
 # installing and compiling LUA 
 echo "NOW CONFIGURING LUA  (symlink and lobrary copy)"
 sudo ln -s /usr/include/lua5.1 /usr/include/lua
