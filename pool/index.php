@@ -76,10 +76,11 @@ $tableSettings = new TableGear($optionsSet);
         <script src="blockly/msg/js/fr.js"></script>
         <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+c
 
-<div id="weather"></div>
 <?php 
     //for ($x = 0; $x < 47; $x++) echo "n: ".$x."<i>A</i><br>";
     foreach (array_merge(range('A', 'Z'), range('a', 'z'), range('0', '9')) as $car){
@@ -87,6 +88,7 @@ $tableSettings = new TableGear($optionsSet);
     }
 ?>
 
+<div id="weather"></div>
 
     <table class="materialTab">
     <tr class="header" id="sensorTable">
