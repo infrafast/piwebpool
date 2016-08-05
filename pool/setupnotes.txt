@@ -84,6 +84,15 @@ PLATFORM SETUP FROM SCRACTH
 /etc/ssmtp/revaliases
     "www-data:admin@infrafast.com:mail.gandi.net:587"
 
+
+ /etc/watchdog.conf
+    ---
+    #uncomment the following:
+    max-load-1
+    ---
+
+sudo service watchdog start
+
 ---------------------------------------------------------
 HISTORICAL NOTES
 -------------------------------------------------------------------
