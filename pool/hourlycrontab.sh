@@ -1,8 +1,10 @@
 #!/bin/sh
 
 #execute periodic piweb actions
+logger "Executing piweb cronaction"
 cd /var/www/html/pool
-#php -dextension=lua.so cronaction.php
+php -dextension=lua.so cronaction.php
+logger "piweb cronaction finished"
 
 # cron script for checking wlan connectivity
 # and reboot raspberry in case of loss
