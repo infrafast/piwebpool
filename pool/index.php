@@ -81,7 +81,7 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
-<h2><i class='wi wi-night-sleet'></i></h2>
+<i class='wi wi-night-sleet'></i>
 <div id="weather"></div>
 
     <table class="materialTab">
