@@ -67,11 +67,11 @@
         } 
         timer = setTimeout(moveIt, 60);
     }
-}());
-
+    
+  
     
     window.onload = function () {
-          alert("bubbles");
+         alert("bubbles");
         paper = Raphael("canvas", 500, 500);
         circs = paper.set();
         for (i = 0; i < 30; ++i)
@@ -93,3 +93,4 @@
                 }());
         }
     };
+}());
