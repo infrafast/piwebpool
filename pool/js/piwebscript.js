@@ -4,10 +4,10 @@
 
 $('.header').click(function(){
 	$(this).addClass('loading');
-    $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
+    $(this).find('span').text(function(_, value){return value=='<i class="wi wi-direction-down-right"></i>'?'<i class="wi wi-direction-up-left"></i>':'<i class="wi wi-direction-down-right"></i>'});
     $(this).nextUntil('tr.header').slideToggle(); 
     var id=$(this).attr('id');
-    var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
+    var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='<i class="wi wi-direction-down-right"></i>'?'0':'1');
     //alert('urlCall : '+urlCall);
     $.ajax({
         type: "POST",
