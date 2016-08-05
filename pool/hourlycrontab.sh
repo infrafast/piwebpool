@@ -29,7 +29,8 @@ then
                 sudo reboot
         else
                 touch $FFLAG
-                logger -s -t $(sudo $IFDOWN $INTERFACE)
+                sudo ifdown eth0 && sudo service networking restart && sudo ifup eth0
+
                 #logger $(sudo $IFDOWN $INTERFACE)
                 sleep 10
                 logger $(sudo $IFUP $INTERFACE)
