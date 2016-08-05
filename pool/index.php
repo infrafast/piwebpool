@@ -79,8 +79,11 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
-<div id="weather"></div>
-<i class="icon-0"></i>
+<?php 
+foreach($materials as $material=>$pin){ ?>
+echo "<i class="icon-0"></i>";
+?>
+
 
     <table class="materialTab">
     <tr class="header" id="sensorTable">
