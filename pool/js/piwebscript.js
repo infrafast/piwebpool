@@ -143,7 +143,7 @@ function refreshValue(elem,action){
                 else median=28;
                 var color=getColorVal(median,newValue);
                 //alert(color);
-                $(elem).attr("style", "text:"+color+";");
+                $(elem).attr("style", "color:"+color+";");
                 newValue = ""+result.state+"<i class='wi wi-night-sleet'></i>";
                 $(elem).html(newValue);
     		}else{
