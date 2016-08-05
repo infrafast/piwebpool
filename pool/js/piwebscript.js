@@ -154,7 +154,7 @@ function refreshValue(elem,action){
                 var color=getColorVal(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "background:"+color+";");
-                newValue = ""+result.state+icon;
+                newValue = ""+result.state+"<br>"+icon;
                 $(elem).html(newValue);
     		}else{
                 $(elem).attr("style", "background:red;");
