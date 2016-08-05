@@ -68,6 +68,8 @@
         timer = setTimeout(moveIt, 60);
     }
     
+    alert("bubbles");
+    
     window.onload = function () {
         paper = Raphael("canvas", 500, 500);
         circs = paper.set();
