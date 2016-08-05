@@ -286,14 +286,11 @@ switch ($_GET["type"]){
         if ($text==null) $text="unknown or undefined graph type ".$_GET["type"];
 
         $im = imagecreate($cfg['width'], $cfg['height']);
-        //$backgroundColor = imagecolorallocate($im, 255, 255, 255);
         $backgroundColor = imagecolorallocate($im, 68, 68, 68);
         imagecolortransparent($img, $backgroundColor);
 
         $box = new Box($im);
         $box->setFontFace('./font/Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
-//        $box->setFontColor(new Color(0, 0, 0, 50));
-//        $box->setTextShadow(new Color(200, 200, 200), 2, 2);
         $box->setFontColor(new Color(255, 255, 255, 50));
         $box->setTextShadow(new Color(0, 0, 0), 2, 2);
         
