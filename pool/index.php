@@ -81,7 +81,7 @@ $tableSettings = new TableGear($optionsSet);
 
 <?php 
     for ($x = 0; $x <= 10; $x++){
-        echo "<i class='icon-0'></i>";
+        echo "n: ".$x."<i class='icon-0'></i>";
     }
 ?>
 
