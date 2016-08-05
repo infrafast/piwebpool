@@ -81,6 +81,9 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
+<input id="toggle" type="button" value=" Stop " />
+<div id="canvas"></div>
+
     <table class="materialTab">
     <tr class="header" id="sensorTable">
         <td colspan="3"><b><span>-</i></span> Mesures</b></td>
