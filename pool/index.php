@@ -81,14 +81,7 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
-<?php 
-    //for ($x = 0; $x < 47; $x++) echo "n: ".$x."<i>A</i><br>";
-    foreach (array_merge(range('A', 'Z'), range('a', 'z'), range('0', '9')) as $car){
-        //echo "<h2>".$car."<i>".$car."</i></h2><br>";    
-        echo "<i class='wi wi-night-sleet'></i>";
-    }
-?>
-
+<i class='wi humidity'></i>";
 <div id="weather"></div>
 
     <table class="materialTab">
