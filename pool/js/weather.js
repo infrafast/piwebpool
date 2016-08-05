@@ -8,9 +8,10 @@ if ("geolocation" in navigator) {
 }*/
 
 /* Where in the world are you? */
-alert ("google chrome");
+
 navigator.geolocation.getCurrentPosition(function(position) {
     //loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+    alert ("google chrome");
     loadWeather("45.840491, 6.085538"); //load weather using fixed coordinates : Quintal
 });
 
