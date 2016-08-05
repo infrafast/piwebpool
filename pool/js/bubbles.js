@@ -9,6 +9,7 @@
     
     function moveIt()
     {
+     alert("bubbles move it");
         for(i = 0; i < circs.length; ++i)
         {            
               // Reset when time is at zero
@@ -82,7 +83,7 @@
         circs.attr({fill: "#00DDAA", stroke: "#00DDAA"});
         moveIt();
         elie = document.getElementById("toggle");
-        alert("bubbles");
+        alert("bubbles on load");
         elie.onclick = function() {
             (toggler++ % 2) ? (function(){
                     moveIt();
