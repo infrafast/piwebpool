@@ -77,7 +77,7 @@ $tableSettings = new TableGear($optionsSet);
         <link rel="stylesheet" href="css/tablegear.css" />
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/weather-icons.css">
-    
+        <link rel="stylesheet" href="css/weather-snippet.css">
     </head>
     <body>
 
