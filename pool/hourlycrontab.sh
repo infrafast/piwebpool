@@ -1,6 +1,6 @@
 #!/bin/sh
 
-
+#execute the periodic call to piweb
 cd /var/www/html/pool
 php -dextension=lua.so cronaction.php
 
