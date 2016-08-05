@@ -113,6 +113,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	font-size:xx-large;
 	color: white;
 	text-shadow: 2px 2px #A0A0A0;
+	text-shadow: 2px 2px #000000;
 	vertical-align: middle;
 	background-repeat:no-repeat	;
 }
