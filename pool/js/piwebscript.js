@@ -138,7 +138,9 @@ function refreshValue(elem,action){
     		if(result.answer == "OK"){
                 var median;
                 var tolerance;
+                var icon;
                 if(action=='Ph'){
+                    
                   median=7.24;  
                 } 
                 else if (action=='ORP'){
