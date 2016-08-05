@@ -77,7 +77,7 @@ function standard_deviation($aValues, $bSample = false)
 
 $cfg['width'] = $_GET["width"] ;
 $cfg['height'] = $_GET["height"];
-$cfg['key-color'] = "00a2e8";
+$cfg['key-color'] = "ffffff";
 $cfg['column-color'] = "00a2e8";
 $cfg['value-label-color'] = "ffffff";
 //$cfg['box-background-color'] = "ffffff";
