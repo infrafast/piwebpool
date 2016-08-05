@@ -128,6 +128,24 @@ maybe put this in /etc/rc.d/rc.local:
 
 
 
+watchdog on Pi2? Must be wrong....
+    sudo apt-get install watchdog
+    sudo modprobe bcm2708_wdog
+    sudo vi /etc/modules
+    ---
+    bcm2708_wdog
+    ---
+    sudo update-rc.d watchdog defaults
+    sudo vi /etc/watchdog.conf
+    ---
+    #uncomment the following:
+    max-load-1
+    watchdog-device
+    ---
+    sudo service watchdog start
+
+
+
 ---------------------------------------------------------
 GIT
 -------------------------------------------------------------------
