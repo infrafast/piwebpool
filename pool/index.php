@@ -74,7 +74,7 @@ $tableSettings = new TableGear($optionsSet);
         <script src="blockly/lua_compressed.js"></script>
         <script src="blockly/blocks_compressed.js"></script>
         <script src="blockly/msg/js/fr.js"></script>
-        <link type="text/css" rel="stylesheet" href="css/tablegear.css" />
+        <link rel="stylesheet" href="css/tablegear.css" />
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/weather-icons.css">
     
