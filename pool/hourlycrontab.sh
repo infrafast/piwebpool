@@ -29,7 +29,8 @@ then
                 sudo reboot
         else
                 touch $FFLAG
-                logger $(sudo $IFDOWN $INTERFACE)
+                logger -s -t $(sudo $IFDOWN $INTERFACE)
+                #logger $(sudo $IFDOWN $INTERFACE)
                 sleep 10
                 logger $(sudo $IFUP $INTERFACE)
         fi
