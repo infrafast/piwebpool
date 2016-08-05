@@ -111,7 +111,6 @@ if ($this->_exec("stty --version") === 0) {
 ---------------------------------------------------------
 System hardening
 ---------------------------------------------------------
-
 http://iqjar.com/jar/raspberry-pi-rebooting-itself-when-it-becomes-unreachable-from-outside-networks/
 
 ---------------------------------------------------------
