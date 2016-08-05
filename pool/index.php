@@ -83,7 +83,7 @@ $tableSettings = new TableGear($optionsSet);
 <?php 
     //for ($x = 0; $x < 47; $x++) echo "n: ".$x."<i>A</i><br>";
     foreach (array_merge(range('A', 'Z'), range('a', 'z')) as $car){
-        
+        echo "c: ".$car."<i>".$car."</i><br>";    
     }
 ?>
 
