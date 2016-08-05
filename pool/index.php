@@ -82,7 +82,7 @@ $tableSettings = new TableGear($optionsSet);
 <div id="weather"></div>
 <?php 
     //for ($x = 0; $x < 47; $x++) echo "n: ".$x."<i>A</i><br>";
-    foreach (array_merge(range('A', 'Z'), range('a', 'z')) as $car){
+    foreach (array_merge(range('A', 'Z'), range('a', 'z'), range('0', '9')) as $car){
         echo "<h2>".$car."<i>".$car."</i></h2><br>";    
     }
 ?>
