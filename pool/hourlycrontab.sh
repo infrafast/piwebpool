@@ -6,7 +6,7 @@ php -dextension=lua.so cronaction.php
 
 # cron script for checking wlan connectivity
 # and reboot raspberry in case of loss
-IP_FOR_TEST="www.google.com"
+IP_FOR_TEST="$HOSTNAME.infrafast.com"
 PING_COUNT=1
 
 PING="/bin/ping"
