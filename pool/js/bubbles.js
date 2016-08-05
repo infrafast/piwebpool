@@ -67,8 +67,8 @@
         } 
         timer = setTimeout(moveIt, 60);
     }
-    
-  
+}());
+
     
     window.onload = function () {
           alert("bubbles");
@@ -93,4 +93,3 @@
                 }());
         }
     };
-}());
