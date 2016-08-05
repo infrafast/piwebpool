@@ -90,7 +90,6 @@ $tableSettings = new TableGear($optionsSet);
     <tr class="header" id="sensorTable">
         <td colspan="3"><b><span>-</i></span> Mesures</b></td>
     </tr>
-<div id="canvas"></div><div id="info"></div>    
     <tr>
         <th colspan="3"><div id="weather">Affichage météo?</div></th>
     </tr>
