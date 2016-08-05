@@ -80,6 +80,7 @@ $tableSettings = new TableGear($optionsSet);
     <body>
 
 <div id="weather"></div>
+<i class="icon-0"></i>
 
     <table class="materialTab">
     <tr class="header" id="sensorTable">
