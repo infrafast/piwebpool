@@ -153,7 +153,7 @@ function refreshValue(elem,action){
                 } 
                 var color=getColorVal(median,newValue);
                 //alert(color);
-                $(elem).attr("style", "color:"+color+";");
+                $(elem).attr("style", "background:"+color+";");
                 newValue = ""+result.state+icon;
                 $(elem).html(newValue);
     		}else{
