@@ -170,7 +170,7 @@ $tableSettings = new TableGear($optionsSet);
 
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/piwebscript.js"></script>
     
             <xml id="toolbox" style="display: none">
 
