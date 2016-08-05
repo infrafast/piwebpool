@@ -35,5 +35,6 @@ then
         fi
 else
 #    logger "$INTERFACE is up"
+    logger "$IP_FOR_TEST is alive ..."
     rm -f $FFLAG 2>/dev/null
 fi
