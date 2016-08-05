@@ -89,7 +89,7 @@ $tableSettings = new TableGear($optionsSet);
         <th colspan="3"><div id="weather"></div></th>
     </tr>
     <tr>
-        <th width=33%><i class='wi wi-raindrops'></i></th><th width=33%><i class='wi wi-earthquake'></i></th><th width=33%><i class='wi wi-thermometer'></i></th>
+        <th width=33%>ph</th><th width=33%>redox</th><th width=33%>température</th>
     </tr>
     <tr>
         <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
