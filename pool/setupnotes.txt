@@ -113,6 +113,21 @@ System hardening
 ---------------------------------------------------------
 http://iqjar.com/jar/raspberry-pi-rebooting-itself-when-it-becomes-unreachable-from-outside-networks/
 
+maybe put this in /etc/rc.d/rc.local:
+    while [ 1 ]
+    do
+     if [ -z "$(ping -c 1 www.02144.com)" ]
+     then
+      shutdown -r now
+      #ifconfig eth0 down && ifconfig eth0 up
+      #/etc/init.d/networking restart
+      #dhclient eth0
+     fi
+     sleep 600
+    done
+
+
+
 ---------------------------------------------------------
 GIT
 -------------------------------------------------------------------
