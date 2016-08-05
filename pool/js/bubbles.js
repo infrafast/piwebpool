@@ -81,9 +81,9 @@
                                                                            "stroke-opacity": opa}));
         }
         circs.attr({fill: "#00DDAA", stroke: "#00DDAA"});
+        alert("bubbles on load");
         moveIt();
         elie = document.getElementById("toggle");
-        alert("bubbles on load");
         elie.onclick = function() {
             (toggler++ % 2) ? (function(){
                     moveIt();
