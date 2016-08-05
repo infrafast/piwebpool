@@ -15,7 +15,7 @@ IFDOWN="/sbin/ifdown --force"
 
 INTERFACE="eth0"
 
-FFLAG="/opt/check_lan/stuck.fflg"
+FFLAG="/var/www/html/pool/stuck.fflg"
 
 # ping test
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
