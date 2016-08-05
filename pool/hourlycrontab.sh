@@ -17,6 +17,7 @@ INTERFACE="eth0"
 
 FFLAG="/var/www/html/pool/stuck.fflg"
 echo "ip for test" $IP_FOR_TEST
+sleep 10
 # ping test
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
 if [ $? -ge 1 ]
