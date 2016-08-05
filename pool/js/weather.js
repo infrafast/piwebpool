@@ -1,11 +1,11 @@
 // weather
 
-/* Does your browser support geolocation? */
+/* Does your browser support geolocation? 
 if ("geolocation" in navigator) {
   $('.js-geolocation').show(); 
 } else {
   $('.js-geolocation').hide();
-}
+}*/
 
 /* Where in the world are you? */
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -25,7 +25,6 @@ function loadWeather(location, woeid) {
         html += ' '+weather.forecast[i].day
             +': '+weather.forecast[i].high+'°<img src="'+weather.forecast[i].thumbnail+'"></img>';
       }      
-      
       $("#weather").html(html);
     },
     error: function(error) {
