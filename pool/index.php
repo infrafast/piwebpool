@@ -83,10 +83,14 @@ $tableSettings = new TableGear($optionsSet);
 
     <table class="materialTab">
     <tr class="header" id="sensorTable">
-    <td colspan="3"><b><span>-</span> Mesures</b></td>
+        <td colspan="3"><b><span>-</span> Mesures</b></td>
     </tr>
-    <tr><th></th><th><div id="weather"></div></th><th></th></tr>
-    <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
+    <tr>
+        <th></th><th><div id="weather"></div></th><th></th>
+    </tr>
+    <tr>
+        <th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th>
+    </tr>
     <tr>
         <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
         <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
