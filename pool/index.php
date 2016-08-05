@@ -86,7 +86,7 @@ $tableSettings = new TableGear($optionsSet);
         <td colspan="3"><b><span>-</span> Mesures</b></td>
     </tr>
     <tr>
-        <th colspan="3"><div id="weather"></th>
+        <th colspan="3"><div id="weather"></div></th>
     </tr>
     <tr>
         <th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th>
