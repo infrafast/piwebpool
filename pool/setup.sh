@@ -15,7 +15,7 @@ sudo apt-get --assume-yes install apache2 php5 php5-mysql php5-gd ssmtp anacron 
 pause
 echo "watchdog setup"
 sudo modprobe bcm2708_wdog
-
+pause
 # installing and compiling LUA 
 echo "NOW CONFIGURING LUA  (symlink and lobrary copy)"
 sudo ln -s /usr/include/lua5.1 /usr/include/lua
