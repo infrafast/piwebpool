@@ -148,7 +148,7 @@ function refreshValue(elem,action){
                     median=700;   
                 } 
                 else{
-                    icon="<i class='wi wi-night-sleet'></i>";
+                    icon="<i class='wi wi-thermometer'></i>";
                     median=28;  
                 } 
                 var color=getColorVal(median,newValue);
