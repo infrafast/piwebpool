@@ -30,7 +30,7 @@ then
         else
                 touch $FFLAG
                 sudo ifdown eth0 && sudo service networking restart && sudo ifup eth0
-
+                sudo systemctl daemon-reload
                 #logger $(sudo $IFDOWN $INTERFACE)
                 sleep 10
                 logger $(sudo $IFUP $INTERFACE)
