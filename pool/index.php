@@ -81,7 +81,7 @@ $tableSettings = new TableGear($optionsSet);
     </head>
     <body>
 
-<i class='wi humidity'></i>
+<h2><i class='wi humidity'></i></h2>
 <div id="weather"></div>
 
     <table class="materialTab">
