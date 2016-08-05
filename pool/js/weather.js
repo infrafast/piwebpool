@@ -21,7 +21,7 @@ function loadWeather(location, woeid=0) {
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+' '+weather.city+'</h2>';
       
-      for(var i=0;i<3;i++) {
+      for(var i=0;i<4;i++) {
         html += ' '+weather.forecast[i].day
             +': '+weather.forecast[i].high+'°<img src="'+weather.forecast[i].thumbnail+'"></img>';
       }      
