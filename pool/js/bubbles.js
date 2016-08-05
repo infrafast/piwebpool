@@ -71,7 +71,6 @@
   
     
     window.onload = function () {
-         alert("bubbles");
         paper = Raphael("canvas", 500, 500);
         circs = paper.set();
         for (i = 0; i < 30; ++i)
@@ -83,6 +82,7 @@
         circs.attr({fill: "#00DDAA", stroke: "#00DDAA"});
         moveIt();
         elie = document.getElementById("toggle");
+        alert("bubbles");
         elie.onclick = function() {
             (toggler++ % 2) ? (function(){
                     moveIt();
