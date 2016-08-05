@@ -85,8 +85,6 @@ $tableSettings = new TableGear($optionsSet);
     <body>
 
 <input id="toggle" type="button" value=" Stop " />
-<div id="canvas"></div>
-<div id="info"></div>
 
     <table class="materialTab">
     <tr class="header" id="sensorTable">
@@ -99,7 +97,7 @@ $tableSettings = new TableGear($optionsSet);
         <th width=33%>ph</th><th width=33%>redox</th><th width=33%>température</th>
     </tr>
     <tr>
-        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
+        <td><div id="canvas"></div><div id="info"></div><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
         <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
         <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
         
