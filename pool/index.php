@@ -81,7 +81,7 @@ $tableSettings = new TableGear($optionsSet);
 
 <div id="weather"></div>
 <?php 
-    for ($x = 0; $x < 47; $x++) echo "n: ".$x."<i class='icon-".$x."'></i><br>";
+    for ($x = 0; $x < 47; $x++) echo "<h2>n: ".$x."<i class='icon-".$x."'></i></h2><br>";
 ?>
 
 
