@@ -23,7 +23,7 @@ function loadWeather(location, woeid) {
       
       for(var i=0;i<5;i++) {
         html += ' '+weather.forecast[i].day
-            +': '+weather.forecast[i].high+'<img src="'+weather.forecast[i].thumbnail+'"></img>"';
+            +': '+weather.forecast[i].high+'<img src="'+weather.forecast[i].thumbnail+'"></img>';
       }      
       
       $("#weather").html(html);
