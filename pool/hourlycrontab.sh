@@ -31,7 +31,7 @@ then
                 sudo reboot
         else
                 touch $FFLAG
-                sudo ifdown eth0 && sudo service networking restart && sudo ifup eth0
+                sudo ifdown $INTERFACE && sudo service networking restart && sudo ifup $INTERFACE
                 sudo systemctl daemon-reload
                 logger "$INTERFACE restarted ..."
         fi
