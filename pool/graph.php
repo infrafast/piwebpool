@@ -80,6 +80,7 @@ $cfg['height'] = $_GET["height"];
 $cfg['key-color'] = "ffffff";
 $cfg['column-color'] = "00a2e8";
 $cfg['value-label-color'] = "ffffff";
+$cfg['average-line-color'] = "ffffff";
 //$cfg['box-background-color'] = "ffffff";
 $cfg['box-background-color'] = "444444";
 //$cfg['background-color'] = "ffffff";
