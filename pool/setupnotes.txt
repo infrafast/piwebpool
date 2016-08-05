@@ -1,6 +1,10 @@
 ---------------------------------------------------------
 TODO LIST 
 ---------------------------------------------------------
+    - set INTERFACE to WLAN0 for piweb3
+    - test the hourlyctrontab to make sure $HOSTNAME works by testing inside/outside
+    - puruse the watchdog config
+    
 
     - initUSB.py to :
             catch exception if device is not existing
