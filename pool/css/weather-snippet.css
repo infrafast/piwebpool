@@ -5,7 +5,7 @@ WEATHER SNIPPET
 body {
   
   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  background: #ff0000;
+  background: #444;
 }
 
 @font-face {
