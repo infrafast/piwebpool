@@ -7,6 +7,7 @@ cd /var/www/html/pool
 # cron script for checking wlan connectivity
 # and reboot raspberry in case of loss
 IP_FOR_TEST="$(hostname -f).infrafast.com"
+IP_FOR_TEST="www.google.com"
 PING_COUNT=1
 
 PING="/bin/ping"
