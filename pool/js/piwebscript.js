@@ -140,15 +140,15 @@ function refreshValue(elem,action){
                 var tolerance;
                 var icon;
                 if(action=='Ph'){
-                    icon="<i class='wi wi-refresh'></i>";
+                    icon="<i class=''></i>";
                     median=7.24;  
                 } 
                 else if (action=='ORP'){
-                    icon="<i class='wi wi-refresh'></i>";
+                    icon="<i class=''></i>";
                     median=700;   
                 } 
                 else{
-                    icon="<i class='wi wi-refresh'></i>";
+                    icon="<i class=''></i>";
                     median=28;  
                 } 
                 var color=getColorVal(median,newValue);
