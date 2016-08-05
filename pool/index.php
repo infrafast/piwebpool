@@ -88,9 +88,9 @@ $tableSettings = new TableGear($optionsSet);
     <th></th><th><div id="weather"></div></th><th></th>
     <tr><th width=33%>Ph</th><th width=33%>Redox</th><th width=33%>Temperature</th></tr>
     <tr>
-        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><i class="wi wi-night-sleet"></i></div></td>
-        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><i class="wi wi-night-sleet"></i></div></td>
-        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><i class="wi wi-night-sleet"></i></div></td>
+        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
+        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
+        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off" style="background-image: url('images/loading.gif'); background-repeat:no-repeat;"><br></div></td>
         
     </tr>
     <tr>
