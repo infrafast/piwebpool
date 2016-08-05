@@ -2,7 +2,7 @@
 
 #execute periodic piweb actions
 cd /var/www/html/pool
-php -dextension=lua.so cronaction.php
+//php -dextension=lua.so cronaction.php
 
 # cron script for checking wlan connectivity
 # and reboot raspberry in case of loss
