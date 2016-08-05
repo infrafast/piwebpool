@@ -171,6 +171,7 @@ $tableSettings = new TableGear($optionsSet);
 
     <script src="js/jquery.min.js"></script>
     <script src="js/piwebscript.js"></script>
+    <script src="js/weather.js"></script>
     
             <xml id="toolbox" style="display: none">
 
