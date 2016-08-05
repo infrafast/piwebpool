@@ -288,7 +288,7 @@ switch ($_GET["type"]){
         imagecolortransparent($img, $backgroundColor);
 
         $box = new Box($im);
-        $box->setFontFace('./fonts/Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
+        $box->setFontFace('./font/Roboto-Regular.ttf'); // http://www.dafont.com/franchise.font
         $box->setFontColor(new Color(0, 0, 0, 50));
         $box->setTextShadow(new Color(200, 200, 200), 2, 2);
         $box->setFontSize(19);
