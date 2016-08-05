@@ -1,9 +1,8 @@
 #!/bin/sh
 
-#execute the periodic call to piweb
+#execute the periodic call to piweb actions
 cd /var/www/html/pool
 php -dextension=lua.so cronaction.php
-
 
 # cron script for checking wlan connectivity
 # change 192.168.1.1 to whatever IP you want to check.
