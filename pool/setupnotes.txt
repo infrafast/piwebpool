@@ -73,9 +73,12 @@ PLATFORM SETUP FROM SCRACTH
 
 5) configuration:
 /etc/rc.local add 
-     python /var/www/html/pool/initUSB.py 
-     echo "-fy" > /forcefsck
-     #nohup /var/www/html/pool/pull.sh < /dev/null > /dev/null 2>&1 &
+    logger "POOL MANAGER: calling initUSB.py"
+    python /var/www/html/pool/initUSB.py
+    /var/www/html/pool/hourlycrontab.sh
+    logger "POOL MANAGER: forcing fsck"
+    echo "-fy" > /forcefsck
+
 
  /etc/ssmtp/ssmtp.conf add
     root=postmaster
