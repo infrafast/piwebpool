@@ -75,7 +75,7 @@
         infobox.div.html('<div id="weather">Affichage météo?</div>');
         // finally, call the weather snippet
         loadWeather("45.840491, 6.085538");
-        
+        /*
         circs = paper.set();
         for (i = 0; i < 15; ++i)
         {
@@ -84,7 +84,7 @@
                                                                            "stroke-opacity": opa}));
         }
         circs.attr({fill: "#00DDAA", stroke: "#00DDAA"});
-        //moveIt();
+        moveIt();
         elie = document.getElementById("toggle");
         elie.onclick = function() {
             (toggler++ % 2) ? (function(){
@@ -94,6 +94,6 @@
                     clearTimeout(timer);
                     elie.value = " Start ";
                 }());
-        }
+        }*/
     };
 }());
