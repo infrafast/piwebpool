@@ -77,7 +77,7 @@ $tableSettings = new TableGear($optionsSet);
         
         <script src="js/raphael.js"></script>
         
-        <script src="js/raphaeljs-infobox.js"></script>
+<!--        <script src="js/raphaeljs-infobox.js"></script> !-->
         
         <script src="js/bubbles.js"></script>
         
