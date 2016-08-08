@@ -36,6 +36,7 @@ text-align: center;
 
 tr
 {
+    background-color: #ff0000;
     border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px;
     border-right:none;
