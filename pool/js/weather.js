@@ -154,5 +154,3 @@ function loadWeather(location, woeid=0) {
   });
 })(jQuery);
 
-loadWeather("45.840491, 6.085538");
-
