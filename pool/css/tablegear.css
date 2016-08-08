@@ -34,7 +34,7 @@ table th.title
 text-align: center;
 }
 
-th,td
+th.tg,td.tg
 {
     background-color: #ff0000;
     border-top-left-radius: 0; 
