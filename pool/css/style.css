@@ -81,7 +81,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .materialTab td{
-	border-bottom:1px solid #0000ff;
+
     background-color: #ff0000;
     border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px;
