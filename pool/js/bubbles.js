@@ -70,7 +70,7 @@
     
     window.onload = function () {
 //        alert("bubbles called");
-        paper = Raphael("canvas", 500, 50);
+        paper = Raphael("canvas", 1000, 50);
 //        var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
 //        infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p><div id="weather">Affichage météo?</div>');
         // finally, call the weather snippet
@@ -80,7 +80,7 @@
         for (i = 0; i < 15; ++i)
         {
             opa = ran(3,10)/10;
-            circs.push(paper.circle(ran(0,500), ran(0,500), ran(10,30)).attr({"fill-opacity": opa,
+            circs.push(paper.circle(ran(0,1000), ran(0,1000), ran(10,30)).attr({"fill-opacity": opa,
                                                                            "stroke-opacity": opa}));
         }
         circs.attr({fill: "#00DDAA", stroke: "#00DDAA"});
