@@ -501,7 +501,7 @@ class TableGear
           $class = isset($footer["text"]) ? $footer["field"] . " total" : null;
           $attrib["class"] = $this->_addClass($class);
           $attrib["class"] = $this->_addClass($this->_checkColumnClass($footer["field"], $column), $attrib["class"]);
-          $this->_openTag("td class='tg'", $attrib);
+          $this->_openTag("td", $attrib);
           $text = $footer["text"] ? $this->_getFormatted($footer["text"], $footer["field"], $column) : null;
           $this->_outputHTML($text);
           $this->_closeTag("td");
@@ -524,7 +524,7 @@ class TableGear
     $this->_openTag("tbody");
     if(!$this->data){
       $this->_openTag("tr", array("class" => "noDataRow odd"));
-      $this->_openTag("td class='tg'", array("colspan" => count($headers)));
+      $this->_openTag("td", array("colspan" => count($headers)));
       $this->_outputHTML($this->noDataMessage);
       $this->_closeTag("td");
       $this->_closeTag("tr");
@@ -639,7 +639,7 @@ class TableGear
     if($this->form && $this->editable){
       $attrib = array();
       $attrib["class"] = $this->_checkColumnClass("EDIT");
-      $this->_openTag("td class='tg'", $attrib);
+      $this->_openTag("td", $attrib);
       $id = $appendKey ? "edit".$key : null;
       $value = $key ? $key : "NULL_STRING";
       $this->_openTag("input", array("type" => "checkbox", "name" => "edit[]", "value" => $value));
@@ -653,7 +653,7 @@ class TableGear
       $attrib["class"] = $this->_addClass("hotText", null, $hottext);
       $attrib["class"] = $this->_addClass("editable", $attrib["class"], $editable);
       $attrib["class"] = $this->_addClass($this->_checkColumnClass($column, $currentColumn), $attrib["class"]);
-      $this->_openTag("td class='tg'", $attrib);
+      $this->_openTag("td", $attrib);
       if($editable){
         array_push($this->editableFields, $column);
         if($this->loading) $this->_outputHTML($this->loading, "loading");
@@ -701,7 +701,7 @@ class TableGear
     }
     if($this->allowDelete && $this->form){
       $attrib["class"] = $this->_checkColumnClass("DELETE");
-      $this->_openTag("td class='tg'", $attrib);
+      $this->_openTag("td", $attrib);
       if($this->loading) $this->_outputHTML($this->loading, "loading");
       if(!$key) $key = "NULL_STRING";
       $this->_openTag("input", array("type" => "checkbox", "name" => "delete[]", "value" => $key, "id" => "delete".$key));
@@ -752,7 +752,7 @@ class TableGear
     $this->_openTag("thead class='header' id='".$id."'");
     if($this->title && $showTitle){
       $this->_openTag("tr");
-      $this->_openTag("td class='tg'", array("colspan" => count($headers), "class" => "title"));
+      $this->_openTag("td", array("colspan" => count($headers), "class" => "title"));
       $this->_openTag("b");
       $this->_openTag("span");
       $this->_outputHTML("-");
