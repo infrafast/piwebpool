@@ -71,7 +71,7 @@
     window.onload = function () {
         paper = Raphael("canvas", 500, 50);
         circs = paper.set();
-        for (i = 0; i < 30; ++i)
+        for (i = 0; i < 10; ++i)
         {
             opa = ran(3,10)/10;
             circs.push(paper.circle(ran(0,500), ran(0,500), ran(10,30)).attr({"fill-opacity": opa,
