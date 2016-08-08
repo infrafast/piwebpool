@@ -65,7 +65,7 @@ td.loading
 {
   background: url('../images/loading.gif') no-repeat 4px center;
   padding-left: 24px;
-  color: #aaaaaa;
+  color: #ff0000;
   width: 176px;
 }
 
