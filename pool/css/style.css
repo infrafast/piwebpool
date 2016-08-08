@@ -80,7 +80,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	margin:10px auto 0 auto;
 }
 
-.materialTab tr{
+.materialTab td{
 	border-bottom:1px solid #cecece;
     background-color: #ff0000;
     border-top-left-radius: 10px; 
