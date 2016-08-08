@@ -58,7 +58,7 @@ cursor: pointer;
 
 tr.loading {
   color: #dddddd;
-  background-color: #f6f6f6;
+  background-color: #444;
 }
 
 td.loading
