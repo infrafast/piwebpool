@@ -93,7 +93,7 @@ $tableSettings = new TableGear($optionsSet);
         <td colspan="3"><b><span>-</i></span> Mesures</b></td>
     </tr>
     <tr>
-        <th colspan="3"><div id="weather">Affichage météo?</div><div id="canvas" sytle="display: inline;"></div></th>
+        <th colspan="3"><div id="canvas" sytle="display: inline;"></div></th>
     </tr>
     <tr>
         <th width=33%>ph</th><th width=33%>redox</th><th width=33%>température</th>
@@ -212,6 +212,9 @@ $tableSettings = new TableGear($optionsSet);
     
     
     <script>
+        var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
+        infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p>');
+        
         var graphTypes = ["lineType", "barType", "textType"]; 
         
         // collapse all table as per settings stored in the database
