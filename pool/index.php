@@ -232,9 +232,6 @@ $tableSettings = new TableGear($optionsSet);
         // draw measures graph
         updateGraphs();
         
-        // finally, call the weather snippet
-        loadWeather("45.840491, 6.085538");
-        
         //setup Blockly for LUA variable
         Blockly.Blocks['dynamicData'] = {
           init: function() {
