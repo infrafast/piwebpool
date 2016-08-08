@@ -4,7 +4,7 @@
 
 $('.header').click(function(){
 	$(this).addClass('loading');
-    $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
+    $(this).find('li').text(function(_, value){return value=='-'?'+':'-'});
     $(this).nextUntil('tr.header').slideToggle(); 
     var id=$(this).attr('id');
     var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
