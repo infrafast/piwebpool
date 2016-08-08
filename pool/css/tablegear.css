@@ -57,7 +57,7 @@ cursor: pointer;
 }
 
 tr.loading {
-  color: #dddddd;
+  color: #ff0000;
   background-color: #444;
 }
 
