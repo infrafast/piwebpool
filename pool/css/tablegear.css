@@ -34,14 +34,6 @@ table th.title
 text-align: center;
 }
 
-tr
-{
-
-    border: 1px solid #dedede;
-    border-radius:3px;    
-    
-}
-
 th,td
 {
 text-align: left;
