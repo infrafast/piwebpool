@@ -21,6 +21,15 @@ background-color: #ffffff;
 
 }
 
+td:first-child{
+    -moz-border-radius:10px 0 0 10px;
+    -webkit-border-radius:10px 0 0 10px;
+}
+td:last-child{
+    -moz-border-radius:0 10px 10px 0;
+    -webkit-border-radius:0 10px 10px 0;
+}
+
 tr.odd
 {
 background-color: #eaeaea;
