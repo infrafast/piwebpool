@@ -213,7 +213,7 @@ $tableSettings = new TableGear($optionsSet);
     
     <script>
         var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
-        infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p>');
+        infobox.div.html('<div id="weather">Affichage météo?</div>');
         
         var graphTypes = ["lineType", "barType", "textType"]; 
         
