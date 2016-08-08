@@ -13,7 +13,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 });*/
 
 function loadWeather(location, woeid=0) {
-  alert("load weather called");
+  //alert("load weather called");
   $.simpleWeather({
     location: location,
     woeid: woeid,
