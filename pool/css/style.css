@@ -75,7 +75,7 @@ td { vertical-align: top; }
 
 body{ font:26px/32px Helvetica, Helvetica Neue, Arial; }
 
-span{ font:26px/32px wingdings;  color: blue;}
+.collapsable span{ font:26px/32px wingdings;  color: blue;}
 
 .materialTab{
 	width:98%;
