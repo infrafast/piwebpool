@@ -456,7 +456,6 @@ $tableSettings = new TableGear($optionsSet);
         }
         
         function toggleGraph(element){
-            clearTimeout(timer);
             var nextGraphType = "undef";
             var currentGraphType = element.classList.item(0);
             // locate the class in the list to get the next one
