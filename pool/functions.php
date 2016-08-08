@@ -162,7 +162,7 @@ function getPin($pin){
 }
 
 function setLuaPinState($pin,$state){
-    appendlualog("call setPinState(".$pin.",".$state."")");
+    appendlualog("call setPinState(".$pin.",".$state.)");
     return setPinState($pin,$state=="Off"?0:1);
 }
 
