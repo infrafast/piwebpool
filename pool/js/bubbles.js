@@ -71,7 +71,7 @@
     window.onload = function () {
         alert("bubbles called");
         paper = Raphael("canvas", 500, 250);
-        var infobox = new Infobox(paper, {x:10,y:10, width:500, height:250});
+        var infobox = new Infobox(paper, {x:0,y:0, width:500, height:250});
         infobox.div.html('<div id="weather">Affichage météo?</div>');
         // finally, call the weather snippet
         loadWeather("45.840491, 6.085538");
