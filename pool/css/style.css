@@ -103,10 +103,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .materialTab tr th,.materialTab tr td{
-	border-left:1px solid #cecece;
+
 }
 .materialTab tr th:last-child,.materialTab tr td:last-child{
-	border-right:1px solid #cecece;
+
 }
 
 .materialTab tr th{
