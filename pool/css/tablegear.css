@@ -34,15 +34,8 @@ table th.title
 text-align: center;
 }
 
-th.tg,td.tg
+th,td
 {
-    background-color: #ff0000;
-    border-top-left-radius: 0; 
-    border-bottom-left-radius: 0;
-    border-right:none;
-    border-top-right-radius: 0; 
-    border-bottom-right-radius: 0;
-    border-left:none;      
     text-align: left;
 }
 
