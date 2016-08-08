@@ -70,7 +70,7 @@
     
     window.onload = function () {
 //        alert("bubbles called");
-        paper = Raphael("canvas", 500, 250);
+        paper = Raphael("canvas", 1000, 50);
 //        var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
 //        infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p><div id="weather">Affichage météo?</div>');
         // finally, call the weather snippet
