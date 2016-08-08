@@ -752,7 +752,7 @@ class TableGear
     $this->_openTag("thead class='header' id='".$id."'");
     if($this->title && $showTitle){
       $this->_openTag("tr");
-      $this->_openTag("td", array("colspan" => count($headers), "class" => "title"));
+      $this->_openTag("td", array("colspan" => count($headers), "class" => "title, arrondi"));
       $this->_openTag("b");
       $this->_openTag("span");
       $this->_outputHTML("-");
