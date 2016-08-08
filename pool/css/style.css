@@ -75,6 +75,8 @@ td { vertical-align: top; }
 
 body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
+.span{ font:16px/26px Helvetica, Helvetica Neue, Arial;  color: blue;}
+
 .materialTab{
 	width:98%;
 	margin:10px auto 0 auto;
