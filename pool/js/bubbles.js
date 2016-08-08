@@ -84,7 +84,7 @@
                                                                            "stroke-opacity": opa}));
         }
         circs.attr({fill: "#00DDAA", stroke: "#00DDAA"});
-        moveIt();
+        //moveIt();
         elie = document.getElementById("toggle");
         elie.onclick = function() {
             (toggler++ % 2) ? (function(){
