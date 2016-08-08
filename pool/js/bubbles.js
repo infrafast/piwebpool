@@ -69,6 +69,7 @@
     }
     
     window.onload = function () {
+        alert("bubbles called");
         paper = Raphael("canvas", 500, 250);
         var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
         infobox.div.html('<div id="weather">Affichage météo?</div>');
