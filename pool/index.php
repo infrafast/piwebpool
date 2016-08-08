@@ -90,7 +90,7 @@ $tableSettings = new TableGear($optionsSet);
         <td colspan="3"><b><span>-</i></span> Mesures</b></td>
     </tr>
     <tr>
-        <th colspan="3"><div id="weather">Affichage météo?</div><div id="canvas" sytle="display: block;"></div></th>
+        <th colspan="3"><div id="weather">Affichage météo?</div><div id="canvas" sytle="display: inline;"></div></th>
     </tr>
     <tr>
         <th width=33%>ph</th><th width=33%>redox</th><th width=33%>température</th>
