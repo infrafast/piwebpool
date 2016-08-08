@@ -214,7 +214,7 @@ $tableSettings = new TableGear($optionsSet);
     <script>
         var graphTypes = ["lineType", "barType", "textType"]; 
         
-        // call the weather snippet (see weather.js)
+        // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
         loadWeather("45.840491, 6.085538");
         
         // collapse all table as per settings stored in the database
