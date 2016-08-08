@@ -95,7 +95,7 @@ function appendlog($source,$answer,$status,$filename="logfile.txt"){
     //return file_put_contents($logfilename, "[".date("Y-m-d H:i:s")."][".$source.' ' .$answer."][".html_entity_decode($status)."]\n" , FILE_APPEND | LOCK_EX);
 }
 
-function getLog($logfilename, $lines = 24){
+function getLog($logfilename, $lines = 100){
     $data = '';
     $filename="./".$logfilename;
     $fp = fopen($filename, "r");
