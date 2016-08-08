@@ -76,6 +76,9 @@ $tableSettings = new TableGear($optionsSet);
         <script src="blockly/msg/js/fr.js"></script>
         
         <script src="js/raphael.js"></script>
+        
+        <script src="js/raphaeljs-infobox.js"></script>
+        
         <script src="js/bubbles.js"></script>
         
         <link rel="stylesheet" href="css/tablegear.css" />
