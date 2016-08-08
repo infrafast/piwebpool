@@ -93,6 +93,16 @@ body{ font:26px/32px Helvetica, Helvetica Neue, Arial; }
     border-left:none;  
 }
 
+.arrondi {
+    background-color: #cecece;
+    border-top-left-radius: 0px; 
+    border-bottom-left-radius: 0px;
+    border-right:none;
+    border-top-right-radius: 0px; 
+    border-bottom-right-radius: 0px;
+    border-left:none;  
+}
+
 .materialTab tr th{
 	background-color:#3d3d3d;
 	color:#FFFFFF;
