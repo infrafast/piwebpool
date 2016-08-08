@@ -93,8 +93,8 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .materialTab tr th{
-	background-color:#00ff00;
-	color:#FFFFFF;
+	background-color:#3d3d3d;
+	color:#00ff00;
 }
 
 .materialTab tr th,.materialTab tr td{
