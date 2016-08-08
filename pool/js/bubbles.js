@@ -71,9 +71,8 @@
     window.onload = function () {
         paper = Raphael("canvas", 500, 50);
         var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
-        alert("infobox");
         infobox.div.html('<div id="weather">Affichage météo?</div>');
-        
+        alert("infobox");
         circs = paper.set();
         for (i = 0; i < 15; ++i)
         {
