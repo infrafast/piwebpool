@@ -22,8 +22,9 @@ background-color: #ffffff;
 }
 
 td:first-child{
-    -moz-border-radius:10px 0 0 10px;
-    -webkit-border-radius:10px 0 0 10px;
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+  border-right:none;
 }
 td:last-child{
     -moz-border-radius:0 10px 10px 0;
