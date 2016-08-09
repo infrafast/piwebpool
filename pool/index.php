@@ -362,7 +362,14 @@ $tableSettings = new TableGear($optionsSet);
           }
         };    
     
-    
+        Blockly.Lua['message'] = function(block) {
+          var dropdown_command = block.getFieldValue('command');
+          var statements_message = Blockly.Lua.statementToCode(block, 'message');
+          var statements_destination = Blockly.Lua.statementToCode(block, 'destination');
+          // TODO: Assemble Lua into code variable.
+          var code = '...\n';
+          return code;
+        };    
     
         Blockly.Lua['variables_set'] = function(block) {
           // Variable setter.
