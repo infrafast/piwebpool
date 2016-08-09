@@ -35,7 +35,7 @@ $luaFeedback="";
 
     $luaFeedback.="|".$scriptID.":";
     // fetch lua code from database
-    $sql    = "SELECT lua from scripts where id=custom";
+    $sql    = "SELECT lua from scripts where id='custom'";
     $result = mysql_query($sql, $link);
     if (!$result) {
         $answer.="+ERROR";
