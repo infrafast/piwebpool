@@ -42,7 +42,9 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
             return false;
         }else{
             while ($row = mysql_fetch_assoc($result)) {
-                $measureIndex=($row['value']);
+                $id=($row['id']);
+                $value=($row['value']);
+                
             }
         }    
         mysql_free_result($result);
