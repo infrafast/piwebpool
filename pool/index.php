@@ -56,6 +56,7 @@ $optionsSet["pagination"] = array();
 $optionsSet["title"] = "Parametres";
 $optionsSet["allowDelete"] = true;
 $optionsSet["sortable"]  = ""; 
+$optionsSet["editable"] = "allExceptAutoIncrement";
 $optionsSet["selects"] = array(
 	"userSetting" => array("visible" => 1, "invisible" => 0)
 ); 
