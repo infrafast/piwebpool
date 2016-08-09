@@ -54,7 +54,6 @@ $optionsSet["database"]["password"]    = $options["database"]["password"] ;
 $optionsSet["database"]["table"]  = "settings";
 $optionsSet["pagination"] = array();
 $optionsSet["title"] = "Parametres";
-$optionsSet["allowDelete"] = true;
 $optionsSet["sortable"]  = ""; 
 $optionsSet["editable"] = true;
 $optionsSet["selects"] = array(
