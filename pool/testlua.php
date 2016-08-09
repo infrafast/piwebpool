@@ -32,10 +32,10 @@ foreach ($concat as $scriptID) {
     }                
 }
 $luaFeedback="";
-
+$scriptID="custom";
     $luaFeedback.="|".$scriptID.":";
     // fetch lua code from database
-    $sql    = "SELECT lua from scripts where id='custom'";
+    $sql    = "SELECT lua from scripts where id='".$scriptID."'";
     $result = mysql_query($sql, $link);
     if (!$result) {
         $answer.="+ERROR";
@@ -47,7 +47,7 @@ $luaFeedback="";
     }
     // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
     goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link);
-
+}
         
 $state.="{".$luaFeedback."}";    
 appendlog("LUATEST",$answer,$state, $logfilename);
