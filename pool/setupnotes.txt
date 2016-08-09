@@ -2,11 +2,7 @@
 TODO LIST 
 ---------------------------------------------------------
     - make sure rc.local is running (currently not the case as ther eis no trace in syslog)
-    - do a git pull to update piweb3 with repository
-    - push the tags to repository from piweb3
-    - set INTERFACE to WLAN0 for piweb3
-    - test the hourlyctrontab to make sure $HOSTNAME works by testing inside/outside
-    - puruse the watchdog config
+    - pursue the watchdog config
     
 
     - initUSB.py to :
