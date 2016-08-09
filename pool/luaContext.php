@@ -43,6 +43,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
                 $id=($row['id']);
                 $value=($row['value']);
                 $lua->assign("parametre['".$id."'']",$value);
+                appenlualog("assign(\"parametre['".$id."''],".$value.")");
             }
         }    
         mysql_free_result($result);
