@@ -56,7 +56,7 @@ function sendsms($message){
     return $result;
 }
 
-function sendemail($message,$to=szemrot@hotmail.com){
+function sendemail($message,$to="szemrot@hotmail.com"){
     // send email
     // subject and recipee should be extracted from settings.
     //html decode to display accents
