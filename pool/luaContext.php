@@ -7,10 +7,6 @@ include ("configuration.php");
 function goLua($luaCode,$materials,$pins,&$feedback,$link){
     
     try{
-        
-        
-        
-        
         //$lua=new Lua($file);
         $lua=new Lua();
         $lua->eval($luaCode);
@@ -31,6 +27,9 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         if($phValue==null)  $phValue=-99;
         if($orpValue==null)  $orpValue=-99;
         if($temperatureValue==null)  $temperatureValue=-99;
+        
+        //db related variables
+        
         
         $lua->assign("temperature",$temperatureValue);
         $lua->assign("ph",$phValue);
