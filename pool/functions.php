@@ -250,6 +250,7 @@ function readSensor($device,$command="R\r"){
 
 function getPoolTemperature(){
     $temp=getTemperature();
+    if ($temp==false) $temp=-99;
     $temp=intval($temp);
     if ($temp/2 <> intval($temp/2)) $temp-=1;
     $tempRange=$temp."to".($temp+2);
