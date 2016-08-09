@@ -46,7 +46,7 @@ function weburl($url,$statusKey){
     return $arr[$statusKey];
 }
 
-function sendsms($message){
+function sendsms($message,$destination){
     $SMSuser = "19107501";
     $SMSkey = "1NXCXBzJGbNsdb";
     $feedback="void";            
