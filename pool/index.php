@@ -177,7 +177,7 @@ $tableSettings = new TableGear($optionsSet);
     <div><?= $table->getTable() ?></div>
     <?= $table->getJavascript("jquery") ?>
     
-    <div><?= $tableSettings->getTable(); ?></div>
+    <div><?= $tableSettings->fetchDataArray("SELECT * from settings where userSetting=true;"); $tableSettings->getTable(); ?></div>
     <?= $tableSettings->getJavascript("jquery") ?>
 
 
