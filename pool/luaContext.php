@@ -48,18 +48,13 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
             }
         }    
         mysql_free_result($result);
-        //         
-        
-        
+
         $lua->registerCallback("set", 'setLuaPinState'); 
         $lua->registerCallback("get", 'getLuaPin'); 
         $lua->registerCallback("log", 'appendlualog');
         $lua->registerCallback("sms", 'sendsms');
         $lua->registerCallback("email", 'sendemail');
         $lua->registerCallback("web", 'weburl');
-
-        // generate XML for blockly toolbox functions
-
         // execute the script
         $retval = $lua->run();
         if (!$retval) $feedback = $feedback."Runtime error";
