@@ -39,7 +39,7 @@ $state="";
 
 // what time is it now?
 $tw=getCurrentTimeWindow()."h";
-// what is the temperature
+// what is the temperature range
 $temp=getPoolTemperature();
 
 //treat the case when the tw and temp are forced by user thru the GUI
