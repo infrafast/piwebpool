@@ -322,7 +322,7 @@ $tableSettings = new TableGear($optionsSet);
           return [code, Blockly.Lua.ORDER_NONE];
         };
     
-        Blockly.Blocks['message'] = {
+        Blockly.Blocks['message_old'] = {
           init: function() {
             this.appendValueInput("NAME")
                 .setCheck(["String", "Number"])
@@ -336,7 +336,7 @@ $tableSettings = new TableGear($optionsSet);
           }
         };
     
-        Blockly.Lua['message'] = function(block) {
+        Blockly.Lua['message_old'] = function(block) {
           var dropdown_command = block.getFieldValue('command');
           var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
