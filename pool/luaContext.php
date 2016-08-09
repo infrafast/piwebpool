@@ -42,7 +42,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
             while ($row = mysql_fetch_assoc($result)) {
                 $id=($row['id']);
                 $value=($row['value']);
-                $lua->assign("setting[\"".$id."\"]",$value);
+                $lua->assign("parametre[\"".$id."\"]",$value);
             }
         }    
         mysql_free_result($result);
