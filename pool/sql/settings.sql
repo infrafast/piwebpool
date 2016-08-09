@@ -11,6 +11,7 @@ INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('ORPConsign', 750, true, 'Consigne ORP'),
 ('PHConsign', 7.24, true, 'Consigne PH'),
 ('TEMPConsign', 28, true, 'Consigne Température'),
+('email', "szemrot@hotmail.com", true, 'email recevant les notifications'),
 ('logTable', 1, false, ''),
 ('actionTable', 1, false, ''),
 ('blocklyTable', 1, false, ''),
