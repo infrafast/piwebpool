@@ -8,9 +8,9 @@ CREATE TABLE IF NOT EXISTS `settings` (
   
 INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
 ('scheduler', 1, true, 'Activation planificateur filtration'),
-('ORPConsign', 1, true, 'Activation planificateur filtration'),
-('PHConsign', 1, true, 'Activation planificateur filtration'),
-('TEMPConsign', 1, true, 'Activation planificateur filtration'),
+('ORPConsign', 1, true, 'Consigne ORP'),
+('PHConsign', 1, true, 'Consigne PH'),
+('TEMPConsign', 1, true, 'Consigne Température'),
 ('logTable', 1, false, ''),
 ('actionTable', 1, false, ''),
 ('blocklyTable', 1, false, ''),
