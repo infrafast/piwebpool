@@ -367,7 +367,7 @@ $tableSettings = new TableGear($optionsSet);
           var statements_message = Blockly.Lua.statementToCode(block, 'message');
           var statements_destination = Blockly.Lua.statementToCode(block, 'destination');
           // TODO: Assemble Lua into code variable.
-          var code = '...\n';
+          var code = dropdown_command+'('+value_name+');\n';
           return code;
         };    
     
