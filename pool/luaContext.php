@@ -45,7 +45,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
                 $value=($row['value']);
                 //if (!is_numeric($value)) $value.="";
                 $lua->assign("parametre['".$id."']",$value);
-                appendlualog("   assign(\"parametre['".$id."']\",".$value.")    ");
+                appendlualog("   assign(parametre['".$id."'],".$value.")    ");
                 //$lua->assign($id,$value);
                 //appendlualog("   assign(".$id.",".$value.")    ");
             }
