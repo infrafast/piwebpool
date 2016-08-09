@@ -33,14 +33,14 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         $result = mysql_query($sql, $link);
         
         if (!$result) {
-        $answer.="+ERROR";
-        $state.="+".mysql_error();
+            $feedback=$feedback." ".mysql_error();
+            return false;
         }else{
-        while ($row = mysql_fetch_assoc($result)) {
-        $measureIndex=($row['value']);
+            while ($row = mysql_fetch_assoc($result)) {
+                $measureIndex=($row['value']);
+            }
         }    
         mysql_free_result($result);
-
         
         
         $lua->assign("temperature",$temperatureValue);
