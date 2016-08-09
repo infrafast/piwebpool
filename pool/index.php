@@ -344,33 +344,7 @@ $tableSettings = new TableGear($optionsSet);
           return code;
         };
     
-        Blockly.Blocks['message'] = {
-          init: function() {
-            this.appendStatementInput("message")
-                .setCheck(["String", "Number"])
-                .appendField("notifier")
-                .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command")
-                .appendField("message");
-            this.appendStatementInput("destination")
-                .setCheck(["String", "Number"])
-                .appendField("destination (email,numero ou titre)");
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(65);
-            this.setTooltip('');
-            this.setHelpUrl('http://www.example.com/');
-          }
-        };    
-    
-        Blockly.Lua['message'] = function(block) {
-          var dropdown_command = block.getFieldValue('command');
-          var statements_message = Blockly.Lua.statementToCode(block, 'message');
-          var statements_destination = Blockly.Lua.statementToCode(block, 'destination');
-          // TODO: Assemble Lua into code variable.
-          var code = dropdown_command+'('+statements_destination+','+statements_message+');\n';
-          return code;
-        };    
-    
+
         Blockly.Lua['variables_set'] = function(block) {
           // Variable setter.
           var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
