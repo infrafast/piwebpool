@@ -56,12 +56,11 @@ function sendsms($message){
     return $result;
 }
 
-function sendemail($message){
+function sendemail($message,$to=szemrot@hotmail.com){
     // send email
     // subject and recipee should be extracted from settings.
     //html decode to display accents
     $message=html_entity_decode(wordwrap($message,70));
-    $to = "szemrot@hotmail.com";
     $subject = "Notification de ".gethostname();
     $from = "noreply@piweb.infrafast.com";
     $headers = "From:" . $from;
