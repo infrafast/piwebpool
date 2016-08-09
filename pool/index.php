@@ -345,6 +345,8 @@ $tableSettings = new TableGear($optionsSet);
         };
     
 
+          var code = dropdown_command+'('+statements_destination+','+statements_message+');\n';
+
         Blockly.Lua['variables_set'] = function(block) {
           // Variable setter.
           var argument0 = Blockly.Lua.valueToCode(block, 'VALUE',
