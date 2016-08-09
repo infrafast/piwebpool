@@ -21,7 +21,7 @@ $i=0;
 foreach ($concat as $scriptID) {
     // fetch lua header and footer code
     // i.e. the run() and return
-    $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+    $sql    = "SELECT lua from scripts where id=user";
     $result = mysql_query($sql, $link);
     if (!$result) {
         $answer.="+ERROR";
