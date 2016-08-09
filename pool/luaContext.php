@@ -32,6 +32,8 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScript
         $lua->assign("orp",$orpValue);
         $lua->assign("period",intval(getCurrentTimeWindow()));
         $lua->assign("hour",intval(getCurrentTime()));
+        
+        $lua->assign("scriptID",$scriptID);
 
         //db related variables
         $sql    = "SELECT id,value from settings where userSetting=true;";
