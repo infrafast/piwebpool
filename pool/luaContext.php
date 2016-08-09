@@ -36,7 +36,6 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         //db related variables
         $sql    = "SELECT id,value from settings where userSetting=true;";
         $result = mysql_query($sql, $link);
-        
         if (!$result) {
             $feedback=$feedback." ".mysql_error();
             return false;
