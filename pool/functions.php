@@ -71,7 +71,7 @@ function sendemail($message){
 }
 
 function appendlualog($message,$source="NOTIFICATION"){
-    return appendlog("NOTIFICATION","SCRIPT",$message);
+    return appendlog($source,"SCRIPT",$message);
 }
 
 function appendlog($source,$answer,$status,$filename="logfile.txt"){
