@@ -9,7 +9,6 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
     try{
         //$lua=new Lua($file);
         $lua=new Lua();
-        $lua->eval($luaCode);
         // record names of the command as variable and manipulate them directly phyisically in lua using set and get functions
         // since the setPinState function gets the logical pin number, we have to get it from the table
     
@@ -55,6 +54,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         $lua->registerCallback("email", 'sendemail');
         $lua->registerCallback("web", 'weburl');
         // execute the script
+        $lua->eval($luaCode);
         $retval = $lua->run();
         if (!$retval) $feedback = $feedback."Runtime error";
         else $feedback = $feedback.$retval;
