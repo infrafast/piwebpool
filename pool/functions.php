@@ -26,7 +26,6 @@ Pin
 */
 
 function weburl($url,$statusKey){
-    appendlog("WEBURL",$url,$statusKey);
     if(!function_exists("curl_init")) die("cURL extension is not installed");
     $curl_options = array(
                         CURLOPT_URL => $url,
@@ -42,7 +41,7 @@ function weburl($url,$statusKey){
     $output = curl_exec( $ch );
     curl_close($ch);
     $arr = json_decode($output,true);
-    //appendlog("WEBURL","return",$arr[$statusKey]);
+    appendlog("WEBURL",$url,$statusKey."=".$arr[$statusKey]);
     return $arr[$statusKey];
 }
 
