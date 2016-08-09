@@ -70,7 +70,7 @@ function sendemail($message){
     return $result;
 }
 
-function appendlualog($message){
+function appendlualog($message,$source="NOTIFICATION"){
     return appendlog("NOTIFICATION","SCRIPT",$message);
 }
 
