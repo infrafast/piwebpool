@@ -27,9 +27,14 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         if($phValue==null)  $phValue=-99;
         if($orpValue==null)  $orpValue=-99;
         if($temperatureValue==null)  $temperatureValue=-99;
-        
+        $lua->assign("temperature",$temperatureValue);
+        $lua->assign("ph",$phValue);
+        $lua->assign("orp",$orpValue);
+        $lua->assign("period",intval(getCurrentTimeWindow()));
+        $lua->assign("hour",intval(getCurrentTime()));
+
         //db related variables
-        $sql    = "SELECT value from settings where userSetting=1;";
+        $sql    = "SELECT id,value from settings where userSetting=1;";
         $result = mysql_query($sql, $link);
         
         if (!$result) {
@@ -41,13 +46,8 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
             }
         }    
         mysql_free_result($result);
+        //         
         
-        
-        $lua->assign("temperature",$temperatureValue);
-        $lua->assign("ph",$phValue);
-        $lua->assign("orp",$orpValue);
-        $lua->assign("period",intval(getCurrentTimeWindow()));
-        $lua->assign("hour",intval(getCurrentTime()));
         
         $lua->registerCallback("set", 'setLuaPinState'); 
         $lua->registerCallback("get", 'getLuaPin'); 
