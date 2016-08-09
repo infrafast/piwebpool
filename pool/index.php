@@ -344,6 +344,24 @@ $tableSettings = new TableGear($optionsSet);
           return code;
         };
     
+        Blockly.Blocks['message'] = {
+          init: function() {
+            this.appendValueInput("message")
+                .setCheck(["String", "Number"])
+                .appendField("notifier")
+                .appendField(new Blockly.FieldDropdown([["sms", "sms"], ["email", "email"], ["log", "log"]]), "command")
+                .appendField("message");
+            this.appendValueInput("destination")
+                .setCheck(["String", "Number"])
+                .appendField("destination (email,numero ou titre)");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(65);
+            this.setTooltip('');
+            this.setHelpUrl('http://www.example.com/');
+          }
+        };
+
 
           var code = dropdown_command+'('+statements_destination+','+statements_message+');\n';
 
