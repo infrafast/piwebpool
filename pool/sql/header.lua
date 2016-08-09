@@ -168,7 +168,7 @@ writers = {
 		end;
 }
 
-local parametre;
+local parametre = {["void"] = "void"};
 memoire = persistence.load("storage.lua");
 
 function run()
