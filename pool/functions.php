@@ -70,8 +70,8 @@ function sendemail($message){
     return $result;
 }
 
-function appendlualog($message,$source="NOTIFICATION"){
-    return appendlog($source,"SCRIPT",$message);
+function appendlualog($message,$source="LUALOG"){
+    return appendlog($source,"NOTIFICATION",$message);
 }
 
 function appendlog($source,$answer,$status,$filename="logfile.txt"){
