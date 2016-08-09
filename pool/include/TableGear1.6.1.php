@@ -491,8 +491,8 @@ class TableGear
     if($headers || $this->title){
       $this->_outputHeaders($headers, true,$this->title );
     }
-    if($this->footers || $this->totals || $this->addNewRows){
-    //if($this->footers || $this->totals ){        
+    //if($this->footers || $this->totals || $this->addNewRows){
+    if($this->footers || $this->totals ){        
       $this->_openTag("tfoot");
       if($this->totals){
         $totals = $this->_fetchTotals();
