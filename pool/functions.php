@@ -249,7 +249,6 @@ function readSensor($device,$command="R\r"){
 
 
 function getPoolTemperature(){
-    // should curl to Eniac
     $temp=getTemperature();
     $temp=intval($temp);
     if ($temp/2 <> intval($temp/2)) $temp-=1;
