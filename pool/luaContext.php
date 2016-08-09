@@ -29,6 +29,18 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         if($temperatureValue==null)  $temperatureValue=-99;
         
         //db related variables
+        $sql    = "SELECT value from settings where id='measureIndex';";
+        $result = mysql_query($sql, $link);
+        
+        if (!$result) {
+        $answer.="+ERROR";
+        $state.="+".mysql_error();
+        }else{
+        while ($row = mysql_fetch_assoc($result)) {
+        $measureIndex=($row['value']);
+        }    
+        mysql_free_result($result);
+
         
         
         $lua->assign("temperature",$temperatureValue);
