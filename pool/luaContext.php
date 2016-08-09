@@ -4,7 +4,7 @@ LUA CONTEXT */
 require_once ("functions.php");
 include ("configuration.php");
 
-function goLua($luaCode,$materials,$pins,&$feedback,$link){
+function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScriptID"){
     
     try{
         //$lua=new Lua($file);
