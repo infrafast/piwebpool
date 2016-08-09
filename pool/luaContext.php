@@ -34,7 +34,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link){
         $lua->assign("hour",intval(getCurrentTime()));
 
         //db related variables
-        $sql    = "SELECT id,value from settings where userSetting=1;";
+        $sql    = "SELECT id,value from settings where userSetting=true;";
         $result = mysql_query($sql, $link);
         
         if (!$result) {
