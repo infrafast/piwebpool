@@ -7,6 +7,10 @@ include ("configuration.php");
 function goLua($luaCode,$materials,$pins,&$feedback,$link){
     
     try{
+        
+        
+        
+        
         //$lua=new Lua($file);
         $lua=new Lua();
         $lua->eval($luaCode);
