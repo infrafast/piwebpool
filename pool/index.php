@@ -178,32 +178,10 @@ $tableSettings = new TableGear($optionsSet);
     <script src="js/piwebscript.js"></script>
     <script src="js/weather.js"></script>
     
-        <xml id="fulltoolbox" style="display: none">
 
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="logic_operation"></block>
-
-            <block type="dynamicData"></block>
-            <block type="variables_set"><field name="VAR">info</field></block>
-            <block type="variables_get"><field name="VAR">variable</field></block>
-            <block type="on_off"></block>
-            <block type="math_number"></block>
-            <block type="math_arithmetic"></block>
-            <block type="math_change"></block>
-            
-            <block type="weburl"></block>
-            <block type="message"></block>
-            <block type="text"></block>
-            <block type="text_join"></block>
-
-            <block type="setcommand"></block>
-            <block type="getcommand"></block>
-
-
-        </xml>
         
     <script>
+        alert("reached by browser");
         var graphTypes = ["lineType", "barType", "textType"]; 
         
         // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
