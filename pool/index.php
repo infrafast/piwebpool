@@ -231,7 +231,7 @@ $tableSettings = new TableGear($optionsSet);
         // retrieve logfile
         var logarea = document.getElementById('logFile');
         logarea.value = actionCall('action=getLog',false);
-        logarea.scrollTop = textarea.scrollHeight;
+        //logarea.scrollTop = textarea.scrollHeight;
         
         // draw measures graph
         updateGraphs();
