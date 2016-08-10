@@ -454,7 +454,6 @@ $tableSettings = new TableGear($optionsSet);
           });
         
         loadXML("main");
-    
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
     
@@ -477,7 +476,7 @@ $tableSettings = new TableGear($optionsSet);
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
-            document.getElementById('scriptareaID').disabled=true;
+            mainWorkspace.options.readOnly = true;
         }
     
         function saveCode(script){
