@@ -477,11 +477,12 @@ $tableSettings = new TableGear($optionsSet);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
             if (script=="main"){
-                Blockly.mainWorkspace.options.readOnly = false;
-                document.getElementById('scriptareaID').disabled = true;                
+                Blockly.mainWorkspace.options.readOnly = true;
+                document.getElementById('saveScriptBtn').disabled = true;  
             }   
             else{
                 Blockly.mainWorkspace.options.readOnly = false;
+                document.getElementById('saveScriptBtn').disabled = false;  
             }
         }
     
