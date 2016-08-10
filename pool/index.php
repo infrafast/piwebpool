@@ -438,8 +438,8 @@ $tableSettings = new TableGear($optionsSet);
         };        
         
     Blockly.BlockSvg.CORNER_RADIUS = 1;
-    Blockly.BlockSvg.SEP_SPACE_X = 2;
-    Blockly.BlockSvg.SEP_SPACE_Y = 2;    
+    Blockly.BlockSvg.SEP_SPACE_X = 5;
+    Blockly.BlockSvg.SEP_SPACE_Y = 5;    
 
       var workspace = Blockly.inject('blocklyDiv',
           {
