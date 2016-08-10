@@ -478,7 +478,8 @@ $tableSettings = new TableGear($optionsSet);
             Blockly.Xml.domToWorkspace(xml, workspace);
             if (script=="main"){
                 Blockly.mainWorkspace.options.readOnly = false;
-            }
+                document.getElementById('scriptareaID').disabled = true;                
+            }   
             else{
                 Blockly.mainWorkspace.options.readOnly = false;
             }
