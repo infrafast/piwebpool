@@ -185,7 +185,7 @@ $tableSettings = new TableGear($optionsSet);
     <script src="js/piwebscript.js"></script>
     <script src="js/weather.js"></script>
     
-            <xml id="toolbox" style="display: none">
+            <xml id="fulltoolbox" style="display: none">
 
                 <block type="controls_if"></block>
                 <block type="logic_compare"></block>
@@ -488,6 +488,7 @@ $tableSettings = new TableGear($optionsSet);
             else{
                 Blockly.mainWorkspace.options.readOnly = false;
                 Blockly.mainWorkspace.options.disable = false;
+                Blockly.workspace.updateToolbox(newTree);
                 document.getElementById('saveScriptBtn').disabled = false;  
             }
         }
