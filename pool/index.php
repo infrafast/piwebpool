@@ -435,10 +435,6 @@ $tableSettings = new TableGear($optionsSet);
           return [code, Blockly.Lua.ORDER_NONE];
         };        
         
-    Blockly.BlockSvg.CORNER_RADIUS = 1;
-    Blockly.BlockSvg.SEP_SPACE_X = 15;
-    Blockly.BlockSvg.SEP_SPACE_Y = 10;    
-
       var workspace = Blockly.inject('blocklyDiv',
           {
             scrollbars: true,
