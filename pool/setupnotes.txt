@@ -75,7 +75,7 @@ PLATFORM SETUP FROM SCRACTH
     logger -s "RC.LOCAL: Starting"
     logger -s "RC.LOCAL: calling initUSB.py"
     python /var/www/html/pool/initUSB.py
-    /var/www/html/pool/hourlycrontab.sh
+    sh /var/www/html/pool/hourlycrontab.sh
     logger -s "RC.LOCAL: forcing fsck"
     echo "-fy" > /forcefsck
 
