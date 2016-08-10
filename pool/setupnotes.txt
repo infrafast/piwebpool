@@ -72,6 +72,7 @@ PLATFORM SETUP FROM SCRACTH
 
 5) configuration:
 /etc/rc.local add 
+    logger -s "`date` Starting rc.local"
     logger "POOL MANAGER: calling initUSB.py"
     python /var/www/html/pool/initUSB.py
     /var/www/html/pool/hourlycrontab.sh
