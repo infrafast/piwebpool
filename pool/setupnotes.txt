@@ -2,6 +2,8 @@
 TODO LIST 
 ---------------------------------------------------------
 
+    - use HTTPS
+    - basic auth implementation
     - pursue the watchdog config
     - set debug level
     - initUSB.py to :
