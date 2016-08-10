@@ -211,7 +211,6 @@ $tableSettings = new TableGear($optionsSet);
         </xml>
         
     <script>
-        alert("reached by browser");
         var graphTypes = ["lineType", "barType", "textType"]; 
         
         // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
