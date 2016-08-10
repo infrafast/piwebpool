@@ -150,9 +150,9 @@ $tableSettings = new TableGear($optionsSet);
                         <option value="main">defaut</option>
                         <option value="custom">perso</option>
                     </select>
-                    <input type="button" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
-                    <input type="button" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
-                    <input type="button" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée');">
+                    <input type="button" id="saveScriptBtn" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
+                    <input type="button" id="loadScriptBtn" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
+                    <input type="button" id="runScriptBtn" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée');">
             </th>
         </tr>
         <tr>
