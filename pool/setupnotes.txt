@@ -21,7 +21,6 @@ TODO LIST
     - implement i18n
     - use PDO or mysqli 
     - script combo populated by select * from scripts ID
-    - mouse pointer over graph
     - calibration bug review
     - implement wifi wizard (https://github.com/sabhiram/raspberry-wifi-conf)
     
