@@ -284,9 +284,12 @@ function getCurrentTime(){
 
 function getCurrentMinute(){
     // get the current hours and force multiple to 2
-    return date("m");
+    return date("i");
 }
 
+function getCurrentTimeStamp(){
+    return date('H:i:s', time());
+}
 //
 // remove_comments will strip the sql comment lines out of an uploaded sql file
 // specifically for mssql and postgres type files in the install....
