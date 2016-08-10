@@ -437,6 +437,7 @@ $tableSettings = new TableGear($optionsSet);
           return [code, Blockly.Lua.ORDER_NONE];
         };        
         
+    Blockly.BlockSvg.CORNER_RADIUS = 8;
 
       var workspace = Blockly.inject('blocklyDiv',
           {
