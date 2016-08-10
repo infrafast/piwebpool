@@ -477,6 +477,7 @@ $tableSettings = new TableGear($optionsSet);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
             if (script=="main") Blockly.mainWorkspace.options.readOnly = true;
+            else Blockly.mainWorkspace.options.readOnly = false;
         }
     
         function saveCode(script){
