@@ -486,13 +486,13 @@ $tableSettings = new TableGear($optionsSet);
             if (script=="main"){
                 Blockly.mainWorkspace.options.readOnly = true;
                 //Blockly.mainWorkspace.options.disable = true;
-                //Blockly.workspace.updateToolbox(document.getElementById('fulltoolbox'));
+                Blockly.workspace.updateToolbox(document.getElementById('notoolbox'));
                 document.getElementById('saveScriptBtn').disabled = true;  
             }   
             else{
                 Blockly.mainWorkspace.options.readOnly = false;
                 //Blockly.mainWorkspace.options.disable = false;
-                //Blockly.workspace.updateToolbox(document.getElementById('fulltoolbox'));
+                Blockly.workspace.updateToolbox(document.getElementById('fulltoolbox'));
                 document.getElementById('saveScriptBtn').disabled = false;  
             }
         }
