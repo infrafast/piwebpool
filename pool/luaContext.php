@@ -48,10 +48,9 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScript
             while ($row = mysql_fetch_assoc($result)) {
                 $id=($row['id']);
                 $value=($row['value']);
-                //if (!is_numeric($value)) $value.="";
+                if (is_numeric($value)) $lua->assign($id,float($value));
                 //$lua->assign("parametre['".$id."']",$value);
                 //appendlualog("   assign(parametre['".$id."'],".$value.")    ");
-                $lua->assign($id,$value);
                 //appendlualog("   assign(".$id.",".$value.")    ");
             }
         }    
