@@ -187,6 +187,7 @@ span {color: #00a2e8;}
 }
 
 .container{
+  cursor: pointer;
   padding: 10px;
   border: 1px solid silver;
 }
