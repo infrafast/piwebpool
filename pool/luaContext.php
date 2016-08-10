@@ -33,7 +33,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScript
         $lua->assign("period",intval(getCurrentTimeWindow()));
         $lua->assign("hour",intval(getCurrentTime()));
         $lua->assign("minute",intval(getCurrentMinute()));
-        $lua->assign("timestamp",intval(getCurrentTimeStamp()));
+        $lua->assign("timestamp",getCurrentTimeStamp());
 
         
         $lua->assign("scriptID",$scriptID);
