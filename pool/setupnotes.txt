@@ -72,12 +72,14 @@ PLATFORM SETUP FROM SCRACTH
 
 5) configuration:
 /etc/rc.local add 
-    logger -s "RC.LOCAL: Starting"
-    logger -s "RC.LOCAL: calling initUSB.py"
-    python /var/www/html/pool/initUSB.py
-    sh /var/www/html/pool/hourlycrontab.sh
-    logger -s "RC.LOCAL: forcing fsck"
-    echo "-fy" > /forcefsck
+    logger -s "RC.LOCAL: Starting"                                                                                                                          
+    logger -s "RC.LOCAL: calling initUSB.py"                                                                                                                
+    python /var/www/html/pool/initUSB.py                                                                                                                    
+    sh /var/www/html/pool/hourlycrontab.sh&                                                                                                                 
+    logger -s "RC.LOCAL: forcing fsck for next reboot"                                                                                                      
+    echo "-fy" > /forcefsck                                                                                                                                 
+    exit 0 
+
 
 
  /etc/ssmtp/ssmtp.conf add
