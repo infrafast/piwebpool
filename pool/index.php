@@ -186,7 +186,7 @@ $tableSettings = new TableGear($optionsSet);
     <script src="js/weather.js"></script>
     
         <xml id="fulltoolbox" style="display: none">
-<category name="Control">
+
             <block type="controls_if"></block>
             <block type="logic_compare"></block>
             <block type="logic_operation"></block>
@@ -206,7 +206,7 @@ $tableSettings = new TableGear($optionsSet);
 
             <block type="setcommand"></block>
             <block type="getcommand"></block>
-</category>
+
 
         </xml>
         
