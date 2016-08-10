@@ -481,6 +481,7 @@ $tableSettings = new TableGear($optionsSet);
             Blockly.Xml.domToWorkspace(xml, workspace);
             if (script=="main"){
                 Blockly.mainWorkspace.options.readOnly = true;
+                Blockly.mainWorkspace.options.disable = true;
                 document.getElementById('saveScriptBtn').disabled = true;  
             }   
             else{
