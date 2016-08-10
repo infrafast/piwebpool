@@ -486,6 +486,7 @@ $tableSettings = new TableGear($optionsSet);
             }   
             else{
                 Blockly.mainWorkspace.options.readOnly = false;
+                Blockly.mainWorkspace.options.disable = false;
                 document.getElementById('saveScriptBtn').disabled = false;  
             }
         }
