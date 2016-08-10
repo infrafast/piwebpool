@@ -84,8 +84,9 @@ if (!$result) {
                 mysql_free_result($result);
             }                
         }
+        $luaFeedback="";
         foreach (array("main","custom") as $scriptID) {
-            $state.="|".$scriptID.":";
+            $luaFeedback.="|".$scriptID.":";
             // fetch lua code from database
             $sql    = "SELECT lua from scripts where id='".$scriptID."'";
             $result = mysql_query($sql, $link);
@@ -151,7 +152,7 @@ if (!$result) {
         }
     }
 }
-$state.="{periode:".$tw."}{temperature:".$temp."}{Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
+$state.="{".$luaFeedback."}";    
 appendlog("ACTIONS PERIODIQUES",$answer,$state, $logfilename);
 
 // sync data to disk
