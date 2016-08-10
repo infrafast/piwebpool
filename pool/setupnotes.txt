@@ -4,6 +4,8 @@ TODO LIST
     - handle -99 values in lua scripts
     - make sure rc.local is running (currently not the case as ther eis no trace in syslog)
     - pursue the watchdog config
+    - set debug level
+    
     
     - initUSB.py to :
             catch exception if device is not existing
