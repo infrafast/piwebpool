@@ -229,7 +229,7 @@ $tableSettings = new TableGear($optionsSet);
         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
     
         // retrieve logfile
-        var logarea = document.getElementById('logFile')
+        var logarea = document.getElementById('logFile');
         logarea.value = actionCall('action=getLog',false);
         logarea.scrollTop = textarea.scrollHeight;
         
