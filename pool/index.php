@@ -445,7 +445,7 @@ $tableSettings = new TableGear($optionsSet);
           {
             scrollbars: true,
             comments: true,
-            toolbox: document.getElementById('toolbox'),
+            toolbox: document.getElementById('fulltoolbox'),
             zoom:
                  {controls: true,
                   wheel: false,
