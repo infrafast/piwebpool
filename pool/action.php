@@ -50,7 +50,7 @@ if(isset($_['action'])){
             break;
     
     	case 'getTemperature':
-    	case 'getTemperaturePLC':
+    	//case 'getTemperaturePLC':
     	    $result['state'] = getTemperature();
     	    if ($result['state']==false){
     	        $result['answer']="ERROR";
@@ -58,7 +58,7 @@ if(isset($_['action'])){
     	    }
     	    break;
     	    
-        case 'getORPPLC':
+        //case 'getORPPLC':
     	case 'getORP':
     	    $result['state'] = getORP();
     	    if ($result['state']==false){
@@ -68,7 +68,7 @@ if(isset($_['action'])){
     	    break;
     
     	case 'getPh':
-    	case 'getPhPLC':
+    	//case 'getPhPLC':
     	    $result['state'] = getPh();
     	    if ($result['state']==false){
     	        $result['answer']="ERROR";
