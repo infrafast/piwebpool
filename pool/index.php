@@ -439,7 +439,9 @@ $tableSettings = new TableGear($optionsSet);
         
 
       var workspace = Blockly.inject('blocklyDiv',
-          {toolbox: document.getElementById('toolbox'),
+          {
+            scrollbars: true;
+            toolbox: document.getElementById('toolbox'),
             zoom:
                  {controls: true,
                   wheel: false,
