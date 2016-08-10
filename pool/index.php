@@ -474,7 +474,7 @@ $tableSettings = new TableGear($optionsSet);
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
-            document.getElementById('scriptareaID').value = code;
+            document.getElementById('scriptareaID').disabled=true;
         }
     
         function saveCode(script){
