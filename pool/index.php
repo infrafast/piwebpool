@@ -210,7 +210,7 @@ $tableSettings = new TableGear($optionsSet);
 
         </xml>
         
-        <xml id="NOtoolbox" style="display: none">
+        <xml id="notoolbox" style="display: none">
         </xml>
 
     
