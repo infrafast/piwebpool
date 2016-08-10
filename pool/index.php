@@ -240,7 +240,7 @@ $tableSettings = new TableGear($optionsSet);
         Blockly.Blocks['dynamicData'] = {
           init: function() {
             this.appendDummyInput()
-                .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["heure", "hour"]]), "select");
+                .appendField(new Blockly.FieldDropdown([["temperature", "temperature"], ["ph", "ph"], ["orp", "orp"],["periode", "period"],["heure", "hour"],["minute", "minute"],["horodateur", "timestamp"]]), "select");
             this.setOutput(true, null);
             this.setColour(330);
           }
