@@ -133,6 +133,7 @@ span {color: #00a2e8;}
 .header{
     cursor: pointer;
     background-repeat:no-repeat	;
+    font-size:100% ;    
 }
 
 .on{
