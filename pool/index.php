@@ -443,6 +443,7 @@ $tableSettings = new TableGear($optionsSet);
             scrollbars: true,
             collapse: true,
             comments: true,
+            grid: true,
             toolbox: document.getElementById('toolbox'),
             zoom:
                  {controls: true,
