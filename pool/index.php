@@ -437,7 +437,7 @@ $tableSettings = new TableGear($optionsSet);
           return [code, Blockly.Lua.ORDER_NONE];
         };        
         
-    Blockly.BlockSvg.CORNER_RADIUS = 30;
+    Blockly.BlockSvg.CORNER_RADIUS = 1;
     Blockly.BlockSvg.SEP_SPACE_X = 2;
     Blockly.BlockSvg.SEP_SPACE_Y = 2;    
 
