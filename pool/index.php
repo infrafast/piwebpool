@@ -128,7 +128,7 @@ $tableSettings = new TableGear($optionsSet);
     
     <table class="materialTab">
     <tr class="header" id="actionTable">
-    <td colspan="2" class="arrondi"><b><span>-</span> Commandes</b></td>
+    <td colspan="2" class="arrondi"><h1><b><span>-</span> Commandes</b></h1></td>
     </tr>
     <tr><th>Historique</th><th>Etat actuel</th></tr>
     <?php 
@@ -142,7 +142,7 @@ $tableSettings = new TableGear($optionsSet);
     
     <table class="materialTab">
         <tr class="header" id="blocklyTable">
-            <td colspan="1" class="arrondi"><b><span>-</span> Programmation</b></td>
+            <td colspan="1" class="arrondi"><h1><b><span>-</span> Programmation</b></h1></td>
         </tr>
         <tr>
             <th style="width: 100%;">
@@ -168,7 +168,7 @@ $tableSettings = new TableGear($optionsSet);
     
     <table class="materialTab">
     <tr class="header" id="logTable">
-    <td colspan="1" class="arrondi"><b><span>-</span> Log</b></td>
+    <td colspan="1" class="arrondi"><h1><b><span>-</span> Log</b></h1></td>
     </tr>
     <tr><th>Valeur</th></tr>
     <tr><td width="100%"><textarea rows="5" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
