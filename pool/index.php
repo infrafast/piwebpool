@@ -210,12 +210,6 @@ $tableSettings = new TableGear($optionsSet);
 
         </xml>
         
-        <xml id="notoolbox" style="display: none">
-        </xml>
-
-    
-    
-    
     <script>
         var graphTypes = ["lineType", "barType", "textType"]; 
         
