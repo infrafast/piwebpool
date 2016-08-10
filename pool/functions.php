@@ -288,7 +288,7 @@ function getCurrentMinute(){
 }
 
 function getCurrentTimeStamp(){
-    return date('H:i:s', time());
+    return date('H:i:s');
 }
 //
 // remove_comments will strip the sql comment lines out of an uploaded sql file
