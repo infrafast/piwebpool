@@ -192,6 +192,10 @@ span {color: #00a2e8;}
   border: 1px solid silver;
 }
 
+.barType, .textType, .lineType{
+  cursor: pointer;
+}
+
 .container .text{
   resize: none;
   outline: none;
