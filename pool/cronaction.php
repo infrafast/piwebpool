@@ -152,7 +152,7 @@ if (!$result) {
         }
     }
 }
-$state.="{periode:".$tw.", temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
+$state.="{Periode:".$tw.", Temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
 appendlog("ACTIONS PERIODIQUES",$answer,$state, $logfilename);
 
 // sync data to disk
