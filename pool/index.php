@@ -171,7 +171,7 @@ $tableSettings = new TableGear($optionsSet);
     <td colspan="1" class="arrondi"><b><span>-</span> Log</b></td>
     </tr>
     <tr><th>Valeur</th></tr>
-    <tr><td width="100%"><textarea rows="5" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
+    <tr><td width="100%"><textarea rows="10" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
     </table>
     
     <div><?= $table->getTable() ?></div>
