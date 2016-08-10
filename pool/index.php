@@ -476,8 +476,7 @@ $tableSettings = new TableGear($optionsSet);
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
-            alert(script);
-            Blockly.mainWorkspace.options.readOnly = true;
+            if (script=="main") Blockly.mainWorkspace.options.readOnly = true;
         }
     
         function saveCode(script){
