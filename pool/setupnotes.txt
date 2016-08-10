@@ -73,10 +73,10 @@ PLATFORM SETUP FROM SCRACTH
 5) configuration:
 /etc/rc.local add 
     logger -s "Starting rc.local"
-    logger -s "POOL MANAGER: calling initUSB.py"
+    logger -s "RC.LOCAL: calling initUSB.py"
     python /var/www/html/pool/initUSB.py
     /var/www/html/pool/hourlycrontab.sh
-    logger -s "POOL MANAGER: forcing fsck"
+    logger -s "RC.LOCAL: forcing fsck"
     echo "-fy" > /forcefsck
 
 
