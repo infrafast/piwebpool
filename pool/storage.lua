@@ -3,9 +3,9 @@ local multiRefObjects = {
 
 } -- multiRefObjects
 local obj1 = {
-	["warning"] = ".";
 	["temperature"] = 0;
-	["traitement1"] = 1;
+	["warning"] = " ";
+	["traitement1"] = 0;
 	["gel"] = 0;
 }
 return obj1
