@@ -486,7 +486,7 @@ $tableSettings = new TableGear($optionsSet);
             if (script=="main"){
                 Blockly.mainWorkspace.options.readOnly = true;
                 //Blockly.mainWorkspace.options.disable = true;
-                Blockly.workspace.updateToolbox("notoolbox");
+                Blockly.workspace.updateToolbox(document.getElementById('fulltoolbox'));
                 document.getElementById('saveScriptBtn').disabled = true;  
             }   
             else{
