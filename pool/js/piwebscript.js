@@ -1,4 +1,4 @@
-alert("piwebscript.js");
+alert("piwebscript.js START");
 
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
     var result;
@@ -145,3 +145,5 @@ function refreshValue(elem,action){
     	}
 	});
 }
+
+alert("piwebscript.js END");
