@@ -497,7 +497,8 @@
         function updateGraph(element){
             var link='graph.php?';
             element.style.backgroundSize="100% 100%";            
-            var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.parentNode.offsetHeight+'&type='+element.classList.item(0)+')';
+            var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height=180'+'&type='+element.classList.item(0)+')';
+    
             element.style.backgroundImage=imgSrc;
             
         }
