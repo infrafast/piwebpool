@@ -13,6 +13,7 @@
  *
  */
 
+alert("Tablegear.js")
 
 (function($){
 
