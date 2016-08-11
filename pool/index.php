@@ -494,16 +494,6 @@
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
-        Element.addMethods({
-          redraw: function(element){
-            element = $(element);
-            var n = document.createTextNode(' ');
-            element.appendChild(n);
-            (function(){n.parentNode.removeChild(n)}).defer();
-            return element;
-          }
-        });        
-        
         function updateGraph(element){
             var link='graph.php?';
             var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
