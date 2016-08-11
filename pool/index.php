@@ -83,7 +83,7 @@
         <link rel="stylesheet" href="css/weather-snippet.css">
     </head>
     <body>
-    <div id="containerLoad">
+
     <table class="materialTab">
     <tr class="header" id="sensorTable">
         <td colspan="3" class="arrondi"><b><span>-</span> Mesures</b></td>
@@ -199,8 +199,6 @@
 
     </xml>
 
-        </div>
-    </body>
     <script>
         // register function that collpase or expand titles
         $('.header').click(function(){
@@ -233,8 +231,6 @@
                 // otherwise we just refresh the content
                 refreshPanel(collapsableTableList[tableID]);
         }
-
-        document.getElementById("containerLoad").style.display = "block";
 
         function refreshPanel(id){
             switch (id) {
@@ -546,5 +542,6 @@
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }        
-        </script>    
+        </script>
+    </body>
 </html>
