@@ -1,3 +1,4 @@
+alert("Tablegear.js START");
 /*
  *
  *  TableGear  (Dynamic table data in HTML)
