@@ -2,8 +2,6 @@
 
 // Attention  : il faudrait exploiter result.state et result.answer et non pas result.error
 
-alert("piwebscript.js");
-
 $('.header').click(function(){
 	$(this).addClass('loading');
     $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
