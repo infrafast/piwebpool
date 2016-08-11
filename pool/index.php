@@ -234,7 +234,7 @@
                         refreshValue(document.getElementById('divORPMeasureID'),'ORP');
                         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
                         //
-                        updateMeasuresGraphs();
+                        //updateMeasuresGraphs();
                     }
             }});
             $(this).removeClass('loading');
@@ -491,7 +491,6 @@
         function updateGraph(element){
             var link='graph.php?';
             var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
-            //alert("imgSrc="+imgSrc);
             element.style.backgroundSize="100% 100%";
             element.style.backgroundImage=imgSrc; 	     
         }
