@@ -252,11 +252,6 @@
             }
         }
 
-        setTimeout(function(){
-           $.LoadingOverlay("hide");
-        }, 3000);
-
-    
         //setup Blockly for LUA variable
         Blockly.Blocks['dynamicData'] = {
           init: function() {
@@ -547,6 +542,8 @@
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }        
+        
+    $.LoadingOverlay("hide");        
         
     </script>
     </body>
