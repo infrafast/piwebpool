@@ -147,7 +147,7 @@
                     </select>
                     <input type="button" id="saveScriptBtn" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
                     <input type="button" id="loadScriptBtn" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
-                    <input type="button" id="runScriptBtn" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée');">
+                    <input type="button" id="runScriptBtn" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée',false,false);">
             </th>
         </tr>
         <tr>
@@ -223,7 +223,7 @@
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
         for (var tableID in collapsableTableList) {
-          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1") 
+          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1",true,null,false,false) 
             document.getElementById(collapsableTableList[tableID]).click();
         }
     
