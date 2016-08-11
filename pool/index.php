@@ -208,7 +208,8 @@
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
             $(this).nextUntil('tr.header').slideToggle(); 
             var id=$(this).attr('id');
-            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
+            var valueToggle=($(this).find('span').text()=='-'?'0':'1');
+            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&valueToggle="+;
             //alert('urlCall : '+urlCall);
             $.ajax({
                 type: "POST",
@@ -216,7 +217,7 @@
             	async:false,
                 success: function(r){
                     if (id=='sensorTable'){
-
+                        alert(valueToggle);
                     }
             }});
             $(this).removeClass('loading');
