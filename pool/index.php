@@ -110,7 +110,7 @@
         </th>
     </tr>
     <tr height="180px" id="graphID">
-        <td class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
+        <td><div class='textType' id="graph=ph" onclick="toggleGraph(this);" ></div></td>
         <td class='textType' id="graph=orp" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" ></td>
     </tr>
