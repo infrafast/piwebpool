@@ -252,8 +252,6 @@
             }
         }
 
-        document.getElementById("containerLoad").style.display = "block";
-
         //setup Blockly for LUA variable
         Blockly.Blocks['dynamicData'] = {
           init: function() {
