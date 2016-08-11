@@ -71,6 +71,7 @@
         <script type="text/javascript" src="js/piwebscript.js"></script>
         <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
         <script type="text/javascript" src="js/weather.js"></script>
+        <script type="text/javascript" src="js/loadingoverlay.js"></script>
         <script type="text/javascript" src="blockly/blockly_compressed.js"></script>
         <script type="text/javascript" src="blockly/lua_compressed.js"></script>
         <script type="text/javascript" src="blockly/blocks_compressed.js"></script>
