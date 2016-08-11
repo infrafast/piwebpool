@@ -101,11 +101,13 @@
         
     </tr>
     <tr>
-        <th colspan="3">Historique sur <select  name="period"  id="periodID" onclick='updateAllGraphs();'>
+        <th colspan="3">Historique sur 
+            <select  name="period"  id="periodID" onclick='updateAllGraphs();'>
                 <option value="8">8 heures</option>
                 <option selected="selected" value="24">dernier jour</option>
                 <option value="168">dernière semaine</option>
-        </select></th>
+            </select>
+        </th>
     </tr>
     <tr height="180px" id="graphID">
         <td class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
