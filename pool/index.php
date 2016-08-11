@@ -202,7 +202,7 @@
     <script>
         // register function that collpase or expand titles
         $('.header').click(function(){
-            $("#element").LoadingOverlay("show");
+            $(this).LoadingOverlay("show");
         	$(this).addClass('loading');
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
             $(this).nextUntil('tr.header').fadeToggle(); 
@@ -218,7 +218,7 @@
                     if (valueToggle==0) refreshPanel(id);
             }});
             $(this).removeClass('loading');
-            $("#element").LoadingOverlay("hide", true);
+            $($this).LoadingOverlay("hide", true);
         });
 
         // collapse all table as per settings stored in the database
