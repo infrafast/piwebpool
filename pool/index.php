@@ -77,8 +77,8 @@
         <script type="text/javascript" src="blockly/blocks_compressed.js"></script>
         <script type="text/javascript" src="blockly/msg/js/fr.js"></script>
         
-        <link rel="stylesheet" href="css/tablegear.css" />
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/tablegear.css" />
         <link rel="stylesheet" href="css/weather-icons.css">
         <link rel="stylesheet" href="css/weather-snippet.css">
     </head>
