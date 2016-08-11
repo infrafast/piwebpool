@@ -8,7 +8,7 @@ LoadingOverlay - A flexible loading overlay jQuery plugin
 (function($, undefined){
     // Default Settings
     var _defaults = {
-        color           : "rgba(255, 255, 255, 1)",
+        color           : "rgba(255, 255, 255, 0.8)",
         custom          : "",
         fade            : true,
         fontawesome     : "",
