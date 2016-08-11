@@ -224,9 +224,11 @@
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
         for (var tableID in collapsableTableList) {
+            // we collapse the section if toggleValue is 1
             if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
                 document.getElementById(collapsableTableList[tableID]).click();
             else
+                // otherwise we just refresh the content
                 refreshPanel(collapsableTableList[tableID]);
         }
 
