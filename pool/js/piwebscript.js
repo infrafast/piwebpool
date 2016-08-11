@@ -1,6 +1,6 @@
 //alert("piwebscript.js START");
 
-function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
+function actionCall(UrlData, async, messageBox, feedback, confirmation){
     var result;
     if (messageBox!==null)
         if (confirmation!==false){
