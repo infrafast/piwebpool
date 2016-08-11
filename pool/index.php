@@ -232,6 +232,8 @@
                 refreshPanel(collapsableTableList[tableID]);
         }
 
+        document.getElementById("containerLoad").style.display = "block";
+
         function refreshPanel(id){
             switch (id) {
                 case 'sensorTable':
