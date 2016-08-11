@@ -201,27 +201,6 @@
 
     <script>
         //$.LoadingOverlay("show");
-        function renderTables(){
-            // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
-             loadWeather("45.840491, 6.085538",0);    
-            // refresh measures indicators
-            refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-            refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
-            //
-            toggleGraph(document.getElementById('graph=ph'));
-            //updateMeasuresGraphs();        
-        
-            // retrieve logfile
-            var logarea = document.getElementById('logFile');
-            logarea.value = actionCall('action=getLog',false,null,false,false);
-            logarea.scrollTop = logarea.scrollHeight;
-            
-            // draw measures graph
-            updateGraphs();
-        }    
-    
-
 
         // register function that collpase or expand titles
         $('.header').click(function(){
@@ -458,6 +437,27 @@
         //   UTILITIES FUNCTIONS
         //
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        
+        function renderTables(){
+            // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
+             loadWeather("45.840491, 6.085538",0);    
+            // refresh measures indicators
+            refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+            refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+            //
+            toggleGraph(document.getElementById('graph=ph'));
+            //updateMeasuresGraphs();        
+        
+            // retrieve logfile
+            var logarea = document.getElementById('logFile');
+            logarea.value = actionCall('action=getLog',false,null,false,false);
+            logarea.scrollTop = logarea.scrollHeight;
+            
+            // draw measures graph
+            updateGraphs();
+        }   
+        
+        
         function myUpdateFunction(event) {
           var code = Blockly.Lua.workspaceToCode(workspace);
           document.getElementById('scriptareaID').value = code;
