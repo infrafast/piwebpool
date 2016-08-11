@@ -212,47 +212,6 @@
         }    
     
 
-
-        // register function that collpase or expand titles
-        $('.header').click(function(){
-        	$(this).addClass('loading');
-            $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
-            $(this).nextUntil('tr.header').slideToggle(); 
-            var id=$(this).attr('id');
-            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
-            //alert('urlCall : '+urlCall);
-            $.ajax({
-                type: "POST",
-            	url: urlCall,
-            	async:false,
-                success: function(r){
-                    if (id=='sensorTable'){
-                        // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
-                         loadWeather("45.840491, 6.085538",0);    
-                        // refresh measures indicators
-                        refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-                        refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-                        refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
-                        //
-                        toggleGraph(document.getElementById('graph=ph'));
-                        //updateMeasuresGraphs();
-                    }
-            }});
-            $(this).removeClass('loading');
-        });
-
-        // collapse all table as per settings stored in the database
-        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-        for (var tableID in collapsableTableList) {
-          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
-            document.getElementById(collapsableTableList[tableID]).click();
-        }
-
-        setTimeout(function(){
-            //rendertables();
-        }, 3000);
-
-    
         //setup Blockly for LUA variable
         Blockly.Blocks['dynamicData'] = {
           init: function() {
@@ -446,6 +405,46 @@
                   scaleSpeed: 1.2},
              trashcan: true          
           });
+        
+        // register function that collpase or expand titles
+        $('.header').click(function(){
+        	$(this).addClass('loading');
+            $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
+            $(this).nextUntil('tr.header').slideToggle(); 
+            var id=$(this).attr('id');
+            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
+            //alert('urlCall : '+urlCall);
+            $.ajax({
+                type: "POST",
+            	url: urlCall,
+            	async:false,
+                success: function(r){
+                    if (id=='sensorTable'){
+                        // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
+                         loadWeather("45.840491, 6.085538",0);    
+                        // refresh measures indicators
+                        refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+                        refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+                        refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+                        //
+                        toggleGraph(document.getElementById('graph=ph'));
+                        //updateMeasuresGraphs();
+                    }
+            }});
+            $(this).removeClass('loading');
+        });
+
+        // collapse all table as per settings stored in the database
+        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
+        for (var tableID in collapsableTableList) {
+          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
+            document.getElementById(collapsableTableList[tableID]).click();
+        }
+
+        setTimeout(function(){
+            //rendertables();
+        }, 3000);        
+        
         
         loadXML("main");
         // callback function to update code related xml and lua when the workspace is modified
