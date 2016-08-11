@@ -522,7 +522,18 @@
             $(this).LoadingOverlay("hide", true);
         });
 
-        
+        // collapse all table as per settings stored in the database
+        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
+        for (var tableID in collapsableTableList) {
+            // we collapse the section if toggleValue is 1
+            if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
+                document.getElementById(collapsableTableList[tableID]).click();
+            else
+                // otherwise we just refresh the content
+                refreshPanel(collapsableTableList[tableID]);
+        }
+
+    
         var workspace = Blockly.inject('blocklyDiv',
           {
             scrollbars: true,
@@ -542,17 +553,6 @@
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
 
-        // collapse all table as per settings stored in the database
-        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-        for (var tableID in collapsableTableList) {
-            // we collapse the section if toggleValue is 1
-            if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
-                document.getElementById(collapsableTableList[tableID]).click();
-            else
-                // otherwise we just refresh the content
-                refreshPanel(collapsableTableList[tableID]);
-        }
-        
         </script>
     </body>
 </html>
