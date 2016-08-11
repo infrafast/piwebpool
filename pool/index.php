@@ -204,7 +204,7 @@
     </xml>
 
     <script>
-        $("#containerLoad").LoadingOverlay("show");
+
         // -----------------------------------------------------------------------
         //
         //      BLOCKLY CODE
