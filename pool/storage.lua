@@ -10,9 +10,9 @@ local obj1 = {
 	["warning"] = " ";
 	["arretTraitement1Temperature"] = " ";
 	["repriseTraitement1Temperature"] = " ";
-	["arretFiltrationGel"] = "";
-	[""] = "";
-	[""] = "";
+	["repriseFiltrationGel"] = " ";
+	["arretFiltrationGel"] = " ";
+	[""] = " ";
 	
 }
 return obj1
