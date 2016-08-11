@@ -202,6 +202,7 @@
     <script>
         //$.LoadingOverlay("show");
 
+        // register function that collpase or expand titles
         $('.header').click(function(){
         	$(this).addClass('loading');
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
