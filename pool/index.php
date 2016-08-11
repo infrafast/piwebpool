@@ -217,7 +217,7 @@
             	async:false,
                 success: function(r){
                     if (id=='sensorTable' && valueToggle==0) {
-                                     loadWeather("45.840491, 6.085538",0);    //alert(valueToggle);
+                            loadWeather("45.840491, 6.085538",0);
                     }
             }});
             $(this).removeClass('loading');
