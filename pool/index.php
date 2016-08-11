@@ -232,7 +232,7 @@
                 refreshPanel(collapsableTableList[tableID]);
         }
 
-        document.getElementById("containerLoad").style.display = "block";
+        $("#containerLoad").show();
 
         function refreshPanel(id){
             switch (id) {
