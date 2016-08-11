@@ -244,9 +244,7 @@
                     logarea.scrollTop = logarea.scrollHeight;
                 break;
                 default:
-
             }
-        
         }
 
         setTimeout(function(){
