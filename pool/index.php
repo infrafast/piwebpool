@@ -234,6 +234,7 @@
             	url: urlCall,
             	async:false,
                 success: function(r){
+                    if (id=='sensorTable')
             }});
             $(this).removeClass('loading');
         });
