@@ -223,7 +223,7 @@
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
         for (var tableID in collapsableTableList) {
-          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false)=="1",true,null,false,false) 
+          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
             document.getElementById(collapsableTableList[tableID]).click();
         }
     
@@ -234,7 +234,7 @@
     
         // retrieve logfile
         var logarea = document.getElementById('logFile');
-        logarea.value = actionCall('action=getLog',false);
+        logarea.value = actionCall('action=getLog',false,null,false,false);
         logarea.scrollTop = logarea.scrollHeight;
         
         // draw measures graph
