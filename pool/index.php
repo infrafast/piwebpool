@@ -201,14 +201,6 @@
     </xml>
 
     <script>
-        // Show full page LoadingOverlay
-        $.LoadingOverlay("show");
-        
-        // Hide it after 3 seconds
-        setTimeout(function(){
-            $.LoadingOverlay("hide");
-        }, 3000);
-
         $('.header').click(function(){
         	$(this).addClass('loading');
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
