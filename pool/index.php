@@ -491,6 +491,13 @@
             calibrate.style.backgroundImage="url('')";
         }
         
+        // -----------------------------------------------------------------------
+        //
+        //      RUN TIME CODE START HERE
+        //
+        // -----------------------------------------------------------------------
+        
+        
         
         // register function that collpase or expand titles
         $('.header').click(function(){
