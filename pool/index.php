@@ -199,6 +199,8 @@
 
     </xml>
 
+        </div>
+    </body>
     <script>
         // register function that collpase or expand titles
         $('.header').click(function(){
@@ -232,7 +234,7 @@
                 refreshPanel(collapsableTableList[tableID]);
         }
 
-        $("#containerLoad").show();
+        document.getElementById("containerLoad").style.display = "block";
 
         function refreshPanel(id){
             switch (id) {
@@ -544,7 +546,5 @@
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }        
-        </script>
-        </div>
-    </body>
+        </script>    
 </html>
