@@ -8,5 +8,11 @@ local obj1 = {
 	["erreurLectureSonde"] = 0;
 	["traitement1"] = 2;
 	["warning"] = " ";
+	["arretTraitement1Temperature"] = " ";
+	["repriseTraitement1Temperature"] = " ";
+	["arretFiltrationGel"] = "";
+	[""] = "";
+	[""] = "";
+	
 }
 return obj1
