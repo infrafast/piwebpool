@@ -59,7 +59,7 @@ function updateScript(xml,lua,script){
 					alert('Erreur : '+result.state);
 				}
 	}});
-	return result.answer+" "+(result.state==true?"":result.state);
+	return result.answer+" "+(result.state===true?"":result.state);
 }
 
 
