@@ -227,7 +227,7 @@
             if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
                 document.getElementById(collapsableTableList[tableID]).click();
             else
-                refreshPanel(tableID);
+                refreshPanel(collapsableTableList[tableID]);
         
         }
 
