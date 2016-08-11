@@ -570,4 +570,4 @@ jQuery.fn.focus = function(){
   });
 };
 
-alert("Tablegear.js END")
+alert("Tablegear.js END");
