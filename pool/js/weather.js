@@ -13,7 +13,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
     loadWeather("45.840491, 6.085538"); //load weather using fixed coordinates : Quintal
 });*/
 
-function loadWeather(location, woeid=0) {
+function loadWeather(location, woeid) {
   //alert("load weather called");
   $.simpleWeather({
     location: location,
