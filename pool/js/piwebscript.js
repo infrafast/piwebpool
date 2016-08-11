@@ -1,4 +1,4 @@
-
+alert("piwebscript.js");
 
 // Attention  : il faudrait exploiter result.state et result.answer et non pas result.error
 
