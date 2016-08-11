@@ -199,27 +199,13 @@
     </xml>
 
     <script>
-        function refreshPanel(id){
-            switch (id) {
-                case 'sensorTable':
-                    loadWeather("45.840491, 6.085538",0);
-                    updateMeasuresGraphs();
-                    refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-                    refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-                    refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
-                break;
-                case 'logTable':
-                    var logarea = document.getElementById('logFile');
-                    logarea.value = actionCall('action=getLog',false,null,false,false);
-                    logarea.scrollTop = logarea.scrollHeight;
-                case 'actionTable':
-                    updateCommandsGraphs();
-                break;
-                default:
-            }
-        }
+        // -----------------------------------------------------------------------
+        //
+        //      BLOCKLY CODE
+        //
+        // -----------------------------------------------------------------
 
-        //setup Blockly for LUA variable
+
         Blockly.Blocks['dynamicData'] = {
           init: function() {
             this.appendDummyInput()
@@ -398,7 +384,7 @@
           return [code, Blockly.Lua.ORDER_NONE];
         };        
         
-                //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //
         //   UTILITIES FUNCTIONS
         //
@@ -490,6 +476,27 @@
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }
+        
+        function refreshPanel(id){
+            switch (id) {
+                case 'sensorTable':
+                    loadWeather("45.840491, 6.085538",0);
+                    updateMeasuresGraphs();
+                    refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+                    refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+                    refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+                break;
+                case 'logTable':
+                    var logarea = document.getElementById('logFile');
+                    logarea.value = actionCall('action=getLog',false,null,false,false);
+                    logarea.scrollTop = logarea.scrollHeight;
+                case 'actionTable':
+                    updateCommandsGraphs();
+                break;
+                default:
+            }
+        }
+    
         
         // -----------------------------------------------------------------------
         //
