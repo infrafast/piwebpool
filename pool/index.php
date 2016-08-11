@@ -450,6 +450,7 @@
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
     
+        document.getElementById("containerLoad").style.display = "block";
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //
         //   UTILITIES FUNCTIONS
