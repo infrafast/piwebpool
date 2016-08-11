@@ -234,7 +234,9 @@
             	url: urlCall,
             	async:false,
                 success: function(r){
-                    if (id=='sensorTable')
+                    if (id=='sensorTable'){
+                        
+                    }
             }});
             $(this).removeClass('loading');
         });
@@ -247,7 +249,7 @@
         }
 
         setTimeout(function(){
-            rendertables();
+            //rendertables();
         }, 3000);
 
     
