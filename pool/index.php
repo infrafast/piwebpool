@@ -542,9 +542,6 @@
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }        
-        
-        $.LoadingOverlay("hide");        
-        
-    </script>
+        </script>
     </body>
 </html>
