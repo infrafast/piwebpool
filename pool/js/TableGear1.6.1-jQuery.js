@@ -13,8 +13,6 @@
  *
  */
 
-alert("Tablegear.js")
-
 (function($){
 
   function setDefaults(name, value, hash){
@@ -571,3 +569,5 @@ jQuery.fn.focus = function(){
     if(this.focus) this.focus();
   });
 };
+
+alert("Tablegear.js END")
