@@ -244,6 +244,7 @@
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
         for (var tableID in collapsableTableList) {
+          document.getElementById(collapsableTableList[tableID]).slideToggle();
           if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
             document.getElementById(collapsableTableList[tableID]).click();
         }
