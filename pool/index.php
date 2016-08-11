@@ -201,12 +201,6 @@
 
     <script>
         //$.LoadingOverlay("show");
-        // collapse all table as per settings stored in the database
-        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-        for (var tableID in collapsableTableList) {
-          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
-            document.getElementById(collapsableTableList[tableID]).click();
-        }
 
         $('.header').click(function(){
         	$(this).addClass('loading');
@@ -224,8 +218,13 @@
             $(this).removeClass('loading');
         });
 
+        // collapse all table as per settings stored in the database
+        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
+        for (var tableID in collapsableTableList) {
+          if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
+            document.getElementById(collapsableTableList[tableID]).click();
+        }
 
-    
         // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
         loadWeather("45.840491, 6.085538",0);
 
