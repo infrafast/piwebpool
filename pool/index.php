@@ -242,6 +242,11 @@
                     var logarea = document.getElementById('logFile');
                     logarea.value = actionCall('action=getLog',false,null,false,false);
                     logarea.scrollTop = logarea.scrollHeight;
+                case 'actionTable':
+                    var logarea = document.getElementById('logFile');
+                    logarea.value = actionCall('action=getLog',false,null,false,false);
+                    logarea.scrollTop = logarea.scrollHeight;
+                    
                 break;
                 default:
             }
