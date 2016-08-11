@@ -226,6 +226,11 @@
             document.getElementById(collapsableTableList[tableID]).click();
         }
 
+        setTimeout(function(){
+            rendertables();
+        }, 3000);
+
+
         // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
         loadWeather("45.840491, 6.085538",0);
 
