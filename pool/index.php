@@ -543,7 +543,7 @@
             calibrate.style.backgroundImage="url('')";
         }        
         
-    $.LoadingOverlay("hide");        
+        $.LoadingOverlay("hide");        
         
     </script>
     </body>
