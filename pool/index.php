@@ -200,7 +200,6 @@ $tableSettings = new TableGear($optionsSet);
 
     </xml>
 
-
     <script>
         $('.header').click(function(){
         	$(this).addClass('loading');
