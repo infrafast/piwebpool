@@ -1,4 +1,3 @@
-alert("weather.js START");
 // weather
 
 /* Does your browser support geolocation? 
@@ -155,5 +154,3 @@ function loadWeather(location, woeid) {
     }
   });
 })(jQuery);
-
-alert("weather.js END");
