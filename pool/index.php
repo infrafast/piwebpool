@@ -161,6 +161,12 @@
         </tr>
     </table>
     
+    <?= $table->getTable() ?>
+    <?= $table->getJavascript("jquery") ?>
+    
+    <?= $tableSettings->fetchData("SELECT id,value,description from settings where userSetting=true;"); $tableSettings->getTable(); ?>
+    <?= $tableSettings->getJavascript("jquery") ?>
+
     <table class="materialTab">
     <tr class="header" id="logTable">
     <td colspan="1" class="arrondi"><b><span>-</span> Log</b></td>
@@ -168,12 +174,7 @@
     <tr><th>Valeur</th></tr>
     <tr><td width="100%"><textarea rows="10" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
     </table>
-    
-    <?= $table->getTable() ?>
-    <?= $table->getJavascript("jquery") ?>
-    
-    <?= $tableSettings->fetchData("SELECT id,value,description from settings where userSetting=true;"); $tableSettings->getTable(); ?>
-    <?= $tableSettings->getJavascript("jquery") ?>
+
 
     <xml id="fulltoolbox" style="display: none">
 
