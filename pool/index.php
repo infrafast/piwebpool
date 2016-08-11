@@ -200,7 +200,7 @@
     </xml>
 
     <script>
-        //$.LoadingOverlay("show");
+        $.LoadingOverlay("show");
 
         // register function that collpase or expand titles
         $('.header').click(function(){
