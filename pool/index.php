@@ -83,7 +83,6 @@
         <link rel="stylesheet" href="css/weather-snippet.css">
     </head>
     <body>
-    <div id="containerLoad">
     <table class="materialTab">
     <tr class="header" id="sensorTable">
         <td colspan="3" class="arrondi"><b><span>-</span> Mesures</b></td>
@@ -543,6 +542,5 @@
             calibrate.style.backgroundImage="url('')";
         }        
         </script>
-        </div>
     </body>
 </html>
