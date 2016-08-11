@@ -514,10 +514,14 @@
         function updateGraphs(){
         // this function is called when user change the combo to choose measures rendition period graph
         // it update the call to the graph function according to the selected value
-         	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
-        	while(++i < colslen) updateGraph(cols[i]);
+            updateMeasuresGraphs();
             updateCommandsGraphs();
         }  
+        
+        function updateMeasuresGraphs(){
+         	var cols = document.getElementById('graphID').getElementsByTagName('td'), colslen = cols.length, i = -1;
+        	while(++i < colslen) updateGraph(cols[i]);
+        }
         
         function updateCommandsGraphs(){    
             // refresh commands graphs
