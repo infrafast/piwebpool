@@ -238,8 +238,10 @@
                     refreshValue(document.getElementById('divORPMeasureID'),'ORP');
                     refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
                 break;
-                case '':
-
+                case 'logTable':
+                    var logarea = document.getElementById('logFile');
+                    logarea.value = actionCall('action=getLog',false,null,false,false);
+                    logarea.scrollTop = logarea.scrollHeight;
                 break;
                 default:
 
