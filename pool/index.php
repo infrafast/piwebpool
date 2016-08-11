@@ -209,7 +209,7 @@
             $(this).nextUntil('tr.header').slideToggle(); 
             var id=$(this).attr('id');
             var valueToggle=($(this).find('span').text()=='-'?'0':'1');
-            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&valueToggle="+;
+            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+valueToggle;
             //alert('urlCall : '+urlCall);
             $.ajax({
                 type: "POST",
