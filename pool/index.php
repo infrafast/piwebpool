@@ -477,7 +477,8 @@
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
-        function updateGraph(element,link='graph.php?'){
+        function updateGraph(element){
+            var link='graph.php?';
             var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
             //alert("imgSrc="+imgSrc);
             element.style.backgroundSize="100% 100%";
