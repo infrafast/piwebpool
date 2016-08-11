@@ -233,6 +233,8 @@
                         refreshValue(document.getElementById('divPhMeasureID'),'Ph');
                         refreshValue(document.getElementById('divORPMeasureID'),'ORP');
                         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+                        //
+                        updateMeasuresGraphs();
                     }
             }});
             $(this).removeClass('loading');
