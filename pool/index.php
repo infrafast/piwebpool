@@ -204,6 +204,7 @@
     </xml>
 
     <script>
+        $("#containerLoad").LoadingOverlay("show");
         // -----------------------------------------------------------------------
         //
         //      BLOCKLY CODE
@@ -557,7 +558,7 @@
         loadXML("main");
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
-
+        $("#containerLoad").LoadingOverlay("hide");
         </script>
         </div>
     </body>
