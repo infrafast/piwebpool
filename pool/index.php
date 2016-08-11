@@ -209,7 +209,7 @@
             $(this).nextUntil('tr.header').slideToggle(); 
             var id=$(this).attr('id');
             var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
-            //alert('urlCall : '+urlCall);
+            alert('urlCall : '+urlCall);
             $.ajax({
                 type: "POST",
             	url: urlCall,
@@ -439,7 +439,6 @@
             // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
             loadWeather("45.840491, 6.085538",0);
     
-        
             // refresh measures indicators
             refreshValue(document.getElementById('divPhMeasureID'),'Ph');
             refreshValue(document.getElementById('divORPMeasureID'),'ORP');
