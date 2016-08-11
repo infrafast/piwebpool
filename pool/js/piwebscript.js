@@ -50,7 +50,7 @@ function updateScript(xml,lua,script){
 			type: "POST",
 			url: "./action.php",
 			data:{action:"updateScript",id:script,xml:xml,lua:lua,extendedJson:true},
-			async:false,
+			async:true,
 			success: function(r){
 				result = eval(r);
 				if(result.answer != "OK"){          
