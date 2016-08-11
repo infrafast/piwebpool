@@ -162,7 +162,6 @@ $tableSettings = new TableGear($optionsSet);
         </tr>
     </table>
     
-    
     <table class="materialTab">
     <tr class="header" id="logTable">
     <td colspan="1" class="arrondi"><b><span>-</span> Log</b></td>
@@ -177,32 +176,6 @@ $tableSettings = new TableGear($optionsSet);
     <div><?= $tableSettings->fetchData("SELECT id,value,description from settings where userSetting=true;"); $tableSettings->getTable(); ?></div>
     <?= $tableSettings->getJavascript("jquery") ?>
 
-
-        <xml id="fulltoolbox" style="display: none">
-
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="logic_operation"></block>
-
-            <block type="dynamicData"></block>
-            <block type="variables_set"><field name="VAR">info</field></block>
-            <block type="variables_get"><field name="VAR">variable</field></block>
-            <block type="on_off"></block>
-            <block type="math_number"></block>
-            <block type="math_arithmetic"></block>
-            <block type="math_change"></block>
-            
-            <block type="weburl"></block>
-            <block type="message"></block>
-            <block type="text"></block>
-            <block type="text_join"></block>
-
-            <block type="setcommand"></block>
-            <block type="getcommand"></block>
-
-
-        </xml>
-        
     <script>
         $('.header').click(function(){
         	$(this).addClass('loading');
@@ -532,5 +505,28 @@ $tableSettings = new TableGear($optionsSet);
         }        
         
     </script>
+    <xml id="fulltoolbox" style="display: none">
+
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+
+        <block type="dynamicData"></block>
+        <block type="variables_set"><field name="VAR">info</field></block>
+        <block type="variables_get"><field name="VAR">variable</field></block>
+        <block type="on_off"></block>
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_change"></block>
+        
+        <block type="weburl"></block>
+        <block type="message"></block>
+        <block type="text"></block>
+        <block type="text_join"></block>
+
+        <block type="setcommand"></block>
+        <block type="getcommand"></block>
+
+    </xml>
     </body>
 </html>
