@@ -136,33 +136,36 @@
     <?php } ?>
     </table>
     
-    <table class="materialTab">
-        <tr class="header" id="blocklyTable">
-            <td colspan="1" class="arrondi"><b><span>-</span> Programmation</b></td>
-        </tr>
-        <tr>
-            <th style="width: 100%;">
-                  <select  name="luascript"  id="scriptID">
-                        <option value="main">defaut</option>
-                        <option value="custom">perso</option>
-                    </select>
-                    <input type="button" id="saveScriptBtn" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
-                    <input type="button" id="loadScriptBtn" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
-                    <input type="button" id="runScriptBtn" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée',false,false);">
-            </th>
-        </tr>
-        <tr>
-          <td><div id="blocklyDiv" style="height: 800px; width:100%"></div></td>
-        <tr>
-            <th>Code preview</th>
-        </tr>
-        <tr>
-            <td width="100%"><textarea id="scriptareaID" rows="10"  style="color: grey; width: 100%;">Erreur chargement de script</textarea>
-        </tr>
-    </table>
-    
     <?= $table->getTable() ?>
     <?= $table->getJavascript("jquery") ?>
+    
+    
+    <table class="materialTab">
+    <tr class="header" id="blocklyTable">
+        <td colspan="1" class="arrondi"><b><span>-</span> Programmation</b></td>
+    </tr>
+    <tr>
+        <th style="width: 100%;">
+              <select  name="luascript"  id="scriptID">
+                    <option value="main">defaut</option>
+                    <option value="custom">perso</option>
+                </select>
+                <input type="button" id="saveScriptBtn" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
+                <input type="button" id="loadScriptBtn" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
+                <input type="button" id="runScriptBtn" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée',false,false);">
+        </th>
+    </tr>
+    <tr>
+      <td><div id="blocklyDiv" style="height: 800px; width:100%"></div></td>
+    <tr>
+        <th>Code preview</th>
+    </tr>
+    <tr>
+        <td width="100%"><textarea id="scriptareaID" rows="10"  style="color: grey; width: 100%;">Erreur chargement de script</textarea>
+    </tr>
+</table>
+    
+    
     
     <?= $tableSettings->fetchData("SELECT id,value,description from settings where userSetting=true;"); $tableSettings->getTable(); ?>
     <?= $tableSettings->getJavascript("jquery") ?>
