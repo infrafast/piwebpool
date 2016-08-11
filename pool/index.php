@@ -209,8 +209,6 @@
             $.LoadingOverlay("hide");
         }, 3000);
 
-    
-    
         $('.header').click(function(){
         	$(this).addClass('loading');
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
