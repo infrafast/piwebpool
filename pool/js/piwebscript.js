@@ -145,5 +145,3 @@ function refreshValue(elem,action){
     	}
 	});
 }
-
-
