@@ -199,38 +199,6 @@
     </xml>
 
     <script>
-        // register function that collpase or expand titles
-        $('.header').click(function(){
-            $(this).LoadingOverlay("show");
-        	$(this).addClass('loading');
-            $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
-            $(this).nextUntil('tr.header').fadeToggle(); 
-            var id=$(this).attr('id');
-            var valueToggle=($(this).find('span').text()=='-'?'0':'1');
-            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+valueToggle;
-            //alert('urlCall : '+urlCall);
-            $.ajax({
-                type: "POST",
-            	url: urlCall,
-            	async:false,
-                success: function(r){
-                    if (valueToggle==0) refreshPanel(id);
-            }});
-            $(this).removeClass('loading');
-            $(this).LoadingOverlay("hide", true);
-        });
-
-        // collapse all table as per settings stored in the database
-        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
-        for (var tableID in collapsableTableList) {
-            // we collapse the section if toggleValue is 1
-            if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
-                document.getElementById(collapsableTableList[tableID]).click();
-            else
-                // otherwise we just refresh the content
-                refreshPanel(collapsableTableList[tableID]);
-        }
-
         function refreshPanel(id){
             switch (id) {
                 case 'sensorTable':
@@ -430,7 +398,7 @@
           return [code, Blockly.Lua.ORDER_NONE];
         };        
         
-      var workspace = Blockly.inject('blocklyDiv',
+        var workspace = Blockly.inject('blocklyDiv',
           {
             scrollbars: true,
             comments: true,
@@ -448,6 +416,40 @@
         loadXML("main");
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
+
+        // register function that collpase or expand titles
+        $('.header').click(function(){
+            $(this).LoadingOverlay("show");
+        	$(this).addClass('loading');
+            $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
+            $(this).nextUntil('tr.header').fadeToggle(); 
+            var id=$(this).attr('id');
+            var valueToggle=($(this).find('span').text()=='-'?'0':'1');
+            var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+valueToggle;
+            //alert('urlCall : '+urlCall);
+            $.ajax({
+                type: "POST",
+            	url: urlCall,
+            	async:false,
+                success: function(r){
+                    if (valueToggle==0) refreshPanel(id);
+            }});
+            $(this).removeClass('loading');
+            $(this).LoadingOverlay("hide", true);
+        });
+
+        // collapse all table as per settings stored in the database
+        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
+        for (var tableID in collapsableTableList) {
+            // we collapse the section if toggleValue is 1
+            if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
+                document.getElementById(collapsableTableList[tableID]).click();
+            else
+                // otherwise we just refresh the content
+                refreshPanel(collapsableTableList[tableID]);
+        }
+        
+        
     
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //
