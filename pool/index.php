@@ -130,7 +130,7 @@
     <?php 
     foreach($materials as $material=>$pin){ ?>
     <tr height="80px">
-    	<?php echo "<td class='barType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);' >"?></td>
+    	<?php echo "<td class='barType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);'>"?></td>
     	<td><div id=<?php echo "'commandButtonID".$material."'";?> onclick="changeState(<?php echo "'".$material."'"; ?>,this)" class="buttonState <?php echo (getPin($pins[$materials[$material]])==1?'on':'off'); ?>"><?php echo "<br>".(getPin($pins[$materials[$material]])==1?'on':'off')."<br><br>";?></div></td>
     </tr>
     <?php } ?>
