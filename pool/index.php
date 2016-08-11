@@ -83,7 +83,7 @@
         <link rel="stylesheet" href="css/weather-snippet.css">
     </head>
     <body>
-
+    <script>$.LoadingOverlay("show");</script>
     <table class="materialTab">
     <tr class="header" id="sensorTable">
         <td colspan="3" class="arrondi"><b><span>-</span> Mesures</b></td>
@@ -200,8 +200,6 @@
     </xml>
 
     <script>
-        $.LoadingOverlay("show");
-
         // register function that collpase or expand titles
         $('.header').click(function(){
         	$(this).addClass('loading');
