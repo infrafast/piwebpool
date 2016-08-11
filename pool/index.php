@@ -220,8 +220,6 @@ $tableSettings = new TableGear($optionsSet);
             $(this).removeClass('loading');
         });
 
-        
-        
         var graphTypes = ["lineType", "barType", "textType"]; 
         
         // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
