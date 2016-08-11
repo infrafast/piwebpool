@@ -174,7 +174,7 @@ $tableSettings = new TableGear($optionsSet);
     <?= $tableSettings->getJavascript("jquery") ?>
 
 
-    <script src="js/jquery.min.js"></script>
+
     <script src="js/piwebscript.js"></script>
     <script src="js/weather.js"></script>
     
