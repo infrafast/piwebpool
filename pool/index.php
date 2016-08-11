@@ -505,7 +505,6 @@
         });        
         
         function updateGraph(element){
-            element.redraw();
             var link='graph.php?';
             var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
             element.style.backgroundSize="100% 100%";
