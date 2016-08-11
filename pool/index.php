@@ -109,8 +109,8 @@
             </select>
         </th>
     </tr>
-    <tr height="100%" id="graphID">
-        <td height="180" class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
+    <tr height="180" id="graphID">
+        <td class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=orp" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" ></td>
     </tr>
