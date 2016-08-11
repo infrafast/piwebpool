@@ -218,6 +218,9 @@
                 success: function(r){
                     if (id=='sensorTable' && valueToggle==0) {
                             loadWeather("45.840491, 6.085538",0);
+                            refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+                            refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+                            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
                     }
             }});
             $(this).removeClass('loading');
