@@ -112,7 +112,7 @@
     <tr height="180px" id="graphID">
         <td class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=orp" onclick="toggleGraph(this);" ></td>
-        <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
+        <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" ></td>
     </tr>
     <tr>
         <td id="PhCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" onclick="calibrateAndRefresh('Ph',document.getElementById('phCalValueID').value);"><input type="text" id="phCalValueID" name="phCalValue" value="7.00" maxlength="4" size="4"></td>
