@@ -68,7 +68,7 @@ function getScript(code,script){
 		type: "POST",
 		url: "./action.php",
 		data:{action:"getScript",id:script,code:code,extendedJson:true},
-		async:false,
+		async:true,
 		success: function(r){
 			result = eval(r);
 			if(result.answer != "OK"){          
