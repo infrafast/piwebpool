@@ -494,7 +494,7 @@
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
 
-        var forceRedraw = function(element){
+        function forceRedraw(element){
         
             if (!element) { return; }
         
@@ -511,7 +511,7 @@
         }
         
         function updateGraph(element){
-
+            
             var link='graph.php?';
             var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
             element.style.backgroundSize="100% 100%";
