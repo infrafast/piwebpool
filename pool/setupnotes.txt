@@ -15,7 +15,11 @@ TODO LIST
     - http://juice4halt.com/
     - compatibility with IE and safari
     - move all js code to js
-    - add user/admin setup
+    - add user/admin setup  
+        - editable field in script table with possible value: "user","admin","none"
+        - header and footer will have "none"
+        - custom will have "user"
+        - main will have "admin"
     - implement installation wizard
     - finalize forecast / interpretation of the data
     - implement i18n
