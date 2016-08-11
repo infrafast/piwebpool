@@ -58,7 +58,6 @@ cursor: pointer;
 }
 
 tr.loading {
-  color: #ff0000;
   background-color: #444;
   background: url('../images/loading.gif') no-repeat 4px center;  
 }
