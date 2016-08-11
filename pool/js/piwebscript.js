@@ -1,5 +1,3 @@
-//alert("piwebscript.js START");
-
 function actionCall(UrlData, async, messageBox, feedback, confirmation){
     var result;
     if (messageBox!==null)
@@ -145,5 +143,3 @@ function refreshValue(elem,action){
     	}
 	});
 }
-
-//alert("piwebscript.js END");
