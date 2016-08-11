@@ -234,7 +234,7 @@
                         refreshValue(document.getElementById('divORPMeasureID'),'ORP');
                         refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
                         //
-                        toggleGraph("graph=ph");
+                        toggleGraph(document.getElementById('graph=ph'));
                         //updateMeasuresGraphs();
                     }
             }});
