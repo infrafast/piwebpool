@@ -1,21 +1,5 @@
 alert("piwebscript.js");
 
-$('.header').click(function(){
-	$(this).addClass('loading');
-    $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
-    $(this).nextUntil('tr.header').slideToggle(); 
-    var id=$(this).attr('id');
-    var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+($(this).find('span').text()=='-'?'0':'1');
-    //alert('urlCall : '+urlCall);
-    $.ajax({
-        type: "POST",
-    	url: urlCall,
-    	async:false,
-        success: function(r){
-    }});
-    $(this).removeClass('loading');
-});
-
 function actionCall(UrlData, async=true, messageBox=null, feedback=false, confirmation=false){
     var result;
     if (messageBox!==null)
