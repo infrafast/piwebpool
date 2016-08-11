@@ -497,6 +497,7 @@
         }
         
         function toggleGraph(element){
+            alert("called togglegraph");
             var graphTypes = ["lineType", "barType", "textType"];
             var nextGraphType = "undef";
             var currentGraphType = element.classList.item(0);
