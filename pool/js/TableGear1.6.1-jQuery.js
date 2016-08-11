@@ -1,4 +1,3 @@
-alert("Tablegear.js START");
 /*
  *
  *  TableGear  (Dynamic table data in HTML)
@@ -570,5 +569,3 @@ jQuery.fn.focus = function(){
     if(this.focus) this.focus();
   });
 };
-
-alert("Tablegear.js END");
