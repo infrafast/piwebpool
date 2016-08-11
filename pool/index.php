@@ -494,6 +494,16 @@
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
         
+        Element.addMethods({
+          redraw: function(element){
+            element = $(element);
+            var n = document.createTextNode(' ');
+            element.appendChild(n);
+            (function(){n.parentNode.removeChild(n)}).defer();
+            return element;
+          }
+        });        
+        
         function updateGraph(element){
             element.style.display = 'none';
             element.style.display = 'inline';
