@@ -169,11 +169,6 @@ $tableSettings = new TableGear($optionsSet);
     <tr><td width="100%"><textarea rows="10" id="logFile" readonly style="color: grey; width: 100%;"></textarea></td></tr>
     </table>
     
-    <div><?= $table->getTable() ?></div>
-    <?= $table->getJavascript("jquery") ?>
-    
-    <div><?= $tableSettings->fetchData("SELECT id,value,description from settings where userSetting=true;"); $tableSettings->getTable(); ?></div>
-    <?= $tableSettings->getJavascript("jquery") ?>
 
     <xml id="fulltoolbox" style="display: none">
 
