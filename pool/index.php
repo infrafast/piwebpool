@@ -555,5 +555,6 @@
         workspace.addChangeListener(myUpdateFunction);
 
         </script>
+        </div>
     </body>
 </html>
