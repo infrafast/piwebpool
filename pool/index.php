@@ -218,7 +218,7 @@
         var graphTypes = ["lineType", "barType", "textType"]; 
         
         // call the weather snippet (see weather.js) that fill in the content of <div id="weather">
-        loadWeather("45.840491, 6.085538");
+        loadWeather("45.840491, 6.085538",0);
         
         // collapse all table as per settings stored in the database
         var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres'];
