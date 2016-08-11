@@ -109,7 +109,7 @@ function refreshValue(elem,action){
 	$.ajax({
     	type: "POST",
     	url: urlCall,
-    	async:false,
+    	async:true,
     	success: function(r){
     		var result = eval(r);
             var newValue = result.state;
