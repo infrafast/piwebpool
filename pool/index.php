@@ -110,7 +110,7 @@
         <th></th>
     </tr>
     <tr height="180px" id="graphID">
-        <td class='textType' id="graph=ph" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
+        <td class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=orp" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
         <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" style="background-image: url('images/loading.gif'); background-repeat:no-repeat; "></td>
     </tr>
