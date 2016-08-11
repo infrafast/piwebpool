@@ -231,12 +231,20 @@
         }
 
         function refreshPanel(id){
-            if (id=='sensorTable') {
-                loadWeather("45.840491, 6.085538",0);
-                refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-                refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-                refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
-            }            
+            switch id {
+                case 'sensorTable':
+                    loadWeather("45.840491, 6.085538",0);
+                    refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+                    refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+                    refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+                break;
+                case '':
+
+                break;
+                default:
+
+            }
+        
         }
 
         setTimeout(function(){
