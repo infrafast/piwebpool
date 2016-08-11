@@ -228,7 +228,6 @@
                 document.getElementById(collapsableTableList[tableID]).click();
             else
                 refreshPanel(collapsableTableList[tableID]);
-        
         }
 
         function refreshPanel(id){
