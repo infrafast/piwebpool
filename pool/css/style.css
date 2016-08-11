@@ -73,6 +73,9 @@ td { vertical-align: top; }
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
+#containerLoad {display: none;}
+
+
 body{ font:26px/32px Helvetica, Helvetica Neue, Arial; }
 
 span {color: #00a2e8;}
