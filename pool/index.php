@@ -235,7 +235,7 @@
             	async:false,
                 success: function(r){
                     if (id=='sensorTable'){
-                        
+                         loadWeather("45.840491, 6.085538",0);    
                     }
             }});
             $(this).removeClass('loading');
