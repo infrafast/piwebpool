@@ -543,5 +543,6 @@
             calibrate.style.backgroundImage="url('')";
         }        
         </script>
+        </div>
     </body>
 </html>
