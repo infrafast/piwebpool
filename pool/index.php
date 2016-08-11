@@ -253,7 +253,7 @@
         }
 
         setTimeout(function(){
-            //rendertables();
+           $.LoadingOverlay("hide");
         }, 3000);
 
     
