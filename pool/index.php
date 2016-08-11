@@ -202,7 +202,7 @@
     <script>
         // register function that collpase or expand titles
         $('.header').click(function(){
-            $(this).LoadingOverlay("show");
+            $(this).children().LoadingOverlay("show");
         	$(this).addClass('loading');
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
             $(this).nextUntil('tr.header').fadeToggle(); 
