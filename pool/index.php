@@ -218,7 +218,7 @@
                     if (valueToggle==0) refreshPanel(id);
             }});
             $(this).removeClass('loading');
-            $($this).LoadingOverlay("hide", true);
+            $(this).LoadingOverlay("hide", true);
         });
 
         // collapse all table as per settings stored in the database
