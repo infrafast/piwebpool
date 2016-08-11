@@ -204,8 +204,6 @@
         //      BLOCKLY CODE
         //
         // -----------------------------------------------------------------
-
-
         Blockly.Blocks['dynamicData'] = {
           init: function() {
             this.appendDummyInput()
