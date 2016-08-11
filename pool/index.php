@@ -484,6 +484,7 @@
         }
         
         function toggleGraph(element){
+            var graphTypes = ["lineType", "barType", "textType"];
             var nextGraphType = "undef";
             var currentGraphType = element.classList.item(0);
             // locate the class in the list to get the next one
