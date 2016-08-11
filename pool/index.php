@@ -83,16 +83,6 @@
         <link rel="stylesheet" href="css/weather-snippet.css">
     </head>
     
-    <script>
-        // Show full page LoadingOverlay
-        $.LoadingOverlay("show");
-        
-        // Hide it after 3 seconds
-        setTimeout(function(){
-            $.LoadingOverlay("hide");
-        }, 3000);
-    </script>
-    
     <body>
 
     <table class="materialTab">
@@ -211,6 +201,15 @@
     </xml>
 
     <script>
+        // Show full page LoadingOverlay
+        $.LoadingOverlay("show");
+        
+        // Hide it after 3 seconds
+        setTimeout(function(){
+            $.LoadingOverlay("hide");
+        }, 3000);
+
+    
     
         $('.header').click(function(){
         	$(this).addClass('loading');
