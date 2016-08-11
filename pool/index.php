@@ -206,7 +206,9 @@
         $('.header').click(function(){
         	$(this).addClass('loading');
             $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
-            $(this).nextUntil('tr.header').slideToggle(); 
+            $(this).nextUntil('tr.header').slideToggle(1000, function(){
+                alert("The slideToggle() method is finished!");
+            }); 
             var id=$(this).attr('id');
             var valueToggle=($(this).find('span').text()=='-'?'0':'1');
             var urlCall="./action.php?extendedJson&action=updateSetting&id="+id+"&value="+valueToggle;
