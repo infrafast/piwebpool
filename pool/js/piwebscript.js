@@ -80,8 +80,6 @@ function getScript(code,script){
 }
 
 function getColorVal(middleVal,compareVal){
-    //return "grey";
-    
     diffVal = Math.abs(compareVal - middleVal);
     var ecartVal = diffVal/middleVal;
     var colorSensor;
