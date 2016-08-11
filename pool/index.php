@@ -494,28 +494,12 @@
           //alert("sent: "+Blockly.Lua.workspaceToCode(workspace));
         }    
 
-        function forceRedraw(element){
-        
-            if (!element) { return; }
-        
-            var n = document.createTextNode(' ');
-            var disp = element.style.display;  // don't worry about previous display style
-        
-            element.appendChild(n);
-            element.style.display = 'none';
-        
-            setTimeout(function(){
-                element.style.display = disp;
-                n.parentNode.removeChild(n);
-            },20); // you can play with this timeout to make it as short as possible
-        }
-        
         function updateGraph(element){
-            forceRedraw(element);
             var link='graph.php?';
             var imgSrc = 'url('+link+element.id+'&period='+document.getElementById('periodID').value+'&width='+element.offsetWidth+'&height='+element.offsetHeight+'&type='+element.classList.item(0)+')';
             element.style.backgroundSize="100% 100%";
-            element.style.backgroundImage=imgSrc; 	     
+            element.style.backgroundImage=imgSrc;
+            
         }
         
         function toggleGraph(element){
