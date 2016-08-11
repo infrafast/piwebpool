@@ -68,9 +68,9 @@ $tableSettings = new TableGear($optionsSet);
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Piweb</title>
+        <script type="text/javascript" src="js/piwebscript.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
-        <script type="text/javascript" src="js/piwebscript.js"></script>
         <script type="text/javascript" src="js/weather.js"></script>
         <script type="text/javascript" src="blockly/blockly_compressed.js"></script>
         <script type="text/javascript" src="blockly/lua_compressed.js"></script>
