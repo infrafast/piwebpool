@@ -536,7 +536,7 @@
             updateGraph(element);
         }
           
-        function updateGraphs(){
+        function updateAllGraphs(){
         // this function is called when user change the combo to choose measures rendition period graph
         // it update the call to the graph function according to the selected value
             updateMeasuresGraphs();
