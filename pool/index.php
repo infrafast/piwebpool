@@ -237,6 +237,7 @@
                     refreshValue(document.getElementById('divPhMeasureID'),'Ph');
                     refreshValue(document.getElementById('divORPMeasureID'),'ORP');
                     refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+                    updateMeasuresGraphs();
                 break;
                 case 'logTable':
                     var logarea = document.getElementById('logFile');
