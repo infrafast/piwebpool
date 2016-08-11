@@ -109,7 +109,7 @@
             </select>
         </th>
     </tr>
-    <tr style="display: table-row;" height="180px" id="graphID">
+    <tr height="180px" id="graphID">
         <td class='textType' id="graph=ph" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=orp" onclick="toggleGraph(this);" ></td>
         <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" ></td>
