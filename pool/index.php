@@ -408,16 +408,15 @@
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
+            Blockly.mainWorkspace.options.readOnly = false;
+            document.getElementById('saveScriptBtn').disabled = false;  
+
             if (script=="main" && document.getElementById('unlock').checked == false){
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
                 Blockly.mainWorkspace.options.readOnly = true;
                 document.getElementById('saveScriptBtn').disabled = true;  
             }   
-            else{
-                Blockly.mainWorkspace.options.readOnly = false;
-                document.getElementById('saveScriptBtn').disabled = false;  
-            }
         }
     
         function saveCode(script){
