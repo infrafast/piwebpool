@@ -408,6 +408,7 @@
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.Xml.domToWorkspace(xml, workspace);
+            alert(document.getElementById('unlock').value);
             if (script=="main" && document.getElementById('unlock').value == true){
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
