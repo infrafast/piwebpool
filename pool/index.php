@@ -153,7 +153,7 @@
                 <input type="button" id="saveScriptBtn" value="sauver" onclick="saveCode(document.getElementById('scriptID').value);">
                 <input type="button" id="loadScriptBtn" value="charger" onclick="loadXML(document.getElementById('scriptID').value);">
                 <input type="button" id="runScriptBtn" value="executer" onclick="actionCall('action=forceCron',true,'Execution démarée',false,false);">
-                <input type="checkbox" name="lock" onclick="document.getElementById('saveScriptBtn').disabled=!document.getElementById('saveScriptBtn').disabled">UnLock
+                <input type="checkbox" id="unlock" onclick="document.getElementById('saveScriptBtn').disabled=!document.getElementById('saveScriptBtn').disabled">UnLock
         </th>
     </tr>
     <tr>
