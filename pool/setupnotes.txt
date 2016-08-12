@@ -73,7 +73,9 @@ PLATFORM SETUP FROM SCRACTH
     python /var/www/html/pool/initUSB.py                                                                                                                    
     sh /var/www/html/pool/hourlycrontab.sh&                                                                                                                 
     logger -s "RC.LOCAL: forcing fsck for next reboot"                                                                                                      
-    echo "-fy" > /forcefsck                                                                                                                                 
+    echo "-fy" > /forcefsck
+    logger -s "RC.LOCAL: turn off power sfa eon wlan0"                                                                                                          
+    iw dev wlan0 set power_save off
     exit 0 
 
  /etc/ssmtp/ssmtp.conf add
