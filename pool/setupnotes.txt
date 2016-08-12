@@ -47,6 +47,10 @@ PLATFORM SETUP FROM SCRACTH
      9-advanced - sethostname: piweb3
      9-advanced enable ssh
 
+1') update the kernel
+    apt-get install rpi-update
+    then rpi-update
+
 2) setup wifi (optionnal)
 
      sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
