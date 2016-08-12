@@ -115,8 +115,8 @@
         <td class='textType' id="graph=temperature" onclick="toggleGraph(this);" ></td>
     </tr>
     <tr>
-        <td id="PhCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" onclick="calibrateAndRefresh('Ph',document.getElementById('phCalValueID').value);"><input type="text" id="phCalValueID" name="phCalValue" value="7.00" maxlength="4" size="4"></td>
-        <td id="ORPCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" onclick="calibrateAndRefresh('ORP',document.getElementById('orpCalValueID').value);"><input type="text" id="orpCalValueID" name="orpCalValue" value="650" maxlength="4" size="4">mV</td>
+        <td id="PhCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" disabled onclick="calibrateAndRefresh('Ph',document.getElementById('phCalValueID').value);"><input type="text" id="phCalValueID" name="phCalValue" value="7.00" maxlength="4" size="4"></td>
+        <td id="ORPCalibrateID" style="background-repeat:no-repeat; background-image: url('');"><input type="button" value="Etalonner" disabled onclick="calibrateAndRefresh('ORP',document.getElementById('orpCalValueID').value);"><input type="text" id="orpCalValueID" name="orpCalValue" value="650" maxlength="4" size="4">mV</td>
         <td></td>
     </tr>
     </table>
