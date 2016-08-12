@@ -28,7 +28,7 @@ if(isset($_['action'])){
                     readSensor(getDevice("ph"),"Cal,clear\n");
                     $frame ="Cal,".$_['value']."\n";
                     readSensor(getDevice("ph"),$frame);
-                    $result['state']  = "calibration faite";
+                    $result['state']  = readSensor(getDevice("ph"),$frame);
                     appendlog("CALIBRATE",$frame,$result);
                 break;
                 case 'temp':
