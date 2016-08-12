@@ -407,7 +407,7 @@
             xml_text = getScript("xml", script);
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
-            // workspace is editable by defaut
+            // workspace is editable by defaut with limited blocks number
             Blockly.mainWorkspace.options.readOnly = false;
             document.getElementById('saveScriptBtn').disabled = false;  
             Blockly.mainWorkspace.options.maxBlocks = 200;
