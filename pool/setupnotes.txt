@@ -50,10 +50,13 @@ PLATFORM SETUP FROM SCRACTH
 2) setup wifi (optionnal)
 
      sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
-     network={
-         ssid="asus_ap8cave-2g"
-         psk="jt2pxxxx"
-     }
+        country=FR                                                                                                                                              
+        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
+        update_config=1                                                                                                                                         
+        network={                                                                                                                                               
+           ssid="ASUS_AP"                                                                                                                                       
+           psk="jt2p9ug1"                                                                                                                                       
+        } 
 
 3) install adafruit webide (optional)        curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
      goto http://192.168.0.11/config change port to 8090
