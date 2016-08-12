@@ -412,7 +412,7 @@
             document.getElementById('saveScriptBtn').disabled = false;  
             Blockly.mainWorkspace.options.maxBlocks = 200;
             // except for the main script
-            if (script=="main" && document.getElementById('unlock').checked == false){
+            if (script=="main" && document.getElementById('unlock').checked === false){
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
                 Blockly.mainWorkspace.options.readOnly = true;
