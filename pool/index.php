@@ -416,7 +416,6 @@
             }   
             else{
                 Blockly.mainWorkspace.options.readOnly = false;
-                Blockly.mainWorkspace.options.maxBlocks = 5;
                 document.getElementById('saveScriptBtn').disabled = false;  
             }
         }
