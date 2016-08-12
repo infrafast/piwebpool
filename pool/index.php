@@ -413,6 +413,7 @@
             Blockly.mainWorkspace.options.maxBlocks = 200;
             // except for the main script
             if (script=="main" && document.getElementById('unlock').checked === false){
+                // we put 1 so the blocks are greyed out
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
                 Blockly.mainWorkspace.options.readOnly = true;
