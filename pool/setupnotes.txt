@@ -72,8 +72,6 @@ PLATFORM SETUP FROM SCRACTH
     echo "-fy" > /forcefsck                                                                                                                                 
     exit 0 
 
-
-
  /etc/ssmtp/ssmtp.conf add
     root=postmaster
     mailhub=mail.gandi.net:587
