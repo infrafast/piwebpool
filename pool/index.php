@@ -409,6 +409,7 @@
             var xml = Blockly.Xml.textToDom(xml_text);
             Blockly.mainWorkspace.options.readOnly = false;
             document.getElementById('saveScriptBtn').disabled = false;  
+            Blockly.mainWorkspace.options.maxBlocks = 200;
             if (script=="main" && document.getElementById('unlock').checked == false){
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
