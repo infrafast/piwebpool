@@ -1,5 +1,6 @@
 function actionCall(UrlData, async, messageBox, feedback, confirmation){
     var result;
+    $.LoadingOverlay("show");
     if (messageBox!==null)
         if (confirmation!==false){
             result = confirm(messageBox);
@@ -15,6 +16,7 @@ function actionCall(UrlData, async, messageBox, feedback, confirmation){
 			if (feedback===true) alert("Resultat: "+result.answer+(result.answer=="OK"?"":" "+result.state));
 	    }
 	});
+	$.LoadingOverlay("hide");
 	return result.state;
 }
 
