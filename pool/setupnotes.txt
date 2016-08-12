@@ -58,8 +58,6 @@ PLATFORM SETUP FROM SCRACTH
            psk="jt2p9ug1"                                                                                                                                       
         } 
         
- pre-up iw dev $IFACE set power_save off
- post-down iw dev $IFACE set power_save on
 
 3) install adafruit webide (optional)        curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
      goto http://192.168.0.11/config change port to 8090
