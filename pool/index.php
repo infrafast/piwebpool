@@ -407,9 +407,11 @@
             xml_text = getScript("xml", script);
             //alert("received: "+xml_text);
             var xml = Blockly.Xml.textToDom(xml_text);
+            // workspace is editable by defaut
             Blockly.mainWorkspace.options.readOnly = false;
             document.getElementById('saveScriptBtn').disabled = false;  
             Blockly.mainWorkspace.options.maxBlocks = 200;
+            // except for the main script
             if (script=="main" && document.getElementById('unlock').checked == false){
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
@@ -417,6 +419,8 @@
                 document.getElementById('saveScriptBtn').disabled = true;  
             }   
             Blockly.Xml.domToWorkspace(xml, workspace);            
+            // refresh
+            Blockly.fireUiEvent(window, 'resize');
         }
     
         function saveCode(script){
