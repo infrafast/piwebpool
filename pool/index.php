@@ -410,7 +410,7 @@
             // workspace is editable by defaut with limited blocks number
             Blockly.mainWorkspace.options.readOnly = false;
             document.getElementById('saveScriptBtn').disabled = false;  
-            Blockly.mainWorkspace.options.maxBlocks = 200;
+            Blockly.mainWorkspace.options.maxBlocks = 500;
             // except for the main script
             if (script=="mainZ" && document.getElementById('unlock').checked === false){
                 // we put 1 so the blocks are greyed out
