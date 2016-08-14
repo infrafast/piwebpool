@@ -412,7 +412,7 @@
             document.getElementById('saveScriptBtn').disabled = false;  
             Blockly.mainWorkspace.options.maxBlocks = 500;
             // except for the main script
-            if (script=="mainZ" && document.getElementById('unlock').checked === false){
+            if (script=="main" && document.getElementById('unlock').checked === false){
                 // we put 1 so the blocks are greyed out
                 Blockly.mainWorkspace.options.maxBlocks = 1;
                 Blockly.mainWorkspace.options.disabled = true;
