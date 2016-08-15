@@ -420,8 +420,6 @@
                 document.getElementById('saveScriptBtn').disabled = true;  
             }   
             Blockly.Xml.domToWorkspace(xml, workspace);            
-            // refresh
-            Blockly.fireUiEvent(window, 'resize');
         }
     
         function saveCode(script){
