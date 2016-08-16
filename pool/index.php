@@ -54,7 +54,7 @@
     $optionsSet["database"]["noAutoQuery"]=true;
     $optionsSet["pagination"] = array();
     $optionsSet["title"] = "Parametres";
-    $optionsSet["allowDelete"] = true;
+    $optionsSet["allowDelete"] = false;
     $optionsSet["sortable"]  = ""; 
     $optionsSet["editable"] = true;
     $optionsSet["selects"] = array(
