@@ -58,7 +58,7 @@ echo "Please enter your database root password: "
 read pwd_variable
 cp ./sql/header.lua /tmp
 cp ./sql/footer.lua /tmp
-echo "create database"
+echo "create database Pool"
 mysql -uroot -p$pwd_variable < ./sql/create.sql
 echo "create measures table"
 mysql pool -uroot -p$pwd_variable < ./sql/measures.sql
