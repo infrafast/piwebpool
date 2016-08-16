@@ -25,6 +25,8 @@ Dependencies:
     php-pear,php5dev and pecl   :compilation of lua for php
     lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
     phpserial.php               :patched with if ($this->_exec("stty") === 0) { changed to if ($this->_exec("stty --version") === 0) {
+    tablegear
+    blockly
     
 
 ---------------------------------------------------------
