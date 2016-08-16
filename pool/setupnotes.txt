@@ -81,17 +81,8 @@ PLATFORM SETUP FROM SCRACTH
         UseSTARTTLS=YES    
         rewriteDomain=infrafast.com
         FromLineOverride=YES
-    /etc/ssmtp/revaliases
+    /etc/ssmtp/revaliases   :edit your service provider info
         "www-data:admin@infrafast.com:mail.gandi.net:587"
-
-
- /etc/watchdog.conf
-    ---
-    #uncomment the following:
-    max-load-1
-    ---
-
-sudo service watchdog start
 
 ---------------------------------------------------------
 HISTORICAL NOTES
