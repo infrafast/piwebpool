@@ -198,3 +198,4 @@
 [2016-08-16 09:17:15][ACTIONS PERIODIQUES OK][{Periode:08h, Temperature:above28, Filtration:MARCHE}{|main:7.33ph, 722mV, 31.2°C |custom:R.A.S.}]
 [2016-08-16 10:17:15][ACTIONS PERIODIQUES OK][{Periode:10h, Temperature:above28, Filtration:MARCHE}{|main:7.39ph, 722mV, 31.1°C |custom:R.A.S.}]
 [2016-08-16 11:17:14][ACTIONS PERIODIQUES OK][{Periode:10h, Temperature:above28, Filtration:MARCHE}{|main:7.34ph, 724mV, 31°C |custom:R.A.S.}]
+[2016-08-16 17:17:14][ACTIONS PERIODIQUES OK][{Periode:16h, Temperature:above28, Filtration:MARCHE}{|main:7.33ph, 648mV, 31.6°C |custom:R.A.S.}]
