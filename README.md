@@ -28,7 +28,7 @@ Dependencies:
     tablegear                   :dynamic modified and displayed tables
     blockly                     :visual scripting
     phpmygraph                  :measures and commands graphs
-    gdtext                      :image drawing
+    gdtext                      :text image drawing
     
 
 ---------------------------------------------------------
