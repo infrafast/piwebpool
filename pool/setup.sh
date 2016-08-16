@@ -102,6 +102,15 @@ echo "REGDOMAIN=FR" > /etc/default/crda
 echo "options cfg80211 ieee80211_regdom=FR"  >  /etc/modprobe.d/cfg80211.conf
 
 
+echo "Modifying rc.local"
+sudo sed -i 's_exit 0 #Piwebcontrol_' /etc/rc.local
+
+sudo service apache2 restart
+pause
+
+
+
+
 #system startup and hardening
 #sudo echo "python /var/www/html/pool/initUSB.py" >> /etc/rc.local
 echo "Some remaining action have to be done manually"
