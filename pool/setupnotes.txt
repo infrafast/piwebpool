@@ -67,7 +67,7 @@ PLATFORM SETUP FROM SCRACTH
 4) run the piwebpool install script
     source setup.sh
 
-5) configuration:
+5) check and modify the configuration with your setup:
     /etc/rc.local           :make sure rc.local is modified
     /etc/ssmtp/ssmtp.conf   :edit your service provider info
         root=postmaster
