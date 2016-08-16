@@ -42,9 +42,9 @@ so you can fix manually.
            psk="jt2p9ug1"                                                                                                                                       
         } 
 
-3) install adafruit webide (optional)        
+3) install adafruit webide (optional) if you want to contribute         
     curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
-    goto http://your_raspberry_ip/config change port to 8090
+    goto http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
     sudo service adafruit-webide.sh restart
 
 4) run the piwebpool install script
