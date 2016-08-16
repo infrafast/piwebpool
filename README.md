@@ -14,6 +14,7 @@ Interfaces with :
 ---------------------------------------------------------
 SETUP
 ---------------------------------------------------------
+
 You will find a script named setup.sh in the root directory, this script partially automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
 Otherwise, have a look to the script before to make sure it doesn't break anything if you perform the setup on a productive raspberry 
