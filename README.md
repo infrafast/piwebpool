@@ -80,9 +80,6 @@ already used for other need.
         www-data:admin@infrafast.com:mail.gandi.net:587
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
     
-    
-    
-    
 ---------------------------------------------------------
 TODO LIST 
 ---------------------------------------------------------
@@ -113,4 +110,91 @@ TODO LIST
     
 
 known bugs:
-    - void    
+    - void 
+    
+    
+---------------------------------------------------------
+HISTORICAL NOTES
+-------------------------------------------------------------------
+Add extension=lua.so to php.ini file (could be /etc/php5/(cli+apache)/php.ini)
+find "Dynamic Extensions" and add extension=lua.so
+/etc/init.d/apache2 restart
+
+//Operating System: Linux Solution: sendmail is searching for a FQDN ( fully qualified domain name ).
+//To resolve this problem change /etc/hosts: FROM:
+127.0.0.1       localhost
+127.0.1.1       raspberrypi
+TO:
+127.0.0.1       localhost.localdomain piweb
+127.0.1.1       piweb piweb.infrafast.com
+edit /etc/hostname and change raspberrypi to piweb
+
+
+DONE:   You have to change the following line of code in the PhpSerial.php class
+FROM:
+if ($this->_exec("stty") === 0) {
+TO:
+if ($this->_exec("stty --version") === 0) {
+
+
+---------------------------------------------------------
+System hardening
+---------------------------------------------------------
+http://iqjar.com/jar/raspberry-pi-rebooting-itself-when-it-becomes-unreachable-from-outside-networks/
+
+maybe put this in /etc/rc.d/rc.local:
+    while [ 1 ]
+    do
+     if [ -z "$(ping -c 1 www.02144.com)" ]
+     then
+      shutdown -r now
+      #ifconfig eth0 down && ifconfig eth0 up
+      #/etc/init.d/networking restart
+      #dhclient eth0
+     fi
+     sleep 600
+    done
+
+
+ /etc/watchdog.conf
+    ---
+    #uncomment the following:
+    max-load-1
+    ---
+
+sudo service watchdog start
+
+
+watchdog on Pi2? Must be wrong....
+    sudo apt-get install watchdog
+    sudo modprobe bcm2708_wdog
+    sudo vi /etc/modules
+    ---
+    bcm2708_wdog
+    ---
+    sudo update-rc.d watchdog defaults
+    sudo vi /etc/watchdog.conf
+    ---
+    #uncomment the following:
+    max-load-1
+    watchdog-device
+    ---
+    sudo service watchdog start
+
+
+
+-------------------------------------------------------------------
+GIT USAGE QUICK GUIDE
+-------------------------------------------------------------------
+git status
+git add -A .                 
+git status
+git commit -a -m "comment"   
+git push origin master       
+
+git tag -a v1.4 -m "my version 1.4"
+git tag
+git show v1.4
+
+git push --follow-tags
+git push --tags                    push all tags
