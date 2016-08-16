@@ -37,15 +37,15 @@ known bugs:
 PLATFORM SETUP FROM SCRACTH
 ---------------------------------------------------------
 
-1) sudo raspi-config
-
-     1-expand file system
-     5-locale fr UTF 8
-     5-timezone europe paris
-     5-keyboard layout
-         generic 105 - german french switzerland
-     9-advanced - sethostname: piweb3
-     9-advanced enable ssh
+1) Make sure your raspberry config is ok
+    sudo raspi-config
+         1-expand file system
+         5-locale fr UTF 8
+         5-timezone europe paris
+         5-keyboard layout
+             generic 105 - german french switzerland
+         9-advanced - sethostname: piweb3
+         9-advanced enable ssh
 
 1') update the kernel
     apt-get install rpi-update
