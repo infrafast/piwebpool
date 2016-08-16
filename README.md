@@ -11,22 +11,6 @@ The first full open source Raspberry PI PHP web-based application that automates
 Interfaces with :
     - Domoticz and any other home automation system thru a simple HTTP API
 
-Dependencies and usage of (all pre-setup in the package):      
-    python-serial               :data acquisition via usb devices
-    php5-mysql,mysql-server:    :database and connectivity
-    apache2,php5                :webserver 
-    php5-curl                   :interfacing other system via HTTP/Json API (like domoticz)
-    php5-gd                     :image png generation    
-    ssmtp                       :email notification
-    anacron                     :hourly execution of tasks (used by pump scheduler)
-    php-pear,php5dev and pecl   :compilation of lua for php
-    lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
-    phpserial.php               :patched with if ($this->_exec("stty") === 0) { changed to if ($this->_exec("stty --version") === 0) {
-    tablegear                   :dynamic modified and displayed tables
-    blockly                     :visual scripting
-    phpmygraph                  :measures and commands graphs
-    gdtext                      :text image drawing
-    
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
 ---------------------------------------------------------
@@ -84,6 +68,24 @@ already used for other need. In case you have issues with dependencies and packa
         Add extension=lua.so to php.ini file (could be )
         find "Dynamic Extensions" and add extension=lua.so
         /etc/init.d/apache2 restart
+
+Dependencies and usage of (all pre-setup in the package):      
+    python-serial               :data acquisition via usb devices
+    php5-mysql,mysql-server:    :database and connectivity
+    apache2,php5                :webserver 
+    php5-curl                   :interfacing other system via HTTP/Json API (like domoticz)
+    php5-gd                     :image png generation    
+    ssmtp                       :email notification
+    anacron                     :hourly execution of tasks (used by pump scheduler)
+    php-pear,php5dev and pecl   :compilation of lua for php
+    lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
+    phpserial.php               :patched with if ($this->_exec("stty") === 0) { changed to if ($this->_exec("stty --version") === 0) {
+    tablegear                   :dynamic modified and displayed tables
+    blockly                     :visual scripting
+    phpmygraph                  :measures and commands graphs
+    gdtext                      :text image drawing
+
+
    
 ---------------------------------------------------------
 TODO LIST 
