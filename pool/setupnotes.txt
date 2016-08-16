@@ -127,6 +127,14 @@ maybe put this in /etc/rc.d/rc.local:
     done
 
 
+ /etc/watchdog.conf
+    ---
+    #uncomment the following:
+    max-load-1
+    ---
+
+sudo service watchdog start
+
 
 watchdog on Pi2? Must be wrong....
     sudo apt-get install watchdog
