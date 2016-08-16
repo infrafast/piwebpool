@@ -28,13 +28,12 @@ Dependencies:
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
 ---------------------------------------------------------
-
 You will find a script named setup.sh in the root directory, this script almost fully automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
 Otherwise, have a look to the script before to make sure it doesn't break anything if you perform the setup on a productive raspberry 
 already used for other need. 
 
-1) Make sure your raspberry config is ok
+1) First, make sure your raspberry config is ok
     sudo raspi-config
          1-expand file system
          5-locale fr UTF 8
@@ -46,7 +45,7 @@ already used for other need.
     apt-get install rpi-update
     rpi-update
 
-2) setup wifi (optionnal)
+2) setup wifi if not done (optionnal)
     sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
         country=FR                                                                                                                                              
         ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
