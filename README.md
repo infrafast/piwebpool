@@ -92,10 +92,12 @@ Dependencies and usage of (all pre-setup in the package):
 ---------------------------------------------------------
 BUGS
 ---------------------------------------------------------
+    - 
    
 ---------------------------------------------------------
 TODO LIST 
 ---------------------------------------------------------
+    - sanity check of all external url script/reference to be able to run without internet connecion
     - use HTTPS
     - basic auth implementation
     - set debug level
