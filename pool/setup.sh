@@ -56,18 +56,18 @@ pause
 #at the end, need to have only one master sql file that do everything
 echo "Please enter your database root password: "
 read pwd_variable
-cp ./sql/header.lua /tmp
-cp ./sql/footer.lua /tmp
+cp ./scripts/header.lua /tmp
+cp ./scripts/footer.lua /tmp
 echo "create database Pool"
-mysql -uroot -p$pwd_variable < ./sql/create.sql
+mysql -uroot -p$pwd_variable < ./scripts/create.sql
 echo "create measures table"
-mysql pool -uroot -p$pwd_variable < ./sql/measures.sql
+mysql pool -uroot -p$pwd_variable < ./scripts/measures.sql
 echo "create pump schedule table"
-mysql pool -uroot -p$pwd_variable < ./sql/pumpSchedule.sql
+mysql pool -uroot -p$pwd_variable < ./scripts/pumpSchedule.sql
 echo "create scripts table"
-mysql pool -uroot -p$pwd_variable < ./sql/scripts.sql
+mysql pool -uroot -p$pwd_variable < ./scripts/scripts.sql
 echo "create settings table"
-mysql pool -uroot -p$pwd_variable < ./sql/settings.sql
+mysql pool -uroot -p$pwd_variable < ./scripts/settings.sql
 pause
 
 #file permission and configuration
