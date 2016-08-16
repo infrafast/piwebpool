@@ -66,8 +66,8 @@ PLATFORM SETUP FROM SCRACTH
 
 5) check and modify the configuration with your setup:
     
-    /etc/rc.local           :make sure rc.local is updated
-    /etc/ssmtp/ssmtp.conf   :edit your service provider info
+    /etc/rc.local                                   :make sure rc.local is updated
+    /etc/ssmtp/ssmtp.conf                           :edit your service provider info
         root=postmaster
         mailhub=mail.gandi.net:587
         hostname=piweb
@@ -76,9 +76,9 @@ PLATFORM SETUP FROM SCRACTH
         UseSTARTTLS=YES    
         rewriteDomain=infrafast.com
         FromLineOverride=YES
-    /etc/ssmtp/revaliases   :edit your service provider info
+    /etc/ssmtp/revaliases                           :edit your service provider info
         "www-data:admin@infrafast.com:mail.gandi.net:587"
-
+    /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
 ---------------------------------------------------------
 HISTORICAL NOTES
 -------------------------------------------------------------------
