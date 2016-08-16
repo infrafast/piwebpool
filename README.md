@@ -15,8 +15,17 @@ Interfaces with :
 
 
 Dependencies:
+    python-serial               :data acquisition via usb devices
+    php5-mysql,mysql-server:    :database and connectivity
+    apache2,php5                :webserver 
+    php5-curl                   :interfacing other system via HTTP/Json API (like domoticz)
+    php5-gd                     :image png generation    
+    ssmtp                       :email notification
+    anacron                     :hourly execution of tasks (used by pump scheduler)
+    php-pear,php5dev and pecl   :compilation of lua for php
+    lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
+
     
- 
 
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
