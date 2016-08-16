@@ -6,12 +6,6 @@ pause(){
 
 
 
-echo "Please enter your database root password: "
-read pwd_variable
-echo "You entered: $pwd_variable"
-pause
-
-
 #necessary packages 
 # php-pear and php5-dev are for pecl and compliation of lua for php
 #note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
@@ -60,18 +54,20 @@ pause
 
 #database
 #at the end, need to have only one master sql file that do everything
+echo "Please enter your database root password: "
+read pwd_variable
 cp ./sql/header.lua /tmp
 cp ./sql/footer.lua /tmp
 echo "create database"
-mysql -uroot -pQuintal74605 < ./sql/create.sql
+mysql -uroot -p$pwd_variable < ./sql/create.sql
 echo "create measures table"
-mysql pool -uroot -pQuintal74605 < ./sql/measures.sql
+mysql pool -uroot -p$pwd_variable < ./sql/measures.sql
 echo "create pump schedule table"
-mysql pool -uroot -pQuintal74605 < ./sql/pumpSchedule.sql
+mysql pool -uroot -p$pwd_variable < ./sql/pumpSchedule.sql
 echo "create scripts table"
-mysql pool -uroot -pQuintal74605 < ./sql/scripts.sql
+mysql pool -uroot -p$pwd_variable < ./sql/scripts.sql
 echo "create settings table"
-mysql pool -uroot -pQuintal74605 < ./sql/settings.sql
+mysql pool -uroot -p$pwd_variable < ./sql/settings.sql
 pause
 
 #file permission and configuration
