@@ -12,7 +12,7 @@ Interfaces with :
     - Domoticz and any other home automation system thru a simple HTTP API
 
 ---------------------------------------------------------
-INSTALLATION
+SETUP
 ---------------------------------------------------------
 You will find a script named setup.sh in the root directory, this script partially automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
