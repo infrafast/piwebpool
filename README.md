@@ -89,7 +89,9 @@ Dependencies and usage of (all pre-setup in the package):
     phpmygraph                  :measures and commands graphs
     gdtext                      :text image drawing
 
-
+---------------------------------------------------------
+BUGS
+---------------------------------------------------------
    
 ---------------------------------------------------------
 TODO LIST 
