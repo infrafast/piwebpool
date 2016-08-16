@@ -20,6 +20,7 @@ Otherwise, have a look to the script before to make sure it doesn't break anythi
 already used for other need. In case you have issues with dependencies and packages, please refer to the list below in this document
 so you can fix manually.
 
+
 1) First, make sure your raspberry config is ok
     sudo raspi-config
          1-expand file system
@@ -47,7 +48,7 @@ so you can fix manually.
     goto http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
     sudo service adafruit-webide.sh restart
 
-4) run the piwebpool install script
+4) deploy the file in /home/run the piwebpool install script
     source setup.sh
 
 5) check and modify the configuration with your setup:
