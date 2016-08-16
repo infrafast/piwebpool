@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
   
 INSERT INTO `settings` (`id`, `value`, `userSetting`,`description`) VALUES
+('webURL', 1, true, 'Activation planificateur filtration'),
 ('scheduler', 1, true, 'Activation planificateur filtration'),
 ('ORPConsign', 750, true, 'Consigne ORP'),
 ('PHConsign', 7.24, true, 'Consigne PH'),
