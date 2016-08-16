@@ -4,6 +4,14 @@ pause(){
  sed -n q </dev/tty
 }
 
+
+
+echo "Please enter your database root password: "
+read pwd_variable
+echo "You entered: $pwd_variable"
+pause
+
+
 #necessary packages 
 # php-pear and php5-dev are for pecl and compliation of lua for php
 #note : liblua5.1 also include liblua5.1-dev which include the "include" necessary to compile lua for php
