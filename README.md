@@ -25,7 +25,7 @@ Dependencies:
     php-pear,php5dev and pecl   :compilation of lua for php
     lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
 
-    ---------------------------------------------------------
+---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
 ---------------------------------------------------------
 
