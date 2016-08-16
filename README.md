@@ -14,7 +14,7 @@ Interfaces with :
 - Domoticz and any other home automation system thru a simple HTTP API
 
 
-Dependencies:
+Dependencies and usage of:
     python-serial               :data acquisition via usb devices
     php5-mysql,mysql-server:    :database and connectivity
     apache2,php5                :webserver 
@@ -30,7 +30,6 @@ Dependencies:
     phpmygraph                  :measures and commands graphs
     gdtext                      :text image drawing
     
-
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
 ---------------------------------------------------------
