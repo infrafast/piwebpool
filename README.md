@@ -64,7 +64,6 @@ already used for other need.
     source setup.sh
 
 5) check and modify the configuration with your setup:
-    
     hourlycrontab.sh                                :change INTERFACE="wlan0" to your network interface
     /etc/rc.local                                   :make sure rc.local is updated
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
@@ -79,6 +78,11 @@ already used for other need.
     /etc/ssmtp/revaliases                           :edit your service provider info
         www-data:admin@infrafast.com:mail.gandi.net:587
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
+    /etc/php5/(cli+apache)/php.ini
+        Add extension=lua.so to php.ini file (could be )
+        find "Dynamic Extensions" and add extension=lua.so
+        /etc/init.d/apache2 restart
+    
     
 ---------------------------------------------------------
 TODO LIST 
@@ -116,9 +120,6 @@ known bugs:
 ---------------------------------------------------------
 HISTORICAL NOTES
 -------------------------------------------------------------------
-Add extension=lua.so to php.ini file (could be /etc/php5/(cli+apache)/php.ini)
-find "Dynamic Extensions" and add extension=lua.so
-/etc/init.d/apache2 restart
 
 //Operating System: Linux Solution: sendmail is searching for a FQDN ( fully qualified domain name ).
 //To resolve this problem change /etc/hosts: FROM:
