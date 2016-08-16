@@ -580,8 +580,8 @@ class TableGear
       $this->_outputHTML($this->custom["FORM_BOTTOM"]);
       $this->_closeTag("form");
     }
-//    if($this->_newRowsAllowed()){
-    if(1==3){        
+    if($this->_newRowsAllowed()){
+//    if(1==3){        
       $addNewRowID = "addNewRow_" . $this->table["id"];
       $this->_openTag("form", array("action" => $this->form["url"], "method" => $this->form["method"], "id" => $addNewRowID, "class" => "newRow"));
       $this->_outputHTML(array("tag" => "h3", "html" => $this->newRowLabel));
