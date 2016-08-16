@@ -71,9 +71,7 @@ PLATFORM SETUP FROM SCRACTH
      source setup.sh
 
 5) configuration:
-/etc/rc.local add 
-
-    exit 0 
+    make sure rc.local is modified
 
  /etc/ssmtp/ssmtp.conf add
     root=postmaster
