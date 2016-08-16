@@ -14,7 +14,7 @@ Interfaces with :
 - Domoticz and any other home automation system thru a simple HTTP API
 
 
-Dependencies and usage of:
+Dependencies and usage of (all pre-setup in the package):      
     python-serial               :data acquisition via usb devices
     php5-mysql,mysql-server:    :database and connectivity
     apache2,php5                :webserver 
@@ -36,7 +36,7 @@ PLATFORM SETUP FROM SCRACTH
 You will find a script named setup.sh in the root directory, this script almost fully automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
 Otherwise, have a look to the script before to make sure it doesn't break anything if you perform the setup on a productive raspberry 
-already used for other need. 
+already used for other need. In case you have issues with dependencies and packages, please refer to the list so you can fix manually.
 
 1) First, make sure your raspberry config is ok
     sudo raspi-config
