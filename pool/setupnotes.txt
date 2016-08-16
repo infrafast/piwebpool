@@ -64,8 +64,8 @@ PLATFORM SETUP FROM SCRACTH
     goto http://192.168.0.11/config change port to 8090
     sudo service adafruit-webide.sh restart
 
-4) packages, database, and file access permisison install
-     source setup.sh
+4) run the piwebpool install script
+    source setup.sh
 
 5) configuration:
     /etc/rc.local           :make sure rc.local is modified
