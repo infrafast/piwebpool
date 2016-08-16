@@ -24,6 +24,7 @@ Dependencies:
     anacron                     :hourly execution of tasks (used by pump scheduler)
     php-pear,php5dev and pecl   :compilation of lua for php
     lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
+    phpserial.php               :patched with if ($this->_exec("stty") === 0) { changed to if ($this->_exec("stty --version") === 0) {
 
 ---------------------------------------------------------
 PLATFORM SETUP FROM SCRACTH
@@ -82,8 +83,7 @@ already used for other need.
         Add extension=lua.so to php.ini file (could be )
         find "Dynamic Extensions" and add extension=lua.so
         /etc/init.d/apache2 restart
-    
-    
+   
 ---------------------------------------------------------
 TODO LIST 
 ---------------------------------------------------------
@@ -131,11 +131,7 @@ TO:
 edit /etc/hostname and change raspberrypi to piweb
 
 
-DONE:   You have to change the following line of code in the PhpSerial.php class
-FROM:
-if ($this->_exec("stty") === 0) {
-TO:
-if ($this->_exec("stty --version") === 0) {
+
 
 
 ---------------------------------------------------------
