@@ -77,7 +77,7 @@ PLATFORM SETUP FROM SCRACTH
         rewriteDomain=infrafast.com
         FromLineOverride=YES
     /etc/ssmtp/revaliases                           :edit your service provider info
-        "www-data:admin@infrafast.com:mail.gandi.net:587"
+        www-data:admin@infrafast.com:mail.gandi.net:587
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
 ---------------------------------------------------------
 HISTORICAL NOTES
