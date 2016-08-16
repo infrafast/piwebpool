@@ -72,14 +72,17 @@ PLATFORM SETUP FROM SCRACTH
 
 5) configuration:
     /etc/rc.local           :make sure rc.local is modified
-    /etc/ssmtp/ssmtp.conf   :edit your email service provider password in 
-    
-
- /etc/ssmtp/ssmtp.conf add
-
-
-/etc/ssmtp/revaliases
-    "www-data:admin@infrafast.com:mail.gandi.net:587"
+    /etc/ssmtp/ssmtp.conf   :edit your service provider info
+        root=postmaster
+        mailhub=mail.gandi.net:587
+        hostname=piweb
+        AuthUser=admin@infrafast.com
+        AuthPass=Quxxxxxxxx04
+        UseSTARTTLS=YES    
+        rewriteDomain=infrafast.com
+        FromLineOverride=YES
+    /etc/ssmtp/revaliases
+        "www-data:admin@infrafast.com:mail.gandi.net:587"
 
 
  /etc/watchdog.conf
