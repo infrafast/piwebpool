@@ -65,6 +65,7 @@ already used for other need.
 
 5) check and modify the configuration with your setup:
     
+    hourlycrontab.sh                                :change INTERFACE="wlan0" to your network interface
     /etc/rc.local                                   :make sure rc.local is updated
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
         root=postmaster
