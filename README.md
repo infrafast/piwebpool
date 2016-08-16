@@ -27,6 +27,8 @@ Dependencies:
     phpserial.php               :patched with if ($this->_exec("stty") === 0) { changed to if ($this->_exec("stty --version") === 0) {
     tablegear
     blockly
+    phpmygraph
+    
     
 
 ---------------------------------------------------------
