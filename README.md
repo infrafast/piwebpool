@@ -26,6 +26,7 @@ already used for other need. In case you have issues with dependencies and packa
 so you can fix manually.
 
 The application default directory is  /usr/share/adafruit/webide/repositories/piweb with a symlink to /var/www/html, listening on 80
+You can change default values in setup.sh file
 
 1) First, make sure your raspberry config is ok
     sudo raspi-config
