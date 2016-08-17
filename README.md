@@ -14,6 +14,7 @@ The first full open source Raspberry PI PHP web-based application that automates
     - provide graphical scripting capabilities (with Lua and Blockly)
 Interfaces with :
     - Domoticz and any other home automation system thru a simple HTTP API
+    - Smartphone applications
 
 ---------------------------------------------------------
 SETUP
