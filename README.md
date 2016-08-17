@@ -97,6 +97,7 @@ Dependencies and third party tools (all pre-setup in the package):
     simpleweather.js            :weather forecast
     loadingoverlay.js           :loading page animation
     jquery                      :webpage scripting
+    lua table persistence       :for persistent variable
 
 ---------------------------------------------------------
 BUGS
