@@ -95,7 +95,7 @@ Dependencies and usage of (all pre-setup in the package):
     gdtext                      :text image drawing
     simpleweather.js            :weather forecast
     loadingoverlay.js           :loading page animation
-    jquery                      :
+    jquery                      :webpage scripting
 
 ---------------------------------------------------------
 BUGS
