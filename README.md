@@ -78,7 +78,7 @@ The application default directory is  /usr/share/adafruit/webide/repositories/pi
         find "Dynamic Extensions" and add extension=lua.so
         /etc/init.d/apache2 restart
 
-Dependencies and usage of (all pre-setup in the package):      
+Dependencies and third party tools (all pre-setup in the package):      
     python-serial               :data acquisition via usb devices
     php5-mysql,mysql-server:    :database and connectivity
     apache2,php5                :webserver 
@@ -86,7 +86,7 @@ Dependencies and usage of (all pre-setup in the package):
     php5-gd                     :image png generation    
     ssmtp                       :email notification
     anacron                     :hourly execution of tasks (used by pump scheduler)
-    php-pear,php5dev,pecl      :compilation of lua for php
+    php-pear,php5dev,pecl       :compilation of lua for php
     lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
     phpserial.php               :patched with if ($this->_exec("stty") === 0) { changed to if ($this->_exec("stty --version") === 0) {
     tablegear                   :dynamic modified and displayed tables
