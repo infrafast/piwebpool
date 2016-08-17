@@ -94,6 +94,8 @@ Dependencies and usage of (all pre-setup in the package):
     phpmygraph                  :measures and commands graphs
     gdtext                      :text image drawing
     simpleweather.js            :weather forecast
+    loadingoverlay.js           :loading page animation
+    jquery                      :
 
 ---------------------------------------------------------
 BUGS
