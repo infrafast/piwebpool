@@ -6,6 +6,8 @@ function actionCall(UrlData, async, messageBox, feedback, confirmation){
             result = confirm(messageBox);
             if (true !== result) return false;
         }else alert(messageBox);
+        // extended json is appended to the URL so the query is recognized as coming from internal application
+        // which put the reply in ( )
 	$.ajax({
 		    type: "POST",
 			url: "./action.php?extendedJson&"+UrlData,
