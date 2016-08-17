@@ -4,6 +4,8 @@ WELCOME TO PIWEB POOL MANAGER
 
 The first full open source Raspberry PI PHP web-based application that automates the control of swiming pool with following features:
     - water quality measurement (PH, ORP, Temperature)
+    - weather forecast 
+    - 
     - controls up to 4 power outlet (treatment, 
     - scheduler that control filtration aoccrding to water temperature
     - can be controlled over your iPhone or any mobile device
@@ -14,7 +16,6 @@ Interfaces with :
 ---------------------------------------------------------
 SETUP
 ---------------------------------------------------------
-
 You will find a script named setup.sh in the root directory, this script partially automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
 Otherwise, have a look to the script before to make sure it doesn't break anything if you perform the setup on a productive raspberry 
