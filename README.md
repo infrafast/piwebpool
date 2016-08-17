@@ -93,6 +93,7 @@ Dependencies and usage of (all pre-setup in the package):
     blockly                     :visual scripting
     phpmygraph                  :measures and commands graphs
     gdtext                      :text image drawing
+    simpleweather.js            :weather forecast
 
 ---------------------------------------------------------
 BUGS
