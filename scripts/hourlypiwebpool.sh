@@ -20,7 +20,7 @@ FFLAG="$PIWEBDIR/stuck.fflg"
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
 if [ $? -ge 1 ]
 then
-    logger "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
+    logger -s "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
         if [ -e $FFLAG ]
         then
                 logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
