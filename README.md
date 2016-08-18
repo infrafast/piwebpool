@@ -24,6 +24,7 @@ Supported hardware:
     - in case you want to interface with other circuit, all you have to do is adjusting getTemperature(), getORP() and getPh() in functions.php
 
 Cabling:
+
     by defaut (see configuration.php), GPIO pin:
 			- pump relay=>11, you should cable the relay to replace your scheduler in the existing electric case
 			- treatment relay=>16, 
