@@ -91,6 +91,7 @@ Options:
 --------
 
 A) Make sure your raspberry config is ok
+    ```
     $sudo raspi-config
          1-expand file system
          5-locale fr UTF 8
@@ -101,8 +102,10 @@ A) Make sure your raspberry config is ok
          9-advanced enable ssh
     $apt-get install rpi-update
     $rpi-update
+    ```
 
 B) setup wifi if not done (optionnal)
+    ```
     $sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
         country=FR                                                                                                                                              
         ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
@@ -111,11 +114,14 @@ B) setup wifi if not done (optionnal)
            ssid="ASUS_AP"                                                                                                                                       
            psk="jt2p9ug1"                                                                                                                                       
         } 
+    ```
 
 C) install adafruit webide (optional) if you want to contribute         
+    ```
     $curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
     open http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
     $sudo service adafruit-webide.sh restart
+    ```
 
 Dependencies and third party tools (all pre-setup in the package):      
 
