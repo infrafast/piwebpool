@@ -155,10 +155,9 @@ Dependencies and third party tools (all pre-setup in the package):
 ---------------------------------------------------------
 # BUGS
 ---------------------------------------------------------
-    - not really a bug but an implementation improvement: 
-        Lua scripts are stored in the DB with encoded HTML chartset. 
-        for some reason the code from updateScript in "action.php" decode the receive POST but SQL still store it encoded.    - 
-    
+
+refer to github issues
+
 ---------------------------------------------------------
 # TODO LIST 
 ---------------------------------------------------------
