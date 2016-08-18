@@ -1,4 +1,10 @@
 <?php
+/*
+ @nom: testdata 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: generate some data in tables for test purpose only, non productive use
+*/
+//
 require_once('configuration.php');
 require_once('functions.php');
 
