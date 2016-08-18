@@ -92,7 +92,7 @@ Options:
 
 A) Make sure your raspberry config is ok
     ```
-    $sudo raspi-config
+    sudo raspi-config
          1-expand file system
          5-locale fr UTF 8
          5-timezone europe paris
@@ -100,13 +100,13 @@ A) Make sure your raspberry config is ok
              generic 105 - german french switzerland
          9-advanced - sethostname: piweb3
          9-advanced enable ssh
-    $apt-get install rpi-update
-    $rpi-update
+    apt-get install rpi-update
+    rpi-update
     ```
 
 B) setup wifi if not done (optionnal)
     ```
-    $sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+    sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
         country=FR                                                                                                                                              
         ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
         update_config=1                                                                                                                                         
@@ -118,9 +118,9 @@ B) setup wifi if not done (optionnal)
 
 C) install adafruit webide (optional) if you want to contribute         
     ```
-    $curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
+    curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
     open http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
-    $sudo service adafruit-webide.sh restart
+    sudo service adafruit-webide.sh restart
     ```
 
 Dependencies and third party tools (all pre-setup in the package):      
