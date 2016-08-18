@@ -32,17 +32,20 @@ Otherwise, have a look to the script before to make sure it doesn't break anythi
 already used for other need. In case you have issues with dependencies and packages, please refer to the list later in this document
 so you can fix manually.
 
-1) cd to your /var/www/html folder
+
+INSTALLATION
+
+1) cd to your /var/www/html
    sudo git clone git@bitbucket.org:infrafast/piwebpool.git
    cd piwebpool
 
-2) change configuration.php with your db password
-
-3)  run the piwebpool install script using command "source setup.sh"
+2)  run the piwebpool install script using command "source setup.sh"
     You can change default values in setup.sh file if you wish
     Be careful, in particular the webroot is set to the piwebpool folder which could screw your existing install
+
+CONFIGURATION
     
-4) check and modify the configuration with your setup:
+3) check and modify the configuration with your setup:
     
     index.php                                       : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
     
