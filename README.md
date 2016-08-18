@@ -70,6 +70,7 @@ Check and modify the configuration with your own setup:
     configuration                                       : change your db password, adjust GPIO mapping to your need if you wish 
     USBDevices.id                                       : map your sensors to the correct devices
     scripts/hourlypiwebpool.sh                          : change INTERFACE="wlan0" to your network interface
+                                                        : change path to piwebpool if necessary
     functions.php                                       : getTemperature(), getORP() and getPh() to be adjusted if you don't use atlas scientific USB circuit
     
     /etc/rc.local                                       :make sure rc.local is updated
