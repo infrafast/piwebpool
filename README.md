@@ -103,7 +103,6 @@ C) install adafruit webide (optional) if you want to contribute
     goto http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
     sudo service adafruit-webide.sh restart
 
-
 Dependencies and third party tools (all pre-setup in the package):      
     wiringpi                    :gpio commands
     python-serial               :data acquisition via usb devices
@@ -131,10 +130,8 @@ BUGS
 ---------------------------------------------------------
     - not really a bug but an implementation improvement: 
         Lua scripts are stored in the DB with encoded HTML chartset. 
-        for some reason the code from updateScript in "action.php" decode the receive POST but SQL still store it encoded.
-    - 
+        for some reason the code from updateScript in "action.php" decode the receive POST but SQL still store it encoded.    - 
     
-   
 ---------------------------------------------------------
 TODO LIST 
 ---------------------------------------------------------
