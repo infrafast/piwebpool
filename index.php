@@ -1,4 +1,11 @@
 <?php
+/*
+ @nom: index 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: execute all actions from the web GUI
+*/
+//
+
     require_once('configuration.php');
     require_once('functions.php');
     include("include/TableGear1.6.1.php");
