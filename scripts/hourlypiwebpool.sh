@@ -2,6 +2,9 @@
 # cron script for checking wlan connectivity
 # and reboot raspberry in case of loss
 PIWEBDIR="/var/www/html/piwebpool"
+
+
+
 LOGID="HOURLYCRONTAB.SH: "
 logger "$LOGID starting" 
 #IP_FOR_TEST="$(hostname -f).infrafast.com"
