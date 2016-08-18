@@ -3,7 +3,7 @@
 #folder used to store the repository when working with adafruit webide
 webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
 #directory of piweb
-piwebpooldir="/usr/share/"
+piwebpooldir="/var/www/html/"
 
 
 pause(){
