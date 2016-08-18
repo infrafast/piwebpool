@@ -53,9 +53,12 @@ The application default directory is a folder having the git repository name in 
         UseSTARTTLS=YES    
         rewriteDomain=yourdomain
         FromLineOverride=YES
+    
     /etc/ssmtp/revaliases                           :edit your service provider info
         www-data:youruseremail:yourproviderserver:587
+    
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
+    
     /etc/php5/(cli+apache)/php.ini
         Add extension=lua.so to php.ini file (could be )
         find "Dynamic Extensions" and add extension=lua.so
