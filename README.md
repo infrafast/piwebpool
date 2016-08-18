@@ -80,6 +80,7 @@ You can change default values in setup.sh file
         /etc/init.d/apache2 restart
 
 Dependencies and third party tools (all pre-setup in the package):      
+    gpio wiringpu               :git clone git://git.drogon.net/wiringPi
     python-serial               :data acquisition via usb devices
     php5-mysql,mysql-server:    :database and connectivity
     apache2,php5                :webserver 
