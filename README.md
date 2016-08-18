@@ -62,9 +62,13 @@ The application default directory is a folder having the git repository name in 
     /etc/php5/(cli+apache)/php.ini
         Add extension=lua.so to php.ini file
         find "Dynamic Extensions" and add extension=lua.so
-        /etc/init.d/apache2 restart
+        
+        
 
-5) it is advised to reboot your rasp to check everything is ok
+5) it is advised to reboot your rasp to check everything is ok or alternatively restart all services
+    /etc/init.d/apache2 restart
+    /etc/init.d/ssmtp restart
+    
 
 Options:
 --------
