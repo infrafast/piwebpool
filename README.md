@@ -93,26 +93,43 @@ Options:
 A) Make sure your raspberry config is ok
     ```
     sudo raspi-config
+    
          1-expand file system
+         
          5-locale fr UTF 8
+         
          5-timezone europe paris
+         
          5-keyboard layout
+         
              generic 105 - german french switzerland
+             
          9-advanced - sethostname: piweb3
+         
          9-advanced enable ssh
+         
     apt-get install rpi-update
+    
     rpi-update
+    
     ```
 
 B) setup wifi if not done (optionnal)
     ```
     sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
-        country=FR                                                                                                                                              
-        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
-        update_config=1                                                                                                                                         
-        network={                                                                                                                                               
-           ssid="ASUS_AP"                                                                                                                                       
-           psk="jt2p9ug1"                                                                                                                                       
+    
+        country=FR               
+        
+        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+        
+        update_config=1         
+        
+        network={          
+        
+           ssid="ASUS_AP"   
+           
+           psk="jt2p9ug1"   
+           
         } 
     ```
 
