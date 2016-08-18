@@ -189,7 +189,7 @@ Dependencies and third party tools (all pre-setup in the package):
         - http://juice4halt.com/
 
 -------------------------------------------------------------------
-GIT USAGE QUICK GUIDE
+GIT AND SSH KEY USAGE QUICK GUIDE
 -------------------------------------------------------------------
 git status
 git add -A .                 
