@@ -75,14 +75,10 @@ cp ./scripts/header.lua /tmp
 cp ./scripts/footer.lua /tmp
 echo "create database Pool"
 mysql -uroot -p$pwd_variable < ./scripts/create.sql
-echo "create measures table"
-mysql pool -uroot -p$pwd_variable < ./scripts/measures.sql
-echo "create pump schedule table"
-mysql pool -uroot -p$pwd_variable < ./scripts/pumpSchedule.sql
-echo "create scripts table"
-mysql pool -uroot -p$pwd_variable < ./scripts/scripts.sql
+echo "create all tables"
+mysql pool -uroot -p$pwd_variable < ./scripts/piwebpool.sql
 echo "create settings table"
-mysql pool -uroot -p$pwd_variable < ./scripts/settings.sql
+mysql pool -uroot -p$pwd_variable < ./scripts/lua.sql
 pause
 
 #file permission and configuration
