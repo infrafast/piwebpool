@@ -32,10 +32,10 @@ Cabling:
     probes: connect your probes with USB carrier as defined in USBDevices.id file
         
 Scripting:
-    two scripts are available:
+    two scripts are availables:
         main: this script is by defaut read only to avoid making unctronolled changes. You can check the box "unlock" and reload it using the webGUI if you want to modify it
         custom: this one is for the user and allow to experiment and create your own sequences        
-
+    
 ---------------------------------------------------------
 SETUP
 ---------------------------------------------------------
