@@ -2,5 +2,5 @@
     include ("functions.php");
  
  
-    echo "\ntemp: ".getTemperature()."\n";
+    phpinfo();
 ?>
