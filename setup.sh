@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#git repository name
 reponame="piwebpool"
 #folder used to store the repository when working with adafruit webide
 webiderepo="/usr/share/adafruit/webide/repositories/$reponame/"
