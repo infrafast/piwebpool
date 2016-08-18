@@ -1,9 +1,17 @@
 <?php
+/*
+ @nom: action 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: Page incluse dans tous (ou presque) les fichiers du projet, inclus les entitées SQL et récupère/traite les variables de requetes
+*/
+//
+
 // invoke with
 // action.php?action=changeState&pin=11&state=1
 // action.php?action=updateSetting&id=actionTableCollapse&value=1
 // action.php?action=resetSchedule
-//
+//etc..
+
 require_once('common.php');
 require_once('luaContext.php');
 
