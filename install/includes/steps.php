@@ -145,7 +145,7 @@ $steps = array(
 			),
 			array(
 				'type' => 'info',
-				'value' => 'In this PHP Setup Wizard demo you may use any random database values.',
+				'value' => 'DBname should be pool',
 			),
 
 			// Text box
