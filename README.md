@@ -30,7 +30,6 @@ You can change default values in setup.sh file
 
 1)  deploy all files in /var/www/html and run the piwebpool install script using command "source setup.sh"
     
-
 2) change configuration.php with your db password
 
 3) check and modify the configuration with your setup:
