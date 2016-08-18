@@ -89,7 +89,7 @@ Check and modify the configuration with your own setup:
     /etc/php5/(cli+apache)/php.ini
         Add extension=lua.so to php.ini file
         find "Dynamic Extensions" and add extension=lua.so
-        
+
 5) it is advised to reboot your rasp to check everything is ok or alternatively restart all services
     e.g. sudo /etc/init.d/apache2 restart
 
