@@ -29,12 +29,10 @@ SETUP
 You will find a script named setup.sh in the root directory, this script partially automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
 Otherwise, have a look to the script before to make sure it doesn't break anything if you perform the setup on a productive raspberry 
-already used for other need. In case you have issues with dependencies and packages, please refer to the list below in this document
+already used for other need. In case you have issues with dependencies and packages, please refer to the list later in this document
 so you can fix manually.
 
-The application default directory is a folder having the git repository name in apache html folder
-
-1) cd /var/www/html
+1) cd to your /var/www/html folder
    sudo git clone git@bitbucket.org:infrafast/piwebpool.git
    cd piwebpool
 
