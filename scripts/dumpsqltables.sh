@@ -1,6 +1,8 @@
 #!/bin/sh
-mysqldump -uroot -ppiwebpool pool measures > measures.sql
-mysqldump -uroot -ppiwebpool pool pumpSchedule > pumpSchedule.sql
-mysqldump -uroot -ppiwebpool pool scripts > scripts.sql
-mysqldump -uroot -ppiwebpool pool settings > settings.sql
-mysqldump -uroot -ppiwebpool pool  > piwebpool.sql
+echo "Please enter your database root password: "
+read pwd_variable
+mysqldump -uroot -p$pwd_variable pool measures > measures.sql
+mysqldump -uroot -p$pwd_variable pool pumpSchedule > pumpSchedule.sql
+mysqldump -uroot -p$pwd_variable pool scripts > scripts.sql
+mysqldump -uroot -p$pwd_variable pool settings > settings.sql
+mysqldump -uroot -p$pwd_variable pool  > piwebpool.sql
