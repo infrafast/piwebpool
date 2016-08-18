@@ -39,10 +39,10 @@ You can change default values in setup.sh file
     /etc/rc.local                                   :make sure rc.local is updated
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
         root=postmaster
-        mailhub=mail.gandi.net:587
+        mailhub=yourproviderserver:587
         hostname=piweb
-        AuthUser=admin@infrafast.com
-        AuthPass=Qxxxxxxxxx04
+        AuthUser=youruser
+        AuthPass=yourpass
         UseSTARTTLS=YES    
         rewriteDomain=infrafast.com
         FromLineOverride=YES
