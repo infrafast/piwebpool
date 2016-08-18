@@ -112,8 +112,8 @@ git clone https://github.com/google/blockly.git
 
 pause
 echo "setting up regulatory WIFI to FR"
-echo "REGDOMAIN=FR" > /etc/default/crda
-echo "options cfg80211 ieee80211_regdom=FR"  >  /etc/modprobe.d/cfg80211.conf
+sudo sh -c "echo REGDOMAIN=FR > /etc/default/crda"
+sudo sh -c "echo options cfg80211 ieee80211_regdom=FR  >  /etc/modprobe.d/cfg80211.conf"
 
 
 echo "Modifying rc.local"
