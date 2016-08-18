@@ -77,7 +77,7 @@ echo "create database Pool"
 mysql -uroot -p$pwd_variable < ./scripts/create.sql
 echo "create all tables"
 mysql pool -uroot -p$pwd_variable < ./scripts/piwebpool.sql
-echo "create settings table"
+echo "create lua header and footer code"
 mysql pool -uroot -p$pwd_variable < ./scripts/lua.sql
 pause
 
