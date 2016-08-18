@@ -3,7 +3,7 @@ WELCOME TO PIWEB POOL MANAGER
 ---------------------------------------------------------
 
 The first full open source Raspberry PI PHP web-based application that automates the control of swiming pool with following features:
-    - water quality measurement (PH, ORP, Temperature)
+    - real time water quality measurement (PH, ORP, Temperature)
     - weather forecast 
     - recommendation / advise on water treatment
     - controls up to 4 power outlets
