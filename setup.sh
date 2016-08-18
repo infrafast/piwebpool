@@ -46,9 +46,9 @@ sudo rm -rf lua-1.0.0*
 webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
 if [ -d "webiderepo" ]
 then
-	sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /usr/share/
+	sudo ln -s $webiderepo /usr/share/
 else
-	echo "$file not found."
+	echo "$webiderepo not found."
 fi
 
 
