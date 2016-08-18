@@ -57,6 +57,7 @@ INSTALLATION
     Be careful, in particular the webroot is set to the piwebpool folder which could screw your existing install
 
 CONFIGURATION
+
     By defaut, (as described in configuration.php), you should cable as following:
 		pump relay on GPIO pin 11, to replace the scheduler in your electric case
 		your first treatment device relay will be connected to pin 16,
