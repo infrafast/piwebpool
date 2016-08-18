@@ -80,7 +80,7 @@ $steps = array(
 				'type' => 'file-permissions',
 				'label' => 'Folders and files',
 				'items' => array(
-					'cache/' => 'write', // make sure "cache" folder is writable
+					'/usr/local/bin/gpio' => 'write', // make sure "cache" folder is writable
 					'config.php' => 'read', // make sure "config.php" file is writable
 				),
 			),
