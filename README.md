@@ -52,6 +52,7 @@ CONFIGURATION
 		your first treatment device relay will be connected to pin 16,
 		pin 12 is reserved for a second treatment device
 		on pin 15 you should connect a relay that will control a power voltage contactor (to connect a 
+    Your probe will be connected to USB port as defined in the USBdevices.id file
     
 3) check and modify the configuration with your setup:
     
