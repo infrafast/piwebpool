@@ -91,7 +91,7 @@ Options:
 --------
 
 A) Make sure your raspberry config is ok
-    sudo raspi-config
+    $sudo raspi-config
          1-expand file system
          5-locale fr UTF 8
          5-timezone europe paris
