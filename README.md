@@ -57,7 +57,7 @@ The application default directory is a folder having the git repository name in 
     /etc/ssmtp/revaliases                           :edit your service provider info
         www-data:youruseremail:yourproviderserver:587
     
-    /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
+    /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piwebpool directory
     
     /etc/php5/(cli+apache)/php.ini
         Add extension=lua.so to php.ini file
