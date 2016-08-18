@@ -51,7 +51,7 @@ pause
 sudo rm -rf lua-1.0.0*
 
 #if we use adafruit webide, then we link the repository to where it should be in prod
-if [ -d "webiderepo" ]
+if [ -d "$webiderepo" ]
 then
 	sudo ln -s $webiderepo $piwebpooldir
 else
@@ -61,7 +61,7 @@ fi
 
 #website
 echo "CONFIGURING APACHE"
-sudo ln -s /usr/share/piwebpool/ /var/www/html/
+sudo ln -s $piwebpooldir/piwebpool /var/www/html/
 #document root to be DocumentRoot /var/www/html/pool
 sudo sed -i 's_DocumentRoot /var/www/html_DocumentRoot /var/www/html/piwebpool_' /etc/apache2/sites-available/000-default.conf
 sudo service apache2 restart
