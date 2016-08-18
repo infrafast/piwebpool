@@ -37,7 +37,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` VALUES ('actionTable','1',0,''),('blocklyTable','1',0,''),('e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','115',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','1',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','1',0,''),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','0',0,''),('TEMPConsign','28',1,'Consigne Température'),('webURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'Page web pour push des données');
+INSERT INTO `settings` VALUES ('actionTable','1',0,''),('blocklyTable','1',0,''),('e_mail','your@email.com',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','115',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','0',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','1',0,''),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','1',0,''),('TEMPConsign','28',1,'Consigne de tempÃ©rature'),('webURL','http://user:pass@server/json.htm?type=command',1,'API pour domoticz ou autre');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-18 10:54:38
+-- Dump completed on 2016-08-18 15:30:26
