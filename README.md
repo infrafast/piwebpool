@@ -52,7 +52,7 @@ already used for other need. In case you have issues with dependencies and packa
 so you can fix manually.
 
 
-INSTALLATION
+** INSTALLATION **
 
 1) cd to your /var/www/html
    sudo git clone git@bitbucket.org:infrafast/piwebpool.git
@@ -62,7 +62,7 @@ INSTALLATION
     You can change default values in setup.sh file if you wish
     Be careful, in particular the webroot is set to the piwebpool folder which could screw your existing install
 
-CONFIGURATION
+** CONFIGURATION **
 
 Check and modify the configuration with your own setup:
     
