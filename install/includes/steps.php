@@ -63,6 +63,7 @@ $steps = array(
 					'register_globals' => false, // "register_globals" must be disabled
 					'safe_mode' => false, // "safe_mode" must be disabled
 					'upload_max_filesize' => '>=2mb', // "upload_max_filesize" must be at least 2mb
+					'cCurl' => false, //
 				),
 			),
 
