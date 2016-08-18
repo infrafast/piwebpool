@@ -3,8 +3,6 @@
 # and reboot raspberry in case of loss
 PIWEBDIR="/var/www/html/piwebpool"
 
-
-
 LOGID="HOURLYPIWEPOOL.SH: "
 logger -s "$LOGID starting" 
 #IP_FOR_TEST="$(hostname -f).infrafast.com"
