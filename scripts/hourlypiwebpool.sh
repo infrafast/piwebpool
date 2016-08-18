@@ -5,7 +5,7 @@ PIWEBDIR="/var/www/html/piwebpool"
 
 
 
-LOGID="HOURLYCRONTAB.SH: "
+LOGID="HOURLYPIWEPOOL.SH: "
 logger -s "$LOGID starting" 
 #IP_FOR_TEST="$(hostname -f).infrafast.com"
 IP_FOR_TEST="www.google.com"
