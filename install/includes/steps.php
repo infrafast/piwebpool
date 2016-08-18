@@ -102,7 +102,7 @@ $steps = array(
 			),
 			array(
 				'type' => 'info',
-				'value' => 'In this PHP Setup Wizard demo you may use any random website and installation path values.',
+				'value' => 'Normally, application should go in /var/www/html/piwebpool',
 			),
 
 			// Text box
