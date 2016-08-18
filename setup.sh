@@ -3,7 +3,7 @@
 #folder used to store the repository when working with adafruit webide
 webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
 #directory of piweb
-proddir="/usr/share/"
+piwebpooldir="/usr/share/"
 
 
 pause(){
@@ -53,7 +53,7 @@ sudo rm -rf lua-1.0.0*
 #if we use adafruit webide, then we link the repository to where it should be in prod
 if [ -d "webiderepo" ]
 then
-	sudo ln -s $webiderepo /usr/share/
+	sudo ln -s $webiderepo $piwebpooldir
 else
 	echo "$webiderepo not found."
 fi
