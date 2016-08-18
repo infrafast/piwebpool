@@ -60,7 +60,7 @@ The application default directory is a folder having the git repository name in 
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
     
     /etc/php5/(cli+apache)/php.ini
-        Add extension=lua.so to php.ini file (could be )
+        Add extension=lua.so to php.ini file
         find "Dynamic Extensions" and add extension=lua.so
         /etc/init.d/apache2 restart
 
