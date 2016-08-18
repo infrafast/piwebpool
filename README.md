@@ -13,9 +13,10 @@ The first full open source Raspberry PI PHP web-based application that automates
     - can be controlled over your iPhone or any mobile device
     - provide unlimited configuratio capabilities with a graphical scripting front end, no need to know programming
     - notifications (SMS, email, or smartphone)
+
 Interfaces with :
     - Domoticz and any other home automation system thru a simple HTTP API
-    - Smartphone applications
+    - Any Smartphone applications
 
 Supported hardware:
     - any ph,ORP and temperature probes should work
