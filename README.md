@@ -56,6 +56,8 @@ The application default directory is a folder having the git repository name in 
         find "Dynamic Extensions" and add extension=lua.so
         /etc/init.d/apache2 restart
 
+5) it is advised to reboot your rasp to check everything is ok
+
 Options:
 --------
 
