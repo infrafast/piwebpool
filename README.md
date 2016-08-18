@@ -25,8 +25,8 @@ Supported hardware:
 
 Cabling:
     by defaut (see configuration.php), GPIO pin:
-			pump relay=>11,
-			treatment relay=>16,
+			pump relay=>11, you should cable the relay to replace your scheduler in the existing electric case
+			treatment relay=>16, 
 		    second treatment relay=>12,
 		    power outlet (should be connected to a relay that command a contactor)=>15
     probes: connect your probes with USB carrier as defined in USBDevices.id file
