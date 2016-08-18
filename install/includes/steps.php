@@ -87,7 +87,7 @@ $steps = array(
 			// Verify dependencies
 			array(
 				'type' => 'file-permissions',
-				'label' => 'Folders and files',
+				'label' => 'Dependencies',
 				'items' => array(
 					'cache/' => 'write', // make sure "cache" folder is writable
 					'config.php' => 'read', // make sure "config.php" file is writable
