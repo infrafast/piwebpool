@@ -45,8 +45,10 @@ sudo rm -rf lua-1.0.0*
 
 #website
 
+sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /usr/share/
+
 echo "CONFIGURING APACHE"
-sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /var/www/html/
+sudo ln -s /usr/share/piwebpool/ /var/www/html/
 #document root to be DocumentRoot /var/www/html/pool
 sudo sed -i 's_DocumentRoot /var/www/html_DocumentRoot /var/www/html/pool_' /etc/apache2/sites-available/000-default.conf
 sudo service apache2 restart
