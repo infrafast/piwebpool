@@ -3,6 +3,7 @@ WELCOME TO PIWEB SWIMMING POOL MANAGER
 ---------------------------------------------------------
 
 The first full open source Raspberry PI PHP web-based application that automates the control of swiming pool with following features:
+
     - real time water quality measurement (PH, ORP, Temperature)
     - controls up to 4 power outlets
     - history (graphs) of commands and measures
@@ -15,10 +16,12 @@ The first full open source Raspberry PI PHP web-based application that automates
     - notifications (SMS, email, or smartphone)
 
 Interfaces with :
+
     - Domoticz and any other home automation system thru a simple HTTP API
     - Any Smartphone applications
 
 Supported hardware:
+
     - any ph,ORP and temperature probes should work
     - the application is currently using the atlas-scientific EZO circuit with USB Isolation Carrier Board
     - in case you want to interface with other circuit, all you have to do is adjusting getTemperature(), getORP() and getPh() in functions.php
