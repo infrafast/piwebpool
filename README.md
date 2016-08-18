@@ -32,7 +32,7 @@ You can change default values in setup.sh file
     deploy the file in /usr/share/adafruit/webide/repositories/piweb and run the piwebpool install script
     source setup.sh
 
-2) change configuration.php with your password
+2) change configuration.php with your db password
 
 2) check and modify the configuration with your setup:
     hourlycrontab.sh                                :change INTERFACE="wlan0" to your network interface
