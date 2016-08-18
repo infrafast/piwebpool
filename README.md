@@ -35,6 +35,7 @@ The application default directory is a folder having the git repository name in 
 
 3)  run the piwebpool install script using command "source setup.sh"
     You can change default values in setup.sh file if you wish
+    Be careful, in particular the webroot is set to the piwebpool folder which could screw your existing install
     
 4) check and modify the configuration with your setup:
     
