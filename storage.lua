@@ -7,6 +7,6 @@ local obj1 = {
 	["gel"] = 0;
 	["erreurLectureSonde"] = 0;
 	["traitement1"] = 0;
-	["warning"] = " ";
+	["warning"] = "  Sondes &agrave; v&eacute;rifier, erreur de lecture ";
 }
 return obj1
