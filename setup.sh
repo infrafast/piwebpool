@@ -1,7 +1,8 @@
 #!/bin/sh
 
+reponame="piwebpool"
 #folder used to store the repository when working with adafruit webide
-webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
+webiderepo="/usr/share/adafruit/webide/repositories/$reponame/"
 #directory of piweb, normally in html apache folder
 piwebpooldir="/var/www/html"
 
