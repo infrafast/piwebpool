@@ -49,7 +49,7 @@ INSTALLATION
 CONFIGURATION
     By defaut, (as described in configuration.php), you should cable as following:
 		pump relay on GPIO pin 11, to replace the scheduler in your electric case
-		your first treatment device relay on pin 16,
+		your first treatment device relay will be connected to pin 16,
 		pin 12 is reserved for a second treatment device
 		on pin 15 you should connect a relay that will control a power voltage contactor (to connect a 
     
