@@ -2,7 +2,7 @@
 /*
  @nom: action 
  @auteur: piwebpool (info@infrafast.com)
- @description: Page incluse dans tous (ou presque) les fichiers du projet, inclus les entitées SQL et récupère/traite les variables de requetes
+ @description: execute all actions from the web GUI
 */
 //
 
