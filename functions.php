@@ -53,8 +53,8 @@ function weburl($url,$statusKey){
 }
 
 function sendsms($message,$destination){
-    $SMSuser = "19107501";
-    $SMSkey = "1NXCXBzJGbNsdb";
+    $SMSuser = "youruserid";
+    $SMSkey = "yourpasskey";
     $feedback="void";            
     $result=true;
     if (!sms( $SMSuser, $SMSkey, $message,$feedback )) $result=false;
