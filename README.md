@@ -43,7 +43,7 @@ Scripting:
         - custom: this one is for the user and allow to experiment and create your own sequences        
     
 ---------------------------------------------------------
-SETUP
+# SETUP
 ---------------------------------------------------------
 You will find a script named setup.sh in the root directory, this script partially automates the installation of the application.
 Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
@@ -152,14 +152,14 @@ Dependencies and third party tools (all pre-setup in the package):
     Thanks for the work of idleman 
     
 ---------------------------------------------------------
-BUGS
+# BUGS
 ---------------------------------------------------------
     - not really a bug but an implementation improvement: 
         Lua scripts are stored in the DB with encoded HTML chartset. 
         for some reason the code from updateScript in "action.php" decode the receive POST but SQL still store it encoded.    - 
     
 ---------------------------------------------------------
-TODO LIST 
+# TODO LIST 
 ---------------------------------------------------------
     [ ] sanity check of all external url script/reference to be able to run without internet connexion
     [ ] use HTTPS
