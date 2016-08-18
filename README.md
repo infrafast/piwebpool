@@ -28,38 +28,11 @@ so you can fix manually.
 The application default directory is  /usr/share/adafruit/webide/repositories/piweb with a symlink to /var/www/html, listening on 80
 You can change default values in setup.sh file
 
-1) First, make sure your raspberry config is ok
-    sudo raspi-config
-         1-expand file system
-         5-locale fr UTF 8
-         5-timezone europe paris
-         5-keyboard layout
-             generic 105 - german french switzerland
-         9-advanced - sethostname: piweb3
-         9-advanced enable ssh
-    apt-get install rpi-update
-    rpi-update
-
-2) setup wifi if not done (optionnal)
-    sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
-        country=FR                                                                                                                                              
-        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
-        update_config=1                                                                                                                                         
-        network={                                                                                                                                               
-           ssid="ASUS_AP"                                                                                                                                       
-           psk="jt2p9ug1"                                                                                                                                       
-        } 
-
-3) install adafruit webide (optional) if you want to contribute         
-    curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
-    goto http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
-    sudo service adafruit-webide.sh restart
-
-4)  as "webide" user (if not existing, please create the user and group),
+1)  as "webide" user (if not existing, please create the user and group),
     deploy the file in /usr/share/adafruit/webide/repositories/piweb and run the piwebpool install script
     source setup.sh
 
-5) check and modify the configuration with your setup:
+2) check and modify the configuration with your setup:
     hourlycrontab.sh                                :change INTERFACE="wlan0" to your network interface
     /etc/rc.local                                   :make sure rc.local is updated
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
@@ -78,6 +51,36 @@ You can change default values in setup.sh file
         Add extension=lua.so to php.ini file (could be )
         find "Dynamic Extensions" and add extension=lua.so
         /etc/init.d/apache2 restart
+
+Options:
+--------
+
+A) install adafruit webide (optional) if you want to contribute         
+    curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
+    goto http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
+    sudo service adafruit-webide.sh restart
+
+B) Make sure your raspberry config is ok
+    sudo raspi-config
+         1-expand file system
+         5-locale fr UTF 8
+         5-timezone europe paris
+         5-keyboard layout
+             generic 105 - german french switzerland
+         9-advanced - sethostname: piweb3
+         9-advanced enable ssh
+    apt-get install rpi-update
+    rpi-update
+
+B) setup wifi if not done (optionnal)
+    sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+        country=FR                                                                                                                                              
+        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev                                                                                                 
+        update_config=1                                                                                                                                         
+        network={                                                                                                                                               
+           ssid="ASUS_AP"                                                                                                                                       
+           psk="jt2p9ug1"                                                                                                                                       
+        } 
 
 Dependencies and third party tools (all pre-setup in the package):      
     wiringpi                    :gpio commands
