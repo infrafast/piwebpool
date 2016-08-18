@@ -1,13 +1,11 @@
 PIWEBDIR="/var/www/html/piwebpool"
-
-logger -s "RC.LOCAL: Starting"                                                                                                                      
+logger -s "RC.LOCAL: Starting"
 sh $PIWEBDIR/scripts/hourlypiwebpool.sh&
 logger -s "RC.LOCAL: forcing fsck for next reboot"
 echo "-fy" > /forcefsck
-logger -s "RC.LOCAL: turn off power save on wlan0"                                                                                                          
+logger -s "RC.LOCAL: turn off power save on wlan0"
 iw dev wlan0 set power_save off
 iw reg set FR
 logger -s "RC.LOCAL: calling initUSB.py"
 python $PIWEBDIR/scripts/initUSB.py
-
 exit 0
