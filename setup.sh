@@ -1,4 +1,10 @@
 #!/bin/sh
+
+#folder used to store the repository when working with adafruit webide
+webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
+
+
+
 pause(){
  echo press enter    
  sed -n q </dev/tty
@@ -43,7 +49,6 @@ echo "REMOVING TEMP FILES"
 pause
 sudo rm -rf lua-1.0.0*
 
-webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
 if [ -d "webiderepo" ]
 then
 	sudo ln -s $webiderepo /usr/share/
