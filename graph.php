@@ -1,4 +1,10 @@
 <?php
+/*
+ @nom: graph 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: draw measures and command graphs as well as text pictures
+*/
+//
 
 include_once('include/phpMyGraph5.0.php'); 
 require('configuration.php');
