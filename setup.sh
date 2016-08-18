@@ -120,8 +120,6 @@ sudo cat ./scripts/rc.local >> /etc/rc.local
 pause
 
 
-
-
 #system startup and hardening
 #sudo echo "python /var/www/html/pool/initUSB.py" >> /etc/rc.local
 echo "Some remaining action have to be done manually"
