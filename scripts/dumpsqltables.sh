@@ -1,6 +1,6 @@
 #!/bin/sh
-mysqldump -uroot -pQuintal74605 pool measures > measures.sql
-mysqldump -uroot -pQuintal74605 pool pumpSchedule > pumpSchedule.sql
-mysqldump -uroot -pQuintal74605 pool scripts > scripts.sql
-mysqldump -uroot -pQuintal74605 pool settings > settings.sql
-mysqldump -uroot -pQuintal74605 pool  > piwebpool.sql
+mysqldump -uroot -ppiwebpool pool measures > measures.sql
+mysqldump -uroot -ppiwebpool pool pumpSchedule > pumpSchedule.sql
+mysqldump -uroot -ppiwebpool pool scripts > scripts.sql
+mysqldump -uroot -ppiwebpool pool settings > settings.sql
+mysqldump -uroot -ppiwebpool pool  > piwebpool.sql
