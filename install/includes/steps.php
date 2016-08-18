@@ -35,44 +35,6 @@ $steps = array(
 	// Step 2
 	array(
 		// Step name
-		'name' => 'License verification',
-
-		// Items we're going to display
-		'fields' => array(
-
-			// Simple text
-			array(
-				'type' => 'info',
-				'value' => 'Welcome to the "My Application" installation wizard.
-				This automatic wizard will help you get the system up and running in just a couple of minutes.
-				Please type in the license number for the software that you can find in the client area on our website.',
-			),
-			array(
-				'type' => 'info',
-				'value' => 'In this PHP Setup Wizard demo you may use the following license number: 1234-1234-1234-1234',
-			),
-
-			// Text box
-			array(
-				'type' => 'text',
-				'label' => 'License number',
-				'name' => 'license_number',
-				'attributes' => array('class' => 'medium'),
-				'default' => '',
-				'validate' => array(
-					array('rule' => 'required'), // make it "required"
-					array(
-						'rule' => 'validate_license', // run "validate_license" function the "includes/validation.php" file upon form submission
-						'error' => 'License number does not appear to be valid.'
-					),
-				),
-			),
-		),
-	),
-
-	// Step 3
-	array(
-		// Step name
 		'name' => 'Server requirements',
 
 		// Items we're going to display
