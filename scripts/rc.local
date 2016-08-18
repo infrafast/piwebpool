@@ -3,7 +3,7 @@ PIWEBDIR="/var/www/html/piwebpool"
 logger -s "RC.LOCAL: Starting"                                                                                                                          
 logger -s "RC.LOCAL: calling initUSB.py"                                                                                                                
 python $PIWEBDIR/initUSB.py                                                                                                                    
-sh /var/www/html/pool/hourlycrontab.sh&                                                                                                                 
+sh PIWEBDIR/scripts/hourlycrontab.sh&                                                                                                                 
 logger -s "RC.LOCAL: forcing fsck for next reboot"                                                                                                      
 echo "-fy" > /forcefsck
 logger -s "RC.LOCAL: turn off power save on wlan0"                                                                                                          
