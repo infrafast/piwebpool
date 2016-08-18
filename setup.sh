@@ -85,7 +85,7 @@ pause
 
 #file permission and configuration
 echo "setting up permission and others"
-chown -R www-data.www-data "$piwebpooldir/$reponame"
+sudo chown -R www-data.www-data "$piwebpooldir/$reponame"
 sudo chmod 774 /etc/ssmtp/ssmtp.conf
 sudo usermod -a -G webide www-data
 chmod g+w $piwebpooldir/$reponame
