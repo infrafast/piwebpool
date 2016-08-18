@@ -25,10 +25,14 @@ Otherwise, have a look to the script before to make sure it doesn't break anythi
 already used for other need. In case you have issues with dependencies and packages, please refer to the list below in this document
 so you can fix manually.
 
-The application default directory is  /usr/share/adafruit/webide/repositories/piweb with a symlink to /var/www/html, listening on 80
-You can change default values in setup.sh file
+The application default directory is a folder having the same name as the git repository to be cloned in apache html folder, listening on 80
 
-1)  deploy all files in /var/www/html and run the piwebpool install script using command "source setup.sh"
+1) cd /var/www/html
+    
+
+
+2)  run the piwebpool install script using command "source setup.sh"
+    You can change default values in setup.sh file if you wish
     
 2) change configuration.php with your db password
 
