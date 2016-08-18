@@ -1,3 +1,7 @@
+#
+
+PIWEBDIR="/var/www/html/piwebpool"
+
 logger -s "RC.LOCAL: Starting"                                                                                                                          
 logger -s "RC.LOCAL: calling initUSB.py"                                                                                                                
 python /var/www/html/pool/initUSB.py                                                                                                                    
