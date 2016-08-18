@@ -85,7 +85,7 @@ pause
 echo "setting up permission and others"
 sudo chmod 774 /etc/ssmtp/ssmtp.conf
 sudo usermod -a -G webide www-data
-chmod g+w ../pool
+chmod g+w $piwebpooldir/piwebpool
 chmod -R 0775 css js include
 #periodic execution of the script
 sudo ln -s "$piwebpooldir/piwebpool/scripts/hourlypiwebpool.sh" /etc/cron.hourly/
