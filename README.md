@@ -29,6 +29,7 @@ Cabling:
 			treatment relay=>16,
 		    second treatment relay=>12,
 		    power outlet (should be connected to a relay that command a contactor)=>15
+    probes: connect your probes with USB carrier as defined in USBDevices.id file
         
 
 ---------------------------------------------------------
