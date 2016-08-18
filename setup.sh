@@ -53,7 +53,7 @@ sudo rm -rf lua-1.0.0*
 #if we use adafruit webide, then we link the repository to where it should be in prod
 if [ -d "$webiderepo" ]
 then
-	sudo ln -s "$webiderepo" "$piwebpooldir""
+	sudo ln -s "$webiderepo" "$piwebpooldir"
 else
 	echo "$webiderepo not found."
 fi
@@ -61,7 +61,7 @@ fi
 
 #website
 echo "CONFIGURING APACHE"
-sudo ln -s "$piwebpooldir/piwebpool" /var/www/html/
+sudo ln -s "$piwebpooldir/piwebpool" "/var/www/html/"
 #document root to be DocumentRoot /var/www/html/pool
 sudo sed -i 's_DocumentRoot /var/www/html_DocumentRoot $piwebpooldir/piwebpool_' /etc/apache2/sites-available/000-default.conf
 sudo service apache2 restart
@@ -92,7 +92,7 @@ sudo usermod -a -G webide www-data
 chmod g+w ../pool
 chmod -R 0775 css js include
 #periodic execution of the script
-sudo ln -s /var/www/html/piwebpool/hourlycrontab.sh /etc/cron.hourly/poolScheduler
+sudo ln -s $piwebpooldir/piwebpool/hourlycrontab.sh /etc/cron.hourly/poolScheduler
 #this is to access the ttyUSB0 from apache
 sudo usermod -a -G dialout www-data
 pause
