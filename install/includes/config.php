@@ -7,7 +7,7 @@ $config = array(
 
 	'wizard_file' => 'index.php',
 
-	'copyright' => '<a href="http://www.phpsetupwizard.com" target="_blank">PHP Setup Wizard</a> &copy; '.date('Y'),
+	'copyright' => 'GPL',
 
 	'show_steps' => true,
 	'show_back_button' => true,
