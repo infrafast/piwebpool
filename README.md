@@ -41,13 +41,13 @@ You can change default values in setup.sh file
         root=postmaster
         mailhub=yourproviderserver:587
         hostname=piweb
-        AuthUser=youruser
+        AuthUser=youruseremail
         AuthPass=yourpass
         UseSTARTTLS=YES    
         rewriteDomain=yourdomain
         FromLineOverride=YES
     /etc/ssmtp/revaliases                           :edit your service provider info
-        www-data:admin@infrafast.com:mail.gandi.net:587
+        www-data:youruseremail:yourproviderserver:587
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piweb directory
     /etc/php5/(cli+apache)/php.ini
         Add extension=lua.so to php.ini file (could be )
