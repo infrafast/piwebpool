@@ -58,7 +58,7 @@ INSTALLATION
 
 CONFIGURATION
 
-Check and modify the configuration with your setup:
+Check and modify the configuration with your own setup:
     
     index.php                                       : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
     configuration                                   : change your db password, adjust GPIO mapping to your need if you wish 
