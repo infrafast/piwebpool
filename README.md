@@ -48,15 +48,11 @@ CONFIGURATION
 3) check and modify the configuration with your setup:
     
     index.php                                       : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
-    
     configuration                                   : change your db password
-    
     USBDevices.id                                   :map your sensors to the correct devices
-    
     scripts/hourlypiwebpool.sh                      :change INTERFACE="wlan0" to your network interface
     
     /etc/rc.local                                   :make sure rc.local is updated
-    
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
         root=postmaster
         mailhub=yourproviderserver:587
@@ -66,12 +62,9 @@ CONFIGURATION
         UseSTARTTLS=YES    
         rewriteDomain=yourdomain
         FromLineOverride=YES
-    
     /etc/ssmtp/revaliases                           :edit your service provider info
         www-data:youruseremail:yourproviderserver:587
-    
     /etc/apache2/sites-available/000-default.conf   :make sure the documentroot point to piwebpool directory
-    
     /etc/php5/(cli+apache)/php.ini
         Add extension=lua.so to php.ini file
         find "Dynamic Extensions" and add extension=lua.so
