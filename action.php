@@ -185,6 +185,7 @@ if(isset($_['action'])){
             $result['state'] = shell_exec('./scripts/hourlypiwebpool.sh');
             // not a good solution as it will be executed by apache with no write access to the logs
             // for strange reason this also return {|main:Runtime error|custom:Runtime error}]  in the log
+            // we'd better put the code of cronaction.php here
             break;
     
         case 'lua':
