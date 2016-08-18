@@ -89,7 +89,7 @@ $steps = array(
 				'type' => 'file-permissions',
 				'label' => 'Dependencies',
 				'items' => array(
-					'cache/' => 'write', // make sure "cache" folder is writable
+					'cache/' => 'read', // make sure "cache" folder is writable
 					'config.php' => 'read', // make sure "config.php" file is writable
 				),
 			),
