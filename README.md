@@ -12,6 +12,7 @@ The first full open source Raspberry PI PHP web-based application that automates
     - scheduler that control filtration aoccrding to water temperature
     - can be controlled over your iPhone or any mobile device
     - provide graphical scripting capabilities (with Lua and Blockly)
+    - notifications (SMS, email, or smartphone)
 Interfaces with :
     - Domoticz and any other home automation system thru a simple HTTP API
     - Smartphone applications
