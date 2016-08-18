@@ -1,6 +1,11 @@
 <?php
 /*
-LUA CONTEXT */
+ @nom: luacontext 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: lua script execution engine
+*/
+//
+
 require_once ("functions.php");
 include ("configuration.php");
 
