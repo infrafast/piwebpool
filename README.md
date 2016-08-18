@@ -47,12 +47,11 @@ INSTALLATION
     Be careful, in particular the webroot is set to the piwebpool folder which could screw your existing install
 
 CONFIGURATION
-    
-    $materials = array(
-			"filtration"=>11,
-			"traitement1"=>16,
-		    "traitement2"=>12,
-		    "pac"=>15);
+    By defaut, (as described in configuration.php), you should cable as following:
+		pump relay on GPIO pin 11, to replace the scheduler in your electric case
+		your first treatment device relay on pin 16,
+		pin 12 is reserved for a second treatment device
+		on pin 15 you should connect a relay that will control a power voltage contactor (to connect a 
     
 3) check and modify the configuration with your setup:
     
