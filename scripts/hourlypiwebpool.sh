@@ -1,6 +1,7 @@
 #!/bin/sh
 # cron script for checking wlan connectivity
 # and reboot raspberry in case of loss
+PIWEBDIR="/var/www/html/piwebpool"
 LOGID="HOURLYCRONTAB.SH: "
 logger "$LOGID starting" 
 IP_FOR_TEST="$(hostname -f).infrafast.com"
@@ -9,7 +10,7 @@ PING="/bin/ping"
 IFUP="/sbin/ifup"
 IFDOWN="/sbin/ifdown --force"
 INTERFACE="wlan0"
-FFLAG="/var/www/html/piwebpool/stuck.fflg"
+FFLAG="$PIWEBDIR/stuck.fflg"
 
 # ping test
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
