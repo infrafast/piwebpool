@@ -36,6 +36,6 @@ fi
 
 #execute periodic piweb actions
 logger "$LOGID Executing piweb cronaction"
-cd /var/www/html/piwebpool
+cd $PIWEBDIR
 #php -dextension=lua.so cronaction.php
 php cronaction.php
