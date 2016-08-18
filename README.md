@@ -44,7 +44,7 @@ You can change default values in setup.sh file
         AuthUser=youruser
         AuthPass=yourpass
         UseSTARTTLS=YES    
-        rewriteDomain=infrafast.com
+        rewriteDomain=yourdomain
         FromLineOverride=YES
     /etc/ssmtp/revaliases                           :edit your service provider info
         www-data:admin@infrafast.com:mail.gandi.net:587
