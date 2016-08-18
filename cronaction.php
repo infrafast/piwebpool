@@ -1,6 +1,6 @@
 <?php
 /*
- @nom: action 
+ @nom: cronaction 
  @auteur: piwebpool (info@infrafast.com)
  @description: periodic actions to be executed
 */
