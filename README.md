@@ -124,6 +124,7 @@ C) install adafruit webide (optional) if you want to contribute
     sudo service adafruit-webide.sh restart
 
 Dependencies and third party tools (all pre-setup in the package):      
+
     simpleweather.js            :weather forecast
     loadingoverlay.js           :loading page animation
     wiringpi                    :gpio commands
