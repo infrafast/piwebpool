@@ -119,7 +119,8 @@ Dependencies and third party tools (all pre-setup in the package):
     loadingoverlay.js           :loading page animation
     jquery                      :webpage scripting
     lua table persistence       :for persistent variable
-
+    Thanks for the work of idleman 
+    
 ---------------------------------------------------------
 BUGS
 ---------------------------------------------------------
