@@ -42,7 +42,7 @@ You can change default values in setup.sh file
         mailhub=mail.gandi.net:587
         hostname=piweb
         AuthUser=admin@infrafast.com
-        AuthPass=Quxxxxxxxx04
+        AuthPass=Qxxxxxxxxx04
         UseSTARTTLS=YES    
         rewriteDomain=infrafast.com
         FromLineOverride=YES
