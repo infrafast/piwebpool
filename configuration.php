@@ -1,4 +1,12 @@
 <?php
+/*
+ @nom: configuration 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: customizing file
+*/
+//
+
+
 //
 //Tableau de correspondant PIN physiques/PIN Logiques (de la librairie wiringPI)
 $pins = array();
