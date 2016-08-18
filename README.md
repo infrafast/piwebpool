@@ -39,6 +39,8 @@ The application default directory is a folder having the git repository name in 
     
 4) check and modify the configuration with your setup:
     
+    index.php                                       : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
+    
     USBDevices.id                                   :map your sensors to the correct devices
     
     scripts/hourlypiwebpool.sh                      :change INTERFACE="wlan0" to your network interface
