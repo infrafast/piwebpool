@@ -124,6 +124,8 @@ C) install adafruit webide (optional) if you want to contribute
     sudo service adafruit-webide.sh restart
 
 Dependencies and third party tools (all pre-setup in the package):      
+    simpleweather.js            :weather forecast
+    loadingoverlay.js           :loading page animation
     wiringpi                    :gpio commands
     python-serial               :data acquisition via usb devices
     php5-mysql,mysql-server:    :database and connectivity
@@ -139,8 +141,6 @@ Dependencies and third party tools (all pre-setup in the package):
     blockly                     :visual scripting
     phpmygraph                  :measures and commands graphs
     gdtext                      :text image drawing
-    simpleweather.js            :weather forecast
-    loadingoverlay.js           :loading page animation
     jquery                      :webpage scripting
     lua table persistence       :for persistent variable
     Thanks for the work of idleman 
