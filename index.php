@@ -2,7 +2,7 @@
 /*
  @nom: index 
  @auteur: piwebpool (info@infrafast.com)
- @description: execute all actions from the web GUI
+ @description: main application
 */
 //
 
