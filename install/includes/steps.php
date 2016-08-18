@@ -65,6 +65,7 @@ $steps = array(
 					'upload_max_filesize' => '>=2mb', // "upload_max_filesize" must be at least 2mb
 					'cCurl' => false, //
 					'curl' => false, //
+					'gd' => false, //
 				),
 			),
 
