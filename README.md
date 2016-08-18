@@ -28,9 +28,8 @@ so you can fix manually.
 The application default directory is  /usr/share/adafruit/webide/repositories/piweb with a symlink to /var/www/html, listening on 80
 You can change default values in setup.sh file
 
-1)  as "webide" user (if not existing, please create the user and group),
-    deploy the file in /usr/share/adafruit/webide/repositories/piweb and run the piwebpool install script
-    source setup.sh
+1)  deploy all files in /var/www/html and run the piwebpool install script using command "source setup.sh"
+    
 
 2) change configuration.php with your db password
 
