@@ -6,7 +6,7 @@ PIWEBDIR="/var/www/html/piwebpool"
 
 
 LOGID="HOURLYCRONTAB.SH: "
-logger "$LOGID starting" 
+logger -s "$LOGID starting" 
 #IP_FOR_TEST="$(hostname -f).infrafast.com"
 IP_FOR_TEST="www.google.com"
 PING_COUNT=1
@@ -27,19 +27,19 @@ then
                 rm -f $FFLAG 2>/dev/null
                 sudo reboot
         else
-                logger "$LOGID restarting $INTERFACE ..."
+                logger -s "$LOGID restarting $INTERFACE ..."
                 touch $FFLAG
                 sudo ifdown $INTERFACE && sudo service networking restart && sudo ifup $INTERFACE
                 sudo systemctl daemon-reload
         fi
 else
-    logger "$LOGID $INTERFACE is up and $IP_FOR_TEST is alive"
+    logger -s "$LOGID $INTERFACE is up and $IP_FOR_TEST is alive"
     rm -f $FFLAG 2>/dev/null
 fi
 
 
 #execute periodic piweb actions
-logger "$LOGID Executing piweb cronaction"
+logger -s "$LOGID Executing piweb cronaction"
 cd $PIWEBDIR
 #php -dextension=lua.so cronaction.php
 php cronaction.php
