@@ -49,6 +49,7 @@ echo "REMOVING TEMP FILES"
 pause
 sudo rm -rf lua-1.0.0*
 
+#if we use adafruit webide, then we link the repository to where it should be in prod
 if [ -d "webiderepo" ]
 then
 	sudo ln -s $webiderepo /usr/share/
