@@ -23,6 +23,9 @@ Supported hardware:
     - the application is currently using the atlas-scientific EZO circuit with USB Isolation Carrier Board
     - in case you want to interface with other circuit, all you have to do is adjusting getTemperature(), getORP() and getPh() in functions.php
 
+Cabling:
+    
+
 ---------------------------------------------------------
 SETUP
 ---------------------------------------------------------
