@@ -34,7 +34,7 @@ You can change default values in setup.sh file
 
 2) change configuration.php with your db password
 
-2) check and modify the configuration with your setup:
+3) check and modify the configuration with your setup:
     hourlycrontab.sh                                :change INTERFACE="wlan0" to your network interface
     /etc/rc.local                                   :make sure rc.local is updated
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
