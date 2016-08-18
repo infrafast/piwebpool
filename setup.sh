@@ -118,7 +118,7 @@ echo "options cfg80211 ieee80211_regdom=FR"  >  /etc/modprobe.d/cfg80211.conf
 
 echo "Modifying rc.local"
 sudo sed -i 's_exit 0 #Piwebcontrol_' /etc/rc.local
-sudo cat ./scripts/rc.local >> /etc/rc.local
+sudo sh -c "cat ./scripts/rc.local >> /etc/rc.local"
 pause
 
 
