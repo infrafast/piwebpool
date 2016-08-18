@@ -1,9 +1,2 @@
 # comment
-luac.out
-
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+logfile.txt
