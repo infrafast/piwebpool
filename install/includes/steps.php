@@ -43,9 +43,9 @@ $steps = array(
 			// Simple text
 			array(
 				'type' => 'info',
-				'value' => 'Welcome to the "My Application" installation wizard.
+				'value' => 'Welcome to the "Piwebpool" installation wizard.
 				This automatic wizard will help you get the system up and running in just a couple of minutes.
-				Please type in the license number for the software that you can find in the client area on our website.',
+				The application need the following third party tool to work properly.',
 			),
 			array(
 				'type' => 'info',
