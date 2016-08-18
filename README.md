@@ -25,7 +25,7 @@ Otherwise, have a look to the script before to make sure it doesn't break anythi
 already used for other need. In case you have issues with dependencies and packages, please refer to the list below in this document
 so you can fix manually.
 
-The application default directory is a folder having the same name as the git repository to be cloned in apache html folder, listening on 80
+The application default directory is a folder having the git repository name in apache html folder
 
 1) cd /var/www/html
    sudo git clone git@bitbucket.org:infrafast/piwebpool.git
