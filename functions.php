@@ -2,7 +2,7 @@
 /*
  @nom: functions
  @auteur: piwebpool (info@infrafast.com)
- @description: all utilities reused accross the application
+ @description: all utilities reused across the application
 */
 //
 
