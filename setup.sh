@@ -43,10 +43,9 @@ echo "REMOVING TEMP FILES"
 pause
 sudo rm -rf lua-1.0.0*
 
-#website
-
 sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /usr/share/
 
+#website
 echo "CONFIGURING APACHE"
 sudo ln -s /usr/share/piwebpool/ /var/www/html/
 #document root to be DocumentRoot /var/www/html/pool
