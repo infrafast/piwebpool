@@ -1,5 +1,3 @@
-#
-
 PIWEBDIR="/var/www/html/piwebpool"
 
 logger -s "RC.LOCAL: Starting"                                                                                                                          
