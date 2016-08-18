@@ -81,15 +81,14 @@ $steps = array(
 				'label' => 'Folders and files',
 				'items' => array(
 					'/usr/local/bin/gpio' => 'read', // make sure "cache" folder is writable
-					'config.php' => 'read', // make sure "config.php" file is writable
-                    'config.php' => 'read', // make sure "config.php" file is writable					
-					'config.php' => 'read', // make sure "config.php" file is writable
-                    'config.php' => 'read', // make sure "config.php" file is writable					
-					'config.php' => 'read', // make sure "config.php" file is writable
-                    'config.php' => 'read', // make sure "config.php" file is writable					
-					'config.php' => 'read', // make sure "config.php" file is writable
-                    'config.php' => 'read', // make sure "config.php" file is writable					
-                    
+					'config.php' => 'read', 
+                    'config.php' => 'read', 
+					'config.php' => 'read', 
+                    'config.php' => 'read', 
+					'config.php' => 'read', 
+                    'config.php' => 'read', 
+					'config.php' => 'read', 
+                    'config.php' => 'read', 
 				),
 			),
 			// Verify dependencies
