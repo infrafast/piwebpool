@@ -49,8 +49,9 @@ CONFIGURATION
     
     index.php                                       : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
     configuration                                   : change your db password
-    USBDevices.id                                   :map your sensors to the correct devices
-    scripts/hourlypiwebpool.sh                      :change INTERFACE="wlan0" to your network interface
+    USBDevices.id                                   : map your sensors to the correct devices
+    scripts/hourlypiwebpool.sh                      : change INTERFACE="wlan0" to your network interface
+    functions.php                                   : getTemperature(), getORP() and getPh() to be adjusted if you don't use atlas scientific USB circuit
     
     /etc/rc.local                                   :make sure rc.local is updated
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
