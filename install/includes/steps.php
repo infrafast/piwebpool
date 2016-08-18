@@ -66,6 +66,7 @@ $steps = array(
 					'cCurl' => false, //
 					'curl' => false, //
 					'gd' => false, //
+					'pear' => false, //
 				),
 			),
 
