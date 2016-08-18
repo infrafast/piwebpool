@@ -58,7 +58,7 @@ $steps = array(
 				'type' => 'php-config',
 				'label' => 'Required PHP settings',
 				'items' => array(
-					'php_version' => array('>=4.0', 'PHP Version'), // PHP version must be at least 4.0
+					'php_version' => array('>=5.6', 'PHP Version'), // PHP version must be at least 4.0
 					'short_open_tag' => null, // Display the value for "short_open_tag" setting
 					'register_globals' => false, // "register_globals" must be disabled
 					'safe_mode' => false, // "safe_mode" must be disabled
