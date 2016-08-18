@@ -37,8 +37,13 @@ The application default directory is a folder having the git repository name in 
     You can change default values in setup.sh file if you wish
     
 4) check and modify the configuration with your setup:
+    
+    USBDevices.id                                   :map your sensors to the correct devices
+    
     scripts/hourlypiwebpool.sh                      :change INTERFACE="wlan0" to your network interface
+    
     /etc/rc.local                                   :make sure rc.local is updated
+    
     /etc/ssmtp/ssmtp.conf                           :edit your service provider info
         root=postmaster
         mailhub=yourproviderserver:587
