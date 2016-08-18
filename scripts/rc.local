@@ -7,7 +7,6 @@ echo "-fy" > /forcefsck
 logger -s "RC.LOCAL: turn off power save on wlan0"                                                                                                          
 iw dev wlan0 set power_save off
 iw reg set FR
-
 logger -s "RC.LOCAL: calling initUSB.py"
 python $PIWEBDIR/scripts/initUSB.py
 
