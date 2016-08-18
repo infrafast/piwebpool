@@ -2,7 +2,7 @@
 
 #folder used to store the repository when working with adafruit webide
 webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
-#directory containng the prod file
+#directory of piweb
 proddir="/usr/share/"
 
 
