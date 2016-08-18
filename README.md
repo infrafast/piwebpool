@@ -66,9 +66,8 @@ The application default directory is a folder having the git repository name in 
         
 
 5) it is advised to reboot your rasp to check everything is ok or alternatively restart all services
-    /etc/init.d/apache2 restart
-    /etc/init.d/ssmtp restart
-    
+    e.g. sudo /etc/init.d/apache2 restart
+
 
 Options:
 --------
