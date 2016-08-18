@@ -1,4 +1,10 @@
 <?php
+/*
+ @nom: action 
+ @auteur: piwebpool (info@infrafast.com)
+ @description: periodic actions to be executed
+*/
+//
 // this script is to be executed periodically thru anacron by putting it to the hourly folder (or other means) at least every 2hours in order to query the
 // scheduler table to switch the pump on/ff accordingly
 
