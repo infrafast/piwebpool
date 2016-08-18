@@ -43,8 +43,8 @@ echo "REMOVING TEMP FILES"
 pause
 sudo rm -rf lua-1.0.0*
 
-file="/usr/share/adafruit/webide/repositories/piwebpool/"
-if [ -f "$file" ]
+webiderepo="/usr/share/adafruit/webide/repositories/piwebpool/"
+if [ -d "webiderepo" ]
 then
 	sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /usr/share/
 else
