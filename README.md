@@ -25,7 +25,10 @@ Supported hardware:
 
 Cabling:
     by defaut (see configuration.php), GPIO pin:
-        11 ->
+			pump relay=>11,
+			treatment relay=>16,
+		    second treatment relay=>12,
+		    power outlet (should be connected to a relay that command a contactor)=>15
         
 
 ---------------------------------------------------------
