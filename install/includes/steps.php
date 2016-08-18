@@ -72,7 +72,6 @@ $steps = array(
 				'label' => 'Required PHP modules',
 				'items' => array(
 					'mysql' => array(true, 'MySQL'), // make sure "mysql" module is loaded
-					'lua' => array(true, 'lua'), // make sure "mysql" module is loaded
 				),
 			),
 
