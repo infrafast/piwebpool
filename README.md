@@ -1,5 +1,5 @@
 ---------------------------------------------------------
-WELCOME TO PIWEB POOL MANAGER
+WELCOME TO PIWEB SWIMMING POOL MANAGER
 ---------------------------------------------------------
 
 The first full open source Raspberry PI PHP web-based application that automates the control of swiming pool with following features:
