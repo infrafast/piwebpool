@@ -1,6 +1,6 @@
 <?php
 /*
- @nom: testdata 
+ @nom: testlua 
  @auteur: piwebpool (info@infrafast.com)
  @description: running lua scripts stored in the database for test purpose only, non productive use
 */
