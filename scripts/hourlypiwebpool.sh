@@ -9,7 +9,7 @@ PING="/bin/ping"
 IFUP="/sbin/ifup"
 IFDOWN="/sbin/ifdown --force"
 INTERFACE="wlan0"
-FFLAG="/var/www/html/pool/stuck.fflg"
+FFLAG="/var/www/html/piwebpool/stuck.fflg"
 
 # ping test
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
