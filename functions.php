@@ -1,4 +1,11 @@
 <?php
+/*
+ @nom: functions
+ @auteur: piwebpool (info@infrafast.com)
+ @description: execute all actions from the web GUI
+*/
+//
+
 
 require "include/FreeSMS.php";
 include("include/php_serial.class.php");
