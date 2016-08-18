@@ -48,6 +48,12 @@ INSTALLATION
 
 CONFIGURATION
     
+    $materials = array(
+			"filtration"=>11,
+			"traitement1"=>16,
+		    "traitement2"=>12,
+		    "pac"=>15);
+    
 3) check and modify the configuration with your setup:
     
     index.php                                       : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
