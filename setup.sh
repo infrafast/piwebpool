@@ -46,13 +46,13 @@ sudo rm -rf lua-1.0.0*
 file="/usr/share/adafruit/webide/repositories/piwebpool/"
 if [ -f "$file" ]
 then
-	echo "$file found."
+	sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /usr/share/
 else
 	echo "$file not found."
 fi
 
 
-sudo ln -s /usr/share/adafruit/webide/repositories/piwebpool/ /usr/share/
+
 
 #website
 echo "CONFIGURING APACHE"
