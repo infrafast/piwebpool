@@ -29,6 +29,7 @@ The application default directory is a folder having the same name as the git re
 
 1) cd /var/www/html
    sudo git clone git@bitbucket.org:infrafast/piwebpool.git
+   cd piwebpool
 
 2)  run the piwebpool install script using command "source setup.sh"
     You can change default values in setup.sh file if you wish
