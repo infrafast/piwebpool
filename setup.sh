@@ -89,7 +89,7 @@ sudo usermod -a -G webide www-data
 chmod g+w $piwebpooldir/$reponame
 chmod -R 0775 css js include
 #periodic execution of the script
-sudo ln -s "$piwebpooldir/piwebpool/scripts/hourlypiwebpool.sh" /etc/cron.hourly/
+sudo ln -s "$piwebpooldir/$reponame/scripts/hourlypiwebpool.sh" /etc/cron.hourly/
 #this is to access the ttyUSB0 from apache
 sudo usermod -a -G dialout www-data
 pause
