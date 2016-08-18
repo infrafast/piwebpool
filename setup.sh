@@ -61,9 +61,9 @@ fi
 
 #website
 echo "CONFIGURING APACHE"
-sudo ln -s $piwebpooldir/piwebpool /var/www/html/
+sudo ln -s "$piwebpooldir/piwebpool" /var/www/html/
 #document root to be DocumentRoot /var/www/html/pool
-sudo sed -i 's_DocumentRoot /var/www/html_DocumentRoot $piwebpooldirpiwebpool_' /etc/apache2/sites-available/000-default.conf
+sudo sed -i 's_DocumentRoot /var/www/html_DocumentRoot $piwebpooldir/piwebpool_' /etc/apache2/sites-available/000-default.conf
 sudo service apache2 restart
 pause
 
