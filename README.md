@@ -73,7 +73,7 @@ Check and modify the configuration with your own setup:
                                                         : change path to piwebpool if necessary
     functions.php                                       : getTemperature(), getORP() and getPh() to be adjusted if you don't use atlas scientific USB circuit
     
-    /etc/rc.local                                       :make sure rc.local is updated
+    /etc/rc.local                                       :make sure rc.local is updated (check the path to the application)
     /etc/ssmtp/ssmtp.conf                               :edit your service provider info
         root=postmaster
         mailhub=yourproviderserver:587
