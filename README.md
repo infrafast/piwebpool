@@ -24,7 +24,9 @@ Supported hardware:
     - in case you want to interface with other circuit, all you have to do is adjusting getTemperature(), getORP() and getPh() in functions.php
 
 Cabling:
-    
+    by defaut (see configuration.php), GPIO pin:
+        11 ->
+        
 
 ---------------------------------------------------------
 SETUP
