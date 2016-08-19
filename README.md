@@ -2,7 +2,7 @@
 # WELCOME TO PIWEB SWIMMING POOL MANAGER v0.9
 ---------------------------------------------------------
 
-![measures](https://github.com/infrafast/piwebpool/blob/gh-pages/wiki/measures.png)
+![measures](https://github.com/infrafast/piwebpool/raw/gh-pages/wiki/measures.png)
 
 The first full open source Raspberry PI PHP web-based application that automates the control of swiming pool with following features:
 
