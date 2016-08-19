@@ -156,13 +156,13 @@ Dependencies and third party tools (all pre-setup in the package):
 # BUGS
 ---------------------------------------------------------
 
-refer to github issues
+refer to [github issues](https://github.com/infrafast/piwebpool/issues)
 
 ---------------------------------------------------------
 # TODO LIST 
 ---------------------------------------------------------
 
-refer to github issues
+refer to [github issues](https://github.com/infrafast/piwebpool/issues)
 
 -------------------------------------------------------------------
 GIT AND SSH KEY USAGE QUICK GUIDE
