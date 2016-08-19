@@ -90,6 +90,7 @@ sudo chmod 774 /etc/ssmtp/ssmtp.conf
 sudo usermod -a -G webide www-data
 chmod g+w $piwebpooldir/$reponame
 chmod -R 0775 css js include
+touch logfile.txt
 #periodic execution of the script
 sudo ln -s "$piwebpooldir/$reponame/scripts/hourlypiwebpool.sh" "/etc/cron.hourly/$reponame""
 #this is to access the ttyUSB0 from apache
