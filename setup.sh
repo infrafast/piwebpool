@@ -91,7 +91,7 @@ sudo usermod -a -G webide www-data
 sudo chmod g+w $piwebpooldir/$reponame
 sudo chmod -R 0775 css js include
 sudo touch logfile.txt
-sudo chown www-data logfile.text
+sudo chown www-data logfile.txt
 #periodic execution of the script
 sudo ln -s "$piwebpooldir/$reponame/scripts/hourlypiwebpool.sh" "/etc/cron.hourly/$reponame""
 #this is to access the ttyUSB0 from apache
