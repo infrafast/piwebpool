@@ -4,7 +4,7 @@
 
 ![measures](https://github.com/infrafast/piwebpool/raw/gh-pages/wiki/measures.png)
 
-The first full open source Raspberry PI PHP web-based application that automates the control of swiming pool with following features:
+The first full open source Raspberry PI PHP web-based application that automates the control of swimming pool with following features:
 
     - real time water quality measurement (PH, ORP, Temperature)
     - controls up to 4 power outlets
