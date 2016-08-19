@@ -174,11 +174,8 @@ refer to github issues
     [ ]  
     [ ] 
     [ ] 
-    [ ] implement wifi wizard (https://github.com/sabhiram/raspberry-wifi-conf)
-    [ ] system hardening:
-        - see : http://iqjar.com/jar/raspberry-pi-rebooting-itself-when-it-becomes-unreachable-from-outside-networks/
-        - implement watchdog
-        - http://juice4halt.com/
+    [ ] 
+    [ ] 
 
 -------------------------------------------------------------------
 GIT AND SSH KEY USAGE QUICK GUIDE
