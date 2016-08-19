@@ -92,7 +92,7 @@ $cfg['box-background-color'] = "444444";
 //$cfg['background-color'] = "ffffff";
 $cfg['background-color'] = "444444";
 $cfg['box-border-visible']=false;
-$cfg['title-color']="444444";
+$cfg['title-color']="fffffff";
 //keyvisible = affichage de l'echelle du temps
 
 $text=null;
