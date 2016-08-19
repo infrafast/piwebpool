@@ -194,7 +194,7 @@ $graph = new phpMyGraph();
 //Parse
 switch ($_GET["type"]){
     case "barType":
-        $cfg['label']=substr($_GET["title"],strpos($_GET["title"], "="));
+        $cfg['label']=substr($_GET["title"],strpos($_GET["title"], "=")+1);
         //$cfg['label-visible']=false;
         $cfg['value-label-visible']=false;
         $cfg['zero-line-visible']=false;
