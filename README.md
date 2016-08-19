@@ -168,12 +168,12 @@ refer to github issues
     [ ] 
     [ ] 
     [ ] 
-    [ ] implement installation wizard
-    [ ] finalize forecast / interpretation of the data (graph.php)
-    [ ] implement i18n
-    [ ] use PDO or mysqli 
-    [ ] script combo populated by select * from scripts ID
-    [ ] calibration bug review
+    [ ] 
+    [ ] 
+    [ ]
+    [ ]  
+    [ ] 
+    [ ] 
     [ ] implement wifi wizard (https://github.com/sabhiram/raspberry-wifi-conf)
     [ ] system hardening:
         - see : http://iqjar.com/jar/raspberry-pi-rebooting-itself-when-it-becomes-unreachable-from-outside-networks/
