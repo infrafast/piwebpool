@@ -258,6 +258,7 @@ switch ($_GET["type"]){
             default:
                 // we have to interpret data for switch
                 $periode = $_GET["period"];
+                $text.="\n".
             break;
         }
 
