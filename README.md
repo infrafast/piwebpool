@@ -177,13 +177,13 @@ git tag -a v1.4 -m "my version 1.4"
 git tag
 git show v1.4
 
-git push --follow-tags
-git push --tags                    push all tags
+git push --follow-tags 
+git push --tags                    push all tags 
 
 ------------------------------------------------
 
-ssh-keygen -t rsa -b 4096 -C "info@infrafast.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-more ~/.ssh/id_rsa.pub -> copy in github
-git clone git@github.com:infrafast/piwebpool.git
+ssh-keygen -t rsa -b 4096 -C "info@infrafast.com"  
+eval "$(ssh-agent -s)"   
+ssh-add ~/.ssh/id_rsa  
+more ~/.ssh/id_rsa.pub -> copy in github  
+git clone git@github.com:infrafast/piwebpool.git  
