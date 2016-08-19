@@ -258,7 +258,7 @@ switch ($_GET["type"]){
             default:
                 // we have to interpret data for switch
                 $periode = $_GET["period"];
-                $text.="\n".
+                $text.="\nle dispositif à fonctionné ".$runRatio."% du temps";
             break;
         }
 
