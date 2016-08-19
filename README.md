@@ -161,9 +161,9 @@ refer to github issues
 ---------------------------------------------------------
 # TODO LIST 
 ---------------------------------------------------------
-    [ ] sanity check of all external url script/reference to be able to run without internet connexion
-    [ ] use HTTPS
-    [ ] basic auth implementation
+    [ ] 
+    [ ] 
+    [ ] 
     [ ] set debug level
     [ ] initUSB.py to :
             - catch exception if device is not existing
