@@ -164,7 +164,7 @@ refer to github issues
     [ ] 
     [ ] 
     [ ] 
-    [ ] set debug level
+    [ ] 
     [ ] initUSB.py to :
             - catch exception if device is not existing
             - raise SerialException("could not open port %s: %s" % (self._port, msg)) 
