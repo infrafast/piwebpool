@@ -256,6 +256,7 @@ switch ($_GET["type"]){
                 $reference=28;
             break;
             default:
+                // we have to interpret data for switch
             break;
         }
 
