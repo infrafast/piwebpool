@@ -14,7 +14,7 @@
                     <type>json</type><text>state</text> 
                     <unit>°C</unit>
 					<affichage>text</affichage>
-					<url>http://piweb3.infrafast.com/action.php?action=getTemperature</url>
+					<url>http://servername/action.php?action=getTemperature</url>
 				</item>
 				<item id="1"> 
 					<title>ORP</title>
@@ -23,7 +23,7 @@
                     <type>json</type><text>state</text> 
                     <unit>mV</unit>
 					<affichage>text</affichage>
-					<url>http://piweb3.infrafast.com/action.php?action=getORP</url>
+					<url>http://servername/action.php?action=getORP</url>
 				</item>
 				<item id="2"> 
 					<title>PH</title>
@@ -31,7 +31,7 @@
 					<description>Taux Ph (7.0-7.5) </description>
                     <type>json</type><text>state</text> 
 					<affichage>text</affichage>
-					<url>http://piweb3.infrafast.com/action.php?action=getPh</url>
+					<url>http://servername/action.php?action=getPh</url>
 				</item>					
 				<item id="3"> 
 					<title>Pompe</title>
@@ -40,8 +40,8 @@
                     <type>json</type>
                     <text>state</text>
                     <affichage>switch</affichage>
-                    <url>http://piweb3.infrafast.com/action.php?getState=filtration</url>
-                    <link>http://piweb3.infrafast.com/action.php?filtration=%d</link>                    
+                    <url>http://servername/action.php?getState=filtration</url>
+                    <link>http://servername/action.php?filtration=%d</link>                    
 				</item>
 				<item id="4"> 
 					<title>Traitement</title>
@@ -50,8 +50,8 @@
                     <type>json</type>
                     <text>state</text>
                     <affichage>switch</affichage>
-                    <url>http://piweb3.infrafast.com/action.php?getState=traitement1</url>
-                    <link>http://piweb3.infrafast.com/action.php?traitement1=%d</link>
+                    <url>http://servername/action.php?getState=traitement1</url>
+                    <link>http://servername/action.php?traitement1=%d</link>
 				</item>				
 			</items>
 		</room>
