@@ -1,4 +1,4 @@
-AuthUserFile /usr/local/username/safedirectory/.htpasswd
+AuthUserFile /var/www/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Please Enter Password"
 AuthType Basic
