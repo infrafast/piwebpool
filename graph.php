@@ -243,29 +243,6 @@ switch ($_GET["type"]){
         $ratioDev=$deviation/$avg;
         if ($ratioDev>0.05) $trendIndicator="unstable";
 
-        //db related variables
-        $sql    = "SELECT id,value from settings where userSetting=true;";
-        $result = mysql_query($sql, $link);
-        if (!$result) {
-            $feedback=$feedback." ".mysql_error();
-            return false;
-        }else{
-            while ($row = mysql_fetch_assoc($result)) {
-                $id=($row['id']);
-                $value=($row['value']);
-                if (is_numeric($value)) 
-                $lua->assign($id,floatval($value));
-                else 
-                $lua->assign($id,$value);
-                //$lua->assign("parametre['".$id."']",$value);
-                //appendlualog("   assign(parametre['".$id."'],".$value.")    ");
-                //appendlualog("   assign(".$id.",".$value.")    ");
-            }
-        }    
-        mysql_free_result($result);
-
-        
-        
         $reference=0;
         switch ($_GET["graph"]){
             case "ph":
