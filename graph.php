@@ -198,7 +198,7 @@ if (!$result) {
     while ($row = mysql_fetch_assoc($result)) {
         $id=($row['id']);
         $value=($row['value']);
-        
+        $parameter[$id]=$value;
     }
 }    
 mysql_free_result($result);
