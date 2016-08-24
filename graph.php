@@ -274,6 +274,7 @@ switch ($_GET["type"]){
             break;
             case "temperature";
                 $reference=$parameter["TEMPConsign"];
+                if ($reference==null || $reference==0) $reference=29;
             break;
             default:
                 // we have to interpret data for switch
