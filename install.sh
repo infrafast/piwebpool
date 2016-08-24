@@ -40,7 +40,7 @@ Etapes:
 ---------------------------
 * Renommer le Raspberry Pi
 * Redimensionner la carte SD
-* Mis à jour
+* Mise à jour
 * Terminal en français
 ------------------------------------
 * Configuration du fuseau horaire
