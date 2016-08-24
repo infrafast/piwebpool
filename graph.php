@@ -269,6 +269,8 @@ switch ($_GET["type"]){
             break;
             case "orp";
                 $reference=$parameter["ORPConsign"];
+                echo $reference;
+                exit;
             break;
             case "temperature";
                 $reference=$parameter["TEMPConsign"];
