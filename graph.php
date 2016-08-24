@@ -191,6 +191,7 @@ while ($row = mysql_fetch_assoc($result)){
 //extract parameters from db
 $sql    = "SELECT id,value from settings;";
 $result = mysql_query($sql, $link);
+$parameter =array();
 if (!$result) {
     echo mysql_error();
     exit;
