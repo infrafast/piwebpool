@@ -261,7 +261,7 @@ switch ($_GET["type"]){
         $deviation = ecarttype($values);
         $ratioDev=$deviation/$avg;
         if ($ratioDev>0.05) $trendIndicator="unstable";
-aa
+
         $reference=0;
         switch ($_GET["graph"]){
             case "ph":
