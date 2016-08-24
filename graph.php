@@ -265,13 +265,13 @@ switch ($_GET["type"]){
         $reference=0;
         switch ($_GET["graph"]){
             case "ph":
-                $reference=7.25;                
+                $reference=$parameter["PHConsign"];                
             break;
             case "orp";
-                $reference=730;
+                $reference=$parameter["ORPConsign"];
             break;
             case "temperature";
-                $reference=28;
+                $reference=$parameter["TEMPConsign"];
             break;
             default:
                 // we have to interpret data for switch
