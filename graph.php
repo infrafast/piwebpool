@@ -265,7 +265,7 @@ switch ($_GET["type"]){
         $reference=0;
         switch ($_GET["graph"]){
             case "ph":
-                $reference=$parameter["PHConsign"];                
+                $reference=$parameter["PHConsign"];
             break;
             case "orp";
                 $reference=$parameter["ORPConsign"];
