@@ -268,7 +268,7 @@ aa
                 $reference=$parameter["PHConsign"];                
             break;
             case "orp";
-                $reference=$parameter["ORPConsign"];as
+                $reference=$parameter["ORPConsign"];
                 echo $reference;
                 exit;
             break;
