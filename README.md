@@ -74,6 +74,8 @@ Check and modify the configuration with your own setup:
     scripts/hourlypiwebpool.sh                          : change INTERFACE="wlan0" to your network interface
                                                         : change path to piwebpool if necessary
     functions.php                                       : getTemperature(), getORP() and getPh() to be adjusted if you don't use atlas scientific USB circuit
+    plclinksample.xml                                   : replace servername if you plan to use plclink
+
     
     /etc/rc.local                                       :make sure rc.local is updated (check the path to the application)
     /etc/ssmtp/ssmtp.conf                               :edit your service provider info
