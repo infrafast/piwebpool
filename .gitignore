@@ -3,3 +3,4 @@ logfile.*
 package*.xml
 stuck.fflg
 plclink.xml
+.htaccess*

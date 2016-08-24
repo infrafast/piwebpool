@@ -188,6 +188,25 @@ while ($row = mysql_fetch_assoc($result)){
 }
 //exit;
 
+//extract parameters from db
+$sql    = "SELECT id,value from settings;";
+$result = mysql_query($sql, $link);
+$parameter = array();
+if (!$result) {
+    echo mysql_error();
+    exit;
+}else{
+    while ($row = mysql_fetch_assoc($result)) {
+        $id=($row['id']);
+        $value=($row['value']);
+        $parameter[$id]=$value;
+    }
+}    
+mysql_free_result($result);
+
+
+
+
 header("Content-type: image/png");
 //Create phpMyGraph instance
 $graph = new phpMyGraph();
@@ -242,18 +261,19 @@ switch ($_GET["type"]){
         $deviation = ecarttype($values);
         $ratioDev=$deviation/$avg;
         if ($ratioDev>0.05) $trendIndicator="unstable";
-        
-        
+
         $reference=0;
         switch ($_GET["graph"]){
             case "ph":
-                $reference=7.25;                
+                $reference=$parameter["PHConsign"];                
             break;
             case "orp";
-                $reference=730;
+                $reference=$parameter["ORPConsign"];
+                echo $reference;
+                exit;
             break;
             case "temperature";
-                $reference=28;
+                $reference=$parameter["TEMPConsign"];
             break;
             default:
                 // we have to interpret data for switch
