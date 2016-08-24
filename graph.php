@@ -188,6 +188,30 @@ while ($row = mysql_fetch_assoc($result)){
 }
 //exit;
 
+//extract parameters from db
+$sql    = "SELECT id,value from settings where userSetting=true;";
+$result = mysql_query($sql, $link);
+if (!$result) {
+    $feedback=$feedback." ".mysql_error();
+    return false;
+}else{
+    while ($row = mysql_fetch_assoc($result)) {
+        $id=($row['id']);
+        $value=($row['value']);
+        if (is_numeric($value)) 
+        $lua->assign($id,floatval($value));
+        else 
+        $lua->assign($id,$value);
+        //$lua->assign("parametre['".$id."']",$value);
+        //appendlualog("   assign(parametre['".$id."'],".$value.")    ");
+        //appendlualog("   assign(".$id.",".$value.")    ");
+    }
+}    
+mysql_free_result($result);
+
+
+
+
 header("Content-type: image/png");
 //Create phpMyGraph instance
 $graph = new phpMyGraph();
