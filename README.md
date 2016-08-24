@@ -184,6 +184,7 @@ git show v1.4
 git push --follow-tags 
 git push --tags                    push all tags 
 
+git rm --cached <file>
 ------------------------------------------------
 
 ssh-keygen -t rsa -b 4096 -C "info@infrafast.com"  
