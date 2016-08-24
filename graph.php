@@ -266,9 +266,11 @@ switch ($_GET["type"]){
         switch ($_GET["graph"]){
             case "ph":
                 $reference=$parameter["PHConsign"];
+                if ($reference==null || $reference==0) $reference=7.34;
             break;
             case "orp";
                 $reference=$parameter["ORPConsign"];
+                if ($reference==null || $reference==0) $reference=750;
             break;
             case "temperature";
                 $reference=$parameter["TEMPConsign"];
