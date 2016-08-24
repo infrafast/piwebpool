@@ -189,7 +189,7 @@ while ($row = mysql_fetch_assoc($result)){
 //exit;
 
 //extract parameters from db
-$sql    = "SELECT id,value from settings where userSetting=true;";
+$sql    = "SELECT id,value from settings;";
 $result = mysql_query($sql, $link);
 if (!$result) {
     $feedback=$feedback." ".mysql_error();
