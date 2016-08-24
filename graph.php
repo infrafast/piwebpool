@@ -192,8 +192,8 @@ while ($row = mysql_fetch_assoc($result)){
 $sql    = "SELECT id,value from settings;";
 $result = mysql_query($sql, $link);
 if (!$result) {
-    $feedback=$feedback." ".mysql_error();
-    return false;
+    echo mysql_error();
+    exit;
 }else{
     while ($row = mysql_fetch_assoc($result)) {
         $id=($row['id']);
