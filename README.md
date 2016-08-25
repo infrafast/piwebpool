@@ -16,24 +16,9 @@ The first full open source Raspberry PI PHP web-based application that automates
     - can be controlled over your iPhone or any mobile device
     - provide unlimited configuratio capabilities with a graphical scripting front end, no need to know programming
     - notifications (SMS, email, or smartphone)
-    
+    - Interfaces with Domoticz and any other home automation system thru a simple HTTP API
+    - Compatible with Smartphone browser and applications
 
-
-Interfaces with :
-
-    - Domoticz and any other home automation system thru a simple HTTP API
-    - Any Smartphone applications
-
-Supported hardware:
-
-    - any ph,ORP and temperature probes should work
-    - the application is currently using the atlas-scientific EZO circuit with USB Isolation Carrier Board
-    - in case you want to interface with other circuit, all you have to do is adjusting getTemperature(), getORP() and getPh() in functions.php
-
-Cabling:
-
-
-        
 Scripting:
 
     two scripts are available:
