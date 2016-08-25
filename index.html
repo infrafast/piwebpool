@@ -106,6 +106,8 @@ USBDevices.id                                       : map your sensors to the co
 scripts/hourlypiwebpool.sh                          : change INTERFACE="wlan0" to your network interface
                                                     : change path to piwebpool if necessary
 functions.php                                       : getTemperature(), getORP() and getPh() to be adjusted if you don't use atlas scientific USB circuit
+plclinksample.xml                                   : replace servername if you plan to use plclink
+
 
 /etc/rc.local                                       :make sure rc.local is updated (check the path to the application)
 /etc/ssmtp/ssmtp.conf                               :edit your service provider info
@@ -224,7 +226,8 @@ git show v1.4</p>
 <p>git push --follow-tags 
 git push --tags                    push all tags </p>
 
-<hr>
+<h2>
+<a id="git-rm---cached-" class="anchor" href="#git-rm---cached-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git rm --cached </h2>
 
 <p>ssh-keygen -t rsa -b 4096 -C "<a href="mailto:info@infrafast.com">info@infrafast.com</a>"<br>
 eval "$(ssh-agent -s)"<br>
