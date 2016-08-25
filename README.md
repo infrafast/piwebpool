@@ -20,7 +20,6 @@ The first full open source Raspberry PI PHP web-based application that automates
     - Compatible with Smartphone browser and applications
 
 
-    
 ---------------------------------------------------------
 # LINKS
 ---------------------------------------------------------
