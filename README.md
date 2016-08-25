@@ -16,6 +16,8 @@ The first full open source Raspberry PI PHP web-based application that automates
     - can be controlled over your iPhone or any mobile device
     - provide unlimited configuratio capabilities with a graphical scripting front end, no need to know programming
     - notifications (SMS, email, or smartphone)
+    
+
 
 Interfaces with :
 
@@ -30,12 +32,7 @@ Supported hardware:
 
 Cabling:
 
-    by defaut (see configuration.php), GPIO pin:
-			- pump relay=>11, you should cable the relay to replace your scheduler in the existing electric case
-			- treatment relay=>16, 
-		    - second treatment relay=>12,
-		    - power outlet (should be connected to a relay that command a contactor)=>15
-    probes: connect your probes with USB carrier as defined in USBDevices.id file
+
         
 Scripting:
 
