@@ -1,5 +1,5 @@
 ---------------------------------------------------------
-# WELCOME TO PIWEB SWIMMING POOL MANAGER v0.9
+# PIWEB SWIMMING POOL MANAGER v0.9
 ---------------------------------------------------------
 
 ![measures](https://github.com/infrafast/piwebpool/raw/gh-pages/wiki/measures.png)
