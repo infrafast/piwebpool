@@ -68,7 +68,7 @@ function sendemail($message,$to="szemrot@hotmail.com"){
     //html decode to display accents
     $message=html_entity_decode(wordwrap($message,70));
     $subject = "Notification de ".gethostname();
-    $from = "noreply@piweb.infrafast.com";
+    $from = "noreply@piwebpool.infrafast.github.io";
     $headers = "From:" . $from;
     $result = mail($to,$subject,$message,$headers);
     appendlog("SENDMAIL:",$result==true?"OK":"ERROR",$message);
