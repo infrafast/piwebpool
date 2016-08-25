@@ -5,6 +5,7 @@
 ![measures](https://github.com/infrafast/piwebpool/raw/gh-pages/wiki/measures.png)
 
 [English]
+
 The first full open source Raspberry PI PHP web-based application that automates the control of swimming pool with following features:
 
     - real time water quality measurement (PH, ORP, Temperature)
@@ -21,18 +22,22 @@ The first full open source Raspberry PI PHP web-based application that automates
     - Compatible with Smartphone browser and applications
 
 [Français]
-Piwepool est une application open source écrite en PHP et fonctionnant sur Raspberry qui permet l'automatisation et le controle de piscine à distance via web browser et smartphone.  La version v0.9 est publiée et diponible sur github. Le système comprend du logiciel et materiel dont la mise en oeuvre est décrite dans le wiki et vient en ajout en remplacement de votre installation existante. Contrairement aux systèmes propriétaires, sa conception permet de s'adapter à toutes les situations et permet aux utilisateurs avancés de multiples configurations. Comme toutes les applications open source, cela demande quelques connaissances. 
-Voila les principales fonctionnalités de l'application:
-- acquisition temps réel des mesures de (PH, ORP, Temperature)   
-- controle de 4 appareils (ex. electrolyseur, pompe à chaleur, filtration, eclairage)   
-- historique des données et visualisation par graph   
-- affiche les prévisions météo   
-- fourni des recommendations baées sur l'analye des données dans le temps (ex. ajout de chlore, vérification de la stabilité...)   
-- permet l'envoi de notifications emails, sms et via autres systèmes    
-- permet de planifier le fonctionnement de la pompe en fonction de l'heure et de la température du bassin (ex. hors gel)   
-- peut être controllé via smartphone ou browser web   
-- entièrement programmable à travers des scenarios créable àl'aide de brique visuelles (ne necessite aucune connaissance en programmation). ex. allumage de l'éclairage après 22h00 jusqu'à 02h00   
-- s'interface facilement avec tout système de domotique à travers une API très simple   
+
+Piwepool est une application open source écrite en PHP et fonctionnant sur Raspberry qui permet l'automatisation et le controle de piscine à distance via web browser et smartphone.  
+Le système comprend du logiciel et materiel dont la mise en oeuvre est décrite dans le wiki et vient en ajout en remplacement de votre installation existante. 
+Contrairement aux systèmes propriétaires, sa conception permet de s'adapter à toutes les situations et permet aux utilisateurs avancés de multiples configurations. 
+Comme toutes les applications open source, cela demande quelques connaissances. 
+
+    - acquisition temps réel des mesures de (PH, ORP, Temperature)   
+    - controle de 4 appareils (ex. electrolyseur, pompe à chaleur, filtration, eclairage)   
+    - historique des données et visualisation par graph   
+    - affiche les prévisions météo   
+    - fourni des recommendations baées sur l'analye des données dans le temps (ex. ajout de chlore, vérification de la stabilité...)   
+    - permet l'envoi de notifications emails, sms et via autres systèmes    
+    - permet de planifier le fonctionnement de la pompe en fonction de l'heure et de la température du bassin (ex. hors gel)   
+    - peut être controllé via smartphone ou browser web   
+    - entièrement programmable à travers des scenarios créable àl'aide de brique visuelles (ne necessite aucune connaissance en programmation). ex. allumage de l'éclairage après 22h00 jusqu'à 02h00   
+    - s'interface facilement avec tout système de domotique à travers une API très simple   
 
 ---------------------------------------------------------
 # [HOME](http://piwebpool.infrafast.com)
