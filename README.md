@@ -19,11 +19,12 @@ The first full open source Raspberry PI PHP web-based application that automates
     - Interfaces with Domoticz and any other home automation system thru a simple HTTP API
     - Compatible with Smartphone browser and applications
 
-    
+
     
 ---------------------------------------------------------
 # LINKS
 ---------------------------------------------------------
+- wiki: 
 - setup: refer to [wiki setup page](https://github.com/infrafast/piwebpool/wiki/Setup)   
 - bugs/todolist/roadmap: refer to [github issues](https://github.com/infrafast/piwebpool/issues)   
 
