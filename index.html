@@ -40,200 +40,28 @@
 - can be controlled over your iPhone or any mobile device
 - provide unlimited configuratio capabilities with a graphical scripting front end, no need to know programming
 - notifications (SMS, email, or smartphone)
-</code></pre>
-
-<p>Interfaces with :</p>
-
-<pre><code>- Domoticz and any other home automation system thru a simple HTTP API
-- Any Smartphone applications
-</code></pre>
-
-<p>Supported hardware:</p>
-
-<pre><code>- any ph,ORP and temperature probes should work
-- the application is currently using the atlas-scientific EZO circuit with USB Isolation Carrier Board
-- in case you want to interface with other circuit, all you have to do is adjusting getTemperature(), getORP() and getPh() in functions.php
-</code></pre>
-
-<p>Cabling:</p>
-
-<pre><code>by defaut (see configuration.php), GPIO pin:
-        - pump relay=&gt;11, you should cable the relay to replace your scheduler in the existing electric case
-        - treatment relay=&gt;16, 
-        - second treatment relay=&gt;12,
-        - power outlet (should be connected to a relay that command a contactor)=&gt;15
-probes: connect your probes with USB carrier as defined in USBDevices.id file
-</code></pre>
-
-<p>Scripting:</p>
-
-<pre><code>two scripts are available:
-
-    - main: this script is by defaut read only to avoid making unctronolled changes. You can check the box "unlock" and reload it using the webGUI if you want to modify it
-    - custom: this one is for the user and allow to experiment and create your own sequences        
+- Interfaces with Domoticz and any other home automation system thru a simple HTTP API
+- Compatible with Smartphone browser and applications
 </code></pre>
 
 <hr>
 
 <h1>
-<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SETUP</h1>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LINKS</h1>
 
 <hr>
 
-<p>You will find a script named setup.sh in the root directory, this script partially automates the installation of the application.
-Some manual steps are however required. You are advise to make the installation on a fresh raspberry dedicated to the application.
-Otherwise, have a look to the script before to make sure it doesn't break anything if you perform the setup on a productive raspberry 
-already used for other need. In case you have issues with dependencies and packages, please refer to the list later in this document
-so you can fix manually.</p>
-
-<p>** INSTALLATION **</p>
-
-<p>1) cd to your /var/www/html
-   sudo git clone <a href="mailto:git@bitbucket.org">git@bitbucket.org</a>:infrafast/piwebpool.git
-   cd piwebpool</p>
-
-<p>2)  run the piwebpool install script using command "source setup.sh"
-    You can change default values in setup.sh file if you wish
-    Be careful, in particular the webroot is set to the piwebpool folder which could screw your existing install</p>
-
-<p>** CONFIGURATION **</p>
-
-<p>Check and modify the configuration with your own setup:</p>
-
-<pre><code>index.php                                           : locate loadWeather("46.203962, 6.133670",0); and change it with your own coordinate
-configuration                                       : change your db password, adjust GPIO mapping to your need if you wish 
-USBDevices.id                                       : map your sensors to the correct devices
-scripts/hourlypiwebpool.sh                          : change INTERFACE="wlan0" to your network interface
-                                                    : change path to piwebpool if necessary
-functions.php                                       : getTemperature(), getORP() and getPh() to be adjusted if you don't use atlas scientific USB circuit
-plclinksample.xml                                   : replace servername if you plan to use plclink
-
-
-/etc/rc.local                                       :make sure rc.local is updated (check the path to the application)
-/etc/ssmtp/ssmtp.conf                               :edit your service provider info
-    root=postmaster
-    mailhub=yourproviderserver:587
-    hostname=piweb
-    AuthUser=youruseremail
-    AuthPass=yourpass
-    UseSTARTTLS=YES    
-    rewriteDomain=yourdomain
-    FromLineOverride=YES
-/etc/ssmtp/revaliases                               :edit your service provider info
-    www-data:youruseremail:yourproviderserver:587
-/etc/apache2/sites-available/000-default.conf       :make sure the documentroot point to piwebpool directory
-/etc/php5/(cli+apache)/php.ini
-    Add extension=lua.so to php.ini file
-    find "Dynamic Extensions" and add extension=lua.so
-</code></pre>
-
-<p>5) it is advised to reboot your rasp to check everything is ok or alternatively restart all services
-    e.g. sudo /etc/init.d/apache2 restart</p>
-
-<h2>
-<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options:</h2>
-
-<p>A) Make sure your raspberry config is ok</p>
-
-<pre><code>sudo raspi-config
-     1-expand file system
-     5-locale fr UTF 8
-     5-timezone europe paris
-     5-keyboard layout
-         generic 105 - german french switzerland
-     9-advanced - sethostname: piweb3
-     9-advanced enable ssh
-apt-get install rpi-update
-rpi-update
-</code></pre>
-
-<p>B) setup wifi if not done (optionnal)</p>
-
-<pre><code>sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
-    country=FR               
-    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-    update_config=1         
-    network={          
-       ssid="ASUS_AP"   
-       psk="jt2p9ug1"   
-    } 
-</code></pre>
-
-<p>C) install adafruit webide (optional) if you want to contribute<br>
-    <code>
-    curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
-    open http://your_raspberry_ip/config change port to 8090 as 80 is used by apache
-    sudo service adafruit-webide.sh restart
-</code></p>
-
-<p>Dependencies and third party tools (all pre-setup in the package):      </p>
-
-<pre><code>simpleweather.js            :weather forecast
-loadingoverlay.js           :loading page animation
-wiringpi                    :gpio commands
-python-serial               :data acquisition via usb devices
-php5-mysql,mysql-server:    :database and connectivity
-apache2,php5                :webserver 
-php5-curl                   :interfacing other system via HTTP/Json API (like domoticz)
-php5-gd                     :image png generation    
-ssmtp                       :email notification
-anacron                     :hourly execution of tasks (used by pump scheduler)
-php-pear,php5dev,pecl       :compilation of lua for php
-lua5.1,liblua5.1            :lua script execution engine (also include liblua5.1-dev which include the "include" necessary to compile)
-phpserial.php               :patched with if ($this-&gt;_exec("stty") === 0) { changed to if ($this-&gt;_exec("stty --version") === 0) {
-tablegear                   :dynamic modified and displayed tables
-blockly                     :visual scripting
-phpmygraph                  :measures and commands graphs
-gdtext                      :text image drawing
-jquery                      :webpage scripting
-lua table persistence       :for persistent variable
-Thanks for the work of idleman 
-</code></pre>
-
-<hr>
-
-<h1>
-<a id="bugs" class="anchor" href="#bugs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BUGS</h1>
-
-<hr>
-
-<p>refer to <a href="https://github.com/infrafast/piwebpool/issues">github issues</a></p>
-
-<hr>
-
-<h1>
-<a id="todo-list" class="anchor" href="#todo-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TODO LIST</h1>
-
-<hr>
-
-<p>refer to <a href="https://github.com/infrafast/piwebpool/issues">github issues</a></p>
-
-<hr>
-
-<h2>
-<a id="git-and-ssh-key-usage-quick-guide" class="anchor" href="#git-and-ssh-key-usage-quick-guide" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GIT AND SSH KEY USAGE QUICK GUIDE</h2>
-
-<p>git status
-git add -A .<br>
-git status
-git commit -a -m "comment"<br>
-git push origin master       </p>
-
-<p>git tag -a v1.4 -m "my version 1.4"
-git tag
-git show v1.4</p>
-
-<p>git push --follow-tags 
-git push --tags                    push all tags </p>
-
-<h2>
-<a id="git-rm---cached-" class="anchor" href="#git-rm---cached-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git rm --cached </h2>
-
-<p>ssh-keygen -t rsa -b 4096 -C "<a href="mailto:info@infrafast.com">info@infrafast.com</a>"<br>
-eval "$(ssh-agent -s)"<br>
-ssh-add ~/.ssh/id_rsa<br>
-more ~/.ssh/id_rsa.pub -&gt; copy in github<br>
-git clone <a href="mailto:git@github.com">git@github.com</a>:infrafast/piwebpool.git  </p>
+<ul>
+<li>
+<a href="https://github.com/infrafast/piwebpool/wiki/Setup">setup</a><br>
+</li>
+<li><a href="https://infrafast.github.io/">blog</a></li>
+<li>
+<a href="https://github.com/infrafast/piwebpool/wiki">wiki</a> </li>
+<li>
+<a href="https://github.com/infrafast/piwebpool/issues">bugs/todolist/roadmap</a><br>
+</li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/infrafast/piwebpool">Piwebpool</a> is maintained by <a href="https://github.com/infrafast">infrafast</a>.</span>
