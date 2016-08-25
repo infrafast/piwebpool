@@ -19,12 +19,7 @@ The first full open source Raspberry PI PHP web-based application that automates
     - Interfaces with Domoticz and any other home automation system thru a simple HTTP API
     - Compatible with Smartphone browser and applications
 
-Scripting:
-
-    two scripts are available:
     
-        - main: this script is by defaut read only to avoid making unctronolled changes. You can check the box "unlock" and reload it using the webGUI if you want to modify it
-        - custom: this one is for the user and allow to experiment and create your own sequences        
     
 ---------------------------------------------------------
 # SETUP
