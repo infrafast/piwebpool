@@ -28,16 +28,16 @@ Le système comprend du logiciel et materiel dont la mise en oeuvre est décrite
 Contrairement aux systèmes propriétaires, sa conception permet de s'adapter à toutes les situations et permet aux utilisateurs avancés de multiples configurations. 
 Comme toutes les applications open source, cela demande quelques connaissances. Les principales fonctions sont:
 
-    - acquisition temps réel des mesures de (PH, ORP, Temperature)   
-    - controle de 4 appareils (ex. electrolyseur, pompe à chaleur, filtration, eclairage)   
-    - historique des données et visualisation par graph   
-    - affiche les prévisions météo   
-    - fourni des recommendations baées sur l'analye des données dans le temps (ex. ajout de chlore, vérification de la stabilité...)   
-    - permet l'envoi de notifications emails, sms et via autres systèmes    
-    - permet de planifier le fonctionnement de la pompe en fonction de l'heure et de la température du bassin (ex. hors gel)   
-    - peut être controllé via smartphone ou browser web   
-    - entièrement programmable à travers des scenarios créable àl'aide de brique visuelles (ne necessite aucune connaissance en programmation). ex. allumage de l'éclairage après 22h00 jusqu'à 02h00   
-    - s'interface facilement avec tout système de domotique à travers une API très simple   
+    - acquisition temps réel des mesures de (PH, ORP, Temperature)
+    - controle de 4 appareils (ex. electrolyseur, pompe à chaleur, filtration, eclairage)
+    - historique des données et visualisation par graph
+    - affiche les prévisions météo
+    - fourni des recommendations baées sur l'analye des données dans le temps (ex. ajout de chlore, vérification de la stabilité...)
+    - permet l'envoi de notifications emails, sms et via autres systèmes
+    - permet de planifier le fonctionnement de la pompe en fonction de l'heure et de la température du bassin (ex. hors gel)
+    - peut être controllé via smartphone ou browser web
+    - entièrement programmable à travers des scenarios créable àl'aide de brique visuelles (ne necessite aucune connaissance en programmation). ex. allumage de l'éclairage après 22h00 jusqu'à 02h00
+    - s'interface facilement avec tout système de domotique à travers une API très simple
 
 ---------------------------------------------------------
 # [HOME](http://piwebpool.infrafast.com)
