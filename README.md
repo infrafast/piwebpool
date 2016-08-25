@@ -24,8 +24,7 @@ The first full open source Raspberry PI PHP web-based application that automates
 ---------------------------------------------------------
 # SETUP
 ---------------------------------------------------------
-
-    
+refer to [wiki setup page](https://github.com/infrafast/piwebpool/wiki/Setup)
 ---------------------------------------------------------
 # BUGS
 ---------------------------------------------------------
