@@ -192,7 +192,7 @@ function setPinState($pin,$state){
     //revert the material name from its pin value
     $material = array_search(array_search($pin,$pins), $materials);
     // retrieve all registered url for this material
-    $sql    = "SELECT url,material from listeners where material='".$material."';";
+    $sql    = "SELECT url,material,valueOn,valueOff from listeners where material='".$material."';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
