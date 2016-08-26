@@ -39,7 +39,9 @@ function registerMaterialURLCallBack($material,$url){
     $query="UPDATE `scripts` SET `xml` = '".$cleanXMLCode."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
     $outcome = mysql_query($query);
     if (!$outcome) {
+
     }else{
+
     }       
     mysql_free_result($outcome);
 }
