@@ -326,7 +326,6 @@
             this.setPreviousStatement(true, null);
             this.setNextStatement(true, null);
             this.setColour(65);
-            this.setTooltip('%v remplacé par l'état');
           }
         };
 
