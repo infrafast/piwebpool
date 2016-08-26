@@ -205,7 +205,7 @@ function setPinState($pin,$state){
                 $cmd=$row['valueOff'];
             }
             // replace the %v in the URL strng by the value
-            
+            $url = str_ireplace("%v",$cmd,$url);
             
             //fire the state change to all listeners
             appendlog("FIRE",$state,$url);
