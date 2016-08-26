@@ -200,9 +200,9 @@ function setPinState($pin,$state){
         while ($row = mysql_fetch_assoc($outcome)) {
             $url=($row['url']);
             if ($state==1){
-                
+                $cmd=$row['valueOn'];
             }else{
-                
+                $cmd=$row['valueOff'];
             }
             
             //fire the state change to all listeners
