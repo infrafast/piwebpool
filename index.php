@@ -303,6 +303,9 @@
           return [code, Blockly.Lua.ORDER_NONE];
         };
     
+    
+    
+    
         Blockly.Blocks['message'] = {
           init: function() {
             this.appendValueInput("message")
