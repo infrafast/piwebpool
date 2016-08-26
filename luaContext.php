@@ -12,7 +12,7 @@ include ("configuration.php");
 function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScriptID"){
     
     try{
-        
+        // clean up all registered listeners.
         $sql    = "SELECT id,value from settings where userSetting=true;";
         $result = mysql_query($sql, $link);
 
