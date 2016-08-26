@@ -32,6 +32,11 @@ Pin
 – 	– 	DNC 	25 | 26 	CE1 	7 	11
 */
 
+
+function registerMaterialURLCallBack(){
+    
+}
+
 function weburl($url,$statusKey){
     if(!function_exists("curl_init")) die("cURL extension is not installed");
     $curl_options = array(
