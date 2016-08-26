@@ -218,7 +218,11 @@ if(isset($_['action'])){
         if (isset($_[$material])){
             setPinState($pins[$materials[$material]],$_[$material]);
             
+            mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+            mysql_select_db($options["database"]["name"]) or die('error database selection');
 
+            $query="INSERT INTO `listeners` (`url`, `material`) VALUES ('".$url."', '".$material."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."'";
+            $outcome = mysql_query($query);
             
             
             $result['state'] = getPin($pins[$materials[$material]]);
