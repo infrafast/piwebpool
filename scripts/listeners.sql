@@ -1,1 +1,0 @@
-CREATE TABLE `pool`.`listeners` ( `id` INT NOT NULL , `material` CHAR(48) NOT NULL , `url` CHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
