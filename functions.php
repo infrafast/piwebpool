@@ -202,7 +202,7 @@ function setPinState($pin,$state){
         if ($pins[$pinVal] == $pin) break;
     }
     $sql    = "SELECT url,material from listeners where material='"+$material+"';";
-    echo $sql."\n";
+    echo "sql code: ".$sql."\n";
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
