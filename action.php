@@ -217,6 +217,10 @@ if(isset($_['action'])){
     foreach($materials as $material=>$pin){
         if (isset($_[$material])){
             setPinState($pins[$materials[$material]],$_[$material]);
+            
+
+            
+            
             $result['state'] = getPin($pins[$materials[$material]]);
             $result['answer']  = "OK";
             break;
