@@ -10,7 +10,7 @@
 require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
-include("configuration.php");
+#include("configuration.php");
 /*
 wiringPi
 Pin 	BCM
