@@ -221,7 +221,7 @@ if(isset($_['action'])){
             mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
             mysql_select_db($options["database"]["name"]) or die('error database selection');
             //db related variables
-            $sql    = "SELECT url,material from listeners where material="++";";
+            $sql    = "SELECT url,material from listeners where material='"+$material+"';";
             $result = mysql_query($sql);
             if (!$result) {
                 $feedback=$feedback." ".mysql_error();
