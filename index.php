@@ -316,6 +316,14 @@
                 this.setHelpUrl('http://www.example.com/');
             }
         };
+        
+        Blockly.Lua['register'] = function(block) {
+          var dropdown_material = block.getFieldValue('material');
+          var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+          // TODO: Assemble Lua into code variable.
+          var code = '...\n';
+          return code;
+        };        
     
     
         Blockly.Blocks['message'] = {
