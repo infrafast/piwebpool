@@ -186,7 +186,7 @@ function setLuaPinState($pin,$state){
 function setPinState($pin,$state){
     global $materials, $options, $pins;
 
-    //if ($state==$getPin($pin)){
+    if ($state==$getPin($pin)){
     
         // retrieve the list of all listeners for this material
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
@@ -224,7 +224,7 @@ function setPinState($pin,$state){
     	system("gpio write ".$pin." ".$state);
     	//echo "{gpio write ".$pin." ".$state."}";
     	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
-    //}else appendlog("SAME STATE",$state,$url);
+    }else appendlog("SAME STATE",$state,$url);
 	return true;
 }
 
