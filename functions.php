@@ -215,9 +215,6 @@ function setPinState($pin,$state){
     }    
     mysql_free_result($outcome);
 	
-	
-	
-	
 	return true;
 }
 
