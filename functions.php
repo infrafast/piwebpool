@@ -196,7 +196,14 @@ function setPinState($pin,$state){
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     //db related variables
-    $sql    = "SELECT url,material from listeners where material='"+$materials[$pin]+"';";
+    while ($material_pin = current($materials)) {
+        if ($material_pin == $pin) {
+            $material=key($materials);
+        }
+        next($materials);
+    }    
+    
+    $sql    = "SELECT url,material from listeners where material='"+$materials+"';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
