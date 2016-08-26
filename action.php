@@ -230,7 +230,7 @@ if(isset($_['action'])){
             }else{
                 while ($row = mysql_fetch_assoc($outcome)) {
                     $url=($row['url']);
-                    
+                    appendlog("FIRE",$_[$material],$url);
                 }
             }    
             mysql_free_result($outcome);
