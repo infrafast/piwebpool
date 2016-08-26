@@ -310,9 +310,9 @@
                 .setCheck(null)
                 .appendField("souscrire")
                 .appendField(new Blockly.FieldDropdown([
-                                    <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
-                                    ["",""]
-                                  ]), "material");            
+                                <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                                ["",""]
+                              ]), "material");            
                 .appendField(" URL");
             this.appendValueInput("onValue")
                 .setCheck(null)
