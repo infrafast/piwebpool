@@ -222,7 +222,7 @@ if(isset($_['action'])){
             mysql_select_db($options["database"]["name"]) or die('error database selection');
             //db related variables
             $sql    = "SELECT id,value from settings where userSetting=true;";
-            $result = mysql_query($sql, $link);
+            $result = mysql_query($sql);
             if (!$result) {
                 $feedback=$feedback." ".mysql_error();
                 return false;
