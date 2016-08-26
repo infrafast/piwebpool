@@ -303,7 +303,19 @@
           return [code, Blockly.Lua.ORDER_NONE];
         };
     
-    
+        Blockly.Blocks['register'] = {
+            init: function() {
+                this.appendValueInput("NAME")
+                    .setCheck(null)
+                    .appendField("souscrire")
+                    .appendField(new Blockly.FieldDropdown([["filtration", "FILTRATION"], ["treatment1", "TRAITEMENT1"], ["treatment2", "TRAITEMENT2"], ["pac", "PAC"]]), "material");
+                this.setPreviousStatement(true, null);
+                this.setNextStatement(true, null);
+                this.setColour(65);
+                this.setTooltip('');
+                this.setHelpUrl('http://www.example.com/');
+            }
+        };
     
     
         Blockly.Blocks['message'] = {
