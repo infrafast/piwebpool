@@ -12,6 +12,11 @@ include ("configuration.php");
 function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScriptID"){
     
     try{
+        
+        $sql    = "SELECT id,value from settings where userSetting=true;";
+        $result = mysql_query($sql, $link);
+
+        
         //$lua=new Lua($file);
         $lua=new Lua();
         $lua->eval($luaCode);
