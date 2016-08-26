@@ -107,7 +107,7 @@ if(isset($_['action'])){
                         $result['state'] = mysql_error();
                     }
                 }
-                $result['state'] = "executed";
+                $result['state'] = "OK";
             }else{
                 
                 
