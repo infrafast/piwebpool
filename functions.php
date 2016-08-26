@@ -39,7 +39,6 @@ function registerMaterialURLCallBack($material,$url){
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     // in case of duplicate, simply erase
     $query="INSERT INTO `listeners` (`url`, `material`) VALUES ('".$url."', '".$material."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."'";
-    echo $query."\n";
     $outcome = mysql_query($query);
     if (!$outcome) return false; else return true;
 }
