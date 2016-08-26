@@ -192,6 +192,25 @@ function setPinState($pin,$state){
 	system("gpio write ".$pin." ".$state);
 	//echo "{gpio write ".$pin." ".$state."}";
 	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
+	
+    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+    mysql_select_db($options["database"]["name"]) or die('error database selection');
+    //db related variables
+    $sql    = "SELECT url,material from listeners where material='"+$material+"';";
+    $outcome = mysql_query($sql);
+    if (!$outcome) {
+        appendlog("ERROR",$sql,mysql_error());
+    }else{
+        while ($row = mysql_fetch_assoc($outcome)) {
+            $url=($row['url']);
+            appendlog("FIRE",$_[$material],$url);
+        }
+    }    
+    mysql_free_result($outcome);
+	
+	
+	
+	
 	return true;
 }
 
