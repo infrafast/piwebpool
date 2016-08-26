@@ -40,7 +40,6 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScript
         $lua->assign("minute",intval(getCurrentMinute()));
         $lua->assign("timestamp",getCurrentTimeStamp());
         $lua->assign("register",registerMaterialURLCallBack());        
-
         $lua->assign("scriptID",$scriptID);
 
         //db related variables
