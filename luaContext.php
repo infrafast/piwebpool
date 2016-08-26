@@ -68,6 +68,7 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScript
         $lua->registerCallback("sms", 'sendsms');
         $lua->registerCallback("email", 'sendemail');
         $lua->registerCallback("web", 'weburl');
+        $lua->registerCallback("subscribe",'registerMaterialURLCallBack');
         // execute the script
         $retval = $lua->run();
         if (!$retval) $feedback = $feedback."Runtime error";
