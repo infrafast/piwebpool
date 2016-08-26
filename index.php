@@ -336,7 +336,7 @@
           var value_onvalue = Blockly.Lua.valueToCode(block, 'onValue', Blockly.Lua.ORDER_ATOMIC);
           var value_offvalue = Blockly.Lua.valueToCode(block, 'offValue', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          var code = "subscribe('"+dropdown_material+"',"+value_url+"','"+value_onvalue+"','"+value_offvalue+"')\n";
+          var code = "subscribe('"+dropdown_material+"','"+value_url+"','"+value_onvalue+"','"+value_offvalue+"')\n";
           return code;
         };        
     
