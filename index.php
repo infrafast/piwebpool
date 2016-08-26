@@ -309,7 +309,10 @@
             this.appendValueInput("url")
                 .setCheck(null)
                 .appendField("souscrire")
-                .appendField(new Blockly.FieldDropdown([["option", "OPTIONNAME"], ["option", "OPTIONNAME"], ["option", "OPTIONNAME"]]), "material")
+                .appendField(new Blockly.FieldDropdown([
+                                    <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                                    ["",""]
+                                  ]), "material");            
                 .appendField(" URL");
             this.appendValueInput("onValue")
                 .setCheck(null)
@@ -333,7 +336,7 @@
           var value_onvalue = Blockly.Lua.valueToCode(block, 'onValue', Blockly.Lua.ORDER_ATOMIC);
           var value_offvalue = Blockly.Lua.valueToCode(block, 'offValue', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          var code = "subscribe('"+dropdown_material+"',"+value_name+")\n";
+          var code = "subscribe('"+dropdown_material+"',"+value_url+")\n";
           return code;
         };        
     
