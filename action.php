@@ -217,6 +217,8 @@ if(isset($_['action'])){
     foreach($materials as $material=>$pin){
         if (isset($_[$material])){
             setPinState($pins[$materials[$material]],$_[$material]);
+            $result['state'] = getPin($pins[$materials[$material]]);
+            $result['answer']  = "OK";
             
             mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
             mysql_select_db($options["database"]["name"]) or die('error database selection');
@@ -240,8 +242,10 @@ if(isset($_['action'])){
                 }
             }    
             mysql_free_result($outcome);
-            $result['state'] = getPin($pins[$materials[$material]]);
-            $result['answer']  = "OK";
+            
+            
+            
+            
             break;
         }
     }
