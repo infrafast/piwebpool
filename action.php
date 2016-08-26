@@ -88,9 +88,9 @@ if(isset($_['action'])){
     	break;
     
         case 'sql':
-            $result['answer'] = "ERROR";
-            if(isset($_['script'])){
 
+            if(isset($_['script'])){
+                $result['state'] = "OK";
                 $dbms_schema=$_['script'];
         
                 mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
@@ -107,7 +107,6 @@ if(isset($_['action'])){
                         $result['state'] = mysql_error();
                     }
                 }
-                $result['state'] = "OK";
             }else{
                 
                 
