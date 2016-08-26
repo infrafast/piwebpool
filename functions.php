@@ -200,8 +200,9 @@ function setPinState($pin,$state){
     //$material = array_search($pin, $materials);
     foreach ($materials as $material => $pinVal) {
         echo $material . " in " . $pinVal . ", ";
-        if ($pins[$pinVal] == $pin) echo "*";
-    }    
+        if ($pins[$pinVal] == $pin) break;
+    }
+    echo "found ".$material;
 
     $sql    = "SELECT url,material from listeners where material='"+$material+"';";
     $outcome = mysql_query($sql);
