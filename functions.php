@@ -36,7 +36,7 @@ Pin
 function registerMaterialURLCallBack($material,$url){
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
-    $query="UPDATE `scripts` SET `xml` = '".$cleanXMLCode."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
+    $query="INSERT INTO `listeners` (`url`, `material`) VALUES ('http://domoticz', 'filtration') ON DUPLICATE KEY UPDATE url='http://domoticz',material='filtration'";
     $outcome = mysql_query($query);
     if (!$outcome) {
 
