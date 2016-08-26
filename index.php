@@ -305,6 +305,34 @@
         };
     
 
+        Blockly.Blocks['register'] = {
+          init: function() {
+            this.appendValueInput("url")
+                .setCheck(null)
+                .appendField("souscrire")
+                .appendField(new Blockly.FieldDropdown([
+                                <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                                ["",""]
+                              ]), "material");            
+                .appendField(" URL");
+            this.appendValueInput("onValue")
+                .setCheck(null)
+                .setAlign(Blockly.ALIGN_RIGHT)
+                .appendField("valeur ON");
+            this.appendValueInput("offValue")
+                .setCheck(null)
+                .setAlign(Blockly.ALIGN_RIGHT)
+                .appendField("valeur OFF");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(65);
+            this.setTooltip('%v will be replaced by ');
+          }
+        };
+        
+    
+
+
     
         Blockly.Blocks['message'] = {
           init: function() {
