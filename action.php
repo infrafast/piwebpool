@@ -88,7 +88,7 @@ if(isset($_['action'])){
     	break;
     
         case 'sql':
-            $result['state'] = "reset done";
+            $result['state'] = "executed";
     
             $dbms_schema='settings.sql';
     
