@@ -306,7 +306,7 @@
     
         Blockly.Blocks['register'] = {
             init: function() {
-                this.appendValueInput("NAME")
+                this.appendValueInput("subscribe")
                     .setCheck(null)
                     .appendField("souscrire")
                     .appendField(new Blockly.FieldDropdown([
@@ -321,7 +321,7 @@
         
         Blockly.Lua['register'] = function(block) {
           var dropdown_material = block.getFieldValue('material');
-          var value_name = Blockly.Lua.valueToCode(block, 'NAME', Blockly.Lua.ORDER_ATOMIC);
+          var value_name = Blockly.Lua.valueToCode(block, 'subscribe', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
           var code = '...\n';
           return code;
