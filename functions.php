@@ -185,44 +185,46 @@ function setLuaPinState($pin,$state){
 
 function setPinState($pin,$state){
     global $materials, $options, $pins;
+
+    if ($state!=$getPin($pin)){
     
-    // retrieve the list of all listeners for this material
-    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-    mysql_select_db($options["database"]["name"]) or die('error database selection');
-    //revert the material name from its pin value
-    $material = array_search(array_search($pin,$pins), $materials);
-    // retrieve all registered url for this material
-    $sql    = "SELECT url,material,valueOn,valueOff from listeners where material='".$material."';";
-    $outcome = mysql_query($sql);
-    if (!$outcome) {
-        appendlog("ERROR",$sql,mysql_error());
-    }else{
-        while ($row = mysql_fetch_assoc($outcome)) {
-            $url=($row['url']);
-            if ($state==1){
-                $cmd=$row['valueOn'];
-            }else{
-                $cmd=$row['valueOff'];
+        // retrieve the list of all listeners for this material
+        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+        mysql_select_db($options["database"]["name"]) or die('error database selection');
+        //revert the material name from its pin value
+        $material = array_search(array_search($pin,$pins), $materials);
+        // retrieve all registered url for this material
+        $sql    = "SELECT url,material,valueOn,valueOff from listeners where material='".$material."';";
+        $outcome = mysql_query($sql);
+        if (!$outcome) {
+            appendlog("ERROR",$sql,mysql_error());
+        }else{
+            while ($row = mysql_fetch_assoc($outcome)) {
+                $url=($row['url']);
+                if ($state==1){
+                    $cmd=$row['valueOn'];
+                }else{
+                    $cmd=$row['valueOff'];
+                }
+                // replace the %v in the URL strng by the value
+                $url = str_ireplace("%v",$cmd,$url);
+                //fire the state change to all listeners
+                appendlog("FIRE",$state,$url);
+                //listeners loop issue #23
+                weburl($url,"");
             }
-            // replace the %v in the URL strng by the value
-            $url = str_ireplace("%v",$cmd,$url);
-            //fire the state change to all listeners
-            appendlog("FIRE",$state,$url);
-            //listeners loop issue #23
-            //weburl($url,"");
-        }
-    }    
-
-
-    //Definis le PIN en tant que sortie
-	system("gpio mode ".$pin." out");
-	//Active/désactive le pin
-	$state=($state==0?1:0);
-	
-	system("gpio write ".$pin." ".$state);
-	//echo "{gpio write ".$pin." ".$state."}";
-	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
-	
+        }    
+    
+    
+        //Definis le PIN en tant que sortie
+    	system("gpio mode ".$pin." out");
+    	//Active/désactive le pin
+    	$state=($state==0?1:0);
+    	
+    	system("gpio write ".$pin." ".$state);
+    	//echo "{gpio write ".$pin." ".$state."}";
+    	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
+    }	
 	return true;
 }
 
