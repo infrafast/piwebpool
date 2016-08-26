@@ -199,6 +199,12 @@ function setPinState($pin,$state){
     }else{
         while ($row = mysql_fetch_assoc($outcome)) {
             $url=($row['url']);
+            if ($state==1){
+                
+            }else{
+                
+            }
+            
             //fire the state change to all listeners
             appendlog("FIRE",$state,$url);
         }
