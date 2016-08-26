@@ -201,8 +201,6 @@ function setPinState($pin,$state){
     foreach ($materials as $material => $pinVal) {
         if ($pins[$pinVal] == $pin) break;
     }
-    echo "found ".$material;
-
     $sql    = "SELECT url,material from listeners where material='"+$material+"';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
