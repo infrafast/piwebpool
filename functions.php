@@ -185,19 +185,12 @@ function setLuaPinState($pin,$state){
 
 function setPinState($pin,$state){
     global $materials, $options, $pins;
-    //Definis le PIN en tant que sortie
-	system("gpio mode ".$pin." out");
-	//Active/désactive le pin
-	$state=($state==0?1:0);
-	
-	system("gpio write ".$pin." ".$state);
-	//echo "{gpio write ".$pin." ".$state."}";
-	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
-	
+
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
-    //db related variables
+    //revert the material name from its pin value
     $material = array_search(array_search($pin,$pins), $materials);
+    
     $sql    = "SELECT url,material from listeners where material='".$material."';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
@@ -208,7 +201,16 @@ function setPinState($pin,$state){
             appendlog("FIRE",$state,$url);
         }
     }    
-    //mysql_free_result($outcome);
+
+
+    //Definis le PIN en tant que sortie
+	system("gpio mode ".$pin." out");
+	//Active/désactive le pin
+	$state=($state==0?1:0);
+	
+	system("gpio write ".$pin." ".$state);
+	//echo "{gpio write ".$pin." ".$state."}";
+	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
 	
 	return true;
 }
