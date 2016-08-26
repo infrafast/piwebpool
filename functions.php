@@ -204,7 +204,7 @@ function setPinState($pin,$state){
         next($materials);
     }    
     
-    $sql    = "SELECT url,material from listeners where material='"+$materials+"';";
+    $sql    = "SELECT url,material from listeners where material='"+$material+"';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
