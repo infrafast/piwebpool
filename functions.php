@@ -199,6 +199,7 @@ function setPinState($pin,$state){
     //db related variables
     while (($material_pin = current($materials)) !== FALSE) {
         if ($material_pin == $pin) {
+            echo $material_pin."\n";
             $material=key($materials);
             break;
         }
