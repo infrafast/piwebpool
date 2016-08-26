@@ -222,8 +222,8 @@ if(isset($_['action'])){
             mysql_select_db($options["database"]["name"]) or die('error database selection');
             //db related variables
             $sql    = "SELECT url,material from listeners where material='"+$material+"';";
-            $result = mysql_query($sql);
-            if (!$result) {
+            $outcome = mysql_query($sql);
+            if (!$outcome) {
                 $feedback=$feedback." ".mysql_error();
                 return false;
             }else{
@@ -239,7 +239,7 @@ if(isset($_['action'])){
                     //appendlualog("   assign(".$id.",".$value.")    ");
                 }
             }    
-            mysql_free_result($result);
+            mysql_free_result($outcome);
 
 
 
