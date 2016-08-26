@@ -220,10 +220,29 @@ if(isset($_['action'])){
             
             mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
             mysql_select_db($options["database"]["name"]) or die('error database selection');
+            //db related variables
+            $sql    = "SELECT id,value from settings where userSetting=true;";
+            $result = mysql_query($sql, $link);
+            if (!$result) {
+                $feedback=$feedback." ".mysql_error();
+                return false;
+            }else{
+                while ($row = mysql_fetch_assoc($result)) {
+                    $id=($row['id']);
+                    $value=($row['value']);
+                    if (is_numeric($value)) 
+                    $lua->assign($id,floatval($value));
+                    else 
+                    $lua->assign($id,$value);
+                    //$lua->assign("parametre['".$id."']",$value);
+                    //appendlualog("   assign(parametre['".$id."'],".$value.")    ");
+                    //appendlualog("   assign(".$id.",".$value.")    ");
+                }
+            }    
+            mysql_free_result($result);
 
-            $query="INSERT INTO `listeners` (`url`, `material`) VALUES ('".$url."', '".$material."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."'";
-            $outcome = mysql_query($query);
-            
+
+
             
             $result['state'] = getPin($pins[$materials[$material]]);
             $result['answer']  = "OK";
