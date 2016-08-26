@@ -190,7 +190,7 @@ function setPinState($pin,$state){
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     //revert the material name from its pin value
     $material = array_search(array_search($pin,$pins), $materials);
-    
+    // retrieve all registered url for this material
     $sql    = "SELECT url,material from listeners where material='".$material."';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
