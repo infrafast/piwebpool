@@ -185,7 +185,9 @@ function setLuaPinState($pin,$state){
 
 function setPinState($pin,$state){
     global $materials, $options, $pins;
-
+    
+    //fire the state change to all listeners
+    
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     //revert the material name from its pin value
