@@ -92,7 +92,6 @@ if(isset($_['action'])){
             if(isset($_['script'])){
                 $result['state'] = "OK";
                 $dbms_schema=$_['script'];
-        
                 mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
                 mysql_select_db($options["database"]["name"]) or die('error database selection');
           
