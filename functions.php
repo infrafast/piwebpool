@@ -200,6 +200,7 @@ function setPinState($pin,$state){
     while (($material_pin = current($materials)) !== FALSE) {
         if ($material_pin == $pin) {
             $material=key($materials);
+            break;
         }
         next($materials);
     }    
