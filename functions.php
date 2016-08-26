@@ -214,7 +214,7 @@ function setPinState($pin,$state){
             appendlog("FIRE",$state,$url);
         }
     }    
-    mysql_free_result($outcome);
+    //mysql_free_result($outcome);
 	
 	return true;
 }
