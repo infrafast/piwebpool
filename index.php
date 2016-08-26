@@ -313,7 +313,7 @@
                 .appendField(new Blockly.FieldDropdown([
                             <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
                             ["",""]
-                          ]), "command")        
+                          ]), "material")        
                 .appendField(" URL");
             this.appendValueInput("onValue")
                 .setCheck(null)
