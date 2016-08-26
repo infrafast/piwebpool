@@ -34,7 +34,14 @@ Pin
 
 
 function registerMaterialURLCallBack($material,$url){
-    
+    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+    mysql_select_db($options["database"]["name"]) or die('error database selection');
+    $query="UPDATE `scripts` SET `xml` = '".$cleanXMLCode."',`lua`='".$cleanLuaCode."' WHERE `id`='".$_['id']."'";
+    $outcome = mysql_query($query);
+    if (!$outcome) {
+    }else{
+    }       
+    mysql_free_result($outcome);
 }
 
 function weburl($url,$statusKey){
