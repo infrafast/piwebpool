@@ -108,8 +108,8 @@ if(isset($_['action'])){
                     }
                 }
             }else{
-                
-                
+                $result['answer'] = "ERROR";
+                $result['state'] = "missing script parameter";
             }
         break;
     
