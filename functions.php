@@ -199,11 +199,9 @@ function setPinState($pin,$state){
     //db related variables
     //$material = array_search($pin, $materials);
     foreach ($materials as $material => $pinVal) {
-        //echo $material . " in " . $pinVal . ", ";
-        if ($pinVal==$pin) break;
+        echo $material . " in " . $pinVal . ", ";
     }    
-    echo "found ".$material;
-    
+
     $sql    = "SELECT url,material from listeners where material='"+$material+"';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
