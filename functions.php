@@ -201,6 +201,7 @@ function setPinState($pin,$state){
     //foreach ($materials as $material => $pinVal) {
     //    if ($pins[$pinVal] == $pin) break;
     //}
+    echo $material."\n";
     
     $sql    = "SELECT url,material from listeners where material='"+$material+"';";
     echo "sql code: ".$sql."\n";
