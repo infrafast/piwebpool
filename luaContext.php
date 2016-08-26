@@ -13,7 +13,8 @@ function goLua($luaCode,$materials,$pins,&$feedback,$link,$scriptID="emptyScript
     
     try{
         // clean up all registered listeners.
-        $sql    = "SELECT id,value from settings where userSetting=true;";
+        // see issue #20 listeners management thru tablegear
+        $sql    = "delete from ";
         $result = mysql_query($sql, $link);
 
         
