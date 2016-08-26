@@ -203,6 +203,7 @@
         
         <block type="weburl"></block>
         <block type="message"></block>
+        <block type="register"></block>
         <block type="text"></block>
         <block type="text_join"></block>
 
