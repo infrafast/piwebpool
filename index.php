@@ -310,7 +310,7 @@ Blockly.Blocks['register'] = {
     this.appendValueInput("url")
         .setCheck(null)
         .appendField("souscrire")
-        .appendField(new Blockly.FieldDropdown([["option", "OPTIONNAME"], ["option", "OPTIONNAME"], ["option", "OPTIONNAME"]]), "material")
+        
         .appendField(" URL");
     this.appendValueInput("onValue")
         .setCheck(null)
