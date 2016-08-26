@@ -87,7 +87,7 @@ if(isset($_['action'])){
             $result['state'] = getLog($logfilename);
     	break;
     
-        case 'resetSchedule':
+        case 'sql':
             $result['state'] = "reset done";
     
             $dbms_schema='settings.sql';
