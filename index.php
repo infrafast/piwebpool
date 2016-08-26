@@ -304,41 +304,7 @@
           return [code, Blockly.Lua.ORDER_NONE];
         };
     
-        Blockly.Blocks['register'] = {
-          init: function() {
-            this.appendValueInput("url")
-                .setCheck(null)
-                .appendField("souscrire")
-                .appendField(new Blockly.FieldDropdown([
-                                <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
-                                ["",""]
-                              ]), "material");            
-                .appendField(" URL");
-            this.appendValueInput("onValue")
-                .setCheck(null)
-                .setAlign(Blockly.ALIGN_RIGHT)
-                .appendField("valeur ON");
-            this.appendValueInput("offValue")
-                .setCheck(null)
-                .setAlign(Blockly.ALIGN_RIGHT)
-                .appendField("valeur OFF");
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(65);
-            this.setTooltip('%v will be replaced by ');
-          }
-        };
-        
-        Blockly.Lua['register'] = function(block) {
-          var dropdown_material = block.getFieldValue('material');
-          var value_url = Blockly.Lua.valueToCode(block, 'url', Blockly.Lua.ORDER_ATOMIC);
-          var value_onvalue = Blockly.Lua.valueToCode(block, 'onValue', Blockly.Lua.ORDER_ATOMIC);
-          var value_offvalue = Blockly.Lua.valueToCode(block, 'offValue', Blockly.Lua.ORDER_ATOMIC);
-          // TODO: Assemble Lua into code variable.
-//          var code = "subscribe('"+dropdown_material+"','"+value_url+"','"+value_onvalue+"','"+value_offvalue+"')\n";
-          return code;
-        };        
-    
+
     
         Blockly.Blocks['message'] = {
           init: function() {
