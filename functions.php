@@ -186,7 +186,7 @@ function setLuaPinState($pin,$state){
 function setPinState($pin,$state){
     global $materials, $options, $pins;
 
-    if ($state==$getPin($pin)){
+    if ($state==getPin($pin)){
     
         // retrieve the list of all listeners for this material
         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
