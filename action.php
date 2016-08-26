@@ -229,7 +229,7 @@ if(isset($_['action'])){
                 appendlog("ERROR",$sql,mysql_error());
             }else{
                 while ($row = mysql_fetch_assoc($outcome)) {
-                    $id=($row['id']);
+                    $url=($row['url']);
                     $value=($row['value']);
                 }
             }    
