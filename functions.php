@@ -184,7 +184,7 @@ function setLuaPinState($pin,$state){
 }
 
 function setPinState($pin,$state){
-    global $options;
+    global $materials;
     //Definis le PIN en tant que sortie
 	system("gpio mode ".$pin." out");
 	//Active/désactive le pin
