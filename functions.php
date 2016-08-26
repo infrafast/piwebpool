@@ -33,7 +33,7 @@ Pin
 */
 
 
-function registerMaterialURLCallBack(){
+function registerMaterialURLCallBack($material,$url){
     
 }
 
