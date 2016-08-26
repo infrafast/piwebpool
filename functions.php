@@ -39,12 +39,7 @@ function registerMaterialURLCallBack($material,$url){
     // in case of duplicate, simply erase
     $query="INSERT INTO `listeners` (`url`, `material`) VALUES ('".$url."', '".$material."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."'";
     $outcome = mysql_query($query);
-    if (!$outcome) {
-
-    }else{
-
-    }       
-    mysql_free_result($outcome);
+    if (!$outcome) return false; else return true;
 }
 
 function weburl($url,$statusKey){
