@@ -198,7 +198,7 @@ function setPinState($pin,$state){
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     //db related variables
     //$material = array_search($pin, $materials);
-    foreach ($material$ as $pin => $value) {
+    foreach ($material as $pin => $value) {
         echo $value . " in " . $pin . ", ";
     }    
     
