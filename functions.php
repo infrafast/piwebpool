@@ -36,6 +36,7 @@ Pin
 function registerMaterialURLCallBack($material,$url){
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
+    // in case of duplicate, simply erase
     $query="INSERT INTO `listeners` (`url`, `material`) VALUES ('".$url."', '".$material."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."'";
     $outcome = mysql_query($query);
     if (!$outcome) {
