@@ -209,7 +209,6 @@ function setPinState($pin,$state){
             //fire the state change to all listeners
             appendlog("FIRE",$state,$url);
             //listeners loop issue #23
-            
             weburl($url,"");
         }
     }    
