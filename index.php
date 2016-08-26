@@ -309,7 +309,10 @@
                 this.appendValueInput("NAME")
                     .setCheck(null)
                     .appendField("souscrire")
-                    .appendField(new Blockly.FieldDropdown([["filtration", "FILTRATION"], ["treatment1", "TRAITEMENT1"], ["treatment2", "TRAITEMENT2"], ["pac", "PAC"]]), "material");
+                    .appendField(new Blockly.FieldDropdown([
+                        <?php foreach($materials as $material=>$pin) echo '["'.$material.'","'.$material.'"],';?>
+                        ["",""]
+                      ]), "material");
                 this.setPreviousStatement(true, null);
                 this.setNextStatement(true, null);
                 this.setColour(65);
