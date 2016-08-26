@@ -40,7 +40,7 @@ function registerMaterialURLCallBack($material,$url,$valueOn,$valueOff){
     // in case of duplicate, simply erase
     $query="INSERT INTO `listeners` (`url`, `material`, `valueOn`, `valueOff`) VALUES ('".$url."', '".$material."', '".$valueOn."', '".$valueOff."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."',valueOn='".$valueOn."',valueOff='".$valueOff."'";
     $outcome = mysql_query($query);
-    appendlog("registerMaterialURLCallBack",$query,$outcome);
+    #appendlog("registerMaterialURLCallBack",$query,$outcome);
     if (!$outcome) return false; else return true;
 }
 
