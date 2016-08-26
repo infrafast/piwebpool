@@ -325,8 +325,7 @@
             this.setPreviousStatement(true, null);
             this.setNextStatement(true, null);
             this.setColour(65);
-            this.setTooltip('');
-            this.setHelpUrl('http://www.example.com/');
+            this.setTooltip('%v will be replaced by ');
           }
         };
         
