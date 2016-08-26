@@ -200,7 +200,7 @@ function setPinState($pin,$state){
     //$material = array_search($pin, $materials);
     foreach ($materials as $material => $pinVal) {
         //echo $material . " in " . $pinVal . ", ";
-        if ($pinVal=$pin) break;
+        if ($pinVal==$pin) break;
     }    
     echo "found ".$material;
     
