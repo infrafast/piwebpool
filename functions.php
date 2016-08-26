@@ -10,7 +10,6 @@
 require "include/FreeSMS.php";
 include("include/php_serial.class.php");
 include_once('include/phpMyGraph5.0.php'); 
-include_once "configuration.php";
 
 /*
 wiringPi
