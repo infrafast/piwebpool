@@ -88,23 +88,29 @@ if(isset($_['action'])){
     	break;
     
         case 'sql':
-            $result['state'] = "executed";
-    
-            $dbms_schema=$_['script'];
-    
-            mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-            mysql_select_db($options["database"]["name"]) or die('error database selection');
-      
-            $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
-            $sql_query = remove_remarks($sql_query);
-            $sql_query = split_sql_file($sql_query, ';');
-            
-            foreach($sql_query as $sql){ 
-                $outcome=mysql_query($sql);
-                if (!$outcome){
-                    $result['answer'] = "ERROR";
-                    $result['state'] = mysql_error();
+            $result['answer'] = "ERROR";
+            if(isset($_['script'])){
+
+                $dbms_schema=$_['script'];
+        
+                mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+                mysql_select_db($options["database"]["name"]) or die('error database selection');
+          
+                $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
+                $sql_query = remove_remarks($sql_query);
+                $sql_query = split_sql_file($sql_query, ';');
+                
+                foreach($sql_query as $sql){ 
+                    $outcome=mysql_query($sql);
+                    if (!$outcome){
+                        $result['answer'] = "ERROR";
+                        $result['state'] = mysql_error();
+                    }
                 }
+                $result['state'] = "executed";
+            }else{
+                
+                
             }
         break;
     
