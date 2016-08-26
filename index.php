@@ -323,7 +323,7 @@
           var dropdown_material = block.getFieldValue('material');
           var value_name = Blockly.Lua.valueToCode(block, 'subscribe', Blockly.Lua.ORDER_ATOMIC);
           // TODO: Assemble Lua into code variable.
-          var code = '...\n';
+          var code = "subscribe('+"dropdown_material+"','"+value_name+"')\n";
           return code;
         };        
     
