@@ -203,7 +203,7 @@ function setPinState($pin,$state){
     }else{
         while ($row = mysql_fetch_assoc($outcome)) {
             $url=($row['url']);
-            appendlog("FIRE",$_[$material],$url);
+            appendlog("FIRE",$state,$url);
         }
     }    
     mysql_free_result($outcome);
