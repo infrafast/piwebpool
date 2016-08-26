@@ -95,7 +95,7 @@ if(isset($_['action'])){
                 mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
                 mysql_select_db($options["database"]["name"]) or die('error database selection');
           
-                $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die('problem ');
+                $sql_query = @fread(@fopen($dbms_schema, 'r'), @filesize($dbms_schema)) or die(mysql_error(););
                 $sql_query = remove_remarks($sql_query);
                 $sql_query = split_sql_file($sql_query, ';');
                 
