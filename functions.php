@@ -197,7 +197,7 @@ function setPinState($pin,$state){
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     //db related variables
-    while ($material_pin = current($materials)) {
+    while (($material_pin = current($materials)) !== FALSE) {
         if ($material_pin == $pin) {
             $material=key($materials);
         }
