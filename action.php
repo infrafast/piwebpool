@@ -224,7 +224,7 @@ if(isset($_['action'])){
             $sql    = "SELECT url,material from listeners where material='"+$material+"';";
             $outcome = mysql_query($sql);
             if (!$outcome) {
-                $feedback=$feedback." ".mysql_error();
+                $result['state'] = " ".mysql_error();
                 return false;
             }else{
                 while ($row = mysql_fetch_assoc($result)) {
@@ -240,10 +240,6 @@ if(isset($_['action'])){
                 }
             }    
             mysql_free_result($outcome);
-
-
-
-            
             $result['state'] = getPin($pins[$materials[$material]]);
             $result['answer']  = "OK";
             break;
