@@ -226,8 +226,7 @@ if(isset($_['action'])){
             $sql    = "SELECT url,material from listeners where material='"+$material+"';";
             $outcome = mysql_query($sql);
             if (!$outcome) {
-                appendlog(mysql_error());
-                return false;
+                appendlog("ERROR",$sql,mysql_error());
             }else{
                 while ($row = mysql_fetch_assoc($result)) {
                     $id=($row['id']);
