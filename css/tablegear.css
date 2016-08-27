@@ -66,7 +66,7 @@ td.loading
 }
 
 td.delete {
-  background: url('../images/delete.gif') no-repeat 4px center;
+  background: url('../images/delete.png') no-repeat 4px center;
   cursor: pointer;
 }
 
