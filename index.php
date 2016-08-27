@@ -51,6 +51,24 @@
     $options["transform"]["above28"] = array("tag" => "img","attrib" => array("src" => "images/{DATA}.png"));
     $table = new TableGear($options);
     
+    $subscribersSet = array();
+    $subscribersSet["database"] = array();		    
+    $subscribersSet["database"]["host"]        = $options["database"]["host"];
+    $subscribersSet["database"]["name"]        = $options["database"]["name"];
+    $subscribersSet["database"]["username"]    = $options["database"]["username"];
+    $subscribersSet["database"]["password"]    = $options["database"]["password"] ;
+    $subscribersSet["database"]["table"]  = "settings";
+    $subscribersSet["database"]["noAutoQuery"]=true;
+    $subscribersSet["pagination"] = array();
+    $subscribersSet["title"] = "Parametres";
+    $subscribersSet["allowDelete"] = false;
+    $subscribersSet["sortable"]  = ""; 
+    $subscribersSet["editable"] = true;
+    $subscribersSet["selects"] = array(
+    	"userSetting" => array("visible" => 1, "invisible" => 0)
+    ); 
+    $tableSubscriberss = new TableGear($optionsSet);
+    
     $optionsSet = array();
     $optionsSet["database"] = array();		    
     $optionsSet["database"]["host"]        = $options["database"]["host"];
@@ -130,7 +148,7 @@
 
     
     <table class="materialTab">
-    <tr class="header" id="actionTable">
+    <tr class="header" id="subscribersSet">
     <td colspan="2" class="arrondi"><b><span>-</span> Commandes</b></td>
     </tr>
     <tr><th>Historique</th><th>Etat actuel</th></tr>
