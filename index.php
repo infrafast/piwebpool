@@ -61,7 +61,7 @@
     //$subscribersSet["database"]["noAutoQuery"]=true;
     $subscribersSet["pagination"] = array();
     $subscribersSet["title"] = "Souscripteurs";
-    $subscribersSet["allowDelete"] = false;
+    $subscribersSet["allowDelete"] = true;
     $subscribersSet["sortable"]  = ""; 
     $subscribersSet["editable"] = true;
     $subscribersSet["selects"] = array(
