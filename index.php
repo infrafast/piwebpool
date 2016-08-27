@@ -195,7 +195,9 @@
     
     <?= $tableSettings->fetchData("SELECT id,value,description from settings where userSetting=true;"); $tableSettings->getTable(); ?>
     <?= $tableSettings->getJavascript("jquery") ?>
-  
+    
+    <?= $tableSubscribers->getTable() ?>
+    <?= $tableSubscribers->getJavascript("jquery") ?>
 
     <table class="materialTab">
     <tr class="header" id="logTable">
