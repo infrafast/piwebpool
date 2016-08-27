@@ -20,11 +20,6 @@ width: 100%;
 background-color: #444;
 }
 
-tr.odd
-{
-background-color: #eaeaea;
-}
-
 tr.noDataRow td {
   text-align: center;
 }
