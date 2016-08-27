@@ -57,7 +57,7 @@
     $subscribersSet["database"]["name"]        = $options["database"]["name"];
     $subscribersSet["database"]["username"]    = $options["database"]["username"];
     $subscribersSet["database"]["password"]    = $options["database"]["password"] ;
-    $subscribersSet["database"]["table"]  = "settings";
+    $subscribersSet["database"]["table"]  = "Souscripteurs";
     //$subscribersSet["database"]["noAutoQuery"]=true;
     $subscribersSet["pagination"] = array();
     $subscribersSet["title"] = "Souscripteurs";
