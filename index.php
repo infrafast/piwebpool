@@ -58,16 +58,16 @@
     $subscribersSet["database"]["username"]    = $options["database"]["username"];
     $subscribersSet["database"]["password"]    = $options["database"]["password"] ;
     $subscribersSet["database"]["table"]  = "settings";
-    $subscribersSet["database"]["noAutoQuery"]=true;
+    //$subscribersSet["database"]["noAutoQuery"]=true;
     $subscribersSet["pagination"] = array();
-    $subscribersSet["title"] = "Parametres";
+    $subscribersSet["title"] = "Souscripteurs";
     $subscribersSet["allowDelete"] = false;
     $subscribersSet["sortable"]  = ""; 
     $subscribersSet["editable"] = true;
     $subscribersSet["selects"] = array(
     	"userSetting" => array("visible" => 1, "invisible" => 0)
     ); 
-    $tableSubscriberss = new TableGear($optionsSet);
+    $tableSubscriberss = new TableGear($subscribersSet);
     
     $optionsSet = array();
     $optionsSet["database"] = array();		    
