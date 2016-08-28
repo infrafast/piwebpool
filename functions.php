@@ -212,6 +212,11 @@ function setPinState($pin,$state){
                 //fire the state change to all listeners
                 //appendlog("FIRE",$state,$url);
                 //listeners loop issue #23
+                //here we put "status" which is the keyword we ecpect to get from the json reply 
+                //we however don't exploit the result of the call function because this should be 
+                // 1) pass as a parameter to the weburl extracted from the listeners table
+                // 2) then it cause the question about the return to the function itself where a NOK from weburl
+                // should not return false if th setPin command was successful...
                 weburl($url,"status");
             }
         }    
