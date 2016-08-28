@@ -195,7 +195,7 @@ function setPinState($pin,$state){
         $material = array_search(array_search($pin,$pins), $materials);
         // retrieve all registered url for this material
         $sql    = "SELECT url,material,valueOn,valueOff from listeners where material='".$material."';";
-        appendlog("FIRE","$sql,"");
+        appendlog("FIRE",$sql,"");
         $outcome = mysql_query($sql);
         if (!$outcome) {
             appendlog("ERROR",$sql,mysql_error());
