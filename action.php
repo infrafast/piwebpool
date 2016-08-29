@@ -192,6 +192,10 @@ if(isset($_['action'])){
             // we'd better call the code of cronaction.php here
             break;
     
+        case 'run':
+
+            break;    
+    
         case 'lua':
             $result['state']='';
            if (!goLua("function run() return 'lua works!'; end",$materials,$pins,$result['state'])) $result['answer']  = "ERROR";
