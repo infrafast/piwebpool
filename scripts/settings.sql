@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.44, for debian-linux-gnu (armv7l)
+-- MySQL dump 10.13  Distrib 5.5.50, for debian-linux-gnu (armv7l)
 --
 -- Host: localhost    Database: pool
 -- ------------------------------------------------------
--- Server version	5.5.44-0+deb8u1
+-- Server version	5.5.50-0+deb8u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,7 +37,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` VALUES ('actionTable','1',0,''),('blocklyTable','1',0,''),('e_mail','youremail@adress',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','59',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','1',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','1',0,''),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','1',0,''),('TEMPConsign','28',1,'Consigne de tempÃ©rature'),('webURL','http://user:pass@yourdomoticzserver/json.htm?type=command',1,'API pour domoticz ou autre');
+INSERT INTO `settings` VALUES ('actionTable','1',0,''),('blocklyTable','0',0,''),('domoURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'API pour domoticz ou autre'),('e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','77',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','0',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','1',0,''),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','1',0,''),('Souscripteurs','1',0,''),('TEMPConsign','29',1,'Consigne de tempÃ©rature');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-23 13:33:28
+-- Dump completed on 2016-08-31 22:14:44
