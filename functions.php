@@ -253,6 +253,7 @@ function setTemperature($value){
     // store the value in the databse issue #25
     // this code would be called by the crontab.php for regular update
     // and by the action.php for update hru the API.
+    // in the crontab.php we would move the current code from getTemperature();
     
 }
 
