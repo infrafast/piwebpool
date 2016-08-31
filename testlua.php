@@ -51,9 +51,12 @@ $scriptID="custom";
         while ($row = mysql_fetch_assoc($result)) $luaCode=htmlspecialchars_decode(($row['lua']));
         mysql_free_result($result);
     }
-    // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
-    goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
-
+    if ($luaCode==""){
+        
+    }else
+        // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
+        goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
+    }
         
 $state.="{".$luaFeedback."}";    
 appendlog("LUATEST",$answer,$state, $logfilename);
