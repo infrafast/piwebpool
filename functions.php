@@ -251,7 +251,7 @@ function getDevice($id){
 
 
 function getTemperature(){
-    // retrieve value in the databse
+    // retrieve value in the databse issue #25
     //return round( (0.5 + (2.5 - 0.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //
     for ($i = 0; $i < 2; $i++){
