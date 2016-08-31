@@ -37,7 +37,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` VALUES ('actionTable','1',0,''),('blocklyTable','0',0,''),('domoURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'API pour domoticz ou autre'),('e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','77',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','0',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','1',0,''),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','1',0,''),('Souscripteurs','1',0,''),('TEMPConsign','29',1,'Consigne de tempÃ©rature');
+INSERT INTO `settings` VALUES ('prowlURL','https://api.prowlapp.com/publicapi/add?apikey=0e139710aceccf6abc6865983a98f0439a0e5ba2&application=piwebpool',1,''),('actionTable','1',0,''),('blocklyTable','0',0,''),('domoURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'API pour domoticz ou autre'),('e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','77',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','0',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','1',0,''),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','1',0,''),('Souscripteurs','1',0,''),('TEMPConsign','29',1,'Consigne de tempÃ©rature');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
