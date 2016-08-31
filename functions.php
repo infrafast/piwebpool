@@ -209,7 +209,7 @@ function setPinState($pin,$state){
                 }
                 // replace the %v in the URL strng by the value
                 $url = str_ireplace("%v",$cmd,$url);
-                appendlog("FIRE",$state,$url);
+                //appendlog("FIRE",$state,$url);
                 appendlog("SWITCH",$material,$state==0?"Off":"On");
                 //issue #24
                 //here we put "status" which is the keyword we ecpect to get from the json reply 
