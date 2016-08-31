@@ -249,6 +249,11 @@ function getDevice($id){
     return null;
 }
 
+function setTemperature(){
+    
+    
+}
+
 
 function getTemperature(){
     // retrieve value in the databse issue #25
