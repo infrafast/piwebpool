@@ -38,7 +38,7 @@ foreach ($concat as $scriptID) {
     }                
 }
 $luaFeedback="";
-$scriptID="custpm";
+$scriptID="custom";
     $luaFeedback.="|".$scriptID.":";
     // fetch lua code from database
     $sql    = "SELECT lua from scripts where id='".$scriptID."'";
