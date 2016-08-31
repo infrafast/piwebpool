@@ -227,7 +227,7 @@ function setPinState($pin,$state){
     	$state=($state==0?1:0);
     	
     	system("gpio write ".$pin." ".$state);
-    	sleep(1);
+    	sleep(2);
     	//echo "{gpio write ".$pin." ".$state."}";
     	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
     }
