@@ -249,8 +249,9 @@ function getDevice($id){
     return null;
 }
 
-function setTemperature(){
-    
+function setTemperature($value){
+    // store the value in the databse issue #25
+    // this code would be called by the crontab.php
     
 }
 
