@@ -217,7 +217,7 @@ function setPinState($pin,$state){
                 // 2) then it cause the question about the return to the function itself where a NOK from weburl
                 // should not return false if th setPin command was successful...
                 //fire the state change to all listeners
-                weburl($url,"status");
+                //weburl($url,"status");
             }
         }    
     
