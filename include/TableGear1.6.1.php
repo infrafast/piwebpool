@@ -489,8 +489,8 @@ class TableGear
     if($headers || $this->title){
       $this->_outputHeaders($headers, true,$this->title );
     }
-    //if($this->footers || $this->totals || $this->addNewRows){
-    if($this->footers || $this->totals ){        
+    if($this->footers || $this->totals || $this->addNewRows){
+    //if($this->footers || $this->totals ){        
       $this->_openTag("tfoot");
       if($this->totals){
         $totals = $this->_fetchTotals();
@@ -578,8 +578,8 @@ class TableGear
       $this->_outputHTML($this->custom["FORM_BOTTOM"]);
       $this->_closeTag("form");
     }
-//    if($this->_newRowsAllowed()){
-    if(1==3){        
+    if($this->_newRowsAllowed()){
+//    if(1==3){        
       $addNewRowID = "addNewRow_" . $this->table["id"];
       $this->_openTag("form", array("action" => $this->form["url"], "method" => $this->form["method"], "id" => $addNewRowID, "class" => "newRow"));
       $this->_outputHTML(array("tag" => "h3", "html" => $this->newRowLabel));
