@@ -58,15 +58,10 @@
     $subscribersSet["database"]["username"]    = $options["database"]["username"];
     $subscribersSet["database"]["password"]    = $options["database"]["password"] ;
     $subscribersSet["database"]["table"]  = "listeners";
-    //$subscribersSet["database"]["noAutoQuery"]=true;
-    $subscribersSet["pagination"] = array();
     $subscribersSet["title"] = "Souscripteurs";
     $subscribersSet["allowDelete"] = true;
     $subscribersSet["sortable"]  = ""; 
     $subscribersSet["editable"] = all;
-    $subscribersSet["selects"] = array(
-    	"userSetting" => array("visible" => 1, "invisible" => 0)
-    ); 
     $tableSubscribers = new TableGear($subscribersSet);
     
     $optionsSet = array();
