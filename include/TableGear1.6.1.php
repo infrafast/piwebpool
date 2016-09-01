@@ -9,7 +9,7 @@
  *
  *  Copyright (c) 2010 Andrew Plummer
  *
- * 
+ *
  */
 
 $tgTableID = 0;
