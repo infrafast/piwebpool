@@ -3,6 +3,7 @@
 body
 {
 margin: 0 auto;
+padding: 0 20px 20px 20px;
 font-family: Tahoma, Helvetica, Arial, sans-serif;
 background: #444;
 }
@@ -13,11 +14,21 @@ border: none;
 padding: 0;
 }
 
+form {
+  padding: 1em;
+}
+
 table
 {
 font-size: 0.9em;
 width: 100%;
-background-color: #444;
+background-color: #ffffff;
+padding: 1em;
+}
+
+tr.odd
+{
+background-color: #eaeaea;
 }
 
 tr.noDataRow td {
@@ -27,12 +38,12 @@ tr.noDataRow td {
 table th.title
 {
 text-align: center;
-font:32/32px
 }
+
 
 th,td
 {
-    text-align: left;
+text-align: left;
 }
 
 td
@@ -53,20 +64,20 @@ cursor: pointer;
 }
 
 tr.loading {
-  background-color: #444;
-  background: url('../images/loading.gif') no-repeat 4px center;  
+  color: #dddddd;
+  background-color: #f6f6f6;
 }
 
 td.loading
 {
   background: url('../images/loading.gif') no-repeat 4px center;
   padding-left: 24px;
-  color: #ff0000;
+  color: #aaaaaa;
   width: 176px;
 }
 
 td.delete {
-  background: url('../images/delete.png') no-repeat 4px center;
+  background: url('../images/delete.gif') no-repeat 4px center;
   cursor: pointer;
 }
 
@@ -105,7 +116,7 @@ form fieldset.errors p {
 }
 
 form div.submit {
-
+  padding: 1em;
   text-align: right;
 }
 
@@ -156,4 +167,6 @@ div.error {
   background-color: #222;
   color: #d44;
   font-weight: bold;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
