@@ -63,7 +63,7 @@
     $subscribersSet["title"] = "Souscripteurs";
     $subscribersSet["allowDelete"] = true;
     $subscribersSet["sortable"]  = ""; 
-    $subscribersSet["editable"] = true;
+    $subscribersSet["editable"] = all;
     $subscribersSet["selects"] = array(
     	"userSetting" => array("visible" => 1, "invisible" => 0)
     ); 
