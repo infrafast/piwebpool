@@ -600,7 +600,8 @@
         });
 
         // collapse all table as per settings stored in the database
-        var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres','Souscripteurs'];
+        //var collapsableTableList = ['actionTable','Planificateur','sensorTable','blocklyTable','logTable','Parametres','Souscripteurs'];
+        var collapsableTableList = ['actionTable','sensorTable','blocklyTable','logTable'];
         for (var tableID in collapsableTableList) {
             // we collapse the section if toggleValue is 1
             if (actionCall('action=getSetting&id='+collapsableTableList[tableID],false,null,false,false)=="1") 
