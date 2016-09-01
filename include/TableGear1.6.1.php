@@ -751,14 +751,9 @@ class TableGear
     $this->_openTag("thead class='header' id='".$id."'");
     if($this->title && $showTitle){
       $this->_openTag("tr");
-      $this->_openTag("td", array("colspan" => count($headers), "class" => "title, arrondi"));
-      $this->_openTag("b");
-      $this->_openTag("span");
-      $this->_outputHTML("-");
-      $this->_closeTag("span");
-      $this->_outputHTML(" ".$this->title);
-      $this->_closeTag("b");
-      $this->_closeTag("td");
+      $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
+      $this->_outputHTML($this->title);
+      $this->_closeTag("th");
       $this->_closeTag("tr");
     }
     $this->_openTag("tbody");
