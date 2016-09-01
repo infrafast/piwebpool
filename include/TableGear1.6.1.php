@@ -55,7 +55,7 @@ class TableGear
     if(!isset($options["editable"]))    $options["editable"] = "allExceptAutoIncrement";
     if(!isset($options["sortable"]))    $options["sortable"] = "all";
     if(!isset($options["allowDelete"])) $options["allowDelete"] = true;
-    if(!isset($options["allowSpan"])) $options["allowSpan"] = true;
+//    if(!isset($options["allowSpan"])) $options["allowSpan"] = true;
     return $options;
   }
 
@@ -392,7 +392,6 @@ class TableGear
             $carat["html"] = "▲";
           }
         }
-        if ($options["allowSpan"]) $html = array(array("tag" => "span", "html" => $html), $carat);
         if($this->pagination && $this->pagination["totalPages"] != 1){
           $href = $this->_modifyURIParams(array("sort" => $field, "desc" => $desc, "page" => null));
           $link = array("tag" => "a", "html" => $html, "attrib" => array("href" => $href));
