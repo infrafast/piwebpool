@@ -632,7 +632,7 @@
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
         
-        var interval = setInterval(updateSensorValues, 5000);
+        var interval = setInterval(updateSensorValues, 30000);
 
         </script>
     </body>
