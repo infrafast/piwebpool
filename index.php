@@ -547,15 +547,20 @@
             calibrate.style.backgroundImage="url('')";
         }
         
+        function updateSensorValues{
+            refreshValue(document.getElementById('divPhMeasureID'),'Ph');
+            refreshValue(document.getElementById('divORPMeasureID'),'ORP');
+            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+        }
+        
+        
         function refreshPanel(id){
             switch (id) {
                 case 'sensorTable':
                     loadWeather("45.840491, 6.085538",0);
                     //loadWeather("46.203962, 6.133670",0);
                     updateMeasuresGraphs();
-                    refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-                    refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-                    refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+                    updateSensorValues();
                 break;
                 case 'logTable':
                     var logarea = document.getElementById('logFile');
