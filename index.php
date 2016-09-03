@@ -547,7 +547,7 @@
             calibrate.style.backgroundImage="url('')";
         }
         
-        function updateSensorValues{
+        function updateSensorValues(){
             refreshValue(document.getElementById('divPhMeasureID'),'Ph');
             refreshValue(document.getElementById('divORPMeasureID'),'ORP');
             refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
