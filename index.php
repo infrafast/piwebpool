@@ -627,7 +627,7 @@
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
         
-        var interval = setInterval(refreshPanel("sensorTable"), 10000);
+        var interval = setInterval(refreshPanel("sensorTable"), 5000);
 
         </script>
     </body>
