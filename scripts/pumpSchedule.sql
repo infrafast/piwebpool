@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.44, for debian-linux-gnu (armv7l)
+-- MySQL dump 10.13  Distrib 5.5.50, for debian-linux-gnu (armv7l)
 --
 -- Host: localhost    Database: pool
 -- ------------------------------------------------------
--- Server version	5.5.44-0+deb8u1
+-- Server version	5.5.50-0+deb8u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -50,7 +50,7 @@ CREATE TABLE `pumpSchedule` (
 
 LOCK TABLES `pumpSchedule` WRITE;
 /*!40000 ALTER TABLE `pumpSchedule` DISABLE KEYS */;
-INSERT INTO `pumpSchedule` VALUES ('00h',1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0),('02h',1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0),('04h',1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1),('06h',1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1),('08h',1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1),('10h',1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1),('12h',1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1),('14h',1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1),('16h',1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1),('18h',1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1),('20h',1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),('22h',1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0);
+INSERT INTO `pumpSchedule` VALUES ('00h',1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0),('02h',1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0),('04h',1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1),('06h',1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1),('08h',1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1),('10h',1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1),('12h',1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1),('14h',1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1),('16h',1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1),('18h',1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1),('20h',1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1),('22h',1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0);
 /*!40000 ALTER TABLE `pumpSchedule` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -63,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-18 15:35:45
+-- Dump completed on 2016-08-31 22:14:44
