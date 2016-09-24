@@ -185,7 +185,7 @@ function setLuaPinState($pin,$state){
 
 function setPinState($pin,$state){
     global $materials, $options, $pins;
-
+    sleep(1);
     if ($state!=getPin($pin)){
     
         // retrieve the list of all listeners for this material
@@ -227,7 +227,6 @@ function setPinState($pin,$state){
     	$state=($state==0?1:0);
     	
     	system("gpio write ".$pin." ".$state);
-    	sleep(0.5);
     	//echo "{gpio write ".$pin." ".$state."}";
     	// here we should capture with the feedback pin and set return accordingly to manage the state"unknown"
     }
