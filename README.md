@@ -32,7 +32,7 @@ Comme toutes les applications open source, cela demande quelques connaissances. 
     - controle de 4 appareils (ex. electrolyseur, pompe à chaleur, filtration, eclairage)
     - historique des données et visualisation par graph
     - affiche les prévisions météo
-    - fourni des recommendations baées sur l'analye des données dans le temps (ex. ajout de chlore, vérification de la stabilité...)
+    - fourni des recommendations baées sur l'analyse des données dans le temps (ex. ajout de chlore, vérification de la stabilité...)
     - permet l'envoi de notifications emails, sms et via autres systèmes
     - permet de planifier le fonctionnement de la pompe en fonction de l'heure et de la température du bassin (ex. hors gel)
     - peut être controllé via smartphone ou browser web
