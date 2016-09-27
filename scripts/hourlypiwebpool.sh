@@ -30,7 +30,10 @@ then
                 logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
                 rm -f $FFLAG 2>/dev/null
                 touch LFLAG
-                sudo reboot
+                if [ ! -e "$file" ]
+                    then    
+                        sudo reboot
+                fi
         fi
 else
     logger -s "$LOGID $INTERFACE is up and $IP_FOR_TEST is alive"
