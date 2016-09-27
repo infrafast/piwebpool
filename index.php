@@ -566,6 +566,7 @@
                             echo "document.getElementById('".$buttonID."').innerHTML='<br>'+button".$material."+'<br><br>';\n";
                             //echo "document.getElementById('".$buttonID."').classList.add(button".$material.");\n";
                             echo "document.getElementById('".$buttonID."').className(button".$material.");\n";
+                            echo "document.getElementById('".$buttonID."').classList.add('arrondi buttonState');\n";
                         }
                     ?>
 
