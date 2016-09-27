@@ -36,6 +36,7 @@ then
 else
     logger -s "$LOGID $INTERFACE is up and $IP_FOR_TEST is alive"
     rm -f $FFLAG 2>/dev/null
+    rm -f $LFLAG 2>/dev/null
 fi
 
 
