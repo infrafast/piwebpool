@@ -649,10 +649,9 @@
         
         // register push from server
         if(typeof(EventSource) !== "undefined") {
-            // Yes! Server-sent events support!
-            // Some code.....
+            alert("Push supported");
         } else {
-            // Sorry! No server-sent events support..
+            alert("Push unsupported");
         } 
 
         </script>
