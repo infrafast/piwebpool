@@ -31,7 +31,7 @@ then
                 rm -f $FFLAG 2>/dev/null
                 if [ ! -e $LFLAG ]
                     then    
-                        touch LFLAG
+                        touch $LFLAG
                         sudo reboot
                 fi
         fi
