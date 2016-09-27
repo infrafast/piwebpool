@@ -557,7 +557,7 @@
             <?php 
                 foreach($materials as $material=>$pin){
                     $buttonID = "commandButtonID".$material;
-                    echo "var button".$material."=actionCall('getState=".$material."',false,null,false,false);\n"; 
+                    echo "var button".$material."=actionCall('getState=".$material."',false,null,false,false)==0?'on':'off';\n"; 
                     echo "document.getElementById('".$buttonID."').innerHTML=button".$material.";\n";
                 }
             ?>
