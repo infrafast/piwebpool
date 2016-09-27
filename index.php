@@ -656,7 +656,7 @@
         // pull refresh interval
         var intervalMeasures = setInterval(updateSensorValues, 100000);
         // see github issue #29, for the moment, we pull to fake an update every 1000ms = 1s
-        var intervalButton = setInterval(updateSensorValues, 1000);
+        var intervalButton = setInterval(updateCommandsButton, 1000);
         
         
         </script>
