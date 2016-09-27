@@ -30,7 +30,7 @@ then
             touch $LFLAG
             sudo reboot
         else
-            logger "Keep system UP without network"
+            logger "Keep system UP, no network"
         fi
     else
             logger -s "$LOGID restarting $INTERFACE ..."
