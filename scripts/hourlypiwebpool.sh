@@ -26,11 +26,11 @@ then
         rm -f $FFLAG 2>/dev/null
         if [ ! -e $LFLAG ]
         then    
-            logger "Rebooting once"
+            logger "Rebooting once to recover service"
             touch $LFLAG
             sudo reboot
         else
-            logger "Rebooting once"
+            logger "Keep system UP without network"
         fi
     else
             logger -s "$LOGID restarting $INTERFACE ..."
