@@ -21,7 +21,7 @@ if [ $? -ge 1 ]
 then
     logger -s "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
     if [ -e $FFLAG ]
-        logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
+        logger "$LOGID $INTERFACE is still down"
         rm -f $FFLAG 2>/dev/null
         if [ ! -e $LFLAG ]
             then    
