@@ -6,7 +6,7 @@ PIWEBDIR="/var/www/html/piwebpool"
 LOGID="HOURLYPIWEPOOL.SH: "
 logger -s "$LOGID starting" 
 #IP_FOR_TEST="$(hostname -f).infrafast.com"
-IP_FOR_TEST="www.googlelll.com"
+IP_FOR_TEST="www.google.com"
 PING_COUNT=1
 PING="/bin/ping"
 IFUP="/sbin/ifup"
@@ -30,7 +30,7 @@ then
             touch $LFLAG
             sudo reboot
         else
-            logger -s "Keep system UP, no network."
+            logger -s "System was already rebooted, so we keep it UP with no network."
         fi
     else
             logger -s "$LOGID restarting $INTERFACE ..."
