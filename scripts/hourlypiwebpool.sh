@@ -19,10 +19,10 @@ LFLAG="$PIWEBDIR/noreboot.lflg"
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
 if [ $? -ge 1 ]
 then
-    logger -s "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
+    logger -s "$LOGID ping $IP_FOR_TEST failed : $INTERFACE seems to be down..."
     if [ -e $FFLAG ]
     then
-        logger "$LOGID $INTERFACE is still down after service restart"
+        logger " still down after service restart"
         rm -f $FFLAG 2>/dev/null
         if [ ! -e $LFLAG ]
         then    
