@@ -219,6 +219,13 @@ function setPinState($pin,$state){
                 // should not return false if th setPin command was successful...
                 //fire the state change to all listeners
                 weburl($url,"status");
+                
+                header('Content-Type: text/event-stream');
+                header('Cache-Control: no-cache');
+                
+                $time = date('r');
+                echo "data: The server time is: {$time}\n\n";
+                flush();                
             }
         }    
         //Definis le PIN en tant que sortie
