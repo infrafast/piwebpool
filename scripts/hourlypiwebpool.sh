@@ -49,4 +49,4 @@ fi
 logger -s "$LOGID Executing piweb cronaction"
 cd $PIWEBDIR
 #php -dextension=lua.so cronaction.php
-#php cronaction.php
+php cronaction.php
