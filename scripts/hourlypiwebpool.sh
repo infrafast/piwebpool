@@ -13,6 +13,7 @@ IFUP="/sbin/ifup"
 IFDOWN="/sbin/ifdown --force"
 INTERFACE="wlan0"
 FFLAG="$PIWEBDIR/stuck.fflg"
+LFLAG="$PIWEBDIR/reboot.lflg"
 
 # ping test
 $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
