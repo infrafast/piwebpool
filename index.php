@@ -555,7 +555,7 @@
 
         function updateCommandsButton(){
             <?php foreach($materials as $material=>$pin) 
-                echo "alert ('"+$material+"')"; 
+                echo "alert ('"+$material+"'); "; 
             ?>
         }
         
