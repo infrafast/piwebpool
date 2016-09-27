@@ -569,9 +569,6 @@
                 case 'actionTable':
                     updateCommandsGraphs();
                 break;
-                case 'actionTable':
-                    updateCommandsGraphs();
-                break;
                 default:
             }
         }
