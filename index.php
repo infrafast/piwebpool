@@ -558,7 +558,7 @@
                 foreach($materials as $material=>$pin){
                     $buttonID = "commandButtonID".$material;
                     //echo "alert(actionCall('getState=".$material."',false,null,false,false));\n"; 
-                    document.getElementById('".$buttonID."').innerHTML("HELLO");
+                    echo "document.getElementById('".$buttonID."').innerHTML("HELLO");\n";
                 }
             ?>
         }
