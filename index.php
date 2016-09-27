@@ -562,8 +562,14 @@
                     echo "document.getElementById('".$buttonID."').classList.add(button".$material.");\n";
                 }
             ?>
+            $.ajax({
+                url: "/",
+                complete: function () {
+                    //long running task here
+                    document.getElementById("myspan").innerHTML = "done";
+                }
+            });            
         }
-        
         
         function refreshPanel(id){
             switch (id) {
