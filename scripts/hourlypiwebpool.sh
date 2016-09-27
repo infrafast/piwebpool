@@ -22,15 +22,15 @@ then
     logger -s "$LOGID ping $IP_FOR_TEST failed : $INTERFACE seems to be down..."
     if [ -e $FFLAG ]
     then
-        logger "$LOGID $INTERFACE still down even after service restart"
+        logger -s "$LOGID $INTERFACE still down even after service restart"
         rm -f $FFLAG 2>/dev/null
         if [ ! -e $LFLAG ]
         then    
-            logger "Rebooting once to recover service"
+            logger -s "Rebooting once to recover service"
             touch $LFLAG
             sudo reboot
         else
-            logger "Keep system UP, no network."
+            logger -s "Keep system UP, no network."
         fi
     else
             logger -s "$LOGID restarting $INTERFACE ..."
