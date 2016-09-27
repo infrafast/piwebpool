@@ -554,7 +554,7 @@
         }
 
         function updateCommandsButton(){
-        
+            alert("update command button") ;
         }
         
         
