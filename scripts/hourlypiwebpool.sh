@@ -24,6 +24,7 @@ then
         then
                 logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
                 rm -f $FFLAG 2>/dev/null
+                touch LFLAG
                 sudo reboot
         else
                 logger -s "$LOGID restarting $INTERFACE ..."
