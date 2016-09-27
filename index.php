@@ -556,6 +556,7 @@
         function updateCommandsButton(){
             $.ajax({
                 url: "/",
+                async:true,
                 complete: function () {
 
                     <?php 
