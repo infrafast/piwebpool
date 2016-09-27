@@ -20,20 +20,20 @@ $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
 if [ $? -ge 1 ]
 then
     logger -s "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
-        if [ -e $LFLAG ]
+        if [ -e $FFLAG ]
+            logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
+            rm -f $FFLAG 2>/dev/null
+            if [ ! -e $LFLAG ]
+                then    
+                    touch $LFLAG
+                    sudo reboot
+            fi
         then
+        else
                 logger -s "$LOGID restarting $INTERFACE ..."
                 touch $FFLAG
                 sudo ifdown $INTERFACE && sudo service networking restart && sudo ifup $INTERFACE
                 sudo systemctl daemon-reload
-        else
-                logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
-                rm -f $FFLAG 2>/dev/null
-                if [ ! -e $LFLAG ]
-                    then    
-                        touch $LFLAG
-                        sudo reboot
-                fi
         fi
 else
     logger -s "$LOGID $INTERFACE is up and $IP_FOR_TEST is alive"
