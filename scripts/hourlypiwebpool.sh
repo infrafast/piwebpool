@@ -25,12 +25,12 @@ then
         logger "$LOGID $INTERFACE is still down"
         rm -f $FFLAG 2>/dev/null
         if [ ! -e $LFLAG ]
-            then    
-                logger "Rebooting once"
-                touch $LFLAG
-                sudo reboot
-            else
-                logger "Rebooting once"
+        then    
+            logger "Rebooting once"
+            touch $LFLAG
+            sudo reboot
+        else
+            logger "Rebooting once"
         fi
     else
             logger -s "$LOGID restarting $INTERFACE ..."
