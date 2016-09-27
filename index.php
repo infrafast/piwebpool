@@ -557,7 +557,7 @@
             <?php 
                 foreach($materials as $material=>$pin){
                     $buttonID = "commandButtonID".$material;
-                    echo "alert(actionCall('action=getLog',false,null,false,false);)\n"; 
+                    echo "alert(actionCall('getState=".$material."',false,null,false,false);)\n"; 
                 }
             ?>
         }
