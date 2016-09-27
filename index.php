@@ -654,7 +654,7 @@
                 //document.getElementById("result").innerHTML += event.data + "<br>";
             };
         } else {
-            document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+            //document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
         }
 
 
