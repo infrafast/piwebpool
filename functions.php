@@ -219,14 +219,6 @@ function setPinState($pin,$state){
                 // should not return false if th setPin command was successful...
                 //fire the state change to all listeners
                 weburl($url,"status");
-                
-                // push state change to webrowser clients
-                // Output the data to send (Always start with "data: ")
-                header('Content-Type: text/event-stream');
-                header('Cache-Control: no-cache');
-                echo "data: ".$material."=".$tate;
-                flush();  
-                // end of push
             }
         }    
         //Definis le PIN en tant que sortie
