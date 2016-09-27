@@ -653,8 +653,11 @@
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
         
-        // pull to refresh measures interval
-        var interval = setInterval(updateSensorValues, 100000);
+        // pull refresh interval
+        var intervalMeasures = setInterval(updateSensorValues, 100000);
+        // see github issue #29, for the moment, we pull to fake an update
+        var intervalButton = setInterval(updateSensorValues, 100000);
+        
         
         </script>
     </body>
