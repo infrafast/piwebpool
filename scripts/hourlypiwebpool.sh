@@ -30,7 +30,7 @@ then
                 logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
                 rm -f $FFLAG 2>/dev/null
                 touch LFLAG
-                if [ ! -e "$file" ]
+                if [ ! -e $LFLAG ]
                     then    
                         sudo reboot
                 fi
