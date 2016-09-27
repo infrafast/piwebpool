@@ -31,7 +31,6 @@ then
                 rm -f $FFLAG 2>/dev/null
                 touch LFLAG
                 sudo reboot
-
         fi
 else
     logger -s "$LOGID $INTERFACE is up and $IP_FOR_TEST is alive"
