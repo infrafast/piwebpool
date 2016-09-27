@@ -647,18 +647,6 @@
         // pull to refresh measures interval
         var interval = setInterval(updateSensorValues, 100000);
         
-        // register push from server
-        if(typeof(EventSource) !== "undefined") {
-            var source = new EventSource("functions.php");
-            source.onmessage = function(event) {
-                //document.getElementById("result").innerHTML += event.data + "<br>";
-                alert(event.data);
-            };
-        } else {
-            //document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
-            alert("not supported");
-        }
-
         </script>
     </body>
 </html>
