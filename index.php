@@ -580,6 +580,7 @@
                 case 'actionTable':
                     updateCommandsGraphs();
                     updateCommandsButton();
+                    alert("refreshed actiontable");
                 break;
                 default:
             }
