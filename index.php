@@ -564,6 +564,7 @@
                             $buttonID = "commandButtonID".$material;
                             echo "var button".$material."=actionCall('getState=".$material."',false,null,false,false)==0?'off':'on';\n"; 
                             echo "document.getElementById('".$buttonID."').innerHTML='<br>'+button".$material."+'<br><br>';\n";
+                            echo "document.getElementById('".$buttonID."').classList.remove('on','off');\n";
                             echo "document.getElementById('".$buttonID."').classList.add(button".$material.",'buttonState','arrondi');\n";
                         }
                     ?>
