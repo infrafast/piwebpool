@@ -554,6 +554,7 @@
         }
 
         function updateCommandsButton(){
+        // we fake an ajax call to make sure the DOM are refreshed
             $.ajax({
                 url: "/",
                 async:true,
