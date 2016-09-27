@@ -223,7 +223,7 @@ function setPinState($pin,$state){
                 // push state change to webrowser clients
                 header('Content-Type: text/event-stream');
                 header('Cache-Control: no-cache');
-                echo $material."=".$tate;
+                echo "data: ".$material."=".$tate;
                 flush();  
                 // end of push
             }
