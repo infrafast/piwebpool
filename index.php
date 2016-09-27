@@ -649,10 +649,14 @@
         
         // register push from server
         if(typeof(EventSource) !== "undefined") {
-            alert("Push supported");
+            var source = new EventSource("demo_sse.php");
+            source.onmessage = function(event) {
+                document.getElementById("result").innerHTML += event.data + "<br>";
+            };
         } else {
-            alert("Push unsupported");
-        } 
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
 
         </script>
     </body>
