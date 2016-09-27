@@ -644,7 +644,16 @@
         // callback function to update code related xml and lua when the workspace is modified
         workspace.addChangeListener(myUpdateFunction);
         
+        // pull to refresh measures interval
         var interval = setInterval(updateSensorValues, 100000);
+        
+        // register 
+        if(typeof(EventSource) !== "undefined") {
+            // Yes! Server-sent events support!
+            // Some code.....
+        } else {
+            // Sorry! No server-sent events support..
+        } 
 
         </script>
     </body>
