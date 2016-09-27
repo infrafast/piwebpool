@@ -220,9 +220,9 @@ function setPinState($pin,$state){
                 //fire the state change to all listeners
                 weburl($url,"status");
                 
+                // push state change to webrowser clients
                 header('Content-Type: text/event-stream');
                 header('Cache-Control: no-cache');
-                
                 $time = date('r');
                 echo "data: The server time is: {$time}\n\n";
                 flush();                
