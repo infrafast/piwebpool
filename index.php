@@ -647,7 +647,7 @@
         // pull to refresh measures interval
         var interval = setInterval(updateSensorValues, 100000);
         
-        // register 
+        // register push from server
         if(typeof(EventSource) !== "undefined") {
             // Yes! Server-sent events support!
             // Some code.....
