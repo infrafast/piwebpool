@@ -224,7 +224,8 @@ function setPinState($pin,$state){
                 header('Content-Type: text/event-stream');
                 header('Cache-Control: no-cache');
                 echo $material."=".$tate;
-                flush();                
+                flush();  
+                // end of push
             }
         }    
         //Definis le PIN en tant que sortie
