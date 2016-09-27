@@ -557,7 +557,7 @@
             <?php 
                 foreach($materials as $material=>$pin) 
                 $buttonID = "commandButtonID".$material;
-                echo "alert ('".$buttonID."'); "; 
+                echo "alert ('".$buttonID."');\n"; 
             ?>
         }
         
