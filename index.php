@@ -152,7 +152,7 @@
     foreach($materials as $material=>$pin){ ?>
     <tr height="80px">
     	<?php echo "<td class='barType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);'>"?></td>
-    	<td><div id=<?php echo "'commandButtonID".$material."'";?> onclick="changeState(<?php echo "'".$material."'"; ?>,this)" class="arrondi buttonState">?</div></td>
+    	<td><div id=<?php echo "'commandButtonID".$material."'";?> onclick="changeState(<?php echo "'".$material."'"; ?>,this)">?</div></td>
     </tr>
     <?php } ?>
     </table>
@@ -564,7 +564,8 @@
                             $buttonID = "commandButtonID".$material;
                             echo "var button".$material."=actionCall('getState=".$material."',false,null,false,false)==0?'off':'on';\n"; 
                             echo "document.getElementById('".$buttonID."').innerHTML='<br>'+button".$material."+'<br><br>';\n";
-                            echo "document.getElementById('".$buttonID."').classList.add(button".$material.");\n";
+                            //echo "document.getElementById('".$buttonID."').classList.add(button".$material.");\n";
+                            echo "document.getElementById('".$buttonID."').className(button".$material.");\n";
                         }
                     ?>
 
