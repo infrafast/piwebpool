@@ -152,7 +152,7 @@
     foreach($materials as $material=>$pin){ ?>
     <tr height="80px">
     	<?php echo "<td class='barType' id='graph=".$materialsColumn[$material]."' onclick='toggleGraph(this);'>"?></td>
-    	<td><div id=<?php echo "'commandButtonID".$material."'";?> onclick="changeState(<?php echo "'".$material."'"; ?>,this)" class="arrondi buttonState"></div></td>
+    	<td><div id=<?php echo "'commandButtonID".$material."'";?> onclick="changeState(<?php echo "'".$material."'"; ?>,this)" class="arrondi buttonState">?</div></td>
     </tr>
     <?php } ?>
     </table>
