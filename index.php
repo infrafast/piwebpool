@@ -552,6 +552,9 @@
             refreshValue(document.getElementById('divORPMeasureID'),'ORP');
             refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
         }
+
+        function updateCommandsButton(){
+        }
         
         
         function refreshPanel(id){
