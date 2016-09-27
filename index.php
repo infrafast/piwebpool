@@ -652,13 +652,12 @@
             var source = new EventSource("functions.php");
             source.onmessage = function(event) {
                 //document.getElementById("result").innerHTML += event.data + "<br>";
-                alert("");
+                alert(event.data);
             };
         } else {
             //document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
             alert("not supported");
         }
-
 
         </script>
     </body>
