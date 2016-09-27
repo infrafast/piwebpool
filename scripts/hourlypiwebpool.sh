@@ -30,7 +30,7 @@ then
                 touch $LFLAG
                 sudo reboot
             else
-                
+                logger "Rebooting once"
         fi
     else
             logger -s "$LOGID restarting $INTERFACE ..."
