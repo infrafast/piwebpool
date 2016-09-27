@@ -221,6 +221,7 @@ function setPinState($pin,$state){
                 weburl($url,"status");
                 
                 // push state change to webrowser clients
+                // Output the data to send (Always start with "data: ")
                 header('Content-Type: text/event-stream');
                 header('Cache-Control: no-cache');
                 echo "data: ".$material."=".$tate;
