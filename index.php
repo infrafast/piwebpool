@@ -649,7 +649,7 @@
         
         // register push from server
         if(typeof(EventSource) !== "undefined") {
-            var source = new EventSource("demo_sse.php");
+            var source = new EventSource("functions.php");
             source.onmessage = function(event) {
                 document.getElementById("result").innerHTML += event.data + "<br>";
             };
