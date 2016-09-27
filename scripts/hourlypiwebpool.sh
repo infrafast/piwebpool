@@ -20,7 +20,7 @@ $PING -c $PING_COUNT $IP_FOR_TEST > /dev/null 2> /dev/null
 if [ $? -ge 1 ]
 then
     logger -s "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
-        if [ -e LFLAG ]
+        if [ -e $LFLAG ]
         then
                 logger -s "$LOGID restarting $INTERFACE ..."
                 touch $FFLAG
