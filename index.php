@@ -555,7 +555,7 @@
 
         function updateCommandsButton(){
             <?php foreach($materials as $material=>$pin) 
-                echo "updateGraph(document.getElementById('graph=".$materialsColumn[$material]."')); \n"; ?>
+                echo "alert ('"+$material+"')\n"; ?>
         }
         
         
