@@ -29,9 +29,9 @@ then
         else
                 logger "$LOGID $INTERFACE is still down, REBOOT to recover ..."
                 rm -f $FFLAG 2>/dev/null
-                touch LFLAG
                 if [ ! -e $LFLAG ]
                     then    
+                        touch LFLAG
                         sudo reboot
                 fi
         fi
