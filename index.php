@@ -568,6 +568,7 @@
                     logarea.scrollTop = logarea.scrollHeight;
                 case 'actionTable':
                     updateCommandsGraphs();
+                    updateCommandsButton();
                 break;
                 default:
             }
