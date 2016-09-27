@@ -223,7 +223,7 @@ function setPinState($pin,$state){
                 // push state change to webrowser clients
                 header('Content-Type: text/event-stream');
                 header('Cache-Control: no-cache');
-                echo "data: The server time is: {$time}\n\n";
+                echo $material."=".$tate;
                 flush();                
             }
         }    
