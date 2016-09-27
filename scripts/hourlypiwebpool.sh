@@ -22,7 +22,7 @@ then
     logger -s "$LOGID ping $IP_FOR_TEST faild : $INTERFACE seems to be down..."
     if [ -e $FFLAG ]
     then
-        logger "$LOGID $INTERFACE is still down"
+        logger "$LOGID $INTERFACE is still down after service restart"
         rm -f $FFLAG 2>/dev/null
         if [ ! -e $LFLAG ]
         then    
