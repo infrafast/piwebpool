@@ -8,4 +8,4 @@ CREATE TABLE `listeners` (
 
 
 ALTER TABLE `listeners`
-  ADD PRIMARY KEY (`url`);
+  ADD PRIMARY KEY (`id`);
