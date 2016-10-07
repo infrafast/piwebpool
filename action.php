@@ -61,7 +61,7 @@ if(isset($_['action'])){
                         $result['state']  = "Valeur incorrecte ou indéfinie";
                         $result['answer']  = "ERROR";
                     }
-                    appendlog("CALIBRATE","Temp",html_entity_decode(json_encode($result)));
+                    appendlog("CALIBRATE","Temp",json_encode($result));
                 break;
             	default:
             	     $result['answer']="ERROR";
