@@ -555,13 +555,14 @@
         }
         
         function updateSensorValues(){
-            refreshValue(document.getElementById('divPhMeasureID'),'Ph',document.getElementById('divPHConsignID'));
-            refreshValue(document.getElementById('divORPMeasureID'),'ORP',document.getElementById('divORPConsignID'));
-            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature',document.getElementById('divTEMPConsignID'));
-
             document.getElementById("divPHConsignID").innerHTML = actionCall('action=getSetting&id=PHConsign',false,null,false,false);
             document.getElementById("divORPConsignID").innerHTML = actionCall('action=getSetting&id=ORPConsign',false,null,false,false);
             document.getElementById("divTEMPConsignID").innerHTML = actionCall('action=getSetting&id=TEMPConsign',false,null,false,false);
+
+
+            refreshValue(document.getElementById('divPhMeasureID'),'Ph',document.getElementById('divPHConsignID'));
+            refreshValue(document.getElementById('divORPMeasureID'),'ORP',document.getElementById('divORPConsignID'));
+            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature',document.getElementById('divTEMPConsignID'));
         }
 
         function updateCommandsButton(){
