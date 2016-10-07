@@ -53,8 +53,8 @@ if(isset($_['action'])){
                             $result['answer'] = "ERROR";
                             $result['state'] = mysql_error();
                         }else
-                            $result['state']="Ecart enregistré";   
-                            $result['answer']=$deltaTemp;
+                            $result['answer']="Ecart enregistré";   
+                            $result['state']=$deltaTemp;
                             
                     }
                     else{
