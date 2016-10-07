@@ -55,7 +55,8 @@ if(isset($_['action'])){
                             $result['answer']="Ecart enregistré: ".$deltaTemp;   
                     }
                     else{
-                        $result['answer']  = "Valeur incorrecte ou indéfinie";
+                        $result['state']  = "Valeur incorrecte ou indéfinie";
+                        $result['answer']  = "ERROR";
                     }
                     appendlog("CALIBRATE","Temp",$result);
                 break;
