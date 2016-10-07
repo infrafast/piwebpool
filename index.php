@@ -197,7 +197,7 @@
     <?= $tableSettings->getTable(); ?>
     <?= $tableSettings->getJavascript("jquery"); ?>
     
-    <?= $tableSubscribers->fetchdata("SELECT material,url,valueOn,valueOff from listeners;")?>
+    <?= $tableSubscribers->fetchdata("SELECT id,material,url,valueOn,valueOff from listeners;")?>
     <?= $tableSubscribers->getTable(); ?>
     <?= $tableSubscribers->getJavascript("jquery") ?>
 
