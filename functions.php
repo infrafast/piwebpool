@@ -273,6 +273,7 @@ function getTemperature(){
             $tempOffset=($row['value']);
         }
     }
+    
 
     //return round( (0.5 + (2.5 - 0.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //
