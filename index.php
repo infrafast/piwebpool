@@ -62,7 +62,7 @@
     $subscribersSet["allowDelete"] = true;
     $subscribersSet["sortable"]  = ""; 
     $subscribersSet["selects"] = array(
-    	"material" => array("visible" => 1, "invisible" => 0),
+    	"material" => $materials,
     ); 
 
     //$subscribersSet["editable"] = true;
