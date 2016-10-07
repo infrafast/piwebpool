@@ -118,7 +118,9 @@ foreach (array("main","custom") as $scriptID) {
     // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
     goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
 }
-//get and update the index
+///////////////////////////////////////////////////////////////
+// UPDATE MEASURE TABLE BASED ON INDEX
+///////////////////////////////////////////////////////////////
 $sql    = "SELECT value from settings where id='measureIndex';";
 $result = mysql_query($sql, $link);
 
