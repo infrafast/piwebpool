@@ -262,8 +262,24 @@ function setTemperature($value){
 function getTemperature(){
     // retrieve value in the databse issue #25
     
-    
-    
+    // retrieve the temperature offset
+    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+    mysql_select_db($options["database"]["name"]) or die('error database selection');
+    // retrieve all registered url for this material
+    $sql    = "SELECT value from settings where id='tempOffset';";
+    //appendlog("FIRE",$sql,"");
+    $outcome = mysql_query($sql);
+    if (!$outcome) {
+        appendlog("ERROR",$sql,mysql_error());
+    }else{
+        while ($row = mysql_fetch_assoc($outcome)) {
+            $url=($row['url']);
+            $cmd=$row['valueOn'];
+            $cmd=$row['valueOff'];
+            }
+        }
+    }
+
     //return round( (0.5 + (2.5 - 0.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //
     for ($i = 0; $i < 2; $i++){
