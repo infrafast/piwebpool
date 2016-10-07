@@ -58,7 +58,7 @@ if (!$result) {
 }
 mysql_free_result($result);
 ///////////////////////////////////////////////////////////////
-// IS THE SCHEDULER ACTIVE?
+// SET THE PUMP ACCORDING TO SCHEDULER
 ///////////////////////////////////////////////////////////////
 if ($schedulerOn!="off"){
     // what time is it now?
@@ -77,14 +77,15 @@ if ($schedulerOn!="off"){
         }
     }
     mysql_free_result($result);    
-    
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
         $answer.="+ERROR";
         $state.="+SetPinState";
     }
     $state.="{Periode:".$tw.", Temperature:".$temp.", Consigne filtration:".($pumpConsign=="1"?"On":"Off")."}";    
 }
-
+///////////////////////////////////////////////////////////////
+// EXECUTE LUA SCRIPTS
+///////////////////////////////////////////////////////////////
 $concat=array("header","footer");
 $i=0;
 foreach ($concat as $scriptID) {
