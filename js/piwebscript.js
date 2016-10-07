@@ -118,6 +118,7 @@ function refreshValue(elem,action){
     		$(elem).removeClass('loading');
     		$(elem).addClass('off');
     		if(result.answer != "ERROR"){
+                // retrieve the data-consign from the div.
                 var median = $(elem).data("consign");
                 var tolerance;
                 var icon;
