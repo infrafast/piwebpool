@@ -81,6 +81,7 @@ if (!$result) {
     while ($row = mysql_fetch_assoc($result)) {
         $schedulerOn=($row['value']);
     }
+    $state.="{Periode:".$tw.", Temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}"    
 }
 mysql_free_result($result);
 if ($schedulerOn=="on"){
