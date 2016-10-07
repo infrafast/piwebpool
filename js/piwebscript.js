@@ -117,7 +117,7 @@ function refreshValue(elem,action){
             var newValue = result.state;
     		$(elem).removeClass('loading');
     		$(elem).addClass('off');
-    		if(result.answer == "OK"){
+    		if(result.answer != "ERROR"){
                 var median;
                 var tolerance;
                 var icon;
