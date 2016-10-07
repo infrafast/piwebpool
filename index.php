@@ -536,6 +536,7 @@
         }
         
         function calibrateAndRefresh(id,calVal){
+            alert"calibrate");
             var elemID = 'div'+id+'MeasureID';
             var elem = document.getElementById(elemID);
             //add loading icon
