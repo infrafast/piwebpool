@@ -190,7 +190,7 @@
     
     
     
-    <?= $tableSettings->fetchData("SELECT description, value from settings where userSetting=true;"); $tableSettings->getTable(); ?>
+    <?= $tableSettings->fetchData("SELECT description,value,id from settings where userSetting=true;"); $tableSettings->getTable(); ?>
     <?= $tableSettings->getJavascript("jquery") ?>
     
     <?= $tableSubscribers->getTable() ?>
