@@ -50,10 +50,10 @@ $temp=getPoolTemperature();
 
 $sql    = "SELECT value FROM settings where id='scheduler'";
 $result = mysql_query($sql, $link);
+$schedulerOn="on";    
 if (!$result) {
     $answer="ERROR";
     $state=mysql_error();
-    $schedulerOn="on";    
 }else{
     while ($row = mysql_fetch_assoc($result)) {
         $schedulerOn=($row['value']);
