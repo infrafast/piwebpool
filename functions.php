@@ -271,7 +271,6 @@ function getTemperature(){
     }else{
         while ($row = mysql_fetch_assoc($outcome)){
             $value=($row['value']);
-            }
         }
     }
 
