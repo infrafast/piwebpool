@@ -117,7 +117,7 @@
         <th colspan="3"><div id="weather">Affichage météo?</div></th>
     </tr>
     <tr>
-        <th width=33%>ph<div id="divPHConsignID">7.24</div></th><th width=33%>redox<div id="divORPConsignID">700</div></th><th width=33%>température<div id="divTEMPConsignID">7.24</div></th>
+        <th width=33%>ph<div id="divPHConsignID">?</div></th><th width=33%>redox<div id="divORPConsignID">?</div></th><th width=33%>température<div id="divTEMPConsignID">?</div></th>
     </tr>
     <tr>
         <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph',document.getElementById('divPHConsignID'));" class="buttonState off arrondi" ><br></div></td>
