@@ -121,8 +121,8 @@
     </tr>
     <tr>
         <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph',document.getElementById('divPHConsignID'));" class="buttonState off arrondi" ><br></div></td>
-        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off arrondi" ><br></div></td>
-        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off arrondi" ><br></div></td>
+        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP',document.getElementById('divORPConsignID'));" class="buttonState off arrondi" ><br></div></td>
+        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature',document.getElementById('divTEMPConsignID'));" class="buttonState off arrondi" ><br></div></td>
     </tr>
     <tr>
         <th colspan="3">Historique sur 
