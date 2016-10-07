@@ -543,10 +543,8 @@
             var calibrate=document.getElementById(calibrateID);
             calibrate.style.backgroundImage="url('images/loading.gif')";
             var msg = 'Placer la sonde '+id+' dans la solution à '+calVal+'\npendant 2 minutes puis confirmez';
-            if(actionCall('action=calibrate&id='+id+'&value='+calVal,false,msg,true, true)!=false){
-                calibrate.style.backgroundImage="url('')";
+            if(actionCall('action=calibrate&id='+id+'&value='+calVal,false,msg,true, true)!=false)
                 elem.click();
-            }
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
         }
