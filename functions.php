@@ -260,6 +260,8 @@ function setTemperature($value){
 
 
 function getTemperature(){
+    global $options;
+    
     // retrieve value in the databse issue #25
     // retrieve the temperature offset
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
