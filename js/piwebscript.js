@@ -121,18 +121,9 @@ function refreshValue(elem,action){
                 var median = $(elem).data("consign");
                 var tolerance;
                 var icon;
-                if(action=='Ph'){
-                    icon="<i class='wi wi-raindrops'></i>";
-                    //median=7.24;  
-                } 
-                else if (action=='ORP'){
-                    icon="<i class='wi wi-earthquake'></i>";
-                    //median=700;   
-                } 
-                else{
-                    icon="<i class='wi wi-thermometer'></i>";
-                    //median=28;  
-                } 
+                if(action=='Ph') icon="<i class='wi wi-raindrops'></i>";
+                else if (action=='ORP') icon="<i class='wi wi-earthquake'></i>";
+                else icon="<i class='wi wi-thermometer'></i>";
                 var color=getColorVal(median,newValue);
                 //alert(color);
                 $(elem).attr("style", "background:"+color+";");
