@@ -55,6 +55,7 @@ if(isset($_['action'])){
                             $result['state'] = mysql_error();
                         }else
                             $result['answer']="OK";   
+                            $result['state'] =$deltaTemp;
                     }
                     else{
                         $result['state']  = "Valeur incorrecte ou indéfinie";
