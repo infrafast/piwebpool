@@ -118,7 +118,7 @@ function refreshValue(elem,action){
     		$(elem).removeClass('loading');
     		$(elem).addClass('off');
     		if(result.answer != "ERROR"){
-                var median;
+                var median = $(elem).data("consign");
                 var tolerance;
                 var icon;
                 if(action=='Ph'){
