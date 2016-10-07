@@ -52,7 +52,7 @@ if(isset($_['action'])){
                         if (!$outcome) return false; else return true;
 
                     }
-                    else $result['state']  = "Valeur non définie";
+                    else $result['state']  = "Valeur incorrecte";
                 break;
             	default:
             	     $result['answer']="ERROR";
