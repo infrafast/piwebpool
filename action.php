@@ -39,7 +39,7 @@ if(isset($_['action'])){
                     $result['state']  = readSensor(getDevice("ph"),$frame);
                     appendlog("CALIBRATE",$frame,$result);
                 break;
-                case 'temp':
+                case 'Temp':
                     // not implemented yet
                     $result['state']  = "done";
                 break;
