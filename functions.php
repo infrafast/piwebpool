@@ -265,17 +265,13 @@ function getTemperature(){
     // retrieve the temperature offset
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
-    // retrieve all registered url for this material
     $sql    = "SELECT value from settings where id='tempOffset';";
-    //appendlog("FIRE",$sql,"");
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
     }else{
-        while ($row = mysql_fetch_assoc($outcome)) {
-            $url=($row['url']);
-            $cmd=$row['valueOn'];
-            $cmd=$row['valueOff'];
+        while ($row = mysql_fetch_assoc($outcome)){
+            $value=($row['value']);
             }
         }
     }
