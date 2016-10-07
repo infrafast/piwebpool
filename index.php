@@ -160,10 +160,13 @@
     </tr>
     <?php } ?>
     </table>
-    
+
+    <table class="materialTab">
+    <tr class="header" id="actionTable">
     <?= $table->getTable() ?>
     <?= $table->getJavascript("jquery") ?>
-    
+    </tr>
+    </table>
     
     <table class="materialTab">
     <tr class="header" id="blocklyTable">
