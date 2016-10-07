@@ -555,9 +555,9 @@
         }
         
         function updateSensorValues(){
-            refreshValue(document.getElementById('divPhMeasureID'),'Ph');
-            refreshValue(document.getElementById('divORPMeasureID'),'ORP');
-            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature');
+            refreshValue(document.getElementById('divPhMeasureID'),'Ph',document.getElementById('divPHConsignID'));
+            refreshValue(document.getElementById('divORPMeasureID'),'ORP',document.getElementById('divORPConsignID'));
+            refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature',document.getElementById('divTEMPConsignID'));
         }
 
         function updateCommandsButton(){
