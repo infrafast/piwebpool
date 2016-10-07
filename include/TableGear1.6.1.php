@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /*
  *  TableGear (Dynamic table data in HTML)
@@ -9,7 +9,7 @@
  *
  *  Copyright (c) 2010 Andrew Plummer
  *
- * 
+ *
  */
 
 $tgTableID = 0;
@@ -55,7 +55,6 @@ class TableGear
     if(!isset($options["editable"]))    $options["editable"] = "allExceptAutoIncrement";
     if(!isset($options["sortable"]))    $options["sortable"] = "all";
     if(!isset($options["allowDelete"])) $options["allowDelete"] = true;
-    if(!isset($options["allowSpan"])) $options["allowSpan"] = true;
     return $options;
   }
 
@@ -392,7 +391,7 @@ class TableGear
             $carat["html"] = "▲";
           }
         }
-        if ($options["allowSpan"]) $html = array(array("tag" => "span", "html" => $html), $carat);
+        $html = array(array("tag" => "span", "html" => $html), $carat);
         if($this->pagination && $this->pagination["totalPages"] != 1){
           $href = $this->_modifyURIParams(array("sort" => $field, "desc" => $desc, "page" => null));
           $link = array("tag" => "a", "html" => $html, "attrib" => array("href" => $href));
@@ -486,13 +485,12 @@ class TableGear
       $this->_openTag("fieldset");
     }
     $this->_outputHTML($this->custom["TABLE_TOP"]);
-    $this->_openTag("table class='materialTab'", array("id" => $this->table["id"], "class" => $this->table["class"]));
+    $this->_openTag("table", array("id" => $this->table["id"], "class" => $this->table["class"]));
     $headers = $this->_fetchHeaders();
     if($headers || $this->title){
-      $this->_outputHeaders($headers, true,$this->title );
+      $this->_outputHeaders($headers, true);
     }
     if($this->footers || $this->totals || $this->addNewRows){
-    //if($this->footers || $this->totals ){        
       $this->_openTag("tfoot");
       if($this->totals){
         $totals = $this->_fetchTotals();
@@ -581,7 +579,6 @@ class TableGear
       $this->_closeTag("form");
     }
     if($this->_newRowsAllowed()){
-//    if(1==3){        
       $addNewRowID = "addNewRow_" . $this->table["id"];
       $this->_openTag("form", array("action" => $this->form["url"], "method" => $this->form["method"], "id" => $addNewRowID, "class" => "newRow"));
       $this->_outputHTML(array("tag" => "h3", "html" => $this->newRowLabel));
@@ -747,24 +744,17 @@ class TableGear
     return $emptyDataRow;
   }
 
-  function _outputHeaders($headers, $showTitle = false, $id)
+  function _outputHeaders($headers, $showTitle = false)
   {
-    $this->_openTag("thead class='header' id='".$id."'");
+    $this->_openTag("thead");
     if($this->title && $showTitle){
       $this->_openTag("tr");
-      $this->_openTag("td", array("colspan" => count($headers), "class" => "title, arrondi"));
-      $this->_openTag("b");
-      $this->_openTag("span");
-      $this->_outputHTML("-");
-      $this->_closeTag("span");
-      $this->_outputHTML(" ".$this->title);
-      $this->_closeTag("b");
-      $this->_closeTag("td");
+      $this->_openTag("th", array("colspan" => count($headers), "class" => "title"));
+      $this->_outputHTML($this->title);
+      $this->_closeTag("th");
       $this->_closeTag("tr");
     }
-    $this->_openTag("tbody");
     if($headers){
-        
       $this->_openTag("tr");
       foreach($headers as $header){
         $this->_openTag("th", $header["attrib"]);
