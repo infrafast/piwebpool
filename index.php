@@ -193,7 +193,7 @@
     
     
     
-    <?= $tableSettings->fetchData("SELECT description,value,id from settings where userSetting=true;");?>
+    <?= $tableSettings->fetchData("SELECT pkey,description,value,id from settings where userSetting=true;");?>
     <?= $tableSettings->getTable(); ?>
     <?= $tableSettings->getJavascript("jquery"); ?>
     
