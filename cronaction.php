@@ -48,14 +48,6 @@ $tw=getCurrentTimeWindow()."h";
 // what is the temperature range
 $temp=getPoolTemperature();
 
-//treat the case when the tw and temp are forced by user thru the GUI
-//in that case override the value here by these value
-//ensure the out of range is captured on client side
-//then treat the case where tw and temperature are out of range
-//e.g.: either get defaut values or raise email error notification
-//this would then capture the out of range above
-
-
 $sql    = "SELECT value FROM settings where id='scheduler'";
 $result = mysql_query($sql, $link);
 if (!$result) {
@@ -66,9 +58,9 @@ if (!$result) {
     while ($row = mysql_fetch_assoc($result)) {
         $schedulerOn=($row['value']);
     }
-    $state.="{Periode:".$tw.", Temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}";
 }
 mysql_free_result($result);
+
 if ($schedulerOn=="on"){
     $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
     $result = mysql_query($sql, $link);
