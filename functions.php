@@ -261,11 +261,10 @@ function setTemperature($value){
 
 function getTemperature(){
     // retrieve value in the databse issue #25
-    
     // retrieve the temperature offset
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
-    $sql    = "SELECT value from settings where id='tempOffset';";
+    $sql = "SELECT value from settings where id='tempOffset';";
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
