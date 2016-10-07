@@ -162,7 +162,7 @@
     </table>
 
     <table class="materialTab">
-    <tr class="header" id="actionTable">
+    <tr class="header" id="Planificateur">
     <?= $table->getTable() ?>
     <?= $table->getJavascript("jquery") ?>
     </tr>
