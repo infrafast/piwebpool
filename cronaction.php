@@ -55,22 +55,7 @@ $temp=getPoolTemperature();
 //e.g.: either get defaut values or raise email error notification
 //this would then capture the out of range above
 
-$sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
-$result = mysql_query($sql, $link);
 
-if (!$result) {
-    $answer="ERROR";
-    $state=mysql_error();
-}else{
-    $pumpConsign=0;
-    while ($row = mysql_fetch_assoc($result)) {
-        $pumpConsign=($row[$temp]);
-    }
-    // treat error case of unfound timewindow in the table
-    //if ($pumpConsign="")
-}
-mysql_free_result($result);
-    
 $sql    = "SELECT value FROM settings where id='scheduler'";
 $result = mysql_query($sql, $link);
 if (!$result) {
@@ -85,6 +70,24 @@ if (!$result) {
 }
 mysql_free_result($result);
 if ($schedulerOn=="on"){
+    $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
+    $result = mysql_query($sql, $link);
+    
+    if (!$result) {
+        $answer="ERROR";
+        $state=mysql_error();
+    }else{
+        $pumpConsign=0;
+        while ($row = mysql_fetch_assoc($result)) {
+            $pumpConsign=($row[$temp]);
+        }
+        // treat error case of unfound timewindow in the table
+        //if ($pumpConsign="")
+    }
+    mysql_free_result($result);    
+    
+    
+    
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
         $answer.="+ERROR";
         $state.="+SetPinState";
