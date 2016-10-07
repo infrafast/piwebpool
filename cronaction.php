@@ -43,11 +43,6 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 $answer="OK";
 $state="";
 
-// what time is it now?
-$tw=getCurrentTimeWindow()."h";
-// what is the temperature range
-$temp=getPoolTemperature();
-
 $sql    = "SELECT value FROM settings where id='scheduler'";
 $result = mysql_query($sql, $link);
 $schedulerOn="on";    
@@ -62,6 +57,10 @@ if (!$result) {
 mysql_free_result($result);
 
 if ($schedulerOn!="off"){
+    // what time is it now?
+    $tw=getCurrentTimeWindow()."h";
+    // what is the temperature range
+    $temp=getPoolTemperature();    
     $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
     $result = mysql_query($sql, $link);
     $pumpConsign=0;
