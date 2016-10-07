@@ -72,12 +72,12 @@ if (!$result) {
 mysql_free_result($result);
     
 $sql    = "SELECT value FROM settings where id='scheduler'";
+$schedulerOn="on";
 $result = mysql_query($sql, $link);
 if (!$result) {
     $answer="ERROR";
     $state=mysql_error();
 }else{
-    $schedulerOn=0;
     while ($row = mysql_fetch_assoc($result)) {
         $schedulerOn=($row['value']);
     }
