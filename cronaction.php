@@ -78,48 +78,44 @@ if (!$result) {
         $schedulerOn=($row['value']);
     }
     mysql_free_result($result);
-    
-    
-    
-    if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
-        $answer.="+ERROR";
-        $state.="+SetPinState";
-    }else{
-        $concat=array("header","footer");
-        $i=0;
-        foreach ($concat as $scriptID) {
-            // fetch lua header and footer code
-            // i.e. the run() and return
-            $sql    = "SELECT lua from scripts where id='".$scriptID."'";
-            $result = mysql_query($sql, $link);
-            if (!$result) {
-                $answer.="+ERROR";
-                $state.="+".mysql_error();
-            }else{
-                while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
-                mysql_free_result($result);
-            }                
+    if ($schedulerOn=="on"){
+        if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
+            $answer.="+ERROR";
+            $state.="+SetPinState";
         }
-        $luaFeedback="";
-        foreach (array("main","custom") as $scriptID) {
-            $luaFeedback.="|".$scriptID.":";
-            // fetch lua code from database
-            $sql    = "SELECT lua from scripts where id='".$scriptID."'";
-            $result = mysql_query($sql, $link);
-            if (!$result) {
-                $answer.="+ERROR";
-                $state.="+".mysql_error();
-            }else{
-                $luaCode="";
-                while ($row = mysql_fetch_assoc($result)) $luaCode=htmlspecialchars_decode(($row['lua']));
-                mysql_free_result($result);
-            }
-            // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
-            goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
-        }
-        
     }
-    
+    $concat=array("header","footer");
+    $i=0;
+    foreach ($concat as $scriptID) {
+        // fetch lua header and footer code
+        // i.e. the run() and return
+        $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+        $result = mysql_query($sql, $link);
+        if (!$result) {
+            $answer.="+ERROR";
+            $state.="+".mysql_error();
+        }else{
+            while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
+            mysql_free_result($result);
+        }                
+    }
+    $luaFeedback="";
+    foreach (array("main","custom") as $scriptID) {
+        $luaFeedback.="|".$scriptID.":";
+        // fetch lua code from database
+        $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+        $result = mysql_query($sql, $link);
+        if (!$result) {
+            $answer.="+ERROR";
+            $state.="+".mysql_error();
+        }else{
+            $luaCode="";
+            while ($row = mysql_fetch_assoc($result)) $luaCode=htmlspecialchars_decode(($row['lua']));
+            mysql_free_result($result);
+        }
+        // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
+        goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
+    }
     //get and update the index
     $sql    = "SELECT value from settings where id='measureIndex';";
     $result = mysql_query($sql, $link);
