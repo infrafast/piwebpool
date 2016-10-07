@@ -161,13 +161,9 @@
     <?php } ?>
     </table>
 
-    <table class="materialTab">
-    <tr class="header" id="Planificateur">
     <?= $table->getTable() ?>
     <?= $table->getJavascript("jquery") ?>
-    </tr>
-    </table>
-    
+
     <table class="materialTab">
     <tr class="header" id="blocklyTable">
         <td colspan="1" class="arrondi"><b><span>-</span> Programmation</b></td>
