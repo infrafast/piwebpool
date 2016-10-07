@@ -71,6 +71,11 @@ if (!$result) {
     
     mysql_free_result($result);
     
+    
+    $sql    = "SELECT value FROM settings where id='scheduler'";
+    $result = mysql_query($sql, $link);
+    
+    
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
         $answer.="+ERROR";
         $state.="+SetPinState";
