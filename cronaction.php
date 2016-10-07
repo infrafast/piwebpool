@@ -71,10 +71,9 @@ if (!$result) {
     
     mysql_free_result($result);
     
-    
     $sql    = "SELECT value FROM settings where id='scheduler'";
     $result = mysql_query($sql, $link);
-    $pumpConsign=0;
+    $schedulerOn=0;
     while ($row = mysql_fetch_assoc($result)) {
         $pumpConsign=($row[$temp]);
     }
