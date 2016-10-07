@@ -81,7 +81,7 @@ if ($schedulerOn!="off"){
         $answer.="+ERROR";
         $state.="+SetPinState";
     }
-    $state.="{Periode:".$tw.", Temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}";    
+    $state.="{Periode:".$tw.", Temperature:".$temp.", Ordre filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}";    
 }
 
 $concat=array("header","footer");
