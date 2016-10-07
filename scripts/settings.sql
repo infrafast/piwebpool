@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `settings` (
-  `key` int NOT NULL AUTO_INCREMENT,
+  `pkey` int(11) NOT NULL AUTO_INCREMENT,
   `id` varchar(40) NOT NULL,
   `value` varchar(255) NOT NULL,
   `userSetting` tinyint(1) NOT NULL,
   `description` varchar(40) NOT NULL,
-  PRIMARY KEY (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`pkey`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` (`id`,`value`,`userSetting`,`description`) VALUES ('tempOffset','-1.5',1,'Temperature calibration offset'),('actionTable','0',0,''),('blocklyTable','1',0,''),('domoURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'API pour domoticz ou autre'),('e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),('logTable','1',0,''),('measureIndex','27',0,'Compteur dernière mesure'),('ORPConsign','750',1,'Consigne ORP'),('Parametres','0',0,''),('PHConsign','7.24',1,'Consigne PH'),('Planificateur','0',0,''),('prowlURL','https://api.prowlapp.com/publicapi/add?apikey=0e139710aceccf6abc6865983a98f0439a0e5ba2&application=piwebpool&event=%m&description=%v',1,'PROWL notification server URL'),('scheduler','1',1,'Activation planificateur filtration'),('sensorTable','0',0,''),('Souscripteurs','1',0,''),('TEMPConsign','28',1,'Consigne de tempÃ©rature');
+INSERT INTO `settings` VALUES (1,'tempOffset','-1.5',1,'Temperature calibration offset'),(2,'actionTable','1',0,''),(3,'blocklyTable','1',0,''),(4,'domoURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'API pour domoticz ou autre'),(5,'e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),(6,'logTable','1',0,''),(7,'measureIndex','30',0,'Compteur dernière mesure'),(8,'ORPConsign','750',1,'Consigne ORP'),(9,'Parametres','0',0,''),(10,'PHConsign','7.24',1,'Consigne PH'),(11,'Planificateur','1',0,''),(12,'prowlURL','https://api.prowlapp.com/publicapi/add?apikey=0e139710aceccf6abc6865983a98f0439a0e5ba2&application=piwebpool&event=%m&description=%v',1,'PROWL notification server URL'),(13,'scheduler','1',1,'Activation planificateur filtration'),(14,'sensorTable','0',0,''),(15,'Souscripteurs','1',0,''),(16,'TEMPConsign','28',1,'Consigne de tempÃ©rature');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-07  9:44:47
+-- Dump completed on 2016-10-07 14:42:55
