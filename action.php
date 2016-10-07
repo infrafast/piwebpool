@@ -40,24 +40,24 @@ if(isset($_['action'])){
                     appendlog("CALIBRATE",$frame,$result);
                 break;
                 case 'Temp':
-                    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-                    mysql_select_db($options["database"]["name"]) or die('error database selection');
-                    $query="SELECT value FROM `settings` WHERE id='".$_['id']."'";
-                    $outcome = mysql_query($query);
-                    if (!$outcome) {
-                         $result['answer']  = "ERROR";
-                         $result['state'] =  mysql_error();
-                    }else{
-                        while ($row = mysql_fetch_assoc($outcome)) {
-                            $result['state']=($row['value']); 
+                    if (!isset($_['value'])){
+                        mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+                        mysql_select_db($options["database"]["name"]) or die('error database selection');
+                        $query="SELECT value FROM `settings` WHERE id='".$_['id']."'";
+                        $outcome = mysql_query($query);
+                        if (!$outcome) {
+                             $result['answer']  = "ERROR";
+                             $result['state'] =  mysql_error();
+                        }else{
+                            while ($row = mysql_fetch_assoc($outcome)) {
+                                $result['state']=($row['value']); 
+                            }
+                            // result return "undef" in state in case no data match
+                            mysql_free_result($outcome);
                         }
-                        // result return "undef" in state in case no data match
-                        mysql_free_result($outcome);
+                        $result['state']  = "done";
                     }
-
-
-
-                    $result['state']  = "done";
+                    else $result['state']  = "Valeur non définie";
                 break;
             	default:
             	     $result['answer']="ERROR";
