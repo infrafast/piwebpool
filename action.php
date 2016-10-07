@@ -50,7 +50,7 @@ if(isset($_['action'])){
                         // in case of duplicate, simply erase
                         $query="INSERT INTO `settings` (`id`, `value`, `userSetting`, `description`) VALUES ('tempOffset', ".$deltaTemp.", 1, 'Temperature calibration offset') ON DUPLICATE KEY UPDATE id='tempOffset',value=".$deltaTemp." ,userSetting=1,description='Temperature calibration offset'";
                         $outcome = mysql_query($query);
-                        //appendlog("registerMaterialURLCallBack",$query,$outcome);
+                        appendlog("registerMaterialURLCallBack",$query,$outcome);
                         if (!$outcome){
                             $result['state'] = mysql_error();
                         }else
