@@ -542,7 +542,10 @@
             var calibrateID=id+"CalibrateID";
             var calibrate=document.getElementById(calibrateID);
             calibrate.style.backgroundImage="url('images/loading.gif')";
-            if(actionCall('action=calibrate&id='+id+'&value='+calVal,false,'Placer la sonde dans la solution '+id+' à '+calVal+'\npendant 2 minutes puis confirmez',true, true)!=false)
+            // defaut message for OPR and 
+            var msg = 'Placer la sonde dans la solution '+id+' à '+calVal+'\npendant 2 minutes puis confirmez';
+            if 
+            if(actionCall('action=calibrate&id='+id+'&value='+calVal,false,msg,true, true)!=false)
                 elem.click();
             //remove loading icon
             calibrate.style.backgroundImage="url('')";
