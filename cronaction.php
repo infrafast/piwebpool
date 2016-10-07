@@ -75,7 +75,7 @@ if (!$result) {
     $result = mysql_query($sql, $link);
     $schedulerOn=0;
     while ($row = mysql_fetch_assoc($result)) {
-        $pumpConsign=($row[$temp]);
+        $schedulerOn=($row['value']);
     }
     mysql_free_result($result);
     
