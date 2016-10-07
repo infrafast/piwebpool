@@ -61,7 +61,7 @@ if (!$result) {
 }
 mysql_free_result($result);
 
-if ($schedulerOn=="on"){
+if ($schedulerOn!="off"){
     $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
     $result = mysql_query($sql, $link);
     $pumpConsign=0;
