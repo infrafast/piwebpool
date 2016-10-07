@@ -22,7 +22,7 @@ background-color: #444;
 
 tr.odd
 {
-background-color: #eaeaea;
+/*background-color: #eaeaea;*/
 }
 
 tr.noDataRow td {
