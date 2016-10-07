@@ -29,7 +29,7 @@ if(isset($_['action'])){
                     readSensor(getDevice("ph"),"Cal,clear\n");
                     $frame="Cal,mid,".$_['value']."\n";
                     $result['state']  = readSensor(getDevice("ph"),$frame);
-                    appendlog("CALIBRATE",$frame,$result);
+                    appendlog("CALIBRATE",$frame,json_encode($result));
                 break;
                 case 'ORP':
                     if (!isset($_['value'])) $_['value']="650";
@@ -37,7 +37,7 @@ if(isset($_['action'])){
                     $frame ="Cal,".$_['value']."\n";
                     readSensor(getDevice("ph"),$frame);
                     $result['state']  = readSensor(getDevice("ph"),$frame);
-                    appendlog("CALIBRATE",$frame,$result);
+                    appendlog("CALIBRATE",$frame,json_encode($result));
                 break;
                 case 'Temp':
                     if (isset($_['value'])){
