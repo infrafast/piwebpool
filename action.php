@@ -47,7 +47,7 @@ if(isset($_['action'])){
                         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
                         mysql_select_db($options["database"]["name"]) or die('error database selection');
                         // in case of duplicate, simply erase
-                        $query="INSERT INTO `settings` (`id`, `value`, `userSetting`, `description`) VALUES ('tempOffset', $deltaTemp, 1, 'Temperature calibration offset') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."',valueOn='".$valueOn."',valueOff='".$valueOff."'";
+                        $query="INSERT INTO `settings` (`id`, `value`, `userSetting`, `description`) VALUES ('tempOffset', ".$deltaTemp.", 1, 'Temperature calibration offset') ON DUPLICATE KEY UPDATE id='',value=".$deltaTemp." ,userSetting=1,description='Temperature calibration offset'";
                         $outcome = mysql_query($query);
                         //appendlog("registerMaterialURLCallBack",$query,$outcome);
                         if (!$outcome) return false; else return true;
