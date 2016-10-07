@@ -196,7 +196,7 @@
     
     <?= $tableSettings->fetchData("SELECT description,value,id from settings where userSetting=true;");?>
     <?= $tableSettings->getTable(); ?>
-    <?= $tableSettings->getJavascript("jquery") ?>
+    <?= $tableSettings->getJavascript("jquery"); ?>
     
     <?= $tableSubscribers->fetchdata("SELECT material,url,valueOn,valueOff from listeners;")?>
     <?= $tableSubscribers->getTable(); ?>
