@@ -52,7 +52,10 @@ if(isset($_['action'])){
                         if (!$outcome) return false; else return true;
 
                     }
-                    else $result['state']  = "Valeur incorrecte ou indéfinie";
+                    else{
+                        $result['answer']="ERROR";
+                        $result['state']  = "Valeur incorrecte ou indéfinie";
+                    }
                     appendlog("CALIBRATE",$frame,$result);
                 break;
             	default:
