@@ -53,7 +53,8 @@ if(isset($_['action'])){
                         //appendlog("registerMaterialURLCallBack",$query,$outcome);
                         if (!$outcome){
                             $result['state'] = mysql_error();
-                        }
+                        }else
+                         $result['answer']="ERROR";   
 
                     }
                     else{
