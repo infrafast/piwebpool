@@ -42,7 +42,9 @@ if (!mysql_select_db($options["database"]["name"], $link)) {
 
 $answer="OK";
 $state="";
-
+///////////////////////////////////////////////////////////////
+// IS THE SCHEDULER ACTIVE?
+///////////////////////////////////////////////////////////////
 $sql    = "SELECT value FROM settings where id='scheduler'";
 $result = mysql_query($sql, $link);
 $schedulerOn="on";    
@@ -55,7 +57,9 @@ if (!$result) {
     }
 }
 mysql_free_result($result);
-
+///////////////////////////////////////////////////////////////
+// IS THE SCHEDULER ACTIVE?
+///////////////////////////////////////////////////////////////
 if ($schedulerOn!="off"){
     // what time is it now?
     $tw=getCurrentTimeWindow()."h";
@@ -71,8 +75,6 @@ if ($schedulerOn!="off"){
         while ($row = mysql_fetch_assoc($result)) {
             $pumpConsign=($row[$temp]);
         }
-        // treat error case of unfound timewindow in the table
-        //if ($pumpConsign="")
     }
     mysql_free_result($result);    
     
