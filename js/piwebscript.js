@@ -102,7 +102,7 @@ function getColorVal(middleVal,compareVal){
 }
 
     
-function refreshValue(elem,action,consign){
+function refreshValue(elem,action,elemConsign){
 	var urlCall = "./action.php?extendedJson&action=get"+action;
 	$(elem).removeAttr("style");
 	$(elem).removeClass('off');
