@@ -50,7 +50,7 @@ if(isset($_['action'])){
                         $query="INSERT INTO `settings` (`id`, `value`, `userSetting`, `description`) VALUES ('tempOffset', ".$deltaTemp.", 1, 'Temperature calibration offset') ON DUPLICATE KEY UPDATE id='',value=".$deltaTemp." ,userSetting=1,description='Temperature calibration offset'";
                         $outcome = mysql_query($query);
                         //appendlog("registerMaterialURLCallBack",$query,$outcome);
-                        if (!$outcome) return false; else return true;
+                        if (!$outcome) $result['state'] = mysql_error();
 
                     }
                     else{
