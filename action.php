@@ -45,18 +45,12 @@ if(isset($_['action'])){
 
                         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
                         mysql_select_db($options["database"]["name"]) or die('error database selection');
-                        $query="SELECT value FROM `settings` WHERE id='".$_['id']."'";
+                        // in case of duplicate, simply erase
+                        $query="INSERT INTO `listeners` (`url`, `material`, `valueOn`, `valueOff`) VALUES ('".$url."', '".$material."', '".$valueOn."', '".$valueOff."') ON DUPLICATE KEY UPDATE url='".$url."',material='".$material."',valueOn='".$valueOn."',valueOff='".$valueOff."'";
                         $outcome = mysql_query($query);
-                        if (!$outcome) {
-                             $result['answer']  = "ERROR";
-                             $result['state'] =  mysql_error();
-                        }else{
-                            while ($row = mysql_fetch_assoc($outcome)) {
-                                $result['state']=($row['value']); 
-                            }
-                            // result return "undef" in state in case no data match
-                            mysql_free_result($outcome);
-                        }
+                        //appendlog("registerMaterialURLCallBack",$query,$outcome);
+                        if (!$outcome) return false; else return true;
+
                     }
                     else $result['state']  = "Valeur non définie";
                 break;
