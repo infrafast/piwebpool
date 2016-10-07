@@ -53,7 +53,7 @@ if(isset($_['action'])){
                             $result['answer'] = "ERROR";
                             $result['state'] = mysql_error();
                         }else
-                            $result['answer']="Offset retenu";   
+                            $result['answer']="Ecart retenu";   
                             $result['state']=$deltaTemp;
                             
                     }
