@@ -41,7 +41,7 @@ if(isset($_['action'])){
                 break;
                 case 'Temp':
                     $deltaTemp = "incorrect";
-                    $result['answer']="ERROR";
+                    $result['state']="ERROR";
                     if (isset($_['value'])){
                         $deltaTemp = getTemperature() - $_['value'];
 
