@@ -89,6 +89,7 @@ if ($schedulerOn=="on"){
         $state.="+SetPinState";
     }
 }
+
 $concat=array("header","footer");
 $i=0;
 foreach ($concat as $scriptID) {
