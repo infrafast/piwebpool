@@ -41,7 +41,7 @@ if(isset($_['action'])){
                 break;
                 case 'Temp':
                     if (isset($_['value'])){
-                        $deltaTemp = getTemperature() - $_['value'];
+                        $deltaTemp = $_['value'] - getTemperature() ;
 
                         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
                         mysql_select_db($options["database"]["name"]) or die('error database selection');
