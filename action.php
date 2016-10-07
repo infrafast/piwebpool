@@ -41,6 +41,7 @@ if(isset($_['action'])){
                 break;
                 case 'Temp':
                     $deltaTemp = "incorrect";
+                    $result['answer']="ERROR";
                     if (isset($_['value'])){
                         $deltaTemp = getTemperature() - $_['value'];
 
@@ -50,11 +51,12 @@ if(isset($_['action'])){
                         $query="INSERT INTO `settings` (`id`, `value`, `userSetting`, `description`) VALUES ('tempOffset', ".$deltaTemp.", 1, 'Temperature calibration offset') ON DUPLICATE KEY UPDATE id='',value=".$deltaTemp." ,userSetting=1,description='Temperature calibration offset'";
                         $outcome = mysql_query($query);
                         //appendlog("registerMaterialURLCallBack",$query,$outcome);
-                        if (!$outcome) $result['state'] = mysql_error();
+                        if (!$outcome){
+                            $result['state'] = mysql_error();
+                        }
 
                     }
                     else{
-                        $result['answer']="ERROR";
                         $result['state']  = "Valeur incorrecte ou indéfinie";
                     }
                     appendlog("CALIBRATE",$deltaTemp,$result);
