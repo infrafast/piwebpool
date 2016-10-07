@@ -56,7 +56,7 @@ if(isset($_['action'])){
                         $result['answer']="ERROR";
                         $result['state']  = "Valeur incorrecte ou indéfinie";
                     }
-                    appendlog("CALIBRATE",$frame,$result);
+                    appendlog("CALIBRATE",$deltaTemp,$result);
                 break;
             	default:
             	     $result['answer']="ERROR";
