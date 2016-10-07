@@ -58,7 +58,7 @@ if(isset($_['action'])){
                             $result['state'] =$deltaTemp;
                     }
                     else{
-                        $result['state']  = "Valeur incorrecte ou indéfinie";
+                        $result['answer']  = "Valeur incorrecte ou indéfinie";
                     }
                     appendlog("CALIBRATE","Temp",$result['answer']);
                 break;
