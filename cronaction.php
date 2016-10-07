@@ -78,7 +78,7 @@ if (!$result) {
     while ($row = mysql_fetch_assoc($result)) {
         $pumpConsign=($row[$temp]);
     }
-    
+    mysql_free_result($result);
     
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
         $answer.="+ERROR";
