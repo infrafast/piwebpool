@@ -64,7 +64,6 @@ mysql_free_result($result);
 if ($schedulerOn=="on"){
     $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
     $result = mysql_query($sql, $link);
-    
     if (!$result) {
         $answer="ERROR";
         $state=mysql_error();
@@ -82,6 +81,7 @@ if ($schedulerOn=="on"){
         $answer.="+ERROR";
         $state.="+SetPinState";
     }
+    $state.="{Periode:".$tw.", Temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}";    
 }
 
 $concat=array("header","footer");
