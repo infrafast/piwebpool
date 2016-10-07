@@ -40,6 +40,7 @@ if(isset($_['action'])){
                     appendlog("CALIBRATE",$frame,$result);
                 break;
                 case 'Temp':
+                    $deltaTemp = "incorrect";
                     if (isset($_['value'])){
                         $deltaTemp = getTemperature() - $_['value'];
 
