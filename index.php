@@ -61,7 +61,7 @@
     $subscribersSet["title"] = "Souscripteurs";
     $subscribersSet["allowDelete"] = true;
     $subscribersSet["sortable"]  = ""; 
-    $subscribersSet["editable"] = yes;
+    $subscribersSet["editable"] = true;
     $tableSubscribers = new TableGear($subscribersSet);
     
     $optionsSet = array();
