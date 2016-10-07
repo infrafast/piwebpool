@@ -50,6 +50,7 @@ if(isset($_['action'])){
                         $outcome = mysql_query($query);
                         appendlog("CalibrateLog",$query,$outcome);
                         if (!$outcome){
+                            $result['answer'] = "ERROR";
                             $result['state'] = mysql_error();
                         }else
                             $result['state']="Ecart enregistré";   
