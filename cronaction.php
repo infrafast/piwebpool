@@ -68,102 +68,107 @@ if (!$result) {
     }
     // treat error case of unfound timewindow in the table
     //if ($pumpConsign="")
+}
+mysql_free_result($result);
     
-    mysql_free_result($result);
-    
-    $sql    = "SELECT value FROM settings where id='scheduler'";
-    $result = mysql_query($sql, $link);
+$sql    = "SELECT value FROM settings where id='scheduler'";
+$result = mysql_query($sql, $link);
+if (!$result) {
+    $answer="ERROR";
+    $state=mysql_error();
+}else{
     $schedulerOn=0;
     while ($row = mysql_fetch_assoc($result)) {
         $schedulerOn=($row['value']);
     }
-    mysql_free_result($result);
-    if ($schedulerOn=="on"){
-        if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
-            $answer.="+ERROR";
-            $state.="+SetPinState";
-        }
+}
+mysql_free_result($result);
+if ($schedulerOn=="on"){
+    if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
+        $answer.="+ERROR";
+        $state.="+SetPinState";
     }
-    $concat=array("header","footer");
-    $i=0;
-    foreach ($concat as $scriptID) {
-        // fetch lua header and footer code
-        // i.e. the run() and return
-        $sql    = "SELECT lua from scripts where id='".$scriptID."'";
-        $result = mysql_query($sql, $link);
-        if (!$result) {
-            $answer.="+ERROR";
-            $state.="+".mysql_error();
-        }else{
-            while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
-            mysql_free_result($result);
-        }                
-    }
-    $luaFeedback="";
-    foreach (array("main","custom") as $scriptID) {
-        $luaFeedback.="|".$scriptID.":";
-        // fetch lua code from database
-        $sql    = "SELECT lua from scripts where id='".$scriptID."'";
-        $result = mysql_query($sql, $link);
-        if (!$result) {
-            $answer.="+ERROR";
-            $state.="+".mysql_error();
-        }else{
-            $luaCode="";
-            while ($row = mysql_fetch_assoc($result)) $luaCode=htmlspecialchars_decode(($row['lua']));
-            mysql_free_result($result);
-        }
-        // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
-        goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
-    }
-    //get and update the index
-    $sql    = "SELECT value from settings where id='measureIndex';";
+}
+$concat=array("header","footer");
+$i=0;
+foreach ($concat as $scriptID) {
+    // fetch lua header and footer code
+    // i.e. the run() and return
+    $sql    = "SELECT lua from scripts where id='".$scriptID."'";
     $result = mysql_query($sql, $link);
-    
     if (!$result) {
         $answer.="+ERROR";
         $state.="+".mysql_error();
     }else{
-        while ($row = mysql_fetch_assoc($result)) {
-            $measureIndex=($row['value']);
-        }    
+        while ($row = mysql_fetch_assoc($result)) $concat[$i++]=($row['lua']);
         mysql_free_result($result);
-        $measureIndex=$measureIndex+1;
-        if ($measureIndex>168) $measureIndex=0;
-        $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
+    }                
+}
+$luaFeedback="";
+foreach (array("main","custom") as $scriptID) {
+    $luaFeedback.="|".$scriptID.":";
+    // fetch lua code from database
+    $sql    = "SELECT lua from scripts where id='".$scriptID."'";
+    $result = mysql_query($sql, $link);
+    if (!$result) {
+        $answer.="+ERROR";
+        $state.="+".mysql_error();
+    }else{
+        $luaCode="";
+        while ($row = mysql_fetch_assoc($result)) $luaCode=htmlspecialchars_decode(($row['lua']));
+        mysql_free_result($result);
+    }
+    // call lua execution built from Header + Content + Footer and passing the access to the pins so they can be manipulated by lua code
+    goLua($concat[0].$luaCode.$concat[1],$materials,$pins,$luaFeedback,$link,$scriptID);
+}
+//get and update the index
+$sql    = "SELECT value from settings where id='measureIndex';";
+$result = mysql_query($sql, $link);
+
+if (!$result) {
+    $answer.="+ERROR";
+    $state.="+".mysql_error();
+}else{
+    while ($row = mysql_fetch_assoc($result)) {
+        $measureIndex=($row['value']);
+    }    
+    mysql_free_result($result);
+    $measureIndex=$measureIndex+1;
+    if ($measureIndex>168) $measureIndex=0;
+    $sql="UPDATE settings SET value=".$measureIndex." WHERE id='measureIndex'";
+    $result = mysql_query($sql, $link);
+    if (!$result) {
+        $answer.="+ERROR";
+        $state.="+".mysql_error();
+    }else{
+        
+        $phValue = getPh();
+        $orpValue = getORP();
+        $temperatureValue = getTemperature();
+        $filterValue = (getPin($pins[$materials["filtration"]]))=="1"?"Off":"On";
+        $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
+        $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
+        $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
+        // ---------------------------------------------------
+        if($phValue==null)  $phValue=-99;
+        if($orpValue==null)  $orpValue=-99;
+        if($temperatureValue==null)  $temperatureValue=-99;
+        // ---------------------------------------------------
+        $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
+        foreach($materials as $material=>$pin) $sql = $sql.", `".$materialsColumn[$material]."`";
+        $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."'";
+        foreach($materials as $material=>$pin) $sql = $sql.", '".getPin($pins[$materials[$material]])."'";
+        $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
+        foreach($materials as $material=>$pin) $sql = $sql.", ".$materialsColumn[$material]."=".getPin($pins[$materials[$material]]);
+        $sql = $sql.";";
         $result = mysql_query($sql, $link);
         if (!$result) {
             $answer.="+ERROR";
-            $state.="+".mysql_error();
-        }else{
-            
-            $phValue = getPh();
-            $orpValue = getORP();
-            $temperatureValue = getTemperature();
-            $filterValue = (getPin($pins[$materials["filtration"]]))=="1"?"Off":"On";
-            $treatment1Value = (getPin($pins[$materials["traitement1"]]))=="1"?"Off":"On";
-            $treatment2Value = (getPin($pins[$materials["traitement2"]]))=="1"?"Off":"On";
-            $pacValue = (getPin($pins[$materials["pac"]]))=="1"?"Off":"On";
-            // ---------------------------------------------------
-            if($phValue==null)  $phValue=-99;
-            if($orpValue==null)  $orpValue=-99;
-            if($temperatureValue==null)  $temperatureValue=-99;
-            // ---------------------------------------------------
-            $sql = "INSERT INTO `measures` (`id`, `timestamp`, `orp`, `ph`, `temperature`";
-            foreach($materials as $material=>$pin) $sql = $sql.", `".$materialsColumn[$material]."`";
-            $sql = $sql.") VALUES ('".$measureIndex."', CURRENT_TIMESTAMP,'".$orpValue."', '".$phValue."', '".$temperatureValue."'";
-            foreach($materials as $material=>$pin) $sql = $sql.", '".getPin($pins[$materials[$material]])."'";
-            $sql = $sql.") ON DUPLICATE KEY UPDATE id=".$measureIndex.", orp=".$orpValue.", ph=".$phValue.", temperature=".$temperatureValue.", timestamp=CURRENT_TIME";
-            foreach($materials as $material=>$pin) $sql = $sql.", ".$materialsColumn[$material]."=".getPin($pins[$materials[$material]]);
-            $sql = $sql.";";
-            $result = mysql_query($sql, $link);
-            if (!$result) {
-                $answer.="+ERROR";
-                $state.="+".mysql_error()." ".$sql;
-            }
+            $state.="+".mysql_error()." ".$sql;
         }
     }
 }
+
 $state.="{Periode:".$tw.", Temperature:".$temp.", Filtration:".($pumpConsign=="1"?"MARCHE":"ARRET")."}{".$luaFeedback."}";    
 appendlog("ACTIONS PERIODIQUES",$answer,$state, $logfilename);
 
