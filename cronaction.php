@@ -64,11 +64,11 @@ mysql_free_result($result);
 if ($schedulerOn=="on"){
     $sql    = "SELECT ".$temp." FROM pumpSchedule where timeWindow='".$tw."'";
     $result = mysql_query($sql, $link);
+    $pumpConsign=0;
     if (!$result) {
         $answer="ERROR";
         $state=mysql_error();
     }else{
-        $pumpConsign=0;
         while ($row = mysql_fetch_assoc($result)) {
             $pumpConsign=($row[$temp]);
         }
