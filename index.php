@@ -61,6 +61,10 @@
     $subscribersSet["title"] = "Souscripteurs";
     $subscribersSet["allowDelete"] = true;
     $subscribersSet["sortable"]  = ""; 
+    $subscribersSet["selects"] = array(
+    	"Material" => array("visible" => 1, "invisible" => 0),
+    ); 
+
     //$subscribersSet["editable"] = true;
     $tableSubscribers = new TableGear($subscribersSet);
     
@@ -79,7 +83,6 @@
     //$optionsSet["editable"] = true;
     $optionsSet["selects"] = array(
     	"userSetting" => array("visible" => 1, "invisible" => 0),
-    	"Material" => array("visible" => 1, "invisible" => 0)
     ); 
     $tableSettings = new TableGear($optionsSet);
 ?>
