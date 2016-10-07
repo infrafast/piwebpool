@@ -120,7 +120,7 @@ function refreshValue(elem,action,elemConsign){
     		if(result.answer != "ERROR"){
                 // retrieve the data-consign from the div.
                 var median = $(elemConsign).innerHTML;
-                alert(median);
+                alert(elemConsign);
                 var icon;
                 // display icon into the div text
                 if(action=='Ph') icon="<i class='wi wi-raindrops'></i>";
