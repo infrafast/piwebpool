@@ -74,6 +74,10 @@ if (!$result) {
     
     $sql    = "SELECT value FROM settings where id='scheduler'";
     $result = mysql_query($sql, $link);
+    $pumpConsign=0;
+    while ($row = mysql_fetch_assoc($result)) {
+        $pumpConsign=($row[$temp]);
+    }
     
     
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
