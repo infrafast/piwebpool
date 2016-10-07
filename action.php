@@ -40,7 +40,7 @@ if(isset($_['action'])){
                     appendlog("CALIBRATE",$frame,$result);
                 break;
                 case 'Temp':
-                    if (!isset($_['value'])){
+                    if (isset($_['value'])){
                         $deltaTemp = getTemperature() - $_['value'];
 
                         mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
