@@ -54,8 +54,7 @@ if(isset($_['action'])){
                         if (!$outcome){
                             $result['state'] = mysql_error();
                         }else
-                         $result['answer']="ERROR";   
-
+                            $result['answer']="OK";   
                     }
                     else{
                         $result['state']  = "Valeur incorrecte ou indéfinie";
