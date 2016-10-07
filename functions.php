@@ -270,7 +270,7 @@ function getTemperature(){
         appendlog("ERROR",$sql,mysql_error());
     }else{
         while ($row = mysql_fetch_assoc($outcome)){
-            $value=($row['value']);
+            $tempOffset=($row['value']);
         }
     }
 
