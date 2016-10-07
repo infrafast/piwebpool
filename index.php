@@ -120,9 +120,9 @@
         <th width=33%>ph</th><th width=33%>redox</th><th width=33%>température</th>
     </tr>
     <tr>
-        <td><div id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off arrondi" ><br></div></td>
-        <td><div id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off arrondi" ><br></div></td>
-        <td><div id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off arrondi" ><br></div></td>
+        <td><div data-consign="" id="divPhMeasureID" onclick="refreshValue(this,'Ph');" class="buttonState off arrondi" ><br></div></td>
+        <td><div data-consign="" id="divORPMeasureID" onclick="refreshValue(this,'ORP');" class="buttonState off arrondi" ><br></div></td>
+        <td><div data-consign="" id="divTemperatureMeasureID" onclick="refreshValue(this,'Temperature');" class="buttonState off arrondi" ><br></div></td>
         
     </tr>
     <tr>
