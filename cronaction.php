@@ -86,8 +86,6 @@ if ($schedulerOn=="on"){
     }
     mysql_free_result($result);    
     
-    
-    
     if (!setPinState($pins[$materials["filtration"]],$pumpConsign)){ 
         $answer.="+ERROR";
         $state.="+SetPinState";
