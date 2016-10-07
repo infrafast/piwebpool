@@ -555,6 +555,10 @@
         }
         
         function updateSensorValues(){
+            document.getElementById("divPHConsignID").innerHTML = 
+            document.getElementById("divORPConsignID").innerHTML =
+            document.getElementById("divTEMPConsignID").innerHTML =
+            
             refreshValue(document.getElementById('divPhMeasureID'),'Ph',document.getElementById('divPHConsignID'));
             refreshValue(document.getElementById('divORPMeasureID'),'ORP',document.getElementById('divORPConsignID'));
             refreshValue(document.getElementById('divTemperatureMeasureID'),'Temperature',document.getElementById('divTEMPConsignID'));
