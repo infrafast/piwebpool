@@ -56,7 +56,6 @@ if(isset($_['action'])){
                             }
                             // result return "undef" in state in case no data match
                             mysql_free_result($outcome);
-                            $result['state']  = "done";                            
                         }
                     }
                     else $result['state']  = "Valeur non définie";
