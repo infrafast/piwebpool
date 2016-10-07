@@ -79,7 +79,7 @@
     //$optionsSet["editable"] = true;
     $optionsSet["selects"] = array(
     	"userSetting" => array("visible" => 1, "invisible" => 0),
-    	"material" => array("visible" => 1, "invisible" => 0)
+    	"Material" => array("visible" => 1, "invisible" => 0)
     ); 
     $tableSettings = new TableGear($optionsSet);
 ?>
