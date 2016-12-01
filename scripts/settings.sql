@@ -29,7 +29,7 @@ CREATE TABLE `settings` (
   `userSetting` tinyint(1) NOT NULL,
   `description` varchar(40) NOT NULL,
   PRIMARY KEY (`pkey`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` VALUES (1,'tempOffset','-1.5',1,'Temperature calibration offset'),(2,'actionTable','1',0,''),(3,'blocklyTable','1',0,''),(4,'domoURL','http://admin:yourpassword@domoticz.yourserver.com/json.htm?type=command',1,'API pour domoticz ou autre'),(5,'e_mail','your@email.com',1,'email recevant les notifications'),(6,'logTable','1',0,''),(7,'measureIndex','30',0,'Compteur dernière mesure'),(8,'ORPConsign','750',1,'Consigne ORP'),(9,'Parametres','1',0,''),(10,'PHConsign','7.24',1,'Consigne PH'),(11,'Planificateur','1',0,''),(12,'yourkeyURL','https://api.prowlapp.com/publicapi/add?apikey=yourkey&application=piwebpool&event=%m&description=%v',1,'PROWL notification server URL'),(13,'scheduler','1',1,'Activation planificateur filtration'),(14,'sensorTable','1',0,''),(15,'Souscripteurs','0',0,''),(16,'TEMPConsign','28',1,'Consigne de tempÃ©rature');
+INSERT INTO `settings` VALUES (1,'tempOffset','-1.5',1,'Temperature calibration offset'),(2,'actionTable','1',0,''),(3,'blocklyTable','0',0,''),(4,'domoURL','http://admin:Quintal74604@domoticz.infrafast.com/json.htm?type=command',1,'API pour domoticz ou autre'),(5,'e_mail','szemrot@hotmail.com',1,'email recevant les notifications'),(6,'logTable','1',0,''),(7,'measureIndex','125',0,'Compteur dernière mesure'),(8,'ORPConsign','750',1,'Consigne ORP'),(9,'Parametres','1',0,''),(10,'PHConsign','7.24',1,'Consigne PH'),(11,'Planificateur','1',0,''),(12,'prowlURL','https://api.prowlapp.com/publicapi/add?apikey=0e139710aceccf6abc6865983a98f0439a0e5ba2&application=piwebpool&event=%m&description=%v',1,'PROWL notification server URL'),(13,'scheduler','on',1,'Activation planificateur filtration'),(14,'sensorTable','1',0,''),(15,'Souscripteurs','1',0,''),(16,'TEMPConsign','28',1,'Consigne de tempÃ©rature'),(17,'','',0,'toto'),(18,'c','b',0,'a');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-07 15:04:28
+-- Dump completed on 2016-12-01 13:11:37
