@@ -63,7 +63,7 @@
       DOWN:     40,
       PAGEUP:   33,
       PAGEDOWN: 34
-    }
+    };
 
     function initialize(el){
 
