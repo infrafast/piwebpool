@@ -89,7 +89,7 @@
 
       requireElement('thead', table, '<thead> is required inside <table>');
 
-      headers = $('thead th', table)
+      headers = $('thead th', table);
       headers.each(function(columnIndex){
 
         var header = $(this);
