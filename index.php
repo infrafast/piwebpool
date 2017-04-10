@@ -92,7 +92,7 @@ e<?php
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Piweb</title>
         <meta http-equiv="refresh" content="2160"/>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
         <script type="text/javascript" src="js/piwebscript.js"></script>
         <script type="text/javascript" src="js/TableGear1.6.1-jQuery.js"></script>
         <script type="text/javascript" src="js/weather.js"></script>
