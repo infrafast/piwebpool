@@ -612,8 +612,6 @@ e<?php
         // -----------------------------------------------------------------------
         // register function that collpase or expand titles
         
-        alert("COUCOU");
-        
         $('.header').click(function(){
             $(this).LoadingOverlay("show");
         	$(this).addClass('loading');
