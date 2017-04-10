@@ -1,4 +1,4 @@
-e<?php
+<?php
 /*
  @nom: index 
  @auteur: piwebpool (info@infrafast.com)
