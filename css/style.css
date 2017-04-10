@@ -137,13 +137,13 @@ span {color: #00a2e8;}
 }
 
 .on{
-	background-image:url('../images/1.png');
+	/*background-image:url('../images/1.png');*/
 	background-color:#00a2e8;
 	border: thin outset #00a2e8;
 }
 
 .off{
-	background-image:url('../images/0.png');
+	/*background-image:url('../images/0.png');*/
 	background-color:#ffffff;
 	border: thin inset #00a2e8;
 }
