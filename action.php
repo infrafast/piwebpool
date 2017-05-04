@@ -35,7 +35,7 @@ if(isset($_['action'])){
                     if (!isset($_['value'])) $_['value']="650";
                     readSensor(getDevice("orp"),"Cal,clear\n");
                     $frame ="Cal,".$_['value']."\n";
-                    readSensor(getDevice("ph"),$frame);
+                    readSensor(getDevice("orp"),$frame);
                     $result['state']  = readSensor(getDevice("orp"),$frame);
                     appendlog("CALIBRATE",$frame,json_encode($result));
                 break;
