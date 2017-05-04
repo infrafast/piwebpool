@@ -23,10 +23,16 @@ if(isset($_['action'])){
     switch($_['action']){
     // ACTION FOR WEBAPP and PLCLINK (JSON QUERY UNDER BRACKET)
         case 'calibrate':
+            //Cal,mid,n
+            //Cal,low,n
+            //Cal,high,n
+            //Cal,clear
+            //Cal,?
             switch($_['id']){
                 case 'Ph':
                     if (!isset($_['value'])) $_['value']="7.00";
                     readSensor(getDevice("ph"),"Cal,clear\n");
+                    // should return ok
                     $frame="Cal,mid,".$_['value']."\n";
                     $result['state']  = readSensor(getDevice("ph"),$frame);
                     appendlog("CALIBRATE",$frame,json_encode($result));
