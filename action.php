@@ -32,6 +32,7 @@ if(isset($_['action'])){
                 case 'Ph':
                     if (!isset($_['value'])) $_['value']="7.00";
                     readSensor(getDevice("ph"),"Cal,clear\n");
+                    // we don't exploit the answer of the clearance (should be *ok)
                     $frame="Cal,mid,".$_['value']."\n";
                     $result['state']  = readSensor(getDevice("ph"),$frame);
                     appendlog("CALIBRATE",$frame,json_encode($result));
@@ -39,6 +40,7 @@ if(isset($_['action'])){
                 case 'ORP':
                     if (!isset($_['value'])) $_['value']="650";
                     readSensor(getDevice("orp"),"Cal,clear\n");
+                    // we don't exploit the answer of the clearance (should be *ok)
                     $frame ="Cal,".$_['value']."\n";
                     $result['state']  = readSensor(getDevice("orp"),$frame);
                     appendlog("CALIBRATE",$frame,json_encode($result));
