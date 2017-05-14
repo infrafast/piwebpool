@@ -328,7 +328,7 @@ function getORP(){
     }
     
     for ($i = 0; $i < 2; $i++){
-        $v1 = intval(readSensor(getDevice("orp")));      
+        $v1 = intval(readSensor(getDevice("orp")))+$offset;      
         if ($v1>0 and $v1<1000) return $v1;
     }
     return false;    
