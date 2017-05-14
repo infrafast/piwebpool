@@ -290,6 +290,8 @@ function getTemperature(){
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
     
+    //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
+    
     // retrieve the offset
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
@@ -303,7 +305,7 @@ function getPh(){
         }
     }    
     
-    //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
+    
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP)+$offsetPH;  
         if ($v1>0 and $v1<10) return $v1;
