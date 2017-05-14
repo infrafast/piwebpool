@@ -299,13 +299,13 @@ function getPh(){
         appendlog("ERROR",$sql,mysql_error());
     }else{
         while ($row = mysql_fetch_assoc($outcome)){
-            $offset=($row['value']);
+            $offsetPH=($row['value']);
         }
     }    
     
     //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 2; $i++){
-        $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP)+$offset;  
+        $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP)+$offsetPH;  
         if ($v1>0 and $v1<10) return $v1;
     }
     return false;
