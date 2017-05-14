@@ -305,7 +305,7 @@ function getPh(){
         }
     }    
 
-    
+    echo $offsetPH;
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP)+$offsetPH;  
         if ($v1>0 and $v1<10) return $v1;
