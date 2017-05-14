@@ -317,7 +317,7 @@ function getORP(){
     //return intval(rand(633,640));
     
     // retrieve the offset
-    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+    /*mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
     $sql = "SELECT value from settings where id='offsetORP';";
     $outcome = mysql_query($sql);
@@ -328,7 +328,7 @@ function getORP(){
             $offsetORP=($row['value']);
         }
     }
-    
+    */
     for ($i = 0; $i < 2; $i++){
         $v1 = intval(readSensor(getDevice("orp")))+$offsetORP;      
         if ($v1>0 and $v1<1000) return $v1;
