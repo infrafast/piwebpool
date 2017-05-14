@@ -82,6 +82,8 @@ if ($schedulerOn!="off"){
         $state.="+SetPinState";
     }
     $state.="{Periode:".$tw.", Temperature:".$temp.", Consigne filtration:".($pumpConsign=="1"?"On":"Off")."}";    
+}else{
+    $state.="{Scheduler désactivé}";    
 }
 ///////////////////////////////////////////////////////////////
 // EXECUTE LUA SCRIPTS
