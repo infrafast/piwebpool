@@ -253,7 +253,7 @@ function getDevice($id){
 function setTemperature($value){
     // store the value in the databse issue #25
     // this code would be called by the crontab.php for regular update
-    // and by the action.php for update hru the API.
+    // and by the action.php for update thru the API.
     // in the crontab.php we would move the current code from getTemperature();
     
 }
@@ -289,9 +289,23 @@ function getTemperature(){
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
+    
+    // retrieve the offset
+    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+    mysql_select_db($options["database"]["name"]) or die('error database selection');
+    $sql = "SELECT value from settings where id='offsetPH';";
+    $outcome = mysql_query($sql);
+    if (!$outcome) {
+        appendlog("ERROR",$sql,mysql_error());
+    }else{
+        while ($row = mysql_fetch_assoc($outcome)){
+            $offset=($row['value']);
+        }
+    }    
+    
     //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
     for ($i = 0; $i < 2; $i++){
-        $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP);  
+        $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP)+$offset;  
         if ($v1>0 and $v1<10) return $v1;
     }
     return false;
