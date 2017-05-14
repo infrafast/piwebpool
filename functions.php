@@ -323,12 +323,12 @@ function getORP(){
         appendlog("ERROR",$sql,mysql_error());
     }else{
         while ($row = mysql_fetch_assoc($outcome)){
-            $offset=($row['value']);
+            $offsetORP=($row['value']);
         }
     }
     
     for ($i = 0; $i < 2; $i++){
-        $v1 = intval(readSensor(getDevice("orp")))+$offset;      
+        $v1 = intval(readSensor(getDevice("orp")))+$offsetORP;      
         if ($v1>0 and $v1<1000) return $v1;
     }
     return false;    
