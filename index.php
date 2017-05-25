@@ -651,6 +651,8 @@
                 // otherwise we just refresh the content
                 refreshPanel(collapsableTableList[tableID]);
         }
+         
+        refreshPersistantSettingsBoxes('tempCompensation'); 
             
         var workspace = Blockly.inject('blocklyDiv',
           {
