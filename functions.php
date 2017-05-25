@@ -288,7 +288,8 @@ function getTemperature(){
 }
 
 function temperatureCompensation(){
-    
+ $temp=getTemperature();
+ 
 }    
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
