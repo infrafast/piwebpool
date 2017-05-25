@@ -645,13 +645,13 @@
         }
 
         //other persistant settings
-            if (actionCall('action=getSetting&id=tempCompensation',false,null,false,false)=="1") 
-                //document.getElementById(collapsableTableList[tableID]).click();
+            if (actionCall('action=getSetting&id=tempCompensation',false,null,false,false)=="on") 
+                compensate=true;
             else
-                // otherwise we just refresh the content
-                //refreshPanel(collapsableTableList[tableID]);        
-
-    
+                compensate=false;
+            document.getElementById('tempCompensation').disabled=compensate;
+            
+            
         var workspace = Blockly.inject('blocklyDiv',
           {
             scrollbars: true,
