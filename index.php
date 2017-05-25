@@ -649,7 +649,7 @@
                 compensate=true;
             else
                 compensate=false;
-            document.getElementById('tempCompensation').disabled=compensate;
+            document.getElementById('tempCompensation').checked=compensate;
             
             
         var workspace = Blockly.inject('blocklyDiv',
