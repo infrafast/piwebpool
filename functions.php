@@ -300,7 +300,6 @@ function temperatureCompensation(){
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
-    global $options;
     //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
     $offsetPH=getSetting("offsetPH");
     temperatureCompensation();
@@ -312,21 +311,10 @@ function getPh(){
 }
 
 function getORP(){
-    global $options;
     //return intval(rand(633,640));
     
     // retrieve the offset
-    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-    mysql_select_db($options["database"]["name"]) or die('error database selection');
-    $sql = "SELECT value from settings where id='offsetORP';";
-    $outcome = mysql_query($sql);
-    if (!$outcome) {
-        appendlog("ERROR",$sql,mysql_error());
-    }else{
-        while ($row = mysql_fetch_assoc($outcome)){
-            $offsetORP=($row['value']);
-        }
-    }
+    $offsetORP=getSetting("offsetORP");
     
     for ($i = 0; $i < 2; $i++){
         $v1 = intval(readSensor(getDevice("orp")))+$offsetORP;      
