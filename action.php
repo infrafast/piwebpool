@@ -32,6 +32,7 @@ if(isset($_['action'])){
                 case 'Ph':
                     if (!isset($_['value'])) $_['value']="7.00";
                     readSensor(getDevice("ph"),"Cal,clear\n");
+                    temperatureCompensation();
                     // we don't exploit the answer of the clearance (should be *ok)
                     $frame="Cal,mid,".$_['value']."\n";
                     $result['state']  = readSensor(getDevice("ph"),$frame);
