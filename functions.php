@@ -255,7 +255,7 @@ function getSetting($id){
 
     mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
     mysql_select_db($options["database"]["name"]) or die('error database selection');
-    $sql = "SELECT value from settings where id='".$id;
+    $sql = "SELECT value from settings where id='".$id."'";
     $outcome = mysql_query($sql);
     if (!$outcome) {
         appendlog("ERROR",$sql,mysql_error());
