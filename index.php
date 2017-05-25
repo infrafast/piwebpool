@@ -615,19 +615,11 @@
     }
     
     function setPersistantSettingsBoxes(id){
-        //var elemID = 'div'+id+'MeasureID';
-        //var elem = document.getElementById(elemID);
-        //add loading icon
-        //var calibrateID=id+"CalibrateID";
-        //var calibrate=document.getElementById(calibrateID);
-        //calibrate.style.backgroundImage="url('images/loading.gif')";
         boxSetting = document.getElementById(id).checked==true?'on':'off';
         var msg = 'Setting '+document.getElementById(id).id+' to '+boxSetting;
         alert(msg);
-        //if(actionCall('action=updateSetting&id='+id+'&value='+document.getElementById(id).checked==true?'on':'off',false,msg,true, true)!=false)
-        //    elem.click();
-        //remove loading icon
-        //calibrate.style.backgroundImage="url('')";
+        if(actionCall('action=updateSetting&id='+id+'&value='+boxSetting==true?'on':'off',false,msg,true, true)!=false)
+            alert(msg);
     }
         
         // -----------------------------------------------------------------------
