@@ -288,9 +288,14 @@ function getTemperature(){
 }
 
 function temperatureCompensation(){
- $temp=getTemperature();
+    if (compensate){
+        $temp=getTemperature();
  
-}    
+        $frame="Cal,mid,".$_['value']."\n";
+        $result['state']  = readSensor(getDevice("ph"),$frame);
+        appendlog("CALIBRATE",$frame,json_encode($result));
+    }    
+}
 
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
