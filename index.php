@@ -644,6 +644,13 @@
                 refreshPanel(collapsableTableList[tableID]);
         }
 
+        //other persistant settings
+            if (actionCall('action=getSetting&id=tempCompensation',false,null,false,false)=="1") 
+                //document.getElementById(collapsableTableList[tableID]).click();
+            else
+                // otherwise we just refresh the content
+                //refreshPanel(collapsableTableList[tableID]);        
+
     
         var workspace = Blockly.inject('blocklyDiv',
           {
