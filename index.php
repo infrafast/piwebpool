@@ -618,7 +618,7 @@
         boxSetting = document.getElementById(id).checked==true?'on':'off';
         var msg = 'Setting '+document.getElementById(id).id+' to '+boxSetting;
         alert(msg);
-        if(actionCall('action=updateSetting&id='+id+'&value='+boxSetting==true?'on':'off',false,msg,true, true)!=false)
+        if(actionCall('action=updateSetting&id='+id+'&value='+boxSetting==true?'on':'off',false,null,false,false)!=false)
             alert(msg);
     }
         
