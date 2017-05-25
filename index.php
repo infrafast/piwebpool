@@ -613,6 +613,20 @@
             checkValue=false;
         document.getElementById(id).checked=checkValue;
     }
+    
+    function setPersistantSettingsBoxes(id){
+        var elemID = 'div'+id+'MeasureID';
+        var elem = document.getElementById(elemID);
+        //add loading icon
+        var calibrateID=id+"CalibrateID";
+        var calibrate=document.getElementById(calibrateID);
+        calibrate.style.backgroundImage="url('images/loading.gif')";
+        var msg = 'Placer la sonde '+id+' dans la solution à '+calVal+'\npendant 2 minutes puis confirmez';
+        if(actionCall('action=calibrate&id='+id+'&value='+calVal,false,msg,true, true)!=false)
+            elem.click();
+        //remove loading icon
+        calibrate.style.backgroundImage="url('')";
+    }
         
         // -----------------------------------------------------------------------
         //
