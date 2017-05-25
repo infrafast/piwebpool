@@ -622,6 +622,7 @@
         //var calibrate=document.getElementById(calibrateID);
         //calibrate.style.backgroundImage="url('images/loading.gif')";
         var msg = 'Setting '+id+' to'+document.getElementById(id).checked==true?'on':'off';
+        alert(msg);
         //if(actionCall('action=updateSetting&id='+id+'&value='+document.getElementById(id).checked==true?'on':'off',false,msg,true, true)!=false)
         //    elem.click();
         //remove loading icon
