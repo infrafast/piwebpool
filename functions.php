@@ -302,7 +302,7 @@ function temperatureCompensation(){
 function getPh(){
     //return round( (8.10 + (8.20 - 8.10) * (mt_rand() / mt_getrandmax())), 2, PHP_ROUND_HALF_UP);
     $offsetPH=getSetting("offsetPH");
-    temperatureCompensation();
+    //temperatureCompensation();
     for ($i = 0; $i < 2; $i++){
         $v1 = round(readSensor(getDevice("ph")), 2,PHP_ROUND_HALF_UP)+$offsetPH;  
         if ($v1>0 and $v1<10) return $v1;
