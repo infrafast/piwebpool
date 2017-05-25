@@ -289,9 +289,7 @@ function getTemperature(){
 
 function temperatureCompensation(){
     if (compensate){
-        $temp=getTemperature();
- 
-        $frame="Cal,mid,".$_['value']."\n";
+        $frame="T,".getTemperature()."\n";
         $result['state']  = readSensor(getDevice("ph"),$frame);
         appendlog("CALIBRATE",$frame,json_encode($result));
     }    
