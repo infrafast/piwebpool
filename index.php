@@ -616,7 +616,7 @@
     
     function setPersistantSettingsBoxes(id){
         boxSetting = document.getElementById(id).checked==true?'on':'off';
-        if(actionCall('action=updateSetting&id='+document.getElementById(id).id+'&value='+boxSetting==true?'on':'off',false,null,false,false)!=true)
+        if(actionCall('action=updateSetting&id='+document.getElementById(id).id+'&value='+boxSetting,false,null,false,false)!=true)
             alert('Error in setting '+document.getElementById(id).id+' to '+boxSetting);
     }
         
