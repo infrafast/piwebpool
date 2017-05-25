@@ -288,7 +288,7 @@ function getTemperature(){
 }
 
 function temperatureCompensation(){
-    if (compensate){
+    if (1){
         $frame="T,".getTemperature()."\n";
         $result  = readSensor(getDevice("ph"),$frame);
         appendlog("COMPENSATE",$frame,$result);
