@@ -585,12 +585,14 @@
         }
         
         function refreshPanel(id){
+            refreshPersistantSettingsBoxes();
             switch (id) {
                 case 'sensorTable':
                     loadWeather("45.840491, 6.085538",0);
                     //loadWeather("46.203962, 6.133670",0);
                     updateMeasuresGraphs();
                     updateSensorValues();
+                    
                 break;
                 case 'logTable':
                     var logarea = document.getElementById('logFile');
@@ -604,6 +606,14 @@
             }
         }
     
+    function refreshPersistantSettingsBoxes(){
+        //other persistant settings
+        if (actionCall('action=getSetting&id=tempCompensation',false,null,false,false)=="on") 
+            compensate=true;
+        else
+            compensate=false;
+        document.getElementById('tempCompensation').checked=compensate;
+    }
         
         // -----------------------------------------------------------------------
         //
@@ -643,14 +653,6 @@
                 // otherwise we just refresh the content
                 refreshPanel(collapsableTableList[tableID]);
         }
-
-        //other persistant settings
-            if (actionCall('action=getSetting&id=tempCompensation',false,null,false,false)=="on") 
-                compensate=true;
-            else
-                compensate=false;
-            document.getElementById('tempCompensation').checked=compensate;
-            
             
         var workspace = Blockly.inject('blocklyDiv',
           {
