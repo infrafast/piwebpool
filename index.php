@@ -591,6 +591,7 @@
                     //loadWeather("46.203962, 6.133670",0);
                     updateMeasuresGraphs();
                     updateSensorValues();
+                    refreshPersistantSettingsBoxes('tempCompensation');
                 break;
                 case 'logTable':
                     var logarea = document.getElementById('logFile');
@@ -651,8 +652,6 @@
                 // otherwise we just refresh the content
                 refreshPanel(collapsableTableList[tableID]);
         }
-         
-        refreshPersistantSettingsBoxes('tempCompensation'); 
             
         var workspace = Blockly.inject('blocklyDiv',
           {
