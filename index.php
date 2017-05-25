@@ -606,7 +606,7 @@
     
     function refreshPersistantSettingsBoxes(id){
         //other persistant settings
-        if (actionCall('action=getSetting&id'+id,false,null,false,false)=="on") 
+        if (actionCall('action=getSetting&id='+id,false,null,false,false)=="on") 
             checkValue=true;
         else
             checkValue=false;
