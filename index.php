@@ -585,14 +585,12 @@
         }
         
         function refreshPanel(id){
-            refreshPersistantSettingsBoxes();
             switch (id) {
                 case 'sensorTable':
                     loadWeather("45.840491, 6.085538",0);
                     //loadWeather("46.203962, 6.133670",0);
                     updateMeasuresGraphs();
                     updateSensorValues();
-                    
                 break;
                 case 'logTable':
                     var logarea = document.getElementById('logFile');
@@ -606,13 +604,13 @@
             }
         }
     
-    function refreshPersistantSettingsBoxes(){
+    function refreshPersistantSettingsBoxes(id){
         //other persistant settings
-        if (actionCall('action=getSetting&id=tempCompensation',false,null,false,false)=="on") 
-            compensate=true;
+        if (actionCall('action=getSetting&id'+id,false,null,false,false)=="on") 
+            checkValue=true;
         else
-            compensate=false;
-        document.getElementById('tempCompensation').checked=compensate;
+            checkValue=false;
+        document.getElementById(id).checked=checkValue;
     }
         
         // -----------------------------------------------------------------------
