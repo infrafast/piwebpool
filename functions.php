@@ -287,6 +287,10 @@ function getTemperature(){
     return false;
 }
 
+function temperatureCompensation(){
+    
+}    
+
 // use "I" command to determine where PH and ORP and TEMP sensors are connected ttyUSB
 function getPh(){
     global $options;
