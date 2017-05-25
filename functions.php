@@ -250,6 +250,23 @@ function getDevice($id){
     return null;
 }
 
+function getSetting($id){
+    global $options;
+
+    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
+    mysql_select_db($options["database"]["name"]) or die('error database selection');
+    $sql = "SELECT value from settings where id='".$id;
+    $outcome = mysql_query($sql);
+    if (!$outcome) {
+        appendlog("ERROR",$sql,mysql_error());
+    }else{
+        while ($row = mysql_fetch_assoc($outcome)){
+            $settingValue=($row['value']);
+        }
+    }
+    return $settingValue;
+}
+
 function setTemperature($value){
     // store the value in the databse issue #25
     // this code would be called by the crontab.php for regular update
@@ -260,23 +277,10 @@ function setTemperature($value){
 
 
 function getTemperature(){
-    global $options;
     
     // retrieve value in the databse issue #25
     // retrieve the temperature offset
-    mysql_connect($options["database"]["host"],$options["database"]["username"],$options["database"]["password"]) or die('error connection');
-    mysql_select_db($options["database"]["name"]) or die('error database selection');
-    $sql = "SELECT value from settings where id='tempOffset';";
-    $outcome = mysql_query($sql);
-    if (!$outcome) {
-        appendlog("ERROR",$sql,mysql_error());
-    }else{
-        while ($row = mysql_fetch_assoc($outcome)){
-            $tempOffset=($row['value']);
-        }
-    }
-    
-
+    $tempOffset=getSetting($tempOffset);
     //return round( (0.5 + (2.5 - 0.5) * (mt_rand() / mt_getrandmax())), 1, PHP_ROUND_HALF_UP);
     //
     for ($i = 0; $i < 2; $i++){
