@@ -60,7 +60,7 @@ function weburl($url,$statusKey){
     $output = curl_exec( $ch );
     curl_close($ch);
     $arr = json_decode($output,true);
-    //appendlog("WEBURL",$url,$statusKey."=".$arr[$statusKey]);
+    appendlog("WEBURL",$url,$statusKey."=".$arr[$statusKey]);
     return $arr[$statusKey];
 }
 
